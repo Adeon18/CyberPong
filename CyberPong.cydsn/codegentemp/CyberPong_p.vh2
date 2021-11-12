@@ -1,5 +1,5 @@
 -- Project:   CyberPong
--- Generated: 11/12/2021 19:32:14
+-- Generated: 11/12/2021 22:45:14
 -- PSoC Creator  4.4
 
 ENTITY CyberPong IS
@@ -1496,7 +1496,7 @@ BEGIN
             tr_tx_req => Net_205,
             tr_rx_req => Net_196);
 
-    \PWM_2:cy_m0s8_tcpwm_1\:m0s8tcpwmcell
+    \PWM_Motor:cy_m0s8_tcpwm_1\:m0s8tcpwmcell
         GENERIC MAP(
             cy_registers => "")
         PORT MAP(

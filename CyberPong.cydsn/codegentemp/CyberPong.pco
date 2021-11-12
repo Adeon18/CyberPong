@@ -1,5 +1,5 @@
 # CyberPong
-# 2021-11-12 17:32:14Z
+# 2021-11-12 20:45:15Z
 
 # IO_6@[IOP=(0)][IoId=(6)] is reserved: SWDDebugEnabled
 dont_use_io iocell 0 6
@@ -31,7 +31,7 @@ set_location "\Counter:CounterUDB:sC32:counterdp:u1\" 1 1 2
 set_location "\Counter:CounterUDB:sC32:counterdp:u2\" 1 0 2
 set_location "\Counter:CounterUDB:sC32:counterdp:u3\" 0 0 2
 set_location "\UART:SCB\" m0s8scbcell -1 -1 0
-set_location "\PWM_2:cy_m0s8_tcpwm_1\" m0s8tcpwmcell -1 -1 1
+set_location "\PWM_Motor:cy_m0s8_tcpwm_1\" m0s8tcpwmcell -1 -1 1
 set_location "\Counter:CounterUDB:prevCapture\" 1 1 1 1
 set_location "\Counter:CounterUDB:overflow_reg_i\" 0 0 0 0
 set_location "\Counter:CounterUDB:prevCompare\" 0 0 0 2

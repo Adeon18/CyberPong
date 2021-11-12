@@ -2183,7 +2183,7 @@
       </registers>
     </peripheral>
     <peripheral>
-      <name>PWM_2</name>
+      <name>PWM_Motor</name>
       <description>No description available</description>
       <baseAddress>0x0</baseAddress>
       <addressBlock>

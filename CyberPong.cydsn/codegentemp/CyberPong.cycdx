@@ -348,7 +348,7 @@
     </register>
   </block>
   <block name="Clock_3" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-  <block name="PWM_2" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false">
+  <block name="PWM_Motor" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false">
     <block name="VMux_count" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
     <block name="VMux_reload" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
     <block name="VMux_start" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />

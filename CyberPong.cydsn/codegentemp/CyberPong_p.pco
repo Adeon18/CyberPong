@@ -20,7 +20,7 @@ set_io "\UART:rx(0)\" iocell 1 4
 set_location "\PWM:cy_m0s8_tcpwm_1\" m0s8tcpwmcell -1 -1 0
 set_io "Pin_A(0)" iocell 0 1
 set_io "\UART:tx(0)\" iocell 1 5
-set_location "\PWM_2:cy_m0s8_tcpwm_1\" m0s8tcpwmcell -1 -1 1
+set_location "\PWM_Motor:cy_m0s8_tcpwm_1\" m0s8tcpwmcell -1 -1 1
 set_location "ClockGenBlock" m0s8clockgenblockcell -1 -1 0
 set_location "ISR_Compare" interrupt -1 -1 17
 set_location "\Counter:CounterUDB:sCTRLReg:ctrlreg\" controlcell 0 1 6 

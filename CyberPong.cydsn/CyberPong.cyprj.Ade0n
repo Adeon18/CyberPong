@@ -682,7 +682,7 @@
 <name_val_pair name="C:\Users\Ade0n\Documents\PSoC Creator\AAAAAAAAAAAAAAAa\CyberPong.cydsn\CortexM0\ARM_GCC_541\Debug\CyberPong.hex" v="-mcpu=cortex-m0 -mthumb -L Generated_Source\PSoC4 -Wl,-Map,${OutputDir}/${ProjectShortName}.map -T Generated_Source\PSoC4\cm0gcc.ld -specs=nano.specs -Wl,--gc-sections -g -ffunction-sections -Og -ffat-lto-objects" />
 </name>
 </genericCmdLineData>
-<codeGenCmdLineTag v="-.appdatapath &quot;C:\Users\Ade0n\AppData\Local\Cypress Semiconductor\PSoC Creator\4.4&quot; -.fdsnotice -.fdswarpdepfile=warp_dependencies.txt -.fdselabdepfile=elab_dependencies.txt -.fdsbldfile=generated_files.txt -.fdsreffile=referenced_files.txt -p &quot;C:\Users\Ade0n\Documents\PSoC Creator\AAAAAAAAAAAAAAAa\CyberPong.cydsn\CyberPong.cyprj&quot; -d CY8C4248LQI-BL583 -s &quot;C:\Users\Ade0n\Documents\PSoC Creator\AAAAAAAAAAAAAAAa\CyberPong.cydsn\Generated_Source\PSoC4&quot; -- -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE" />
+<codeGenCmdLineTag v="-.appdatapath &quot;C:\Users\Ade0n\AppData\Local\Cypress Semiconductor\PSoC Creator\4.4&quot; -.fdsnotice -.fdswarpdepfile=warp_dependencies.txt -.fdselabdepfile=elab_dependencies.txt -.fdsbldfile=generated_files.txt -.fdsreffile=referenced_files.txt -p &quot;C:\Users\Ade0n\Desktop\THE PROJECT\PRJCT\CyberPong\CyberPong.cydsn\CyberPong.cyprj&quot; -d CY8C4248LQI-BL583 -s &quot;C:\Users\Ade0n\Desktop\THE PROJECT\PRJCT\CyberPong\CyberPong.cydsn\Generated_Source\PSoC4&quot; -- -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE" />
 </CyGuid_b0374e30-ce3a-47f2-ad85-821643292c68>
 </dataGuid>
 <dataGuid v="597c5b74-0c46-4204-8b7f-96f3570671dc">
@@ -1083,6 +1083,9 @@
 <v>Generated_Source\PSoC4\PWM_2.c</v>
 <v>Generated_Source\PSoC4\PWM_2.h</v>
 <v>Generated_Source\PSoC4\PWM_2_PM.c</v>
+<v>Generated_Source\PSoC4\PWM_Motor.c</v>
+<v>Generated_Source\PSoC4\PWM_Motor.h</v>
+<v>Generated_Source\PSoC4\PWM_Motor_PM.c</v>
 </gen_list>
 <warp_dep>
 <v>C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\ieee\work\stdlogic.vif</v>
@@ -1092,7 +1095,7 @@
 <v>C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\stdlogic\rtlpkg.vif</v>
 <v>C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\stdlogic\cy_psoc3.vif</v>
 </warp_dep>
-<deps_time v="132812119377543935" />
+<deps_time v="132812235181176635" />
 <top_block v="TopDesign" />
 <last_generation v="1" />
 <pdl_path v="" />

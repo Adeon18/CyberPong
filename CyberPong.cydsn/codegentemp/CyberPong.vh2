@@ -2,7 +2,7 @@
 --	Conversion of CyberPong.v to vh2:
 --
 --	Cypress Semiconductor - WARP Version 6.3 IR 41
---	Fri Nov 12 19:32:13 2021
+--	Fri Nov 12 22:45:14 2021
 --
 
 USE cypress.cypress.all;
@@ -423,12 +423,12 @@ SIGNAL tmpFB_0__LED_net_0 : bit;
 SIGNAL tmpIO_0__LED_net_0 : bit;
 TERMINAL tmpSIOVREF__LED_net_0 : bit;
 SIGNAL tmpINTERRUPT_0__LED_net_0 : bit;
-SIGNAL \PWM_2:Net_81\ : bit;
-SIGNAL \PWM_2:Net_75\ : bit;
-SIGNAL \PWM_2:Net_69\ : bit;
-SIGNAL \PWM_2:Net_66\ : bit;
-SIGNAL \PWM_2:Net_82\ : bit;
-SIGNAL \PWM_2:Net_72\ : bit;
+SIGNAL \PWM_Motor:Net_81\ : bit;
+SIGNAL \PWM_Motor:Net_75\ : bit;
+SIGNAL \PWM_Motor:Net_69\ : bit;
+SIGNAL \PWM_Motor:Net_66\ : bit;
+SIGNAL \PWM_Motor:Net_82\ : bit;
+SIGNAL \PWM_Motor:Net_72\ : bit;
 SIGNAL Net_546 : bit;
 SIGNAL Net_542 : bit;
 SIGNAL Net_538 : bit;
@@ -1337,7 +1337,7 @@ LED:cy_psoc3_pins_v1_10
 		out_clock_en=>tmpOE__Pin_A_net_0,
 		out_reset=>zero,
 		interrupt=>tmpINTERRUPT_0__LED_net_0);
-\PWM_2:cy_m0s8_tcpwm_1\:cy_m0s8_tcpwm_v1_0
+\PWM_Motor:cy_m0s8_tcpwm_1\:cy_m0s8_tcpwm_v1_0
 	GENERIC MAP(cy_registers=>"")
 	PORT MAP(clock=>Net_523,
 		capture=>zero,

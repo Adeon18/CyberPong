@@ -38,7 +38,7 @@
 #include "Clock_3.h"
 #include "LED.h"
 #include "LED_aliases.h"
-#include "PWM_2.h"
+#include "PWM_Motor.h"
 #include "UART_SCBCLK.h"
 #include "UART_tx.h"
 #include "UART_tx_aliases.h"

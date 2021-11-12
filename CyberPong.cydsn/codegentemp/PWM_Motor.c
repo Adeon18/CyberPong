@@ -1,9 +1,9 @@
 /*******************************************************************************
-* File Name: PWM_2.c
+* File Name: PWM_Motor.c
 * Version 2.10
 *
 * Description:
-*  This file provides the source code to the API for the PWM_2
+*  This file provides the source code to the API for the PWM_Motor
 *  component
 *
 * Note:
@@ -16,17 +16,17 @@
 * the software package with which this file was provided.
 *******************************************************************************/
 
-#include "PWM_2.h"
+#include "PWM_Motor.h"
 
-uint8 PWM_2_initVar = 0u;
+uint8 PWM_Motor_initVar = 0u;
 
 
 /*******************************************************************************
-* Function Name: PWM_2_Init
+* Function Name: PWM_Motor_Init
 ********************************************************************************
 *
 * Summary:
-*  Initialize/Restore default PWM_2 configuration.
+*  Initialize/Restore default PWM_Motor configuration.
 *
 * Parameters:
 *  None
@@ -35,137 +35,137 @@ uint8 PWM_2_initVar = 0u;
 *  None
 *
 *******************************************************************************/
-void PWM_2_Init(void)
+void PWM_Motor_Init(void)
 {
 
     /* Set values from customizer to CTRL */
-    #if (PWM_2__QUAD == PWM_2_CONFIG)
-        PWM_2_CONTROL_REG = PWM_2_CTRL_QUAD_BASE_CONFIG;
+    #if (PWM_Motor__QUAD == PWM_Motor_CONFIG)
+        PWM_Motor_CONTROL_REG = PWM_Motor_CTRL_QUAD_BASE_CONFIG;
         
         /* Set values from customizer to CTRL1 */
-        PWM_2_TRIG_CONTROL1_REG  = PWM_2_QUAD_SIGNALS_MODES;
+        PWM_Motor_TRIG_CONTROL1_REG  = PWM_Motor_QUAD_SIGNALS_MODES;
 
         /* Set values from customizer to INTR */
-        PWM_2_SetInterruptMode(PWM_2_QUAD_INTERRUPT_MASK);
+        PWM_Motor_SetInterruptMode(PWM_Motor_QUAD_INTERRUPT_MASK);
         
          /* Set other values */
-        PWM_2_SetCounterMode(PWM_2_COUNT_DOWN);
-        PWM_2_WritePeriod(PWM_2_QUAD_PERIOD_INIT_VALUE);
-        PWM_2_WriteCounter(PWM_2_QUAD_PERIOD_INIT_VALUE);
-    #endif  /* (PWM_2__QUAD == PWM_2_CONFIG) */
+        PWM_Motor_SetCounterMode(PWM_Motor_COUNT_DOWN);
+        PWM_Motor_WritePeriod(PWM_Motor_QUAD_PERIOD_INIT_VALUE);
+        PWM_Motor_WriteCounter(PWM_Motor_QUAD_PERIOD_INIT_VALUE);
+    #endif  /* (PWM_Motor__QUAD == PWM_Motor_CONFIG) */
 
-    #if (PWM_2__TIMER == PWM_2_CONFIG)
-        PWM_2_CONTROL_REG = PWM_2_CTRL_TIMER_BASE_CONFIG;
+    #if (PWM_Motor__TIMER == PWM_Motor_CONFIG)
+        PWM_Motor_CONTROL_REG = PWM_Motor_CTRL_TIMER_BASE_CONFIG;
         
         /* Set values from customizer to CTRL1 */
-        PWM_2_TRIG_CONTROL1_REG  = PWM_2_TIMER_SIGNALS_MODES;
+        PWM_Motor_TRIG_CONTROL1_REG  = PWM_Motor_TIMER_SIGNALS_MODES;
     
         /* Set values from customizer to INTR */
-        PWM_2_SetInterruptMode(PWM_2_TC_INTERRUPT_MASK);
+        PWM_Motor_SetInterruptMode(PWM_Motor_TC_INTERRUPT_MASK);
         
         /* Set other values from customizer */
-        PWM_2_WritePeriod(PWM_2_TC_PERIOD_VALUE );
+        PWM_Motor_WritePeriod(PWM_Motor_TC_PERIOD_VALUE );
 
-        #if (PWM_2__COMPARE == PWM_2_TC_COMP_CAP_MODE)
-            PWM_2_WriteCompare(PWM_2_TC_COMPARE_VALUE);
+        #if (PWM_Motor__COMPARE == PWM_Motor_TC_COMP_CAP_MODE)
+            PWM_Motor_WriteCompare(PWM_Motor_TC_COMPARE_VALUE);
 
-            #if (1u == PWM_2_TC_COMPARE_SWAP)
-                PWM_2_SetCompareSwap(1u);
-                PWM_2_WriteCompareBuf(PWM_2_TC_COMPARE_BUF_VALUE);
-            #endif  /* (1u == PWM_2_TC_COMPARE_SWAP) */
-        #endif  /* (PWM_2__COMPARE == PWM_2_TC_COMP_CAP_MODE) */
+            #if (1u == PWM_Motor_TC_COMPARE_SWAP)
+                PWM_Motor_SetCompareSwap(1u);
+                PWM_Motor_WriteCompareBuf(PWM_Motor_TC_COMPARE_BUF_VALUE);
+            #endif  /* (1u == PWM_Motor_TC_COMPARE_SWAP) */
+        #endif  /* (PWM_Motor__COMPARE == PWM_Motor_TC_COMP_CAP_MODE) */
 
         /* Initialize counter value */
-        #if (PWM_2_CY_TCPWM_V2 && PWM_2_TIMER_UPDOWN_CNT_USED && !PWM_2_CY_TCPWM_4000)
-            PWM_2_WriteCounter(1u);
-        #elif(PWM_2__COUNT_DOWN == PWM_2_TC_COUNTER_MODE)
-            PWM_2_WriteCounter(PWM_2_TC_PERIOD_VALUE);
+        #if (PWM_Motor_CY_TCPWM_V2 && PWM_Motor_TIMER_UPDOWN_CNT_USED && !PWM_Motor_CY_TCPWM_4000)
+            PWM_Motor_WriteCounter(1u);
+        #elif(PWM_Motor__COUNT_DOWN == PWM_Motor_TC_COUNTER_MODE)
+            PWM_Motor_WriteCounter(PWM_Motor_TC_PERIOD_VALUE);
         #else
-            PWM_2_WriteCounter(0u);
-        #endif /* (PWM_2_CY_TCPWM_V2 && PWM_2_TIMER_UPDOWN_CNT_USED && !PWM_2_CY_TCPWM_4000) */
-    #endif  /* (PWM_2__TIMER == PWM_2_CONFIG) */
+            PWM_Motor_WriteCounter(0u);
+        #endif /* (PWM_Motor_CY_TCPWM_V2 && PWM_Motor_TIMER_UPDOWN_CNT_USED && !PWM_Motor_CY_TCPWM_4000) */
+    #endif  /* (PWM_Motor__TIMER == PWM_Motor_CONFIG) */
 
-    #if (PWM_2__PWM_SEL == PWM_2_CONFIG)
-        PWM_2_CONTROL_REG = PWM_2_CTRL_PWM_BASE_CONFIG;
+    #if (PWM_Motor__PWM_SEL == PWM_Motor_CONFIG)
+        PWM_Motor_CONTROL_REG = PWM_Motor_CTRL_PWM_BASE_CONFIG;
 
-        #if (PWM_2__PWM_PR == PWM_2_PWM_MODE)
-            PWM_2_CONTROL_REG |= PWM_2_CTRL_PWM_RUN_MODE;
-            PWM_2_WriteCounter(PWM_2_PWM_PR_INIT_VALUE);
+        #if (PWM_Motor__PWM_PR == PWM_Motor_PWM_MODE)
+            PWM_Motor_CONTROL_REG |= PWM_Motor_CTRL_PWM_RUN_MODE;
+            PWM_Motor_WriteCounter(PWM_Motor_PWM_PR_INIT_VALUE);
         #else
-            PWM_2_CONTROL_REG |= PWM_2_CTRL_PWM_ALIGN | PWM_2_CTRL_PWM_KILL_EVENT;
+            PWM_Motor_CONTROL_REG |= PWM_Motor_CTRL_PWM_ALIGN | PWM_Motor_CTRL_PWM_KILL_EVENT;
             
             /* Initialize counter value */
-            #if (PWM_2_CY_TCPWM_V2 && PWM_2_PWM_UPDOWN_CNT_USED && !PWM_2_CY_TCPWM_4000)
-                PWM_2_WriteCounter(1u);
-            #elif (PWM_2__RIGHT == PWM_2_PWM_ALIGN)
-                PWM_2_WriteCounter(PWM_2_PWM_PERIOD_VALUE);
+            #if (PWM_Motor_CY_TCPWM_V2 && PWM_Motor_PWM_UPDOWN_CNT_USED && !PWM_Motor_CY_TCPWM_4000)
+                PWM_Motor_WriteCounter(1u);
+            #elif (PWM_Motor__RIGHT == PWM_Motor_PWM_ALIGN)
+                PWM_Motor_WriteCounter(PWM_Motor_PWM_PERIOD_VALUE);
             #else 
-                PWM_2_WriteCounter(0u);
-            #endif  /* (PWM_2_CY_TCPWM_V2 && PWM_2_PWM_UPDOWN_CNT_USED && !PWM_2_CY_TCPWM_4000) */
-        #endif  /* (PWM_2__PWM_PR == PWM_2_PWM_MODE) */
+                PWM_Motor_WriteCounter(0u);
+            #endif  /* (PWM_Motor_CY_TCPWM_V2 && PWM_Motor_PWM_UPDOWN_CNT_USED && !PWM_Motor_CY_TCPWM_4000) */
+        #endif  /* (PWM_Motor__PWM_PR == PWM_Motor_PWM_MODE) */
 
-        #if (PWM_2__PWM_DT == PWM_2_PWM_MODE)
-            PWM_2_CONTROL_REG |= PWM_2_CTRL_PWM_DEAD_TIME_CYCLE;
-        #endif  /* (PWM_2__PWM_DT == PWM_2_PWM_MODE) */
+        #if (PWM_Motor__PWM_DT == PWM_Motor_PWM_MODE)
+            PWM_Motor_CONTROL_REG |= PWM_Motor_CTRL_PWM_DEAD_TIME_CYCLE;
+        #endif  /* (PWM_Motor__PWM_DT == PWM_Motor_PWM_MODE) */
 
-        #if (PWM_2__PWM == PWM_2_PWM_MODE)
-            PWM_2_CONTROL_REG |= PWM_2_CTRL_PWM_PRESCALER;
-        #endif  /* (PWM_2__PWM == PWM_2_PWM_MODE) */
+        #if (PWM_Motor__PWM == PWM_Motor_PWM_MODE)
+            PWM_Motor_CONTROL_REG |= PWM_Motor_CTRL_PWM_PRESCALER;
+        #endif  /* (PWM_Motor__PWM == PWM_Motor_PWM_MODE) */
 
         /* Set values from customizer to CTRL1 */
-        PWM_2_TRIG_CONTROL1_REG  = PWM_2_PWM_SIGNALS_MODES;
+        PWM_Motor_TRIG_CONTROL1_REG  = PWM_Motor_PWM_SIGNALS_MODES;
     
         /* Set values from customizer to INTR */
-        PWM_2_SetInterruptMode(PWM_2_PWM_INTERRUPT_MASK);
+        PWM_Motor_SetInterruptMode(PWM_Motor_PWM_INTERRUPT_MASK);
 
         /* Set values from customizer to CTRL2 */
-        #if (PWM_2__PWM_PR == PWM_2_PWM_MODE)
-            PWM_2_TRIG_CONTROL2_REG =
-                    (PWM_2_CC_MATCH_NO_CHANGE    |
-                    PWM_2_OVERLOW_NO_CHANGE      |
-                    PWM_2_UNDERFLOW_NO_CHANGE);
+        #if (PWM_Motor__PWM_PR == PWM_Motor_PWM_MODE)
+            PWM_Motor_TRIG_CONTROL2_REG =
+                    (PWM_Motor_CC_MATCH_NO_CHANGE    |
+                    PWM_Motor_OVERLOW_NO_CHANGE      |
+                    PWM_Motor_UNDERFLOW_NO_CHANGE);
         #else
-            #if (PWM_2__LEFT == PWM_2_PWM_ALIGN)
-                PWM_2_TRIG_CONTROL2_REG = PWM_2_PWM_MODE_LEFT;
-            #endif  /* ( PWM_2_PWM_LEFT == PWM_2_PWM_ALIGN) */
+            #if (PWM_Motor__LEFT == PWM_Motor_PWM_ALIGN)
+                PWM_Motor_TRIG_CONTROL2_REG = PWM_Motor_PWM_MODE_LEFT;
+            #endif  /* ( PWM_Motor_PWM_LEFT == PWM_Motor_PWM_ALIGN) */
 
-            #if (PWM_2__RIGHT == PWM_2_PWM_ALIGN)
-                PWM_2_TRIG_CONTROL2_REG = PWM_2_PWM_MODE_RIGHT;
-            #endif  /* ( PWM_2_PWM_RIGHT == PWM_2_PWM_ALIGN) */
+            #if (PWM_Motor__RIGHT == PWM_Motor_PWM_ALIGN)
+                PWM_Motor_TRIG_CONTROL2_REG = PWM_Motor_PWM_MODE_RIGHT;
+            #endif  /* ( PWM_Motor_PWM_RIGHT == PWM_Motor_PWM_ALIGN) */
 
-            #if (PWM_2__CENTER == PWM_2_PWM_ALIGN)
-                PWM_2_TRIG_CONTROL2_REG = PWM_2_PWM_MODE_CENTER;
-            #endif  /* ( PWM_2_PWM_CENTER == PWM_2_PWM_ALIGN) */
+            #if (PWM_Motor__CENTER == PWM_Motor_PWM_ALIGN)
+                PWM_Motor_TRIG_CONTROL2_REG = PWM_Motor_PWM_MODE_CENTER;
+            #endif  /* ( PWM_Motor_PWM_CENTER == PWM_Motor_PWM_ALIGN) */
 
-            #if (PWM_2__ASYMMETRIC == PWM_2_PWM_ALIGN)
-                PWM_2_TRIG_CONTROL2_REG = PWM_2_PWM_MODE_ASYM;
-            #endif  /* (PWM_2__ASYMMETRIC == PWM_2_PWM_ALIGN) */
-        #endif  /* (PWM_2__PWM_PR == PWM_2_PWM_MODE) */
+            #if (PWM_Motor__ASYMMETRIC == PWM_Motor_PWM_ALIGN)
+                PWM_Motor_TRIG_CONTROL2_REG = PWM_Motor_PWM_MODE_ASYM;
+            #endif  /* (PWM_Motor__ASYMMETRIC == PWM_Motor_PWM_ALIGN) */
+        #endif  /* (PWM_Motor__PWM_PR == PWM_Motor_PWM_MODE) */
 
         /* Set other values from customizer */
-        PWM_2_WritePeriod(PWM_2_PWM_PERIOD_VALUE );
-        PWM_2_WriteCompare(PWM_2_PWM_COMPARE_VALUE);
+        PWM_Motor_WritePeriod(PWM_Motor_PWM_PERIOD_VALUE );
+        PWM_Motor_WriteCompare(PWM_Motor_PWM_COMPARE_VALUE);
 
-        #if (1u == PWM_2_PWM_COMPARE_SWAP)
-            PWM_2_SetCompareSwap(1u);
-            PWM_2_WriteCompareBuf(PWM_2_PWM_COMPARE_BUF_VALUE);
-        #endif  /* (1u == PWM_2_PWM_COMPARE_SWAP) */
+        #if (1u == PWM_Motor_PWM_COMPARE_SWAP)
+            PWM_Motor_SetCompareSwap(1u);
+            PWM_Motor_WriteCompareBuf(PWM_Motor_PWM_COMPARE_BUF_VALUE);
+        #endif  /* (1u == PWM_Motor_PWM_COMPARE_SWAP) */
 
-        #if (1u == PWM_2_PWM_PERIOD_SWAP)
-            PWM_2_SetPeriodSwap(1u);
-            PWM_2_WritePeriodBuf(PWM_2_PWM_PERIOD_BUF_VALUE);
-        #endif  /* (1u == PWM_2_PWM_PERIOD_SWAP) */
-    #endif  /* (PWM_2__PWM_SEL == PWM_2_CONFIG) */
+        #if (1u == PWM_Motor_PWM_PERIOD_SWAP)
+            PWM_Motor_SetPeriodSwap(1u);
+            PWM_Motor_WritePeriodBuf(PWM_Motor_PWM_PERIOD_BUF_VALUE);
+        #endif  /* (1u == PWM_Motor_PWM_PERIOD_SWAP) */
+    #endif  /* (PWM_Motor__PWM_SEL == PWM_Motor_CONFIG) */
     
 }
 
 
 /*******************************************************************************
-* Function Name: PWM_2_Enable
+* Function Name: PWM_Motor_Enable
 ********************************************************************************
 *
 * Summary:
-*  Enables the PWM_2.
+*  Enables the PWM_Motor.
 *
 * Parameters:
 *  None
@@ -174,42 +174,42 @@ void PWM_2_Init(void)
 *  None
 *
 *******************************************************************************/
-void PWM_2_Enable(void)
+void PWM_Motor_Enable(void)
 {
     uint8 enableInterrupts;
 
     enableInterrupts = CyEnterCriticalSection();
-    PWM_2_BLOCK_CONTROL_REG |= PWM_2_MASK;
+    PWM_Motor_BLOCK_CONTROL_REG |= PWM_Motor_MASK;
     CyExitCriticalSection(enableInterrupts);
 
     /* Start Timer or PWM if start input is absent */
-    #if (PWM_2__PWM_SEL == PWM_2_CONFIG)
-        #if (0u == PWM_2_PWM_START_SIGNAL_PRESENT)
-            PWM_2_TriggerCommand(PWM_2_MASK, PWM_2_CMD_START);
-        #endif /* (0u == PWM_2_PWM_START_SIGNAL_PRESENT) */
-    #endif /* (PWM_2__PWM_SEL == PWM_2_CONFIG) */
+    #if (PWM_Motor__PWM_SEL == PWM_Motor_CONFIG)
+        #if (0u == PWM_Motor_PWM_START_SIGNAL_PRESENT)
+            PWM_Motor_TriggerCommand(PWM_Motor_MASK, PWM_Motor_CMD_START);
+        #endif /* (0u == PWM_Motor_PWM_START_SIGNAL_PRESENT) */
+    #endif /* (PWM_Motor__PWM_SEL == PWM_Motor_CONFIG) */
 
-    #if (PWM_2__TIMER == PWM_2_CONFIG)
-        #if (0u == PWM_2_TC_START_SIGNAL_PRESENT)
-            PWM_2_TriggerCommand(PWM_2_MASK, PWM_2_CMD_START);
-        #endif /* (0u == PWM_2_TC_START_SIGNAL_PRESENT) */
-    #endif /* (PWM_2__TIMER == PWM_2_CONFIG) */
+    #if (PWM_Motor__TIMER == PWM_Motor_CONFIG)
+        #if (0u == PWM_Motor_TC_START_SIGNAL_PRESENT)
+            PWM_Motor_TriggerCommand(PWM_Motor_MASK, PWM_Motor_CMD_START);
+        #endif /* (0u == PWM_Motor_TC_START_SIGNAL_PRESENT) */
+    #endif /* (PWM_Motor__TIMER == PWM_Motor_CONFIG) */
     
-    #if (PWM_2__QUAD == PWM_2_CONFIG)
-        #if (0u != PWM_2_QUAD_AUTO_START)
-            PWM_2_TriggerCommand(PWM_2_MASK, PWM_2_CMD_RELOAD);
-        #endif /* (0u != PWM_2_QUAD_AUTO_START) */
-    #endif  /* (PWM_2__QUAD == PWM_2_CONFIG) */
+    #if (PWM_Motor__QUAD == PWM_Motor_CONFIG)
+        #if (0u != PWM_Motor_QUAD_AUTO_START)
+            PWM_Motor_TriggerCommand(PWM_Motor_MASK, PWM_Motor_CMD_RELOAD);
+        #endif /* (0u != PWM_Motor_QUAD_AUTO_START) */
+    #endif  /* (PWM_Motor__QUAD == PWM_Motor_CONFIG) */
 }
 
 
 /*******************************************************************************
-* Function Name: PWM_2_Start
+* Function Name: PWM_Motor_Start
 ********************************************************************************
 *
 * Summary:
-*  Initializes the PWM_2 with default customizer
-*  values when called the first time and enables the PWM_2.
+*  Initializes the PWM_Motor with default customizer
+*  values when called the first time and enables the PWM_Motor.
 *  For subsequent calls the configuration is left unchanged and the component is
 *  just enabled.
 *
@@ -220,31 +220,31 @@ void PWM_2_Enable(void)
 *  None
 *
 * Global variables:
-*  PWM_2_initVar: global variable is used to indicate initial
+*  PWM_Motor_initVar: global variable is used to indicate initial
 *  configuration of this component.  The variable is initialized to zero and set
-*  to 1 the first time PWM_2_Start() is called. This allows
+*  to 1 the first time PWM_Motor_Start() is called. This allows
 *  enabling/disabling a component without re-initialization in all subsequent
-*  calls to the PWM_2_Start() routine.
+*  calls to the PWM_Motor_Start() routine.
 *
 *******************************************************************************/
-void PWM_2_Start(void)
+void PWM_Motor_Start(void)
 {
-    if (0u == PWM_2_initVar)
+    if (0u == PWM_Motor_initVar)
     {
-        PWM_2_Init();
-        PWM_2_initVar = 1u;
+        PWM_Motor_Init();
+        PWM_Motor_initVar = 1u;
     }
 
-    PWM_2_Enable();
+    PWM_Motor_Enable();
 }
 
 
 /*******************************************************************************
-* Function Name: PWM_2_Stop
+* Function Name: PWM_Motor_Stop
 ********************************************************************************
 *
 * Summary:
-*  Disables the PWM_2.
+*  Disables the PWM_Motor.
 *
 * Parameters:
 *  None
@@ -253,58 +253,58 @@ void PWM_2_Start(void)
 *  None
 *
 *******************************************************************************/
-void PWM_2_Stop(void)
+void PWM_Motor_Stop(void)
 {
     uint8 enableInterrupts;
 
     enableInterrupts = CyEnterCriticalSection();
 
-    PWM_2_BLOCK_CONTROL_REG &= (uint32)~PWM_2_MASK;
+    PWM_Motor_BLOCK_CONTROL_REG &= (uint32)~PWM_Motor_MASK;
 
     CyExitCriticalSection(enableInterrupts);
 }
 
 
 /*******************************************************************************
-* Function Name: PWM_2_SetMode
+* Function Name: PWM_Motor_SetMode
 ********************************************************************************
 *
 * Summary:
-*  Sets the operation mode of the PWM_2. This function is used when
-*  configured as a generic PWM_2 and the actual mode of operation is
+*  Sets the operation mode of the PWM_Motor. This function is used when
+*  configured as a generic PWM_Motor and the actual mode of operation is
 *  set at runtime. The mode must be set while the component is disabled.
 *
 * Parameters:
-*  mode: Mode for the PWM_2 to operate in
+*  mode: Mode for the PWM_Motor to operate in
 *   Values:
-*   - PWM_2_MODE_TIMER_COMPARE - Timer / Counter with
+*   - PWM_Motor_MODE_TIMER_COMPARE - Timer / Counter with
 *                                                 compare capability
-*         - PWM_2_MODE_TIMER_CAPTURE - Timer / Counter with
+*         - PWM_Motor_MODE_TIMER_CAPTURE - Timer / Counter with
 *                                                 capture capability
-*         - PWM_2_MODE_QUAD - Quadrature decoder
-*         - PWM_2_MODE_PWM - PWM
-*         - PWM_2_MODE_PWM_DT - PWM with dead time
-*         - PWM_2_MODE_PWM_PR - PWM with pseudo random capability
+*         - PWM_Motor_MODE_QUAD - Quadrature decoder
+*         - PWM_Motor_MODE_PWM - PWM
+*         - PWM_Motor_MODE_PWM_DT - PWM with dead time
+*         - PWM_Motor_MODE_PWM_PR - PWM with pseudo random capability
 *
 * Return:
 *  None
 *
 *******************************************************************************/
-void PWM_2_SetMode(uint32 mode)
+void PWM_Motor_SetMode(uint32 mode)
 {
     uint8 enableInterrupts;
 
     enableInterrupts = CyEnterCriticalSection();
 
-    PWM_2_CONTROL_REG &= (uint32)~PWM_2_MODE_MASK;
-    PWM_2_CONTROL_REG |= mode;
+    PWM_Motor_CONTROL_REG &= (uint32)~PWM_Motor_MODE_MASK;
+    PWM_Motor_CONTROL_REG |= mode;
 
     CyExitCriticalSection(enableInterrupts);
 }
 
 
 /*******************************************************************************
-* Function Name: PWM_2_SetQDMode
+* Function Name: PWM_Motor_SetQDMode
 ********************************************************************************
 *
 * Summary:
@@ -314,30 +314,30 @@ void PWM_2_SetMode(uint32 mode)
 * Parameters:
 *  qdMode: Quadrature Decoder mode
 *   Values:
-*         - PWM_2_MODE_X1 - Counts on phi 1 rising
-*         - PWM_2_MODE_X2 - Counts on both edges of phi1 (2x faster)
-*         - PWM_2_MODE_X4 - Counts on both edges of phi1 and phi2
+*         - PWM_Motor_MODE_X1 - Counts on phi 1 rising
+*         - PWM_Motor_MODE_X2 - Counts on both edges of phi1 (2x faster)
+*         - PWM_Motor_MODE_X4 - Counts on both edges of phi1 and phi2
 *                                        (4x faster)
 *
 * Return:
 *  None
 *
 *******************************************************************************/
-void PWM_2_SetQDMode(uint32 qdMode)
+void PWM_Motor_SetQDMode(uint32 qdMode)
 {
     uint8 enableInterrupts;
 
     enableInterrupts = CyEnterCriticalSection();
 
-    PWM_2_CONTROL_REG &= (uint32)~PWM_2_QUAD_MODE_MASK;
-    PWM_2_CONTROL_REG |= qdMode;
+    PWM_Motor_CONTROL_REG &= (uint32)~PWM_Motor_QUAD_MODE_MASK;
+    PWM_Motor_CONTROL_REG |= qdMode;
 
     CyExitCriticalSection(enableInterrupts);
 }
 
 
 /*******************************************************************************
-* Function Name: PWM_2_SetPrescaler
+* Function Name: PWM_Motor_SetPrescaler
 ********************************************************************************
 *
 * Summary:
@@ -347,40 +347,40 @@ void PWM_2_SetQDMode(uint32 qdMode)
 * Parameters:
 *  prescaler: Prescaler divider value
 *   Values:
-*         - PWM_2_PRESCALE_DIVBY1    - Divide by 1 (no prescaling)
-*         - PWM_2_PRESCALE_DIVBY2    - Divide by 2
-*         - PWM_2_PRESCALE_DIVBY4    - Divide by 4
-*         - PWM_2_PRESCALE_DIVBY8    - Divide by 8
-*         - PWM_2_PRESCALE_DIVBY16   - Divide by 16
-*         - PWM_2_PRESCALE_DIVBY32   - Divide by 32
-*         - PWM_2_PRESCALE_DIVBY64   - Divide by 64
-*         - PWM_2_PRESCALE_DIVBY128  - Divide by 128
+*         - PWM_Motor_PRESCALE_DIVBY1    - Divide by 1 (no prescaling)
+*         - PWM_Motor_PRESCALE_DIVBY2    - Divide by 2
+*         - PWM_Motor_PRESCALE_DIVBY4    - Divide by 4
+*         - PWM_Motor_PRESCALE_DIVBY8    - Divide by 8
+*         - PWM_Motor_PRESCALE_DIVBY16   - Divide by 16
+*         - PWM_Motor_PRESCALE_DIVBY32   - Divide by 32
+*         - PWM_Motor_PRESCALE_DIVBY64   - Divide by 64
+*         - PWM_Motor_PRESCALE_DIVBY128  - Divide by 128
 *
 * Return:
 *  None
 *
 *******************************************************************************/
-void PWM_2_SetPrescaler(uint32 prescaler)
+void PWM_Motor_SetPrescaler(uint32 prescaler)
 {
     uint8 enableInterrupts;
 
     enableInterrupts = CyEnterCriticalSection();
 
-    PWM_2_CONTROL_REG &= (uint32)~PWM_2_PRESCALER_MASK;
-    PWM_2_CONTROL_REG |= prescaler;
+    PWM_Motor_CONTROL_REG &= (uint32)~PWM_Motor_PRESCALER_MASK;
+    PWM_Motor_CONTROL_REG |= prescaler;
 
     CyExitCriticalSection(enableInterrupts);
 }
 
 
 /*******************************************************************************
-* Function Name: PWM_2_SetOneShot
+* Function Name: PWM_Motor_SetOneShot
 ********************************************************************************
 *
 * Summary:
-*  Writes the register that controls whether the PWM_2 runs
+*  Writes the register that controls whether the PWM_Motor runs
 *  continuously or stops when terminal count is reached.  By default the
-*  PWM_2 operates in the continuous mode.
+*  PWM_Motor operates in the continuous mode.
 *
 * Parameters:
 *  oneShotEnable
@@ -392,22 +392,22 @@ void PWM_2_SetPrescaler(uint32 prescaler)
 *  None
 *
 *******************************************************************************/
-void PWM_2_SetOneShot(uint32 oneShotEnable)
+void PWM_Motor_SetOneShot(uint32 oneShotEnable)
 {
     uint8 enableInterrupts;
 
     enableInterrupts = CyEnterCriticalSection();
 
-    PWM_2_CONTROL_REG &= (uint32)~PWM_2_ONESHOT_MASK;
-    PWM_2_CONTROL_REG |= ((uint32)((oneShotEnable & PWM_2_1BIT_MASK) <<
-                                                               PWM_2_ONESHOT_SHIFT));
+    PWM_Motor_CONTROL_REG &= (uint32)~PWM_Motor_ONESHOT_MASK;
+    PWM_Motor_CONTROL_REG |= ((uint32)((oneShotEnable & PWM_Motor_1BIT_MASK) <<
+                                                               PWM_Motor_ONESHOT_SHIFT));
 
     CyExitCriticalSection(enableInterrupts);
 }
 
 
 /*******************************************************************************
-* Function Name: PWM_2_SetPWMMode
+* Function Name: PWM_Motor_SetPWMMode
 ********************************************************************************
 *
 * Summary:
@@ -446,15 +446,15 @@ void PWM_2_SetOneShot(uint32 oneShotEnable)
 *  None
 *
 *******************************************************************************/
-void PWM_2_SetPWMMode(uint32 modeMask)
+void PWM_Motor_SetPWMMode(uint32 modeMask)
 {
-    PWM_2_TRIG_CONTROL2_REG = (modeMask & PWM_2_6BIT_MASK);
+    PWM_Motor_TRIG_CONTROL2_REG = (modeMask & PWM_Motor_6BIT_MASK);
 }
 
 
 
 /*******************************************************************************
-* Function Name: PWM_2_SetPWMSyncKill
+* Function Name: PWM_Motor_SetPWMSyncKill
 ********************************************************************************
 *
 * Summary:
@@ -482,22 +482,22 @@ void PWM_2_SetPWMMode(uint32 modeMask)
 *  None
 *
 *******************************************************************************/
-void PWM_2_SetPWMSyncKill(uint32 syncKillEnable)
+void PWM_Motor_SetPWMSyncKill(uint32 syncKillEnable)
 {
     uint8 enableInterrupts;
 
     enableInterrupts = CyEnterCriticalSection();
 
-    PWM_2_CONTROL_REG &= (uint32)~PWM_2_PWM_SYNC_KILL_MASK;
-    PWM_2_CONTROL_REG |= ((uint32)((syncKillEnable & PWM_2_1BIT_MASK)  <<
-                                               PWM_2_PWM_SYNC_KILL_SHIFT));
+    PWM_Motor_CONTROL_REG &= (uint32)~PWM_Motor_PWM_SYNC_KILL_MASK;
+    PWM_Motor_CONTROL_REG |= ((uint32)((syncKillEnable & PWM_Motor_1BIT_MASK)  <<
+                                               PWM_Motor_PWM_SYNC_KILL_SHIFT));
 
     CyExitCriticalSection(enableInterrupts);
 }
 
 
 /*******************************************************************************
-* Function Name: PWM_2_SetPWMStopOnKill
+* Function Name: PWM_Motor_SetPWMStopOnKill
 ********************************************************************************
 *
 * Summary:
@@ -516,22 +516,22 @@ void PWM_2_SetPWMSyncKill(uint32 syncKillEnable)
 *  None
 *
 *******************************************************************************/
-void PWM_2_SetPWMStopOnKill(uint32 stopOnKillEnable)
+void PWM_Motor_SetPWMStopOnKill(uint32 stopOnKillEnable)
 {
     uint8 enableInterrupts;
 
     enableInterrupts = CyEnterCriticalSection();
 
-    PWM_2_CONTROL_REG &= (uint32)~PWM_2_PWM_STOP_KILL_MASK;
-    PWM_2_CONTROL_REG |= ((uint32)((stopOnKillEnable & PWM_2_1BIT_MASK)  <<
-                                                         PWM_2_PWM_STOP_KILL_SHIFT));
+    PWM_Motor_CONTROL_REG &= (uint32)~PWM_Motor_PWM_STOP_KILL_MASK;
+    PWM_Motor_CONTROL_REG |= ((uint32)((stopOnKillEnable & PWM_Motor_1BIT_MASK)  <<
+                                                         PWM_Motor_PWM_STOP_KILL_SHIFT));
 
     CyExitCriticalSection(enableInterrupts);
 }
 
 
 /*******************************************************************************
-* Function Name: PWM_2_SetPWMDeadTime
+* Function Name: PWM_Motor_SetPWMDeadTime
 ********************************************************************************
 *
 * Summary:
@@ -549,22 +549,22 @@ void PWM_2_SetPWMStopOnKill(uint32 stopOnKillEnable)
 *  None
 *
 *******************************************************************************/
-void PWM_2_SetPWMDeadTime(uint32 deadTime)
+void PWM_Motor_SetPWMDeadTime(uint32 deadTime)
 {
     uint8 enableInterrupts;
 
     enableInterrupts = CyEnterCriticalSection();
 
-    PWM_2_CONTROL_REG &= (uint32)~PWM_2_PRESCALER_MASK;
-    PWM_2_CONTROL_REG |= ((uint32)((deadTime & PWM_2_8BIT_MASK) <<
-                                                          PWM_2_PRESCALER_SHIFT));
+    PWM_Motor_CONTROL_REG &= (uint32)~PWM_Motor_PRESCALER_MASK;
+    PWM_Motor_CONTROL_REG |= ((uint32)((deadTime & PWM_Motor_8BIT_MASK) <<
+                                                          PWM_Motor_PRESCALER_SHIFT));
 
     CyExitCriticalSection(enableInterrupts);
 }
 
 
 /*******************************************************************************
-* Function Name: PWM_2_SetPWMInvert
+* Function Name: PWM_Motor_SetPWMInvert
 ********************************************************************************
 *
 * Summary:
@@ -575,21 +575,21 @@ void PWM_2_SetPWMDeadTime(uint32 deadTime)
 * Parameters:
 *  mask: Mask of outputs to invert.
 *   Values:
-*         - PWM_2_INVERT_LINE   - Inverts the line output
-*         - PWM_2_INVERT_LINE_N - Inverts the line_n output
+*         - PWM_Motor_INVERT_LINE   - Inverts the line output
+*         - PWM_Motor_INVERT_LINE_N - Inverts the line_n output
 *
 * Return:
 *  None
 *
 *******************************************************************************/
-void PWM_2_SetPWMInvert(uint32 mask)
+void PWM_Motor_SetPWMInvert(uint32 mask)
 {
     uint8 enableInterrupts;
 
     enableInterrupts = CyEnterCriticalSection();
 
-    PWM_2_CONTROL_REG &= (uint32)~PWM_2_INV_OUT_MASK;
-    PWM_2_CONTROL_REG |= mask;
+    PWM_Motor_CONTROL_REG &= (uint32)~PWM_Motor_INV_OUT_MASK;
+    PWM_Motor_CONTROL_REG |= mask;
 
     CyExitCriticalSection(enableInterrupts);
 }
@@ -597,7 +597,7 @@ void PWM_2_SetPWMInvert(uint32 mask)
 
 
 /*******************************************************************************
-* Function Name: PWM_2_WriteCounter
+* Function Name: PWM_Motor_WriteCounter
 ********************************************************************************
 *
 * Summary:
@@ -612,14 +612,14 @@ void PWM_2_SetPWMInvert(uint32 mask)
 *  None
 *
 *******************************************************************************/
-void PWM_2_WriteCounter(uint32 count)
+void PWM_Motor_WriteCounter(uint32 count)
 {
-    PWM_2_COUNTER_REG = (count & PWM_2_16BIT_MASK);
+    PWM_Motor_COUNTER_REG = (count & PWM_Motor_16BIT_MASK);
 }
 
 
 /*******************************************************************************
-* Function Name: PWM_2_ReadCounter
+* Function Name: PWM_Motor_ReadCounter
 ********************************************************************************
 *
 * Summary:
@@ -632,14 +632,14 @@ void PWM_2_WriteCounter(uint32 count)
 *  Current counter value
 *
 *******************************************************************************/
-uint32 PWM_2_ReadCounter(void)
+uint32 PWM_Motor_ReadCounter(void)
 {
-    return (PWM_2_COUNTER_REG & PWM_2_16BIT_MASK);
+    return (PWM_Motor_COUNTER_REG & PWM_Motor_16BIT_MASK);
 }
 
 
 /*******************************************************************************
-* Function Name: PWM_2_SetCounterMode
+* Function Name: PWM_Motor_SetCounterMode
 ********************************************************************************
 *
 * Summary:
@@ -649,11 +649,11 @@ uint32 PWM_2_ReadCounter(void)
 * Parameters:
 *  counterMode: Enumerated counter type values
 *   Values:
-*     - PWM_2_COUNT_UP       - Counts up
-*     - PWM_2_COUNT_DOWN     - Counts down
-*     - PWM_2_COUNT_UPDOWN0  - Counts up and down. Terminal count
+*     - PWM_Motor_COUNT_UP       - Counts up
+*     - PWM_Motor_COUNT_DOWN     - Counts down
+*     - PWM_Motor_COUNT_UPDOWN0  - Counts up and down. Terminal count
 *                                         generated when counter reaches 0
-*     - PWM_2_COUNT_UPDOWN1  - Counts up and down. Terminal count
+*     - PWM_Motor_COUNT_UPDOWN1  - Counts up and down. Terminal count
 *                                         generated both when counter reaches 0
 *                                         and period
 *
@@ -661,21 +661,21 @@ uint32 PWM_2_ReadCounter(void)
 *  None
 *
 *******************************************************************************/
-void PWM_2_SetCounterMode(uint32 counterMode)
+void PWM_Motor_SetCounterMode(uint32 counterMode)
 {
     uint8 enableInterrupts;
 
     enableInterrupts = CyEnterCriticalSection();
 
-    PWM_2_CONTROL_REG &= (uint32)~PWM_2_UPDOWN_MASK;
-    PWM_2_CONTROL_REG |= counterMode;
+    PWM_Motor_CONTROL_REG &= (uint32)~PWM_Motor_UPDOWN_MASK;
+    PWM_Motor_CONTROL_REG |= counterMode;
 
     CyExitCriticalSection(enableInterrupts);
 }
 
 
 /*******************************************************************************
-* Function Name: PWM_2_WritePeriod
+* Function Name: PWM_Motor_WritePeriod
 ********************************************************************************
 *
 * Summary:
@@ -690,14 +690,14 @@ void PWM_2_SetCounterMode(uint32 counterMode)
 *  None
 *
 *******************************************************************************/
-void PWM_2_WritePeriod(uint32 period)
+void PWM_Motor_WritePeriod(uint32 period)
 {
-    PWM_2_PERIOD_REG = (period & PWM_2_16BIT_MASK);
+    PWM_Motor_PERIOD_REG = (period & PWM_Motor_16BIT_MASK);
 }
 
 
 /*******************************************************************************
-* Function Name: PWM_2_ReadPeriod
+* Function Name: PWM_Motor_ReadPeriod
 ********************************************************************************
 *
 * Summary:
@@ -710,14 +710,14 @@ void PWM_2_WritePeriod(uint32 period)
 *  Period value
 *
 *******************************************************************************/
-uint32 PWM_2_ReadPeriod(void)
+uint32 PWM_Motor_ReadPeriod(void)
 {
-    return (PWM_2_PERIOD_REG & PWM_2_16BIT_MASK);
+    return (PWM_Motor_PERIOD_REG & PWM_Motor_16BIT_MASK);
 }
 
 
 /*******************************************************************************
-* Function Name: PWM_2_SetCompareSwap
+* Function Name: PWM_Motor_SetCompareSwap
 ********************************************************************************
 *
 * Summary:
@@ -736,21 +736,21 @@ uint32 PWM_2_ReadPeriod(void)
 *  None
 *
 *******************************************************************************/
-void PWM_2_SetCompareSwap(uint32 swapEnable)
+void PWM_Motor_SetCompareSwap(uint32 swapEnable)
 {
     uint8 enableInterrupts;
 
     enableInterrupts = CyEnterCriticalSection();
 
-    PWM_2_CONTROL_REG &= (uint32)~PWM_2_RELOAD_CC_MASK;
-    PWM_2_CONTROL_REG |= (swapEnable & PWM_2_1BIT_MASK);
+    PWM_Motor_CONTROL_REG &= (uint32)~PWM_Motor_RELOAD_CC_MASK;
+    PWM_Motor_CONTROL_REG |= (swapEnable & PWM_Motor_1BIT_MASK);
 
     CyExitCriticalSection(enableInterrupts);
 }
 
 
 /*******************************************************************************
-* Function Name: PWM_2_WritePeriodBuf
+* Function Name: PWM_Motor_WritePeriodBuf
 ********************************************************************************
 *
 * Summary:
@@ -763,14 +763,14 @@ void PWM_2_SetCompareSwap(uint32 swapEnable)
 *  None
 *
 *******************************************************************************/
-void PWM_2_WritePeriodBuf(uint32 periodBuf)
+void PWM_Motor_WritePeriodBuf(uint32 periodBuf)
 {
-    PWM_2_PERIOD_BUF_REG = (periodBuf & PWM_2_16BIT_MASK);
+    PWM_Motor_PERIOD_BUF_REG = (periodBuf & PWM_Motor_16BIT_MASK);
 }
 
 
 /*******************************************************************************
-* Function Name: PWM_2_ReadPeriodBuf
+* Function Name: PWM_Motor_ReadPeriodBuf
 ********************************************************************************
 *
 * Summary:
@@ -783,14 +783,14 @@ void PWM_2_WritePeriodBuf(uint32 periodBuf)
 *  Period value
 *
 *******************************************************************************/
-uint32 PWM_2_ReadPeriodBuf(void)
+uint32 PWM_Motor_ReadPeriodBuf(void)
 {
-    return (PWM_2_PERIOD_BUF_REG & PWM_2_16BIT_MASK);
+    return (PWM_Motor_PERIOD_BUF_REG & PWM_Motor_16BIT_MASK);
 }
 
 
 /*******************************************************************************
-* Function Name: PWM_2_SetPeriodSwap
+* Function Name: PWM_Motor_SetPeriodSwap
 ********************************************************************************
 *
 * Summary:
@@ -809,22 +809,22 @@ uint32 PWM_2_ReadPeriodBuf(void)
 *  None
 *
 *******************************************************************************/
-void PWM_2_SetPeriodSwap(uint32 swapEnable)
+void PWM_Motor_SetPeriodSwap(uint32 swapEnable)
 {
     uint8 enableInterrupts;
 
     enableInterrupts = CyEnterCriticalSection();
 
-    PWM_2_CONTROL_REG &= (uint32)~PWM_2_RELOAD_PERIOD_MASK;
-    PWM_2_CONTROL_REG |= ((uint32)((swapEnable & PWM_2_1BIT_MASK) <<
-                                                            PWM_2_RELOAD_PERIOD_SHIFT));
+    PWM_Motor_CONTROL_REG &= (uint32)~PWM_Motor_RELOAD_PERIOD_MASK;
+    PWM_Motor_CONTROL_REG |= ((uint32)((swapEnable & PWM_Motor_1BIT_MASK) <<
+                                                            PWM_Motor_RELOAD_PERIOD_SHIFT));
 
     CyExitCriticalSection(enableInterrupts);
 }
 
 
 /*******************************************************************************
-* Function Name: PWM_2_WriteCompare
+* Function Name: PWM_Motor_WriteCompare
 ********************************************************************************
 *
 * Summary:
@@ -846,20 +846,20 @@ void PWM_2_SetPeriodSwap(uint32 swapEnable)
 *  compare value in the Down counting mode (except 0xFFFFu).
 *
 *******************************************************************************/
-void PWM_2_WriteCompare(uint32 compare)
+void PWM_Motor_WriteCompare(uint32 compare)
 {
-    #if (PWM_2_CY_TCPWM_4000)
+    #if (PWM_Motor_CY_TCPWM_4000)
         uint32 currentMode;
-    #endif /* (PWM_2_CY_TCPWM_4000) */
+    #endif /* (PWM_Motor_CY_TCPWM_4000) */
 
-    #if (PWM_2_CY_TCPWM_4000)
-        currentMode = ((PWM_2_CONTROL_REG & PWM_2_UPDOWN_MASK) >> PWM_2_UPDOWN_SHIFT);
+    #if (PWM_Motor_CY_TCPWM_4000)
+        currentMode = ((PWM_Motor_CONTROL_REG & PWM_Motor_UPDOWN_MASK) >> PWM_Motor_UPDOWN_SHIFT);
 
-        if (((uint32)PWM_2__COUNT_DOWN == currentMode) && (0xFFFFu != compare))
+        if (((uint32)PWM_Motor__COUNT_DOWN == currentMode) && (0xFFFFu != compare))
         {
             compare++;
         }
-        else if (((uint32)PWM_2__COUNT_UP == currentMode) && (0u != compare))
+        else if (((uint32)PWM_Motor__COUNT_UP == currentMode) && (0u != compare))
         {
             compare--;
         }
@@ -868,14 +868,14 @@ void PWM_2_WriteCompare(uint32 compare)
         }
         
     
-    #endif /* (PWM_2_CY_TCPWM_4000) */
+    #endif /* (PWM_Motor_CY_TCPWM_4000) */
     
-    PWM_2_COMP_CAP_REG = (compare & PWM_2_16BIT_MASK);
+    PWM_Motor_COMP_CAP_REG = (compare & PWM_Motor_16BIT_MASK);
 }
 
 
 /*******************************************************************************
-* Function Name: PWM_2_ReadCompare
+* Function Name: PWM_Motor_ReadCompare
 ********************************************************************************
 *
 * Summary:
@@ -897,23 +897,23 @@ void PWM_2_WriteCompare(uint32 compare)
 *  Down counting mode (except 0x0u).
 *
 *******************************************************************************/
-uint32 PWM_2_ReadCompare(void)
+uint32 PWM_Motor_ReadCompare(void)
 {
-    #if (PWM_2_CY_TCPWM_4000)
+    #if (PWM_Motor_CY_TCPWM_4000)
         uint32 currentMode;
         uint32 regVal;
-    #endif /* (PWM_2_CY_TCPWM_4000) */
+    #endif /* (PWM_Motor_CY_TCPWM_4000) */
 
-    #if (PWM_2_CY_TCPWM_4000)
-        currentMode = ((PWM_2_CONTROL_REG & PWM_2_UPDOWN_MASK) >> PWM_2_UPDOWN_SHIFT);
+    #if (PWM_Motor_CY_TCPWM_4000)
+        currentMode = ((PWM_Motor_CONTROL_REG & PWM_Motor_UPDOWN_MASK) >> PWM_Motor_UPDOWN_SHIFT);
         
-        regVal = PWM_2_COMP_CAP_REG;
+        regVal = PWM_Motor_COMP_CAP_REG;
         
-        if (((uint32)PWM_2__COUNT_DOWN == currentMode) && (0u != regVal))
+        if (((uint32)PWM_Motor__COUNT_DOWN == currentMode) && (0u != regVal))
         {
             regVal--;
         }
-        else if (((uint32)PWM_2__COUNT_UP == currentMode) && (0xFFFFu != regVal))
+        else if (((uint32)PWM_Motor__COUNT_UP == currentMode) && (0xFFFFu != regVal))
         {
             regVal++;
         }
@@ -921,15 +921,15 @@ uint32 PWM_2_ReadCompare(void)
         {
         }
 
-        return (regVal & PWM_2_16BIT_MASK);
+        return (regVal & PWM_Motor_16BIT_MASK);
     #else
-        return (PWM_2_COMP_CAP_REG & PWM_2_16BIT_MASK);
-    #endif /* (PWM_2_CY_TCPWM_4000) */
+        return (PWM_Motor_COMP_CAP_REG & PWM_Motor_16BIT_MASK);
+    #endif /* (PWM_Motor_CY_TCPWM_4000) */
 }
 
 
 /*******************************************************************************
-* Function Name: PWM_2_WriteCompareBuf
+* Function Name: PWM_Motor_WriteCompareBuf
 ********************************************************************************
 *
 * Summary:
@@ -951,34 +951,34 @@ uint32 PWM_2_ReadCompare(void)
 *  compare value in the Down counting mode (except 0xFFFFu).
 *
 *******************************************************************************/
-void PWM_2_WriteCompareBuf(uint32 compareBuf)
+void PWM_Motor_WriteCompareBuf(uint32 compareBuf)
 {
-    #if (PWM_2_CY_TCPWM_4000)
+    #if (PWM_Motor_CY_TCPWM_4000)
         uint32 currentMode;
-    #endif /* (PWM_2_CY_TCPWM_4000) */
+    #endif /* (PWM_Motor_CY_TCPWM_4000) */
 
-    #if (PWM_2_CY_TCPWM_4000)
-        currentMode = ((PWM_2_CONTROL_REG & PWM_2_UPDOWN_MASK) >> PWM_2_UPDOWN_SHIFT);
+    #if (PWM_Motor_CY_TCPWM_4000)
+        currentMode = ((PWM_Motor_CONTROL_REG & PWM_Motor_UPDOWN_MASK) >> PWM_Motor_UPDOWN_SHIFT);
 
-        if (((uint32)PWM_2__COUNT_DOWN == currentMode) && (0xFFFFu != compareBuf))
+        if (((uint32)PWM_Motor__COUNT_DOWN == currentMode) && (0xFFFFu != compareBuf))
         {
             compareBuf++;
         }
-        else if (((uint32)PWM_2__COUNT_UP == currentMode) && (0u != compareBuf))
+        else if (((uint32)PWM_Motor__COUNT_UP == currentMode) && (0u != compareBuf))
         {
             compareBuf --;
         }
         else
         {
         }
-    #endif /* (PWM_2_CY_TCPWM_4000) */
+    #endif /* (PWM_Motor_CY_TCPWM_4000) */
     
-    PWM_2_COMP_CAP_BUF_REG = (compareBuf & PWM_2_16BIT_MASK);
+    PWM_Motor_COMP_CAP_BUF_REG = (compareBuf & PWM_Motor_16BIT_MASK);
 }
 
 
 /*******************************************************************************
-* Function Name: PWM_2_ReadCompareBuf
+* Function Name: PWM_Motor_ReadCompareBuf
 ********************************************************************************
 *
 * Summary:
@@ -997,23 +997,23 @@ void PWM_2_WriteCompareBuf(uint32 compareBuf)
 *  Down counting mode (except 0x0u).
 *
 *******************************************************************************/
-uint32 PWM_2_ReadCompareBuf(void)
+uint32 PWM_Motor_ReadCompareBuf(void)
 {
-    #if (PWM_2_CY_TCPWM_4000)
+    #if (PWM_Motor_CY_TCPWM_4000)
         uint32 currentMode;
         uint32 regVal;
-    #endif /* (PWM_2_CY_TCPWM_4000) */
+    #endif /* (PWM_Motor_CY_TCPWM_4000) */
 
-    #if (PWM_2_CY_TCPWM_4000)
-        currentMode = ((PWM_2_CONTROL_REG & PWM_2_UPDOWN_MASK) >> PWM_2_UPDOWN_SHIFT);
+    #if (PWM_Motor_CY_TCPWM_4000)
+        currentMode = ((PWM_Motor_CONTROL_REG & PWM_Motor_UPDOWN_MASK) >> PWM_Motor_UPDOWN_SHIFT);
 
-        regVal = PWM_2_COMP_CAP_BUF_REG;
+        regVal = PWM_Motor_COMP_CAP_BUF_REG;
         
-        if (((uint32)PWM_2__COUNT_DOWN == currentMode) && (0u != regVal))
+        if (((uint32)PWM_Motor__COUNT_DOWN == currentMode) && (0u != regVal))
         {
             regVal--;
         }
-        else if (((uint32)PWM_2__COUNT_UP == currentMode) && (0xFFFFu != regVal))
+        else if (((uint32)PWM_Motor__COUNT_UP == currentMode) && (0xFFFFu != regVal))
         {
             regVal++;
         }
@@ -1021,15 +1021,15 @@ uint32 PWM_2_ReadCompareBuf(void)
         {
         }
 
-        return (regVal & PWM_2_16BIT_MASK);
+        return (regVal & PWM_Motor_16BIT_MASK);
     #else
-        return (PWM_2_COMP_CAP_BUF_REG & PWM_2_16BIT_MASK);
-    #endif /* (PWM_2_CY_TCPWM_4000) */
+        return (PWM_Motor_COMP_CAP_BUF_REG & PWM_Motor_16BIT_MASK);
+    #endif /* (PWM_Motor_CY_TCPWM_4000) */
 }
 
 
 /*******************************************************************************
-* Function Name: PWM_2_ReadCapture
+* Function Name: PWM_Motor_ReadCapture
 ********************************************************************************
 *
 * Summary:
@@ -1043,14 +1043,14 @@ uint32 PWM_2_ReadCompareBuf(void)
 *  Capture value
 *
 *******************************************************************************/
-uint32 PWM_2_ReadCapture(void)
+uint32 PWM_Motor_ReadCapture(void)
 {
-    return (PWM_2_COMP_CAP_REG & PWM_2_16BIT_MASK);
+    return (PWM_Motor_COMP_CAP_REG & PWM_Motor_16BIT_MASK);
 }
 
 
 /*******************************************************************************
-* Function Name: PWM_2_ReadCaptureBuf
+* Function Name: PWM_Motor_ReadCaptureBuf
 ********************************************************************************
 *
 * Summary:
@@ -1064,14 +1064,14 @@ uint32 PWM_2_ReadCapture(void)
 *  Capture buffer value
 *
 *******************************************************************************/
-uint32 PWM_2_ReadCaptureBuf(void)
+uint32 PWM_Motor_ReadCaptureBuf(void)
 {
-    return (PWM_2_COMP_CAP_BUF_REG & PWM_2_16BIT_MASK);
+    return (PWM_Motor_COMP_CAP_BUF_REG & PWM_Motor_16BIT_MASK);
 }
 
 
 /*******************************************************************************
-* Function Name: PWM_2_SetCaptureMode
+* Function Name: PWM_Motor_SetCaptureMode
 ********************************************************************************
 *
 * Summary:
@@ -1082,30 +1082,30 @@ uint32 PWM_2_ReadCaptureBuf(void)
 * Parameters:
 *  triggerMode: Enumerated trigger mode value
 *   Values:
-*     - PWM_2_TRIG_LEVEL     - Level
-*     - PWM_2_TRIG_RISING    - Rising edge
-*     - PWM_2_TRIG_FALLING   - Falling edge
-*     - PWM_2_TRIG_BOTH      - Both rising and falling edge
+*     - PWM_Motor_TRIG_LEVEL     - Level
+*     - PWM_Motor_TRIG_RISING    - Rising edge
+*     - PWM_Motor_TRIG_FALLING   - Falling edge
+*     - PWM_Motor_TRIG_BOTH      - Both rising and falling edge
 *
 * Return:
 *  None
 *
 *******************************************************************************/
-void PWM_2_SetCaptureMode(uint32 triggerMode)
+void PWM_Motor_SetCaptureMode(uint32 triggerMode)
 {
     uint8 enableInterrupts;
 
     enableInterrupts = CyEnterCriticalSection();
 
-    PWM_2_TRIG_CONTROL1_REG &= (uint32)~PWM_2_CAPTURE_MASK;
-    PWM_2_TRIG_CONTROL1_REG |= triggerMode;
+    PWM_Motor_TRIG_CONTROL1_REG &= (uint32)~PWM_Motor_CAPTURE_MASK;
+    PWM_Motor_TRIG_CONTROL1_REG |= triggerMode;
 
     CyExitCriticalSection(enableInterrupts);
 }
 
 
 /*******************************************************************************
-* Function Name: PWM_2_SetReloadMode
+* Function Name: PWM_Motor_SetReloadMode
 ********************************************************************************
 *
 * Summary:
@@ -1115,30 +1115,30 @@ void PWM_2_SetCaptureMode(uint32 triggerMode)
 * Parameters:
 *  triggerMode: Enumerated trigger mode value
 *   Values:
-*     - PWM_2_TRIG_LEVEL     - Level
-*     - PWM_2_TRIG_RISING    - Rising edge
-*     - PWM_2_TRIG_FALLING   - Falling edge
-*     - PWM_2_TRIG_BOTH      - Both rising and falling edge
+*     - PWM_Motor_TRIG_LEVEL     - Level
+*     - PWM_Motor_TRIG_RISING    - Rising edge
+*     - PWM_Motor_TRIG_FALLING   - Falling edge
+*     - PWM_Motor_TRIG_BOTH      - Both rising and falling edge
 *
 * Return:
 *  None
 *
 *******************************************************************************/
-void PWM_2_SetReloadMode(uint32 triggerMode)
+void PWM_Motor_SetReloadMode(uint32 triggerMode)
 {
     uint8 enableInterrupts;
 
     enableInterrupts = CyEnterCriticalSection();
 
-    PWM_2_TRIG_CONTROL1_REG &= (uint32)~PWM_2_RELOAD_MASK;
-    PWM_2_TRIG_CONTROL1_REG |= ((uint32)(triggerMode << PWM_2_RELOAD_SHIFT));
+    PWM_Motor_TRIG_CONTROL1_REG &= (uint32)~PWM_Motor_RELOAD_MASK;
+    PWM_Motor_TRIG_CONTROL1_REG |= ((uint32)(triggerMode << PWM_Motor_RELOAD_SHIFT));
 
     CyExitCriticalSection(enableInterrupts);
 }
 
 
 /*******************************************************************************
-* Function Name: PWM_2_SetStartMode
+* Function Name: PWM_Motor_SetStartMode
 ********************************************************************************
 *
 * Summary:
@@ -1148,30 +1148,30 @@ void PWM_2_SetReloadMode(uint32 triggerMode)
 * Parameters:
 *  triggerMode: Enumerated trigger mode value
 *   Values:
-*     - PWM_2_TRIG_LEVEL     - Level
-*     - PWM_2_TRIG_RISING    - Rising edge
-*     - PWM_2_TRIG_FALLING   - Falling edge
-*     - PWM_2_TRIG_BOTH      - Both rising and falling edge
+*     - PWM_Motor_TRIG_LEVEL     - Level
+*     - PWM_Motor_TRIG_RISING    - Rising edge
+*     - PWM_Motor_TRIG_FALLING   - Falling edge
+*     - PWM_Motor_TRIG_BOTH      - Both rising and falling edge
 *
 * Return:
 *  None
 *
 *******************************************************************************/
-void PWM_2_SetStartMode(uint32 triggerMode)
+void PWM_Motor_SetStartMode(uint32 triggerMode)
 {
     uint8 enableInterrupts;
 
     enableInterrupts = CyEnterCriticalSection();
 
-    PWM_2_TRIG_CONTROL1_REG &= (uint32)~PWM_2_START_MASK;
-    PWM_2_TRIG_CONTROL1_REG |= ((uint32)(triggerMode << PWM_2_START_SHIFT));
+    PWM_Motor_TRIG_CONTROL1_REG &= (uint32)~PWM_Motor_START_MASK;
+    PWM_Motor_TRIG_CONTROL1_REG |= ((uint32)(triggerMode << PWM_Motor_START_SHIFT));
 
     CyExitCriticalSection(enableInterrupts);
 }
 
 
 /*******************************************************************************
-* Function Name: PWM_2_SetStopMode
+* Function Name: PWM_Motor_SetStopMode
 ********************************************************************************
 *
 * Summary:
@@ -1180,30 +1180,30 @@ void PWM_2_SetStartMode(uint32 triggerMode)
 * Parameters:
 *  triggerMode: Enumerated trigger mode value
 *   Values:
-*     - PWM_2_TRIG_LEVEL     - Level
-*     - PWM_2_TRIG_RISING    - Rising edge
-*     - PWM_2_TRIG_FALLING   - Falling edge
-*     - PWM_2_TRIG_BOTH      - Both rising and falling edge
+*     - PWM_Motor_TRIG_LEVEL     - Level
+*     - PWM_Motor_TRIG_RISING    - Rising edge
+*     - PWM_Motor_TRIG_FALLING   - Falling edge
+*     - PWM_Motor_TRIG_BOTH      - Both rising and falling edge
 *
 * Return:
 *  None
 *
 *******************************************************************************/
-void PWM_2_SetStopMode(uint32 triggerMode)
+void PWM_Motor_SetStopMode(uint32 triggerMode)
 {
     uint8 enableInterrupts;
 
     enableInterrupts = CyEnterCriticalSection();
 
-    PWM_2_TRIG_CONTROL1_REG &= (uint32)~PWM_2_STOP_MASK;
-    PWM_2_TRIG_CONTROL1_REG |= ((uint32)(triggerMode << PWM_2_STOP_SHIFT));
+    PWM_Motor_TRIG_CONTROL1_REG &= (uint32)~PWM_Motor_STOP_MASK;
+    PWM_Motor_TRIG_CONTROL1_REG |= ((uint32)(triggerMode << PWM_Motor_STOP_SHIFT));
 
     CyExitCriticalSection(enableInterrupts);
 }
 
 
 /*******************************************************************************
-* Function Name: PWM_2_SetCountMode
+* Function Name: PWM_Motor_SetCountMode
 ********************************************************************************
 *
 * Summary:
@@ -1213,30 +1213,30 @@ void PWM_2_SetStopMode(uint32 triggerMode)
 * Parameters:
 *  triggerMode: Enumerated trigger mode value
 *   Values:
-*     - PWM_2_TRIG_LEVEL     - Level
-*     - PWM_2_TRIG_RISING    - Rising edge
-*     - PWM_2_TRIG_FALLING   - Falling edge
-*     - PWM_2_TRIG_BOTH      - Both rising and falling edge
+*     - PWM_Motor_TRIG_LEVEL     - Level
+*     - PWM_Motor_TRIG_RISING    - Rising edge
+*     - PWM_Motor_TRIG_FALLING   - Falling edge
+*     - PWM_Motor_TRIG_BOTH      - Both rising and falling edge
 *
 * Return:
 *  None
 *
 *******************************************************************************/
-void PWM_2_SetCountMode(uint32 triggerMode)
+void PWM_Motor_SetCountMode(uint32 triggerMode)
 {
     uint8 enableInterrupts;
 
     enableInterrupts = CyEnterCriticalSection();
 
-    PWM_2_TRIG_CONTROL1_REG &= (uint32)~PWM_2_COUNT_MASK;
-    PWM_2_TRIG_CONTROL1_REG |= ((uint32)(triggerMode << PWM_2_COUNT_SHIFT));
+    PWM_Motor_TRIG_CONTROL1_REG &= (uint32)~PWM_Motor_COUNT_MASK;
+    PWM_Motor_TRIG_CONTROL1_REG |= ((uint32)(triggerMode << PWM_Motor_COUNT_SHIFT));
 
     CyExitCriticalSection(enableInterrupts);
 }
 
 
 /*******************************************************************************
-* Function Name: PWM_2_TriggerCommand
+* Function Name: PWM_Motor_TriggerCommand
 ********************************************************************************
 *
 * Summary:
@@ -1253,33 +1253,33 @@ void PWM_2_SetCountMode(uint32 triggerMode)
 *  command: Enumerated command values. Capture command only applicable for
 *           Timer/Counter with Capture and PWM modes.
 *   Values:
-*     - PWM_2_CMD_CAPTURE    - Trigger Capture/Switch command
-*     - PWM_2_CMD_RELOAD     - Trigger Reload/Index command
-*     - PWM_2_CMD_STOP       - Trigger Stop/Kill command
-*     - PWM_2_CMD_START      - Trigger Start/phiB command
+*     - PWM_Motor_CMD_CAPTURE    - Trigger Capture/Switch command
+*     - PWM_Motor_CMD_RELOAD     - Trigger Reload/Index command
+*     - PWM_Motor_CMD_STOP       - Trigger Stop/Kill command
+*     - PWM_Motor_CMD_START      - Trigger Start/phiB command
 *
 * Return:
 *  None
 *
 *******************************************************************************/
-void PWM_2_TriggerCommand(uint32 mask, uint32 command)
+void PWM_Motor_TriggerCommand(uint32 mask, uint32 command)
 {
     uint8 enableInterrupts;
 
     enableInterrupts = CyEnterCriticalSection();
 
-    PWM_2_COMMAND_REG = ((uint32)(mask << command));
+    PWM_Motor_COMMAND_REG = ((uint32)(mask << command));
 
     CyExitCriticalSection(enableInterrupts);
 }
 
 
 /*******************************************************************************
-* Function Name: PWM_2_ReadStatus
+* Function Name: PWM_Motor_ReadStatus
 ********************************************************************************
 *
 * Summary:
-*  Reads the status of the PWM_2.
+*  Reads the status of the PWM_Motor.
 *
 * Parameters:
 *  None
@@ -1287,19 +1287,19 @@ void PWM_2_TriggerCommand(uint32 mask, uint32 command)
 * Return:
 *  Status
 *   Values:
-*     - PWM_2_STATUS_DOWN    - Set if counting down
-*     - PWM_2_STATUS_RUNNING - Set if counter is running
+*     - PWM_Motor_STATUS_DOWN    - Set if counting down
+*     - PWM_Motor_STATUS_RUNNING - Set if counter is running
 *
 *******************************************************************************/
-uint32 PWM_2_ReadStatus(void)
+uint32 PWM_Motor_ReadStatus(void)
 {
-    return ((PWM_2_STATUS_REG >> PWM_2_RUNNING_STATUS_SHIFT) |
-            (PWM_2_STATUS_REG & PWM_2_STATUS_DOWN));
+    return ((PWM_Motor_STATUS_REG >> PWM_Motor_RUNNING_STATUS_SHIFT) |
+            (PWM_Motor_STATUS_REG & PWM_Motor_STATUS_DOWN));
 }
 
 
 /*******************************************************************************
-* Function Name: PWM_2_SetInterruptMode
+* Function Name: PWM_Motor_SetInterruptMode
 ********************************************************************************
 *
 * Summary:
@@ -1309,21 +1309,21 @@ uint32 PWM_2_ReadStatus(void)
 * Parameters:
 *   interruptMask: Mask of bits to be enabled
 *   Values:
-*     - PWM_2_INTR_MASK_TC       - Terminal count mask
-*     - PWM_2_INTR_MASK_CC_MATCH - Compare count / capture mask
+*     - PWM_Motor_INTR_MASK_TC       - Terminal count mask
+*     - PWM_Motor_INTR_MASK_CC_MATCH - Compare count / capture mask
 *
 * Return:
 *  None
 *
 *******************************************************************************/
-void PWM_2_SetInterruptMode(uint32 interruptMask)
+void PWM_Motor_SetInterruptMode(uint32 interruptMask)
 {
-    PWM_2_INTERRUPT_MASK_REG =  interruptMask;
+    PWM_Motor_INTERRUPT_MASK_REG =  interruptMask;
 }
 
 
 /*******************************************************************************
-* Function Name: PWM_2_GetInterruptSourceMasked
+* Function Name: PWM_Motor_GetInterruptSourceMasked
 ********************************************************************************
 *
 * Summary:
@@ -1335,18 +1335,18 @@ void PWM_2_SetInterruptMode(uint32 interruptMask)
 * Return:
 *  Masked interrupt source
 *   Values:
-*     - PWM_2_INTR_MASK_TC       - Terminal count mask
-*     - PWM_2_INTR_MASK_CC_MATCH - Compare count / capture mask
+*     - PWM_Motor_INTR_MASK_TC       - Terminal count mask
+*     - PWM_Motor_INTR_MASK_CC_MATCH - Compare count / capture mask
 *
 *******************************************************************************/
-uint32 PWM_2_GetInterruptSourceMasked(void)
+uint32 PWM_Motor_GetInterruptSourceMasked(void)
 {
-    return (PWM_2_INTERRUPT_MASKED_REG);
+    return (PWM_Motor_INTERRUPT_MASKED_REG);
 }
 
 
 /*******************************************************************************
-* Function Name: PWM_2_GetInterruptSource
+* Function Name: PWM_Motor_GetInterruptSource
 ********************************************************************************
 *
 * Summary:
@@ -1358,18 +1358,18 @@ uint32 PWM_2_GetInterruptSourceMasked(void)
 * Return:
 *  Interrupt request value
 *   Values:
-*     - PWM_2_INTR_MASK_TC       - Terminal count mask
-*     - PWM_2_INTR_MASK_CC_MATCH - Compare count / capture mask
+*     - PWM_Motor_INTR_MASK_TC       - Terminal count mask
+*     - PWM_Motor_INTR_MASK_CC_MATCH - Compare count / capture mask
 *
 *******************************************************************************/
-uint32 PWM_2_GetInterruptSource(void)
+uint32 PWM_Motor_GetInterruptSource(void)
 {
-    return (PWM_2_INTERRUPT_REQ_REG);
+    return (PWM_Motor_INTERRUPT_REQ_REG);
 }
 
 
 /*******************************************************************************
-* Function Name: PWM_2_ClearInterrupt
+* Function Name: PWM_Motor_ClearInterrupt
 ********************************************************************************
 *
 * Summary:
@@ -1378,21 +1378,21 @@ uint32 PWM_2_GetInterruptSource(void)
 * Parameters:
 *   interruptMask: Mask of interrupts to clear
 *   Values:
-*     - PWM_2_INTR_MASK_TC       - Terminal count mask
-*     - PWM_2_INTR_MASK_CC_MATCH - Compare count / capture mask
+*     - PWM_Motor_INTR_MASK_TC       - Terminal count mask
+*     - PWM_Motor_INTR_MASK_CC_MATCH - Compare count / capture mask
 *
 * Return:
 *  None
 *
 *******************************************************************************/
-void PWM_2_ClearInterrupt(uint32 interruptMask)
+void PWM_Motor_ClearInterrupt(uint32 interruptMask)
 {
-    PWM_2_INTERRUPT_REQ_REG = interruptMask;
+    PWM_Motor_INTERRUPT_REQ_REG = interruptMask;
 }
 
 
 /*******************************************************************************
-* Function Name: PWM_2_SetInterrupt
+* Function Name: PWM_Motor_SetInterrupt
 ********************************************************************************
 *
 * Summary:
@@ -1401,16 +1401,16 @@ void PWM_2_ClearInterrupt(uint32 interruptMask)
 * Parameters:
 *   interruptMask: Mask of interrupts to set
 *   Values:
-*     - PWM_2_INTR_MASK_TC       - Terminal count mask
-*     - PWM_2_INTR_MASK_CC_MATCH - Compare count / capture mask
+*     - PWM_Motor_INTR_MASK_TC       - Terminal count mask
+*     - PWM_Motor_INTR_MASK_CC_MATCH - Compare count / capture mask
 *
 * Return:
 *  None
 *
 *******************************************************************************/
-void PWM_2_SetInterrupt(uint32 interruptMask)
+void PWM_Motor_SetInterrupt(uint32 interruptMask)
 {
-    PWM_2_INTERRUPT_SET_REG = interruptMask;
+    PWM_Motor_INTERRUPT_SET_REG = interruptMask;
 }
 
 
