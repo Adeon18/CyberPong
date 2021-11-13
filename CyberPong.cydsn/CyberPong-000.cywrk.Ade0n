@@ -165,6 +165,40 @@
 <VisibleNodeIds>
 <v>CyberPong-000</v>
 <v>CyberPong-000\CyberPong</v>
+<v>CyberPong-000\CyberPong\CortexM0</v>
+<v>CyberPong-000\CyberPong\CortexM0\ARM_GCC_541</v>
+<v>CyberPong-000\CyberPong\CortexM0\ARM_GCC_541\Debug</v>
+<v>CyberPong-000\CyberPong\CortexM0\ARM_GCC_541\Debug\Listing Files</v>
+<v>CyberPong-000\CyberPong\CortexM0\ARM_GCC_541\Debug\Listing Files\Clock_1.lst</v>
+<v>CyberPong-000\CyberPong\CortexM0\ARM_GCC_541\Debug\Listing Files\Clock_2.lst</v>
+<v>CyberPong-000\CyberPong\CortexM0\ARM_GCC_541\Debug\Listing Files\Clock_3.lst</v>
+<v>CyberPong-000\CyberPong\CortexM0\ARM_GCC_541\Debug\Listing Files\Cm0Start.lst</v>
+<v>CyberPong-000\CyberPong\CortexM0\ARM_GCC_541\Debug\Listing Files\Counter.lst</v>
+<v>CyberPong-000\CyberPong\CortexM0\ARM_GCC_541\Debug\Listing Files\Counter_PM.lst</v>
+<v>CyberPong-000\CyberPong\CortexM0\ARM_GCC_541\Debug\Listing Files\cy_em_eeprom.lst</v>
+<v>CyberPong-000\CyberPong\CortexM0\ARM_GCC_541\Debug\Listing Files\CyBootAsmGnu.lst</v>
+<v>CyberPong-000\CyberPong\CortexM0\ARM_GCC_541\Debug\Listing Files\CyDMA.lst</v>
+<v>CyberPong-000\CyberPong\CortexM0\ARM_GCC_541\Debug\Listing Files\cyfitter_cfg.lst</v>
+<v>CyberPong-000\CyberPong\CortexM0\ARM_GCC_541\Debug\Listing Files\CyFlash.lst</v>
+<v>CyberPong-000\CyberPong\CortexM0\ARM_GCC_541\Debug\Listing Files\CyLFClk.lst</v>
+<v>CyberPong-000\CyberPong\CortexM0\ARM_GCC_541\Debug\Listing Files\CyLib.lst</v>
+<v>CyberPong-000\CyberPong\CortexM0\ARM_GCC_541\Debug\Listing Files\cymetadata.lst</v>
+<v>CyberPong-000\CyberPong\CortexM0\ARM_GCC_541\Debug\Listing Files\cyPm.lst</v>
+<v>CyberPong-000\CyberPong\CortexM0\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
+<v>CyberPong-000\CyberPong\CortexM0\ARM_GCC_541\Debug\Listing Files\I2C.lst</v>
+<v>CyberPong-000\CyberPong\CortexM0\ARM_GCC_541\Debug\Listing Files\I2C_BOOT.lst</v>
+<v>CyberPong-000\CyberPong\CortexM0\ARM_GCC_541\Debug\Listing Files\I2C_EZI2C.lst</v>
+<v>CyberPong-000\CyberPong\CortexM0\ARM_GCC_541\Debug\Listing Files\I2C_EZI2C_BOOT.lst</v>
+<v>CyberPong-000\CyberPong\CortexM0\ARM_GCC_541\Debug\Listing Files\I2C_EZI2C_INT.lst</v>
+<v>CyberPong-000\CyberPong\CortexM0\ARM_GCC_541\Debug\Listing Files\I2C_PM.lst</v>
+<v>CyberPong-000\CyberPong\CortexM0\ARM_GCC_541\Debug\Listing Files\I2C_SCB_IRQ.lst</v>
+<v>CyberPong-000\CyberPong\CortexM0\ARM_GCC_541\Debug\Listing Files\I2C_SCBCLK.lst</v>
+<v>CyberPong-000\CyberPong\CortexM0\ARM_GCC_541\Debug\Listing Files\I2C_scl.lst</v>
+<v>CyberPong-000\CyberPong\CortexM0\ARM_GCC_541\Debug\Listing Files\I2C_scl_PM.lst</v>
+<v>CyberPong-000\CyberPong\CortexM0\ARM_GCC_541\Debug\Listing Files\I2C_sda.lst</v>
+<v>CyberPong-000\CyberPong\CortexM0\ARM_GCC_541\Debug\Listing Files\I2C_sda_PM.lst</v>
+<v>CyberPong-000\CyberPong\CortexM0\ARM_GCC_541\Debug\Listing Files\ISR_Compare.lst</v>
+<v>CyberPong-000\CyberPong\CortexM0\ARM_GCC_541\Debug\Listing Files\LED.lst</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStates>

@@ -68,6 +68,7 @@ int main(void)
         if (pwm_signal == 4998) {
             signals_per_time_unit = Counter_ReadCounter();
             
+            
             // Convert signal to RPM
             current_rpm = (2 * signals_per_time_unit);
             
