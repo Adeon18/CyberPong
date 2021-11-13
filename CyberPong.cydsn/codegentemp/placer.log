@@ -6,7 +6,7 @@
 
 #Build Date:         Sep  9 2019 11:47:43
 
-#File Generated:     Nov 12 2021 22:45:14
+#File Generated:     Nov 13 2021 10:39:31
 
 #Purpose:            
 
@@ -55,7 +55,7 @@ Design Statistics after Packing
 Device Utilization Summary after Packing
     Macrocells                  :	9/32
     UDBS                        :	4/4
-    IOs                         :	6/38
+    IOs                         :	8/38
 
 
 D2088: Phase 3, elapsed time : 0.0 (sec)
@@ -76,7 +76,7 @@ analysis after routing.
 ######################################################################
                      Clock Summary 
 ======================================================================
-Number of clocks: 15
+Number of clocks: 17
 Clock: Clock_1              | Frequency: N/A       | Target:   0.0 MHz
 Clock: Clock_1(FFB)         | Frequency: N/A       | Target:   0.0 MHz
 Clock: Clock_2              | Frequency:  29.9 MHz | Target:  24.0 MHz
@@ -90,6 +90,8 @@ Clock: CyLFClk              | Frequency: N/A       | Target:   0.0 MHz
 Clock: CyRouted1            | Frequency: N/A       | Target:  48.0 MHz
 Clock: CySysClk             | Frequency: N/A       | Target:  48.0 MHz
 Clock: CyWCO                | Frequency: N/A       | Target:   0.0 MHz
+Clock: I2C_SCBCLK           | Frequency: N/A       | Target:   1.6 MHz
+Clock: I2C_SCBCLK(FFB)      | Frequency: N/A       | Target:   1.6 MHz
 Clock: UART_SCBCLK          | Frequency: N/A       | Target:   1.4 MHz
 Clock: UART_SCBCLK(FFB)     | Frequency: N/A       | Target:   1.4 MHz
 
@@ -103,7 +105,7 @@ Phase 7
 ######################################################################
                      Clock Summary 
 ======================================================================
-Number of clocks: 15
+Number of clocks: 17
 Clock: Clock_1              | Frequency: N/A       | Target:   0.0 MHz
 Clock: Clock_1(FFB)         | Frequency: N/A       | Target:   0.0 MHz
 Clock: Clock_2              | Frequency:  29.9 MHz | Target:  24.0 MHz
@@ -117,13 +119,15 @@ Clock: CyLFClk              | Frequency: N/A       | Target:   0.0 MHz
 Clock: CyRouted1            | Frequency: N/A       | Target:  48.0 MHz
 Clock: CySysClk             | Frequency: N/A       | Target:  48.0 MHz
 Clock: CyWCO                | Frequency: N/A       | Target:   0.0 MHz
+Clock: I2C_SCBCLK           | Frequency: N/A       | Target:   1.6 MHz
+Clock: I2C_SCBCLK(FFB)      | Frequency: N/A       | Target:   1.6 MHz
 Clock: UART_SCBCLK          | Frequency: N/A       | Target:   1.4 MHz
 Clock: UART_SCBCLK(FFB)     | Frequency: N/A       | Target:   1.4 MHz
 
 ======================================================================
                      End of Clock Summary
 ######################################################################
-D2088: Phase 7, elapsed time : 0.0 (sec)
+D2088: Phase 7, elapsed time : 0.1 (sec)
 
 Final Design Statistics
     Number of Combinational MCs 	:	5
@@ -133,11 +137,11 @@ Final Design Statistics
     Number of Status            	:	1
     Number of SyncCells         	:	0
     Number of count7cells       	:	0
-    Number of IOs       	:	6
+    Number of IOs       	:	8
 
 Device Utilization Summary
     Macrocells                  :	9/32
-    IOs                         :	6/38
+    IOs                         :	8/38
 
 
 
@@ -153,7 +157,7 @@ analysis after routing.
 ######################################################################
                      Clock Summary 
 ======================================================================
-Number of clocks: 15
+Number of clocks: 17
 Clock: Clock_1              | Frequency: N/A       | Target:   0.0 MHz
 Clock: Clock_1(FFB)         | Frequency: N/A       | Target:   0.0 MHz
 Clock: Clock_2              | Frequency:  29.9 MHz | Target:  26.3 MHz
@@ -167,6 +171,8 @@ Clock: CyLFClk              | Frequency: N/A       | Target:   0.0 MHz
 Clock: CyRouted1            | Frequency: N/A       | Target:  48.0 MHz
 Clock: CySysClk             | Frequency: N/A       | Target:  48.0 MHz
 Clock: CyWCO                | Frequency: N/A       | Target:   0.0 MHz
+Clock: I2C_SCBCLK           | Frequency: N/A       | Target:   1.6 MHz
+Clock: I2C_SCBCLK(FFB)      | Frequency: N/A       | Target:   1.6 MHz
 Clock: UART_SCBCLK          | Frequency: N/A       | Target:   1.4 MHz
 Clock: UART_SCBCLK(FFB)     | Frequency: N/A       | Target:   1.4 MHz
 
@@ -179,5 +185,5 @@ D2088: Phase 8, elapsed time : 0.0 (sec)
 
 D2054: Placement of the design completed successfully
 
-I2076: Total run-time: 0.3 sec.
+I2076: Total run-time: 0.4 sec.
 

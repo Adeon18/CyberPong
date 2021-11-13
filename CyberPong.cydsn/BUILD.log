@@ -1,19 +1,37 @@
---------------- Build Started: 11/12/2021 19:35:18 Project: CyberPong, Configuration: ARM GCC 5.4-2016-q2-update Debug ---------------
-The code generation step is up to date.
+--------------- Build Started: 11/13/2021 10:39:26 Project: CyberPong, Configuration: ARM GCC 5.4-2016-q2-update Debug ---------------
+cydsfit.exe -.appdatapath "C:\Users\Ade0n\AppData\Local\Cypress Semiconductor\PSoC Creator\4.4" -.fdsnotice -.fdswarpdepfile=warp_dependencies.txt -.fdselabdepfile=elab_dependencies.txt -.fdsbldfile=generated_files.txt -.fdsreffile=referenced_files.txt -p "C:\Users\Ade0n\Desktop\THE PROJECT\PRJCT\CyberPong\CyberPong.cydsn\CyberPong.cyprj" -d CY8C4248LQI-BL583 -s "C:\Users\Ade0n\Desktop\THE PROJECT\PRJCT\CyberPong\CyberPong.cydsn\Generated_Source\PSoC4" -- -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE
+Elaborating Design...
+HDL Generation...
+Synthesis...
+Tech Mapping...
+Analog Placement...
+Analog Routing...
+Analog Code Generation...
+Digital Placement...
+Digital Routing...
+Bitstream Generation...
+Bitstream Verification...
+Static timing analysis...
+Warning: sta.M0021: CyberPong_timing.html: Warning-1350: Asynchronous path(s) exist from "Clock_1(FFB)" to "Clock_2". See the timing report for details. (File=C:\Users\Ade0n\Desktop\THE PROJECT\PRJCT\CyberPong\CyberPong.cydsn\CyberPong_timing.html)
+API Generation...
+Dependency Generation...
+Cleanup...
 arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_541\Debug/main.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c main.c -o .\CortexM0\ARM_GCC_541\Debug\main.o
 main.c: In function 'main':
-main.c:54:27: warning: format '%u' expects argument of type 'unsigned int', but argument 3 has type 'uint32_t {aka long unsigned int}' [-Wformat=]
-             sprintf(buff, "%u", signals_per_time_unit);
-                           ^
-main.c:54:27: warning: format '%u' expects argument of type 'unsigned int', but argument 3 has type 'uint32_t {aka long unsigned int}' [-Wformat=]
-arm-none-eabi-ar.exe -rs .\CortexM0\ARM_GCC_541\Debug\CyberPong.a .\CortexM0\ARM_GCC_541\Debug\Clock_2.o .\CortexM0\ARM_GCC_541\Debug\Counter.o .\CortexM0\ARM_GCC_541\Debug\Counter_PM.o .\CortexM0\ARM_GCC_541\Debug\Pin_Input.o .\CortexM0\ARM_GCC_541\Debug\Pin_Input_PM.o .\CortexM0\ARM_GCC_541\Debug\CyFlash.o .\CortexM0\ARM_GCC_541\Debug\CyLib.o .\CortexM0\ARM_GCC_541\Debug\cyPm.o .\CortexM0\ARM_GCC_541\Debug\cyutils.o .\CortexM0\ARM_GCC_541\Debug\CyDMA.o .\CortexM0\ARM_GCC_541\Debug\CyLFClk.o .\CortexM0\ARM_GCC_541\Debug\cy_em_eeprom.o .\CortexM0\ARM_GCC_541\Debug\PWM.o .\CortexM0\ARM_GCC_541\Debug\PWM_PM.o .\CortexM0\ARM_GCC_541\Debug\Clock_1.o .\CortexM0\ARM_GCC_541\Debug\ISR_Compare.o .\CortexM0\ARM_GCC_541\Debug\UART.o .\CortexM0\ARM_GCC_541\Debug\UART_SPI_UART.o .\CortexM0\ARM_GCC_541\Debug\UART_SPI_UART_INT.o .\CortexM0\ARM_GCC_541\Debug\UART_PM.o .\CortexM0\ARM_GCC_541\Debug\UART_UART.o .\CortexM0\ARM_GCC_541\Debug\UART_BOOT.o .\CortexM0\ARM_GCC_541\Debug\UART_UART_BOOT.o .\CortexM0\ARM_GCC_541\Debug\UART_SCBCLK.o .\CortexM0\ARM_GCC_541\Debug\UART_tx.o .\CortexM0\ARM_GCC_541\Debug\UART_tx_PM.o .\CortexM0\ARM_GCC_541\Debug\UART_rx.o .\CortexM0\ARM_GCC_541\Debug\UART_rx_PM.o .\CortexM0\ARM_GCC_541\Debug\Pin_A.o .\CortexM0\ARM_GCC_541\Debug\Pin_A_PM.o .\CortexM0\ARM_GCC_541\Debug\Pin_B.o .\CortexM0\ARM_GCC_541\Debug\Pin_B_PM.o .\CortexM0\ARM_GCC_541\Debug\LED.o .\CortexM0\ARM_GCC_541\Debug\LED_PM.o .\CortexM0\ARM_GCC_541\Debug\Clock_3.o .\CortexM0\ARM_GCC_541\Debug\PWM_2.o .\CortexM0\ARM_GCC_541\Debug\PWM_2_PM.o .\CortexM0\ARM_GCC_541\Debug\CyBootAsmGnu.o
+main.c:75:36: warning: format '%u' expects argument of type 'unsigned int', but argument 3 has type 'uint32_t {aka long unsigned int}' [-Wformat=]
+             sprintf(uart_rpm_buff, "%u", current_rpm);
+                                    ^
+main.c:75:36: warning: format '%u' expects argument of type 'unsigned int', but argument 3 has type 'uint32_t {aka long unsigned int}' [-Wformat=]
+arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_541\Debug/PWM.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC4\PWM.c -o .\CortexM0\ARM_GCC_541\Debug\PWM.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_541\Debug/PWM_PM.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC4\PWM_PM.c -o .\CortexM0\ARM_GCC_541\Debug\PWM_PM.o
+arm-none-eabi-ar.exe -rs .\CortexM0\ARM_GCC_541\Debug\CyberPong.a .\CortexM0\ARM_GCC_541\Debug\Clock_2.o .\CortexM0\ARM_GCC_541\Debug\Counter.o .\CortexM0\ARM_GCC_541\Debug\Counter_PM.o .\CortexM0\ARM_GCC_541\Debug\Pin_Input.o .\CortexM0\ARM_GCC_541\Debug\Pin_Input_PM.o .\CortexM0\ARM_GCC_541\Debug\CyFlash.o .\CortexM0\ARM_GCC_541\Debug\CyLib.o .\CortexM0\ARM_GCC_541\Debug\cyPm.o .\CortexM0\ARM_GCC_541\Debug\cyutils.o .\CortexM0\ARM_GCC_541\Debug\CyDMA.o .\CortexM0\ARM_GCC_541\Debug\CyLFClk.o .\CortexM0\ARM_GCC_541\Debug\cy_em_eeprom.o .\CortexM0\ARM_GCC_541\Debug\PWM.o .\CortexM0\ARM_GCC_541\Debug\PWM_PM.o .\CortexM0\ARM_GCC_541\Debug\Clock_1.o .\CortexM0\ARM_GCC_541\Debug\ISR_Compare.o .\CortexM0\ARM_GCC_541\Debug\UART.o .\CortexM0\ARM_GCC_541\Debug\UART_SPI_UART.o .\CortexM0\ARM_GCC_541\Debug\UART_SPI_UART_INT.o .\CortexM0\ARM_GCC_541\Debug\UART_PM.o .\CortexM0\ARM_GCC_541\Debug\UART_UART.o .\CortexM0\ARM_GCC_541\Debug\UART_BOOT.o .\CortexM0\ARM_GCC_541\Debug\UART_UART_BOOT.o .\CortexM0\ARM_GCC_541\Debug\UART_SCBCLK.o .\CortexM0\ARM_GCC_541\Debug\UART_tx.o .\CortexM0\ARM_GCC_541\Debug\UART_tx_PM.o .\CortexM0\ARM_GCC_541\Debug\UART_rx.o .\CortexM0\ARM_GCC_541\Debug\UART_rx_PM.o .\CortexM0\ARM_GCC_541\Debug\Pin_A.o .\CortexM0\ARM_GCC_541\Debug\Pin_A_PM.o .\CortexM0\ARM_GCC_541\Debug\Pin_B.o .\CortexM0\ARM_GCC_541\Debug\Pin_B_PM.o .\CortexM0\ARM_GCC_541\Debug\LED.o .\CortexM0\ARM_GCC_541\Debug\LED_PM.o .\CortexM0\ARM_GCC_541\Debug\Clock_3.o .\CortexM0\ARM_GCC_541\Debug\PWM_Motor.o .\CortexM0\ARM_GCC_541\Debug\PWM_Motor_PM.o .\CortexM0\ARM_GCC_541\Debug\I2C.o .\CortexM0\ARM_GCC_541\Debug\I2C_PM.o .\CortexM0\ARM_GCC_541\Debug\I2C_BOOT.o .\CortexM0\ARM_GCC_541\Debug\I2C_EZI2C.o .\CortexM0\ARM_GCC_541\Debug\I2C_EZI2C_INT.o .\CortexM0\ARM_GCC_541\Debug\I2C_EZI2C_BOOT.o .\CortexM0\ARM_GCC_541\Debug\I2C_SCBCLK.o .\CortexM0\ARM_GCC_541\Debug\I2C_sda.o .\CortexM0\ARM_GCC_541\Debug\I2C_sda_PM.o .\CortexM0\ARM_GCC_541\Debug\I2C_scl.o .\CortexM0\ARM_GCC_541\Debug\I2C_scl_PM.o .\CortexM0\ARM_GCC_541\Debug\I2C_SCB_IRQ.o .\CortexM0\ARM_GCC_541\Debug\CyBootAsmGnu.o
 arm-none-eabi-ar.exe: creating .\CortexM0\ARM_GCC_541\Debug\CyberPong.a
-arm-none-eabi-gcc.exe -Wl,--start-group -o "C:\Users\Ade0n\Documents\PSoC Creator\AAAAAAAAAAAAAAAa\CyberPong.cydsn\CortexM0\ARM_GCC_541\Debug\CyberPong.elf" .\CortexM0\ARM_GCC_541\Debug\main.o .\CortexM0\ARM_GCC_541\Debug\cyfitter_cfg.o .\CortexM0\ARM_GCC_541\Debug\cymetadata.o .\CortexM0\ARM_GCC_541\Debug\Cm0Start.o .\CortexM0\ARM_GCC_541\Debug\CyberPong.a -mcpu=cortex-m0 -mthumb -L Generated_Source\PSoC4 -Wl,-Map,.\CortexM0\ARM_GCC_541\Debug/CyberPong.map -T Generated_Source\PSoC4\cm0gcc.ld -specs=nano.specs -Wl,--gc-sections -g -ffunction-sections -Og -ffat-lto-objects -Wl,--end-group
-cyelftool.exe -C "C:\Users\Ade0n\Documents\PSoC Creator\AAAAAAAAAAAAAAAa\CyberPong.cydsn\CortexM0\ARM_GCC_541\Debug\CyberPong.elf" --flash_row_size 256 --flash_size 262144 --flash_offset 0x00000000
+arm-none-eabi-gcc.exe -Wl,--start-group -o "C:\Users\Ade0n\Desktop\THE PROJECT\PRJCT\CyberPong\CyberPong.cydsn\CortexM0\ARM_GCC_541\Debug\CyberPong.elf" .\CortexM0\ARM_GCC_541\Debug\main.o .\CortexM0\ARM_GCC_541\Debug\cyfitter_cfg.o .\CortexM0\ARM_GCC_541\Debug\cymetadata.o .\CortexM0\ARM_GCC_541\Debug\Cm0Start.o .\CortexM0\ARM_GCC_541\Debug\CyberPong.a -mcpu=cortex-m0 -mthumb -L Generated_Source\PSoC4 -Wl,-Map,.\CortexM0\ARM_GCC_541\Debug/CyberPong.map -T Generated_Source\PSoC4\cm0gcc.ld -specs=nano.specs -Wl,--gc-sections -g -ffunction-sections -Og -ffat-lto-objects -Wl,--end-group
+cyelftool.exe -C "C:\Users\Ade0n\Desktop\THE PROJECT\PRJCT\CyberPong\CyberPong.cydsn\CortexM0\ARM_GCC_541\Debug\CyberPong.elf" --flash_row_size 256 --flash_size 262144 --flash_offset 0x00000000
 No ELF section .cychecksum found, creating one
 Application checksum calculated and stored in ELF section .cychecksum
 Checksum calculated and stored in ELF section .cymeta
-cyelftool.exe -S "C:\Users\Ade0n\Documents\PSoC Creator\AAAAAAAAAAAAAAAa\CyberPong.cydsn\CortexM0\ARM_GCC_541\Debug\CyberPong.elf"
-Flash used: 6654 of 262144 bytes (2.5%).
-SRAM used: 2600 of 32768 bytes (7.9%). Stack: 2048 bytes. Heap: 128 bytes.
---------------- Build Succeeded: 11/12/2021 19:35:19 ---------------
+cyelftool.exe -S "C:\Users\Ade0n\Desktop\THE PROJECT\PRJCT\CyberPong\CyberPong.cydsn\CortexM0\ARM_GCC_541\Debug\CyberPong.elf"
+Flash used: 7942 of 262144 bytes (3.0%).
+SRAM used: 2632 of 32768 bytes (8.0%). Stack: 2048 bytes. Heap: 128 bytes.
+--------------- Build Succeeded: 11/13/2021 10:39:36 ---------------

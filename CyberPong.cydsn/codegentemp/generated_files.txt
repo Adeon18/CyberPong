@@ -59,6 +59,18 @@
   <file name="C:\Users\Ade0n\Desktop\THE PROJECT\PRJCT\CyberPong\CyberPong.cydsn\codegentemp\PWM_Motor.c" value="SOURCE_C;CortexM0;;;;PWM_Motor" />
   <file name="C:\Users\Ade0n\Desktop\THE PROJECT\PRJCT\CyberPong\CyberPong.cydsn\codegentemp\PWM_Motor.h" value="HEADER;;;;;PWM_Motor" />
   <file name="C:\Users\Ade0n\Desktop\THE PROJECT\PRJCT\CyberPong\CyberPong.cydsn\codegentemp\PWM_Motor_PM.c" value="SOURCE_C;CortexM0;;;;PWM_Motor" />
+  <file name="C:\Users\Ade0n\Desktop\THE PROJECT\PRJCT\CyberPong\CyberPong.cydsn\codegentemp\I2C.c" value="SOURCE_C;CortexM0;;;;I2C" />
+  <file name="C:\Users\Ade0n\Desktop\THE PROJECT\PRJCT\CyberPong\CyberPong.cydsn\codegentemp\I2C.h" value="HEADER;;;;;I2C" />
+  <file name="C:\Users\Ade0n\Desktop\THE PROJECT\PRJCT\CyberPong\CyberPong.cydsn\codegentemp\I2C_PM.c" value="SOURCE_C;CortexM0;;;;I2C" />
+  <file name="C:\Users\Ade0n\Desktop\THE PROJECT\PRJCT\CyberPong\CyberPong.cydsn\codegentemp\I2C_BOOT.c" value="SOURCE_C;CortexM0;;;;I2C" />
+  <file name="C:\Users\Ade0n\Desktop\THE PROJECT\PRJCT\CyberPong\CyberPong.cydsn\codegentemp\I2C_PINS.h" value="HEADER;;;;;I2C" />
+  <file name="C:\Users\Ade0n\Desktop\THE PROJECT\PRJCT\CyberPong\CyberPong.cydsn\codegentemp\I2C_PVT.h" value="HEADER;;;;;I2C" />
+  <file name="C:\Users\Ade0n\Desktop\THE PROJECT\PRJCT\CyberPong\CyberPong.cydsn\codegentemp\I2C_EZI2C.c" value="SOURCE_C;CortexM0;;;;I2C" />
+  <file name="C:\Users\Ade0n\Desktop\THE PROJECT\PRJCT\CyberPong\CyberPong.cydsn\codegentemp\I2C_EZI2C_INT.c" value="SOURCE_C;CortexM0;;;;I2C" />
+  <file name="C:\Users\Ade0n\Desktop\THE PROJECT\PRJCT\CyberPong\CyberPong.cydsn\codegentemp\I2C_EZI2C.h" value="HEADER;;;;;I2C" />
+  <file name="C:\Users\Ade0n\Desktop\THE PROJECT\PRJCT\CyberPong\CyberPong.cydsn\codegentemp\I2C_EZI2C_PVT.h" value="HEADER;;;;;I2C" />
+  <file name="C:\Users\Ade0n\Desktop\THE PROJECT\PRJCT\CyberPong\CyberPong.cydsn\codegentemp\I2C_EZI2C_BOOT.c" value="SOURCE_C;CortexM0;;;;I2C" />
+  <file name="C:\Users\Ade0n\Desktop\THE PROJECT\PRJCT\CyberPong\CyberPong.cydsn\codegentemp\I2C_BOOT.h" value="HEADER;;;;;I2C" />
   <file name="C:\Users\Ade0n\Desktop\THE PROJECT\PRJCT\CyberPong\CyberPong.cydsn\codegentemp\UART_SCBCLK.c" value="SOURCE_C;CortexM0;;;;UART_SCBCLK" />
   <file name="C:\Users\Ade0n\Desktop\THE PROJECT\PRJCT\CyberPong\CyberPong.cydsn\codegentemp\UART_SCBCLK.h" value="HEADER;;;;;UART_SCBCLK" />
   <file name="C:\Users\Ade0n\Desktop\THE PROJECT\PRJCT\CyberPong\CyberPong.cydsn\codegentemp\UART_tx.c" value="SOURCE_C;CortexM0;;;;UART_tx" />
@@ -69,6 +81,18 @@
   <file name="C:\Users\Ade0n\Desktop\THE PROJECT\PRJCT\CyberPong\CyberPong.cydsn\codegentemp\UART_rx.h" value="HEADER;;;;;UART_rx" />
   <file name="C:\Users\Ade0n\Desktop\THE PROJECT\PRJCT\CyberPong\CyberPong.cydsn\codegentemp\UART_rx_aliases.h" value="HEADER;;;;;UART_rx" />
   <file name="C:\Users\Ade0n\Desktop\THE PROJECT\PRJCT\CyberPong\CyberPong.cydsn\codegentemp\UART_rx_PM.c" value="SOURCE_C;CortexM0;;;;UART_rx" />
+  <file name="C:\Users\Ade0n\Desktop\THE PROJECT\PRJCT\CyberPong\CyberPong.cydsn\codegentemp\I2C_SCBCLK.c" value="SOURCE_C;CortexM0;;;;I2C_SCBCLK" />
+  <file name="C:\Users\Ade0n\Desktop\THE PROJECT\PRJCT\CyberPong\CyberPong.cydsn\codegentemp\I2C_SCBCLK.h" value="HEADER;;;;;I2C_SCBCLK" />
+  <file name="C:\Users\Ade0n\Desktop\THE PROJECT\PRJCT\CyberPong\CyberPong.cydsn\codegentemp\I2C_sda.c" value="SOURCE_C;CortexM0;;;;I2C_sda" />
+  <file name="C:\Users\Ade0n\Desktop\THE PROJECT\PRJCT\CyberPong\CyberPong.cydsn\codegentemp\I2C_sda.h" value="HEADER;;;;;I2C_sda" />
+  <file name="C:\Users\Ade0n\Desktop\THE PROJECT\PRJCT\CyberPong\CyberPong.cydsn\codegentemp\I2C_sda_aliases.h" value="HEADER;;;;;I2C_sda" />
+  <file name="C:\Users\Ade0n\Desktop\THE PROJECT\PRJCT\CyberPong\CyberPong.cydsn\codegentemp\I2C_sda_PM.c" value="SOURCE_C;CortexM0;;;;I2C_sda" />
+  <file name="C:\Users\Ade0n\Desktop\THE PROJECT\PRJCT\CyberPong\CyberPong.cydsn\codegentemp\I2C_scl.c" value="SOURCE_C;CortexM0;;;;I2C_scl" />
+  <file name="C:\Users\Ade0n\Desktop\THE PROJECT\PRJCT\CyberPong\CyberPong.cydsn\codegentemp\I2C_scl.h" value="HEADER;;;;;I2C_scl" />
+  <file name="C:\Users\Ade0n\Desktop\THE PROJECT\PRJCT\CyberPong\CyberPong.cydsn\codegentemp\I2C_scl_aliases.h" value="HEADER;;;;;I2C_scl" />
+  <file name="C:\Users\Ade0n\Desktop\THE PROJECT\PRJCT\CyberPong\CyberPong.cydsn\codegentemp\I2C_scl_PM.c" value="SOURCE_C;CortexM0;;;;I2C_scl" />
+  <file name="C:\Users\Ade0n\Desktop\THE PROJECT\PRJCT\CyberPong\CyberPong.cydsn\codegentemp\I2C_SCB_IRQ.c" value="SOURCE_C;CortexM0;;;;I2C_SCB_IRQ" />
+  <file name="C:\Users\Ade0n\Desktop\THE PROJECT\PRJCT\CyberPong\CyberPong.cydsn\codegentemp\I2C_SCB_IRQ.h" value="HEADER;;;;;I2C_SCB_IRQ" />
   <file name="C:\Users\Ade0n\Desktop\THE PROJECT\PRJCT\CyberPong\CyberPong.cydsn\codegentemp\cm0gcc.ld" value="LINKER_SCRIPT;;;b98f980c-3bd1-4fc7-a887-c56a20a46fdd;;cy_boot" />
   <file name="C:\Users\Ade0n\Desktop\THE PROJECT\PRJCT\CyberPong\CyberPong.cydsn\codegentemp\Cm0RealView.scat" value="LINKER_SCRIPT;;;fdb8e1ae-f83a-46cf-9446-1d703716f38a;;cy_boot" />
   <file name="C:\Users\Ade0n\Desktop\THE PROJECT\PRJCT\CyberPong\CyberPong.cydsn\codegentemp\Cm0Start.c" value="SOURCE_C;CortexM0;;;;cy_boot" />

@@ -144,6 +144,30 @@
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\PWM_Motor.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\PWM_Motor.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\PWM_Motor_PM.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\I2C.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\I2C.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\I2C_PM.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\I2C_BOOT.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\I2C_PINS.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\I2C_PVT.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\I2C_EZI2C.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\I2C_EZI2C_INT.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\I2C_EZI2C.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\I2C_EZI2C_PVT.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\I2C_EZI2C_BOOT.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\I2C_BOOT.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\I2C_SCBCLK.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\I2C_SCBCLK.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\I2C_sda.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\I2C_sda.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\I2C_sda_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\I2C_sda_PM.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\I2C_scl.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\I2C_scl.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\I2C_scl_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\I2C_scl_PM.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\I2C_SCB_IRQ.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\I2C_SCB_IRQ.h</File>
         </Files>
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\codegentemp">

@@ -18,7 +18,7 @@
 <v>Output</v>
 </TreeKeys>
 <TreeStates>
-<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="CyberPong-000\CyberPong\TopDesign">
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="CyberPong-000\CyberPong\CyberPong.cydwr">
 <ExpandedNodeIds>
 <v>CyberPong-000</v>
 <v>CyberPong-000\CyberPong</v>
@@ -68,15 +68,15 @@
 <v>CyberPong-000\CyberPong\Generated_Source\PSoC4\cy_dmac</v>
 <v>CyberPong-000\CyberPong\Generated_Source\PSoC4\cy_lfclk</v>
 <v>CyberPong-000\CyberPong\Generated_Source\PSoC4\Em_EEPROM_Dynamic</v>
+<v>CyberPong-000\CyberPong\Generated_Source\PSoC4\I2C</v>
+<v>CyberPong-000\CyberPong\Generated_Source\PSoC4\I2C_SCB_IRQ</v>
+<v>CyberPong-000\CyberPong\Generated_Source\PSoC4\I2C_SCBCLK</v>
+<v>CyberPong-000\CyberPong\Generated_Source\PSoC4\I2C_scl</v>
+<v>CyberPong-000\CyberPong\Generated_Source\PSoC4\I2C_sda</v>
 <v>CyberPong-000\CyberPong\Generated_Source\PSoC4\ISR_Compare</v>
 <v>CyberPong-000\CyberPong\Generated_Source\PSoC4\LED</v>
 <v>CyberPong-000\CyberPong\Generated_Source\PSoC4\Pin_A</v>
 <v>CyberPong-000\CyberPong\Generated_Source\PSoC4\Pin_B</v>
-<v>CyberPong-000\CyberPong\Generated_Source\PSoC4\Pin_Input</v>
-<v>CyberPong-000\CyberPong\Generated_Source\PSoC4\PWM</v>
-<v>CyberPong-000\CyberPong\Generated_Source\PSoC4\PWM_Motor</v>
-<v>CyberPong-000\CyberPong\Generated_Source\PSoC4\UART</v>
-<v>CyberPong-000\CyberPong\Generated_Source\PSoC4\UART_rx</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 <CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
@@ -117,6 +117,18 @@
 <v>CyberPong-000\CyberPong\CortexM0\ARM_GCC_541\Debug\Listing Files\cymetadata.lst</v>
 <v>CyberPong-000\CyberPong\CortexM0\ARM_GCC_541\Debug\Listing Files\cyPm.lst</v>
 <v>CyberPong-000\CyberPong\CortexM0\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
+<v>CyberPong-000\CyberPong\CortexM0\ARM_GCC_541\Debug\Listing Files\I2C.lst</v>
+<v>CyberPong-000\CyberPong\CortexM0\ARM_GCC_541\Debug\Listing Files\I2C_BOOT.lst</v>
+<v>CyberPong-000\CyberPong\CortexM0\ARM_GCC_541\Debug\Listing Files\I2C_EZI2C.lst</v>
+<v>CyberPong-000\CyberPong\CortexM0\ARM_GCC_541\Debug\Listing Files\I2C_EZI2C_BOOT.lst</v>
+<v>CyberPong-000\CyberPong\CortexM0\ARM_GCC_541\Debug\Listing Files\I2C_EZI2C_INT.lst</v>
+<v>CyberPong-000\CyberPong\CortexM0\ARM_GCC_541\Debug\Listing Files\I2C_PM.lst</v>
+<v>CyberPong-000\CyberPong\CortexM0\ARM_GCC_541\Debug\Listing Files\I2C_SCB_IRQ.lst</v>
+<v>CyberPong-000\CyberPong\CortexM0\ARM_GCC_541\Debug\Listing Files\I2C_SCBCLK.lst</v>
+<v>CyberPong-000\CyberPong\CortexM0\ARM_GCC_541\Debug\Listing Files\I2C_scl.lst</v>
+<v>CyberPong-000\CyberPong\CortexM0\ARM_GCC_541\Debug\Listing Files\I2C_scl_PM.lst</v>
+<v>CyberPong-000\CyberPong\CortexM0\ARM_GCC_541\Debug\Listing Files\I2C_sda.lst</v>
+<v>CyberPong-000\CyberPong\CortexM0\ARM_GCC_541\Debug\Listing Files\I2C_sda_PM.lst</v>
 <v>CyberPong-000\CyberPong\CortexM0\ARM_GCC_541\Debug\Listing Files\ISR_Compare.lst</v>
 <v>CyberPong-000\CyberPong\CortexM0\ARM_GCC_541\Debug\Listing Files\LED.lst</v>
 <v>CyberPong-000\CyberPong\CortexM0\ARM_GCC_541\Debug\Listing Files\LED_PM.lst</v>
@@ -128,6 +140,8 @@
 <v>CyberPong-000\CyberPong\CortexM0\ARM_GCC_541\Debug\Listing Files\Pin_Input.lst</v>
 <v>CyberPong-000\CyberPong\CortexM0\ARM_GCC_541\Debug\Listing Files\Pin_Input_PM.lst</v>
 <v>CyberPong-000\CyberPong\CortexM0\ARM_GCC_541\Debug\Listing Files\PWM.lst</v>
+<v>CyberPong-000\CyberPong\CortexM0\ARM_GCC_541\Debug\Listing Files\PWM_Motor.lst</v>
+<v>CyberPong-000\CyberPong\CortexM0\ARM_GCC_541\Debug\Listing Files\PWM_Motor_PM.lst</v>
 <v>CyberPong-000\CyberPong\CortexM0\ARM_GCC_541\Debug\Listing Files\PWM_PM.lst</v>
 <v>CyberPong-000\CyberPong\CortexM0\ARM_GCC_541\Debug\Listing Files\UART.lst</v>
 <v>CyberPong-000\CyberPong\CortexM0\ARM_GCC_541\Debug\Listing Files\UART_BOOT.lst</v>
@@ -176,7 +190,8 @@
 <v>CyberPong-000\CyberPong\cy_isr_v1_70.pdf</v>
 <v>CyberPong-000\CyberPong\cy_pins_v2_20</v>
 <v>CyberPong-000\CyberPong\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
-<v>CyberPong-000\CyberPong\SCB_P4_v4_0.pdf</v>
+<v>CyberPong-000\CyberPong\SCB_P4_v4_0</v>
+<v>CyberPong-000\CyberPong\SCB_P4_v4_0\SCB_P4_v4_0.pdf</v>
 <v>CyberPong-000\CyberPong\TCPWM_P4_v2_10</v>
 <v>CyberPong-000\CyberPong\TCPWM_P4_v2_10\TCPWM_P4_v2_10.pdf</v>
 </ExpandedNodeIds>
@@ -197,7 +212,8 @@
 <v>CyberPong-000\CyberPong\cy_isr_v1_70.pdf</v>
 <v>CyberPong-000\CyberPong\cy_pins_v2_20</v>
 <v>CyberPong-000\CyberPong\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
-<v>CyberPong-000\CyberPong\SCB_P4_v4_0.pdf</v>
+<v>CyberPong-000\CyberPong\SCB_P4_v4_0</v>
+<v>CyberPong-000\CyberPong\SCB_P4_v4_0\SCB_P4_v4_0.pdf</v>
 <v>CyberPong-000\CyberPong\TCPWM_P4_v2_10</v>
 <v>CyberPong-000\CyberPong\TCPWM_P4_v2_10\TCPWM_P4_v2_10.pdf</v>
 </VisibleNodeIds>
