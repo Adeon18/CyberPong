@@ -11,6 +11,10 @@ What is used in this project(currently):
 - L9110 Motor Driver
 - 12V Power supply.
 
+### Current Project Look
+
+![image](img/current_proj_state.png)
+
 ### Current Psoc TopDesign
 
 ![image](img/psoc_topdesign.png)
