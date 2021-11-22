@@ -1,5 +1,5 @@
 -- Project:   CyberPong
--- Generated: 11/13/2021 13:03:19
+-- Generated: 11/22/2021 16:45:16
 -- PSoC Creator  4.4
 
 ENTITY CyberPong IS
@@ -40,7 +40,6 @@ ARCHITECTURE __DEFAULT__ OF CyberPong IS
     SIGNAL Net_155_digital : bit;
     ATTRIBUTE udbclken_assigned OF Net_155_digital : SIGNAL IS "True";
     ATTRIBUTE global_signal OF Net_155_digital : SIGNAL IS true;
-    SIGNAL Net_167 : bit;
     SIGNAL Net_187 : bit;
     SIGNAL Net_196 : bit;
     SIGNAL Net_205 : bit;
@@ -65,6 +64,7 @@ ARCHITECTURE __DEFAULT__ OF CyberPong IS
     SIGNAL Net_574 : bit;
     SIGNAL Net_575 : bit;
     SIGNAL Net_576 : bit;
+    SIGNAL Net_579 : bit;
     SIGNAL Pin_A(0)__PA : bit;
     SIGNAL Pin_B(0)__PA : bit;
     SIGNAL Pin_Input(0)__PA : bit;
@@ -1390,7 +1390,7 @@ BEGIN
             int_type => "10",
             is_nmi => 0)
         PORT MAP(
-            interrupt => Net_167,
+            interrupt => Net_579,
             clock => ClockBlock_HFClk);
 
     \PWM:cy_m0s8_tcpwm_1\:m0s8tcpwmcell
@@ -1408,7 +1408,7 @@ BEGIN
             tr_compare_match => Net_548,
             line => Net_280,
             line_compl => Net_550,
-            interrupt => Net_167);
+            interrupt => Net_579);
 
     __ONE__:macrocell
         GENERIC MAP(

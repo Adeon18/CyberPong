@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\ccfFMKad.s 			page 1
+ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\cc60N6I5.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\ccfFMKad.s 			page 1
   28:Generated_Source\PSoC4/Counter.c **** *     Initialize to the schematic state
   29:Generated_Source\PSoC4/Counter.c **** * 
   30:Generated_Source\PSoC4/Counter.c **** * Parameters:  
-ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\ccfFMKad.s 			page 2
+ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\cc60N6I5.s 			page 2
 
 
   31:Generated_Source\PSoC4/Counter.c **** *  void  
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\ccfFMKad.s 			page 1
   85:Generated_Source\PSoC4/Counter.c ****             #if( 0 != Counter_CAPTURE_MODE_CONF)
   86:Generated_Source\PSoC4/Counter.c ****                 Counter_CONTROL = ctrl | Counter_DEFAULT_CAPTURE_MODE;
   87:Generated_Source\PSoC4/Counter.c ****             #else
-ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\ccfFMKad.s 			page 3
+ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\cc60N6I5.s 			page 3
 
 
   88:Generated_Source\PSoC4/Counter.c ****                 Counter_CONTROL = ctrl;
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\ccfFMKad.s 			page 1
  142:Generated_Source\PSoC4/Counter.c **** *******************************************************************************/
  143:Generated_Source\PSoC4/Counter.c **** void Counter_Enable(void) 
  144:Generated_Source\PSoC4/Counter.c **** {
-ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\ccfFMKad.s 			page 4
+ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\cc60N6I5.s 			page 4
 
 
   28              		.loc 1 144 0
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\ccfFMKad.s 			page 1
  168:Generated_Source\PSoC4/Counter.c **** *  void  
  169:Generated_Source\PSoC4/Counter.c **** *
  170:Generated_Source\PSoC4/Counter.c **** * Return: 
-ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\ccfFMKad.s 			page 5
+ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\cc60N6I5.s 			page 5
 
 
  171:Generated_Source\PSoC4/Counter.c **** *  void
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\ccfFMKad.s 			page 1
  214:Generated_Source\PSoC4/Counter.c ****     
  215:Generated_Source\PSoC4/Counter.c ****     /* Globally disable the Fixed Function Block chosen */
  216:Generated_Source\PSoC4/Counter.c ****     #if (Counter_UsingFixedFunction)
-ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\ccfFMKad.s 			page 6
+ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\cc60N6I5.s 			page 6
 
 
  217:Generated_Source\PSoC4/Counter.c ****         Counter_GLOBAL_ENABLE &= ((uint8)(~Counter_BLOCK_EN_MASK));
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\ccfFMKad.s 			page 1
  100              	.L9:
  101 0006 C046     		.align	2
  102              	.L8:
-ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\ccfFMKad.s 			page 7
+ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\cc60N6I5.s 			page 7
 
 
  103 0008 83000F40 		.word	1074724995
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\ccfFMKad.s 			page 1
  133              		.size	Counter_ReadStatusRegister, .-Counter_ReadStatusRegister
  134              		.section	.text.Counter_ReadControlRegister,"ax",%progbits
  135              		.align	2
-ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\ccfFMKad.s 			page 8
+ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\cc60N6I5.s 			page 8
 
 
  136              		.global	Counter_ReadControlRegister
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\ccfFMKad.s 			page 1
  168              	.LFB9:
  287:Generated_Source\PSoC4/Counter.c **** 
  288:Generated_Source\PSoC4/Counter.c **** 
-ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\ccfFMKad.s 			page 9
+ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\cc60N6I5.s 			page 9
 
 
  289:Generated_Source\PSoC4/Counter.c **** /*******************************************************************************
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\ccfFMKad.s 			page 1
  316:Generated_Source\PSoC4/Counter.c **** * Summary:
  317:Generated_Source\PSoC4/Counter.c **** *   This funtion is used to set the counter to a specific value
  318:Generated_Source\PSoC4/Counter.c **** *
-ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\ccfFMKad.s 			page 10
+ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\cc60N6I5.s 			page 10
 
 
  319:Generated_Source\PSoC4/Counter.c **** * Parameters:  
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\ccfFMKad.s 			page 1
  346:Generated_Source\PSoC4/Counter.c **** * Summary:
  347:Generated_Source\PSoC4/Counter.c **** * Returns the current value of the counter.  It doesn't matter
  348:Generated_Source\PSoC4/Counter.c **** * if the counter is enabled or running.
-ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\ccfFMKad.s 			page 11
+ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\cc60N6I5.s 			page 11
 
 
  349:Generated_Source\PSoC4/Counter.c **** *
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\ccfFMKad.s 			page 1
  251              	Counter_ReadCapture:
  252              	.LFB12:
  375:Generated_Source\PSoC4/Counter.c **** 
-ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\ccfFMKad.s 			page 12
+ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\cc60N6I5.s 			page 12
 
 
  376:Generated_Source\PSoC4/Counter.c **** 
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\ccfFMKad.s 			page 1
  404:Generated_Source\PSoC4/Counter.c **** * Changes the period of the counter.  The new period 
  405:Generated_Source\PSoC4/Counter.c **** * will be loaded the next time terminal count is detected.
  406:Generated_Source\PSoC4/Counter.c **** *
-ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\ccfFMKad.s 			page 13
+ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\cc60N6I5.s 			page 13
 
 
  407:Generated_Source\PSoC4/Counter.c **** * Parameters:  
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\ccfFMKad.s 			page 1
  434:Generated_Source\PSoC4/Counter.c **** * Return: 
  435:Generated_Source\PSoC4/Counter.c **** *  (uint32) Present period value.
  436:Generated_Source\PSoC4/Counter.c **** *
-ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\ccfFMKad.s 			page 14
+ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\cc60N6I5.s 			page 14
 
 
  437:Generated_Source\PSoC4/Counter.c **** *******************************************************************************/
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\ccfFMKad.s 			page 1
  465:Generated_Source\PSoC4/Counter.c **** void Counter_WriteCompare(uint32 compare) \
  466:Generated_Source\PSoC4/Counter.c ****                                    
  467:Generated_Source\PSoC4/Counter.c **** {
-ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\ccfFMKad.s 			page 15
+ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\cc60N6I5.s 			page 15
 
 
  332              		.loc 1 467 0
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\ccfFMKad.s 			page 1
  363              		@ link register save eliminated.
  491:Generated_Source\PSoC4/Counter.c ****     return (CY_GET_REG32(Counter_COMPARE_LSB_PTR));
  364              		.loc 1 491 0
-ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\ccfFMKad.s 			page 16
+ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\cc60N6I5.s 			page 16
 
 
  365 0000 014B     		ldr	r3, .L38
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\ccfFMKad.s 			page 1
  514:Generated_Source\PSoC4/Counter.c ****     /* Write the new setting */
  515:Generated_Source\PSoC4/Counter.c ****     Counter_CONTROL |= compareMode;
  397              		.loc 1 515 0
-ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\ccfFMKad.s 			page 17
+ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\cc60N6I5.s 			page 17
 
 
  398 000a 1A78     		ldrb	r2, [r3]
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\ccfFMKad.s 			page 1
  548:Generated_Source\PSoC4/Counter.c **** * Summary:
  549:Generated_Source\PSoC4/Counter.c **** *   This function clears all capture data from the capture FIFO
  550:Generated_Source\PSoC4/Counter.c **** *
-ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\ccfFMKad.s 			page 18
+ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\cc60N6I5.s 			page 18
 
 
  551:Generated_Source\PSoC4/Counter.c **** * Parameters:  
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\ccfFMKad.s 			page 1
  456              		@ args = 0, pretend = 0, frame = 0
  457              		@ frame_needed = 0, uses_anonymous_args = 0
  458 0000 10B5     		push	{r4, lr}
-ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\ccfFMKad.s 			page 19
+ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\cc60N6I5.s 			page 19
 
 
  459              		.cfi_def_cfa_offset 8
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\ccfFMKad.s 			page 1
  110:Generated_Source\PSoC4/Counter.c ****             /* Use the interrupt output of the status register for IRQ output */
  504              		.loc 1 110 0
  505 003c FF20     		movs	r0, #255
-ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\ccfFMKad.s 			page 20
+ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\cc60N6I5.s 			page 20
 
 
  506 003e FFF7FEFF 		bl	Counter_WriteCompare
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\ccfFMKad.s 			page 1
  553              		.loc 1 182 0
  554 000a FFF7FEFF 		bl	Counter_Init
  555              	.LVL21:
-ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\ccfFMKad.s 			page 21
+ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\cc60N6I5.s 			page 21
 
 
  184:Generated_Source\PSoC4/Counter.c ****     }
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\ccfFMKad.s 			page 1
  607 0033 02       		.uleb128 0x2
  608 0034 02       		.byte	0x2
  609 0035 05       		.byte	0x5
-ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\ccfFMKad.s 			page 22
+ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\cc60N6I5.s 			page 22
 
 
  610 0036 FF020000 		.4byte	.LASF2
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\ccfFMKad.s 			page 1
  664 009e A502     		.2byte	0x2a5
  665 00a0 A4000000 		.4byte	0xa4
  666 00a4 05       		.uleb128 0x5
-ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\ccfFMKad.s 			page 23
+ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\cc60N6I5.s 			page 23
 
 
  667 00a5 6B000000 		.4byte	0x6b
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\ccfFMKad.s 			page 1
  721 0119 00000000 		.4byte	.LFB7
  722 011d 0C000000 		.4byte	.LFE7-.LFB7
  723 0121 01       		.uleb128 0x1
-ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\ccfFMKad.s 			page 24
+ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\cc60N6I5.s 			page 24
 
 
  724 0122 9C       		.byte	0x9c
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\ccfFMKad.s 			page 1
  778 019a 37000000 		.4byte	.LASF29
  779 019e 01       		.byte	0x1
  780 019f 8601     		.2byte	0x186
-ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\ccfFMKad.s 			page 25
+ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\cc60N6I5.s 			page 25
 
 
  781 01a1 77000000 		.4byte	0x77
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\ccfFMKad.s 			page 1
  835 021f 0C000000 		.4byte	.LFE16-.LFB16
  836 0223 01       		.uleb128 0x1
  837 0224 9C       		.byte	0x9c
-ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\ccfFMKad.s 			page 26
+ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\cc60N6I5.s 			page 26
 
 
  838 0225 0A       		.uleb128 0xa
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\ccfFMKad.s 			page 1
  892 02a9 24000000 		.4byte	.LVL13
  893 02ad 4C020000 		.4byte	0x24c
  894 02b1 0F       		.uleb128 0xf
-ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\ccfFMKad.s 			page 27
+ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\cc60N6I5.s 			page 27
 
 
  895 02b2 2C000000 		.4byte	.LVL14
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\ccfFMKad.s 			page 1
  949 0321 B2       		.byte	0xb2
  950 0322 00000000 		.4byte	.LFB4
  951 0326 20000000 		.4byte	.LFE4-.LFB4
-ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\ccfFMKad.s 			page 28
+ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\cc60N6I5.s 			page 28
 
 
  952 032a 01       		.uleb128 0x1
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\ccfFMKad.s 			page 1
  1006 0017 0B       		.uleb128 0xb
  1007 0018 3E       		.uleb128 0x3e
  1008 0019 0B       		.uleb128 0xb
-ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\ccfFMKad.s 			page 29
+ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\cc60N6I5.s 			page 29
 
 
  1009 001a 03       		.uleb128 0x3
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\ccfFMKad.s 			page 1
  1063 0050 9742     		.uleb128 0x2117
  1064 0052 19       		.uleb128 0x19
  1065 0053 00       		.byte	0
-ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\ccfFMKad.s 			page 30
+ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\cc60N6I5.s 			page 30
 
 
  1066 0054 00       		.byte	0
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\ccfFMKad.s 			page 1
  1120 008b 49       		.uleb128 0x49
  1121 008c 13       		.uleb128 0x13
  1122 008d 11       		.uleb128 0x11
-ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\ccfFMKad.s 			page 31
+ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\cc60N6I5.s 			page 31
 
 
  1123 008e 01       		.uleb128 0x1
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\ccfFMKad.s 			page 1
  1177 00c6 3A       		.uleb128 0x3a
  1178 00c7 0B       		.uleb128 0xb
  1179 00c8 3B       		.uleb128 0x3b
-ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\ccfFMKad.s 			page 32
+ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\cc60N6I5.s 			page 32
 
 
  1180 00c9 05       		.uleb128 0x5
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\ccfFMKad.s 			page 1
  1234 0106 03       		.uleb128 0x3
  1235 0107 0E       		.uleb128 0xe
  1236 0108 3A       		.uleb128 0x3a
-ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\ccfFMKad.s 			page 33
+ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\cc60N6I5.s 			page 33
 
 
  1237 0109 0B       		.uleb128 0xb
@@ -1978,7 +1978,7 @@ ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\ccfFMKad.s 			page 1
  1291 0037 00000000 		.4byte	0
  1292 003b 00000000 		.4byte	0
  1293              	.LLST2:
-ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\ccfFMKad.s 			page 34
+ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\cc60N6I5.s 			page 34
 
 
  1294 003f 46000000 		.4byte	.LVL19
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\ccfFMKad.s 			page 1
  1348 0008 00000000 		.4byte	.LFB5
  1349 000c 10000000 		.4byte	.LFE5
  1350 0010 00000000 		.4byte	.LFB6
-ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\ccfFMKad.s 			page 35
+ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\cc60N6I5.s 			page 35
 
 
  1351 0014 0C000000 		.4byte	.LFE6
@@ -2098,7 +2098,7 @@ ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\ccfFMKad.s 			page 1
  1392      56617200 
  1393              	.LASF11:
  1394 0031 666C6F61 		.ascii	"float\000"
-ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\ccfFMKad.s 			page 36
+ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\cc60N6I5.s 			page 36
 
 
  1394      7400
@@ -2158,7 +2158,7 @@ ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\ccfFMKad.s 			page 1
  1416      00
  1417              	.LASF5:
  1418 00ef 6C6F6E67 		.ascii	"long unsigned int\000"
-ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\ccfFMKad.s 			page 37
+ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\cc60N6I5.s 			page 37
 
 
  1418      20756E73 
@@ -2218,7 +2218,7 @@ ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\ccfFMKad.s 			page 1
  1440 01a3 75696E74 		.ascii	"uint32\000"
  1440      333200
  1441              	.LASF43:
-ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\ccfFMKad.s 			page 38
+ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\cc60N6I5.s 			page 38
 
 
  1442 01aa 4379456E 		.ascii	"CyEnterCriticalSection\000"
@@ -2278,7 +2278,7 @@ ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\ccfFMKad.s 			page 1
  1459      7465725F 
  1459      57726974 
  1459      65436F6D 
-ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\ccfFMKad.s 			page 39
+ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\cc60N6I5.s 			page 39
 
 
  1459      70617265 
@@ -2338,7 +2338,7 @@ ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\ccfFMKad.s 			page 1
  1483 0381 636F6D70 		.ascii	"compare\000"
  1483      61726500 
  1484              	.LASF22:
-ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\ccfFMKad.s 			page 40
+ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\cc60N6I5.s 			page 40
 
 
  1485 0389 436F756E 		.ascii	"Counter_SetInterruptMode\000"

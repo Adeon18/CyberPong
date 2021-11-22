@@ -480,12 +480,6 @@ net Net_212
 	switch ":udb@[UDB=(0,1)]:pld1:input_permute.mc1_main_0==>:udb@[UDB=(0,1)]:pld1:mc1.main_0"
 	term   ":udb@[UDB=(0,1)]:pld1:mc1.main_0"
 end Net_212
-net Net_167
-	term   ":m0s8tcpwmcell_0.interrupt"
-	switch ":m0s8tcpwmcell_0.interrupt==>:interrupt_idmux_17.in_0"
-	switch ":interrupt_idmux_17.interrupt_idmux_17__out==>:interrupt_17.interrupt"
-	term   ":interrupt_17.interrupt"
-end Net_167
 net Net_209
 	term   ":m0s8tcpwmcell_1.line"
 	switch ":m0s8tcpwmcell_1.line==>Stub-:dsiswitch_top@[DSI=(0,1)][side=top]:dsihc_top:v17+:dsiswitch_top@[DSI=(0,1)][side=top]:dsihc_top:v19"
@@ -522,6 +516,12 @@ net Net_575
 	switch ":m0s8scbcell_1__i2c_sda__hsiom_permute.m0s8scbcell_1__i2c_sda==>:m0s8scbcell_1.i2c_sda"
 	term   ":m0s8scbcell_1.i2c_sda"
 end Net_575
+net Net_579
+	term   ":m0s8tcpwmcell_0.interrupt"
+	switch ":m0s8tcpwmcell_0.interrupt==>:interrupt_idmux_17.in_0"
+	switch ":interrupt_idmux_17.interrupt_idmux_17__out==>:interrupt_17.interrupt"
+	term   ":interrupt_17.interrupt"
+end Net_579
 net \Counter:CounterUDB:status_5\
 	term   ":udb@[UDB=(0,0)]:dp_wrapper:datapath.f0_blk_stat_comb"
 	switch ":udb@[UDB=(0,0)]:dp_wrapper:datapath.f0_blk_stat_comb==>:udb@[UDB=(0,0)]:dp_wrapper:output_permute.f0_blk_stat_comb"

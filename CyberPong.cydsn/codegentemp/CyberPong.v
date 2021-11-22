@@ -1,6 +1,6 @@
 // ======================================================================
 // CyberPong.v generated from TopDesign.cysch
-// 11/13/2021 at 13:03
+// 11/22/2021 at 16:45
 // This file is auto generated. ANY EDITS YOU MAKE MAY BE LOST WHEN THIS FILE IS REGENERATED!!!
 // ======================================================================
 
@@ -1145,12 +1145,12 @@ module top ;
           wire  Net_548;
           wire  Net_547;
           wire  Net_159;
+          wire  Net_579;
           wire  Net_210;
           wire  Net_212;
           wire  Net_155;
           wire  Net_160;
           wire  Net_280;
-          wire  Net_167;
           wire  Net_475;
           wire  Net_209;
           wire  Net_523;
@@ -1159,7 +1159,7 @@ module top ;
 	cy_isr_v1_0
 		#(.int_type(2'b10))
 		ISR_Compare
-		 (.int_signal(Net_167));
+		 (.int_signal(Net_579));
 
 
 
@@ -1254,7 +1254,7 @@ module top ;
         .cc(Net_548),
         .clock(Net_475),
         .count(1'b1),
-        .interrupt(Net_167),
+        .interrupt(Net_579),
         .line(Net_280),
         .line_n(Net_550),
         .ov(Net_551),

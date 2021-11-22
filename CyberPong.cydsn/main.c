@@ -17,9 +17,17 @@
 // For now this is not used Anywhere. TODO
 CY_ISR( ISR_Compare_Handler )
 {
-    signals_per_time_unit = Counter_ReadCounter();
+            
+            
+    // Convert signal to RPM
+    current_rpm = (2 * signals_per_time_unit);
     
-
+    // Put RMP into buffer and send it to UART
+    sprintf(uart_rpm_buff, "%u", current_rpm);
+    UART_UartPutChar('\n');
+    UART_UartPutChar('\r');
+    UART_UartPutString(uart_rpm_buff);
+    
     PWM_ClearInterrupt(PWM_INTR_MASK_TC);
 }
 
@@ -30,10 +38,7 @@ int main(void)
     
     // Initialize some variables
     signals_per_time_unit = 0;
-    uint32_t pwm_signal = 0;
-    uint32_t current_rpm = 0;
-    char uart_rpm_buff[4];     // This is to print RMP through UART(uint32)
-    uint8 uart_print_flag = 0;
+    current_rpm = 0;
     // I2C variables
     uint16 motor_speed_pwm = 0;
     uint8 i2c_buff[1];
@@ -46,6 +51,7 @@ int main(void)
     Counter_Start();
     UART_Start();
     I2C_Start();
+    ISR_Compare_StartEx(ISR_Compare_Handler);
     
     I2C_EzI2CSetBuffer1(1, 1, i2c_buff);
     
@@ -61,27 +67,7 @@ int main(void)
                 PWM_Motor_WriteCompare(motor_speed_pwm);
             }
         }
-        
-        // Manage RPM counting and UART output
-        pwm_signal = PWM_ReadCounter();
-        
-        // BIG KOSTIL, should be changed to interrupts ASAP.
-        if (pwm_signal == 4998 && uart_print_flag == 0) {
-            signals_per_time_unit = Counter_ReadCounter();
-            
-            
-            // Convert signal to RPM
-            current_rpm = (2 * signals_per_time_unit);
-            
-            // Put RMP into buffer and send it to UART
-            sprintf(uart_rpm_buff, "%u", current_rpm);
-            UART_UartPutChar('\n');
-            UART_UartPutChar('\r');
-            UART_UartPutString(uart_rpm_buff);
-            uart_print_flag = 1;
-        } else if (pwm_signal == 1){
-            uart_print_flag = 0;
-        }
+        signals_per_time_unit = Counter_ReadCounter();
     }
 }
 

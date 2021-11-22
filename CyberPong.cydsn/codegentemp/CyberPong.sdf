@@ -1,6 +1,6 @@
 (DELAYFILE
  (SDFVERSION "IEEE 1497 4.0")
- (DATE "2021-11-13T11:03:21Z")
+ (DATE "2021-11-22T14:45:17Z")
  (DESIGN "CyberPong")
  (VENDOR "Cypress Semiconductor")
  (PROGRAM "PSoC Creator")
@@ -30,7 +30,6 @@
     (INTERCONNECT ClockGenBlock.gen_clk_out_0 \\Counter\:CounterUDB\:sC32\:counterdp\:u3\\.clock (0.000:0.000:0.000))
     (INTERCONNECT ClockGenBlock.gen_clk_out_0 \\Counter\:CounterUDB\:sCTRLReg\:ctrlreg\\.clock (0.000:0.000:0.000))
     (INTERCONNECT ClockGenBlock.gen_clk_out_0 \\Counter\:CounterUDB\:sSTSReg\:stsreg\\.clock (0.000:0.000:0.000))
-    (INTERCONNECT \\PWM\:cy_m0s8_tcpwm_1\\.interrupt ISR_Compare.interrupt (1.000:1.000:1.000))
     (INTERCONNECT \\PWM_Motor\:cy_m0s8_tcpwm_1\\.line Pin_A\(0\).pin_input (6.284:6.284:6.284))
     (INTERCONNECT Pin_Input\(0\).fb LED\(0\).pin_input (6.471:6.471:6.471))
     (INTERCONNECT Pin_Input\(0\).fb \\Counter\:CounterUDB\:count_enable\\.main_2 (5.576:5.576:5.576))
@@ -42,6 +41,7 @@
     (INTERCONNECT \\I2C\:SCB\\.interrupt \\I2C\:SCB_IRQ\\.interrupt (0.000:0.000:0.000))
     (INTERCONNECT \\I2C\:scl\(0\)\\.fb \\I2C\:SCB\\.i2c_scl (0.000:0.000:0.000))
     (INTERCONNECT \\I2C\:sda\(0\)\\.fb \\I2C\:SCB\\.i2c_sda (0.000:0.000:0.000))
+    (INTERCONNECT \\PWM\:cy_m0s8_tcpwm_1\\.interrupt ISR_Compare.interrupt (1.000:1.000:1.000))
     (INTERCONNECT Pin_A\(0\).pad_out Pin_A\(0\).pad_in (0.000:0.000:0.000))
     (INTERCONNECT \\Counter\:CounterUDB\:sC32\:counterdp\:u3\\.ce1_comb \\Counter\:CounterUDB\:prevCompare\\.main_4 (3.106:3.106:3.106))
     (INTERCONNECT \\Counter\:CounterUDB\:sC32\:counterdp\:u3\\.ce1_comb \\Counter\:CounterUDB\:status_0\\.main_4 (3.131:3.131:3.131))

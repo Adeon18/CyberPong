@@ -2,7 +2,7 @@
 --	Conversion of CyberPong.v to vh2:
 --
 --	Cypress Semiconductor - WARP Version 6.3 IR 41
---	Sat Nov 13 13:03:18 2021
+--	Mon Nov 22 16:45:15 2021
 --
 
 USE cypress.cypress.all;
@@ -12,7 +12,7 @@ ATTRIBUTE part_name of top_RTL:TYPE IS "cpsoc3";
 END top_RTL;
 --------------------------------------------------------
 ARCHITECTURE R_T_L OF top_RTL IS
-SIGNAL Net_167 : bit;
+SIGNAL Net_579 : bit;
 SIGNAL Net_155 : bit;
 SIGNAL tmpOE__Pin_A_net_0 : bit;
 SIGNAL Net_209 : bit;
@@ -513,7 +513,7 @@ tmpOE__Pin_A_net_0 <=  ('1') ;
 ISR_Compare:cy_isr_v1_0
 	GENERIC MAP(int_type=>"10",
 		is_nmi=>'0')
-	PORT MAP(int_signal=>Net_167);
+	PORT MAP(int_signal=>Net_579);
 Clock_2:cy_clock_v1_0
 	GENERIC MAP(cy_registers=>"",
 		id=>"95da16b7-6e56-42f1-b423-2b91ba44e16e",
@@ -607,7 +607,7 @@ Pin_A:cy_psoc3_pins_v1_10
 		compare_match=>Net_548,
 		line_out=>Net_280,
 		line_out_compl=>Net_550,
-		interrupt=>Net_167);
+		interrupt=>Net_579);
 Pin_B:cy_psoc3_pins_v1_10
 	GENERIC MAP(id=>"d10b3a38-f636-4c1b-96cd-dfb573575327",
 		drive_mode=>"110",
