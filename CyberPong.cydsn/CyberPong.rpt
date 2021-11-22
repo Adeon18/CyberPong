@@ -1,13 +1,13 @@
-Loading plugins phase: Elapsed time ==> 0s.131ms
+Loading plugins phase: Elapsed time ==> 0s.125ms
 <CYPRESSTAG name="CyDsfit arguments...">
 cydsfit arguments: -.fdsnotice -.fdswarpdepfile=warp_dependencies.txt -.fdselabdepfile=elab_dependencies.txt -.fdsbldfile=generated_files.txt -.fdsreffile=referenced_files.txt -p C:\Users\Ade0n\Desktop\THE PROJECT\PRJCT\CyberPong\CyberPong.cydsn\CyberPong.cyprj -d CY8C4248LQI-BL583 -s C:\Users\Ade0n\Desktop\THE PROJECT\PRJCT\CyberPong\CyberPong.cydsn\Generated_Source\PSoC4 -- -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE
 </CYPRESSTAG>
 <CYPRESSTAG name="Design elaboration results...">
 </CYPRESSTAG>
-Elaboration phase: Elapsed time ==> 1s.429ms
+Elaboration phase: Elapsed time ==> 1s.321ms
 <CYPRESSTAG name="HDL generation results...">
 </CYPRESSTAG>
-HDL generation phase: Elapsed time ==> 0s.048ms
+HDL generation phase: Elapsed time ==> 0s.049ms
 <CYPRESSTAG name="Synthesis results...">
 
      | | | | | | |
@@ -41,7 +41,7 @@ Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\Ade0n
 ======================================================================
 
 vlogfe V6.3 IR 41:  Verilog parser
-Mon Nov 22 16:45:14 2021
+Mon Nov 22 19:02:32 2021
 
 
 ======================================================================
@@ -51,7 +51,7 @@ Options  :    -yv2 -q10 CyberPong.v
 ======================================================================
 
 vpp V6.3 IR 41:  Verilog Pre-Processor
-Mon Nov 22 16:45:14 2021
+Mon Nov 22 19:02:32 2021
 
 Flattening file 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\cy_virtualmux_v1_0\cy_virtualmux_v1_0.v'
 Flattening file 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\cy_constant_v1_0\cy_constant_v1_0.v'
@@ -60,6 +60,7 @@ Flattening file 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\ps
 Flattening file 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\cypress.v'
 Flattening file 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\cy_psoc3_inc.v'
 Flattening file 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\or_v1_0\or_v1_0.v'
+Flattening file 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\cy_tff_v1_0\cy_tff_v1_0.v'
 
 vpp:  No errors.
 
@@ -89,7 +90,7 @@ Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\Ade0n
 ======================================================================
 
 tovif V6.3 IR 41:  High-level synthesis
-Mon Nov 22 16:45:14 2021
+Mon Nov 22 19:02:32 2021
 
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\std.vhd'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\cypress.vhd'.
@@ -109,6 +110,7 @@ Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\conte
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\cypress.v'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\cy_psoc3_inc.v'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\or_v1_0\or_v1_0.v'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\cy_tff_v1_0\cy_tff_v1_0.v'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\stdlogic\cy_psoc3pkg.vif'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\stdlogic\cy_psoc3.vif'.
 
@@ -122,7 +124,7 @@ Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\Ade0n
 ======================================================================
 
 topld V6.3 IR 41:  Synthesis and optimization
-Mon Nov 22 16:45:15 2021
+Mon Nov 22 19:02:32 2021
 
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\std.vhd'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\cypress.vhd'.
@@ -142,6 +144,7 @@ Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\conte
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\cypress.v'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\cy_psoc3_inc.v'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\or_v1_0\or_v1_0.v'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\cy_tff_v1_0\cy_tff_v1_0.v'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\stdlogic\cy_psoc3pkg.vif'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\stdlogic\cy_psoc3.vif'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\lcpsoc3\stdlogic\cpsoc3.vif'.
@@ -224,7 +227,12 @@ Aliasing \I2C:miso_m_wire\ to zero
 Aliasing \I2C:tmpOE__sda_net_0\ to tmpOE__Pin_A_net_0
 Aliasing \I2C:tmpOE__scl_net_0\ to tmpOE__Pin_A_net_0
 Aliasing \I2C:cts_wire\ to zero
+Aliasing \Perioud_Counter:Net_66\ to \Perioud_Counter:Net_75\
+Aliasing \Perioud_Counter:Net_82\ to zero
+Aliasing \Perioud_Counter:Net_72\ to zero
+Aliasing Net_593 to tmpOE__Pin_A_net_0
 Aliasing \Counter:CounterUDB:cmp_out_reg_i\\D\ to \Counter:CounterUDB:prevCompare\\D\
+Aliasing \Counter:CounterUDB:count_stored_i\\D\ to \Perioud_Counter:Net_75\
 Removing Lhs of wire one[11] = tmpOE__Pin_A_net_0[5]
 Removing Lhs of wire \PWM:Net_81\[14] = Net_475[25]
 Removing Lhs of wire \PWM:Net_75\[15] = zero[10]
@@ -281,16 +289,24 @@ Removing Lhs of wire \I2C:miso_m_wire\[357] = zero[10]
 Removing Lhs of wire \I2C:tmpOE__sda_net_0\[359] = tmpOE__Pin_A_net_0[5]
 Removing Lhs of wire \I2C:tmpOE__scl_net_0\[365] = tmpOE__Pin_A_net_0[5]
 Removing Lhs of wire \I2C:cts_wire\[374] = zero[10]
-Removing Lhs of wire \Counter:CounterUDB:prevCapture\\D\[398] = Net_280[23]
-Removing Lhs of wire \Counter:CounterUDB:overflow_reg_i\\D\[399] = \Counter:CounterUDB:overflow\[78]
-Removing Lhs of wire \Counter:CounterUDB:underflow_reg_i\\D\[400] = \Counter:CounterUDB:underflow\[81]
-Removing Lhs of wire \Counter:CounterUDB:tc_reg_i\\D\[401] = \Counter:CounterUDB:tc_i\[84]
-Removing Lhs of wire \Counter:CounterUDB:prevCompare\\D\[402] = \Counter:CounterUDB:cmp_out_i\[87]
-Removing Lhs of wire \Counter:CounterUDB:cmp_out_reg_i\\D\[403] = \Counter:CounterUDB:cmp_out_i\[87]
-Removing Lhs of wire \Counter:CounterUDB:count_stored_i\\D\[404] = Net_212[94]
+Removing Lhs of wire \Perioud_Counter:Net_81\[399] = Net_598[412]
+Removing Lhs of wire \Perioud_Counter:Net_75\[400] = Net_212[94]
+Removing Lhs of wire \Perioud_Counter:Net_69\[401] = Net_584[411]
+Removing Lhs of wire \Perioud_Counter:Net_66\[402] = Net_212[94]
+Removing Lhs of wire \Perioud_Counter:Net_82\[403] = zero[10]
+Removing Lhs of wire \Perioud_Counter:Net_72\[404] = zero[10]
+Removing Rhs of wire Net_584[411] = cy_tff_1[413]
+Removing Lhs of wire Net_593[414] = tmpOE__Pin_A_net_0[5]
+Removing Lhs of wire \Counter:CounterUDB:prevCapture\\D\[417] = Net_280[23]
+Removing Lhs of wire \Counter:CounterUDB:overflow_reg_i\\D\[418] = \Counter:CounterUDB:overflow\[78]
+Removing Lhs of wire \Counter:CounterUDB:underflow_reg_i\\D\[419] = \Counter:CounterUDB:underflow\[81]
+Removing Lhs of wire \Counter:CounterUDB:tc_reg_i\\D\[420] = \Counter:CounterUDB:tc_i\[84]
+Removing Lhs of wire \Counter:CounterUDB:prevCompare\\D\[421] = \Counter:CounterUDB:cmp_out_i\[87]
+Removing Lhs of wire \Counter:CounterUDB:cmp_out_reg_i\\D\[422] = \Counter:CounterUDB:cmp_out_i\[87]
+Removing Lhs of wire \Counter:CounterUDB:count_stored_i\\D\[423] = Net_212[94]
 
 ------------------------------------------------------
-Aliased 0 equations, 63 wires.
+Aliased 0 equations, 71 wires.
 ------------------------------------------------------
 
 ----------------------------------------------------------
@@ -385,10 +401,10 @@ CYPRESS_DIR    : C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\wa
 Warp Program   : C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\bin\warp.exe
 Warp Arguments : -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya "-.fftprj=C:\Users\Ade0n\Desktop\THE PROJECT\PRJCT\CyberPong\CyberPong.cydsn\CyberPong.cyprj" -dcpsoc3 CyberPong.v -verilog
 </CYPRESSTAG>
-Warp synthesis phase: Elapsed time ==> 1s.242ms
+Warp synthesis phase: Elapsed time ==> 0s.970ms
 <CYPRESSTAG name="Fitter results...">
 <CYPRESSTAG name="Fitter startup details...">
-cyp3fit: V4.4.0.80, Family: PSoC3, Started at: Monday, 22 November 2021 16:45:15
+cyp3fit: V4.4.0.80, Family: PSoC3, Started at: Monday, 22 November 2021 19:02:32
 Options: -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\Ade0n\Desktop\THE PROJECT\PRJCT\CyberPong\CyberPong.cydsn\CyberPong.cyprj -d CY8C4248LQI-BL583 CyberPong.v -verilog
 </CYPRESSTAG>
 <CYPRESSTAG name="Design parsing">
@@ -403,9 +419,11 @@ Done removing unused cells.
 <CYPRESSTAG name="Global Clock Selection" icon="FILE_RPT_TECHM">
     Digital Clock 0: Automatic-assigning  clock 'Clock_2'. Fanout=2, Signal=Net_155_digital
     Fixed Function Clock 7: Automatic-assigning  clock 'Clock_3'. Signal=Net_523_ff7
+    Fixed Function Clock 8: Automatic-assigning  clock 'Clock_4'. Signal=Net_598_ff8
+    Digital Clock 1: Automatic-assigning  clock 'Clock_4'. Fanout=1, Signal=Net_598_digital
     Fixed Function Clock 1: Automatic-assigning  clock 'I2C_SCBCLK'. Signal=\I2C:Net_847_ff1\
     Fixed Function Clock 2: Automatic-assigning  clock 'UART_SCBCLK'. Signal=\UART:Net_847_ff2\
-    Fixed Function Clock 8: Automatic-assigning  clock 'Clock_1'. Signal=Net_475_ff8
+    Fixed Function Clock 9: Automatic-assigning  clock 'Clock_1'. Signal=Net_475_ff9
 <CYPRESSTAG name="UDB Clock/Enable Remapping Results">
     UDB Clk/Enable \Counter:CounterUDB:clock_enable_block\: with output requested to be synchronous
         ClockIn: ClockGenBlock:m0s8clockgenblockcell.gen_clk_out_0 was determined to be a global clock that is synchronous to HFClk
@@ -897,6 +915,18 @@ Design Equations
               Net_212
         );
         Output = \Counter:CounterUDB:count_stored_i\ (fanout=1)
+
+    MacroCell: Name=Net_584, Mode=(T-Register)
+        Total # of inputs        : 0
+        Total # of product terms : 0
+        List of special equations: 
+            Clock  = (Net_598_digital) => Global
+            Clock Enable: True
+        Main Equation            : 0 pterms
+        !(
+            0
+        );
+        Output = Net_584 (fanout=1)
     </CYPRESSTAG>
     <CYPRESSTAG name="Datapath listing">
 
@@ -1141,6 +1171,15 @@ Design Equations
             int_type = "10"
             is_nmi = 0
         }
+
+    interrupt: Name =ISR_Per
+        PORT MAP (
+            interrupt => Net_585 );
+        Properties:
+        {
+            int_type = "10"
+            is_nmi = 0
+        }
     </CYPRESSTAG>
 </CYPRESSTAG>
 <CYPRESSTAG name="Technology mapping summary" expanded>
@@ -1151,8 +1190,8 @@ Technology mapping summary
 
 Resource Type                 : Used : Free :  Max :  % Used
 ============================================================
-Digital Clocks                :    1 :    3 :    4 : 25.00 %
-Interrupts                    :    2 :   30 :   32 :  6.25 %
+Digital Clocks                :    2 :    2 :    4 : 50.00 %
+Interrupts                    :    3 :   29 :   32 :  9.38 %
 IO                            :   12 :   26 :   38 : 31.58 %
 Segment LCD                   :    0 :    1 :    1 :  0.00 %
 CapSense                      :    0 :    1 :    1 :  0.00 %
@@ -1160,9 +1199,9 @@ Die Temp                      :    0 :    1 :    1 :  0.00 %
 Serial Communication (SCB)    :    2 :    0 :    2 : 100.00 %
 BLE                           :    0 :    1 :    1 :  0.00 %
 DMA Channels                  :    0 :    8 :    8 :  0.00 %
-Timer/Counter/PWM             :    2 :    2 :    4 : 50.00 %
+Timer/Counter/PWM             :    3 :    1 :    4 : 75.00 %
 UDB                           :      :      :      :        
-  Macrocells                  :    9 :   23 :   32 : 28.13 %
+  Macrocells                  :   10 :   22 :   32 : 31.25 %
   Unique P-terms              :   16 :   48 :   64 : 25.00 %
   Total P-terms               :   16 :      :      :        
   Datapath Cells              :    4 :    0 :    4 : 100.00 %
@@ -1177,8 +1216,8 @@ DAC                           :      :      :      :
   7-bit IDAC                  :    0 :    1 :    1 :  0.00 %
   8-bit IDAC                  :    0 :    1 :    1 :  0.00 %
 </CYPRESSTAG>
-Technology Mapping: Elapsed time ==> 0s.091ms
-Tech Mapping phase: Elapsed time ==> 0s.119ms
+Technology Mapping: Elapsed time ==> 0s.080ms
+Tech Mapping phase: Elapsed time ==> 0s.103ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Analog Placement">
 <CYPRESSTAG name="FFB & IO Pre Placement">
@@ -1199,19 +1238,20 @@ ClockGenBlock                       : CLK_GEN_[FFB(CLK_GEN,0)]
 \I2C:SCB\                           : SCB_[FFB(SCB,1)]                   
 \PWM:cy_m0s8_tcpwm_1\               : TCPWM_[FFB(TCPWM,0)]               
 \PWM_Motor:cy_m0s8_tcpwm_1\         : TCPWM_[FFB(TCPWM,1)]               
+\Perioud_Counter:cy_m0s8_tcpwm_1\   : TCPWM_[FFB(TCPWM,2)]               
 
 </CYPRESSTAG>
 </CYPRESSTAG>
 <CYPRESSTAG name="Real Analog Placement">
-Elapsed time ==> 0.1221159s
+Elapsed time ==> 0.1292237s
 </CYPRESSTAG>
-Analog Placement phase: Elapsed time ==> 0s.296ms
+Analog Placement phase: Elapsed time ==> 0s.303ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Analog Routing">
 <CYPRESSTAG name="Analog Routing">
-Route success=True, Iterations=1 Elapsed=0.0006340 secs
+Route success=True, Iterations=1 Elapsed=0.0006203 secs
 </CYPRESSTAG>
-Analog Routing phase: Elapsed time ==> 0s.000ms
+Analog Routing phase: Elapsed time ==> 0s.015ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Analog Code Generation">
 ============ Analog Final Answer Routes ============
@@ -1222,11 +1262,11 @@ Map of item to net {
 }
 Mux Info {
 }
-Analog Code Generation phase: Elapsed time ==> 0s.020ms
+Analog Code Generation phase: Elapsed time ==> 0s.002ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Digital Placement">
 <CYPRESSTAG name="Detailed placement messages">
-I2076: Total run-time: 0.5 sec.
+I2076: Total run-time: 0.4 sec.
 
 </CYPRESSTAG>
 <CYPRESSTAG name="PLD Packing">
@@ -1237,27 +1277,27 @@ PLD Packing Summary
 ------------------------------------------------------------
             Resource Type : Used : Free :  Max :  % Used
     ====================================================
-                     PLDs :    4 :    4 :    8 :  50.00%
+                     PLDs :    6 :    2 :    8 :  75.00%
 
 <CYPRESSTAG name="PLD Statistics">
 
         PLD Resource Type :     Average/LAB
     =======================================
-                   Inputs :            4.75
-                   Pterms :            4.00
-               Macrocells :            2.25
+                   Inputs :            3.33
+                   Pterms :            2.67
+               Macrocells :            1.67
 </CYPRESSTAG>
 <CYPRESSTAG name="Packed PLD Contents">
 Packed PLD Contents not displayed at this verbose level.</CYPRESSTAG>
 </CYPRESSTAG>
-PLD Packing: Elapsed time ==> 0s.001ms
+PLD Packing: Elapsed time ==> 0s.000ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Partitioning">
 <CYPRESSTAG name="Initial Partitioning Summary">
 Initial Partitioning Summary not displayed at this verbose level.</CYPRESSTAG>
 <CYPRESSTAG name="Final Partitioning Summary">
 Final Partitioning Summary not displayed at this verbose level.</CYPRESSTAG>
-Partitioning: Elapsed time ==> 0s.004ms
+Partitioning: Elapsed time ==> 0s.011ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Final Placement Summary">
 
@@ -1267,7 +1307,7 @@ Final Placement Summary
 
        Resource Type :      Count : Avg Inputs : Avg Outputs
     ========================================================
-                 UDB :          4 :       3.25 :       2.25
+                 UDB :          4 :       3.25 :       2.50
 <CYPRESSTAG name="Final Placement Details">
 <CYPRESSTAG name="Component Details">
 
@@ -1275,33 +1315,89 @@ Final Placement Summary
 Component Placement Details
 ------------------------------------------------------------
 UDB [UDB=(0,0)] contents:
-LAB@[UDB=(0,0)][LB=0] #macrocells=2, #inputs=2, #pterms=2
+LAB@[UDB=(0,0)][LB=0] #macrocells=1, #inputs=6, #pterms=5
 {
-    [McSlotId=0]:     MacroCell: Name=\Counter:CounterUDB:status_2\, Mode=(Combinatorial) @ [UDB=(0,0)][LB=0][MC=0]
-        Total # of inputs        : 2
-        Total # of product terms : 1
+    [McSlotId=0]: (empty)
+    [McSlotId=1]: (empty)
+    [McSlotId=2]:     MacroCell: Name=\Counter:CounterUDB:status_0\, Mode=(Combinatorial) @ [UDB=(0,0)][LB=0][MC=2]
+        Total # of inputs        : 6
+        Total # of product terms : 5
             Clock Enable: True
-        Main Equation            : 1 pterm
+        Main Equation            : 5 pterms
         (
-              \Counter:CounterUDB:per_equal\ * 
-              !\Counter:CounterUDB:overflow_reg_i\
+              !\Counter:CounterUDB:ctrl_cmod_2\ * 
+              !\Counter:CounterUDB:ctrl_cmod_1\ * 
+              \Counter:CounterUDB:ctrl_cmod_0\ * 
+              \Counter:CounterUDB:cmp_less\ * 
+              !\Counter:CounterUDB:prevCompare\
+            + !\Counter:CounterUDB:ctrl_cmod_2\ * 
+              \Counter:CounterUDB:ctrl_cmod_1\ * 
+              !\Counter:CounterUDB:ctrl_cmod_0\ * 
+              \Counter:CounterUDB:cmp_less\ * 
+              !\Counter:CounterUDB:prevCompare\
+            + !\Counter:CounterUDB:ctrl_cmod_2\ * 
+              !\Counter:CounterUDB:ctrl_cmod_0\ * 
+              \Counter:CounterUDB:cmp_equal\ * 
+              !\Counter:CounterUDB:prevCompare\
+            + \Counter:CounterUDB:ctrl_cmod_2\ * 
+              !\Counter:CounterUDB:cmp_less\ * 
+              !\Counter:CounterUDB:prevCompare\
+            + \Counter:CounterUDB:ctrl_cmod_1\ * 
+              \Counter:CounterUDB:ctrl_cmod_0\ * 
+              !\Counter:CounterUDB:cmp_less\ * 
+              !\Counter:CounterUDB:cmp_equal\ * 
+              !\Counter:CounterUDB:prevCompare\
         );
-        Output = \Counter:CounterUDB:status_2\ (fanout=1)
+        Output = \Counter:CounterUDB:status_0\ (fanout=1)
         Properties               : 
         {
         }
 
-    [McSlotId=1]:     MacroCell: Name=\Counter:CounterUDB:overflow_reg_i\, Mode=(D-Register) @ [UDB=(0,0)][LB=0][MC=1]
-        Total # of inputs        : 1
-        Total # of product terms : 1
+    [McSlotId=3]: (empty)
+}
+
+LAB@[UDB=(0,0)][LB=1] #macrocells=2, #inputs=5, #pterms=5
+{
+    [McSlotId=0]:     MacroCell: Name=__ONE__, Mode=(Combinatorial) @ [UDB=(0,0)][LB=1][MC=0]
+        Total # of inputs        : 0
+        Total # of product terms : 0
+            Clock Enable: True
+        Main Equation            : 0 pterms
+        !(
+            0
+        );
+        Output = __ONE__ (fanout=4)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=1]:     MacroCell: Name=\Counter:CounterUDB:prevCompare\, Mode=(D-Register) @ [UDB=(0,0)][LB=1][MC=1]
+        Total # of inputs        : 5
+        Total # of product terms : 5
         List of special equations: 
             Clock  = (Net_155_digital) => Global
             Clock Enable: True
-        Main Equation            : 1 pterm
+        Main Equation            : 5 pterms
         (
-              \Counter:CounterUDB:per_equal\
+              !\Counter:CounterUDB:ctrl_cmod_2\ * 
+              !\Counter:CounterUDB:ctrl_cmod_1\ * 
+              \Counter:CounterUDB:ctrl_cmod_0\ * 
+              \Counter:CounterUDB:cmp_less\
+            + !\Counter:CounterUDB:ctrl_cmod_2\ * 
+              \Counter:CounterUDB:ctrl_cmod_1\ * 
+              !\Counter:CounterUDB:ctrl_cmod_0\ * 
+              \Counter:CounterUDB:cmp_less\
+            + !\Counter:CounterUDB:ctrl_cmod_2\ * 
+              !\Counter:CounterUDB:ctrl_cmod_0\ * 
+              \Counter:CounterUDB:cmp_equal\
+            + \Counter:CounterUDB:ctrl_cmod_2\ * 
+              !\Counter:CounterUDB:cmp_less\
+            + \Counter:CounterUDB:ctrl_cmod_1\ * 
+              \Counter:CounterUDB:ctrl_cmod_0\ * 
+              !\Counter:CounterUDB:cmp_less\ * 
+              !\Counter:CounterUDB:cmp_equal\
         );
-        Output = \Counter:CounterUDB:overflow_reg_i\ (fanout=1)
+        Output = \Counter:CounterUDB:prevCompare\ (fanout=1)
         Properties               : 
         {
         }
@@ -1371,40 +1467,9 @@ statusicell: Name =\Counter:CounterUDB:sSTSReg:stsreg\
     Clock Enable: True
 
 UDB [UDB=(0,1)] contents:
-LAB@[UDB=(0,1)][LB=0] #macrocells=4, #inputs=10, #pterms=8
+LAB@[UDB=(0,1)][LB=0] #macrocells=1, #inputs=1, #pterms=1
 {
-    [McSlotId=0]:     MacroCell: Name=\Counter:CounterUDB:prevCompare\, Mode=(D-Register) @ [UDB=(0,1)][LB=0][MC=0]
-        Total # of inputs        : 5
-        Total # of product terms : 5
-        List of special equations: 
-            Clock  = (Net_155_digital) => Global
-            Clock Enable: True
-        Main Equation            : 5 pterms
-        (
-              !\Counter:CounterUDB:ctrl_cmod_2\ * 
-              !\Counter:CounterUDB:ctrl_cmod_1\ * 
-              \Counter:CounterUDB:ctrl_cmod_0\ * 
-              \Counter:CounterUDB:cmp_less\
-            + !\Counter:CounterUDB:ctrl_cmod_2\ * 
-              \Counter:CounterUDB:ctrl_cmod_1\ * 
-              !\Counter:CounterUDB:ctrl_cmod_0\ * 
-              \Counter:CounterUDB:cmp_less\
-            + !\Counter:CounterUDB:ctrl_cmod_2\ * 
-              !\Counter:CounterUDB:ctrl_cmod_0\ * 
-              \Counter:CounterUDB:cmp_equal\
-            + \Counter:CounterUDB:ctrl_cmod_2\ * 
-              !\Counter:CounterUDB:cmp_less\
-            + \Counter:CounterUDB:ctrl_cmod_1\ * 
-              \Counter:CounterUDB:ctrl_cmod_0\ * 
-              !\Counter:CounterUDB:cmp_less\ * 
-              !\Counter:CounterUDB:cmp_equal\
-        );
-        Output = \Counter:CounterUDB:prevCompare\ (fanout=1)
-        Properties               : 
-        {
-        }
-
-    [McSlotId=1]:     MacroCell: Name=\Counter:CounterUDB:prevCapture\, Mode=(D-Register) @ [UDB=(0,1)][LB=0][MC=1]
+    [McSlotId=0]:     MacroCell: Name=\Counter:CounterUDB:overflow_reg_i\, Mode=(D-Register) @ [UDB=(0,1)][LB=0][MC=0]
         Total # of inputs        : 1
         Total # of product terms : 1
         List of special equations: 
@@ -1412,78 +1477,21 @@ LAB@[UDB=(0,1)][LB=0] #macrocells=4, #inputs=10, #pterms=8
             Clock Enable: True
         Main Equation            : 1 pterm
         (
-              Net_280
+              \Counter:CounterUDB:per_equal\
         );
-        Output = \Counter:CounterUDB:prevCapture\ (fanout=1)
+        Output = \Counter:CounterUDB:overflow_reg_i\ (fanout=1)
         Properties               : 
         {
         }
 
-    [McSlotId=2]:     MacroCell: Name=\Counter:CounterUDB:count_enable\, Mode=(Combinatorial) @ [UDB=(0,1)][LB=0][MC=2]
-        Total # of inputs        : 3
-        Total # of product terms : 1
-            Clock Enable: True
-        Main Equation            : 1 pterm
-        (
-              \Counter:CounterUDB:control_7\ * 
-              !\Counter:CounterUDB:count_stored_i\ * Net_212
-        );
-        Output = \Counter:CounterUDB:count_enable\ (fanout=4)
-        Properties               : 
-        {
-        }
-
-    [McSlotId=3]:     MacroCell: Name=\Counter:CounterUDB:hwCapture\, Mode=(Combinatorial) @ [UDB=(0,1)][LB=0][MC=3]
-        Total # of inputs        : 2
-        Total # of product terms : 1
-            Clock Enable: True
-        Main Equation            : 1 pterm
-        (
-              Net_280 * !\Counter:CounterUDB:prevCapture\
-        );
-        Output = \Counter:CounterUDB:hwCapture\ (fanout=9)
-        Properties               : 
-        {
-        }
+    [McSlotId=1]: (empty)
+    [McSlotId=2]: (empty)
+    [McSlotId=3]: (empty)
 }
 
-LAB@[UDB=(0,1)][LB=1] #macrocells=2, #inputs=7, #pterms=6
+LAB@[UDB=(0,1)][LB=1] #macrocells=3, #inputs=5, #pterms=3
 {
-    [McSlotId=0]:     MacroCell: Name=\Counter:CounterUDB:status_0\, Mode=(Combinatorial) @ [UDB=(0,1)][LB=1][MC=0]
-        Total # of inputs        : 6
-        Total # of product terms : 5
-            Clock Enable: True
-        Main Equation            : 5 pterms
-        (
-              !\Counter:CounterUDB:ctrl_cmod_2\ * 
-              !\Counter:CounterUDB:ctrl_cmod_1\ * 
-              \Counter:CounterUDB:ctrl_cmod_0\ * 
-              \Counter:CounterUDB:cmp_less\ * 
-              !\Counter:CounterUDB:prevCompare\
-            + !\Counter:CounterUDB:ctrl_cmod_2\ * 
-              \Counter:CounterUDB:ctrl_cmod_1\ * 
-              !\Counter:CounterUDB:ctrl_cmod_0\ * 
-              \Counter:CounterUDB:cmp_less\ * 
-              !\Counter:CounterUDB:prevCompare\
-            + !\Counter:CounterUDB:ctrl_cmod_2\ * 
-              !\Counter:CounterUDB:ctrl_cmod_0\ * 
-              \Counter:CounterUDB:cmp_equal\ * 
-              !\Counter:CounterUDB:prevCompare\
-            + \Counter:CounterUDB:ctrl_cmod_2\ * 
-              !\Counter:CounterUDB:cmp_less\ * 
-              !\Counter:CounterUDB:prevCompare\
-            + \Counter:CounterUDB:ctrl_cmod_1\ * 
-              \Counter:CounterUDB:ctrl_cmod_0\ * 
-              !\Counter:CounterUDB:cmp_less\ * 
-              !\Counter:CounterUDB:cmp_equal\ * 
-              !\Counter:CounterUDB:prevCompare\
-        );
-        Output = \Counter:CounterUDB:status_0\ (fanout=1)
-        Properties               : 
-        {
-        }
-
-    [McSlotId=1]:     MacroCell: Name=\Counter:CounterUDB:count_stored_i\, Mode=(D-Register) @ [UDB=(0,1)][LB=1][MC=1]
+    [McSlotId=0]:     MacroCell: Name=\Counter:CounterUDB:count_stored_i\, Mode=(D-Register) @ [UDB=(0,1)][LB=1][MC=0]
         Total # of inputs        : 1
         Total # of product terms : 1
         List of special equations: 
@@ -1498,8 +1506,34 @@ LAB@[UDB=(0,1)][LB=1] #macrocells=2, #inputs=7, #pterms=6
         {
         }
 
+    [McSlotId=1]:     MacroCell: Name=\Counter:CounterUDB:status_2\, Mode=(Combinatorial) @ [UDB=(0,1)][LB=1][MC=1]
+        Total # of inputs        : 2
+        Total # of product terms : 1
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        (
+              \Counter:CounterUDB:per_equal\ * 
+              !\Counter:CounterUDB:overflow_reg_i\
+        );
+        Output = \Counter:CounterUDB:status_2\ (fanout=1)
+        Properties               : 
+        {
+        }
+
     [McSlotId=2]: (empty)
-    [McSlotId=3]: (empty)
+    [McSlotId=3]:     MacroCell: Name=\Counter:CounterUDB:count_enable\, Mode=(Combinatorial) @ [UDB=(0,1)][LB=1][MC=3]
+        Total # of inputs        : 3
+        Total # of product terms : 1
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        (
+              \Counter:CounterUDB:control_7\ * 
+              !\Counter:CounterUDB:count_stored_i\ * Net_212
+        );
+        Output = \Counter:CounterUDB:count_enable\ (fanout=4)
+        Properties               : 
+        {
+        }
 }
 
 datapathcell: Name =\Counter:CounterUDB:sC32:counterdp:u0\
@@ -1600,23 +1634,59 @@ datapathcell: Name =\Counter:CounterUDB:sC32:counterdp:u2\
     Next in chain : \Counter:CounterUDB:sC32:counterdp:u3\
 
 UDB [UDB=(1,1)] contents:
-LAB@[UDB=(1,1)][LB=0] #macrocells=1, #inputs=0, #pterms=0
+LAB@[UDB=(1,1)][LB=0] #macrocells=1, #inputs=1, #pterms=1
 {
-    [McSlotId=0]:     MacroCell: Name=__ONE__, Mode=(Combinatorial) @ [UDB=(1,1)][LB=0][MC=0]
-        Total # of inputs        : 0
-        Total # of product terms : 0
+    [McSlotId=0]: (empty)
+    [McSlotId=1]:     MacroCell: Name=\Counter:CounterUDB:prevCapture\, Mode=(D-Register) @ [UDB=(1,1)][LB=0][MC=1]
+        Total # of inputs        : 1
+        Total # of product terms : 1
+        List of special equations: 
+            Clock  = (Net_155_digital) => Global
             Clock Enable: True
-        Main Equation            : 0 pterms
-        !(
-            0
+        Main Equation            : 1 pterm
+        (
+              Net_280
         );
-        Output = __ONE__ (fanout=4)
+        Output = \Counter:CounterUDB:prevCapture\ (fanout=1)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=2]: (empty)
+    [McSlotId=3]: (empty)
+}
+
+LAB@[UDB=(1,1)][LB=1] #macrocells=2, #inputs=2, #pterms=1
+{
+    [McSlotId=0]:     MacroCell: Name=\Counter:CounterUDB:hwCapture\, Mode=(Combinatorial) @ [UDB=(1,1)][LB=1][MC=0]
+        Total # of inputs        : 2
+        Total # of product terms : 1
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        (
+              Net_280 * !\Counter:CounterUDB:prevCapture\
+        );
+        Output = \Counter:CounterUDB:hwCapture\ (fanout=9)
         Properties               : 
         {
         }
 
     [McSlotId=1]: (empty)
-    [McSlotId=2]: (empty)
+    [McSlotId=2]:     MacroCell: Name=Net_584, Mode=(T-Register) @ [UDB=(1,1)][LB=1][MC=2]
+        Total # of inputs        : 0
+        Total # of product terms : 0
+        List of special equations: 
+            Clock  = (Net_598_digital) => Global
+            Clock Enable: True
+        Main Equation            : 0 pterms
+        !(
+            0
+        );
+        Output = Net_584 (fanout=1)
+        Properties               : 
+        {
+        }
+
     [McSlotId=3]: (empty)
 }
 
@@ -1672,6 +1742,15 @@ Intr container @ [IntrContainer=(0)]:
     interrupt: Name =ISR_Compare
         PORT MAP (
             interrupt => Net_579 );
+        Properties:
+        {
+            int_type = "10"
+            is_nmi = 0
+        }
+  Intr@ [IntrContainer=(0)][IntrId=(18)] 
+    interrupt: Name =ISR_Per
+        PORT MAP (
+            interrupt => Net_585 );
         Properties:
         {
             int_type = "10"
@@ -2028,9 +2107,11 @@ Clock group 0:
             dsi_in_0 => ClockBlock_Routed1 ,
             udb_div_0 => dclk_to_genclk ,
             ff_div_7 => Net_523_ff7 ,
+            ff_div_8 => Net_598_ff8 ,
+            udb_div_1 => dclk_to_genclk_1 ,
             ff_div_1 => \I2C:Net_847_ff1\ ,
             ff_div_2 => \UART:Net_847_ff2\ ,
-            ff_div_8 => Net_475_ff8 );
+            ff_div_9 => Net_475_ff9 );
         Properties:
         {
         }
@@ -2090,7 +2171,7 @@ TCPWM group 0:
     Tcpwm Block @ F(TCPWM,0): 
     m0s8tcpwmcell: Name =\PWM:cy_m0s8_tcpwm_1\
         PORT MAP (
-            clock => Net_475_ff8 ,
+            clock => Net_475_ff9 ,
             capture => zero ,
             count => tmpOE__Pin_A_net_0 ,
             reload => zero ,
@@ -2107,6 +2188,25 @@ TCPWM group 0:
             cy_registers = ""
         }
     Tcpwm Block @ F(TCPWM,1): 
+    m0s8tcpwmcell: Name =\Perioud_Counter:cy_m0s8_tcpwm_1\
+        PORT MAP (
+            clock => Net_598_ff8 ,
+            capture => Net_212 ,
+            count => Net_584 ,
+            reload => Net_212 ,
+            stop => zero ,
+            start => zero ,
+            tr_underflow => Net_592 ,
+            tr_overflow => Net_588 ,
+            tr_compare_match => Net_582 ,
+            line => Net_586 ,
+            line_compl => Net_587 ,
+            interrupt => Net_585 );
+        Properties:
+        {
+            cy_registers = ""
+        }
+    Tcpwm Block @ F(TCPWM,2): 
     m0s8tcpwmcell: Name =\PWM_Motor:cy_m0s8_tcpwm_1\
         PORT MAP (
             clock => Net_523_ff7 ,
@@ -2133,7 +2233,9 @@ CLK_GEN group 0:
     m0s8clockgenblockcell: Name =ClockGenBlock
         PORT MAP (
             gen_clk_out_0 => Net_155_digital ,
-            gen_clk_in_0 => dclk_to_genclk );
+            gen_clk_in_0 => dclk_to_genclk ,
+            gen_clk_out_1 => Net_598_digital ,
+            gen_clk_in_1 => dclk_to_genclk_1 );
         Properties:
         {
         }
@@ -2168,34 +2270,34 @@ Port | Pin | Fixed |      Type |       Drive Mode |         Name | Connections
 </CYPRESSTAG>
 </CYPRESSTAG>
 </CYPRESSTAG>
-Digital component placer commit/Report: Elapsed time ==> 0s.031ms
-Digital Placement phase: Elapsed time ==> 0s.715ms
+Digital component placer commit/Report: Elapsed time ==> 0s.017ms
+Digital Placement phase: Elapsed time ==> 0s.568ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Digital Routing">
 "C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\bin/sjrouter.exe" --xml-path "C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\dev\psoc4/3/256dma/route_arch-rrg.cydata" --vh2-path "CyberPong_r.vh2" --pcf-path "CyberPong.pco" --des-name "CyberPong" --dsf-path "CyberPong.dsf" --sdc-path "CyberPong.sdc" --lib-path "CyberPong_r.lib"
 Routing successful.
-Digital Routing phase: Elapsed time ==> 0s.596ms
+Digital Routing phase: Elapsed time ==> 0s.560ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Bitstream Generation">
-Bitstream Generation phase: Elapsed time ==> 0s.200ms
+Bitstream Generation phase: Elapsed time ==> 0s.201ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Bitstream Verification">
-Bitstream Verification phase: Elapsed time ==> 0s.026ms
+Bitstream Verification phase: Elapsed time ==> 0s.013ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Static timing analysis">
 Warning: sta.M0021: CyberPong_timing.html: Warning-1350: Asynchronous path(s) exist from "Clock_1(FFB)" to "Clock_2". See the timing report for details. (File=C:\Users\Ade0n\Desktop\THE PROJECT\PRJCT\CyberPong\CyberPong.cydsn\CyberPong_timing.html)
 Timing report is in CyberPong_timing.html.
-Static timing analysis phase: Elapsed time ==> 0s.214ms
+Static timing analysis phase: Elapsed time ==> 0s.207ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Data reporting">
 Data reporting phase: Elapsed time ==> 0s.000ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Database update...">
-Design database save phase: Elapsed time ==> 0s.189ms
+Design database save phase: Elapsed time ==> 0s.174ms
 </CYPRESSTAG>
-cydsfit: Elapsed time ==> 2s.436ms
+cydsfit: Elapsed time ==> 2s.224ms
 </CYPRESSTAG>
-Fitter phase: Elapsed time ==> 2s.437ms
-API generation phase: Elapsed time ==> 2s.792ms
-Dependency generation phase: Elapsed time ==> 0s.026ms
+Fitter phase: Elapsed time ==> 2s.225ms
+API generation phase: Elapsed time ==> 1s.703ms
+Dependency generation phase: Elapsed time ==> 0s.017ms
 Cleanup phase: Elapsed time ==> 0s.000ms

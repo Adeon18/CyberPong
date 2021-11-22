@@ -13,6 +13,7 @@
 #include <stdint.h>
 
 uint32_t signals_per_time_unit;
+uint32_t period_per_window;
 
 uint32_t current_rpm;
 char uart_rpm_buff[4];

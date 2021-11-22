@@ -1,0 +1,8 @@
+--------------- Rebuild Started: 11/22/2021 19:05:36 Project: main.c, Configuration: ARM GCC 5.4-2016-q2-update Debug ---------------
+arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_541\Debug/main.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c main.c -o .\CortexM0\ARM_GCC_541\Debug\main.o
+main.c: In function 'ISR_Compare_Handler':
+main.c:26:28: warning: format '%u' expects argument of type 'unsigned int', but argument 3 has type 'uint32_t {aka long unsigned int}' [-Wformat=]
+     sprintf(uart_rpm_buff, "%u", current_rpm);
+                            ^
+main.c:26:28: warning: format '%u' expects argument of type 'unsigned int', but argument 3 has type 'uint32_t {aka long unsigned int}' [-Wformat=]
+--------------- Rebuild Succeeded: 11/22/2021 19:05:36 ---------------

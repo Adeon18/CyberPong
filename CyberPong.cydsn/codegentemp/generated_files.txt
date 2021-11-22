@@ -71,6 +71,13 @@
   <file name="C:\Users\Ade0n\Desktop\THE PROJECT\PRJCT\CyberPong\CyberPong.cydsn\codegentemp\I2C_EZI2C_PVT.h" value="HEADER;;;;;I2C" />
   <file name="C:\Users\Ade0n\Desktop\THE PROJECT\PRJCT\CyberPong\CyberPong.cydsn\codegentemp\I2C_EZI2C_BOOT.c" value="SOURCE_C;CortexM0;;;;I2C" />
   <file name="C:\Users\Ade0n\Desktop\THE PROJECT\PRJCT\CyberPong\CyberPong.cydsn\codegentemp\I2C_BOOT.h" value="HEADER;;;;;I2C" />
+  <file name="C:\Users\Ade0n\Desktop\THE PROJECT\PRJCT\CyberPong\CyberPong.cydsn\codegentemp\Perioud_Counter.c" value="SOURCE_C;CortexM0;;;;Perioud_Counter" />
+  <file name="C:\Users\Ade0n\Desktop\THE PROJECT\PRJCT\CyberPong\CyberPong.cydsn\codegentemp\Perioud_Counter.h" value="HEADER;;;;;Perioud_Counter" />
+  <file name="C:\Users\Ade0n\Desktop\THE PROJECT\PRJCT\CyberPong\CyberPong.cydsn\codegentemp\Perioud_Counter_PM.c" value="SOURCE_C;CortexM0;;;;Perioud_Counter" />
+  <file name="C:\Users\Ade0n\Desktop\THE PROJECT\PRJCT\CyberPong\CyberPong.cydsn\codegentemp\Clock_4.c" value="SOURCE_C;CortexM0;;;;Clock_4" />
+  <file name="C:\Users\Ade0n\Desktop\THE PROJECT\PRJCT\CyberPong\CyberPong.cydsn\codegentemp\Clock_4.h" value="HEADER;;;;;Clock_4" />
+  <file name="C:\Users\Ade0n\Desktop\THE PROJECT\PRJCT\CyberPong\CyberPong.cydsn\codegentemp\ISR_Per.c" value="SOURCE_C;CortexM0;;;;ISR_Per" />
+  <file name="C:\Users\Ade0n\Desktop\THE PROJECT\PRJCT\CyberPong\CyberPong.cydsn\codegentemp\ISR_Per.h" value="HEADER;;;;;ISR_Per" />
   <file name="C:\Users\Ade0n\Desktop\THE PROJECT\PRJCT\CyberPong\CyberPong.cydsn\codegentemp\UART_SCBCLK.c" value="SOURCE_C;CortexM0;;;;UART_SCBCLK" />
   <file name="C:\Users\Ade0n\Desktop\THE PROJECT\PRJCT\CyberPong\CyberPong.cydsn\codegentemp\UART_SCBCLK.h" value="HEADER;;;;;UART_SCBCLK" />
   <file name="C:\Users\Ade0n\Desktop\THE PROJECT\PRJCT\CyberPong\CyberPong.cydsn\codegentemp\UART_tx.c" value="SOURCE_C;CortexM0;;;;UART_tx" />

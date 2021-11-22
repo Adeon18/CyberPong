@@ -168,6 +168,13 @@
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\I2C_scl_PM.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\I2C_SCB_IRQ.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\I2C_SCB_IRQ.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Perioud_Counter.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Perioud_Counter.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Perioud_Counter_PM.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Clock_4.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Clock_4.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\ISR_Per.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\ISR_Per.h</File>
         </Files>
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\codegentemp">

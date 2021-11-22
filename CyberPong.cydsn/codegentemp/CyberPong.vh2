@@ -2,7 +2,7 @@
 --	Conversion of CyberPong.v to vh2:
 --
 --	Cypress Semiconductor - WARP Version 6.3 IR 41
---	Mon Nov 22 16:45:15 2021
+--	Mon Nov 22 19:02:32 2021
 --
 
 USE cypress.cypress.all;
@@ -479,6 +479,22 @@ SIGNAL Net_566 : bit;
 SIGNAL Net_569 : bit;
 SIGNAL Net_570 : bit;
 SIGNAL Net_577 : bit;
+SIGNAL \Perioud_Counter:Net_81\ : bit;
+SIGNAL \Perioud_Counter:Net_75\ : bit;
+SIGNAL \Perioud_Counter:Net_69\ : bit;
+SIGNAL \Perioud_Counter:Net_66\ : bit;
+SIGNAL \Perioud_Counter:Net_82\ : bit;
+SIGNAL \Perioud_Counter:Net_72\ : bit;
+SIGNAL Net_592 : bit;
+SIGNAL Net_588 : bit;
+SIGNAL Net_582 : bit;
+SIGNAL Net_586 : bit;
+SIGNAL Net_587 : bit;
+SIGNAL Net_585 : bit;
+SIGNAL Net_584 : bit;
+SIGNAL Net_598 : bit;
+SIGNAL cy_tff_1 : bit;
+SIGNAL Net_593 : bit;
 SIGNAL \Counter:CounterUDB:prevCapture\\D\ : bit;
 SIGNAL \Counter:CounterUDB:overflow_reg_i\\D\ : bit;
 SIGNAL \Counter:CounterUDB:underflow_reg_i\\D\ : bit;
@@ -486,6 +502,7 @@ SIGNAL \Counter:CounterUDB:tc_reg_i\\D\ : bit;
 SIGNAL \Counter:CounterUDB:prevCompare\\D\ : bit;
 SIGNAL \Counter:CounterUDB:cmp_out_reg_i\\D\ : bit;
 SIGNAL \Counter:CounterUDB:count_stored_i\\D\ : bit;
+SIGNAL cy_tff_1D : bit;
 BEGIN
 
 zero <=  ('0') ;
@@ -509,6 +526,8 @@ tmpOE__Pin_A_net_0 <=  ('1') ;
 	OR (not \Counter:CounterUDB:cmp_less\ and \Counter:CounterUDB:ctrl_cmod_2\));
 
 \Counter:CounterUDB:count_enable\ <= ((not \Counter:CounterUDB:count_stored_i\ and \Counter:CounterUDB:control_7\ and Net_212));
+
+cy_tff_1D <= (not Net_584);
 
 ISR_Compare:cy_isr_v1_0
 	GENERIC MAP(int_type=>"10",
@@ -1571,6 +1590,34 @@ LED:cy_psoc3_pins_v1_10
 		sda=>Net_575,
 		tx_req=>Net_576,
 		rx_req=>Net_567);
+\Perioud_Counter:cy_m0s8_tcpwm_1\:cy_m0s8_tcpwm_v1_0
+	GENERIC MAP(cy_registers=>"")
+	PORT MAP(clock=>Net_598,
+		capture=>Net_212,
+		count=>Net_584,
+		reload=>Net_212,
+		stop=>zero,
+		start=>zero,
+		underflow=>Net_592,
+		overflow=>Net_588,
+		compare_match=>Net_582,
+		line_out=>Net_586,
+		line_out_compl=>Net_587,
+		interrupt=>Net_585);
+Clock_4:cy_clock_v1_0
+	GENERIC MAP(cy_registers=>"",
+		id=>"15cc9f08-d791-411c-a6ab-c0d0db39ab4e",
+		source_clock_id=>"",
+		divisor=>0,
+		period=>"500000000",
+		is_direct=>'0',
+		is_digital=>'1')
+	PORT MAP(clock_out=>Net_598,
+		dig_domain_out=>open);
+ISR_Per:cy_isr_v1_0
+	GENERIC MAP(int_type=>"10",
+		is_nmi=>'0')
+	PORT MAP(int_signal=>Net_585);
 \Counter:CounterUDB:prevCapture\:cy_dff
 	PORT MAP(d=>Net_280,
 		clk=>\Counter:CounterUDB:ClockOutFromEnBlock\,
@@ -1599,5 +1646,9 @@ LED:cy_psoc3_pins_v1_10
 	PORT MAP(d=>Net_212,
 		clk=>\Counter:CounterUDB:ClockOutFromEnBlock\,
 		q=>\Counter:CounterUDB:count_stored_i\);
+cy_tff_1:cy_dff
+	PORT MAP(d=>cy_tff_1D,
+		clk=>Net_598,
+		q=>Net_584);
 
 END R_T_L;

@@ -31,6 +31,20 @@ CY_ISR( ISR_Compare_Handler )
     PWM_ClearInterrupt(PWM_INTR_MASK_TC);
 }
 
+CY_ISR( ISR_Per_Handler )
+{
+            
+     
+    
+    // Put RMP into buffer and send it to UART
+    //sprintf(uart_rpm_buff, "%u", period_per_window);
+    UART_UartPutChar('\n');
+    UART_UartPutChar('\r');
+    UART_UartPutString("A");
+    
+    Perioud_Counter_ClearInterrupt(Perioud_Counter_INTR_MASK_CC_MATCH);
+}
+
 
 int main(void)
 {
@@ -38,6 +52,7 @@ int main(void)
     
     // Initialize some variables
     signals_per_time_unit = 0;
+    period_per_window = 0;
     current_rpm = 0;
     // I2C variables
     uint16 motor_speed_pwm = 0;
@@ -51,10 +66,11 @@ int main(void)
     Counter_Start();
     UART_Start();
     I2C_Start();
+    Perioud_Counter_Start();
     ISR_Compare_StartEx(ISR_Compare_Handler);
     
     I2C_EzI2CSetBuffer1(1, 1, i2c_buff);
-    
+    ISR_Per_StartEx(ISR_Per_Handler);
     
     for(;;)
     {   
@@ -68,6 +84,7 @@ int main(void)
             }
         }
         signals_per_time_unit = Counter_ReadCounter();
+        period_per_window = Perioud_Counter_ReadCounter();
     }
 }
 
