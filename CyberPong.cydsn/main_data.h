@@ -17,5 +17,5 @@ uint32_t period_per_window;
 
 uint32_t current_rpm;
 char uart_rpm_buff[4];
-
+char uart_per_buff[4];
 /* [] END OF FILE */

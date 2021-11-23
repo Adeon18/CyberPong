@@ -37,10 +37,10 @@ CY_ISR( ISR_Per_Handler )
      
     
     // Put RMP into buffer and send it to UART
-    //sprintf(uart_rpm_buff, "%u", period_per_window);
+    sprintf(uart_per_buff, "%u", period_per_window);
     UART_UartPutChar('\n');
     UART_UartPutChar('\r');
-    UART_UartPutString("A");
+    UART_UartPutString(uart_per_buff);
     
     Perioud_Counter_ClearInterrupt(Perioud_Counter_INTR_MASK_CC_MATCH);
 }
@@ -81,7 +81,7 @@ int main(void)
             motor_speed_pwm = i2c_buff[0];
             if (motor_speed_pwm > 100) {
                 PWM_Motor_WriteCompare(motor_speed_pwm);
-            }
+            }   
         }
         signals_per_time_unit = Counter_ReadCounter();
         period_per_window = Perioud_Counter_ReadCounter();

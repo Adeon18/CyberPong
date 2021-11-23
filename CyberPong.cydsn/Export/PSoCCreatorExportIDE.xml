@@ -25,7 +25,7 @@
       <Tool Name="postbuild" Command="" Options="" />
     </Toolchain>
   </Toolchains>
-  <Project Name="CyberPong" Path="C:\Users\Ade0n\Desktop\THE PROJECT\PRJCT\CyberPong\CyberPong.cydsn" Version="6.0" Type="Normal">
+  <Project Name="CyberPong" Path="C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn" Version="6.0" Type="Normal">
     <CMSIS_SVD_File>CyberPong.svd</CMSIS_SVD_File>
     <Datasheet />
     <LinkerFiles>
@@ -34,15 +34,15 @@
       <LinkerFile Toolchain="ARM IAR Generic">.\Generated_Source\PSoC4\Cm0Iar.icf</LinkerFile>
     </LinkerFiles>
     <Folders>
-      <Folder BuildType="STRICT" Path="C:\Users\Ade0n\Desktop\THE PROJECT\PRJCT\CyberPong\CyberPong.cydsn">
-        <Files Root="C:\Users\Ade0n\Desktop\THE PROJECT\PRJCT\CyberPong\CyberPong.cydsn">
+      <Folder BuildType="STRICT" Path="C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn">
+        <Files Root="C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn">
           <File BuildType="BUILD" Toolchain="">main.c</File>
           <File BuildType="BUILD" Toolchain="">cyapicallbacks.h</File>
           <File BuildType="BUILD" Toolchain="">main_data.h</File>
         </Files>
       </Folder>
-      <Folder BuildType="STRICT" Path="C:\Users\Ade0n\Desktop\THE PROJECT\PRJCT\CyberPong\CyberPong.cydsn\Generated_Source\PSoC4">
-        <Files Root="C:\Users\Ade0n\Desktop\THE PROJECT\PRJCT\CyberPong\CyberPong.cydsn">
+      <Folder BuildType="STRICT" Path="C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn\Generated_Source\PSoC4">
+        <Files Root="C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn">
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\cyfitter_cfg.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\cyfitter_cfg.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\cymetadata.c</File>
@@ -178,34 +178,34 @@
         </Files>
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\codegentemp">
-        <Files Root="C:\Users\Ade0n\Desktop\THE PROJECT\PRJCT\CyberPong\CyberPong.cydsn" />
+        <Files Root="C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn" />
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\ARM_GCC_441">
-        <Files Root="C:\Users\Ade0n\Desktop\THE PROJECT\PRJCT\CyberPong\CyberPong.cydsn" />
+        <Files Root="C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn" />
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\ARM_GCC_473">
-        <Files Root="C:\Users\Ade0n\Desktop\THE PROJECT\PRJCT\CyberPong\CyberPong.cydsn" />
+        <Files Root="C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn" />
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\DP8051_Keil_952">
-        <Files Root="C:\Users\Ade0n\Desktop\THE PROJECT\PRJCT\CyberPong\CyberPong.cydsn" />
+        <Files Root="C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn" />
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\DP8051">
-        <Files Root="C:\Users\Ade0n\Desktop\THE PROJECT\PRJCT\CyberPong\CyberPong.cydsn" />
+        <Files Root="C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn" />
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\CortexM0">
-        <Files Root="C:\Users\Ade0n\Desktop\THE PROJECT\PRJCT\CyberPong\CyberPong.cydsn" />
+        <Files Root="C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn" />
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\CortexM0p">
-        <Files Root="C:\Users\Ade0n\Desktop\THE PROJECT\PRJCT\CyberPong\CyberPong.cydsn" />
+        <Files Root="C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn" />
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\CortexM3">
-        <Files Root="C:\Users\Ade0n\Desktop\THE PROJECT\PRJCT\CyberPong\CyberPong.cydsn" />
+        <Files Root="C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn" />
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\CortexM4">
-        <Files Root="C:\Users\Ade0n\Desktop\THE PROJECT\PRJCT\CyberPong\CyberPong.cydsn" />
+        <Files Root="C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn" />
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\CortexM7">
-        <Files Root="C:\Users\Ade0n\Desktop\THE PROJECT\PRJCT\CyberPong\CyberPong.cydsn" />
+        <Files Root="C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn" />
       </Folder>
     </Folders>
   </Project>
