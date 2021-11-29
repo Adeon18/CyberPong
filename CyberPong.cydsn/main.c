@@ -35,13 +35,20 @@ CY_ISR( ISR_Per_Handler )
 {
             
      
-    
+    if(indx < 4){
     // Put RMP into buffer and send it to UART
-    sprintf(uart_per_buff, "%u", period_per_window);
+    period_per_spin += period_per_window;
+    indx += 1;
+    
+    }
+    else if (indx >= 4){
+        sprintf(uart_per_buff, "%u", period_per_spin);
     UART_UartPutChar('\n');
     UART_UartPutChar('\r');
     UART_UartPutString(uart_per_buff);
-    
+    indx = 0;
+    period_per_spin = 0;
+    }
     Perioud_Counter_ClearInterrupt(Perioud_Counter_INTR_MASK_CC_MATCH);
 }
 
@@ -54,6 +61,8 @@ int main(void)
     signals_per_time_unit = 0;
     period_per_window = 0;
     current_rpm = 0;
+    indx = 0;
+    period_per_spin = 0;
     // I2C variables
     uint16 motor_speed_pwm = 0;
     uint8 i2c_buff[1];
