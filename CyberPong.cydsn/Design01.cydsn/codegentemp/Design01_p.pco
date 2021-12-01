@@ -1,0 +1,16 @@
+dont_use_io iocell 0 6
+dont_use_io iocell 0 7
+dont_use_io iocell 6 0
+dont_use_io iocell 6 1
+set_location "Net_584" macrocell 0 1 0 0
+set_io "\UART:rx(0)\" iocell 1 4
+set_location "ClockGenBlock" m0s8clockgenblockcell -1 -1 0
+set_io "Pin_A(0)" iocell 0 1
+set_location "\Perioud_Counter:cy_m0s8_tcpwm_1\" m0s8tcpwmcell -1 -1 0
+set_io "\UART:tx(0)\" iocell 1 5
+set_location "ClockBlock" m0s8clockblockcell -1 -1 0
+set_location "\PWM:cy_m0s8_tcpwm_1\" m0s8tcpwmcell -1 -1 1
+set_location "ISR_Per" interrupt -1 -1 17
+set_io "Pin_B(0)" iocell 0 2
+set_location "\UART:SCB\" m0s8scbcell -1 -1 0
+set_io "Pin_Input(0)" iocell 1 2

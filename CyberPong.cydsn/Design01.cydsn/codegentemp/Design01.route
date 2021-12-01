@@ -1,0 +1,88 @@
+net Net_676
+	term   ":ioport1:pin2.fb"
+	switch ":ioport1:pin2.fb==>:ioport1:hsiom_in2.hsiom2_in"
+	switch ":ioport1:hsiom_in2.dsi==>Stub-:dsiswitch_bottom@[DSI=(1,0)][side=bottom]:dsihc_bottom:v4+:dsiswitch_bottom@[DSI=(1,0)][side=bottom]:dsihc_bottom:v6"
+	switch "OStub-:dsiswitch_bottom@[DSI=(1,0)][side=bottom]:dsihc_bottom:v4+:dsiswitch_bottom@[DSI=(1,0)][side=bottom]:dsihc_bottom:v6"
+	switch ":dsiswitch_bottom@[DSI=(1,0)][side=bottom]:dsihc_bottom:6,77"
+	switch ":hvswitch@[UDB=(2,0)][side=left]:3,77_f"
+	switch ":hvswitch@[UDB=(2,0)][side=left]:vseg_3_top_b"
+	switch ":hvswitch@[UDB=(1,0)][side=left]:vseg_3_top_b"
+	switch ":hvswitch@[UDB=(0,0)][side=left]:3,67_b"
+	switch ":hvswitch@[UDB=(0,0)][side=left]:hseg_67_f"
+	switch ":dsiswitch_top@[DSI=(0,1)][side=top]:dsihc_top:56,67_f"
+	switch "IStub-:dsiswitch_top@[DSI=(0,1)][side=top]:dsihc_top:v56+:dsiswitch_top@[DSI=(0,1)][side=top]:dsihc_top:v58"
+	switch "Stub-:dsiswitch_top@[DSI=(0,1)][side=top]:dsihc_top:v56+:dsiswitch_top@[DSI=(0,1)][side=top]:dsihc_top:v58==>:m0s8tcpwmcell_0_permute.tr_in<0>"
+	switch ":m0s8tcpwmcell_0_permute.capture==>:m0s8tcpwmcell_0.capture"
+	term   ":m0s8tcpwmcell_0.capture"
+	switch ":m0s8tcpwmcell_0_permute.reload==>:m0s8tcpwmcell_0.reload"
+	term   ":m0s8tcpwmcell_0.reload"
+end Net_676
+net ClockBlock_HFClk
+	term   ":m0s8clockblockcell.hfclk"
+	switch ":m0s8clockblockcell.hfclk==>:interrupt_17.clock"
+	term   ":interrupt_17.clock"
+end ClockBlock_HFClk
+net Net_209
+	term   ":m0s8tcpwmcell_1.line"
+	switch ":m0s8tcpwmcell_1.line==>Stub-:dsiswitch_top@[DSI=(0,1)][side=top]:dsihc_top:v17+:dsiswitch_top@[DSI=(0,1)][side=top]:dsihc_top:v19"
+	switch "OStub-:dsiswitch_top@[DSI=(0,1)][side=top]:dsihc_top:v17+:dsiswitch_top@[DSI=(0,1)][side=top]:dsihc_top:v19"
+	switch ":dsiswitch_top@[DSI=(0,1)][side=top]:dsihc_top:19,79"
+	switch ":hvswitch@[UDB=(0,0)][side=left]:16,79_f"
+	switch ":hvswitch@[UDB=(1,0)][side=left]:vseg_16_top_f"
+	switch ":hvswitch@[UDB=(2,0)][side=left]:vseg_16_top_f"
+	switch ":hvswitch@[UDB=(2,0)][side=left]:16,94_b"
+	switch ":dsiswitch_bottom@[DSI=(1,1)][side=bottom]:dsihc_bottom:88,94_f"
+	switch "IStub-:dsiswitch_bottom@[DSI=(1,1)][side=bottom]:dsihc_bottom:v86+:dsiswitch_bottom@[DSI=(1,1)][side=bottom]:dsihc_bottom:v88+:dsiswitch_bottom@[DSI=(1,1)][side=bottom]:dsihc_bottom:v90"
+	switch "Stub-:dsiswitch_bottom@[DSI=(1,1)][side=bottom]:dsihc_bottom:v86+:dsiswitch_bottom@[DSI=(1,1)][side=bottom]:dsihc_bottom:v88+:dsiswitch_bottom@[DSI=(1,1)][side=bottom]:dsihc_bottom:v90==>:ioport0:inputs1_mux.in_2"
+	switch ":ioport0:inputs1_mux.pin1__pin_input==>:ioport0:hsiom_out1.dsi"
+	switch ":ioport0:hsiom_out1.hsiom1_out==>:ioport0:pin1.pin_input"
+	term   ":ioport0:pin1.pin_input"
+end Net_209
+net Net_37
+	term   ":m0s8tcpwmcell_0.interrupt"
+	switch ":m0s8tcpwmcell_0.interrupt==>:interrupt_idmux_17.in_0"
+	switch ":interrupt_idmux_17.interrupt_idmux_17__out==>:interrupt_17.interrupt"
+	term   ":interrupt_17.interrupt"
+end Net_37
+net Net_584
+	term   ":udb@[UDB=(0,1)]:pld0:mc0.q"
+	switch ":udb@[UDB=(0,1)]:pld0:mc0.q==>:udb@[UDB=(0,1)]:pld0:output_permute3.q_0"
+	switch ":udb@[UDB=(0,1)]:pld0:output_permute3.output_3==>Stub-:udbswitch@[UDB=(0,1)][side=top]:v30"
+	switch "OStub-:udbswitch@[UDB=(0,1)][side=top]:v30"
+	switch ":udbswitch@[UDB=(0,1)][side=top]:30,0"
+	switch ":hvswitch@[UDB=(1,0)][side=left]:31,0_f"
+	switch ":hvswitch@[UDB=(0,0)][side=left]:vseg_31_bot_f"
+	switch ":hvswitch@[UDB=(0,0)][side=left]:31,38_b"
+	switch ":dsiswitch_top@[DSI=(0,1)][side=top]:dsihc_top:67,38_f"
+	switch "IStub-:dsiswitch_top@[DSI=(0,1)][side=top]:dsihc_top:v65+:dsiswitch_top@[DSI=(0,1)][side=top]:dsihc_top:v67"
+	switch "Stub-:dsiswitch_top@[DSI=(0,1)][side=top]:dsihc_top:v65+:dsiswitch_top@[DSI=(0,1)][side=top]:dsihc_top:v67==>:m0s8tcpwmcell_0_permute.tr_in<5>"
+	switch ":m0s8tcpwmcell_0_permute.count==>:m0s8tcpwmcell_0.count"
+	term   ":m0s8tcpwmcell_0.count"
+end Net_584
+net Net_598_digital
+	term   ":m0s8clockgenblockcell.gen_clk_out_0"
+	switch ":m0s8clockgenblockcell.gen_clk_out_0==>:udb@[UDB=(0,1)]:clockreset:clk_pld0_mux.in_0"
+	switch ":udb@[UDB=(0,1)]:clockreset:clk_pld0_mux.pld0_clk==>:udb@[UDB=(0,1)]:pld0:mc0.clock_0"
+	term   ":udb@[UDB=(0,1)]:pld0:mc0.clock_0"
+end Net_598_digital
+net \UART:rx_wire\
+	term   ":ioport1:pin4.fb"
+	switch ":ioport1:pin4.fb==>:ioport1:hsiom_in4.hsiom4_in"
+	switch ":ioport1:hsiom_in4.fixed_ACT_1==>:m0s8scbcell_0__uart_rx__hsiom_permute.ioport1__fixed_out_p4_ACT_1"
+	switch ":m0s8scbcell_0__uart_rx__hsiom_permute.m0s8scbcell_0__uart_rx==>:m0s8scbcell_0.uart_rx"
+	term   ":m0s8scbcell_0.uart_rx"
+end \UART:rx_wire\
+net \UART:tx_wire\
+	term   ":m0s8scbcell_0.uart_tx"
+	switch ":m0s8scbcell_0.uart_tx==>:ioport1:hsiom_out5.fixed_ACT_1"
+	switch ":ioport1:hsiom_out5.hsiom5_out==>:ioport1:pin5.pin_input"
+	term   ":ioport1:pin5.pin_input"
+end \UART:tx_wire\
+net dclk_to_genclk
+	term   ":m0s8clockblockcell.udb_div_0"
+	switch ":m0s8clockblockcell.udb_div_0==>:dclk_permute.dclk_in_0"
+	switch ":dclk_permute.dclk_out_0==>:clkgen_tree_sel_0.dclk_in"
+	switch ":clkgen_tree_sel_0.output==>:genclkin_permute.input_0"
+	switch ":genclkin_permute.output_0==>:m0s8clockgenblockcell.gen_clk_in_0"
+	term   ":m0s8clockgenblockcell.gen_clk_in_0"
+end dclk_to_genclk

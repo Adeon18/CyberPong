@@ -1,5 +1,5 @@
 # CyberPong
-# 2021-11-23 09:42:16Z
+# 2021-12-01 11:08:44Z
 
 # IO_6@[IOP=(0)][IoId=(6)] is reserved: SWDDebugEnabled
 dont_use_io iocell 0 6
@@ -15,6 +15,3 @@ set_io "Pin_B(0)" iocell 0 2
 set_io "Pin_Input(0)" iocell 1 2
 set_io "\UART:tx(0)\" iocell 1 5
 set_io "\UART:rx(0)\" iocell 1 4
-set_io "LED(0)" iocell 3 6
-set_io "\I2C:sda(0)\" iocell 3 4
-set_io "\I2C:scl(0)\" iocell 3 5
