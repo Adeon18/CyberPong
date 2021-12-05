@@ -15,7 +15,7 @@ Archive member included to satisfy reference by file (symbol)
 .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(ISR_Per.o)
                               .\CortexM0\ARM_GCC_541\Debug\main.o (ISR_Per_StartEx)
 .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(FanController.o)
-                              .\CortexM0\ARM_GCC_541\Debug\main.o (FanController_Enable)
+                              .\CortexM0\ARM_GCC_541\Debug\main.o (FanController_Start)
 .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(FanController_INT.o)
                               .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(FanController.o) (FanController_DATA_SEND_ISR)
 .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(FanController_DataSend.o)
@@ -728,146 +728,146 @@ END GROUP
  .text.ISR_Per_Handler
                 0x000002f8       0x68 .\CortexM0\ARM_GCC_541\Debug\main.o
                 0x000002f8                ISR_Per_Handler
- .text.main     0x00000360       0x98 .\CortexM0\ARM_GCC_541\Debug\main.o
+ .text.main     0x00000360       0x94 .\CortexM0\ARM_GCC_541\Debug\main.o
                 0x00000360                main
  .text.cfg_write_bytes32
-                0x000003f8       0x34 .\CortexM0\ARM_GCC_541\Debug\cyfitter_cfg.o
+                0x000003f4       0x34 .\CortexM0\ARM_GCC_541\Debug\cyfitter_cfg.o
  .text.AnalogSetDefault
-                0x0000042c       0x20 .\CortexM0\ARM_GCC_541\Debug\cyfitter_cfg.o
+                0x00000428       0x20 .\CortexM0\ARM_GCC_541\Debug\cyfitter_cfg.o
  .text.CYMEMZERO
-                0x0000044c        0xc .\CortexM0\ARM_GCC_541\Debug\cyfitter_cfg.o
+                0x00000448        0xc .\CortexM0\ARM_GCC_541\Debug\cyfitter_cfg.o
  .text.CYCONFIGCPYCODE
-                0x00000458        0x8 .\CortexM0\ARM_GCC_541\Debug\cyfitter_cfg.o
+                0x00000454        0x8 .\CortexM0\ARM_GCC_541\Debug\cyfitter_cfg.o
  .text.IntDefaultHandler
-                0x00000460       0x10 .\CortexM0\ARM_GCC_541\Debug\Cm0Start.o
-                0x00000460                IntDefaultHandler
- .text._sbrk    0x00000470       0x30 .\CortexM0\ARM_GCC_541\Debug\Cm0Start.o
-                0x00000470                _sbrk
- .text.Start_c  0x000004a0       0x48 .\CortexM0\ARM_GCC_541\Debug\Cm0Start.o
-                0x000004a0                Start_c
+                0x0000045c       0x10 .\CortexM0\ARM_GCC_541\Debug\Cm0Start.o
+                0x0000045c                IntDefaultHandler
+ .text._sbrk    0x0000046c       0x30 .\CortexM0\ARM_GCC_541\Debug\Cm0Start.o
+                0x0000046c                _sbrk
+ .text.Start_c  0x0000049c       0x48 .\CortexM0\ARM_GCC_541\Debug\Cm0Start.o
+                0x0000049c                Start_c
  .text.initialize_psoc
-                0x000004e8       0x4c .\CortexM0\ARM_GCC_541\Debug\Cm0Start.o
-                0x000004e8                initialize_psoc
+                0x000004e4       0x4c .\CortexM0\ARM_GCC_541\Debug\Cm0Start.o
+                0x000004e4                initialize_psoc
  .text.CySysClkEcoReadStatus
-                0x00000534       0x10 .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(CyLib.o)
-                0x00000534                CySysClkEcoReadStatus
+                0x00000530       0x10 .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(CyLib.o)
+                0x00000530                CySysClkEcoReadStatus
  .text.CyIntEnable
-                0x00000544       0x14 .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(CyLib.o)
-                0x00000544                CyIntEnable
- .text.CyHalt   0x00000558        0x4 .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(CyLib.o)
-                0x00000558                CyHalt
+                0x00000540       0x14 .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(CyLib.o)
+                0x00000540                CyIntEnable
+ .text.CyHalt   0x00000554        0x4 .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(CyLib.o)
+                0x00000554                CyHalt
  .text.CyIntSetVector
-                0x0000055c       0x24 .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(CyLib.o)
-                0x0000055c                CyIntSetVector
+                0x00000558       0x24 .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(CyLib.o)
+                0x00000558                CyIntSetVector
  .text.CyDelayUs
-                0x00000580       0x14 .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(CyLib.o)
-                0x00000580                CyDelayUs
+                0x0000057c       0x14 .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(CyLib.o)
+                0x0000057c                CyDelayUs
  .text.CySysClkWriteImoFreq
-                0x00000594      0x164 .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(CyLib.o)
-                0x00000594                CySysClkWriteImoFreq
+                0x00000590      0x164 .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(CyLib.o)
+                0x00000590                CySysClkWriteImoFreq
  .text.CySysClkEcoStart
-                0x000006f8       0x54 .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(CyLib.o)
-                0x000006f8                CySysClkEcoStart
+                0x000006f4       0x54 .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(CyLib.o)
+                0x000006f4                CySysClkEcoStart
  .text.CySysWdtLocked
-                0x0000074c       0x14 .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(CyLFClk.o)
+                0x00000748       0x14 .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(CyLFClk.o)
  .text.CySysClkWcoStart
-                0x00000760       0x40 .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(CyLFClk.o)
-                0x00000760                CySysClkWcoStart
+                0x0000075c       0x40 .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(CyLFClk.o)
+                0x0000075c                CySysClkWcoStart
  .text.CySysClkWcoSetPowerMode
-                0x000007a0       0x80 .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(CyLFClk.o)
-                0x000007a0                CySysClkWcoSetPowerMode
+                0x0000079c       0x80 .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(CyLFClk.o)
+                0x0000079c                CySysClkWcoSetPowerMode
  .text.CySysWdtLock
-                0x00000820       0x1c .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(CyLFClk.o)
-                0x00000820                CySysWdtLock
+                0x0000081c       0x1c .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(CyLFClk.o)
+                0x0000081c                CySysWdtLock
  .text.CySysWdtUnlock
-                0x0000083c       0x30 .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(CyLFClk.o)
-                0x0000083c                CySysWdtUnlock
+                0x00000838       0x30 .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(CyLFClk.o)
+                0x00000838                CySysWdtUnlock
  .text.CySysWdtClearInterrupt
-                0x0000086c       0x4c .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(CyLFClk.o)
-                0x0000086c                CySysWdtClearInterrupt
+                0x00000868       0x4c .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(CyLFClk.o)
+                0x00000868                CySysWdtClearInterrupt
  .text.CySysWdtIsr
-                0x000008b8       0xa4 .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(CyLFClk.o)
-                0x000008b8                CySysWdtIsr
+                0x000008b4       0xa4 .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(CyLFClk.o)
+                0x000008b4                CySysWdtIsr
  .text.UART_ScbModePostEnable
-                0x0000095c        0x8 .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(UART.o)
+                0x00000958        0x8 .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(UART.o)
  .text.UART_Init
-                0x00000964        0x8 .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(UART.o)
-                0x00000964                UART_Init
+                0x00000960        0x8 .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(UART.o)
+                0x00000960                UART_Init
  .text.UART_Enable
-                0x0000096c       0x18 .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(UART.o)
-                0x0000096c                UART_Enable
+                0x00000968       0x18 .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(UART.o)
+                0x00000968                UART_Enable
  .text.UART_Start
-                0x00000984       0x20 .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(UART.o)
-                0x00000984                UART_Start
+                0x00000980       0x20 .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(UART.o)
+                0x00000980                UART_Start
  .text.UART_SpiUartWriteTxData
-                0x000009a4       0x1c .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(UART_SPI_UART.o)
-                0x000009a4                UART_SpiUartWriteTxData
+                0x000009a0       0x1c .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(UART_SPI_UART.o)
+                0x000009a0                UART_SpiUartWriteTxData
  .text.UART_UartInit
-                0x000009c0       0xa8 .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(UART_UART.o)
-                0x000009c0                UART_UartInit
+                0x000009bc       0xa8 .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(UART_UART.o)
+                0x000009bc                UART_UartInit
  .text.UART_UartPostEnable
-                0x00000a68       0x2c .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(UART_UART.o)
-                0x00000a68                UART_UartPostEnable
+                0x00000a64       0x2c .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(UART_UART.o)
+                0x00000a64                UART_UartPostEnable
  .text.UART_UartPutString
-                0x00000a94       0x18 .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(UART_UART.o)
-                0x00000a94                UART_UartPutString
+                0x00000a90       0x18 .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(UART_UART.o)
+                0x00000a90                UART_UartPutString
  .text.Perioud_Counter_WriteCounter
-                0x00000aac       0x10 .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(Perioud_Counter.o)
-                0x00000aac                Perioud_Counter_WriteCounter
+                0x00000aa8       0x10 .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(Perioud_Counter.o)
+                0x00000aa8                Perioud_Counter_WriteCounter
  .text.Perioud_Counter_WritePeriod
-                0x00000abc       0x10 .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(Perioud_Counter.o)
-                0x00000abc                Perioud_Counter_WritePeriod
+                0x00000ab8       0x10 .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(Perioud_Counter.o)
+                0x00000ab8                Perioud_Counter_WritePeriod
  .text.Perioud_Counter_TriggerCommand
-                0x00000acc       0x1c .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(Perioud_Counter.o)
-                0x00000acc                Perioud_Counter_TriggerCommand
+                0x00000ac8       0x1c .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(Perioud_Counter.o)
+                0x00000ac8                Perioud_Counter_TriggerCommand
  .text.Perioud_Counter_Enable
-                0x00000ae8       0x24 .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(Perioud_Counter.o)
-                0x00000ae8                Perioud_Counter_Enable
+                0x00000ae4       0x24 .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(Perioud_Counter.o)
+                0x00000ae4                Perioud_Counter_Enable
  .text.Perioud_Counter_SetInterruptMode
-                0x00000b0c        0xc .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(Perioud_Counter.o)
-                0x00000b0c                Perioud_Counter_SetInterruptMode
+                0x00000b08        0xc .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(Perioud_Counter.o)
+                0x00000b08                Perioud_Counter_SetInterruptMode
  .text.Perioud_Counter_Init
-                0x00000b18       0x30 .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(Perioud_Counter.o)
-                0x00000b18                Perioud_Counter_Init
+                0x00000b14       0x30 .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(Perioud_Counter.o)
+                0x00000b14                Perioud_Counter_Init
  .text.Perioud_Counter_Start
-                0x00000b48       0x20 .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(Perioud_Counter.o)
-                0x00000b48                Perioud_Counter_Start
+                0x00000b44       0x20 .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(Perioud_Counter.o)
+                0x00000b44                Perioud_Counter_Start
  .text.Perioud_Counter_ClearInterrupt
-                0x00000b68        0xc .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(Perioud_Counter.o)
-                0x00000b68                Perioud_Counter_ClearInterrupt
+                0x00000b64        0xc .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(Perioud_Counter.o)
+                0x00000b64                Perioud_Counter_ClearInterrupt
  .text.ISR_Per_SetVector
-                0x00000b74        0xc .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(ISR_Per.o)
-                0x00000b74                ISR_Per_SetVector
+                0x00000b70        0xc .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(ISR_Per.o)
+                0x00000b70                ISR_Per_SetVector
  .text.ISR_Per_SetPriority
-                0x00000b80       0x24 .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(ISR_Per.o)
-                0x00000b80                ISR_Per_SetPriority
+                0x00000b7c       0x24 .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(ISR_Per.o)
+                0x00000b7c                ISR_Per_SetPriority
  .text.ISR_Per_Enable
-                0x00000ba4       0x10 .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(ISR_Per.o)
-                0x00000ba4                ISR_Per_Enable
+                0x00000ba0       0x10 .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(ISR_Per.o)
+                0x00000ba0                ISR_Per_Enable
  .text.ISR_Per_Disable
-                0x00000bb4       0x10 .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(ISR_Per.o)
-                0x00000bb4                ISR_Per_Disable
+                0x00000bb0       0x10 .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(ISR_Per.o)
+                0x00000bb0                ISR_Per_Disable
  .text.ISR_Per_StartEx
-                0x00000bc4       0x1c .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(ISR_Per.o)
-                0x00000bc4                ISR_Per_StartEx
+                0x00000bc0       0x1c .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(ISR_Per.o)
+                0x00000bc0                ISR_Per_StartEx
  .text.FanController_Enable
-                0x00000be0       0x2c .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(FanController.o)
-                0x00000be0                FanController_Enable
+                0x00000bdc       0x2c .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(FanController.o)
+                0x00000bdc                FanController_Enable
  .text.FanController_SetAlertMask
-                0x00000c0c        0xc .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(FanController.o)
-                0x00000c0c                FanController_SetAlertMask
+                0x00000c08        0xc .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(FanController.o)
+                0x00000c08                FanController_SetAlertMask
  .text.FanController_GetAlertMask
-                0x00000c18        0xc .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(FanController.o)
-                0x00000c18                FanController_GetAlertMask
+                0x00000c14        0xc .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(FanController.o)
+                0x00000c14                FanController_GetAlertMask
  .text.FanController_SetDutyCycle
-                0x00000c24       0x28 .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(FanController.o)
-                0x00000c24                FanController_SetDutyCycle
+                0x00000c20       0x28 .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(FanController.o)
+                0x00000c20                FanController_SetDutyCycle
  .text.FanController_SetDesiredSpeed
-                0x00000c4c       0x14 .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(FanController.o)
-                0x00000c4c                FanController_SetDesiredSpeed
+                0x00000c48       0x14 .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(FanController.o)
+                0x00000c48                FanController_SetDesiredSpeed
  .text.FanController_Init
-                0x00000c60       0xfc .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(FanController.o)
-                0x00000c60                FanController_Init
+                0x00000c5c      0x100 .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(FanController.o)
+                0x00000c5c                FanController_Init
  .text.FanController_Start
                 0x00000d5c       0x20 .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(FanController.o)
                 0x00000d5c                FanController_Start
@@ -1293,25 +1293,25 @@ END GROUP
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x00000000     0x5abf
+.debug_info     0x00000000     0x5aab
  *(.debug_info .gnu.linkonce.wi.*)
- .debug_info    0x00000000      0x350 .\CortexM0\ARM_GCC_541\Debug\main.o
- .debug_info    0x00000350      0x5b9 .\CortexM0\ARM_GCC_541\Debug\cyfitter_cfg.o
- .debug_info    0x00000909       0xf8 .\CortexM0\ARM_GCC_541\Debug\cymetadata.o
- .debug_info    0x00000a01      0x3a2 .\CortexM0\ARM_GCC_541\Debug\Cm0Start.o
- .debug_info    0x00000da3      0xd2c .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(CyLib.o)
- .debug_info    0x00001acf     0x1071 .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(CyLFClk.o)
- .debug_info    0x00002b40      0x23a .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(UART.o)
- .debug_info    0x00002d7a      0x220 .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(UART_SPI_UART.o)
- .debug_info    0x00002f9a      0x3b5 .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(UART_UART.o)
- .debug_info    0x0000334f      0x8f6 .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(Perioud_Counter.o)
- .debug_info    0x00003c45      0x305 .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(ISR_Per.o)
- .debug_info    0x00003f4a      0x8a8 .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(FanController.o)
- .debug_info    0x000047f2      0x338 .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(FanController_INT.o)
- .debug_info    0x00004b2a      0x305 .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(FanController_DataSend.o)
- .debug_info    0x00004e2f      0x305 .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(FanController_PID_ISR.o)
- .debug_info    0x00005134      0x909 .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(FanController_FW_PWM1.o)
- .debug_info    0x00005a3d       0x82 .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(CyBootAsmGnu.o)
+ .debug_info    0x00000000      0x33c .\CortexM0\ARM_GCC_541\Debug\main.o
+ .debug_info    0x0000033c      0x5b9 .\CortexM0\ARM_GCC_541\Debug\cyfitter_cfg.o
+ .debug_info    0x000008f5       0xf8 .\CortexM0\ARM_GCC_541\Debug\cymetadata.o
+ .debug_info    0x000009ed      0x3a2 .\CortexM0\ARM_GCC_541\Debug\Cm0Start.o
+ .debug_info    0x00000d8f      0xd2c .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(CyLib.o)
+ .debug_info    0x00001abb     0x1071 .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(CyLFClk.o)
+ .debug_info    0x00002b2c      0x23a .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(UART.o)
+ .debug_info    0x00002d66      0x220 .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(UART_SPI_UART.o)
+ .debug_info    0x00002f86      0x3b5 .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(UART_UART.o)
+ .debug_info    0x0000333b      0x8f6 .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(Perioud_Counter.o)
+ .debug_info    0x00003c31      0x305 .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(ISR_Per.o)
+ .debug_info    0x00003f36      0x8a8 .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(FanController.o)
+ .debug_info    0x000047de      0x338 .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(FanController_INT.o)
+ .debug_info    0x00004b16      0x305 .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(FanController_DataSend.o)
+ .debug_info    0x00004e1b      0x305 .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(FanController_PID_ISR.o)
+ .debug_info    0x00005120      0x909 .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(FanController_FW_PWM1.o)
+ .debug_info    0x00005a29       0x82 .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(CyBootAsmGnu.o)
 
 .debug_abbrev   0x00000000     0x1707
  *(.debug_abbrev)
@@ -1333,25 +1333,25 @@ END GROUP
  .debug_abbrev  0x000015da      0x119 .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(FanController_FW_PWM1.o)
  .debug_abbrev  0x000016f3       0x14 .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(CyBootAsmGnu.o)
 
-.debug_line     0x00000000     0x265e
+.debug_line     0x00000000     0x265d
  *(.debug_line)
- .debug_line    0x00000000      0x282 .\CortexM0\ARM_GCC_541\Debug\main.o
- .debug_line    0x00000282      0x1d0 .\CortexM0\ARM_GCC_541\Debug\cyfitter_cfg.o
- .debug_line    0x00000452      0x141 .\CortexM0\ARM_GCC_541\Debug\cymetadata.o
- .debug_line    0x00000593      0x236 .\CortexM0\ARM_GCC_541\Debug\Cm0Start.o
- .debug_line    0x000007c9      0x553 .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(CyLib.o)
- .debug_line    0x00000d1c      0x5db .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(CyLFClk.o)
- .debug_line    0x000012f7      0x108 .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(UART.o)
- .debug_line    0x000013ff      0x11a .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(UART_SPI_UART.o)
- .debug_line    0x00001519      0x1cf .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(UART_UART.o)
- .debug_line    0x000016e8      0x383 .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(Perioud_Counter.o)
- .debug_line    0x00001a6b      0x153 .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(ISR_Per.o)
- .debug_line    0x00001bbe      0x2dc .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(FanController.o)
- .debug_line    0x00001e9a      0x10b .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(FanController_INT.o)
- .debug_line    0x00001fa5      0x162 .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(FanController_DataSend.o)
- .debug_line    0x00002107      0x161 .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(FanController_PID_ISR.o)
- .debug_line    0x00002268      0x38e .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(FanController_FW_PWM1.o)
- .debug_line    0x000025f6       0x68 .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(CyBootAsmGnu.o)
+ .debug_line    0x00000000      0x281 .\CortexM0\ARM_GCC_541\Debug\main.o
+ .debug_line    0x00000281      0x1d0 .\CortexM0\ARM_GCC_541\Debug\cyfitter_cfg.o
+ .debug_line    0x00000451      0x141 .\CortexM0\ARM_GCC_541\Debug\cymetadata.o
+ .debug_line    0x00000592      0x236 .\CortexM0\ARM_GCC_541\Debug\Cm0Start.o
+ .debug_line    0x000007c8      0x553 .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(CyLib.o)
+ .debug_line    0x00000d1b      0x5db .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(CyLFClk.o)
+ .debug_line    0x000012f6      0x108 .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(UART.o)
+ .debug_line    0x000013fe      0x11a .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(UART_SPI_UART.o)
+ .debug_line    0x00001518      0x1cf .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(UART_UART.o)
+ .debug_line    0x000016e7      0x383 .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(Perioud_Counter.o)
+ .debug_line    0x00001a6a      0x153 .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(ISR_Per.o)
+ .debug_line    0x00001bbd      0x2dc .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(FanController.o)
+ .debug_line    0x00001e99      0x10b .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(FanController_INT.o)
+ .debug_line    0x00001fa4      0x162 .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(FanController_DataSend.o)
+ .debug_line    0x00002106      0x161 .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(FanController_PID_ISR.o)
+ .debug_line    0x00002267      0x38e .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(FanController_FW_PWM1.o)
+ .debug_line    0x000025f5       0x68 .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(CyBootAsmGnu.o)
 
 .debug_frame    0x00000000     0x1e48
  *(.debug_frame)
@@ -1392,29 +1392,29 @@ END GROUP
 
 .debug_str      0x00000000     0x2c0f
  *(.debug_str)
- .debug_str     0x00000000      0x2a7 .\CortexM0\ARM_GCC_541\Debug\main.o
-                                0x2f0 (size before relaxing)
- .debug_str     0x000002a7      0x1ec .\CortexM0\ARM_GCC_541\Debug\cyfitter_cfg.o
+ .debug_str     0x00000000      0x292 .\CortexM0\ARM_GCC_541\Debug\main.o
+                                0x2db (size before relaxing)
+ .debug_str     0x00000292      0x1ec .\CortexM0\ARM_GCC_541\Debug\cyfitter_cfg.o
                                 0x383 (size before relaxing)
- .debug_str     0x00000493       0x63 .\CortexM0\ARM_GCC_541\Debug\cymetadata.o
+ .debug_str     0x0000047e       0x63 .\CortexM0\ARM_GCC_541\Debug\cymetadata.o
                                 0x1ba (size before relaxing)
- .debug_str     0x000004f6      0x13a .\CortexM0\ARM_GCC_541\Debug\Cm0Start.o
+ .debug_str     0x000004e1      0x13a .\CortexM0\ARM_GCC_541\Debug\Cm0Start.o
                                 0x2f3 (size before relaxing)
- .debug_str     0x00000630      0x5d7 .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(CyLib.o)
+ .debug_str     0x0000061b      0x5d7 .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(CyLib.o)
                                 0x7ea (size before relaxing)
- .debug_str     0x00000c07      0x6ec .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(CyLFClk.o)
+ .debug_str     0x00000bf2      0x6ec .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(CyLFClk.o)
                                 0x92a (size before relaxing)
- .debug_str     0x000012f3       0xf7 .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(UART.o)
+ .debug_str     0x000012de       0xf7 .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(UART.o)
                                 0x289 (size before relaxing)
- .debug_str     0x000013ea      0x11d .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(UART_SPI_UART.o)
+ .debug_str     0x000013d5      0x11d .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(UART_SPI_UART.o)
                                 0x2c0 (size before relaxing)
- .debug_str     0x00001507      0x186 .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(UART_UART.o)
+ .debug_str     0x000014f2      0x186 .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(UART_UART.o)
                                 0x3ba (size before relaxing)
- .debug_str     0x0000168d      0x555 .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(Perioud_Counter.o)
+ .debug_str     0x00001678      0x555 .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(Perioud_Counter.o)
                                 0x747 (size before relaxing)
- .debug_str     0x00001be2      0x101 .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(ISR_Per.o)
+ .debug_str     0x00001bcd      0x101 .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(ISR_Per.o)
                                 0x2f8 (size before relaxing)
- .debug_str     0x00001ce3      0x547 .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(FanController.o)
+ .debug_str     0x00001cce      0x55c .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(FanController.o)
                                 0x7a1 (size before relaxing)
  .debug_str     0x0000222a      0x114 .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(FanController_INT.o)
                                 0x44e (size before relaxing)

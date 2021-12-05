@@ -53,8 +53,6 @@ int main(void)
     UART_Start();
     Perioud_Counter_Start();
     ISR_Per_StartEx(ISR_Per_Handler);
-    
-    FanController_Enable();
    
     
     for(;;)

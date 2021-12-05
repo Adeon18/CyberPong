@@ -67,13 +67,13 @@
 
 /* PID Constants */
 #if(FanController_IS_AUTO_FIRMWARE_MODE)
-    #define FanController_PID_A1             (4710)
-    #define FanController_PID_A2             (-4096)
-    #define FanController_PID_A3             (0)
+    #define FanController_PID_A1             (12288)
+    #define FanController_PID_A2             (-12288)
+    #define FanController_PID_A3             (4096)
 
     #define FanController_PID_POST_GAIN      (20u)
 
-    #define FanController_PID_OUTPUT_SAT_L   (553648128u)
+    #define FanController_PID_OUTPUT_SAT_L   (402653184u)
     #define FanController_PID_OUTPUT_SAT_H   (1006632960u)
 
     /* PID error low and high saturation. These are constants defined
@@ -339,7 +339,7 @@ extern FanController_fanPropertiesStruct FanController_fanProperties[FanControll
 ***************************************/
 
 #define FanController_MAX_FAN_NUM                 (FanController_NUMBER_OF_FANS - 1u)
-#define FanController_DAMPING_FACTOR              (10u)
+#define FanController_DAMPING_FACTOR              (1u)
 #define FanController_INIT_ALERT_ENABLE           (0u)
 #define FanController_NOISE_REDUCTION_MODE        (0u)
 #define FanController_INIT_ALERT_MASK             ((uint16) (((uint32) 0x01u << 1u) - 1u))
