@@ -866,75 +866,74 @@ END GROUP
                 0x00000c48       0x14 .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(FanController.o)
                 0x00000c48                FanController_SetDesiredSpeed
  .text.FanController_Init
-                0x00000c5c      0x100 .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(FanController.o)
+                0x00000c5c      0x104 .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(FanController.o)
                 0x00000c5c                FanController_Init
  .text.FanController_Start
-                0x00000d5c       0x20 .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(FanController.o)
-                0x00000d5c                FanController_Start
+                0x00000d60       0x20 .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(FanController.o)
+                0x00000d60                FanController_Start
  .text.FanController_GetDesiredSpeed
-                0x00000d7c       0x10 .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(FanController.o)
-                0x00000d7c                FanController_GetDesiredSpeed
+                0x00000d80       0x10 .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(FanController.o)
+                0x00000d80                FanController_GetDesiredSpeed
  .text.FanController_GetActualSpeed
-                0x00000d8c       0x2c .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(FanController.o)
-                0x00000d8c                FanController_GetActualSpeed
+                0x00000d90       0x2c .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(FanController.o)
+                0x00000d90                FanController_GetActualSpeed
  .text.FanController_DATA_SEND_ISR
-                0x00000db8       0x94 .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(FanController_INT.o)
-                0x00000db8                FanController_DATA_SEND_ISR
+                0x00000dbc       0x94 .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(FanController_INT.o)
+                0x00000dbc                FanController_DATA_SEND_ISR
  .text.FanController_PID_CONTROL_ISR
-                0x00000e4c      0x180 .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(FanController_INT.o)
-                0x00000e4c                FanController_PID_CONTROL_ISR
+                0x00000e50      0x180 .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(FanController_INT.o)
+                0x00000e50                FanController_PID_CONTROL_ISR
  .text.FanController_DataSend_SetVector
-                0x00000fcc        0xc .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(FanController_DataSend.o)
-                0x00000fcc                FanController_DataSend_SetVector
+                0x00000fd0        0xc .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(FanController_DataSend.o)
+                0x00000fd0                FanController_DataSend_SetVector
  .text.FanController_DataSend_SetPriority
-                0x00000fd8       0x24 .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(FanController_DataSend.o)
-                0x00000fd8                FanController_DataSend_SetPriority
+                0x00000fdc       0x24 .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(FanController_DataSend.o)
+                0x00000fdc                FanController_DataSend_SetPriority
  .text.FanController_DataSend_Enable
-                0x00000ffc        0xc .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(FanController_DataSend.o)
-                0x00000ffc                FanController_DataSend_Enable
+                0x00001000        0xc .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(FanController_DataSend.o)
+                0x00001000                FanController_DataSend_Enable
  .text.FanController_DataSend_Disable
-                0x00001008        0xc .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(FanController_DataSend.o)
-                0x00001008                FanController_DataSend_Disable
+                0x0000100c        0xc .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(FanController_DataSend.o)
+                0x0000100c                FanController_DataSend_Disable
  .text.FanController_DataSend_StartEx
-                0x00001014       0x1c .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(FanController_DataSend.o)
-                0x00001014                FanController_DataSend_StartEx
+                0x00001018       0x1c .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(FanController_DataSend.o)
+                0x00001018                FanController_DataSend_StartEx
  .text.FanController_PID_ISR_SetVector
-                0x00001030        0xc .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(FanController_PID_ISR.o)
-                0x00001030                FanController_PID_ISR_SetVector
+                0x00001034        0xc .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(FanController_PID_ISR.o)
+                0x00001034                FanController_PID_ISR_SetVector
  .text.FanController_PID_ISR_SetPriority
-                0x0000103c       0x24 .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(FanController_PID_ISR.o)
-                0x0000103c                FanController_PID_ISR_SetPriority
+                0x00001040       0x24 .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(FanController_PID_ISR.o)
+                0x00001040                FanController_PID_ISR_SetPriority
  .text.FanController_PID_ISR_Enable
-                0x00001060        0xc .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(FanController_PID_ISR.o)
-                0x00001060                FanController_PID_ISR_Enable
+                0x00001064        0xc .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(FanController_PID_ISR.o)
+                0x00001064                FanController_PID_ISR_Enable
  .text.FanController_PID_ISR_Disable
-                0x0000106c        0xc .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(FanController_PID_ISR.o)
-                0x0000106c                FanController_PID_ISR_Disable
+                0x00001070        0xc .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(FanController_PID_ISR.o)
+                0x00001070                FanController_PID_ISR_Disable
  .text.FanController_PID_ISR_StartEx
-                0x00001078       0x1c .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(FanController_PID_ISR.o)
-                0x00001078                FanController_PID_ISR_StartEx
+                0x0000107c       0x1c .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(FanController_PID_ISR.o)
+                0x0000107c                FanController_PID_ISR_StartEx
  .text.FanController_FW_PWM1_WriteCounter
-                0x00001094       0x10 .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(FanController_FW_PWM1.o)
-                0x00001094                FanController_FW_PWM1_WriteCounter
+                0x00001098       0x10 .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(FanController_FW_PWM1.o)
+                0x00001098                FanController_FW_PWM1_WriteCounter
  .text.FanController_FW_PWM1_WritePeriod
-                0x000010a4       0x10 .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(FanController_FW_PWM1.o)
-                0x000010a4                FanController_FW_PWM1_WritePeriod
+                0x000010a8       0x10 .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(FanController_FW_PWM1.o)
+                0x000010a8                FanController_FW_PWM1_WritePeriod
  .text.FanController_FW_PWM1_WriteCompare
-                0x000010b4       0x10 .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(FanController_FW_PWM1.o)
-                0x000010b4                FanController_FW_PWM1_WriteCompare
+                0x000010b8       0x10 .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(FanController_FW_PWM1.o)
+                0x000010b8                FanController_FW_PWM1_WriteCompare
  .text.FanController_FW_PWM1_TriggerCommand
-                0x000010c4       0x1c .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(FanController_FW_PWM1.o)
-                0x000010c4                FanController_FW_PWM1_TriggerCommand
+                0x000010c8       0x1c .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(FanController_FW_PWM1.o)
+                0x000010c8                FanController_FW_PWM1_TriggerCommand
  .text.FanController_FW_PWM1_Enable
-                0x000010e0       0x24 .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(FanController_FW_PWM1.o)
-                0x000010e0                FanController_FW_PWM1_Enable
+                0x000010e4       0x24 .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(FanController_FW_PWM1.o)
+                0x000010e4                FanController_FW_PWM1_Enable
  .text.FanController_FW_PWM1_SetInterruptMode
-                0x00001104        0xc .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(FanController_FW_PWM1.o)
-                0x00001104                FanController_FW_PWM1_SetInterruptMode
+                0x00001108        0xc .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(FanController_FW_PWM1.o)
+                0x00001108                FanController_FW_PWM1_SetInterruptMode
  .text.FanController_FW_PWM1_Init
-                0x00001110       0x44 .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(FanController_FW_PWM1.o)
-                0x00001110                FanController_FW_PWM1_Init
- *fill*         0x00001154        0x4 
+                0x00001114       0x44 .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(FanController_FW_PWM1.o)
+                0x00001114                FanController_FW_PWM1_Init
  .text          0x00001158       0x20 .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(CyBootAsmGnu.o)
                 0x00001158                CyDelayCycles
                 0x0000116a                CyEnterCriticalSection

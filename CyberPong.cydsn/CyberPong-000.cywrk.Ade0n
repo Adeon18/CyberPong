@@ -13,7 +13,7 @@
 <v>Output</v>
 </TreeKeys>
 <TreeStates>
-<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="CyberPong-000\CyberPong\TopDesign">
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="CyberPong-000\CyberPong\Source Files\main.c">
 <ExpandedNodeIds>
 <v>CyberPong-000</v>
 <v>CyberPong-000\CyberPong</v>
@@ -350,9 +350,8 @@
 </CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997>
 <Unloaded />
 <OpenDocs>
-<name v=".\main.c" />
-<name v=".\CyberPong.cydwr" />
 <name v=".\TopDesign\TopDesign.cysch" />
+<name v=".\main.c" />
 </OpenDocs>
 <OpenDocsLayout><![CDATA[<?xml version="1.0"?><!--
 
@@ -360,7 +359,7 @@
   Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
   http://www.actiprosoftware.com
 
---><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="951, 495" SelectedTabbedMdiWindow="b439ee18-b2e9-41b5-9e7c-ec5908c30dba"><DocumentWindow Key="C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn\main.c" Guid="744d46d8-18ec-4dab-bddc-ec74984f40a8" /><DocumentWindow Key="C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn\CyberPong.cydwr" Guid="0fe01e6f-f9e8-4e51-a33d-cd668bf472c6" /><DocumentWindow Key="C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn\TopDesign\TopDesign.cysch" Guid="b439ee18-b2e9-41b5-9e7c-ec5908c30dba" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="951, 495" SelectedTabbedMdiWindow="b439ee18-b2e9-41b5-9e7c-ec5908c30dba"><DocumentWindow Key="C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn\TopDesign\TopDesign.cysch" Guid="b439ee18-b2e9-41b5-9e7c-ec5908c30dba" /><DocumentWindow Key="C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn\main.c" Guid="5bfde62e-c246-4588-a56b-21205575a184" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
 <config v="" />
 <AutoUpdate v="true" />
 </CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>

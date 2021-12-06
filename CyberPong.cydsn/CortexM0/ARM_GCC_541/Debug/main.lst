@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\ccWIvbUo.s 			page 1
+ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\ccmA3c4q.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\ccWIvbUo.s 			page 1
   37              		.cfi_offset 14, -4
   19:main.c        ****             
   20:main.c        ****      
-ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\ccWIvbUo.s 			page 2
+ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\ccmA3c4q.s 			page 2
 
 
   21:main.c        ****     if(indx < 4){
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\ccWIvbUo.s 			page 1
   80              		.loc 1 32 0
   81 0044 0023     		movs	r3, #0
   82 0046 034A     		ldr	r2, .L4
-ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\ccWIvbUo.s 			page 3
+ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\ccmA3c4q.s 			page 3
 
 
   83 0048 1360     		str	r3, [r2]
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\ccWIvbUo.s 			page 1
  127 0002 62B6     		CPSIE   i
  128              	@ 0 "" 2
   43:main.c        ****     
-ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\ccWIvbUo.s 			page 4
+ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\ccmA3c4q.s 			page 4
 
 
   44:main.c        ****     // Initialize some variables
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\ccWIvbUo.s 			page 1
   62:main.c        ****         sprintf(uart_per_buff, "%u", current_rpm);
  165              		.loc 1 62 0 discriminator 1
  166 0034 154D     		ldr	r5, .L8+20
-ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\ccWIvbUo.s 			page 5
+ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\ccmA3c4q.s 			page 5
 
 
  167 0036 164C     		ldr	r4, .L8+24
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\ccWIvbUo.s 			page 1
  212 007c 00000000 		.word	period_per_window
  213 0080 00000000 		.word	current_rpm
  214 0084 00000000 		.word	indx
-ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\ccWIvbUo.s 			page 6
+ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\ccmA3c4q.s 			page 6
 
 
  215 0088 00000000 		.word	ISR_Per_Handler
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\ccWIvbUo.s 			page 1
  269 0036 8F020000 		.4byte	.LASF2
  270 003a 02       		.uleb128 0x2
  271 003b 02       		.byte	0x2
-ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\ccWIvbUo.s 			page 7
+ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\ccmA3c4q.s 			page 7
 
 
  272 003c 07       		.byte	0x7
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\ccWIvbUo.s 			page 1
  326 00a3 08       		.byte	0x8
  327 00a4 04       		.byte	0x4
  328 00a5 AB020000 		.4byte	.LASF15
-ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\ccWIvbUo.s 			page 8
+ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\ccmA3c4q.s 			page 8
 
 
  329 00a9 02       		.uleb128 0x2
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\ccWIvbUo.s 			page 1
  383 0115 08       		.uleb128 0x8
  384 0116 01       		.uleb128 0x1
  385 0117 50       		.byte	0x50
-ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\ccWIvbUo.s 			page 9
+ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\ccmA3c4q.s 			page 9
 
 
  386 0118 02       		.uleb128 0x2
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\ccWIvbUo.s 			page 1
  440 018a 07       		.uleb128 0x7
  441 018b 40000000 		.4byte	.LVL10
  442 018f C9020000 		.4byte	0x2c9
-ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\ccWIvbUo.s 			page 10
+ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\ccmA3c4q.s 			page 10
 
 
  443 0193 A4010000 		.4byte	0x1a4
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\ccWIvbUo.s 			page 1
  497 01f0 00       		.byte	0
  498 01f1 07       		.uleb128 0x7
  499 01f2 64000000 		.4byte	.LVL15
-ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\ccWIvbUo.s 			page 11
+ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\ccmA3c4q.s 			page 11
 
 
  500 01f6 C9020000 		.4byte	0x2c9
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\ccWIvbUo.s 			page 1
  554 0253 0C       		.uleb128 0xc
  555 0254 A4000000 		.4byte	.LASF18
  556 0258 05       		.byte	0x5
-ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\ccWIvbUo.s 			page 12
+ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\ccmA3c4q.s 			page 12
 
 
  557 0259 10       		.byte	0x10
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\ccWIvbUo.s 			page 1
  611 02ce D3020000 		.4byte	.LASF24
  612 02d2 06       		.byte	0x6
  613 02d3 E7       		.byte	0xe7
-ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\ccWIvbUo.s 			page 13
+ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\ccmA3c4q.s 			page 13
 
 
  614 02d4 10       		.uleb128 0x10
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\ccWIvbUo.s 			page 1
  668 0006 0B       		.uleb128 0xb
  669 0007 03       		.uleb128 0x3
  670 0008 0E       		.uleb128 0xe
-ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\ccWIvbUo.s 			page 14
+ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\ccmA3c4q.s 			page 14
 
 
  671 0009 1B       		.uleb128 0x1b
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\ccWIvbUo.s 			page 1
  725 003f 49       		.uleb128 0x49
  726 0040 13       		.uleb128 0x13
  727 0041 00       		.byte	0
-ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\ccWIvbUo.s 			page 15
+ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\ccmA3c4q.s 			page 15
 
 
  728 0042 00       		.byte	0
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\ccWIvbUo.s 			page 1
  782 0080 00       		.byte	0
  783 0081 0A       		.uleb128 0xa
  784 0082 2E       		.uleb128 0x2e
-ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\ccWIvbUo.s 			page 16
+ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\ccmA3c4q.s 			page 16
 
 
  785 0083 01       		.byte	0x1
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\ccWIvbUo.s 			page 1
  839 00bd 01       		.uleb128 0x1
  840 00be 01       		.byte	0x1
  841 00bf 49       		.uleb128 0x49
-ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\ccWIvbUo.s 			page 17
+ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\ccmA3c4q.s 			page 17
 
 
  842 00c0 13       		.uleb128 0x13
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\ccWIvbUo.s 			page 1
  896 000b 00       		.byte	0
  897 000c 0000     		.2byte	0
  898 000e 0000     		.2byte	0
-ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\ccWIvbUo.s 			page 18
+ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\ccmA3c4q.s 			page 18
 
 
  899 0010 00000000 		.4byte	.LFB36
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\ccWIvbUo.s 			page 1
  928      5065725F 
  928      48616E64 
  928      6C657200 
-ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\ccWIvbUo.s 			page 19
+ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\ccmA3c4q.s 			page 19
 
 
  929              	.LASF20:
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\ccWIvbUo.s 			page 1
  950 014c 75617274 		.ascii	"uart_per_buff\000"
  950      5F706572 
  950      5F627566 
-ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\ccWIvbUo.s 			page 20
+ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\ccmA3c4q.s 			page 20
 
 
  950      6600
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\ccWIvbUo.s 			page 1
  974 0233 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
  974      66756E63 
  974      74696F6E 
-ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\ccWIvbUo.s 			page 21
+ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\ccmA3c4q.s 			page 21
 
 
  974      2D736563 

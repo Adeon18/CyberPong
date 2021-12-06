@@ -6,7 +6,7 @@
 
 #Build Date:         Sep  9 2019 11:47:43
 
-#File Generated:     Dec 5 2021 13:06:58
+#File Generated:     Dec 6 2021 17:15:46
 
 #Purpose:            
 
@@ -125,7 +125,7 @@ Clock: UART_SCBCLK(FFB)     | Frequency: N/A       | Target:   1.4 MHz
 ======================================================================
                      End of Clock Summary
 ######################################################################
-D2088: Phase 7, elapsed time : 0.1 (sec)
+D2088: Phase 7, elapsed time : 0.2 (sec)
 
 Final Design Statistics
     Number of Combinational MCs 	:	2
