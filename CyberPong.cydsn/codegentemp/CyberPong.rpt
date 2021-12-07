@@ -1,13 +1,13 @@
-Loading plugins phase: Elapsed time ==> 0s.134ms
+Loading plugins phase: Elapsed time ==> 1s.227ms
 <CYPRESSTAG name="CyDsfit arguments...">
 cydsfit arguments: -.fdsnotice -.fdswarpdepfile=warp_dependencies.txt -.fdselabdepfile=elab_dependencies.txt -.fdsbldfile=generated_files.txt -.fdsreffile=referenced_files.txt -p C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn\CyberPong.cyprj -d CY8C4248LQI-BL583 -s C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn\Generated_Source\PSoC4 -- -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE
 </CYPRESSTAG>
 <CYPRESSTAG name="Design elaboration results...">
 </CYPRESSTAG>
-Elaboration phase: Elapsed time ==> 1s.329ms
+Elaboration phase: Elapsed time ==> 3s.646ms
 <CYPRESSTAG name="HDL generation results...">
 </CYPRESSTAG>
-HDL generation phase: Elapsed time ==> 0s.048ms
+HDL generation phase: Elapsed time ==> 0s.054ms
 <CYPRESSTAG name="Synthesis results...">
 
      | | | | | | |
@@ -41,7 +41,7 @@ Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\Ade0n
 ======================================================================
 
 vlogfe V6.3 IR 41:  Verilog parser
-Mon Dec 06 17:15:45 2021
+Tue Dec 07 09:58:21 2021
 
 
 ======================================================================
@@ -51,13 +51,12 @@ Options  :    -yv2 -q10 CyberPong.v
 ======================================================================
 
 vpp V6.3 IR 41:  Verilog Pre-Processor
-Mon Dec 06 17:15:45 2021
+Tue Dec 07 09:58:21 2021
 
-Flattening file 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\cy_constant_v1_0\cy_constant_v1_0.v'
-Flattening file 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\cy_tff_v1_0\cy_tff_v1_0.v'
 Flattening file 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\cy_virtualmux_v1_0\cy_virtualmux_v1_0.v'
 Flattening file 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\ZeroTerminal\ZeroTerminal.v'
 Flattening file 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\or_v1_0\or_v1_0.v'
+Flattening file 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\cy_constant_v1_0\cy_constant_v1_0.v'
 Flattening file 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\CyComponentLibrary\CyComponentLibrary.cylib\B_FanController_v4_10\B_FanController_v4_10.v'
 Flattening file 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\cypress.v'
 Flattening file 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\cy_psoc3_inc.v'
@@ -96,7 +95,7 @@ Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\Ade0n
 ======================================================================
 
 tovif V6.3 IR 41:  High-level synthesis
-Mon Dec 06 17:15:45 2021
+Tue Dec 07 09:58:22 2021
 
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\std.vhd'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\cypress.vhd'.
@@ -108,12 +107,11 @@ Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\c
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\stdlogic\mod_mthv.vif'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\stdlogic\mod_genv.vif'.
 Linking 'C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn\codegentemp\CyberPong.ctl'.
-Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\cy_constant_v1_0\cy_constant_v1_0.v'.
-Linking 'C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn\codegentemp\CyberPong.v'.
-Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\cy_tff_v1_0\cy_tff_v1_0.v'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\cy_virtualmux_v1_0\cy_virtualmux_v1_0.v'.
+Linking 'C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn\codegentemp\CyberPong.v'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\ZeroTerminal\ZeroTerminal.v'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\or_v1_0\or_v1_0.v'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\cy_constant_v1_0\cy_constant_v1_0.v'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\CyComponentLibrary\CyComponentLibrary.cylib\B_FanController_v4_10\B_FanController_v4_10.v'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\cypress.v'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\cy_psoc3_inc.v'.
@@ -135,7 +133,7 @@ Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\Ade0n
 ======================================================================
 
 topld V6.3 IR 41:  Synthesis and optimization
-Mon Dec 06 17:15:45 2021
+Tue Dec 07 09:58:22 2021
 
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\std.vhd'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\cypress.vhd'.
@@ -147,12 +145,11 @@ Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\c
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\stdlogic\mod_mthv.vif'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\stdlogic\mod_genv.vif'.
 Linking 'C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn\codegentemp\CyberPong.ctl'.
-Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\cy_constant_v1_0\cy_constant_v1_0.v'.
-Linking 'C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn\codegentemp\CyberPong.v'.
-Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\cy_tff_v1_0\cy_tff_v1_0.v'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\cy_virtualmux_v1_0\cy_virtualmux_v1_0.v'.
+Linking 'C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn\codegentemp\CyberPong.v'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\ZeroTerminal\ZeroTerminal.v'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\or_v1_0\or_v1_0.v'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\cy_constant_v1_0\cy_constant_v1_0.v'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\CyComponentLibrary\CyComponentLibrary.cylib\B_FanController_v4_10\B_FanController_v4_10.v'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\cypress.v'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\cy_psoc3_inc.v'.
@@ -448,24 +445,19 @@ Deleted 31 Synthesized equations/components.
 ------------------------------------------------------
 Alias Detection
 ------------------------------------------------------
-Aliasing tmpOE__Pin_A_net_0 to Net_666
-Aliasing one to Net_666
-Aliasing tmpOE__Pin_B_net_0 to Net_666
+Aliasing one to tmpOE__Pin_A_net_0
+Aliasing tmpOE__Pin_B_net_0 to tmpOE__Pin_A_net_0
 Aliasing Net_210 to zero
-Aliasing tmpOE__Pin_Input_net_0 to Net_666
+Aliasing tmpOE__Pin_Input_net_0 to tmpOE__Pin_A_net_0
 Aliasing \UART:select_s_wire\ to zero
 Aliasing \UART:sclk_s_wire\ to zero
 Aliasing \UART:mosi_s_wire\ to zero
 Aliasing \UART:miso_m_wire\ to zero
-Aliasing \UART:tmpOE__tx_net_0\ to Net_666
-Aliasing \UART:tmpOE__rx_net_0\ to Net_666
+Aliasing \UART:tmpOE__tx_net_0\ to tmpOE__Pin_A_net_0
+Aliasing \UART:tmpOE__rx_net_0\ to tmpOE__Pin_A_net_0
 Aliasing \UART:cts_wire\ to zero
-Aliasing \Perioud_Counter:Net_66\ to \Perioud_Counter:Net_75\
-Aliasing \Perioud_Counter:Net_82\ to zero
-Aliasing \Perioud_Counter:Net_72\ to zero
 Aliasing \FanController:wtch3\ to zero
 Aliasing \FanController:wtch2\ to zero
-Aliasing \FanController:wtch1\ to \Perioud_Counter:Net_75\
 Aliasing \FanController:wtch4\ to zero
 Aliasing \FanController:B_FanCtrl:status_6\ to zero
 Aliasing \FanController:B_FanCtrl:status_5\ to zero
@@ -473,7 +465,7 @@ Aliasing \FanController:B_FanCtrl:status_4\ to zero
 Aliasing \FanController:B_FanCtrl:status_3\ to zero
 Aliasing \FanController:B_FanCtrl:status_2\ to zero
 Aliasing \FanController:FW_PWM1:Net_75\ to zero
-Aliasing \FanController:FW_PWM1:Net_69\ to Net_666
+Aliasing \FanController:FW_PWM1:Net_69\ to tmpOE__Pin_A_net_0
 Aliasing \FanController:FW_PWM1:Net_66\ to zero
 Aliasing \FanController:FW_PWM1:Net_82\ to zero
 Aliasing \FanController:FW_PWM1:Net_72\ to zero
@@ -502,106 +494,98 @@ Aliasing \FreqDiv_1:MODULE_1:g2:a0:a_4\ to zero
 Aliasing \FreqDiv_1:MODULE_1:g2:a0:a_3\ to zero
 Aliasing \FreqDiv_1:MODULE_1:g2:a0:a_2\ to zero
 Aliasing \FreqDiv_1:MODULE_1:g2:a0:a_1\ to zero
-Aliasing \FreqDiv_1:MODULE_1:g2:a0:g1:z1:s0:g1:u0:b_0\ to Net_666
-Aliasing \FreqDiv_1:not_last_reset\\D\ to Net_666
-Removing Lhs of wire Net_584[3] = cy_tff_1[2]
-Removing Lhs of wire tmpOE__Pin_A_net_0[5] = Net_666[0]
-Removing Rhs of wire Net_656[6] = \FanController:pwm_1\[417]
-Removing Rhs of wire Net_656[6] = \FanController:Net_433_1\[196]
-Removing Lhs of wire one[11] = Net_666[0]
-Removing Lhs of wire tmpOE__Pin_B_net_0[14] = Net_666[0]
-Removing Lhs of wire Net_210[15] = zero[10]
-Removing Lhs of wire tmpOE__Pin_Input_net_0[21] = Net_666[0]
-Removing Lhs of wire \UART:select_s_wire\[29] = zero[10]
-Removing Rhs of wire \UART:rx_wire\[30] = \UART:Net_1268\[31]
-Removing Lhs of wire \UART:Net_1170\[34] = \UART:Net_847\[28]
-Removing Lhs of wire \UART:sclk_s_wire\[35] = zero[10]
-Removing Lhs of wire \UART:mosi_s_wire\[36] = zero[10]
-Removing Lhs of wire \UART:miso_m_wire\[37] = zero[10]
-Removing Lhs of wire \UART:tmpOE__tx_net_0\[39] = Net_666[0]
-Removing Lhs of wire \UART:tmpOE__rx_net_0\[48] = Net_666[0]
-Removing Lhs of wire \UART:cts_wire\[52] = zero[10]
-Removing Rhs of wire Net_642[79] = \FanController:sync\[143]
-Removing Rhs of wire Net_642[79] = \FanController:B_FanCtrl:control_3\[139]
-Removing Lhs of wire \Perioud_Counter:Net_81\[83] = Net_598[1]
-Removing Lhs of wire \Perioud_Counter:Net_75\[84] = Net_676[94]
-Removing Lhs of wire \Perioud_Counter:Net_69\[85] = cy_tff_1[2]
-Removing Lhs of wire \Perioud_Counter:Net_66\[86] = Net_676[94]
-Removing Lhs of wire \Perioud_Counter:Net_82\[87] = zero[10]
-Removing Lhs of wire \Perioud_Counter:Net_72\[88] = zero[10]
-Removing Rhs of wire \FanController:fan_clk\[95] = \FanController:Net_323\[96]
-Removing Rhs of wire \FanController:fan_clk\[95] = \FanController:Net_317\[129]
-Removing Lhs of wire \FanController:tach_bus_2\[99] = zero[10]
-Removing Lhs of wire \FanController:wtch3\[100] = zero[10]
-Removing Lhs of wire \FanController:tach_bus_1\[107] = zero[10]
-Removing Lhs of wire \FanController:wtch2\[108] = zero[10]
-Removing Lhs of wire \FanController:tach_bus_0\[115] = Net_676[94]
-Removing Lhs of wire \FanController:wtch1\[116] = Net_676[94]
-Removing Lhs of wire \FanController:tach_bus_3\[123] = zero[10]
-Removing Lhs of wire \FanController:wtch4\[124] = zero[10]
-Removing Lhs of wire \FanController:B_FanCtrl:alert_pin_en\[144] = \FanController:B_FanCtrl:control_0\[142]
-Removing Lhs of wire \FanController:B_FanCtrl:stall_alert_en\[145] = \FanController:B_FanCtrl:control_1\[141]
-Removing Lhs of wire \FanController:B_FanCtrl:speed_alert_en\[146] = \FanController:B_FanCtrl:control_2\[140]
-Removing Lhs of wire \FanController:B_FanCtrl:status_6\[156] = zero[10]
-Removing Lhs of wire \FanController:B_FanCtrl:status_5\[157] = zero[10]
-Removing Lhs of wire \FanController:B_FanCtrl:status_4\[158] = zero[10]
-Removing Lhs of wire \FanController:B_FanCtrl:status_3\[159] = zero[10]
-Removing Lhs of wire \FanController:B_FanCtrl:status_2\[160] = zero[10]
-Removing Lhs of wire \FanController:B_FanCtrl:status_1\[161] = \FanController:B_FanCtrl:speed_status\[149]
-Removing Lhs of wire \FanController:B_FanCtrl:status_0\[162] = \FanController:B_FanCtrl:stall_status\[154]
-Removing Rhs of wire \FanController:enable\[179] = \FanController:B_FanCtrl:control_5\[137]
-Removing Rhs of wire \FanController:Net_393\[182] = \FanController:FanTach:damping_factor_tc\[234]
-Removing Lhs of wire \FanController:FW_PWM1:Net_81\[187] = \FanController:fan_clk\[95]
-Removing Lhs of wire \FanController:FW_PWM1:Net_75\[188] = zero[10]
-Removing Lhs of wire \FanController:FW_PWM1:Net_69\[189] = Net_666[0]
-Removing Lhs of wire \FanController:FW_PWM1:Net_66\[190] = zero[10]
-Removing Lhs of wire \FanController:FW_PWM1:Net_82\[191] = zero[10]
-Removing Lhs of wire \FanController:FW_PWM1:Net_72\[192] = zero[10]
-Removing Rhs of wire \FanController:address_1\[228] = \FanController:FanTach:addrCtrl_1\[224]
-Removing Rhs of wire \FanController:address_0\[229] = \FanController:FanTach:addrCtrl_0\[225]
-Removing Rhs of wire \FanController:FanTach:damping_cntr_cs_0\[231] = \FanController:FanTach:damping_cntr_reload_a0\[232]
-Removing Lhs of wire \FanController:FanTach:damping_cntr_cs_1\[233] = \FanController:Net_393\[182]
-Removing Rhs of wire \FanController:FanTach:damping_cntr_cs_2\[235] = \FanController:FanTach:div10_tc\[236]
-Removing Lhs of wire \FanController:FanTach:enable\[272] = \FanController:FanTach:reg_enable\[271]
-Removing Lhs of wire \FanController:FanTach:glitch_filter_cntr_cs_0\[277] = \FanController:FanTach:glitch_filter_ld\[275]
-Removing Lhs of wire \FanController:FanTach:glitch_filter_cntr_cs_1\[278] = \FanController:FanTach:damping_cntr_cs_2\[235]
-Removing Lhs of wire \FanController:FanTach:glitch_filter_cntr_cs_2\[279] = \FanController:FanTach:gf_dmp_state\[270]
-Removing Rhs of wire \FanController:FanTach:tach_data_ready\[314] = \FanController:FanTach:f0_data_ready\[319]
-Removing Lhs of wire \FreqDiv_1:add_vi_vv_MODGEN_1_0\[457] = \FreqDiv_1:MODULE_1:g2:a0:s_0\[617]
-Removing Lhs of wire \FreqDiv_1:MODULE_1:g2:a0:a_23\[498] = zero[10]
-Removing Lhs of wire \FreqDiv_1:MODULE_1:g2:a0:a_22\[499] = zero[10]
-Removing Lhs of wire \FreqDiv_1:MODULE_1:g2:a0:a_21\[500] = zero[10]
-Removing Lhs of wire \FreqDiv_1:MODULE_1:g2:a0:a_20\[501] = zero[10]
-Removing Lhs of wire \FreqDiv_1:MODULE_1:g2:a0:a_19\[502] = zero[10]
-Removing Lhs of wire \FreqDiv_1:MODULE_1:g2:a0:a_18\[503] = zero[10]
-Removing Lhs of wire \FreqDiv_1:MODULE_1:g2:a0:a_17\[504] = zero[10]
-Removing Lhs of wire \FreqDiv_1:MODULE_1:g2:a0:a_16\[505] = zero[10]
-Removing Lhs of wire \FreqDiv_1:MODULE_1:g2:a0:a_15\[506] = zero[10]
-Removing Lhs of wire \FreqDiv_1:MODULE_1:g2:a0:a_14\[507] = zero[10]
-Removing Lhs of wire \FreqDiv_1:MODULE_1:g2:a0:a_13\[508] = zero[10]
-Removing Lhs of wire \FreqDiv_1:MODULE_1:g2:a0:a_12\[509] = zero[10]
-Removing Lhs of wire \FreqDiv_1:MODULE_1:g2:a0:a_11\[510] = zero[10]
-Removing Lhs of wire \FreqDiv_1:MODULE_1:g2:a0:a_10\[511] = zero[10]
-Removing Lhs of wire \FreqDiv_1:MODULE_1:g2:a0:a_9\[512] = zero[10]
-Removing Lhs of wire \FreqDiv_1:MODULE_1:g2:a0:a_8\[513] = zero[10]
-Removing Lhs of wire \FreqDiv_1:MODULE_1:g2:a0:a_7\[514] = zero[10]
-Removing Lhs of wire \FreqDiv_1:MODULE_1:g2:a0:a_6\[515] = zero[10]
-Removing Lhs of wire \FreqDiv_1:MODULE_1:g2:a0:a_5\[516] = zero[10]
-Removing Lhs of wire \FreqDiv_1:MODULE_1:g2:a0:a_4\[517] = zero[10]
-Removing Lhs of wire \FreqDiv_1:MODULE_1:g2:a0:a_3\[518] = zero[10]
-Removing Lhs of wire \FreqDiv_1:MODULE_1:g2:a0:a_2\[519] = zero[10]
-Removing Lhs of wire \FreqDiv_1:MODULE_1:g2:a0:a_1\[520] = zero[10]
-Removing Lhs of wire \FreqDiv_1:MODULE_1:g2:a0:a_0\[521] = \FreqDiv_1:MODIN1_0\[522]
-Removing Lhs of wire \FreqDiv_1:MODIN1_0\[522] = \FreqDiv_1:count_0\[456]
-Removing Lhs of wire \FreqDiv_1:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_0\[655] = Net_666[0]
-Removing Lhs of wire \FreqDiv_1:MODULE_1:g2:a0:g1:z1:s0:g1:u0:b_0\[656] = Net_666[0]
-Removing Lhs of wire \FanController:drq\\D\[659] = \FanController:FanTach:tach_data_ready\[314]
-Removing Lhs of wire \FanController:B_FanCtrl:stall_alrt\\D\[661] = \FanController:B_FanCtrl:control_7\[135]
-Removing Lhs of wire \FanController:FanTach:end_of_measurement\\D\[664] = \FanController:FanTach:eom\[218]
-Removing Lhs of wire \FreqDiv_1:not_last_reset\\D\[676] = Net_666[0]
+Aliasing \FreqDiv_1:MODULE_1:g2:a0:g1:z1:s0:g1:u0:b_0\ to tmpOE__Pin_A_net_0
+Aliasing \FreqDiv_1:not_last_reset\\D\ to tmpOE__Pin_A_net_0
+Removing Rhs of wire Net_656[2] = \FanController:pwm_1\[397]
+Removing Rhs of wire Net_656[2] = \FanController:Net_433_1\[176]
+Removing Lhs of wire one[7] = tmpOE__Pin_A_net_0[1]
+Removing Lhs of wire tmpOE__Pin_B_net_0[10] = tmpOE__Pin_A_net_0[1]
+Removing Lhs of wire Net_210[11] = zero[6]
+Removing Lhs of wire tmpOE__Pin_Input_net_0[17] = tmpOE__Pin_A_net_0[1]
+Removing Lhs of wire \UART:select_s_wire\[24] = zero[6]
+Removing Rhs of wire \UART:rx_wire\[25] = \UART:Net_1268\[26]
+Removing Lhs of wire \UART:Net_1170\[29] = \UART:Net_847\[23]
+Removing Lhs of wire \UART:sclk_s_wire\[30] = zero[6]
+Removing Lhs of wire \UART:mosi_s_wire\[31] = zero[6]
+Removing Lhs of wire \UART:miso_m_wire\[32] = zero[6]
+Removing Lhs of wire \UART:tmpOE__tx_net_0\[34] = tmpOE__Pin_A_net_0[1]
+Removing Lhs of wire \UART:tmpOE__rx_net_0\[43] = tmpOE__Pin_A_net_0[1]
+Removing Lhs of wire \UART:cts_wire\[47] = zero[6]
+Removing Rhs of wire Net_642[74] = \FanController:sync\[123]
+Removing Rhs of wire Net_642[74] = \FanController:B_FanCtrl:control_3\[119]
+Removing Rhs of wire \FanController:fan_clk\[75] = \FanController:Net_323\[76]
+Removing Rhs of wire \FanController:fan_clk\[75] = \FanController:Net_317\[109]
+Removing Lhs of wire \FanController:tach_bus_2\[79] = zero[6]
+Removing Lhs of wire \FanController:wtch3\[80] = zero[6]
+Removing Lhs of wire \FanController:tach_bus_1\[87] = zero[6]
+Removing Lhs of wire \FanController:wtch2\[88] = zero[6]
+Removing Rhs of wire \FanController:tach_bus_0\[95] = \FanController:wtch1\[96]
+Removing Lhs of wire \FanController:tach_bus_0\[95] = Net_676[435]
+Removing Lhs of wire \FanController:tach_bus_3\[103] = zero[6]
+Removing Lhs of wire \FanController:wtch4\[104] = zero[6]
+Removing Lhs of wire \FanController:B_FanCtrl:alert_pin_en\[124] = \FanController:B_FanCtrl:control_0\[122]
+Removing Lhs of wire \FanController:B_FanCtrl:stall_alert_en\[125] = \FanController:B_FanCtrl:control_1\[121]
+Removing Lhs of wire \FanController:B_FanCtrl:speed_alert_en\[126] = \FanController:B_FanCtrl:control_2\[120]
+Removing Lhs of wire \FanController:B_FanCtrl:status_6\[136] = zero[6]
+Removing Lhs of wire \FanController:B_FanCtrl:status_5\[137] = zero[6]
+Removing Lhs of wire \FanController:B_FanCtrl:status_4\[138] = zero[6]
+Removing Lhs of wire \FanController:B_FanCtrl:status_3\[139] = zero[6]
+Removing Lhs of wire \FanController:B_FanCtrl:status_2\[140] = zero[6]
+Removing Lhs of wire \FanController:B_FanCtrl:status_1\[141] = \FanController:B_FanCtrl:speed_status\[129]
+Removing Lhs of wire \FanController:B_FanCtrl:status_0\[142] = \FanController:B_FanCtrl:stall_status\[134]
+Removing Rhs of wire \FanController:enable\[159] = \FanController:B_FanCtrl:control_5\[117]
+Removing Rhs of wire \FanController:Net_393\[162] = \FanController:FanTach:damping_factor_tc\[214]
+Removing Lhs of wire \FanController:FW_PWM1:Net_81\[167] = \FanController:fan_clk\[75]
+Removing Lhs of wire \FanController:FW_PWM1:Net_75\[168] = zero[6]
+Removing Lhs of wire \FanController:FW_PWM1:Net_69\[169] = tmpOE__Pin_A_net_0[1]
+Removing Lhs of wire \FanController:FW_PWM1:Net_66\[170] = zero[6]
+Removing Lhs of wire \FanController:FW_PWM1:Net_82\[171] = zero[6]
+Removing Lhs of wire \FanController:FW_PWM1:Net_72\[172] = zero[6]
+Removing Rhs of wire \FanController:address_1\[208] = \FanController:FanTach:addrCtrl_1\[204]
+Removing Rhs of wire \FanController:address_0\[209] = \FanController:FanTach:addrCtrl_0\[205]
+Removing Rhs of wire \FanController:FanTach:damping_cntr_cs_0\[211] = \FanController:FanTach:damping_cntr_reload_a0\[212]
+Removing Lhs of wire \FanController:FanTach:damping_cntr_cs_1\[213] = \FanController:Net_393\[162]
+Removing Rhs of wire \FanController:FanTach:damping_cntr_cs_2\[215] = \FanController:FanTach:div10_tc\[216]
+Removing Lhs of wire \FanController:FanTach:enable\[252] = \FanController:FanTach:reg_enable\[251]
+Removing Lhs of wire \FanController:FanTach:glitch_filter_cntr_cs_0\[257] = \FanController:FanTach:glitch_filter_ld\[255]
+Removing Lhs of wire \FanController:FanTach:glitch_filter_cntr_cs_1\[258] = \FanController:FanTach:damping_cntr_cs_2\[215]
+Removing Lhs of wire \FanController:FanTach:glitch_filter_cntr_cs_2\[259] = \FanController:FanTach:gf_dmp_state\[250]
+Removing Rhs of wire \FanController:FanTach:tach_data_ready\[294] = \FanController:FanTach:f0_data_ready\[299]
+Removing Lhs of wire \FreqDiv_1:add_vi_vv_MODGEN_1_0\[438] = \FreqDiv_1:MODULE_1:g2:a0:s_0\[598]
+Removing Lhs of wire \FreqDiv_1:MODULE_1:g2:a0:a_23\[479] = zero[6]
+Removing Lhs of wire \FreqDiv_1:MODULE_1:g2:a0:a_22\[480] = zero[6]
+Removing Lhs of wire \FreqDiv_1:MODULE_1:g2:a0:a_21\[481] = zero[6]
+Removing Lhs of wire \FreqDiv_1:MODULE_1:g2:a0:a_20\[482] = zero[6]
+Removing Lhs of wire \FreqDiv_1:MODULE_1:g2:a0:a_19\[483] = zero[6]
+Removing Lhs of wire \FreqDiv_1:MODULE_1:g2:a0:a_18\[484] = zero[6]
+Removing Lhs of wire \FreqDiv_1:MODULE_1:g2:a0:a_17\[485] = zero[6]
+Removing Lhs of wire \FreqDiv_1:MODULE_1:g2:a0:a_16\[486] = zero[6]
+Removing Lhs of wire \FreqDiv_1:MODULE_1:g2:a0:a_15\[487] = zero[6]
+Removing Lhs of wire \FreqDiv_1:MODULE_1:g2:a0:a_14\[488] = zero[6]
+Removing Lhs of wire \FreqDiv_1:MODULE_1:g2:a0:a_13\[489] = zero[6]
+Removing Lhs of wire \FreqDiv_1:MODULE_1:g2:a0:a_12\[490] = zero[6]
+Removing Lhs of wire \FreqDiv_1:MODULE_1:g2:a0:a_11\[491] = zero[6]
+Removing Lhs of wire \FreqDiv_1:MODULE_1:g2:a0:a_10\[492] = zero[6]
+Removing Lhs of wire \FreqDiv_1:MODULE_1:g2:a0:a_9\[493] = zero[6]
+Removing Lhs of wire \FreqDiv_1:MODULE_1:g2:a0:a_8\[494] = zero[6]
+Removing Lhs of wire \FreqDiv_1:MODULE_1:g2:a0:a_7\[495] = zero[6]
+Removing Lhs of wire \FreqDiv_1:MODULE_1:g2:a0:a_6\[496] = zero[6]
+Removing Lhs of wire \FreqDiv_1:MODULE_1:g2:a0:a_5\[497] = zero[6]
+Removing Lhs of wire \FreqDiv_1:MODULE_1:g2:a0:a_4\[498] = zero[6]
+Removing Lhs of wire \FreqDiv_1:MODULE_1:g2:a0:a_3\[499] = zero[6]
+Removing Lhs of wire \FreqDiv_1:MODULE_1:g2:a0:a_2\[500] = zero[6]
+Removing Lhs of wire \FreqDiv_1:MODULE_1:g2:a0:a_1\[501] = zero[6]
+Removing Lhs of wire \FreqDiv_1:MODULE_1:g2:a0:a_0\[502] = \FreqDiv_1:MODIN1_0\[503]
+Removing Lhs of wire \FreqDiv_1:MODIN1_0\[503] = \FreqDiv_1:count_0\[437]
+Removing Lhs of wire \FreqDiv_1:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_0\[636] = tmpOE__Pin_A_net_0[1]
+Removing Lhs of wire \FreqDiv_1:MODULE_1:g2:a0:g1:z1:s0:g1:u0:b_0\[637] = tmpOE__Pin_A_net_0[1]
+Removing Lhs of wire \FanController:drq\\D\[638] = \FanController:FanTach:tach_data_ready\[294]
+Removing Lhs of wire \FanController:B_FanCtrl:stall_alrt\\D\[640] = \FanController:B_FanCtrl:control_7\[115]
+Removing Lhs of wire \FanController:FanTach:end_of_measurement\\D\[643] = \FanController:FanTach:eom\[198]
+Removing Lhs of wire \FreqDiv_1:not_last_reset\\D\[656] = tmpOE__Pin_A_net_0[1]
 
 ------------------------------------------------------
-Aliased 0 equations, 95 wires.
+Aliased 0 equations, 87 wires.
 ------------------------------------------------------
 
 ----------------------------------------------------------
@@ -610,8 +594,8 @@ Circuit simplification
 
 Substituting virtuals - pass 1:
 
-Note:  Expanding virtual equation for 'Net_666' (cost = 0):
-Net_666 <=  ('1') ;
+Note:  Expanding virtual equation for 'tmpOE__Pin_A_net_0' (cost = 0):
+tmpOE__Pin_A_net_0 <=  ('1') ;
 
 Note:  Expanding virtual equation for 'zero' (cost = 0):
 zero <=  ('0') ;
@@ -718,9 +702,9 @@ Alias Detection
 Aliasing \FreqDiv_1:MODULE_1:g2:a0:g1:z1:s0:g1:u0:b_24\ to zero
 Aliasing \FreqDiv_1:MODULE_1:g2:a0:g1:z1:s0:g1:u0:b_16\ to zero
 Aliasing \FreqDiv_1:MODULE_1:g2:a0:g1:z1:s0:g1:u0:b_8\ to zero
-Removing Lhs of wire \FreqDiv_1:MODULE_1:g2:a0:g1:z1:s0:g1:u0:b_24\[626] = zero[10]
-Removing Lhs of wire \FreqDiv_1:MODULE_1:g2:a0:g1:z1:s0:g1:u0:b_16\[636] = zero[10]
-Removing Lhs of wire \FreqDiv_1:MODULE_1:g2:a0:g1:z1:s0:g1:u0:b_8\[646] = zero[10]
+Removing Lhs of wire \FreqDiv_1:MODULE_1:g2:a0:g1:z1:s0:g1:u0:b_24\[607] = zero[6]
+Removing Lhs of wire \FreqDiv_1:MODULE_1:g2:a0:g1:z1:s0:g1:u0:b_16\[617] = zero[6]
+Removing Lhs of wire \FreqDiv_1:MODULE_1:g2:a0:g1:z1:s0:g1:u0:b_8\[627] = zero[6]
 
 ------------------------------------------------------
 Aliased 0 equations, 3 wires.
@@ -753,14 +737,14 @@ CYPRESS_DIR    : C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\wa
 Warp Program   : C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\bin\warp.exe
 Warp Arguments : -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn\CyberPong.cyprj -dcpsoc3 CyberPong.v -verilog
 </CYPRESSTAG>
-Warp synthesis phase: Elapsed time ==> 1s.051ms
+Warp synthesis phase: Elapsed time ==> 1s.832ms
 <CYPRESSTAG name="Fitter results...">
 <CYPRESSTAG name="Fitter startup details...">
-cyp3fit: V4.4.0.80, Family: PSoC3, Started at: Monday, 06 December 2021 17:15:46
+cyp3fit: V4.4.0.80, Family: PSoC3, Started at: Tuesday, 07 December 2021 09:58:23
 Options: -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn\CyberPong.cyprj -d CY8C4248LQI-BL583 CyberPong.v -verilog
 </CYPRESSTAG>
 <CYPRESSTAG name="Design parsing">
-Design parsing phase: Elapsed time ==> 0s.018ms
+Design parsing phase: Elapsed time ==> 0s.006ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Tech Mapping">
 <CYPRESSTAG name="Initial Mapping" icon="FILE_RPT_TECHM">
@@ -773,19 +757,17 @@ Done removing unused cells.
 <CYPRESSTAG name="Global Clock Selection" icon="FILE_RPT_TECHM">
     Fixed Function Clock 7: Automatic-assigning  clock 'FanController_PWM_CLOCK_25k_10b_1'. Signal=\FanController:fan_clk_ff7\
     Digital Clock 0: Automatic-assigning  clock 'FanController_PWM_CLOCK_25k_10b_1'. Fanout=1, Signal=\FanController:fan_clk_digital\
-    Fixed Function Clock 8: Automatic-assigning  clock 'Clock_4'. Signal=Net_598_ff8
-    Digital Clock 1: Automatic-assigning  clock 'Clock_4'. Fanout=1, Signal=Net_598_digital
     Fixed Function Clock 1: Automatic-assigning  clock 'UART_SCBCLK'. Signal=\UART:Net_847_ff1\
-    Digital Clock 2: Automatic-assigning  clock 'FanController_TACH_CLK_500K'. Fanout=1, Signal=\FanController:tach_clk_digital\
+    Digital Clock 1: Automatic-assigning  clock 'FanController_TACH_CLK_500K'. Fanout=1, Signal=\FanController:tach_clk_digital\
 <CYPRESSTAG name="UDB Clock/Enable Remapping Results">
     UDB Clk/Enable \FanController:B_FanCtrl:FanClkSync\: with output requested to be synchronous
         ClockIn: ClockGenBlock:m0s8clockgenblockcell.gen_clk_out_0 was determined to be a global clock that is synchronous to HFClk
         EnableIn: Constant 1 was determined to be synchronous to ClockIn
         ClockOut: ClockGenBlock:m0s8clockgenblockcell.gen_clk_out_0, EnableOut: Constant 1
     UDB Clk/Enable \FanController:FanTach:ClkSync\: with output requested to be synchronous
-        ClockIn: ClockGenBlock:m0s8clockgenblockcell.gen_clk_out_2 was determined to be a global clock that is synchronous to HFClk
+        ClockIn: ClockGenBlock:m0s8clockgenblockcell.gen_clk_out_1 was determined to be a global clock that is synchronous to HFClk
         EnableIn: \FanController:B_FanCtrl:GlobalControlReg\:controlcell.control_5 was determined to be synchronous to ClockIn
-        ClockOut: ClockGenBlock:m0s8clockgenblockcell.gen_clk_out_2, EnableOut: \FanController:B_FanCtrl:GlobalControlReg\:controlcell.control_5
+        ClockOut: ClockGenBlock:m0s8clockgenblockcell.gen_clk_out_1, EnableOut: \FanController:B_FanCtrl:GlobalControlReg\:controlcell.control_5
 </CYPRESSTAG>
 <CYPRESSTAG name="UDB Routed Clock Assignment">
     Routed Clock: Pin_Input(0):iocell.fb
@@ -1042,30 +1024,6 @@ Design Equations
         );
         Output = \FanController:B_FanCtrl:stall_status\ (fanout=1)
 
-    MacroCell: Name=cy_tff_1, Mode=(T-Register)
-        Total # of inputs        : 0
-        Total # of product terms : 0
-        List of special equations: 
-            Clock  = (Net_598_digital) => Global
-            Clock Enable: True
-        Main Equation            : 0 pterms
-        !(
-            0
-        );
-        Output = cy_tff_1 (fanout=1)
-
-    MacroCell: Name=Net_676, Mode=(D-Register)
-        Total # of inputs        : 2
-        Total # of product terms : 1
-        List of special equations: 
-            Clock  = (Net_675)
-            Clock Enable: True
-        Main Equation            : 1 pterm
-        !(
-              \FreqDiv_1:not_last_reset\ * !\FreqDiv_1:count_0\
-        );
-        Output = Net_676 (fanout=3)
-
     MacroCell: Name=\FanController:drq\, Mode=(D-Register)
         Total # of inputs        : 1
         Total # of product terms : 1
@@ -1113,8 +1071,8 @@ Design Equations
             Clock Enable: PosEdge(\FanController:enable\)
         Main Equation            : 1 pterm
         (
-              Net_676 * !\FanController:address_1\ * 
-              !\FanController:address_0\
+              !\FanController:address_1\ * !\FanController:address_0\ * 
+              Net_676
         );
         Output = \FanController:FanTach:tach\ (fanout=2)
 
@@ -1331,6 +1289,18 @@ Design Equations
               \FanController:FanTach:tach_state_0\
         );
         Output = \FanController:FanTach:fifo_load\ (fanout=2)
+
+    MacroCell: Name=Net_676, Mode=(D-Register)
+        Total # of inputs        : 2
+        Total # of product terms : 1
+        List of special equations: 
+            Clock  = (Net_675)
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        !(
+              \FreqDiv_1:not_last_reset\ * !\FreqDiv_1:count_0\
+        );
+        Output = Net_676 (fanout=1)
 
     MacroCell: Name=\FreqDiv_1:not_last_reset\, Mode=(D-Register)
         Total # of inputs        : 0
@@ -1605,15 +1575,6 @@ Design Equations
             is_nmi = 0
         }
 
-    interrupt: Name =ISR_Per
-        PORT MAP (
-            interrupt => Net_659 );
-        Properties:
-        {
-            int_type = "10"
-            is_nmi = 0
-        }
-
     interrupt: Name =\FanController:DataSend\
         PORT MAP (
             interrupt => \FanController:drq\ );
@@ -1641,8 +1602,8 @@ Technology mapping summary
 
 Resource Type                 : Used : Free :  Max :  % Used
 ============================================================
-Digital Clocks                :    3 :    1 :    4 : 75.00 %
-Interrupts                    :    4 :   28 :   32 : 12.50 %
+Digital Clocks                :    2 :    2 :    4 : 50.00 %
+Interrupts                    :    3 :   29 :   32 :  9.38 %
 IO                            :    9 :   29 :   38 : 23.68 %
 Segment LCD                   :    0 :    1 :    1 :  0.00 %
 CapSense                      :    0 :    1 :    1 :  0.00 %
@@ -1650,9 +1611,9 @@ Die Temp                      :    0 :    1 :    1 :  0.00 %
 Serial Communication (SCB)    :    1 :    1 :    2 : 50.00 %
 BLE                           :    0 :    1 :    1 :  0.00 %
 DMA Channels                  :    0 :    8 :    8 :  0.00 %
-Timer/Counter/PWM             :    2 :    2 :    4 : 50.00 %
+Timer/Counter/PWM             :    1 :    3 :    4 : 25.00 %
 UDB                           :      :      :      :        
-  Macrocells                  :   22 :   10 :   32 : 68.75 %
+  Macrocells                  :   21 :   11 :   32 : 65.63 %
   Unique P-terms              :   34 :   30 :   64 : 53.13 %
   Total P-terms               :   36 :      :      :        
   Datapath Cells              :    4 :    0 :    4 : 100.00 %
@@ -1667,8 +1628,8 @@ DAC                           :      :      :      :
   7-bit IDAC                  :    0 :    1 :    1 :  0.00 %
   8-bit IDAC                  :    0 :    1 :    1 :  0.00 %
 </CYPRESSTAG>
-Technology Mapping: Elapsed time ==> 0s.088ms
-Tech Mapping phase: Elapsed time ==> 0s.115ms
+Technology Mapping: Elapsed time ==> 0s.105ms
+Tech Mapping phase: Elapsed time ==> 0s.142ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Analog Placement">
 <CYPRESSTAG name="FFB & IO Pre Placement">
@@ -1683,19 +1644,18 @@ Pin_Input(0)                        : [IOP=(1)][IoId=(2)]
 \UART:rx(0)\                        : [IOP=(1)][IoId=(4)]                
 ClockGenBlock                       : CLK_GEN_[FFB(CLK_GEN,0)]           
 \UART:SCB\                          : SCB_[FFB(SCB,0)]                   
-\Perioud_Counter:cy_m0s8_tcpwm_1\   : TCPWM_[FFB(TCPWM,0)]               
-\FanController:FW_PWM1:cy_m0s8_tcpwm_1\ : TCPWM_[FFB(TCPWM,1)]               
+\FanController:FW_PWM1:cy_m0s8_tcpwm_1\ : TCPWM_[FFB(TCPWM,0)]               
 
 </CYPRESSTAG>
 </CYPRESSTAG>
 <CYPRESSTAG name="Real Analog Placement">
-Elapsed time ==> 0.1167047s
+Elapsed time ==> 0.1504678s
 </CYPRESSTAG>
-Analog Placement phase: Elapsed time ==> 0s.261ms
+Analog Placement phase: Elapsed time ==> 0s.326ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Analog Routing">
 <CYPRESSTAG name="Analog Routing">
-Route success=True, Iterations=1 Elapsed=0.0006328 secs
+Route success=True, Iterations=1 Elapsed=0.0006619 secs
 </CYPRESSTAG>
 Analog Routing phase: Elapsed time ==> 0s.000ms
 </CYPRESSTAG>
@@ -1708,11 +1668,11 @@ Map of item to net {
 }
 Mux Info {
 }
-Analog Code Generation phase: Elapsed time ==> 0s.039ms
+Analog Code Generation phase: Elapsed time ==> 0s.015ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Digital Placement">
 <CYPRESSTAG name="Detailed placement messages">
-I2076: Total run-time: 0.4 sec.
+I2076: Total run-time: 0.5 sec.
 
 </CYPRESSTAG>
 <CYPRESSTAG name="PLD Packing">
@@ -1723,15 +1683,15 @@ PLD Packing Summary
 ------------------------------------------------------------
             Resource Type : Used : Free :  Max :  % Used
     ====================================================
-                     PLDs :    8 :    0 :    8 : 100.00%
+                     PLDs :    7 :    1 :    8 :  87.50%
 
 <CYPRESSTAG name="PLD Statistics">
 
         PLD Resource Type :     Average/LAB
     =======================================
-                   Inputs :            5.88
-                   Pterms :            4.50
-               Macrocells :            2.75
+                   Inputs :            6.86
+                   Pterms :            5.14
+               Macrocells :            3.00
 </CYPRESSTAG>
 <CYPRESSTAG name="Packed PLD Contents">
 Packed PLD Contents not displayed at this verbose level.</CYPRESSTAG>
@@ -1743,7 +1703,7 @@ PLD Packing: Elapsed time ==> 0s.000ms
 Initial Partitioning Summary not displayed at this verbose level.</CYPRESSTAG>
 <CYPRESSTAG name="Final Partitioning Summary">
 Final Partitioning Summary not displayed at this verbose level.</CYPRESSTAG>
-Partitioning: Elapsed time ==> 0s.003ms
+Partitioning: Elapsed time ==> 0s.015ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Final Placement Summary">
 
@@ -1753,7 +1713,7 @@ Final Placement Summary
 
        Resource Type :      Count : Avg Inputs : Avg Outputs
     ========================================================
-                 UDB :          4 :       9.75 :       5.50
+                 UDB :          4 :      10.00 :       5.25
 <CYPRESSTAG name="Final Placement Details">
 <CYPRESSTAG name="Component Details">
 
@@ -1761,9 +1721,42 @@ Final Placement Summary
 Component Placement Details
 ------------------------------------------------------------
 UDB [UDB=(0,0)] contents:
-LAB@[UDB=(0,0)][LB=0] #macrocells=4, #inputs=8, #pterms=7
+LAB@[UDB=(0,0)][LB=0] #macrocells=3, #inputs=9, #pterms=8
 {
-    [McSlotId=0]:     MacroCell: Name=\FanController:drq\, Mode=(D-Register) @ [UDB=(0,0)][LB=0][MC=0]
+    [McSlotId=0]:     MacroCell: Name=\FanController:FanTach:tach_state_1\, Mode=(D-Register) @ [UDB=(0,0)][LB=0][MC=0]
+        Total # of inputs        : 6
+        Total # of product terms : 6
+        List of special equations: 
+            Clock  = (\FanController:tach_clk_digital\) => Global
+            Clock Enable: PosEdge(\FanController:enable\)
+        Main Equation            : 6 pterms
+        (
+              !\FanController:FanTach:filtered_rising_tach\ * 
+              \FanController:FanTach:tach_state_2\ * 
+              !\FanController:FanTach:tach_state_1\ * 
+              \FanController:FanTach:co_1\
+            + !\FanController:FanTach:filtered_rising_tach\ * 
+              \FanController:FanTach:tach_state_1\ * 
+              \FanController:FanTach:tach_state_0\
+            + !\FanController:FanTach:filtered_rising_tach\ * 
+              \FanController:FanTach:tach_state_0\ * 
+              \FanController:FanTach:co_1\
+            + \FanController:FanTach:filtered_rising_tach\ * 
+              !\FanController:FanTach:tach_state_1\ * 
+              \FanController:FanTach:tach_state_0\ * 
+              \FanController:FanTach:sync2_tach_cnt3\
+            + !\FanController:FanTach:tach_state_2\ * 
+              \FanController:FanTach:tach_state_1\ * 
+              !\FanController:FanTach:tach_state_0\
+            + \FanController:FanTach:tach_state_2\ * 
+              \FanController:FanTach:tach_state_0\
+        );
+        Output = \FanController:FanTach:tach_state_1\ (fanout=6)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=1]:     MacroCell: Name=\FanController:FanTach:end_of_measurement\, Mode=(D-Register) @ [UDB=(0,0)][LB=0][MC=1]
         Total # of inputs        : 1
         Total # of product terms : 1
         List of special equations: 
@@ -1771,64 +1764,15 @@ LAB@[UDB=(0,0)][LB=0] #macrocells=4, #inputs=8, #pterms=7
             Clock Enable: PosEdge(\FanController:enable\)
         Main Equation            : 1 pterm
         (
-              \FanController:FanTach:tach_data_ready\
+              \FanController:FanTach:eom\
         );
-        Output = \FanController:drq\ (fanout=1)
+        Output = \FanController:FanTach:end_of_measurement\ (fanout=1)
         Properties               : 
         {
         }
 
-    [McSlotId=1]:     MacroCell: Name=\FanController:FanTach:sync2_tach_cnt3\, Mode=(T-Register) @ [UDB=(0,0)][LB=0][MC=1]
-        Total # of inputs        : 7
-        Total # of product terms : 2
-        List of special equations: 
-            Clock  = (\FanController:tach_clk_digital\) => Global
-            Clock Enable: PosEdge(\FanController:enable\)
-        Main Equation            : 2 pterms
-        (
-              \FanController:FanTach:reg_enable\ * 
-              !\FanController:FanTach:tach_state_2\ * 
-              !\FanController:FanTach:tach_state_1\ * 
-              !\FanController:FanTach:tach_state_0\ * 
-              !\FanController:FanTach:tach_data_ready\ * 
-              \FanController:FanTach:sync2_tach_cnt3\
-            + \FanController:FanTach:filtered_rising_tach\ * 
-              !\FanController:FanTach:tach_state_2\ * 
-              !\FanController:FanTach:tach_state_1\ * 
-              \FanController:FanTach:tach_state_0\ * 
-              !\FanController:FanTach:sync2_tach_cnt3\
-        );
-        Output = \FanController:FanTach:sync2_tach_cnt3\ (fanout=3)
-        Properties               : 
-        {
-        }
-
-    [McSlotId=2]:     MacroCell: Name=\FanController:FanTach:tach_state_2\, Mode=(T-Register) @ [UDB=(0,0)][LB=0][MC=2]
-        Total # of inputs        : 5
-        Total # of product terms : 3
-        List of special equations: 
-            Clock  = (\FanController:tach_clk_digital\) => Global
-            Clock Enable: PosEdge(\FanController:enable\)
-        Main Equation            : 3 pterms
-        (
-              !\FanController:FanTach:filtered_rising_tach\ * 
-              !\FanController:FanTach:tach_state_2\ * 
-              \FanController:FanTach:tach_state_0\ * 
-              \FanController:FanTach:co_1\
-            + \FanController:FanTach:filtered_rising_tach\ * 
-              !\FanController:FanTach:tach_state_2\ * 
-              \FanController:FanTach:tach_state_1\ * 
-              \FanController:FanTach:tach_state_0\
-            + \FanController:FanTach:tach_state_2\ * 
-              \FanController:FanTach:tach_state_1\ * 
-              !\FanController:FanTach:tach_state_0\
-        );
-        Output = \FanController:FanTach:tach_state_2\ (fanout=7)
-        Properties               : 
-        {
-        }
-
-    [McSlotId=3]:     MacroCell: Name=\FanController:FanTach:fifo_load\, Mode=(D-Register) @ [UDB=(0,0)][LB=0][MC=3]
+    [McSlotId=2]: (empty)
+    [McSlotId=3]:     MacroCell: Name=\FanController:FanTach:gf_dmp_state\, Mode=(D-Register) @ [UDB=(0,0)][LB=0][MC=3]
         Total # of inputs        : 2
         Total # of product terms : 1
         List of special equations: 
@@ -1836,72 +1780,61 @@ LAB@[UDB=(0,0)][LB=0] #macrocells=4, #inputs=8, #pterms=7
             Clock Enable: PosEdge(\FanController:enable\)
         Main Equation            : 1 pterm
         (
-              \FanController:FanTach:tach_state_2\ * 
-              \FanController:FanTach:tach_state_0\
+              \FanController:enable\ * !\FanController:FanTach:gf_dmp_state\
         );
-        Output = \FanController:FanTach:fifo_load\ (fanout=2)
+        Output = \FanController:FanTach:gf_dmp_state\ (fanout=3)
         Properties               : 
         {
         }
 }
 
-LAB@[UDB=(0,0)][LB=1] #macrocells=2, #inputs=11, #pterms=8
+LAB@[UDB=(0,0)][LB=1] #macrocells=3, #inputs=2, #pterms=2
 {
-    [McSlotId=0]:     MacroCell: Name=\FanController:FanTach:tach_state_0\, Mode=(D-Register) @ [UDB=(0,0)][LB=1][MC=0]
-        Total # of inputs        : 8
-        Total # of product terms : 6
+    [McSlotId=0]:     MacroCell: Name=Net_676, Mode=(D-Register) @ [UDB=(0,0)][LB=1][MC=0]
+        Total # of inputs        : 2
+        Total # of product terms : 1
         List of special equations: 
-            Clock  = (\FanController:tach_clk_digital\) => Global
-            Clock Enable: PosEdge(\FanController:enable\)
-        Main Equation            : 6 pterms
-        (
-              \FanController:FanTach:reg_enable\ * 
-              !\FanController:FanTach:tach_state_2\ * 
-              !\FanController:FanTach:tach_state_0\ * 
-              !\FanController:FanTach:tach_data_ready\
-            + !\FanController:FanTach:filtered_rising_tach\ * 
-              !\FanController:FanTach:tach_state_2\ * 
-              \FanController:FanTach:tach_state_0\
-            + \FanController:FanTach:filtered_rising_tach\ * 
-              \FanController:FanTach:tach_state_2\ * 
-              !\FanController:FanTach:tach_state_1\ * 
-              !\FanController:FanTach:tach_state_0\
-            + !\FanController:FanTach:tach_state_2\ * 
-              !\FanController:FanTach:tach_state_1\ * 
-              \FanController:FanTach:tach_state_0\ * 
-              !\FanController:FanTach:sync2_tach_cnt3\
-            + !\FanController:FanTach:tach_state_2\ * 
-              \FanController:FanTach:tach_state_1\ * 
-              !\FanController:FanTach:tach_state_0\
-            + \FanController:FanTach:tach_state_2\ * 
-              !\FanController:FanTach:tach_state_1\ * 
-              !\FanController:FanTach:tach_state_0\ * 
-              \FanController:FanTach:co_1\
+            Clock  = (Net_675)
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        !(
+              \FreqDiv_1:not_last_reset\ * !\FreqDiv_1:count_0\
         );
-        Output = \FanController:FanTach:tach_state_0\ (fanout=7)
+        Output = Net_676 (fanout=1)
         Properties               : 
         {
         }
 
-    [McSlotId=1]:     MacroCell: Name=\FanController:FanTach:reg_enable\, Mode=(D-Register) @ [UDB=(0,0)][LB=1][MC=1]
-        Total # of inputs        : 4
-        Total # of product terms : 2
+    [McSlotId=1]:     MacroCell: Name=\FreqDiv_1:count_0\, Mode=(T-Register) @ [UDB=(0,0)][LB=1][MC=1]
+        Total # of inputs        : 1
+        Total # of product terms : 1
         List of special equations: 
-            Clock  = (\FanController:tach_clk_digital\) => Global
-            Clock Enable: PosEdge(\FanController:enable\)
-        Main Equation            : 2 pterms
+            Clock  = (Net_675)
+            Clock Enable: True
+        Main Equation            : 1 pterm
         (
-              \FanController:enable\ * \FanController:Net_393\
-            + !\FanController:Net_393\ * 
-              !\FanController:FanTach:end_of_measurement\ * 
-              \FanController:FanTach:reg_enable\
+              \FreqDiv_1:not_last_reset\
         );
-        Output = \FanController:FanTach:reg_enable\ (fanout=3)
+        Output = \FreqDiv_1:count_0\ (fanout=1)
         Properties               : 
         {
         }
 
-    [McSlotId=2]: (empty)
+    [McSlotId=2]:     MacroCell: Name=\FreqDiv_1:not_last_reset\, Mode=(D-Register) @ [UDB=(0,0)][LB=1][MC=2]
+        Total # of inputs        : 0
+        Total # of product terms : 0
+        List of special equations: 
+            Clock  = (Net_675)
+            Clock Enable: True
+        Main Equation            : 0 pterms
+        !(
+            0
+        );
+        Output = \FreqDiv_1:not_last_reset\ (fanout=2)
+        Properties               : 
+        {
+        }
+
     [McSlotId=3]: (empty)
 }
 
@@ -1943,400 +1876,12 @@ datapathcell: Name =\FanController:FanTach:FanTachCounter:u1\
     Clock Enable: PosEdge(\FanController:enable\)
     Previous in chain : \FanController:FanTach:FanTachCounter:u0\
 
-controlcell: Name =\FanController:B_FanCtrl:GlobalControlReg\
-    PORT MAP (
-        clock => \FanController:fan_clk_digital\ ,
-        control_7 => \FanController:B_FanCtrl:control_7\ ,
-        control_6 => \FanController:B_FanCtrl:control_6\ ,
-        control_5 => \FanController:enable\ ,
-        control_4 => \FanController:B_FanCtrl:control_4\ ,
-        control_3 => Net_642 ,
-        control_2 => \FanController:B_FanCtrl:control_2\ ,
-        control_1 => \FanController:B_FanCtrl:control_1\ ,
-        control_0 => \FanController:B_FanCtrl:control_0\ );
-    Properties:
-    {
-        cy_ctrl_mode_0 = "11111111"
-        cy_ctrl_mode_1 = "00011000"
-        cy_ext_reset = 0
-        cy_force_order = 1
-        cy_init_value = "00000000"
-    }
-    Clock Polarity: Active High
-    Clock Enable: True
-
 UDB [UDB=(0,1)] contents:
-LAB@[UDB=(0,1)][LB=0] #macrocells=4, #inputs=9, #pterms=5
-{
-    [McSlotId=0]:     MacroCell: Name=\FanController:B_FanCtrl:alert_reg\, Mode=(D-Register) @ [UDB=(0,1)][LB=0][MC=0]
-        Total # of inputs        : 4
-        Total # of product terms : 2
-        List of special equations: 
-            Clock  = (\FanController:fan_clk_digital\) => Global
-            Clock Enable: True
-        Main Equation            : 2 pterms
-        (
-              !Net_642 * \FanController:B_FanCtrl:alert_reg\ * 
-              \FanController:B_FanCtrl:interrupt\
-            + Net_642 * \FanController:B_FanCtrl:control_0\ * 
-              \FanController:B_FanCtrl:interrupt\
-        );
-        Output = \FanController:B_FanCtrl:alert_reg\ (fanout=1)
-        Properties               : 
-        {
-        }
-
-    [McSlotId=1]:     MacroCell: Name=\FanController:B_FanCtrl:speed_status\, Mode=(Combinatorial) @ [UDB=(0,1)][LB=0][MC=1]
-        Total # of inputs        : 2
-        Total # of product terms : 1
-            Clock Enable: True
-        Main Equation            : 1 pterm
-        (
-              \FanController:B_FanCtrl:control_4\ * 
-              \FanController:B_FanCtrl:control_2\
-        );
-        Output = \FanController:B_FanCtrl:speed_status\ (fanout=1)
-        Properties               : 
-        {
-        }
-
-    [McSlotId=2]:     MacroCell: Name=\FanController:B_FanCtrl:stall_status\, Mode=(Combinatorial) @ [UDB=(0,1)][LB=0][MC=2]
-        Total # of inputs        : 2
-        Total # of product terms : 1
-            Clock Enable: True
-        Main Equation            : 1 pterm
-        (
-              \FanController:B_FanCtrl:control_1\ * 
-              \FanController:B_FanCtrl:stall_alrt\
-        );
-        Output = \FanController:B_FanCtrl:stall_status\ (fanout=1)
-        Properties               : 
-        {
-        }
-
-    [McSlotId=3]:     MacroCell: Name=\FanController:B_FanCtrl:stall_alrt\, Mode=(D-Register) @ [UDB=(0,1)][LB=0][MC=3]
-        Total # of inputs        : 1
-        Total # of product terms : 1
-        List of special equations: 
-            Clock  = (\FanController:fan_clk_digital\) => Global
-            Clock Enable: True
-        Main Equation            : 1 pterm
-        (
-              \FanController:B_FanCtrl:control_7\
-        );
-        Output = \FanController:B_FanCtrl:stall_alrt\ (fanout=1)
-        Properties               : 
-        {
-        }
-}
-
-LAB@[UDB=(0,1)][LB=1] #macrocells=2, #inputs=4, #pterms=2
+LAB@[UDB=(0,1)][LB=0] #macrocells=1, #inputs=3, #pterms=1
 {
     [McSlotId=0]: (empty)
-    [McSlotId=1]:     MacroCell: Name=\FanController:Net_393\, Mode=(D-Register) @ [UDB=(0,1)][LB=1][MC=1]
-        Total # of inputs        : 3
-        Total # of product terms : 1
-        List of special equations: 
-            Clock  = (\FanController:tach_clk_digital\) => Global
-            Clock Enable: PosEdge(\FanController:enable\)
-        Main Equation            : 1 pterm
-        (
-              \FanController:FanTach:damping_cntr_cs_0\ * 
-              \FanController:FanTach:damping_cntr_tc\ * 
-              \FanController:FanTach:gf_dmp_state\
-        );
-        Output = \FanController:Net_393\ (fanout=3)
-        Properties               : 
-        {
-        }
-
-    [McSlotId=2]: (empty)
-    [McSlotId=3]:     MacroCell: Name=\FanController:FanTach:gf_dmp_state\, Mode=(D-Register) @ [UDB=(0,1)][LB=1][MC=3]
-        Total # of inputs        : 2
-        Total # of product terms : 1
-        List of special equations: 
-            Clock  = (\FanController:tach_clk_digital\) => Global
-            Clock Enable: PosEdge(\FanController:enable\)
-        Main Equation            : 1 pterm
-        (
-              \FanController:enable\ * !\FanController:FanTach:gf_dmp_state\
-        );
-        Output = \FanController:FanTach:gf_dmp_state\ (fanout=3)
-        Properties               : 
-        {
-        }
-}
-
-datapathcell: Name =\FanController:FanTach:DmpgFactor:DmpgTimeCntr:u0\
-    PORT MAP (
-        clock => \FanController:tach_clk_digital\ ,
-        cs_addr_2 => \FanController:FanTach:damping_cntr_cs_2\ ,
-        cs_addr_1 => \FanController:Net_393\ ,
-        cs_addr_0 => \FanController:FanTach:damping_cntr_cs_0\ ,
-        z0_comb => \FanController:FanTach:damping_cntr_cs_0\ ,
-        z1_comb => \FanController:FanTach:damping_cntr_tc\ ,
-        clk_en => \FanController:enable\ );
-    Properties:
-    {
-        a0_init = "00000000"
-        a1_init = "00000000"
-        ce0_sync = 1
-        ce1_sync = 1
-        cl0_sync = 1
-        cl1_sync = 1
-        cmsb_sync = 1
-        co_msb_sync = 1
-        cy_dpconfig = "0000000000000000000000000000000000000000000000000000000010100000010000000100000001010000100100000100000001100000000010001010000011111111000000001111111111111111000001001110101000000100000000000000000000001000"
-        d0_init = "00000000"
-        d1_init = "00000000"
-        f0_blk_sync = 1
-        f0_bus_sync = 1
-        f1_blk_sync = 1
-        f1_bus_sync = 1
-        ff0_sync = 1
-        ff1_sync = 1
-        ov_msb_sync = 1
-        so_sync = 1
-        z0_sync = 1
-        z1_sync = 1
-    }
-    Clock Polarity: Active High
-    Clock Enable: PosEdge(\FanController:enable\)
-
-statusicell: Name =\FanController:B_FanCtrl:AlertStatusReg\
-    PORT MAP (
-        clock => \FanController:fan_clk_digital\ ,
-        status_1 => \FanController:B_FanCtrl:speed_status\ ,
-        status_0 => \FanController:B_FanCtrl:stall_status\ ,
-        interrupt => \FanController:B_FanCtrl:interrupt\ );
-    Properties:
-    {
-        cy_force_order = 1
-        cy_int_mask = "1111111"
-        cy_md_select = "0000011"
-    }
-    Clock Polarity: Active High
-    Clock Enable: True
-
-UDB [UDB=(1,0)] contents:
-LAB@[UDB=(1,0)][LB=0] #macrocells=2, #inputs=7, #pterms=7
-{
-    [McSlotId=0]:     MacroCell: Name=\FanController:FanTach:tach_state_1\, Mode=(D-Register) @ [UDB=(1,0)][LB=0][MC=0]
-        Total # of inputs        : 6
-        Total # of product terms : 6
-        List of special equations: 
-            Clock  = (\FanController:tach_clk_digital\) => Global
-            Clock Enable: PosEdge(\FanController:enable\)
-        Main Equation            : 6 pterms
-        (
-              !\FanController:FanTach:filtered_rising_tach\ * 
-              \FanController:FanTach:tach_state_2\ * 
-              !\FanController:FanTach:tach_state_1\ * 
-              \FanController:FanTach:co_1\
-            + !\FanController:FanTach:filtered_rising_tach\ * 
-              \FanController:FanTach:tach_state_1\ * 
-              \FanController:FanTach:tach_state_0\
-            + !\FanController:FanTach:filtered_rising_tach\ * 
-              \FanController:FanTach:tach_state_0\ * 
-              \FanController:FanTach:co_1\
-            + \FanController:FanTach:filtered_rising_tach\ * 
-              !\FanController:FanTach:tach_state_1\ * 
-              \FanController:FanTach:tach_state_0\ * 
-              \FanController:FanTach:sync2_tach_cnt3\
-            + !\FanController:FanTach:tach_state_2\ * 
-              \FanController:FanTach:tach_state_1\ * 
-              !\FanController:FanTach:tach_state_0\
-            + \FanController:FanTach:tach_state_2\ * 
-              \FanController:FanTach:tach_state_0\
-        );
-        Output = \FanController:FanTach:tach_state_1\ (fanout=6)
-        Properties               : 
-        {
-        }
-
-    [McSlotId=1]:     MacroCell: Name=\FanController:FanTach:end_of_measurement\, Mode=(D-Register) @ [UDB=(1,0)][LB=0][MC=1]
-        Total # of inputs        : 1
-        Total # of product terms : 1
-        List of special equations: 
-            Clock  = (\FanController:tach_clk_digital\) => Global
-            Clock Enable: PosEdge(\FanController:enable\)
-        Main Equation            : 1 pterm
-        (
-              \FanController:FanTach:eom\
-        );
-        Output = \FanController:FanTach:end_of_measurement\ (fanout=1)
-        Properties               : 
-        {
-        }
-
-    [McSlotId=2]: (empty)
-    [McSlotId=3]: (empty)
-}
-
-LAB@[UDB=(1,0)][LB=1] #macrocells=1, #inputs=0, #pterms=0
-{
-    [McSlotId=0]:     MacroCell: Name=cy_tff_1, Mode=(T-Register) @ [UDB=(1,0)][LB=1][MC=0]
-        Total # of inputs        : 0
-        Total # of product terms : 0
-        List of special equations: 
-            Clock  = (Net_598_digital) => Global
-            Clock Enable: True
-        Main Equation            : 0 pterms
-        !(
-            0
-        );
-        Output = cy_tff_1 (fanout=1)
-        Properties               : 
-        {
-        }
-
     [McSlotId=1]: (empty)
-    [McSlotId=2]: (empty)
-    [McSlotId=3]: (empty)
-}
-
-datapathcell: Name =\FanController:FanTach:FanTachCounter:u0\
-    PORT MAP (
-        clock => \FanController:tach_clk_digital\ ,
-        cs_addr_2 => \FanController:FanTach:tach_state_2\ ,
-        cs_addr_1 => \FanController:FanTach:tach_state_1\ ,
-        cs_addr_0 => \FanController:FanTach:tach_state_0\ ,
-        f0_load => \FanController:FanTach:fifo_load\ ,
-        f0_bus_stat_comb => \FanController:FanTach:tach_data_ready\ ,
-        chain_out => \FanController:FanTach:FanTachCounter:carry\ ,
-        clk_en => \FanController:enable\ );
-    Properties:
-    {
-        a0_init = "00000000"
-        a1_init = "00000000"
-        ce0_sync = 1
-        ce1_sync = 1
-        cl0_sync = 1
-        cl1_sync = 1
-        cmsb_sync = 1
-        co_msb_sync = 1
-        cy_dpconfig = "1010100001000000001000000100000010101000010000000010000001000000001000000100000010000000000100001010100001000000101010000100000011111111000000001111111111111111000000000000000000000001000000000000000000000000"
-        d0_init = "00000000"
-        d1_init = "00000000"
-        f0_blk_sync = 1
-        f0_bus_sync = 1
-        f1_blk_sync = 1
-        f1_bus_sync = 1
-        ff0_sync = 1
-        ff1_sync = 1
-        ov_msb_sync = 1
-        so_sync = 1
-        z0_sync = 1
-        z1_sync = 1
-    }
-    Clock Polarity: Active High
-    Clock Enable: PosEdge(\FanController:enable\)
-    Next in chain : \FanController:FanTach:FanTachCounter:u1\
-
-UDB [UDB=(1,1)] contents:
-LAB@[UDB=(1,1)][LB=0] #macrocells=3, #inputs=2, #pterms=2
-{
-    [McSlotId=0]:     MacroCell: Name=Net_676, Mode=(D-Register) @ [UDB=(1,1)][LB=0][MC=0]
-        Total # of inputs        : 2
-        Total # of product terms : 1
-        List of special equations: 
-            Clock  = (Net_675)
-            Clock Enable: True
-        Main Equation            : 1 pterm
-        !(
-              \FreqDiv_1:not_last_reset\ * !\FreqDiv_1:count_0\
-        );
-        Output = Net_676 (fanout=3)
-        Properties               : 
-        {
-        }
-
-    [McSlotId=1]:     MacroCell: Name=\FreqDiv_1:count_0\, Mode=(T-Register) @ [UDB=(1,1)][LB=0][MC=1]
-        Total # of inputs        : 1
-        Total # of product terms : 1
-        List of special equations: 
-            Clock  = (Net_675)
-            Clock Enable: True
-        Main Equation            : 1 pterm
-        (
-              \FreqDiv_1:not_last_reset\
-        );
-        Output = \FreqDiv_1:count_0\ (fanout=1)
-        Properties               : 
-        {
-        }
-
-    [McSlotId=2]:     MacroCell: Name=\FreqDiv_1:not_last_reset\, Mode=(D-Register) @ [UDB=(1,1)][LB=0][MC=2]
-        Total # of inputs        : 0
-        Total # of product terms : 0
-        List of special equations: 
-            Clock  = (Net_675)
-            Clock Enable: True
-        Main Equation            : 0 pterms
-        !(
-            0
-        );
-        Output = \FreqDiv_1:not_last_reset\ (fanout=2)
-        Properties               : 
-        {
-        }
-
-    [McSlotId=3]: (empty)
-}
-
-LAB@[UDB=(1,1)][LB=1] #macrocells=4, #inputs=6, #pterms=5
-{
-    [McSlotId=0]:     MacroCell: Name=\FanController:FanTach:glitch_filter_state\, Mode=(D-Register) @ [UDB=(1,1)][LB=1][MC=0]
-        Total # of inputs        : 3
-        Total # of product terms : 2
-        List of special equations: 
-            Clock  = (\FanController:tach_clk_digital\) => Global
-            Clock Enable: PosEdge(\FanController:enable\)
-        Main Equation            : 2 pterms
-        (
-              \FanController:FanTach:tach\ * 
-              \FanController:FanTach:glitch_filter_state\
-            + !\FanController:FanTach:glitch_filter_state\ * 
-              \FanController:FanTach:glitch_filter_tc\
-        );
-        Output = \FanController:FanTach:glitch_filter_state\ (fanout=3)
-        Properties               : 
-        {
-        }
-
-    [McSlotId=1]:     MacroCell: Name=\FanController:FanTach:filtered_rising_tach\, Mode=(D-Register) @ [UDB=(1,1)][LB=1][MC=1]
-        Total # of inputs        : 2
-        Total # of product terms : 1
-        List of special equations: 
-            Clock  = (\FanController:tach_clk_digital\) => Global
-            Clock Enable: PosEdge(\FanController:enable\)
-        Main Equation            : 1 pterm
-        (
-              \FanController:FanTach:glitch_filter_state\ * 
-              \FanController:FanTach:glitch_filter_tc\
-        );
-        Output = \FanController:FanTach:filtered_rising_tach\ (fanout=4)
-        Properties               : 
-        {
-        }
-
-    [McSlotId=2]:     MacroCell: Name=\FanController:FanTach:glitch_filter_ld\, Mode=(D-Register) @ [UDB=(1,1)][LB=1][MC=2]
-        Total # of inputs        : 2
-        Total # of product terms : 1
-        List of special equations: 
-            Clock  = (\FanController:tach_clk_digital\) => Global
-            Clock Enable: PosEdge(\FanController:enable\)
-        Main Equation            : 1 pterm
-        !(
-              \FanController:FanTach:tach\ * 
-              !\FanController:FanTach:glitch_filter_state\
-        );
-        Output = \FanController:FanTach:glitch_filter_ld\ (fanout=1)
-        Properties               : 
-        {
-        }
-
-    [McSlotId=3]:     MacroCell: Name=\FanController:FanTach:tach\, Mode=(D-Register) @ [UDB=(1,1)][LB=1][MC=3]
+    [McSlotId=2]:     MacroCell: Name=\FanController:FanTach:tach\, Mode=(D-Register) @ [UDB=(0,1)][LB=0][MC=2]
         Total # of inputs        : 3
         Total # of product terms : 1
         List of special equations: 
@@ -2344,13 +1889,15 @@ LAB@[UDB=(1,1)][LB=1] #macrocells=4, #inputs=6, #pterms=5
             Clock Enable: PosEdge(\FanController:enable\)
         Main Equation            : 1 pterm
         (
-              Net_676 * !\FanController:address_1\ * 
-              !\FanController:address_0\
+              !\FanController:address_1\ * !\FanController:address_0\ * 
+              Net_676
         );
         Output = \FanController:FanTach:tach\ (fanout=2)
         Properties               : 
         {
         }
+
+    [McSlotId=3]: (empty)
 }
 
 datapathcell: Name =\FanController:FanTach:GlitchFilterTimer:u0\
@@ -2412,6 +1959,397 @@ controlcell: Name =\FanController:FanTach:P4:TachAddrControl\
     Clock Polarity: Active High
     Clock Enable: PosEdge(\FanController:enable\)
 
+UDB [UDB=(1,0)] contents:
+LAB@[UDB=(1,0)][LB=0] #macrocells=4, #inputs=8, #pterms=7
+{
+    [McSlotId=0]:     MacroCell: Name=\FanController:drq\, Mode=(D-Register) @ [UDB=(1,0)][LB=0][MC=0]
+        Total # of inputs        : 1
+        Total # of product terms : 1
+        List of special equations: 
+            Clock  = (\FanController:tach_clk_digital\) => Global
+            Clock Enable: PosEdge(\FanController:enable\)
+        Main Equation            : 1 pterm
+        (
+              \FanController:FanTach:tach_data_ready\
+        );
+        Output = \FanController:drq\ (fanout=1)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=1]:     MacroCell: Name=\FanController:FanTach:sync2_tach_cnt3\, Mode=(T-Register) @ [UDB=(1,0)][LB=0][MC=1]
+        Total # of inputs        : 7
+        Total # of product terms : 2
+        List of special equations: 
+            Clock  = (\FanController:tach_clk_digital\) => Global
+            Clock Enable: PosEdge(\FanController:enable\)
+        Main Equation            : 2 pterms
+        (
+              \FanController:FanTach:reg_enable\ * 
+              !\FanController:FanTach:tach_state_2\ * 
+              !\FanController:FanTach:tach_state_1\ * 
+              !\FanController:FanTach:tach_state_0\ * 
+              !\FanController:FanTach:tach_data_ready\ * 
+              \FanController:FanTach:sync2_tach_cnt3\
+            + \FanController:FanTach:filtered_rising_tach\ * 
+              !\FanController:FanTach:tach_state_2\ * 
+              !\FanController:FanTach:tach_state_1\ * 
+              \FanController:FanTach:tach_state_0\ * 
+              !\FanController:FanTach:sync2_tach_cnt3\
+        );
+        Output = \FanController:FanTach:sync2_tach_cnt3\ (fanout=3)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=2]:     MacroCell: Name=\FanController:FanTach:tach_state_2\, Mode=(T-Register) @ [UDB=(1,0)][LB=0][MC=2]
+        Total # of inputs        : 5
+        Total # of product terms : 3
+        List of special equations: 
+            Clock  = (\FanController:tach_clk_digital\) => Global
+            Clock Enable: PosEdge(\FanController:enable\)
+        Main Equation            : 3 pterms
+        (
+              !\FanController:FanTach:filtered_rising_tach\ * 
+              !\FanController:FanTach:tach_state_2\ * 
+              \FanController:FanTach:tach_state_0\ * 
+              \FanController:FanTach:co_1\
+            + \FanController:FanTach:filtered_rising_tach\ * 
+              !\FanController:FanTach:tach_state_2\ * 
+              \FanController:FanTach:tach_state_1\ * 
+              \FanController:FanTach:tach_state_0\
+            + \FanController:FanTach:tach_state_2\ * 
+              \FanController:FanTach:tach_state_1\ * 
+              !\FanController:FanTach:tach_state_0\
+        );
+        Output = \FanController:FanTach:tach_state_2\ (fanout=7)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=3]:     MacroCell: Name=\FanController:FanTach:fifo_load\, Mode=(D-Register) @ [UDB=(1,0)][LB=0][MC=3]
+        Total # of inputs        : 2
+        Total # of product terms : 1
+        List of special equations: 
+            Clock  = (\FanController:tach_clk_digital\) => Global
+            Clock Enable: PosEdge(\FanController:enable\)
+        Main Equation            : 1 pterm
+        (
+              \FanController:FanTach:tach_state_2\ * 
+              \FanController:FanTach:tach_state_0\
+        );
+        Output = \FanController:FanTach:fifo_load\ (fanout=2)
+        Properties               : 
+        {
+        }
+}
+
+LAB@[UDB=(1,0)][LB=1] #macrocells=2, #inputs=11, #pterms=8
+{
+    [McSlotId=0]:     MacroCell: Name=\FanController:FanTach:tach_state_0\, Mode=(D-Register) @ [UDB=(1,0)][LB=1][MC=0]
+        Total # of inputs        : 8
+        Total # of product terms : 6
+        List of special equations: 
+            Clock  = (\FanController:tach_clk_digital\) => Global
+            Clock Enable: PosEdge(\FanController:enable\)
+        Main Equation            : 6 pterms
+        (
+              \FanController:FanTach:reg_enable\ * 
+              !\FanController:FanTach:tach_state_2\ * 
+              !\FanController:FanTach:tach_state_0\ * 
+              !\FanController:FanTach:tach_data_ready\
+            + !\FanController:FanTach:filtered_rising_tach\ * 
+              !\FanController:FanTach:tach_state_2\ * 
+              \FanController:FanTach:tach_state_0\
+            + \FanController:FanTach:filtered_rising_tach\ * 
+              \FanController:FanTach:tach_state_2\ * 
+              !\FanController:FanTach:tach_state_1\ * 
+              !\FanController:FanTach:tach_state_0\
+            + !\FanController:FanTach:tach_state_2\ * 
+              !\FanController:FanTach:tach_state_1\ * 
+              \FanController:FanTach:tach_state_0\ * 
+              !\FanController:FanTach:sync2_tach_cnt3\
+            + !\FanController:FanTach:tach_state_2\ * 
+              \FanController:FanTach:tach_state_1\ * 
+              !\FanController:FanTach:tach_state_0\
+            + \FanController:FanTach:tach_state_2\ * 
+              !\FanController:FanTach:tach_state_1\ * 
+              !\FanController:FanTach:tach_state_0\ * 
+              \FanController:FanTach:co_1\
+        );
+        Output = \FanController:FanTach:tach_state_0\ (fanout=7)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=1]:     MacroCell: Name=\FanController:FanTach:reg_enable\, Mode=(D-Register) @ [UDB=(1,0)][LB=1][MC=1]
+        Total # of inputs        : 4
+        Total # of product terms : 2
+        List of special equations: 
+            Clock  = (\FanController:tach_clk_digital\) => Global
+            Clock Enable: PosEdge(\FanController:enable\)
+        Main Equation            : 2 pterms
+        (
+              \FanController:enable\ * \FanController:Net_393\
+            + !\FanController:Net_393\ * 
+              !\FanController:FanTach:end_of_measurement\ * 
+              \FanController:FanTach:reg_enable\
+        );
+        Output = \FanController:FanTach:reg_enable\ (fanout=3)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=2]: (empty)
+    [McSlotId=3]: (empty)
+}
+
+datapathcell: Name =\FanController:FanTach:FanTachCounter:u0\
+    PORT MAP (
+        clock => \FanController:tach_clk_digital\ ,
+        cs_addr_2 => \FanController:FanTach:tach_state_2\ ,
+        cs_addr_1 => \FanController:FanTach:tach_state_1\ ,
+        cs_addr_0 => \FanController:FanTach:tach_state_0\ ,
+        f0_load => \FanController:FanTach:fifo_load\ ,
+        f0_bus_stat_comb => \FanController:FanTach:tach_data_ready\ ,
+        chain_out => \FanController:FanTach:FanTachCounter:carry\ ,
+        clk_en => \FanController:enable\ );
+    Properties:
+    {
+        a0_init = "00000000"
+        a1_init = "00000000"
+        ce0_sync = 1
+        ce1_sync = 1
+        cl0_sync = 1
+        cl1_sync = 1
+        cmsb_sync = 1
+        co_msb_sync = 1
+        cy_dpconfig = "1010100001000000001000000100000010101000010000000010000001000000001000000100000010000000000100001010100001000000101010000100000011111111000000001111111111111111000000000000000000000001000000000000000000000000"
+        d0_init = "00000000"
+        d1_init = "00000000"
+        f0_blk_sync = 1
+        f0_bus_sync = 1
+        f1_blk_sync = 1
+        f1_bus_sync = 1
+        ff0_sync = 1
+        ff1_sync = 1
+        ov_msb_sync = 1
+        so_sync = 1
+        z0_sync = 1
+        z1_sync = 1
+    }
+    Clock Polarity: Active High
+    Clock Enable: PosEdge(\FanController:enable\)
+    Next in chain : \FanController:FanTach:FanTachCounter:u1\
+
+UDB [UDB=(1,1)] contents:
+LAB@[UDB=(1,1)][LB=0] #macrocells=4, #inputs=9, #pterms=5
+{
+    [McSlotId=0]:     MacroCell: Name=\FanController:B_FanCtrl:alert_reg\, Mode=(D-Register) @ [UDB=(1,1)][LB=0][MC=0]
+        Total # of inputs        : 4
+        Total # of product terms : 2
+        List of special equations: 
+            Clock  = (\FanController:fan_clk_digital\) => Global
+            Clock Enable: True
+        Main Equation            : 2 pterms
+        (
+              !Net_642 * \FanController:B_FanCtrl:alert_reg\ * 
+              \FanController:B_FanCtrl:interrupt\
+            + Net_642 * \FanController:B_FanCtrl:control_0\ * 
+              \FanController:B_FanCtrl:interrupt\
+        );
+        Output = \FanController:B_FanCtrl:alert_reg\ (fanout=1)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=1]:     MacroCell: Name=\FanController:B_FanCtrl:stall_status\, Mode=(Combinatorial) @ [UDB=(1,1)][LB=0][MC=1]
+        Total # of inputs        : 2
+        Total # of product terms : 1
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        (
+              \FanController:B_FanCtrl:control_1\ * 
+              \FanController:B_FanCtrl:stall_alrt\
+        );
+        Output = \FanController:B_FanCtrl:stall_status\ (fanout=1)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=2]:     MacroCell: Name=\FanController:B_FanCtrl:stall_alrt\, Mode=(D-Register) @ [UDB=(1,1)][LB=0][MC=2]
+        Total # of inputs        : 1
+        Total # of product terms : 1
+        List of special equations: 
+            Clock  = (\FanController:fan_clk_digital\) => Global
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        (
+              \FanController:B_FanCtrl:control_7\
+        );
+        Output = \FanController:B_FanCtrl:stall_alrt\ (fanout=1)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=3]:     MacroCell: Name=\FanController:B_FanCtrl:speed_status\, Mode=(Combinatorial) @ [UDB=(1,1)][LB=0][MC=3]
+        Total # of inputs        : 2
+        Total # of product terms : 1
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        (
+              \FanController:B_FanCtrl:control_4\ * 
+              \FanController:B_FanCtrl:control_2\
+        );
+        Output = \FanController:B_FanCtrl:speed_status\ (fanout=1)
+        Properties               : 
+        {
+        }
+}
+
+LAB@[UDB=(1,1)][LB=1] #macrocells=4, #inputs=6, #pterms=5
+{
+    [McSlotId=0]:     MacroCell: Name=\FanController:Net_393\, Mode=(D-Register) @ [UDB=(1,1)][LB=1][MC=0]
+        Total # of inputs        : 3
+        Total # of product terms : 1
+        List of special equations: 
+            Clock  = (\FanController:tach_clk_digital\) => Global
+            Clock Enable: PosEdge(\FanController:enable\)
+        Main Equation            : 1 pterm
+        (
+              \FanController:FanTach:damping_cntr_cs_0\ * 
+              \FanController:FanTach:damping_cntr_tc\ * 
+              \FanController:FanTach:gf_dmp_state\
+        );
+        Output = \FanController:Net_393\ (fanout=3)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=1]:     MacroCell: Name=\FanController:FanTach:glitch_filter_ld\, Mode=(D-Register) @ [UDB=(1,1)][LB=1][MC=1]
+        Total # of inputs        : 2
+        Total # of product terms : 1
+        List of special equations: 
+            Clock  = (\FanController:tach_clk_digital\) => Global
+            Clock Enable: PosEdge(\FanController:enable\)
+        Main Equation            : 1 pterm
+        !(
+              \FanController:FanTach:tach\ * 
+              !\FanController:FanTach:glitch_filter_state\
+        );
+        Output = \FanController:FanTach:glitch_filter_ld\ (fanout=1)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=2]:     MacroCell: Name=\FanController:FanTach:filtered_rising_tach\, Mode=(D-Register) @ [UDB=(1,1)][LB=1][MC=2]
+        Total # of inputs        : 2
+        Total # of product terms : 1
+        List of special equations: 
+            Clock  = (\FanController:tach_clk_digital\) => Global
+            Clock Enable: PosEdge(\FanController:enable\)
+        Main Equation            : 1 pterm
+        (
+              \FanController:FanTach:glitch_filter_state\ * 
+              \FanController:FanTach:glitch_filter_tc\
+        );
+        Output = \FanController:FanTach:filtered_rising_tach\ (fanout=4)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=3]:     MacroCell: Name=\FanController:FanTach:glitch_filter_state\, Mode=(D-Register) @ [UDB=(1,1)][LB=1][MC=3]
+        Total # of inputs        : 3
+        Total # of product terms : 2
+        List of special equations: 
+            Clock  = (\FanController:tach_clk_digital\) => Global
+            Clock Enable: PosEdge(\FanController:enable\)
+        Main Equation            : 2 pterms
+        (
+              \FanController:FanTach:tach\ * 
+              \FanController:FanTach:glitch_filter_state\
+            + !\FanController:FanTach:glitch_filter_state\ * 
+              \FanController:FanTach:glitch_filter_tc\
+        );
+        Output = \FanController:FanTach:glitch_filter_state\ (fanout=3)
+        Properties               : 
+        {
+        }
+}
+
+datapathcell: Name =\FanController:FanTach:DmpgFactor:DmpgTimeCntr:u0\
+    PORT MAP (
+        clock => \FanController:tach_clk_digital\ ,
+        cs_addr_2 => \FanController:FanTach:damping_cntr_cs_2\ ,
+        cs_addr_1 => \FanController:Net_393\ ,
+        cs_addr_0 => \FanController:FanTach:damping_cntr_cs_0\ ,
+        z0_comb => \FanController:FanTach:damping_cntr_cs_0\ ,
+        z1_comb => \FanController:FanTach:damping_cntr_tc\ ,
+        clk_en => \FanController:enable\ );
+    Properties:
+    {
+        a0_init = "00000000"
+        a1_init = "00000000"
+        ce0_sync = 1
+        ce1_sync = 1
+        cl0_sync = 1
+        cl1_sync = 1
+        cmsb_sync = 1
+        co_msb_sync = 1
+        cy_dpconfig = "0000000000000000000000000000000000000000000000000000000010100000010000000100000001010000100100000100000001100000000010001010000011111111000000001111111111111111000001001110101000000100000000000000000000001000"
+        d0_init = "00000000"
+        d1_init = "00000000"
+        f0_blk_sync = 1
+        f0_bus_sync = 1
+        f1_blk_sync = 1
+        f1_bus_sync = 1
+        ff0_sync = 1
+        ff1_sync = 1
+        ov_msb_sync = 1
+        so_sync = 1
+        z0_sync = 1
+        z1_sync = 1
+    }
+    Clock Polarity: Active High
+    Clock Enable: PosEdge(\FanController:enable\)
+
+statusicell: Name =\FanController:B_FanCtrl:AlertStatusReg\
+    PORT MAP (
+        clock => \FanController:fan_clk_digital\ ,
+        status_1 => \FanController:B_FanCtrl:speed_status\ ,
+        status_0 => \FanController:B_FanCtrl:stall_status\ ,
+        interrupt => \FanController:B_FanCtrl:interrupt\ );
+    Properties:
+    {
+        cy_force_order = 1
+        cy_int_mask = "1111111"
+        cy_md_select = "0000011"
+    }
+    Clock Polarity: Active High
+    Clock Enable: True
+
+controlcell: Name =\FanController:B_FanCtrl:GlobalControlReg\
+    PORT MAP (
+        clock => \FanController:fan_clk_digital\ ,
+        control_7 => \FanController:B_FanCtrl:control_7\ ,
+        control_6 => \FanController:B_FanCtrl:control_6\ ,
+        control_5 => \FanController:enable\ ,
+        control_4 => \FanController:B_FanCtrl:control_4\ ,
+        control_3 => Net_642 ,
+        control_2 => \FanController:B_FanCtrl:control_2\ ,
+        control_1 => \FanController:B_FanCtrl:control_1\ ,
+        control_0 => \FanController:B_FanCtrl:control_0\ );
+    Properties:
+    {
+        cy_ctrl_mode_0 = "11111111"
+        cy_ctrl_mode_1 = "00011000"
+        cy_ext_reset = 0
+        cy_force_order = 1
+        cy_init_value = "00000000"
+    }
+    Clock Polarity: Active High
+    Clock Enable: True
+
 Intr container @ [IntrContainer=(0)]: 
   Intr@ [IntrContainer=(0)][IntrId=(1)] 
     interrupt: Name =\FanController:DataSend\
@@ -2435,15 +2373,6 @@ Intr container @ [IntrContainer=(0)]:
     interrupt: Name =isr
         PORT MAP (
             interrupt => Net_642 );
-        Properties:
-        {
-            int_type = "10"
-            is_nmi = 0
-        }
-  Intr@ [IntrContainer=(0)][IntrId=(18)] 
-    interrupt: Name =ISR_Per
-        PORT MAP (
-            interrupt => Net_659 );
         Properties:
         {
             int_type = "10"
@@ -2677,10 +2606,8 @@ Clock group 0:
             dsi_in_0 => ClockBlock_Routed1 ,
             ff_div_7 => \FanController:fan_clk_ff7\ ,
             udb_div_0 => dclk_to_genclk ,
-            ff_div_8 => Net_598_ff8 ,
-            udb_div_1 => dclk_to_genclk_1 ,
             ff_div_1 => \UART:Net_847_ff1\ ,
-            udb_div_2 => dclk_to_genclk_2 );
+            udb_div_1 => dclk_to_genclk_1 );
         Properties:
         {
         }
@@ -2719,7 +2646,7 @@ TCPWM group 0:
         PORT MAP (
             clock => \FanController:fan_clk_ff7\ ,
             capture => zero ,
-            count => Net_666 ,
+            count => tmpOE__Pin_A_net_0 ,
             reload => zero ,
             stop => zero ,
             start => zero ,
@@ -2733,25 +2660,6 @@ TCPWM group 0:
         {
             cy_registers = ""
         }
-    Tcpwm Block @ F(TCPWM,1): 
-    m0s8tcpwmcell: Name =\Perioud_Counter:cy_m0s8_tcpwm_1\
-        PORT MAP (
-            clock => Net_598_ff8 ,
-            capture => Net_676 ,
-            count => cy_tff_1 ,
-            reload => Net_676 ,
-            stop => zero ,
-            start => zero ,
-            tr_underflow => Net_665 ,
-            tr_overflow => Net_662 ,
-            tr_compare_match => Net_658 ,
-            line => Net_660 ,
-            line_compl => Net_661 ,
-            interrupt => Net_659 );
-        Properties:
-        {
-            cy_registers = ""
-        }
 OA group 0: empty
 TEMP group 0: empty
 SARADC group 0: empty
@@ -2761,10 +2669,8 @@ CLK_GEN group 0:
         PORT MAP (
             gen_clk_out_0 => \FanController:fan_clk_digital\ ,
             gen_clk_in_0 => dclk_to_genclk ,
-            gen_clk_out_1 => Net_598_digital ,
-            gen_clk_in_1 => dclk_to_genclk_1 ,
-            gen_clk_out_2 => \FanController:tach_clk_digital\ ,
-            gen_clk_in_2 => dclk_to_genclk_2 );
+            gen_clk_out_1 => \FanController:tach_clk_digital\ ,
+            gen_clk_in_1 => dclk_to_genclk_1 );
         Properties:
         {
         }
@@ -2795,34 +2701,34 @@ Port | Pin | Fixed |      Type |       Drive Mode |         Name | Connections
 </CYPRESSTAG>
 </CYPRESSTAG>
 </CYPRESSTAG>
-Digital component placer commit/Report: Elapsed time ==> 0s.034ms
-Digital Placement phase: Elapsed time ==> 0s.651ms
+Digital component placer commit/Report: Elapsed time ==> 0s.025ms
+Digital Placement phase: Elapsed time ==> 0s.798ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Digital Routing">
 "C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\bin/sjrouter.exe" --xml-path "C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\dev\psoc4/3/256dma/route_arch-rrg.cydata" --vh2-path "CyberPong_r.vh2" --pcf-path "CyberPong.pco" --des-name "CyberPong" --dsf-path "CyberPong.dsf" --sdc-path "CyberPong.sdc" --lib-path "CyberPong_r.lib"
 Routing successful.
-Digital Routing phase: Elapsed time ==> 0s.895ms
+Digital Routing phase: Elapsed time ==> 0s.725ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Bitstream Generation">
-Bitstream Generation phase: Elapsed time ==> 0s.307ms
+Bitstream Generation phase: Elapsed time ==> 0s.211ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Bitstream Verification">
-Bitstream Verification phase: Elapsed time ==> 0s.033ms
+Bitstream Verification phase: Elapsed time ==> 0s.016ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Static timing analysis">
 Warning: sta.M0021: CyberPong_timing.html: Warning-1350: Asynchronous path(s) exist from "Pin_Input(0)_PAD" to "FanController_TACH_CLK_500K". See the timing report for details. (File=C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn\CyberPong_timing.html)
 Timing report is in CyberPong_timing.html.
-Static timing analysis phase: Elapsed time ==> 0s.430ms
+Static timing analysis phase: Elapsed time ==> 0s.251ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Data reporting">
 Data reporting phase: Elapsed time ==> 0s.000ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Database update...">
-Design database save phase: Elapsed time ==> 0s.232ms
+Design database save phase: Elapsed time ==> 0s.177ms
 </CYPRESSTAG>
-cydsfit: Elapsed time ==> 3s.083ms
+cydsfit: Elapsed time ==> 2s.741ms
 </CYPRESSTAG>
-Fitter phase: Elapsed time ==> 3s.084ms
-API generation phase: Elapsed time ==> 2s.796ms
-Dependency generation phase: Elapsed time ==> 0s.014ms
+Fitter phase: Elapsed time ==> 2s.741ms
+API generation phase: Elapsed time ==> 2s.054ms
+Dependency generation phase: Elapsed time ==> 0s.015ms
 Cleanup phase: Elapsed time ==> 0s.000ms

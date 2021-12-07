@@ -14,62 +14,57 @@
 #include "main_data.h"
 
 
-CY_ISR( ISR_Per_Handler )
-{
-            
-     
-    if(indx < 4){
-    // Put RMP into buffer and send it to UART
-    period_per_spin += period_per_window;
-    indx += 1;
-    
-    }
-    else if (indx >= 4){
-        sprintf(uart_per_buff, "%u", period_per_spin);
-        UART_UartPutChar('\n');
-        UART_UartPutChar('\r');
-        UART_UartPutString(uart_per_buff);
-        indx = 0;
-        period_per_spin = 0;
-    }
-    Perioud_Counter_ClearInterrupt(Perioud_Counter_INTR_MASK_CC_MATCH);
-}
-
-
 
 int main(void)
 {
     CyGlobalIntEnable; /* Enable global interrupts. */
     
     // Initialize some variables
-    signals_per_time_unit = 0;
-    period_per_window = 0;
     current_rpm = 0;
-    indx = 0;
     
 
     /* Start Everything Up */
     FanController_Start();
     UART_Start();
-    Perioud_Counter_Start();
-    ISR_Per_StartEx(ISR_Per_Handler);
-   
-    
+
+    char ch;
+    int8 print_speed = 0;
+    int16 speed_buf = 0;
     for(;;)
     {   
-        
-        current_rpm = FanController_GetActualSpeed(1);
-        sprintf(uart_per_buff, "%u", current_rpm);
-        UART_UartPutChar('\n');
-        UART_UartPutChar('\r');
-        UART_UartPutString(uart_per_buff);
-        
-        current_rpm = FanController_GetDesiredSpeed(1);
-        sprintf(uart_per_buff, "%u", current_rpm);
-        UART_UartPutChar('\n');
-        UART_UartPutChar('\r');
-        UART_UartPutString(uart_per_buff);
-        //period_per_window = Perioud_Counter_ReadCounter();
+        ch = UART_UartGetChar();
+        if(ch == 'p'){print_speed = 0;}
+        else if(ch == 's'){print_speed = 1;}
+        else if(ch == '\r' && speed_buf > 2000 && speed_buf < 4800){
+            FanController_SetDesiredSpeed(1, speed_buf);
+            speed_buf = 0;
+            UART_UartPutChar('\n');
+        }
+        else if(ch == '\r'){
+            speed_buf = 0;
+            UART_UartPutChar('\n');
+        }
+        else if(ch < 58 && ch > 47){
+            speed_buf *= 10;
+            speed_buf += ch - '0';
+        }
+        if(print_speed){
+            current_rpm = FanController_GetActualSpeed(1);
+            sprintf(uart_rpm_buff, "%u", current_rpm);
+            UART_UartPutChar('\n');
+            UART_UartPutChar('\r');
+            UART_UartPutString(uart_rpm_buff);
+            
+            current_rpm = FanController_GetDesiredSpeed(1);
+            sprintf(uart_rpm_buff, "%u", current_rpm);
+            UART_UartPutChar('\n');
+            UART_UartPutChar('\r');
+            UART_UartPutString(uart_rpm_buff);
+        }
+        else{
+            UART_UartPutChar(ch);
+        }
+       
 
     }
 }

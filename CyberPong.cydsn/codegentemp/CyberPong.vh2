@@ -2,7 +2,7 @@
 --	Conversion of CyberPong.v to vh2:
 --
 --	Cypress Semiconductor - WARP Version 6.3 IR 41
---	Mon Dec 06 17:15:45 2021
+--	Tue Dec 07 09:58:23 2021
 --
 
 USE cypress.cypress.all;
@@ -12,10 +12,6 @@ ATTRIBUTE part_name of top_RTL:TYPE IS "cpsoc3";
 END top_RTL;
 --------------------------------------------------------
 ARCHITECTURE R_T_L OF top_RTL IS
-SIGNAL Net_666 : bit;
-SIGNAL Net_598 : bit;
-SIGNAL cy_tff_1 : bit;
-SIGNAL Net_584 : bit;
 SIGNAL tmpOE__Pin_A_net_0 : bit;
 SIGNAL Net_656 : bit;
 SIGNAL tmpFB_0__Pin_A_net_0 : bit;
@@ -83,19 +79,6 @@ SIGNAL Net_198 : bit;
 SIGNAL Net_199 : bit;
 SIGNAL Net_206 : bit;
 SIGNAL Net_642 : bit;
-SIGNAL Net_659 : bit;
-SIGNAL \Perioud_Counter:Net_81\ : bit;
-SIGNAL \Perioud_Counter:Net_75\ : bit;
-SIGNAL \Perioud_Counter:Net_69\ : bit;
-SIGNAL \Perioud_Counter:Net_66\ : bit;
-SIGNAL \Perioud_Counter:Net_82\ : bit;
-SIGNAL \Perioud_Counter:Net_72\ : bit;
-SIGNAL Net_665 : bit;
-SIGNAL Net_662 : bit;
-SIGNAL Net_658 : bit;
-SIGNAL Net_660 : bit;
-SIGNAL Net_661 : bit;
-SIGNAL Net_676 : bit;
 SIGNAL \FanController:fan_clk\ : bit;
 SIGNAL \FanController:Net_323\ : bit;
 SIGNAL \FanController:tach_bus_14\ : bit;
@@ -560,6 +543,7 @@ SIGNAL \FanController:btch_4\ : bit;
 SIGNAL \FanController:btch_3\ : bit;
 SIGNAL \FanController:btch_2\ : bit;
 SIGNAL \FanController:btch_1\ : bit;
+SIGNAL Net_676 : bit;
 SIGNAL \FreqDiv_1:not_last_reset\ : bit;
 SIGNAL \FreqDiv_1:count_0\ : bit;
 SIGNAL \FreqDiv_1:add_vi_vv_MODGEN_1_0\ : bit;
@@ -759,8 +743,6 @@ SIGNAL \FreqDiv_1:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_2\ : bit;
 SIGNAL \FreqDiv_1:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_1\ : bit;
 SIGNAL \FreqDiv_1:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_0\ : bit;
 SIGNAL \FreqDiv_1:MODULE_1:g2:a0:g1:z1:s0:g1:u0:b_0\ : bit;
-SIGNAL cy_tff_1D : bit;
-SIGNAL Net_676D : bit;
 SIGNAL \FanController:drq\\D\ : bit;
 SIGNAL \FanController:B_FanCtrl:alert_reg\\D\ : bit;
 SIGNAL \FanController:B_FanCtrl:stall_alrt\\D\ : bit;
@@ -778,15 +760,14 @@ SIGNAL \FanController:FanTach:tach_state_0\\D\ : bit;
 SIGNAL \FanController:FanTach:sync2_tach_cnt3\\D\ : bit;
 SIGNAL \FanController:FanTach:stall_det\\D\ : bit;
 SIGNAL \FanController:FanTach:fifo_load\\D\ : bit;
+SIGNAL Net_676D : bit;
 SIGNAL \FreqDiv_1:not_last_reset\\D\ : bit;
 SIGNAL \FreqDiv_1:count_0\\D\ : bit;
 BEGIN
 
-Net_666 <=  ('1') ;
-
-cy_tff_1D <= (not cy_tff_1);
-
 zero <=  ('0') ;
+
+tmpOE__Pin_A_net_0 <=  ('1') ;
 
 \FanController:B_FanCtrl:speed_status\ <= ((\FanController:B_FanCtrl:control_4\ and \FanController:B_FanCtrl:control_2\));
 
@@ -904,7 +885,7 @@ Pin_A:cy_psoc3_pins_v1_10
 		ovt_slew_control=>"00",
 		ovt_hyst_trim=>"0",
 		input_buffer_sel=>"00")
-	PORT MAP(oe=>(Net_666),
+	PORT MAP(oe=>(tmpOE__Pin_A_net_0),
 		y=>Net_656,
 		fb=>(tmpFB_0__Pin_A_net_0),
 		analog=>(open),
@@ -912,10 +893,10 @@ Pin_A:cy_psoc3_pins_v1_10
 		siovref=>(tmpSIOVREF__Pin_A_net_0),
 		annotation=>(open),
 		in_clock=>zero,
-		in_clock_en=>Net_666,
+		in_clock_en=>tmpOE__Pin_A_net_0,
 		in_reset=>zero,
 		out_clock=>zero,
-		out_clock_en=>Net_666,
+		out_clock_en=>tmpOE__Pin_A_net_0,
 		out_reset=>zero,
 		interrupt=>tmpINTERRUPT_0__Pin_A_net_0);
 Pin_B:cy_psoc3_pins_v1_10
@@ -974,7 +955,7 @@ Pin_B:cy_psoc3_pins_v1_10
 		ovt_slew_control=>"00",
 		ovt_hyst_trim=>"0",
 		input_buffer_sel=>"00")
-	PORT MAP(oe=>(Net_666),
+	PORT MAP(oe=>(tmpOE__Pin_A_net_0),
 		y=>zero,
 		fb=>(tmpFB_0__Pin_B_net_0),
 		analog=>(open),
@@ -982,10 +963,10 @@ Pin_B:cy_psoc3_pins_v1_10
 		siovref=>(tmpSIOVREF__Pin_B_net_0),
 		annotation=>(open),
 		in_clock=>zero,
-		in_clock_en=>Net_666,
+		in_clock_en=>tmpOE__Pin_A_net_0,
 		in_reset=>zero,
 		out_clock=>zero,
-		out_clock_en=>Net_666,
+		out_clock_en=>tmpOE__Pin_A_net_0,
 		out_reset=>zero,
 		interrupt=>tmpINTERRUPT_0__Pin_B_net_0);
 Pin_Input:cy_psoc3_pins_v1_10
@@ -1044,7 +1025,7 @@ Pin_Input:cy_psoc3_pins_v1_10
 		ovt_slew_control=>"00",
 		ovt_hyst_trim=>"0",
 		input_buffer_sel=>"00")
-	PORT MAP(oe=>(Net_666),
+	PORT MAP(oe=>(tmpOE__Pin_A_net_0),
 		y=>(zero),
 		fb=>Net_675,
 		analog=>(open),
@@ -1052,22 +1033,12 @@ Pin_Input:cy_psoc3_pins_v1_10
 		siovref=>(tmpSIOVREF__Pin_Input_net_0),
 		annotation=>(open),
 		in_clock=>zero,
-		in_clock_en=>Net_666,
+		in_clock_en=>tmpOE__Pin_A_net_0,
 		in_reset=>zero,
 		out_clock=>zero,
-		out_clock_en=>Net_666,
+		out_clock_en=>tmpOE__Pin_A_net_0,
 		out_reset=>zero,
 		interrupt=>tmpINTERRUPT_0__Pin_Input_net_0);
-Clock_4:cy_clock_v1_0
-	GENERIC MAP(cy_registers=>"",
-		id=>"15cc9f08-d791-411c-a6ab-c0d0db39ab4e",
-		source_clock_id=>"",
-		divisor=>0,
-		period=>"500000000",
-		is_direct=>'0',
-		is_digital=>'1')
-	PORT MAP(clock_out=>Net_598,
-		dig_domain_out=>open);
 \UART:SCBCLK\:cy_clock_v1_0
 	GENERIC MAP(cy_registers=>"",
 		id=>"43ec2fa1-bf22-4b71-9477-b6ca7b97f0b0/2dc2d7a8-ce2b-43c7-af4a-821c8cd73ccf",
@@ -1134,7 +1105,7 @@ Clock_4:cy_clock_v1_0
 		ovt_slew_control=>"00",
 		ovt_hyst_trim=>"0",
 		input_buffer_sel=>"00")
-	PORT MAP(oe=>(Net_666),
+	PORT MAP(oe=>(tmpOE__Pin_A_net_0),
 		y=>\UART:tx_wire\,
 		fb=>(\UART:tmpFB_0__tx_net_0\),
 		analog=>(open),
@@ -1142,10 +1113,10 @@ Clock_4:cy_clock_v1_0
 		siovref=>(\UART:tmpSIOVREF__tx_net_0\),
 		annotation=>(open),
 		in_clock=>zero,
-		in_clock_en=>Net_666,
+		in_clock_en=>tmpOE__Pin_A_net_0,
 		in_reset=>zero,
 		out_clock=>zero,
-		out_clock_en=>Net_666,
+		out_clock_en=>tmpOE__Pin_A_net_0,
 		out_reset=>zero,
 		interrupt=>\UART:tmpINTERRUPT_0__tx_net_0\);
 \UART:rx\:cy_psoc3_pins_v1_10
@@ -1204,7 +1175,7 @@ Clock_4:cy_clock_v1_0
 		ovt_slew_control=>"00",
 		ovt_hyst_trim=>"0",
 		input_buffer_sel=>"00")
-	PORT MAP(oe=>(Net_666),
+	PORT MAP(oe=>(tmpOE__Pin_A_net_0),
 		y=>(zero),
 		fb=>\UART:rx_wire\,
 		analog=>(open),
@@ -1212,10 +1183,10 @@ Clock_4:cy_clock_v1_0
 		siovref=>(\UART:tmpSIOVREF__rx_net_0\),
 		annotation=>(open),
 		in_clock=>zero,
-		in_clock_en=>Net_666,
+		in_clock_en=>tmpOE__Pin_A_net_0,
 		in_reset=>zero,
 		out_clock=>zero,
-		out_clock_en=>Net_666,
+		out_clock_en=>tmpOE__Pin_A_net_0,
 		out_reset=>zero,
 		interrupt=>\UART:tmpINTERRUPT_0__rx_net_0\);
 \UART:SCB\:cy_m0s8_scb_v2_0
@@ -1243,24 +1214,6 @@ isr:cy_isr_v1_0
 	GENERIC MAP(int_type=>"10",
 		is_nmi=>'0')
 	PORT MAP(int_signal=>Net_642);
-ISR_Per:cy_isr_v1_0
-	GENERIC MAP(int_type=>"10",
-		is_nmi=>'0')
-	PORT MAP(int_signal=>Net_659);
-\Perioud_Counter:cy_m0s8_tcpwm_1\:cy_m0s8_tcpwm_v1_0
-	GENERIC MAP(cy_registers=>"")
-	PORT MAP(clock=>Net_598,
-		capture=>Net_676,
-		count=>cy_tff_1,
-		reload=>Net_676,
-		stop=>zero,
-		start=>zero,
-		underflow=>Net_665,
-		overflow=>Net_662,
-		compare_match=>Net_658,
-		line_out=>Net_660,
-		line_out_compl=>Net_661,
-		interrupt=>Net_659);
 \FanController:DataSend\:cy_isr_v1_0
 	GENERIC MAP(int_type=>"00",
 		is_nmi=>'0')
@@ -1268,7 +1221,7 @@ ISR_Per:cy_isr_v1_0
 \FanController:B_FanCtrl:FanClkSync\:cy_psoc3_udb_clock_enable_v1_0
 	GENERIC MAP(sync_mode=>'1')
 	PORT MAP(clock_in=>\FanController:fan_clk\,
-		enable=>Net_666,
+		enable=>tmpOE__Pin_A_net_0,
 		clock_out=>\FanController:B_FanCtrl:sync_clock\);
 \FanController:B_FanCtrl:GlobalControlReg\:cy_psoc3_control
 	GENERIC MAP(cy_init_value=>"00000000",
@@ -1317,7 +1270,7 @@ ISR_Per:cy_isr_v1_0
 	GENERIC MAP(cy_registers=>"")
 	PORT MAP(clock=>\FanController:fan_clk\,
 		capture=>zero,
-		count=>Net_666,
+		count=>tmpOE__Pin_A_net_0,
 		reload=>zero,
 		stop=>zero,
 		start=>zero,
@@ -1695,14 +1648,6 @@ ISR_Per:cy_isr_v1_0
 \FreqDiv_1:MODULE_1:g2:a0:g1:z1:s0:g1:u0:gs(8):g2:g3:ub\:cy_buf
 	PORT MAP(x=>zero,
 		y=>\FreqDiv_1:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_8\);
-cy_tff_1:cy_dff
-	PORT MAP(d=>cy_tff_1D,
-		clk=>Net_598,
-		q=>cy_tff_1);
-Net_676:cy_dff
-	PORT MAP(d=>Net_676D,
-		clk=>Net_675,
-		q=>Net_676);
 \FanController:drq\:cy_dff
 	PORT MAP(d=>\FanController:FanTach:tach_data_ready\,
 		clk=>\FanController:FanTach:synced_tach_clock\,
@@ -1771,8 +1716,12 @@ Net_676:cy_dff
 	PORT MAP(d=>\FanController:FanTach:fifo_load\\D\,
 		clk=>\FanController:FanTach:synced_tach_clock\,
 		q=>\FanController:FanTach:fifo_load\);
+Net_676:cy_dff
+	PORT MAP(d=>Net_676D,
+		clk=>Net_675,
+		q=>Net_676);
 \FreqDiv_1:not_last_reset\:cy_dff
-	PORT MAP(d=>Net_666,
+	PORT MAP(d=>tmpOE__Pin_A_net_0,
 		clk=>Net_675,
 		q=>\FreqDiv_1:not_last_reset\);
 \FreqDiv_1:count_0\:cy_dff

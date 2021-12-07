@@ -25,8 +25,6 @@
   <file name="C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn\codegentemp\Pin_Input.h" value="HEADER;;;;;Pin_Input" />
   <file name="C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn\codegentemp\Pin_Input_aliases.h" value="HEADER;;;;;Pin_Input" />
   <file name="C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn\codegentemp\Pin_Input_PM.c" value="SOURCE_C;CortexM0;;;;Pin_Input" />
-  <file name="C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn\codegentemp\Clock_4.c" value="SOURCE_C;CortexM0;;;;Clock_4" />
-  <file name="C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn\codegentemp\Clock_4.h" value="HEADER;;;;;Clock_4" />
   <file name="C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn\codegentemp\UART.c" value="SOURCE_C;CortexM0;;;;UART" />
   <file name="C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn\codegentemp\UART.h" value="HEADER;;;;;UART" />
   <file name="C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn\codegentemp\UART_SPI_UART.h" value="HEADER;;;;;UART" />
@@ -42,11 +40,6 @@
   <file name="C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn\codegentemp\UART_BOOT.h" value="HEADER;;;;;UART" />
   <file name="C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn\codegentemp\isr.c" value="SOURCE_C;CortexM0;;;;isr" />
   <file name="C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn\codegentemp\isr.h" value="HEADER;;;;;isr" />
-  <file name="C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn\codegentemp\ISR_Per.c" value="SOURCE_C;CortexM0;;;;ISR_Per" />
-  <file name="C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn\codegentemp\ISR_Per.h" value="HEADER;;;;;ISR_Per" />
-  <file name="C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn\codegentemp\Perioud_Counter.c" value="SOURCE_C;CortexM0;;;;Perioud_Counter" />
-  <file name="C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn\codegentemp\Perioud_Counter.h" value="HEADER;;;;;Perioud_Counter" />
-  <file name="C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn\codegentemp\Perioud_Counter_PM.c" value="SOURCE_C;CortexM0;;;;Perioud_Counter" />
   <file name="C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn\codegentemp\FanController.c" value="SOURCE_C;CortexM0;;;;FanController" />
   <file name="C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn\codegentemp\FanController.h" value="HEADER;;;;;FanController" />
   <file name="C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn\codegentemp\FanController_INT.c" value="SOURCE_C;CortexM0;;;;FanController" />

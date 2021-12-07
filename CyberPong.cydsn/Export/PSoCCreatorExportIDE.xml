@@ -123,13 +123,6 @@
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Pin_B.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Pin_B_aliases.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Pin_B_PM.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Perioud_Counter.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Perioud_Counter.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Perioud_Counter_PM.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Clock_4.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Clock_4.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\ISR_Per.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\ISR_Per.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\FanController.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\FanController.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\FanController_INT.c</File>

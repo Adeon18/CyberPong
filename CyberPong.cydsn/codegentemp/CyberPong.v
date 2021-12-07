@@ -1,6 +1,6 @@
 // ======================================================================
 // CyberPong.v generated from TopDesign.cysch
-// 12/06/2021 at 17:15
+// 12/07/2021 at 09:58
 // This file is auto generated. ANY EDITS YOU MAKE MAY BE LOST WHEN THIS FILE IS REGENERATED!!!
 // ======================================================================
 
@@ -106,32 +106,6 @@
 `define CYDEV_CHIP_FAMILY_USED 2
 `define CYDEV_CHIP_MEMBER_USED 27
 `define CYDEV_CHIP_REVISION_USED 0
-// Component: cy_constant_v1_0
-`ifdef CY_BLK_DIR
-`undef CY_BLK_DIR
-`endif
-
-`ifdef WARP
-`define CY_BLK_DIR "C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\cy_constant_v1_0"
-`include "C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\cy_constant_v1_0\cy_constant_v1_0.v"
-`else
-`define CY_BLK_DIR "C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\cy_constant_v1_0"
-`include "C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\cy_constant_v1_0\cy_constant_v1_0.v"
-`endif
-
-// Component: cy_tff_v1_0
-`ifdef CY_BLK_DIR
-`undef CY_BLK_DIR
-`endif
-
-`ifdef WARP
-`define CY_BLK_DIR "C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\cy_tff_v1_0"
-`include "C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\cy_tff_v1_0\cy_tff_v1_0.v"
-`else
-`define CY_BLK_DIR "C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\cy_tff_v1_0"
-`include "C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\cy_tff_v1_0\cy_tff_v1_0.v"
-`endif
-
 // Component: cy_virtualmux_v1_0
 `ifdef CY_BLK_DIR
 `undef CY_BLK_DIR
@@ -496,88 +470,18 @@ module SCB_P4_v4_0_0 (
 
 endmodule
 
-// TCPWM_P4_v2_10(Clock_CheckTolerance=true, Clock_desired_freq=12, Clock_desired_freq_unit=6, Clock_divisor=1, Clock_FractDividerDenominator=0, Clock_FractDividerNumerator=0, Clock_FractDividerUsed=false, Clock_is_direct=false, Clock_is_divider=false, Clock_is_freq=true, Clock_minus_tolerance=5, Clock_ph_align_clock_id=, Clock_ph_align_clock_name=, Clock_plus_tolerance=5, Clock_source_clock_id=, Clock_source_clock_name=, PinVisibility_index=false, PinVisibility_kill=false, PinVisibility_phiA=false, PinVisibility_phiB=false, PinVisibility_switch=false, PWMCompare=65535, PWMCompareBuf=65535, PWMCompareSwap=0, PWMCountMode=3, PWMCountPresent=false, PWMDeadTimeCycle=0, PWMInterruptMask=1, PWMKillEvent=0, PWMLinenSignal=0, PWMLineSignal=0, PWMMode=4, PWMPeriod=65535, PWMPeriodBuf=65535, PWMPeriodSwap=0, PWMPrescaler=0, PWMReloadMode=0, PWMReloadPresent=false, PWMRunMode=0, PWMSetAlign=0, PWMStartMode=0, PWMStartPresent=false, PWMStopEvent=0, PWMStopMode=0, PWMStopPresent=false, PWMSwitchMode=0, PWMSwitchPresent=false, QuadAutoStart=true, QuadEncodingModes=0, QuadIndexMode=0, QuadIndexPresent=false, QuadInterruptMask=1, QuadPhiAMode=3, QuadPhiBMode=3, QuadStopMode=0, QuadStopPresent=false, TCCaptureMode=0, TCCapturePresent=true, TCCompare=65535, TCCompareBuf=65535, TCCompareSwap=0, TCCompCapMode=2, TCCountingModes=0, TCCountMode=3, TCCountPresent=true, TCInterruptMask=2, TCPeriod=65535, TCPrescaler=0, TCPWMCapturePresent=false, TCPWMConfig=1, TCPWMCountPresent=false, TCPWMReloadPresent=false, TCPWMStartPresent=false, TCPWMStopPresent=false, TCReloadMode=0, TCReloadPresent=true, TCRunMode=0, TCStartMode=0, TCStartPresent=false, TCStopMode=0, TCStopPresent=false, TermMode_capture=0, TermMode_cc=0, TermMode_clock=0, TermMode_count=0, TermMode_interrupt=0, TermMode_line=0, TermMode_line_n=0, TermMode_ov=0, TermMode_reload=0, TermMode_start=0, TermMode_stop=0, TermMode_un=0, TermModeStates=, TermVisibility_capture=true, TermVisibility_cc=true, TermVisibility_clock=true, TermVisibility_count=true, TermVisibility_interrupt=true, TermVisibility_line=false, TermVisibility_line_n=false, TermVisibility_ov=true, TermVisibility_reload=true, TermVisibility_start=false, TermVisibility_stop=false, TermVisibility_un=true, CY_API_CALLBACK_HEADER_INCLUDE=#include "cyapicallbacks.h", CY_COMMENT=, CY_COMPONENT_NAME=TCPWM_P4_v2_10, CY_CONFIG_TITLE=Perioud_Counter, CY_CONST_CONFIG=true, CY_CONTROL_FILE=<:default:>, CY_DATASHEET_FILE=<:default:>, CY_FITTER_NAME=Perioud_Counter, CY_INSTANCE_SHORT_NAME=Perioud_Counter, CY_MAJOR_VERSION=2, CY_MINOR_VERSION=10, CY_PDL_DRIVER_NAME=, CY_PDL_DRIVER_REQ_VERSION=, CY_PDL_DRIVER_SUBGROUP=, CY_PDL_DRIVER_VARIANT=, CY_REMOVE=false, CY_SUPPRESS_API_GEN=false, CY_VERSION=PSoC Creator  4.4, INSTANCE_NAME=Perioud_Counter, )
-module TCPWM_P4_v2_10_1 (
-    capture,
-    cc,
-    clock,
-    count,
-    interrupt,
-    line,
-    line_n,
-    ov,
-    reload,
-    start,
-    stop,
-    un);
-    input       capture;
-    output      cc;
-    input       clock;
-    input       count;
-    output      interrupt;
-    output      line;
-    output      line_n;
-    output      ov;
-    input       reload;
-    input       start;
-    input       stop;
-    output      un;
+// Component: cy_constant_v1_0
+`ifdef CY_BLK_DIR
+`undef CY_BLK_DIR
+`endif
 
-
-          wire  Net_64;
-          wire  Net_63;
-          wire  Net_85;
-          wire  Net_62;
-          wire  Net_110;
-          wire  Net_95;
-          wire  Net_106;
-          wire  Net_104;
-          wire  Net_109;
-          wire  Net_98;
-          wire  Net_108;
-          wire  Net_101;
-          wire  Net_66;
-          wire  Net_81;
-          wire  Net_75;
-          wire  Net_69;
-          wire  Net_82;
-          wire  Net_72;
-
-    cy_m0s8_tcpwm_v1_0 cy_m0s8_tcpwm_1 (
-        .capture(Net_75),
-        .clock(Net_81),
-        .compare_match(cc),
-        .count(Net_69),
-        .interrupt(interrupt),
-        .line_out(line),
-        .line_out_compl(line_n),
-        .overflow(ov),
-        .reload(Net_66),
-        .start(Net_72),
-        .stop(Net_82),
-        .underflow(un));
-
-	// VMux_reload (cy_virtualmux_v1_0)
-	assign Net_66 = reload;
-
-	// VMux_count (cy_virtualmux_v1_0)
-	assign Net_69 = count;
-
-	// VMux_start (cy_virtualmux_v1_0)
-	assign Net_72 = start;
-
-	// VMux_capture (cy_virtualmux_v1_0)
-	assign Net_75 = capture;
-
-	// VMux_stop (cy_virtualmux_v1_0)
-	assign Net_82 = stop;
-
-	// VMux_clock (cy_virtualmux_v1_0)
-	assign Net_81 = clock;
-
-
-
-endmodule
+`ifdef WARP
+`define CY_BLK_DIR "C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\cy_constant_v1_0"
+`include "C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\cy_constant_v1_0\cy_constant_v1_0.v"
+`else
+`define CY_BLK_DIR "C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\cy_constant_v1_0"
+`include "C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\cy_constant_v1_0\cy_constant_v1_0.v"
+`endif
 
 // Component: B_FanController_v4_10
 `ifdef CY_BLK_DIR
@@ -593,7 +497,7 @@ endmodule
 `endif
 
 // TCPWM_P4_v2_10(Clock_CheckTolerance=true, Clock_desired_freq=12, Clock_desired_freq_unit=6, Clock_divisor=1, Clock_FractDividerDenominator=0, Clock_FractDividerNumerator=0, Clock_FractDividerUsed=false, Clock_is_direct=false, Clock_is_divider=false, Clock_is_freq=true, Clock_minus_tolerance=5, Clock_ph_align_clock_id=, Clock_ph_align_clock_name=, Clock_plus_tolerance=5, Clock_source_clock_id=, Clock_source_clock_name=, PinVisibility_index=false, PinVisibility_kill=false, PinVisibility_phiA=false, PinVisibility_phiB=false, PinVisibility_switch=false, PWMCompare=64, PWMCompareBuf=65535, PWMCompareSwap=0, PWMCountMode=3, PWMCountPresent=false, PWMDeadTimeCycle=0, PWMInterruptMask=0, PWMKillEvent=0, PWMLinenSignal=0, PWMLineSignal=0, PWMMode=4, PWMPeriod=255, PWMPeriodBuf=65535, PWMPeriodSwap=0, PWMPrescaler=0, PWMReloadMode=0, PWMReloadPresent=false, PWMRunMode=0, PWMSetAlign=0, PWMStartMode=0, PWMStartPresent=false, PWMStopEvent=0, PWMStopMode=0, PWMStopPresent=false, PWMSwitchMode=0, PWMSwitchPresent=false, QuadAutoStart=false, QuadEncodingModes=0, QuadIndexMode=0, QuadIndexPresent=false, QuadInterruptMask=1, QuadPhiAMode=3, QuadPhiBMode=3, QuadStopMode=0, QuadStopPresent=false, TCCaptureMode=0, TCCapturePresent=false, TCCompare=65535, TCCompareBuf=65535, TCCompareSwap=0, TCCompCapMode=2, TCCountingModes=0, TCCountMode=3, TCCountPresent=false, TCInterruptMask=1, TCPeriod=65535, TCPrescaler=0, TCPWMCapturePresent=false, TCPWMConfig=7, TCPWMCountPresent=false, TCPWMReloadPresent=false, TCPWMStartPresent=false, TCPWMStopPresent=false, TCReloadMode=0, TCReloadPresent=false, TCRunMode=0, TCStartMode=0, TCStartPresent=false, TCStopMode=0, TCStopPresent=false, TermMode_capture=0, TermMode_cc=0, TermMode_clock=0, TermMode_count=0, TermMode_interrupt=0, TermMode_line=0, TermMode_line_n=0, TermMode_ov=0, TermMode_reload=0, TermMode_start=0, TermMode_stop=0, TermMode_un=0, TermModeStates=, TermVisibility_capture=false, TermVisibility_cc=true, TermVisibility_clock=true, TermVisibility_count=false, TermVisibility_interrupt=true, TermVisibility_line=true, TermVisibility_line_n=true, TermVisibility_ov=true, TermVisibility_reload=false, TermVisibility_start=false, TermVisibility_stop=false, TermVisibility_un=true, CY_API_CALLBACK_HEADER_INCLUDE=#include "cyapicallbacks.h", CY_COMMENT=, CY_COMPONENT_NAME=TCPWM_P4_v2_10, CY_CONFIG_TITLE=FW_PWM1, CY_CONST_CONFIG=true, CY_CONTROL_FILE=<:default:>, CY_DATASHEET_FILE=<:default:>, CY_FITTER_NAME=FanController:FW_PWM1, CY_INSTANCE_SHORT_NAME=FW_PWM1, CY_MAJOR_VERSION=2, CY_MINOR_VERSION=10, CY_PDL_DRIVER_NAME=, CY_PDL_DRIVER_REQ_VERSION=, CY_PDL_DRIVER_SUBGROUP=, CY_PDL_DRIVER_VARIANT=, CY_REMOVE=false, CY_SUPPRESS_API_GEN=false, CY_VERSION=PSoC Creator  4.4, INSTANCE_NAME=FanController_FW_PWM1, )
-module TCPWM_P4_v2_10_2 (
+module TCPWM_P4_v2_10_1 (
     capture,
     cc,
     clock,
@@ -689,7 +593,7 @@ endmodule
 `endif
 
 // FanController_v4_10(AcousticNoiseReduction=0, AlertEnable=0, CoefDerivative=40, CoefIntegral=100, CoefLowerOutputLimit=40, CoefOutputAttenuation=-20, CoefProportional=30, CoefUpperOutputLimit=100, Connection=1, CtlModeReplacementString=SyncCtl, DampingFactor=1, ExternalClock=0, FanMode=0, FanModeManual=false, FanPWMFreq=0, FanPWMRes=1, FanTolerance=1, InitialRPM01=4500, InitialRPM02=5000, InitialRPM03=5000, InitialRPM04=5000, InitialRPM05=5000, InitialRPM06=5000, InitialRPM07=5000, InitialRPM08=5000, InitialRPM09=5000, InitialRPM10=5000, InitialRPM11=5000, InitialRPM12=5000, InitialRPM13=5000, InitialRPM14=5000, InitialRPM15=5000, InitialRPM16=5000, MaxDuty01=100, MaxDuty02=100, MaxDuty03=100, MaxDuty04=100, MaxDuty05=100, MaxDuty06=100, MaxDuty07=100, MaxDuty08=100, MaxDuty09=100, MaxDuty10=100, MaxDuty11=100, MaxDuty12=100, MaxDuty13=100, MaxDuty14=100, MaxDuty15=100, MaxDuty16=100, MaxRPM01=4800, MaxRPM02=10000, MaxRPM03=10000, MaxRPM04=10000, MaxRPM05=10000, MaxRPM06=10000, MaxRPM07=10000, MaxRPM08=10000, MaxRPM09=10000, MaxRPM10=10000, MaxRPM11=10000, MaxRPM12=10000, MaxRPM13=10000, MaxRPM14=10000, MaxRPM15=10000, MaxRPM16=10000, MinDuty01=55, MinDuty02=25, MinDuty03=25, MinDuty04=25, MinDuty05=25, MinDuty06=25, MinDuty07=25, MinDuty08=25, MinDuty09=25, MinDuty10=25, MinDuty11=25, MinDuty12=25, MinDuty13=25, MinDuty14=25, MinDuty15=25, MinDuty16=25, MinRPM01=2200, MinRPM02=1000, MinRPM03=1000, MinRPM04=1000, MinRPM05=1000, MinRPM06=1000, MinRPM07=1000, MinRPM08=1000, MinRPM09=1000, MinRPM10=1000, MinRPM11=1000, MinRPM12=100, MinRPM13=100, MinRPM14=1000, MinRPM15=1000, MinRPM16=1000, MotorType=0, NineOrMoreFans=false, NumberOfBanks=0, NumberOfFanOutputs=1, NumberOfFans=1, pid_A1=6963, pid_A2=-4505, pid_A3=1638, pid_output_gain=20, pid_output_sat_H=1006632960, pid_output_sat_L=402653184, Psoc3or5=false, pwm_period=960, ShowFanOutputs=false, SpeedErrorCount=16, CY_API_CALLBACK_HEADER_INCLUDE=#include "cyapicallbacks.h", CY_COMMENT=, CY_COMPONENT_NAME=FanController_v4_10, CY_CONFIG_TITLE=FanController, CY_CONST_CONFIG=true, CY_CONTROL_FILE=<:default:>, CY_DATASHEET_FILE=<:default:>, CY_FITTER_NAME=FanController, CY_INSTANCE_SHORT_NAME=FanController, CY_MAJOR_VERSION=4, CY_MINOR_VERSION=10, CY_PDL_DRIVER_NAME=, CY_PDL_DRIVER_REQ_VERSION=, CY_PDL_DRIVER_SUBGROUP=, CY_PDL_DRIVER_VARIANT=, CY_REMOVE=false, CY_SUPPRESS_API_GEN=false, CY_VERSION=PSoC Creator  4.4, INSTANCE_NAME=FanController, )
-module FanController_v4_10_3 (
+module FanController_v4_10_2 (
     alert,
     bank,
     bank1,
@@ -992,7 +896,7 @@ module FanController_v4_10_3 (
 		 (.clock_out(tach_clk));
 
 
-    TCPWM_P4_v2_10_2 FW_PWM1 (
+    TCPWM_P4_v2_10_1 FW_PWM1 (
         .capture(1'b0),
         .cc(Net_343),
         .clock(fan_clk),
@@ -1200,14 +1104,6 @@ module top ;
           wire  Net_618;
           wire [8:1] Net_646;
           wire  Net_617;
-          wire  Net_665;
-          wire  Net_664;
-          wire  Net_663;
-          wire  Net_662;
-          wire  Net_661;
-          wire  Net_660;
-          wire  Net_658;
-          wire  Net_659;
           wire  Net_642;
           wire  Net_206;
           wire  Net_205;
@@ -1231,25 +1127,10 @@ module top ;
           wire  Net_187;
           wire  Net_186;
           wire  Net_185;
-          wire  Net_669;
-          wire  Net_666;
-          wire  Net_675;
           wire  Net_676;
-          wire  Net_584;
-          wire  Net_598;
+          wire  Net_675;
           wire  Net_656;
           wire  Net_210;
-
-    assign Net_666 = 1'h1;
-
-    // -- TFF Start --
-    reg  cy_tff_1;
-    always @(posedge Net_598)
-    begin
-        cy_tff_1 <= Net_666^Net_584;
-    end
-    assign Net_584 = cy_tff_1;
-    // -- TFF End --
 
 	wire [0:0] tmpOE__Pin_A_net;
 	wire [0:0] tmpFB_0__Pin_A_net;
@@ -1475,18 +1356,6 @@ module top ;
 
 	assign tmpOE__Pin_Input_net = (`CYDEV_CHIP_MEMBER_USED == `CYDEV_CHIP_MEMBER_3A && `CYDEV_CHIP_REVISION_USED < `CYDEV_CHIP_REVISION_3A_ES3) ? ~{1'b1} : {1'b1};
 
-
-	cy_clock_v1_0
-		#(.id("15cc9f08-d791-411c-a6ab-c0d0db39ab4e"),
-		  .source_clock_id(""),
-		  .divisor(0),
-		  .period("500000000"),
-		  .is_direct(0),
-		  .is_digital(1))
-		Clock_4
-		 (.clock_out(Net_598));
-
-
     SCB_P4_v4_0_0 UART (
         .clock(1'b0),
         .cts_in(1'b0),
@@ -1520,28 +1389,7 @@ module top ;
 
     assign Net_210 = 1'h0;
 
-
-	cy_isr_v1_0
-		#(.int_type(2'b10))
-		ISR_Per
-		 (.int_signal(Net_659));
-
-
-    TCPWM_P4_v2_10_1 Perioud_Counter (
-        .capture(Net_676),
-        .cc(Net_658),
-        .clock(Net_598),
-        .count(Net_584),
-        .interrupt(Net_659),
-        .line(Net_660),
-        .line_n(Net_661),
-        .ov(Net_662),
-        .reload(Net_676),
-        .start(1'b0),
-        .stop(1'b0),
-        .un(Net_665));
-
-    FanController_v4_10_3 FanController (
+    FanController_v4_10_2 FanController (
         .alert(Net_617),
         .bank(Net_646[8:1]),
         .bank1(Net_618),
