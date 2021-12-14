@@ -67,9 +67,9 @@
 
 /* PID Constants */
 #if(FanController_IS_AUTO_FIRMWARE_MODE)
-    #define FanController_PID_A1             (6963)
-    #define FanController_PID_A2             (-4505)
-    #define FanController_PID_A3             (1638)
+    #define FanController_PID_A1             (6553)
+    #define FanController_PID_A2             (-4096)
+    #define FanController_PID_A3             (0)
 
     #define FanController_PID_POST_GAIN      (20u)
 

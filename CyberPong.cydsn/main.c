@@ -13,6 +13,40 @@
 #include <stdio.h>
 #include "main_data.h"
 
+int8 print_speed = 0;
+uint16_t current_desired_speed;
+
+
+CY_ISR(Timer_Isr_Handler) {
+    current_desired_speed = FanController_GetDesiredSpeed(1);
+    
+    if (current_desired_speed == 3000) {
+        FanController_SetDesiredSpeed(1, 4000);
+    } else if (current_desired_speed == 4000) {
+        FanController_SetDesiredSpeed(1, 3000);
+    }
+    Timer_ChangeSpeed_ClearInterrupt(Timer_ChangeSpeed_INTR_MASK_TC);
+
+}
+
+
+CY_ISR(Ouput_Speed_Isr_handler) {
+    
+    if (print_speed) {
+        current_rpm = FanController_GetActualSpeed(1);
+        sprintf(uart_rpm_buff, "%u", current_rpm);
+        UART_UartPutString(uart_rpm_buff);
+        UART_UartPutChar(' ');
+        
+        current_rpm = FanController_GetDesiredSpeed(1);
+        sprintf(uart_rpm_buff, "%u", current_rpm);
+        UART_UartPutString(uart_rpm_buff);
+        UART_UartPutChar('\n');
+        UART_UartPutChar('\r');
+    }
+    Timer_OutputSpeed_ClearInterrupt(Timer_ChangeSpeed_INTR_MASK_TC);
+}
+
 
 
 int main(void)
@@ -26,9 +60,12 @@ int main(void)
     /* Start Everything Up */
     FanController_Start();
     UART_Start();
+    Timer_ChangeSpeed_Start();
+    Timer_OutputSpeed_Start();
+    ISR_Timer_StartEx(Timer_Isr_Handler);
+    ISR_OutSpeed_StartEx(Ouput_Speed_Isr_handler);
 
     char ch;
-    int8 print_speed = 0;
     int16 speed_buf = 0;
     for(;;)
     {   
@@ -49,17 +86,18 @@ int main(void)
             speed_buf += ch - '0';
         }
         if(print_speed){
-            current_rpm = FanController_GetActualSpeed(1);
-            sprintf(uart_rpm_buff, "%u", current_rpm);
-            UART_UartPutChar('\n');
-            UART_UartPutChar('\r');
-            UART_UartPutString(uart_rpm_buff);
+            //current_rpm = FanController_GetActualSpeed(1);
+            //sprintf(uart_rpm_buff, "%u", current_rpm);
+            //UART_UartPutString(uart_rpm_buff);
+            //UART_UartPutChar(' ');
             
-            current_rpm = FanController_GetDesiredSpeed(1);
-            sprintf(uart_rpm_buff, "%u", current_rpm);
-            UART_UartPutChar('\n');
-            UART_UartPutChar('\r');
-            UART_UartPutString(uart_rpm_buff);
+            //current_rpm = FanController_GetDesiredSpeed(1);
+            //sprintf(uart_rpm_buff, "%u", current_rpm);
+            //UART_UartPutString(uart_rpm_buff);
+            //UART_UartPutChar('\n');
+            //UART_UartPutChar('\r');
+            
+            
         }
         else{
             UART_UartPutChar(ch);

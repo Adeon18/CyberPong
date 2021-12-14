@@ -2,7 +2,7 @@
 --	Conversion of CyberPong.v to vh2:
 --
 --	Cypress Semiconductor - WARP Version 6.3 IR 41
---	Tue Dec 07 09:58:23 2021
+--	Tue Dec 14 12:03:53 2021
 --
 
 USE cypress.cypress.all;
@@ -743,6 +743,32 @@ SIGNAL \FreqDiv_1:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_2\ : bit;
 SIGNAL \FreqDiv_1:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_1\ : bit;
 SIGNAL \FreqDiv_1:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_0\ : bit;
 SIGNAL \FreqDiv_1:MODULE_1:g2:a0:g1:z1:s0:g1:u0:b_0\ : bit;
+SIGNAL \Timer_ChangeSpeed:Net_81\ : bit;
+SIGNAL \Timer_ChangeSpeed:Net_75\ : bit;
+SIGNAL \Timer_ChangeSpeed:Net_69\ : bit;
+SIGNAL \Timer_ChangeSpeed:Net_66\ : bit;
+SIGNAL \Timer_ChangeSpeed:Net_82\ : bit;
+SIGNAL \Timer_ChangeSpeed:Net_72\ : bit;
+SIGNAL Net_689 : bit;
+SIGNAL Net_685 : bit;
+SIGNAL Net_679 : bit;
+SIGNAL Net_683 : bit;
+SIGNAL Net_684 : bit;
+SIGNAL Net_682 : bit;
+SIGNAL Net_680 : bit;
+SIGNAL \Timer_OutputSpeed:Net_81\ : bit;
+SIGNAL \Timer_OutputSpeed:Net_75\ : bit;
+SIGNAL \Timer_OutputSpeed:Net_69\ : bit;
+SIGNAL \Timer_OutputSpeed:Net_66\ : bit;
+SIGNAL \Timer_OutputSpeed:Net_82\ : bit;
+SIGNAL \Timer_OutputSpeed:Net_72\ : bit;
+SIGNAL Net_703 : bit;
+SIGNAL Net_699 : bit;
+SIGNAL Net_693 : bit;
+SIGNAL Net_697 : bit;
+SIGNAL Net_698 : bit;
+SIGNAL Net_696 : bit;
+SIGNAL Net_694 : bit;
 SIGNAL \FanController:drq\\D\ : bit;
 SIGNAL \FanController:B_FanCtrl:alert_reg\\D\ : bit;
 SIGNAL \FanController:B_FanCtrl:stall_alrt\\D\ : bit;
@@ -1648,6 +1674,62 @@ isr:cy_isr_v1_0
 \FreqDiv_1:MODULE_1:g2:a0:g1:z1:s0:g1:u0:gs(8):g2:g3:ub\:cy_buf
 	PORT MAP(x=>zero,
 		y=>\FreqDiv_1:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_8\);
+\Timer_ChangeSpeed:cy_m0s8_tcpwm_1\:cy_m0s8_tcpwm_v1_0
+	GENERIC MAP(cy_registers=>"")
+	PORT MAP(clock=>Net_680,
+		capture=>zero,
+		count=>tmpOE__Pin_A_net_0,
+		reload=>zero,
+		stop=>zero,
+		start=>zero,
+		underflow=>Net_689,
+		overflow=>Net_685,
+		compare_match=>Net_679,
+		line_out=>Net_683,
+		line_out_compl=>Net_684,
+		interrupt=>Net_682);
+ClockTimer:cy_clock_v1_0
+	GENERIC MAP(cy_registers=>"",
+		id=>"ce5cb4b6-7f92-46fc-becf-94f9c23b40a1",
+		source_clock_id=>"",
+		divisor=>0,
+		period=>"1000000000000",
+		is_direct=>'0',
+		is_digital=>'0')
+	PORT MAP(clock_out=>Net_680,
+		dig_domain_out=>open);
+ISR_Timer:cy_isr_v1_0
+	GENERIC MAP(int_type=>"10",
+		is_nmi=>'0')
+	PORT MAP(int_signal=>Net_682);
+\Timer_OutputSpeed:cy_m0s8_tcpwm_1\:cy_m0s8_tcpwm_v1_0
+	GENERIC MAP(cy_registers=>"")
+	PORT MAP(clock=>Net_694,
+		capture=>zero,
+		count=>tmpOE__Pin_A_net_0,
+		reload=>zero,
+		stop=>zero,
+		start=>zero,
+		underflow=>Net_703,
+		overflow=>Net_699,
+		compare_match=>Net_693,
+		line_out=>Net_697,
+		line_out_compl=>Net_698,
+		interrupt=>Net_696);
+Clock_1:cy_clock_v1_0
+	GENERIC MAP(cy_registers=>"",
+		id=>"9ca10909-bf75-4108-a54e-73e8c87d872e",
+		source_clock_id=>"",
+		divisor=>0,
+		period=>"1000000000000",
+		is_direct=>'0',
+		is_digital=>'0')
+	PORT MAP(clock_out=>Net_694,
+		dig_domain_out=>open);
+ISR_OutSpeed:cy_isr_v1_0
+	GENERIC MAP(int_type=>"10",
+		is_nmi=>'0')
+	PORT MAP(int_signal=>Net_696);
 \FanController:drq\:cy_dff
 	PORT MAP(d=>\FanController:FanTach:tach_data_ready\,
 		clk=>\FanController:FanTach:synced_tach_clock\,

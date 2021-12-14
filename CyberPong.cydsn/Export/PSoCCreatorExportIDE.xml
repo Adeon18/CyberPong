@@ -92,6 +92,8 @@
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\cycodeshareimport.ld</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\cycodeshareexport.ld</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\cycodeshareimport.scat</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Clock_1.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Clock_1.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\UART.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\UART.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\UART_SPI_UART.h</File>
@@ -135,6 +137,18 @@
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\FanController_FW_PWM1_PM.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\isr.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\isr.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\ClockTimer.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\ClockTimer.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\ISR_Timer.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\ISR_Timer.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Timer_ChangeSpeed.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Timer_ChangeSpeed.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Timer_ChangeSpeed_PM.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Timer_OutputSpeed.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Timer_OutputSpeed.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Timer_OutputSpeed_PM.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\ISR_OutSpeed.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\ISR_OutSpeed.h</File>
         </Files>
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\codegentemp">

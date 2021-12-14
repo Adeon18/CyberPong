@@ -1,6 +1,6 @@
 // ======================================================================
 // CyberPong.v generated from TopDesign.cysch
-// 12/07/2021 at 09:58
+// 12/14/2021 at 12:03
 // This file is auto generated. ANY EDITS YOU MAKE MAY BE LOST WHEN THIS FILE IS REGENERATED!!!
 // ======================================================================
 
@@ -592,7 +592,7 @@ endmodule
 `include "C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\CyComponentLibrary\CyComponentLibrary.cylib\B_FanTach_v4_10\B_FanTach_v4_10.v"
 `endif
 
-// FanController_v4_10(AcousticNoiseReduction=0, AlertEnable=0, CoefDerivative=40, CoefIntegral=100, CoefLowerOutputLimit=40, CoefOutputAttenuation=-20, CoefProportional=30, CoefUpperOutputLimit=100, Connection=1, CtlModeReplacementString=SyncCtl, DampingFactor=1, ExternalClock=0, FanMode=0, FanModeManual=false, FanPWMFreq=0, FanPWMRes=1, FanTolerance=1, InitialRPM01=4500, InitialRPM02=5000, InitialRPM03=5000, InitialRPM04=5000, InitialRPM05=5000, InitialRPM06=5000, InitialRPM07=5000, InitialRPM08=5000, InitialRPM09=5000, InitialRPM10=5000, InitialRPM11=5000, InitialRPM12=5000, InitialRPM13=5000, InitialRPM14=5000, InitialRPM15=5000, InitialRPM16=5000, MaxDuty01=100, MaxDuty02=100, MaxDuty03=100, MaxDuty04=100, MaxDuty05=100, MaxDuty06=100, MaxDuty07=100, MaxDuty08=100, MaxDuty09=100, MaxDuty10=100, MaxDuty11=100, MaxDuty12=100, MaxDuty13=100, MaxDuty14=100, MaxDuty15=100, MaxDuty16=100, MaxRPM01=4800, MaxRPM02=10000, MaxRPM03=10000, MaxRPM04=10000, MaxRPM05=10000, MaxRPM06=10000, MaxRPM07=10000, MaxRPM08=10000, MaxRPM09=10000, MaxRPM10=10000, MaxRPM11=10000, MaxRPM12=10000, MaxRPM13=10000, MaxRPM14=10000, MaxRPM15=10000, MaxRPM16=10000, MinDuty01=55, MinDuty02=25, MinDuty03=25, MinDuty04=25, MinDuty05=25, MinDuty06=25, MinDuty07=25, MinDuty08=25, MinDuty09=25, MinDuty10=25, MinDuty11=25, MinDuty12=25, MinDuty13=25, MinDuty14=25, MinDuty15=25, MinDuty16=25, MinRPM01=2200, MinRPM02=1000, MinRPM03=1000, MinRPM04=1000, MinRPM05=1000, MinRPM06=1000, MinRPM07=1000, MinRPM08=1000, MinRPM09=1000, MinRPM10=1000, MinRPM11=1000, MinRPM12=100, MinRPM13=100, MinRPM14=1000, MinRPM15=1000, MinRPM16=1000, MotorType=0, NineOrMoreFans=false, NumberOfBanks=0, NumberOfFanOutputs=1, NumberOfFans=1, pid_A1=6963, pid_A2=-4505, pid_A3=1638, pid_output_gain=20, pid_output_sat_H=1006632960, pid_output_sat_L=402653184, Psoc3or5=false, pwm_period=960, ShowFanOutputs=false, SpeedErrorCount=16, CY_API_CALLBACK_HEADER_INCLUDE=#include "cyapicallbacks.h", CY_COMMENT=, CY_COMPONENT_NAME=FanController_v4_10, CY_CONFIG_TITLE=FanController, CY_CONST_CONFIG=true, CY_CONTROL_FILE=<:default:>, CY_DATASHEET_FILE=<:default:>, CY_FITTER_NAME=FanController, CY_INSTANCE_SHORT_NAME=FanController, CY_MAJOR_VERSION=4, CY_MINOR_VERSION=10, CY_PDL_DRIVER_NAME=, CY_PDL_DRIVER_REQ_VERSION=, CY_PDL_DRIVER_SUBGROUP=, CY_PDL_DRIVER_VARIANT=, CY_REMOVE=false, CY_SUPPRESS_API_GEN=false, CY_VERSION=PSoC Creator  4.4, INSTANCE_NAME=FanController, )
+// FanController_v4_10(AcousticNoiseReduction=0, AlertEnable=0, CoefDerivative=0, CoefIntegral=60, CoefLowerOutputLimit=40, CoefOutputAttenuation=-20, CoefProportional=100, CoefUpperOutputLimit=100, Connection=1, CtlModeReplacementString=SyncCtl, DampingFactor=1, ExternalClock=0, FanMode=0, FanModeManual=false, FanPWMFreq=0, FanPWMRes=1, FanTolerance=1, InitialRPM01=4000, InitialRPM02=5000, InitialRPM03=5000, InitialRPM04=5000, InitialRPM05=5000, InitialRPM06=5000, InitialRPM07=5000, InitialRPM08=5000, InitialRPM09=5000, InitialRPM10=5000, InitialRPM11=5000, InitialRPM12=5000, InitialRPM13=5000, InitialRPM14=5000, InitialRPM15=5000, InitialRPM16=5000, MaxDuty01=100, MaxDuty02=100, MaxDuty03=100, MaxDuty04=100, MaxDuty05=100, MaxDuty06=100, MaxDuty07=100, MaxDuty08=100, MaxDuty09=100, MaxDuty10=100, MaxDuty11=100, MaxDuty12=100, MaxDuty13=100, MaxDuty14=100, MaxDuty15=100, MaxDuty16=100, MaxRPM01=4800, MaxRPM02=10000, MaxRPM03=10000, MaxRPM04=10000, MaxRPM05=10000, MaxRPM06=10000, MaxRPM07=10000, MaxRPM08=10000, MaxRPM09=10000, MaxRPM10=10000, MaxRPM11=10000, MaxRPM12=10000, MaxRPM13=10000, MaxRPM14=10000, MaxRPM15=10000, MaxRPM16=10000, MinDuty01=55, MinDuty02=25, MinDuty03=25, MinDuty04=25, MinDuty05=25, MinDuty06=25, MinDuty07=25, MinDuty08=25, MinDuty09=25, MinDuty10=25, MinDuty11=25, MinDuty12=25, MinDuty13=25, MinDuty14=25, MinDuty15=25, MinDuty16=25, MinRPM01=2200, MinRPM02=1000, MinRPM03=1000, MinRPM04=1000, MinRPM05=1000, MinRPM06=1000, MinRPM07=1000, MinRPM08=1000, MinRPM09=1000, MinRPM10=1000, MinRPM11=1000, MinRPM12=100, MinRPM13=100, MinRPM14=1000, MinRPM15=1000, MinRPM16=1000, MotorType=0, NineOrMoreFans=false, NumberOfBanks=0, NumberOfFanOutputs=1, NumberOfFans=1, pid_A1=6553, pid_A2=-4096, pid_A3=0, pid_output_gain=20, pid_output_sat_H=1006632960, pid_output_sat_L=402653184, Psoc3or5=false, pwm_period=960, ShowFanOutputs=false, SpeedErrorCount=16, CY_API_CALLBACK_HEADER_INCLUDE=#include "cyapicallbacks.h", CY_COMMENT=, CY_COMPONENT_NAME=FanController_v4_10, CY_CONFIG_TITLE=FanController, CY_CONST_CONFIG=true, CY_CONTROL_FILE=<:default:>, CY_DATASHEET_FILE=<:default:>, CY_FITTER_NAME=FanController, CY_INSTANCE_SHORT_NAME=FanController, CY_MAJOR_VERSION=4, CY_MINOR_VERSION=10, CY_PDL_DRIVER_NAME=, CY_PDL_DRIVER_REQ_VERSION=, CY_PDL_DRIVER_SUBGROUP=, CY_PDL_DRIVER_VARIANT=, CY_REMOVE=false, CY_SUPPRESS_API_GEN=false, CY_VERSION=PSoC Creator  4.4, INSTANCE_NAME=FanController, )
 module FanController_v4_10_2 (
     alert,
     bank,
@@ -1056,9 +1056,198 @@ endmodule
 `include "C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\CyComponentLibrary\CyComponentLibrary.cylib\FreqDiv_v1_0\FreqDiv_v1_0.v"
 `endif
 
+// TCPWM_P4_v2_10(Clock_CheckTolerance=true, Clock_desired_freq=12, Clock_desired_freq_unit=6, Clock_divisor=1, Clock_FractDividerDenominator=0, Clock_FractDividerNumerator=0, Clock_FractDividerUsed=false, Clock_is_direct=false, Clock_is_divider=false, Clock_is_freq=true, Clock_minus_tolerance=5, Clock_ph_align_clock_id=, Clock_ph_align_clock_name=, Clock_plus_tolerance=5, Clock_source_clock_id=, Clock_source_clock_name=, PinVisibility_index=false, PinVisibility_kill=false, PinVisibility_phiA=false, PinVisibility_phiB=false, PinVisibility_switch=false, PWMCompare=65535, PWMCompareBuf=65535, PWMCompareSwap=0, PWMCountMode=3, PWMCountPresent=false, PWMDeadTimeCycle=0, PWMInterruptMask=1, PWMKillEvent=0, PWMLinenSignal=0, PWMLineSignal=0, PWMMode=4, PWMPeriod=65535, PWMPeriodBuf=65535, PWMPeriodSwap=0, PWMPrescaler=0, PWMReloadMode=0, PWMReloadPresent=false, PWMRunMode=0, PWMSetAlign=0, PWMStartMode=0, PWMStartPresent=false, PWMStopEvent=0, PWMStopMode=0, PWMStopPresent=false, PWMSwitchMode=0, PWMSwitchPresent=false, QuadAutoStart=true, QuadEncodingModes=0, QuadIndexMode=0, QuadIndexPresent=false, QuadInterruptMask=1, QuadPhiAMode=3, QuadPhiBMode=3, QuadStopMode=0, QuadStopPresent=false, TCCaptureMode=0, TCCapturePresent=false, TCCompare=65535, TCCompareBuf=65535, TCCompareSwap=0, TCCompCapMode=2, TCCountingModes=0, TCCountMode=3, TCCountPresent=false, TCInterruptMask=1, TCPeriod=3000, TCPrescaler=0, TCPWMCapturePresent=false, TCPWMConfig=1, TCPWMCountPresent=false, TCPWMReloadPresent=false, TCPWMStartPresent=false, TCPWMStopPresent=false, TCReloadMode=0, TCReloadPresent=false, TCRunMode=0, TCStartMode=0, TCStartPresent=false, TCStopMode=0, TCStopPresent=false, TermMode_capture=0, TermMode_cc=0, TermMode_clock=0, TermMode_count=0, TermMode_interrupt=0, TermMode_line=0, TermMode_line_n=0, TermMode_ov=0, TermMode_reload=0, TermMode_start=0, TermMode_stop=0, TermMode_un=0, TermModeStates=, TermVisibility_capture=false, TermVisibility_cc=true, TermVisibility_clock=true, TermVisibility_count=false, TermVisibility_interrupt=true, TermVisibility_line=false, TermVisibility_line_n=false, TermVisibility_ov=true, TermVisibility_reload=false, TermVisibility_start=false, TermVisibility_stop=false, TermVisibility_un=true, CY_API_CALLBACK_HEADER_INCLUDE=#include "cyapicallbacks.h", CY_COMMENT=, CY_COMPONENT_NAME=TCPWM_P4_v2_10, CY_CONFIG_TITLE=Timer_ChangeSpeed, CY_CONST_CONFIG=true, CY_CONTROL_FILE=<:default:>, CY_DATASHEET_FILE=<:default:>, CY_FITTER_NAME=Timer_ChangeSpeed, CY_INSTANCE_SHORT_NAME=Timer_ChangeSpeed, CY_MAJOR_VERSION=2, CY_MINOR_VERSION=10, CY_PDL_DRIVER_NAME=, CY_PDL_DRIVER_REQ_VERSION=, CY_PDL_DRIVER_SUBGROUP=, CY_PDL_DRIVER_VARIANT=, CY_REMOVE=false, CY_SUPPRESS_API_GEN=false, CY_VERSION=PSoC Creator  4.4, INSTANCE_NAME=Timer_ChangeSpeed, )
+module TCPWM_P4_v2_10_3 (
+    capture,
+    cc,
+    clock,
+    count,
+    interrupt,
+    line,
+    line_n,
+    ov,
+    reload,
+    start,
+    stop,
+    un);
+    input       capture;
+    output      cc;
+    input       clock;
+    input       count;
+    output      interrupt;
+    output      line;
+    output      line_n;
+    output      ov;
+    input       reload;
+    input       start;
+    input       stop;
+    output      un;
+
+
+          wire  Net_64;
+          wire  Net_63;
+          wire  Net_85;
+          wire  Net_62;
+          wire  Net_110;
+          wire  Net_95;
+          wire  Net_106;
+          wire  Net_104;
+          wire  Net_109;
+          wire  Net_98;
+          wire  Net_108;
+          wire  Net_101;
+          wire  Net_66;
+          wire  Net_81;
+          wire  Net_75;
+          wire  Net_69;
+          wire  Net_82;
+          wire  Net_72;
+
+    cy_m0s8_tcpwm_v1_0 cy_m0s8_tcpwm_1 (
+        .capture(Net_75),
+        .clock(Net_81),
+        .compare_match(cc),
+        .count(Net_69),
+        .interrupt(interrupt),
+        .line_out(line),
+        .line_out_compl(line_n),
+        .overflow(ov),
+        .reload(Net_66),
+        .start(Net_72),
+        .stop(Net_82),
+        .underflow(un));
+
+	// VMux_reload (cy_virtualmux_v1_0)
+	assign Net_66 = reload;
+
+	// VMux_count (cy_virtualmux_v1_0)
+	assign Net_69 = count;
+
+	// VMux_start (cy_virtualmux_v1_0)
+	assign Net_72 = start;
+
+	// VMux_capture (cy_virtualmux_v1_0)
+	assign Net_75 = capture;
+
+	// VMux_stop (cy_virtualmux_v1_0)
+	assign Net_82 = stop;
+
+	// VMux_clock (cy_virtualmux_v1_0)
+	assign Net_81 = clock;
+
+
+
+endmodule
+
+// TCPWM_P4_v2_10(Clock_CheckTolerance=true, Clock_desired_freq=12, Clock_desired_freq_unit=6, Clock_divisor=1, Clock_FractDividerDenominator=0, Clock_FractDividerNumerator=0, Clock_FractDividerUsed=false, Clock_is_direct=false, Clock_is_divider=false, Clock_is_freq=true, Clock_minus_tolerance=5, Clock_ph_align_clock_id=, Clock_ph_align_clock_name=, Clock_plus_tolerance=5, Clock_source_clock_id=, Clock_source_clock_name=, PinVisibility_index=false, PinVisibility_kill=false, PinVisibility_phiA=false, PinVisibility_phiB=false, PinVisibility_switch=false, PWMCompare=65535, PWMCompareBuf=65535, PWMCompareSwap=0, PWMCountMode=3, PWMCountPresent=false, PWMDeadTimeCycle=0, PWMInterruptMask=1, PWMKillEvent=0, PWMLinenSignal=0, PWMLineSignal=0, PWMMode=4, PWMPeriod=65535, PWMPeriodBuf=65535, PWMPeriodSwap=0, PWMPrescaler=0, PWMReloadMode=0, PWMReloadPresent=false, PWMRunMode=0, PWMSetAlign=0, PWMStartMode=0, PWMStartPresent=false, PWMStopEvent=0, PWMStopMode=0, PWMStopPresent=false, PWMSwitchMode=0, PWMSwitchPresent=false, QuadAutoStart=true, QuadEncodingModes=0, QuadIndexMode=0, QuadIndexPresent=false, QuadInterruptMask=1, QuadPhiAMode=3, QuadPhiBMode=3, QuadStopMode=0, QuadStopPresent=false, TCCaptureMode=0, TCCapturePresent=false, TCCompare=65535, TCCompareBuf=65535, TCCompareSwap=0, TCCompCapMode=2, TCCountingModes=0, TCCountMode=3, TCCountPresent=false, TCInterruptMask=1, TCPeriod=3, TCPrescaler=0, TCPWMCapturePresent=false, TCPWMConfig=1, TCPWMCountPresent=false, TCPWMReloadPresent=false, TCPWMStartPresent=false, TCPWMStopPresent=false, TCReloadMode=0, TCReloadPresent=false, TCRunMode=0, TCStartMode=0, TCStartPresent=false, TCStopMode=0, TCStopPresent=false, TermMode_capture=0, TermMode_cc=0, TermMode_clock=0, TermMode_count=0, TermMode_interrupt=0, TermMode_line=0, TermMode_line_n=0, TermMode_ov=0, TermMode_reload=0, TermMode_start=0, TermMode_stop=0, TermMode_un=0, TermModeStates=, TermVisibility_capture=false, TermVisibility_cc=true, TermVisibility_clock=true, TermVisibility_count=false, TermVisibility_interrupt=true, TermVisibility_line=false, TermVisibility_line_n=false, TermVisibility_ov=true, TermVisibility_reload=false, TermVisibility_start=false, TermVisibility_stop=false, TermVisibility_un=true, CY_API_CALLBACK_HEADER_INCLUDE=#include "cyapicallbacks.h", CY_COMMENT=, CY_COMPONENT_NAME=TCPWM_P4_v2_10, CY_CONFIG_TITLE=Timer_OutputSpeed, CY_CONST_CONFIG=true, CY_CONTROL_FILE=<:default:>, CY_DATASHEET_FILE=<:default:>, CY_FITTER_NAME=Timer_OutputSpeed, CY_INSTANCE_SHORT_NAME=Timer_OutputSpeed, CY_MAJOR_VERSION=2, CY_MINOR_VERSION=10, CY_PDL_DRIVER_NAME=, CY_PDL_DRIVER_REQ_VERSION=, CY_PDL_DRIVER_SUBGROUP=, CY_PDL_DRIVER_VARIANT=, CY_REMOVE=false, CY_SUPPRESS_API_GEN=false, CY_VERSION=PSoC Creator  4.4, INSTANCE_NAME=Timer_OutputSpeed, )
+module TCPWM_P4_v2_10_4 (
+    capture,
+    cc,
+    clock,
+    count,
+    interrupt,
+    line,
+    line_n,
+    ov,
+    reload,
+    start,
+    stop,
+    un);
+    input       capture;
+    output      cc;
+    input       clock;
+    input       count;
+    output      interrupt;
+    output      line;
+    output      line_n;
+    output      ov;
+    input       reload;
+    input       start;
+    input       stop;
+    output      un;
+
+
+          wire  Net_64;
+          wire  Net_63;
+          wire  Net_85;
+          wire  Net_62;
+          wire  Net_110;
+          wire  Net_95;
+          wire  Net_106;
+          wire  Net_104;
+          wire  Net_109;
+          wire  Net_98;
+          wire  Net_108;
+          wire  Net_101;
+          wire  Net_66;
+          wire  Net_81;
+          wire  Net_75;
+          wire  Net_69;
+          wire  Net_82;
+          wire  Net_72;
+
+    cy_m0s8_tcpwm_v1_0 cy_m0s8_tcpwm_1 (
+        .capture(Net_75),
+        .clock(Net_81),
+        .compare_match(cc),
+        .count(Net_69),
+        .interrupt(interrupt),
+        .line_out(line),
+        .line_out_compl(line_n),
+        .overflow(ov),
+        .reload(Net_66),
+        .start(Net_72),
+        .stop(Net_82),
+        .underflow(un));
+
+	// VMux_reload (cy_virtualmux_v1_0)
+	assign Net_66 = reload;
+
+	// VMux_count (cy_virtualmux_v1_0)
+	assign Net_69 = count;
+
+	// VMux_start (cy_virtualmux_v1_0)
+	assign Net_72 = start;
+
+	// VMux_capture (cy_virtualmux_v1_0)
+	assign Net_75 = capture;
+
+	// VMux_stop (cy_virtualmux_v1_0)
+	assign Net_82 = stop;
+
+	// VMux_clock (cy_virtualmux_v1_0)
+	assign Net_81 = clock;
+
+
+
+endmodule
+
 // top
 module top ;
 
+          wire  Net_705;
+          wire  Net_703;
+          wire  Net_702;
+          wire  Net_701;
+          wire  Net_700;
+          wire  Net_699;
+          wire  Net_698;
+          wire  Net_697;
+          wire  Net_695;
+          wire  Net_694;
+          wire  Net_693;
+          wire  Net_692;
+          wire  Net_691;
+          wire  Net_689;
+          wire  Net_688;
+          wire  Net_687;
+          wire  Net_686;
+          wire  Net_685;
+          wire  Net_684;
+          wire  Net_683;
+          wire  Net_681;
+          wire  Net_679;
+          wire  Net_678;
           wire  Net_674;
           wire  Net_672;
           wire  Net_609;
@@ -1127,6 +1316,9 @@ module top ;
           wire  Net_187;
           wire  Net_186;
           wire  Net_185;
+          wire  Net_696;
+          wire  Net_680;
+          wire  Net_682;
           wire  Net_676;
           wire  Net_675;
           wire  Net_656;
@@ -1447,6 +1639,72 @@ module top ;
     defparam FreqDiv_1.Divider = 2;
     defparam FreqDiv_1.highPulse = 1;
     defparam FreqDiv_1.numBits = 1;
+
+    TCPWM_P4_v2_10_3 Timer_ChangeSpeed (
+        .capture(1'b0),
+        .cc(Net_679),
+        .clock(Net_680),
+        .count(1'b1),
+        .interrupt(Net_682),
+        .line(Net_683),
+        .line_n(Net_684),
+        .ov(Net_685),
+        .reload(1'b0),
+        .start(1'b0),
+        .stop(1'b0),
+        .un(Net_689));
+
+
+	cy_clock_v1_0
+		#(.id("ce5cb4b6-7f92-46fc-becf-94f9c23b40a1"),
+		  .source_clock_id(""),
+		  .divisor(0),
+		  .period("1000000000000"),
+		  .is_direct(0),
+		  .is_digital(0))
+		ClockTimer
+		 (.clock_out(Net_680));
+
+
+
+	cy_isr_v1_0
+		#(.int_type(2'b10))
+		ISR_Timer
+		 (.int_signal(Net_682));
+
+
+    TCPWM_P4_v2_10_4 Timer_OutputSpeed (
+        .capture(1'b0),
+        .cc(Net_693),
+        .clock(Net_694),
+        .count(1'b1),
+        .interrupt(Net_696),
+        .line(Net_697),
+        .line_n(Net_698),
+        .ov(Net_699),
+        .reload(1'b0),
+        .start(1'b0),
+        .stop(1'b0),
+        .un(Net_703));
+
+
+	cy_clock_v1_0
+		#(.id("9ca10909-bf75-4108-a54e-73e8c87d872e"),
+		  .source_clock_id(""),
+		  .divisor(0),
+		  .period("1000000000000"),
+		  .is_direct(0),
+		  .is_digital(0))
+		Clock_1
+		 (.clock_out(Net_694));
+
+
+
+	cy_isr_v1_0
+		#(.int_type(2'b10))
+		ISR_OutSpeed
+		 (.int_signal(Net_696));
+
 
 
 

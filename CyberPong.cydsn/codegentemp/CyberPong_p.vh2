@@ -1,5 +1,5 @@
 -- Project:   CyberPong
--- Generated: 12/07/2021 09:58:23
+-- Generated: 12/14/2021 12:03:54
 -- PSoC Creator  4.4
 
 ENTITY CyberPong IS
@@ -40,6 +40,22 @@ ARCHITECTURE __DEFAULT__ OF CyberPong IS
     SIGNAL Net_656 : bit;
     SIGNAL Net_675 : bit;
     SIGNAL Net_676 : bit;
+    SIGNAL Net_679 : bit;
+    SIGNAL Net_680_ff9 : bit;
+    ATTRIBUTE global_signal OF Net_680_ff9 : SIGNAL IS true;
+    SIGNAL Net_682 : bit;
+    SIGNAL Net_683 : bit;
+    SIGNAL Net_684 : bit;
+    SIGNAL Net_685 : bit;
+    SIGNAL Net_689 : bit;
+    SIGNAL Net_693 : bit;
+    SIGNAL Net_694_ff8 : bit;
+    ATTRIBUTE global_signal OF Net_694_ff8 : SIGNAL IS true;
+    SIGNAL Net_696 : bit;
+    SIGNAL Net_697 : bit;
+    SIGNAL Net_698 : bit;
+    SIGNAL Net_699 : bit;
+    SIGNAL Net_703 : bit;
     SIGNAL Pin_A(0)__PA : bit;
     SIGNAL Pin_B(0)__PA : bit;
     SIGNAL Pin_Input(0)__PA : bit;
@@ -584,7 +600,9 @@ BEGIN
             ff_div_7 => \FanController:fan_clk_ff7\,
             udb_div_0 => dclk_to_genclk,
             ff_div_1 => \UART:Net_847_ff1\,
-            udb_div_1 => dclk_to_genclk_1);
+            udb_div_1 => dclk_to_genclk_1,
+            ff_div_8 => Net_694_ff8,
+            ff_div_9 => Net_680_ff9);
 
     Pin_A:logicalport
         GENERIC MAP(
@@ -1367,6 +1385,56 @@ BEGIN
             cfbi => \FanController:FanTach:FanTachCounter:u0.cfbo__sig\,
             sor => \FanController:FanTach:FanTachCounter:u1.sor__sig\,
             cmsbo => \FanController:FanTach:FanTachCounter:u1.cmsbo__sig\);
+
+    \Timer_ChangeSpeed:cy_m0s8_tcpwm_1\:m0s8tcpwmcell
+        GENERIC MAP(
+            cy_registers => "")
+        PORT MAP(
+            clock => Net_680_ff9,
+            capture => '0',
+            count => '1',
+            reload => '0',
+            stop => '0',
+            start => '0',
+            tr_underflow => Net_689,
+            tr_overflow => Net_685,
+            tr_compare_match => Net_679,
+            line => Net_683,
+            line_compl => Net_684,
+            interrupt => Net_682);
+
+    ISR_Timer:interrupt
+        GENERIC MAP(
+            int_type => "10",
+            is_nmi => 0)
+        PORT MAP(
+            interrupt => Net_682,
+            clock => ClockBlock_HFClk);
+
+    \Timer_OutputSpeed:cy_m0s8_tcpwm_1\:m0s8tcpwmcell
+        GENERIC MAP(
+            cy_registers => "")
+        PORT MAP(
+            clock => Net_694_ff8,
+            capture => '0',
+            count => '1',
+            reload => '0',
+            stop => '0',
+            start => '0',
+            tr_underflow => Net_703,
+            tr_overflow => Net_699,
+            tr_compare_match => Net_693,
+            line => Net_697,
+            line_compl => Net_698,
+            interrupt => Net_696);
+
+    ISR_OutSpeed:interrupt
+        GENERIC MAP(
+            int_type => "10",
+            is_nmi => 0)
+        PORT MAP(
+            interrupt => Net_696,
+            clock => ClockBlock_HFClk);
 
     \FanController:drq\:macrocell
         GENERIC MAP(

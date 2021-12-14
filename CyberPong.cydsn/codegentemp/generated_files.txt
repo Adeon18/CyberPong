@@ -43,6 +43,20 @@
   <file name="C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn\codegentemp\FanController.c" value="SOURCE_C;CortexM0;;;;FanController" />
   <file name="C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn\codegentemp\FanController.h" value="HEADER;;;;;FanController" />
   <file name="C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn\codegentemp\FanController_INT.c" value="SOURCE_C;CortexM0;;;;FanController" />
+  <file name="C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn\codegentemp\Timer_ChangeSpeed.c" value="SOURCE_C;CortexM0;;;;Timer_ChangeSpeed" />
+  <file name="C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn\codegentemp\Timer_ChangeSpeed.h" value="HEADER;;;;;Timer_ChangeSpeed" />
+  <file name="C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn\codegentemp\Timer_ChangeSpeed_PM.c" value="SOURCE_C;CortexM0;;;;Timer_ChangeSpeed" />
+  <file name="C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn\codegentemp\ClockTimer.c" value="SOURCE_C;CortexM0;;;;ClockTimer" />
+  <file name="C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn\codegentemp\ClockTimer.h" value="HEADER;;;;;ClockTimer" />
+  <file name="C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn\codegentemp\ISR_Timer.c" value="SOURCE_C;CortexM0;;;;ISR_Timer" />
+  <file name="C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn\codegentemp\ISR_Timer.h" value="HEADER;;;;;ISR_Timer" />
+  <file name="C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn\codegentemp\Timer_OutputSpeed.c" value="SOURCE_C;CortexM0;;;;Timer_OutputSpeed" />
+  <file name="C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn\codegentemp\Timer_OutputSpeed.h" value="HEADER;;;;;Timer_OutputSpeed" />
+  <file name="C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn\codegentemp\Timer_OutputSpeed_PM.c" value="SOURCE_C;CortexM0;;;;Timer_OutputSpeed" />
+  <file name="C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn\codegentemp\Clock_1.c" value="SOURCE_C;CortexM0;;;;Clock_1" />
+  <file name="C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn\codegentemp\Clock_1.h" value="HEADER;;;;;Clock_1" />
+  <file name="C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn\codegentemp\ISR_OutSpeed.c" value="SOURCE_C;CortexM0;;;;ISR_OutSpeed" />
+  <file name="C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn\codegentemp\ISR_OutSpeed.h" value="HEADER;;;;;ISR_OutSpeed" />
   <file name="C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn\codegentemp\UART_SCBCLK.c" value="SOURCE_C;CortexM0;;;;UART_SCBCLK" />
   <file name="C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn\codegentemp\UART_SCBCLK.h" value="HEADER;;;;;UART_SCBCLK" />
   <file name="C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn\codegentemp\UART_tx.c" value="SOURCE_C;CortexM0;;;;UART_tx" />
