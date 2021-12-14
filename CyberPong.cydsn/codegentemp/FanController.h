@@ -67,14 +67,14 @@
 
 /* PID Constants */
 #if(FanController_IS_AUTO_FIRMWARE_MODE)
-    #define FanController_PID_A1             (6553)
-    #define FanController_PID_A2             (-4096)
-    #define FanController_PID_A3             (0)
+    #define FanController_PID_A1             (6963)
+    #define FanController_PID_A2             (-6553)
+    #define FanController_PID_A3             (1228)
 
-    #define FanController_PID_POST_GAIN      (20u)
+    #define FanController_PID_POST_GAIN      (16u)
 
-    #define FanController_PID_OUTPUT_SAT_L   (402653184u)
-    #define FanController_PID_OUTPUT_SAT_H   (1006632960u)
+    #define FanController_PID_OUTPUT_SAT_L   (25165824u)
+    #define FanController_PID_OUTPUT_SAT_H   (62914560u)
 
     /* PID error low and high saturation. These are constants defined
     * by EROS to be (-4096) and (4096) respectively.
