@@ -1,4 +1,4 @@
---------------- Build Started: 12/14/2021 14:39:47 Project: CyberPong, Configuration: ARM GCC 5.4-2016-q2-update Debug ---------------
+--------------- Build Started: 12/15/2021 13:08:08 Project: CyberPong, Configuration: ARM GCC 5.4-2016-q2-update Debug ---------------
 cydsfit.exe -.appdatapath "C:\Users\Ade0n\AppData\Local\Cypress Semiconductor\PSoC Creator\4.4" -.fdsnotice -.fdswarpdepfile=warp_dependencies.txt -.fdselabdepfile=elab_dependencies.txt -.fdsbldfile=generated_files.txt -.fdsreffile=referenced_files.txt -p C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn\CyberPong.cyprj -d CY8C4248LQI-BL583 -s C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn\Generated_Source\PSoC4 -- -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE
 Elaborating Design...
 HDL Generation...
@@ -36,6 +36,6 @@ No ELF section .cychecksum found, creating one
 Application checksum calculated and stored in ELF section .cychecksum
 Checksum calculated and stored in ELF section .cymeta
 cyelftool.exe -S C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn\CortexM0\ARM_GCC_541\Debug\CyberPong.elf
-Flash used: 8630 of 262144 bytes (3.3%).
+Flash used: 8430 of 262144 bytes (3.2%).
 SRAM used: 2680 of 32768 bytes (8.2%). Stack: 2048 bytes. Heap: 128 bytes.
---------------- Build Succeeded: 12/14/2021 14:40:19 ---------------
+--------------- Build Succeeded: 12/15/2021 13:08:26 ---------------
