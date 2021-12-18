@@ -129,7 +129,7 @@ extern uint8  Timer_ChangeSpeed_initVar;
 ***************************************/
 
 /* Timer/Counter Mode */
-#define Timer_ChangeSpeed_TC_PERIOD_VALUE                (3000lu)
+#define Timer_ChangeSpeed_TC_PERIOD_VALUE                (1000lu)
 #define Timer_ChangeSpeed_TC_COMPARE_VALUE               (65535lu)
 #define Timer_ChangeSpeed_TC_COMPARE_BUF_VALUE           (65535lu)
 #define Timer_ChangeSpeed_TC_COMPARE_SWAP                (0lu)

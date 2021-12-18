@@ -62,7 +62,7 @@ int main(void)
     UART_Start();
     Timer_ChangeSpeed_Start();
     Timer_OutputSpeed_Start();
-    //ISR_Timer_StartEx(Timer_Isr_Handler);
+    ISR_Timer_StartEx(Timer_Isr_Handler);
     ISR_OutSpeed_StartEx(Ouput_Speed_Isr_handler);
 
     char ch;
