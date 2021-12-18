@@ -8,13 +8,5 @@ This is the Ping Pong Exersice Machine that Uses 4 DC Motors and in order to sho
 What is used in this project(currently):
 - PSOC 4200 BLE(CY8CKIT-042-BLE-A to be exact).
 - 4 RoHS 18152522 R DC Motors.
-- L9110 Motor Driver
+- L298N Motor Driver
 - 12V Power supply.
-
-### Current Project Look
-
-![image](img/current_proj_state.png)
-
-### Current Psoc TopDesign
-
-![image](img/psoc_topdesign.png)
