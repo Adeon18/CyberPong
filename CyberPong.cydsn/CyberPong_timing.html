@@ -539,7 +539,7 @@ function getElementsByClass(rootNode, elemName, className)
 <tr> <td class="prop"> Project :</td>
 <td class="proptext"> CyberPong</td></tr>
 <tr> <td class="prop"> Build Time :</td>
-<td class="proptext"> 12/18/21 10:20:59</td></tr>
+<td class="proptext"> 01/12/22 18:48:00</td></tr>
 <tr> <td class="prop"> Device :</td>
 <td class="proptext"> CY8C4248LQI-BL583</td></tr>
 <tr> <td class="prop"> Temperature :</td>
@@ -581,28 +581,7 @@ function getElementsByClass(rootNode, elemName, className)
 <span class="sec_head"><span style="font-family: monospace;">+</span>
 Timing Violation Section</span>
 </a>
-</div><div class="vio_sta_secbody"><div class="sta_sec_desc"></div>
-<table class="sta_tpd">
- <thead> 
-<tr> 
-<th>Violation</th>
-<th>Source Clock</th>
-<th>Destination Clock</th>
-<th>Slack(ns)</th>
-</tr>
-</thead> 
-<tbody>
-<tr> 
- <td colspan="4" class = "text_info">Async</td>
-</tr>
-<tr class="sta_tv tv1">
- <td class = "text_info"> </td>
- <td class = "text_info">Pin_Input(0)_PAD</td>
- <td class = "text_info">FanController_TACH_CLK_500K</td>
- <td class = "text_info"> </td>
-</tr>
-</tbody>
- </table> 
+</div><div class="vio_sta_secbody"><div class="sta_sec_desc">No Timing Violations</div>
 </div>
 </div>
 <div class="sta_sec" id="clock_summary">
@@ -624,22 +603,6 @@ Clock Summary Section</span>
 </thead> 
 <tbody>
 <tr> 
- <td class = "text_info">ClockTimer(FFB)</td>
- <td class = "text_info">ClockTimer(FFB)</td>
- <td class = "number">1.000&nbsp;kHz</td>
- <td class = "number">1.000&nbsp;kHz</td>
- <td class = "number"> N/A </td>
- <td class = "text_info"> </td>
-</tr>
-<tr> 
- <td class = "text_info">Clock_1(FFB)</td>
- <td class = "text_info">Clock_1(FFB)</td>
- <td class = "number">1.000&nbsp;kHz</td>
- <td class = "number">1.000&nbsp;kHz</td>
- <td class = "number"> N/A </td>
- <td class = "text_info"> </td>
-</tr>
-<tr> 
  <td class = "text_info">CyECO</td>
  <td class = "text_info">CyECO</td>
  <td class = "number">24.000&nbsp;MHz</td>
@@ -652,16 +615,16 @@ Clock Summary Section</span>
  <td class = "text_info">CyHFClk</td>
  <td class = "number">48.000&nbsp;MHz</td>
  <td class = "number">48.000&nbsp;MHz</td>
- <td class = "number">74.505&nbsp;MHz</td>
+ <td class = "number">74.085&nbsp;MHz</td>
  <td class = "text_info"></td>
 </tr>
 <tr> 
- <td class = "text_info">ClockTimer</td>
+ <td class = "text_info">FanController_PWM_CLOCK_25k_10b_1</td>
  <td class = "text_info">CyHFClk</td>
- <td class = "number">1.000&nbsp;kHz</td>
- <td class = "number">1.000&nbsp;kHz</td>
- <td class = "number"> N/A </td>
- <td class = "text_info"> </td>
+ <td class = "number">24.000&nbsp;MHz</td>
+ <td class = "number">24.000&nbsp;MHz</td>
+ <td class = "number">72.839&nbsp;MHz</td>
+ <td class = "text_info"></td>
 </tr>
 <tr> 
  <td class = "text_info">UART_SCBCLK</td>
@@ -672,27 +635,11 @@ Clock Summary Section</span>
  <td class = "text_info"> </td>
 </tr>
 <tr> 
- <td class = "text_info">FanController_PWM_CLOCK_25k_10b_1</td>
- <td class = "text_info">CyHFClk</td>
- <td class = "number">24.000&nbsp;MHz</td>
- <td class = "number">24.000&nbsp;MHz</td>
- <td class = "number">71.327&nbsp;MHz</td>
- <td class = "text_info"></td>
-</tr>
-<tr> 
- <td class = "text_info">Clock_1</td>
- <td class = "text_info">CyHFClk</td>
- <td class = "number">1.000&nbsp;kHz</td>
- <td class = "number">1.000&nbsp;kHz</td>
- <td class = "number"> N/A </td>
- <td class = "text_info"> </td>
-</tr>
-<tr> 
  <td class = "text_info">FanController_TACH_CLK_500K</td>
  <td class = "text_info">CyHFClk</td>
  <td class = "number">500.000&nbsp;kHz</td>
  <td class = "number">500.000&nbsp;kHz</td>
- <td class = "number">37.882&nbsp;MHz</td>
+ <td class = "number">36.256&nbsp;MHz</td>
  <td class = "text_info"></td>
 </tr>
 <tr> 
@@ -749,14 +696,6 @@ Clock Summary Section</span>
  <td class = "number">24.000&nbsp;MHz</td>
  <td class = "number">24.000&nbsp;MHz</td>
  <td class = "number"> N/A </td>
- <td class = "text_info"> </td>
-</tr>
-<tr> 
- <td class = "text_info">Pin_Input(0)_PAD</td>
- <td class = "text_info">Pin_Input(0)_PAD</td>
- <td class = "number">UNKNOWN</td>
- <td class = "number">UNKNOWN</td>
- <td class = "number">107.793&nbsp;MHz</td>
  <td class = "text_info"> </td>
 </tr>
 <tr> 
@@ -811,10 +750,10 @@ Destination Clock : FanController_TACH_CLK_500K : Positive edge(Required Frequen
 <tbody>
 <tr> 
  <td class = "text_info">\FanController:FanTach:FanTachCounter:u0\/f0_bus_stat_comb</td>
- <td class = "text_info">\FanController:FanTach:tach_state_0\/main_5</td>
- <td class = "number">74.505&nbsp;MHz</td>
- <td class = "number">13.422</td>
- <td class = "number">7.411</td>
+ <td class = "text_info">\FanController:drq\/main_0</td>
+ <td class = "number">74.085&nbsp;MHz</td>
+ <td class = "number">13.498</td>
+ <td class = "number">7.335</td>
  <td class = "text_info"></td>
 </tr>
 <tr class="sta_path">
@@ -834,70 +773,7 @@ Destination Clock : FanController_TACH_CLK_500K : Positive edge(Required Frequen
 <tbody>
 <tr> 
  <td class = "text_info">datapathcell3</td>
- <td class = "text_info">U(1,0)</td>
- <td class = "number">1</td>
- <td class = "text_info">\FanController:FanTach:FanTachCounter:u0\</td>
- <td class = "text_info">\FanController:FanTach:FanTachCounter:u0\/busclk</td>
- <td class = "text_info">\FanController:FanTach:FanTachCounter:u0\/f0_bus_stat_comb</td>
- <td class = "number">7.210</td>
-</tr>
-<tr> 
- <td class = "text_info">Route</td>
- <td class = "text_info"> </td>
- <td class = "number">1</td>
- <td class = "text_info">\FanController:FanTach:tach_data_ready\</td>
- <td class = "text_info">\FanController:FanTach:FanTachCounter:u0\/f0_bus_stat_comb</td>
- <td class = "text_info">\FanController:FanTach:tach_state_0\/main_5</td>
- <td class = "number">2.702</td>
-</tr>
-<tr> 
- <td class = "text_info">macrocell16</td>
- <td class = "text_info">U(1,0)</td>
- <td class = "number">1</td>
- <td class = "text_info">\FanController:FanTach:tach_state_0\</td>
- <td class = "text_info"></td>
- <td class = "text_info">SETUP</td>
- <td class = "number">3.510</td>
-</tr>
-<tr> 
- <td class = "text_info">Clock</td>
- <td class = "text_info"> </td>
- <td class = "text_info"></td>
- <td class = "text_info"></td>
- <td class = "text_info"></td>
- <td class = "text_info">Skew</td>
- <td class = "number">0.000</td>
-</tr>
-</tbody>
- </table> 
-</td>
-</tr>
-<tr> 
- <td class = "text_info">\FanController:FanTach:FanTachCounter:u0\/f0_bus_stat_comb</td>
- <td class = "text_info">\FanController:drq\/main_0</td>
- <td class = "number">74.538&nbsp;MHz</td>
- <td class = "number">13.416</td>
- <td class = "number">7.417</td>
- <td class = "text_info"></td>
-</tr>
-<tr class="sta_path">
-<td class="sta_path"  colspan="6">
-<table class="sta_path">
- <thead> 
-<tr> 
-<th>Type</th>
-<th>Location</th>
-<th>Fanout</th>
-<th>Instance/Net</th>
-<th>Source</th>
-<th>Dest</th>
-<th>Delay (ns)</th>
-</tr>
-</thead> 
-<tbody>
-<tr> 
- <td class = "text_info">datapathcell3</td>
- <td class = "text_info">U(1,0)</td>
+ <td class = "text_info">U(0,1)</td>
  <td class = "number">1</td>
  <td class = "text_info">\FanController:FanTach:FanTachCounter:u0\</td>
  <td class = "text_info">\FanController:FanTach:FanTachCounter:u0\/busclk</td>
@@ -911,11 +787,11 @@ Destination Clock : FanController_TACH_CLK_500K : Positive edge(Required Frequen
  <td class = "text_info">\FanController:FanTach:tach_data_ready\</td>
  <td class = "text_info">\FanController:FanTach:FanTachCounter:u0\/f0_bus_stat_comb</td>
  <td class = "text_info">\FanController:drq\/main_0</td>
- <td class = "number">2.696</td>
+ <td class = "number">2.778</td>
 </tr>
 <tr> 
  <td class = "text_info">macrocell3</td>
- <td class = "text_info">U(1,0)</td>
+ <td class = "text_info">U(0,1)</td>
  <td class = "number">1</td>
  <td class = "text_info">\FanController:drq\</td>
  <td class = "text_info"></td>
@@ -938,9 +814,9 @@ Destination Clock : FanController_TACH_CLK_500K : Positive edge(Required Frequen
 <tr> 
  <td class = "text_info">\FanController:FanTach:FanTachCounter:u0\/f0_bus_stat_comb</td>
  <td class = "text_info">\FanController:FanTach:sync2_tach_cnt3\/main_5</td>
- <td class = "number">74.538&nbsp;MHz</td>
- <td class = "number">13.416</td>
- <td class = "number">7.417</td>
+ <td class = "number">74.085&nbsp;MHz</td>
+ <td class = "number">13.498</td>
+ <td class = "number">7.335</td>
  <td class = "text_info"></td>
 </tr>
 <tr class="sta_path">
@@ -960,7 +836,7 @@ Destination Clock : FanController_TACH_CLK_500K : Positive edge(Required Frequen
 <tbody>
 <tr> 
  <td class = "text_info">datapathcell3</td>
- <td class = "text_info">U(1,0)</td>
+ <td class = "text_info">U(0,1)</td>
  <td class = "number">1</td>
  <td class = "text_info">\FanController:FanTach:FanTachCounter:u0\</td>
  <td class = "text_info">\FanController:FanTach:FanTachCounter:u0\/busclk</td>
@@ -974,13 +850,76 @@ Destination Clock : FanController_TACH_CLK_500K : Positive edge(Required Frequen
  <td class = "text_info">\FanController:FanTach:tach_data_ready\</td>
  <td class = "text_info">\FanController:FanTach:FanTachCounter:u0\/f0_bus_stat_comb</td>
  <td class = "text_info">\FanController:FanTach:sync2_tach_cnt3\/main_5</td>
- <td class = "number">2.696</td>
+ <td class = "number">2.778</td>
 </tr>
 <tr> 
  <td class = "text_info">macrocell17</td>
- <td class = "text_info">U(1,0)</td>
+ <td class = "text_info">U(0,1)</td>
  <td class = "number">1</td>
  <td class = "text_info">\FanController:FanTach:sync2_tach_cnt3\</td>
+ <td class = "text_info"></td>
+ <td class = "text_info">SETUP</td>
+ <td class = "number">3.510</td>
+</tr>
+<tr> 
+ <td class = "text_info">Clock</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info">Skew</td>
+ <td class = "number">0.000</td>
+</tr>
+</tbody>
+ </table> 
+</td>
+</tr>
+<tr> 
+ <td class = "text_info">\FanController:FanTach:FanTachCounter:u0\/f0_bus_stat_comb</td>
+ <td class = "text_info">\FanController:FanTach:tach_state_0\/main_5</td>
+ <td class = "number">74.151&nbsp;MHz</td>
+ <td class = "number">13.486</td>
+ <td class = "number">7.347</td>
+ <td class = "text_info"></td>
+</tr>
+<tr class="sta_path">
+<td class="sta_path"  colspan="6">
+<table class="sta_path">
+ <thead> 
+<tr> 
+<th>Type</th>
+<th>Location</th>
+<th>Fanout</th>
+<th>Instance/Net</th>
+<th>Source</th>
+<th>Dest</th>
+<th>Delay (ns)</th>
+</tr>
+</thead> 
+<tbody>
+<tr> 
+ <td class = "text_info">datapathcell3</td>
+ <td class = "text_info">U(0,1)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\FanController:FanTach:FanTachCounter:u0\</td>
+ <td class = "text_info">\FanController:FanTach:FanTachCounter:u0\/busclk</td>
+ <td class = "text_info">\FanController:FanTach:FanTachCounter:u0\/f0_bus_stat_comb</td>
+ <td class = "number">7.210</td>
+</tr>
+<tr> 
+ <td class = "text_info">Route</td>
+ <td class = "text_info"> </td>
+ <td class = "number">1</td>
+ <td class = "text_info">\FanController:FanTach:tach_data_ready\</td>
+ <td class = "text_info">\FanController:FanTach:FanTachCounter:u0\/f0_bus_stat_comb</td>
+ <td class = "text_info">\FanController:FanTach:tach_state_0\/main_5</td>
+ <td class = "number">2.766</td>
+</tr>
+<tr> 
+ <td class = "text_info">macrocell16</td>
+ <td class = "text_info">U(0,1)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\FanController:FanTach:tach_state_0\</td>
  <td class = "text_info"></td>
  <td class = "text_info">SETUP</td>
  <td class = "number">3.510</td>
@@ -1032,9 +971,9 @@ Destination Clock : FanController_PWM_CLOCK_25k_10b_1 : Positive edge(Required F
 <tr> 
  <td class = "text_info">\FanController:B_FanCtrl:GlobalControlReg\/control_1</td>
  <td class = "text_info">\FanController:B_FanCtrl:AlertStatusReg\/status_0</td>
- <td class = "number">71.327&nbsp;MHz</td>
- <td class = "number">14.020</td>
- <td class = "number">27.647</td>
+ <td class = "number">72.839&nbsp;MHz</td>
+ <td class = "number">13.729</td>
+ <td class = "number">27.938</td>
  <td class = "text_info"></td>
 </tr>
 <tr class="sta_path">
@@ -1054,7 +993,7 @@ Destination Clock : FanController_PWM_CLOCK_25k_10b_1 : Positive edge(Required F
 <tbody>
 <tr> 
  <td class = "text_info">controlcell1</td>
- <td class = "text_info">U(1,1)</td>
+ <td class = "text_info">U(1,0)</td>
  <td class = "number">1</td>
  <td class = "text_info">\FanController:B_FanCtrl:GlobalControlReg\</td>
  <td class = "text_info">\FanController:B_FanCtrl:GlobalControlReg\/clock</td>
@@ -1068,11 +1007,11 @@ Destination Clock : FanController_PWM_CLOCK_25k_10b_1 : Positive edge(Required F
  <td class = "text_info">\FanController:B_FanCtrl:control_1\</td>
  <td class = "text_info">\FanController:B_FanCtrl:GlobalControlReg\/control_1</td>
  <td class = "text_info">\FanController:B_FanCtrl:stall_status\/main_0</td>
- <td class = "number">2.323</td>
+ <td class = "number">2.262</td>
 </tr>
 <tr> 
  <td class = "text_info">macrocell2</td>
- <td class = "text_info">U(1,1)</td>
+ <td class = "text_info">U(1,0)</td>
  <td class = "number">1</td>
  <td class = "text_info">\FanController:B_FanCtrl:stall_status\</td>
  <td class = "text_info">\FanController:B_FanCtrl:stall_status\/main_0</td>
@@ -1086,11 +1025,11 @@ Destination Clock : FanController_PWM_CLOCK_25k_10b_1 : Positive edge(Required F
  <td class = "text_info">\FanController:B_FanCtrl:stall_status\</td>
  <td class = "text_info">\FanController:B_FanCtrl:stall_status\/q</td>
  <td class = "text_info">\FanController:B_FanCtrl:AlertStatusReg\/status_0</td>
- <td class = "number">4.197</td>
+ <td class = "number">3.967</td>
 </tr>
 <tr> 
  <td class = "text_info">statusicell1</td>
- <td class = "text_info">U(1,1)</td>
+ <td class = "text_info">U(1,0)</td>
  <td class = "number">1</td>
  <td class = "text_info">\FanController:B_FanCtrl:AlertStatusReg\</td>
  <td class = "text_info"></td>
@@ -1113,9 +1052,9 @@ Destination Clock : FanController_PWM_CLOCK_25k_10b_1 : Positive edge(Required F
 <tr> 
  <td class = "text_info">\FanController:B_FanCtrl:stall_alrt\/q</td>
  <td class = "text_info">\FanController:B_FanCtrl:AlertStatusReg\/status_0</td>
- <td class = "number">78.964&nbsp;MHz</td>
- <td class = "number">12.664</td>
- <td class = "number">29.003</td>
+ <td class = "number">80.788&nbsp;MHz</td>
+ <td class = "number">12.378</td>
+ <td class = "number">29.289</td>
  <td class = "text_info"></td>
 </tr>
 <tr class="sta_path">
@@ -1135,7 +1074,7 @@ Destination Clock : FanController_PWM_CLOCK_25k_10b_1 : Positive edge(Required F
 <tbody>
 <tr> 
  <td class = "text_info">macrocell5</td>
- <td class = "text_info">U(1,1)</td>
+ <td class = "text_info">U(1,0)</td>
  <td class = "number">1</td>
  <td class = "text_info">\FanController:B_FanCtrl:stall_alrt\</td>
  <td class = "text_info">\FanController:B_FanCtrl:stall_alrt\/clock_0</td>
@@ -1149,11 +1088,11 @@ Destination Clock : FanController_PWM_CLOCK_25k_10b_1 : Positive edge(Required F
  <td class = "text_info">\FanController:B_FanCtrl:stall_alrt\</td>
  <td class = "text_info">\FanController:B_FanCtrl:stall_alrt\/q</td>
  <td class = "text_info">\FanController:B_FanCtrl:stall_status\/main_1</td>
- <td class = "number">2.297</td>
+ <td class = "number">2.241</td>
 </tr>
 <tr> 
  <td class = "text_info">macrocell2</td>
- <td class = "text_info">U(1,1)</td>
+ <td class = "text_info">U(1,0)</td>
  <td class = "number">1</td>
  <td class = "text_info">\FanController:B_FanCtrl:stall_status\</td>
  <td class = "text_info">\FanController:B_FanCtrl:stall_status\/main_1</td>
@@ -1167,11 +1106,11 @@ Destination Clock : FanController_PWM_CLOCK_25k_10b_1 : Positive edge(Required F
  <td class = "text_info">\FanController:B_FanCtrl:stall_status\</td>
  <td class = "text_info">\FanController:B_FanCtrl:stall_status\/q</td>
  <td class = "text_info">\FanController:B_FanCtrl:AlertStatusReg\/status_0</td>
- <td class = "number">4.197</td>
+ <td class = "number">3.967</td>
 </tr>
 <tr> 
  <td class = "text_info">statusicell1</td>
- <td class = "text_info">U(1,1)</td>
+ <td class = "text_info">U(1,0)</td>
  <td class = "number">1</td>
  <td class = "text_info">\FanController:B_FanCtrl:AlertStatusReg\</td>
  <td class = "text_info"></td>
@@ -1194,9 +1133,9 @@ Destination Clock : FanController_PWM_CLOCK_25k_10b_1 : Positive edge(Required F
 <tr> 
  <td class = "text_info">\FanController:B_FanCtrl:GlobalControlReg\/control_4</td>
  <td class = "text_info">\FanController:B_FanCtrl:AlertStatusReg\/status_1</td>
- <td class = "number">82.413&nbsp;MHz</td>
- <td class = "number">12.134</td>
- <td class = "number">29.533</td>
+ <td class = "number">83.278&nbsp;MHz</td>
+ <td class = "number">12.008</td>
+ <td class = "number">29.659</td>
  <td class = "text_info"></td>
 </tr>
 <tr class="sta_path">
@@ -1216,7 +1155,7 @@ Destination Clock : FanController_PWM_CLOCK_25k_10b_1 : Positive edge(Required F
 <tbody>
 <tr> 
  <td class = "text_info">controlcell1</td>
- <td class = "text_info">U(1,1)</td>
+ <td class = "text_info">U(1,0)</td>
  <td class = "number">1</td>
  <td class = "text_info">\FanController:B_FanCtrl:GlobalControlReg\</td>
  <td class = "text_info">\FanController:B_FanCtrl:GlobalControlReg\/clock</td>
@@ -1230,11 +1169,11 @@ Destination Clock : FanController_PWM_CLOCK_25k_10b_1 : Positive edge(Required F
  <td class = "text_info">\FanController:B_FanCtrl:control_4\</td>
  <td class = "text_info">\FanController:B_FanCtrl:GlobalControlReg\/control_4</td>
  <td class = "text_info">\FanController:B_FanCtrl:speed_status\/main_0</td>
- <td class = "number">2.321</td>
+ <td class = "number">2.259</td>
 </tr>
 <tr> 
  <td class = "text_info">macrocell1</td>
- <td class = "text_info">U(1,1)</td>
+ <td class = "text_info">U(1,0)</td>
  <td class = "number">1</td>
  <td class = "text_info">\FanController:B_FanCtrl:speed_status\</td>
  <td class = "text_info">\FanController:B_FanCtrl:speed_status\/main_0</td>
@@ -1248,11 +1187,11 @@ Destination Clock : FanController_PWM_CLOCK_25k_10b_1 : Positive edge(Required F
  <td class = "text_info">\FanController:B_FanCtrl:speed_status\</td>
  <td class = "text_info">\FanController:B_FanCtrl:speed_status\/q</td>
  <td class = "text_info">\FanController:B_FanCtrl:AlertStatusReg\/status_1</td>
- <td class = "number">2.313</td>
+ <td class = "number">2.249</td>
 </tr>
 <tr> 
  <td class = "text_info">statusicell1</td>
- <td class = "text_info">U(1,1)</td>
+ <td class = "text_info">U(1,0)</td>
  <td class = "number">1</td>
  <td class = "text_info">\FanController:B_FanCtrl:AlertStatusReg\</td>
  <td class = "text_info"></td>
@@ -1275,9 +1214,9 @@ Destination Clock : FanController_PWM_CLOCK_25k_10b_1 : Positive edge(Required F
 <tr> 
  <td class = "text_info">\FanController:B_FanCtrl:GlobalControlReg\/control_2</td>
  <td class = "text_info">\FanController:B_FanCtrl:AlertStatusReg\/status_1</td>
- <td class = "number">82.474&nbsp;MHz</td>
- <td class = "number">12.125</td>
- <td class = "number">29.542</td>
+ <td class = "number">83.285&nbsp;MHz</td>
+ <td class = "number">12.007</td>
+ <td class = "number">29.660</td>
  <td class = "text_info"></td>
 </tr>
 <tr class="sta_path">
@@ -1297,7 +1236,7 @@ Destination Clock : FanController_PWM_CLOCK_25k_10b_1 : Positive edge(Required F
 <tbody>
 <tr> 
  <td class = "text_info">controlcell1</td>
- <td class = "text_info">U(1,1)</td>
+ <td class = "text_info">U(1,0)</td>
  <td class = "number">1</td>
  <td class = "text_info">\FanController:B_FanCtrl:GlobalControlReg\</td>
  <td class = "text_info">\FanController:B_FanCtrl:GlobalControlReg\/clock</td>
@@ -1311,11 +1250,11 @@ Destination Clock : FanController_PWM_CLOCK_25k_10b_1 : Positive edge(Required F
  <td class = "text_info">\FanController:B_FanCtrl:control_2\</td>
  <td class = "text_info">\FanController:B_FanCtrl:GlobalControlReg\/control_2</td>
  <td class = "text_info">\FanController:B_FanCtrl:speed_status\/main_1</td>
- <td class = "number">2.312</td>
+ <td class = "number">2.258</td>
 </tr>
 <tr> 
  <td class = "text_info">macrocell1</td>
- <td class = "text_info">U(1,1)</td>
+ <td class = "text_info">U(1,0)</td>
  <td class = "number">1</td>
  <td class = "text_info">\FanController:B_FanCtrl:speed_status\</td>
  <td class = "text_info">\FanController:B_FanCtrl:speed_status\/main_1</td>
@@ -1329,11 +1268,11 @@ Destination Clock : FanController_PWM_CLOCK_25k_10b_1 : Positive edge(Required F
  <td class = "text_info">\FanController:B_FanCtrl:speed_status\</td>
  <td class = "text_info">\FanController:B_FanCtrl:speed_status\/q</td>
  <td class = "text_info">\FanController:B_FanCtrl:AlertStatusReg\/status_1</td>
- <td class = "number">2.313</td>
+ <td class = "number">2.249</td>
 </tr>
 <tr> 
  <td class = "text_info">statusicell1</td>
- <td class = "text_info">U(1,1)</td>
+ <td class = "text_info">U(1,0)</td>
  <td class = "number">1</td>
  <td class = "text_info">\FanController:B_FanCtrl:AlertStatusReg\</td>
  <td class = "text_info"></td>
@@ -1356,9 +1295,9 @@ Destination Clock : FanController_PWM_CLOCK_25k_10b_1 : Positive edge(Required F
 <tr> 
  <td class = "text_info">\FanController:B_FanCtrl:AlertStatusReg\/interrupt</td>
  <td class = "text_info">\FanController:B_FanCtrl:alert_reg\/main_3</td>
- <td class = "number">101.266&nbsp;MHz</td>
- <td class = "number">9.875</td>
- <td class = "number">31.792</td>
+ <td class = "number">102.051&nbsp;MHz</td>
+ <td class = "number">9.799</td>
+ <td class = "number">31.868</td>
  <td class = "text_info"></td>
 </tr>
 <tr class="sta_path">
@@ -1378,7 +1317,7 @@ Destination Clock : FanController_PWM_CLOCK_25k_10b_1 : Positive edge(Required F
 <tbody>
 <tr> 
  <td class = "text_info">statusicell1</td>
- <td class = "text_info">U(1,1)</td>
+ <td class = "text_info">U(1,0)</td>
  <td class = "number">1</td>
  <td class = "text_info">\FanController:B_FanCtrl:AlertStatusReg\</td>
  <td class = "text_info">\FanController:B_FanCtrl:AlertStatusReg\/clock</td>
@@ -1392,11 +1331,11 @@ Destination Clock : FanController_PWM_CLOCK_25k_10b_1 : Positive edge(Required F
  <td class = "text_info">\FanController:B_FanCtrl:interrupt\</td>
  <td class = "text_info">\FanController:B_FanCtrl:AlertStatusReg\/interrupt</td>
  <td class = "text_info">\FanController:B_FanCtrl:alert_reg\/main_3</td>
- <td class = "number">2.335</td>
+ <td class = "number">2.259</td>
 </tr>
 <tr> 
  <td class = "text_info">macrocell4</td>
- <td class = "text_info">U(1,1)</td>
+ <td class = "text_info">U(1,0)</td>
  <td class = "number">1</td>
  <td class = "text_info">\FanController:B_FanCtrl:alert_reg\</td>
  <td class = "text_info"></td>
@@ -1418,10 +1357,10 @@ Destination Clock : FanController_PWM_CLOCK_25k_10b_1 : Positive edge(Required F
 </tr>
 <tr> 
  <td class = "text_info">\FanController:B_FanCtrl:GlobalControlReg\/control_3</td>
- <td class = "text_info">\FanController:B_FanCtrl:alert_reg\/main_0</td>
- <td class = "number">103.918&nbsp;MHz</td>
- <td class = "number">9.623</td>
- <td class = "number">32.044</td>
+ <td class = "text_info">\FanController:B_FanCtrl:alert_reg\/main_1</td>
+ <td class = "number">119.760&nbsp;MHz</td>
+ <td class = "number">8.350</td>
+ <td class = "number">33.317</td>
  <td class = "text_info"></td>
 </tr>
 <tr class="sta_path">
@@ -1441,7 +1380,7 @@ Destination Clock : FanController_PWM_CLOCK_25k_10b_1 : Positive edge(Required F
 <tbody>
 <tr> 
  <td class = "text_info">controlcell1</td>
- <td class = "text_info">U(1,1)</td>
+ <td class = "text_info">U(1,0)</td>
  <td class = "number">1</td>
  <td class = "text_info">\FanController:B_FanCtrl:GlobalControlReg\</td>
  <td class = "text_info">\FanController:B_FanCtrl:GlobalControlReg\/clock</td>
@@ -1452,77 +1391,14 @@ Destination Clock : FanController_PWM_CLOCK_25k_10b_1 : Positive edge(Required F
  <td class = "text_info">Route</td>
  <td class = "text_info"> </td>
  <td class = "number">1</td>
- <td class = "text_info">Net_642</td>
+ <td class = "text_info">\FanController:sync\</td>
  <td class = "text_info">\FanController:B_FanCtrl:GlobalControlReg\/control_3</td>
- <td class = "text_info">\FanController:B_FanCtrl:alert_reg\/main_0</td>
- <td class = "number">3.533</td>
+ <td class = "text_info">\FanController:B_FanCtrl:alert_reg\/main_1</td>
+ <td class = "number">2.260</td>
 </tr>
 <tr> 
  <td class = "text_info">macrocell4</td>
- <td class = "text_info">U(1,1)</td>
- <td class = "number">1</td>
- <td class = "text_info">\FanController:B_FanCtrl:alert_reg\</td>
- <td class = "text_info"></td>
- <td class = "text_info">SETUP</td>
- <td class = "number">3.510</td>
-</tr>
-<tr> 
- <td class = "text_info">Clock</td>
- <td class = "text_info"> </td>
- <td class = "text_info"></td>
- <td class = "text_info"></td>
- <td class = "text_info"></td>
- <td class = "text_info">Skew</td>
- <td class = "number">0.000</td>
-</tr>
-</tbody>
- </table> 
-</td>
-</tr>
-<tr> 
- <td class = "text_info">\FanController:B_FanCtrl:GlobalControlReg\/control_0</td>
- <td class = "text_info">\FanController:B_FanCtrl:alert_reg\/main_1</td>
- <td class = "number">118.821&nbsp;MHz</td>
- <td class = "number">8.416</td>
- <td class = "number">33.251</td>
- <td class = "text_info"></td>
-</tr>
-<tr class="sta_path">
-<td class="sta_path"  colspan="6">
-<table class="sta_path">
- <thead> 
-<tr> 
-<th>Type</th>
-<th>Location</th>
-<th>Fanout</th>
-<th>Instance/Net</th>
-<th>Source</th>
-<th>Dest</th>
-<th>Delay (ns)</th>
-</tr>
-</thead> 
-<tbody>
-<tr> 
- <td class = "text_info">controlcell1</td>
- <td class = "text_info">U(1,1)</td>
- <td class = "number">1</td>
- <td class = "text_info">\FanController:B_FanCtrl:GlobalControlReg\</td>
- <td class = "text_info">\FanController:B_FanCtrl:GlobalControlReg\/clock</td>
- <td class = "text_info">\FanController:B_FanCtrl:GlobalControlReg\/control_0</td>
- <td class = "number">2.580</td>
-</tr>
-<tr> 
- <td class = "text_info">Route</td>
- <td class = "text_info"> </td>
- <td class = "number">1</td>
- <td class = "text_info">\FanController:B_FanCtrl:control_0\</td>
- <td class = "text_info">\FanController:B_FanCtrl:GlobalControlReg\/control_0</td>
- <td class = "text_info">\FanController:B_FanCtrl:alert_reg\/main_1</td>
- <td class = "number">2.326</td>
-</tr>
-<tr> 
- <td class = "text_info">macrocell4</td>
- <td class = "text_info">U(1,1)</td>
+ <td class = "text_info">U(1,0)</td>
  <td class = "number">1</td>
  <td class = "text_info">\FanController:B_FanCtrl:alert_reg\</td>
  <td class = "text_info"></td>
@@ -1545,9 +1421,9 @@ Destination Clock : FanController_PWM_CLOCK_25k_10b_1 : Positive edge(Required F
 <tr> 
  <td class = "text_info">\FanController:B_FanCtrl:GlobalControlReg\/control_7</td>
  <td class = "text_info">\FanController:B_FanCtrl:stall_alrt\/main_0</td>
- <td class = "number">118.920&nbsp;MHz</td>
- <td class = "number">8.409</td>
- <td class = "number">33.258</td>
+ <td class = "number">119.890&nbsp;MHz</td>
+ <td class = "number">8.341</td>
+ <td class = "number">33.326</td>
  <td class = "text_info"></td>
 </tr>
 <tr class="sta_path">
@@ -1567,7 +1443,7 @@ Destination Clock : FanController_PWM_CLOCK_25k_10b_1 : Positive edge(Required F
 <tbody>
 <tr> 
  <td class = "text_info">controlcell1</td>
- <td class = "text_info">U(1,1)</td>
+ <td class = "text_info">U(1,0)</td>
  <td class = "number">1</td>
  <td class = "text_info">\FanController:B_FanCtrl:GlobalControlReg\</td>
  <td class = "text_info">\FanController:B_FanCtrl:GlobalControlReg\/clock</td>
@@ -1581,11 +1457,11 @@ Destination Clock : FanController_PWM_CLOCK_25k_10b_1 : Positive edge(Required F
  <td class = "text_info">\FanController:B_FanCtrl:control_7\</td>
  <td class = "text_info">\FanController:B_FanCtrl:GlobalControlReg\/control_7</td>
  <td class = "text_info">\FanController:B_FanCtrl:stall_alrt\/main_0</td>
- <td class = "number">2.319</td>
+ <td class = "number">2.251</td>
 </tr>
 <tr> 
  <td class = "text_info">macrocell5</td>
- <td class = "text_info">U(1,1)</td>
+ <td class = "text_info">U(1,0)</td>
  <td class = "number">1</td>
  <td class = "text_info">\FanController:B_FanCtrl:stall_alrt\</td>
  <td class = "text_info"></td>
@@ -1606,11 +1482,74 @@ Destination Clock : FanController_PWM_CLOCK_25k_10b_1 : Positive edge(Required F
 </td>
 </tr>
 <tr> 
+ <td class = "text_info">\FanController:B_FanCtrl:GlobalControlReg\/control_0</td>
+ <td class = "text_info">\FanController:B_FanCtrl:alert_reg\/main_0</td>
+ <td class = "number">119.918&nbsp;MHz</td>
+ <td class = "number">8.339</td>
+ <td class = "number">33.328</td>
+ <td class = "text_info"></td>
+</tr>
+<tr class="sta_path">
+<td class="sta_path"  colspan="6">
+<table class="sta_path">
+ <thead> 
+<tr> 
+<th>Type</th>
+<th>Location</th>
+<th>Fanout</th>
+<th>Instance/Net</th>
+<th>Source</th>
+<th>Dest</th>
+<th>Delay (ns)</th>
+</tr>
+</thead> 
+<tbody>
+<tr> 
+ <td class = "text_info">controlcell1</td>
+ <td class = "text_info">U(1,0)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\FanController:B_FanCtrl:GlobalControlReg\</td>
+ <td class = "text_info">\FanController:B_FanCtrl:GlobalControlReg\/clock</td>
+ <td class = "text_info">\FanController:B_FanCtrl:GlobalControlReg\/control_0</td>
+ <td class = "number">2.580</td>
+</tr>
+<tr> 
+ <td class = "text_info">Route</td>
+ <td class = "text_info"> </td>
+ <td class = "number">1</td>
+ <td class = "text_info">\FanController:B_FanCtrl:control_0\</td>
+ <td class = "text_info">\FanController:B_FanCtrl:GlobalControlReg\/control_0</td>
+ <td class = "text_info">\FanController:B_FanCtrl:alert_reg\/main_0</td>
+ <td class = "number">2.249</td>
+</tr>
+<tr> 
+ <td class = "text_info">macrocell4</td>
+ <td class = "text_info">U(1,0)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\FanController:B_FanCtrl:alert_reg\</td>
+ <td class = "text_info"></td>
+ <td class = "text_info">SETUP</td>
+ <td class = "number">3.510</td>
+</tr>
+<tr> 
+ <td class = "text_info">Clock</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info">Skew</td>
+ <td class = "number">0.000</td>
+</tr>
+</tbody>
+ </table> 
+</td>
+</tr>
+<tr> 
  <td class = "text_info">\FanController:B_FanCtrl:alert_reg\/q</td>
  <td class = "text_info">\FanController:B_FanCtrl:alert_reg\/main_2</td>
- <td class = "number">141.784&nbsp;MHz</td>
- <td class = "number">7.053</td>
- <td class = "number">34.614</td>
+ <td class = "number">143.082&nbsp;MHz</td>
+ <td class = "number">6.989</td>
+ <td class = "number">34.678</td>
  <td class = "text_info"></td>
 </tr>
 <tr class="sta_path">
@@ -1630,7 +1569,7 @@ Destination Clock : FanController_PWM_CLOCK_25k_10b_1 : Positive edge(Required F
 <tbody>
 <tr> 
  <td class = "text_info">macrocell4</td>
- <td class = "text_info">U(1,1)</td>
+ <td class = "text_info">U(1,0)</td>
  <td class = "number">1</td>
  <td class = "text_info">\FanController:B_FanCtrl:alert_reg\</td>
  <td class = "text_info">\FanController:B_FanCtrl:alert_reg\/clock_0</td>
@@ -1639,16 +1578,16 @@ Destination Clock : FanController_PWM_CLOCK_25k_10b_1 : Positive edge(Required F
 </tr>
 <tr> 
  <td class = "text_info">macrocell4</td>
- <td class = "text_info">U(1,1)</td>
+ <td class = "text_info">U(1,0)</td>
  <td class = "number">1</td>
  <td class = "text_info">\FanController:B_FanCtrl:alert_reg\</td>
  <td class = "text_info">\FanController:B_FanCtrl:alert_reg\/q</td>
  <td class = "text_info">\FanController:B_FanCtrl:alert_reg\/main_2</td>
- <td class = "number">2.293</td>
+ <td class = "number">2.229</td>
 </tr>
 <tr> 
  <td class = "text_info">macrocell4</td>
- <td class = "text_info">U(1,1)</td>
+ <td class = "text_info">U(1,0)</td>
  <td class = "number">1</td>
  <td class = "text_info">\FanController:B_FanCtrl:alert_reg\</td>
  <td class = "text_info"></td>
@@ -1695,9 +1634,9 @@ Destination Clock : FanController_TACH_CLK_500K : Positive edge(Required Frequen
 <tr> 
  <td class = "text_info">\FanController:B_FanCtrl:GlobalControlReg\/control_5</td>
  <td class = "text_info">\FanController:FanTach:reg_enable\/main_0</td>
- <td class = "number">78.351&nbsp;MHz</td>
- <td class = "number">12.763</td>
- <td class = "number">8.070</td>
+ <td class = "number">93.888&nbsp;MHz</td>
+ <td class = "number">10.651</td>
+ <td class = "number">10.182</td>
  <td class = "text_info"></td>
 </tr>
 <tr class="sta_path">
@@ -1717,7 +1656,7 @@ Destination Clock : FanController_TACH_CLK_500K : Positive edge(Required Frequen
 <tbody>
 <tr> 
  <td class = "text_info">controlcell1</td>
- <td class = "text_info">U(1,1)</td>
+ <td class = "text_info">U(1,0)</td>
  <td class = "number">1</td>
  <td class = "text_info">\FanController:B_FanCtrl:GlobalControlReg\</td>
  <td class = "text_info">\FanController:B_FanCtrl:GlobalControlReg\/clock</td>
@@ -1731,11 +1670,11 @@ Destination Clock : FanController_TACH_CLK_500K : Positive edge(Required Frequen
  <td class = "text_info">\FanController:enable\</td>
  <td class = "text_info">\FanController:B_FanCtrl:GlobalControlReg\/control_5</td>
  <td class = "text_info">\FanController:FanTach:reg_enable\/main_0</td>
- <td class = "number">6.673</td>
+ <td class = "number">4.561</td>
 </tr>
 <tr> 
  <td class = "text_info">macrocell10</td>
- <td class = "text_info">U(1,0)</td>
+ <td class = "text_info">U(0,1)</td>
  <td class = "number">1</td>
  <td class = "text_info">\FanController:FanTach:reg_enable\</td>
  <td class = "text_info"></td>
@@ -1757,199 +1696,10 @@ Destination Clock : FanController_TACH_CLK_500K : Positive edge(Required Frequen
 </tr>
 <tr> 
  <td class = "text_info">\FanController:B_FanCtrl:GlobalControlReg\/control_5</td>
- <td class = "text_info">\FanController:FanTach:FanTachCounter:u1\/clk_en</td>
- <td class = "number">78.815&nbsp;MHz</td>
- <td class = "number">12.688</td>
- <td class = "number">8.145</td>
- <td class = "text_info"></td>
-</tr>
-<tr class="sta_path">
-<td class="sta_path"  colspan="6">
-<table class="sta_path">
- <thead> 
-<tr> 
-<th>Type</th>
-<th>Location</th>
-<th>Fanout</th>
-<th>Instance/Net</th>
-<th>Source</th>
-<th>Dest</th>
-<th>Delay (ns)</th>
-</tr>
-</thead> 
-<tbody>
-<tr> 
- <td class = "text_info">controlcell1</td>
- <td class = "text_info">U(1,1)</td>
- <td class = "number">1</td>
- <td class = "text_info">\FanController:B_FanCtrl:GlobalControlReg\</td>
- <td class = "text_info">\FanController:B_FanCtrl:GlobalControlReg\/clock</td>
- <td class = "text_info">\FanController:B_FanCtrl:GlobalControlReg\/control_5</td>
- <td class = "number">2.580</td>
-</tr>
-<tr> 
- <td class = "text_info">Route</td>
- <td class = "text_info"> </td>
- <td class = "number">1</td>
- <td class = "text_info">\FanController:enable\</td>
- <td class = "text_info">\FanController:B_FanCtrl:GlobalControlReg\/control_5</td>
- <td class = "text_info">\FanController:FanTach:FanTachCounter:u1\/clk_en</td>
- <td class = "number">8.008</td>
-</tr>
-<tr> 
- <td class = "text_info">datapathcell4</td>
- <td class = "text_info">U(0,0)</td>
- <td class = "number">1</td>
- <td class = "text_info">\FanController:FanTach:FanTachCounter:u1\</td>
- <td class = "text_info"></td>
- <td class = "text_info">SETUP</td>
- <td class = "number">2.100</td>
-</tr>
-<tr> 
- <td class = "text_info">Clock</td>
- <td class = "text_info"> </td>
- <td class = "text_info"></td>
- <td class = "text_info"></td>
- <td class = "text_info"></td>
- <td class = "text_info">Skew</td>
- <td class = "number">0.000</td>
-</tr>
-</tbody>
- </table> 
-</td>
-</tr>
-<tr> 
- <td class = "text_info">\FanController:B_FanCtrl:GlobalControlReg\/control_5</td>
- <td class = "text_info">\FanController:FanTach:tach\/clk_en</td>
- <td class = "number">78.815&nbsp;MHz</td>
- <td class = "number">12.688</td>
- <td class = "number">8.145</td>
- <td class = "text_info"></td>
-</tr>
-<tr class="sta_path">
-<td class="sta_path"  colspan="6">
-<table class="sta_path">
- <thead> 
-<tr> 
-<th>Type</th>
-<th>Location</th>
-<th>Fanout</th>
-<th>Instance/Net</th>
-<th>Source</th>
-<th>Dest</th>
-<th>Delay (ns)</th>
-</tr>
-</thead> 
-<tbody>
-<tr> 
- <td class = "text_info">controlcell1</td>
- <td class = "text_info">U(1,1)</td>
- <td class = "number">1</td>
- <td class = "text_info">\FanController:B_FanCtrl:GlobalControlReg\</td>
- <td class = "text_info">\FanController:B_FanCtrl:GlobalControlReg\/clock</td>
- <td class = "text_info">\FanController:B_FanCtrl:GlobalControlReg\/control_5</td>
- <td class = "number">2.580</td>
-</tr>
-<tr> 
- <td class = "text_info">Route</td>
- <td class = "text_info"> </td>
- <td class = "number">1</td>
- <td class = "text_info">\FanController:enable\</td>
- <td class = "text_info">\FanController:B_FanCtrl:GlobalControlReg\/control_5</td>
- <td class = "text_info">\FanController:FanTach:tach\/clk_en</td>
- <td class = "number">8.008</td>
-</tr>
-<tr> 
- <td class = "text_info">macrocell6</td>
- <td class = "text_info">U(0,0)</td>
- <td class = "number">1</td>
- <td class = "text_info">\FanController:FanTach:tach\</td>
- <td class = "text_info"></td>
- <td class = "text_info">SETUP</td>
- <td class = "number">2.100</td>
-</tr>
-<tr> 
- <td class = "text_info">Clock</td>
- <td class = "text_info"> </td>
- <td class = "text_info"></td>
- <td class = "text_info"></td>
- <td class = "text_info"></td>
- <td class = "text_info">Skew</td>
- <td class = "number">0.000</td>
-</tr>
-</tbody>
- </table> 
-</td>
-</tr>
-<tr> 
- <td class = "text_info">\FanController:B_FanCtrl:GlobalControlReg\/control_5</td>
- <td class = "text_info">\FanController:FanTach:tach_state_1\/clk_en</td>
- <td class = "number">78.815&nbsp;MHz</td>
- <td class = "number">12.688</td>
- <td class = "number">8.145</td>
- <td class = "text_info"></td>
-</tr>
-<tr class="sta_path">
-<td class="sta_path"  colspan="6">
-<table class="sta_path">
- <thead> 
-<tr> 
-<th>Type</th>
-<th>Location</th>
-<th>Fanout</th>
-<th>Instance/Net</th>
-<th>Source</th>
-<th>Dest</th>
-<th>Delay (ns)</th>
-</tr>
-</thead> 
-<tbody>
-<tr> 
- <td class = "text_info">controlcell1</td>
- <td class = "text_info">U(1,1)</td>
- <td class = "number">1</td>
- <td class = "text_info">\FanController:B_FanCtrl:GlobalControlReg\</td>
- <td class = "text_info">\FanController:B_FanCtrl:GlobalControlReg\/clock</td>
- <td class = "text_info">\FanController:B_FanCtrl:GlobalControlReg\/control_5</td>
- <td class = "number">2.580</td>
-</tr>
-<tr> 
- <td class = "text_info">Route</td>
- <td class = "text_info"> </td>
- <td class = "number">1</td>
- <td class = "text_info">\FanController:enable\</td>
- <td class = "text_info">\FanController:B_FanCtrl:GlobalControlReg\/control_5</td>
- <td class = "text_info">\FanController:FanTach:tach_state_1\/clk_en</td>
- <td class = "number">8.008</td>
-</tr>
-<tr> 
- <td class = "text_info">macrocell15</td>
- <td class = "text_info">U(0,0)</td>
- <td class = "number">1</td>
- <td class = "text_info">\FanController:FanTach:tach_state_1\</td>
- <td class = "text_info"></td>
- <td class = "text_info">SETUP</td>
- <td class = "number">2.100</td>
-</tr>
-<tr> 
- <td class = "text_info">Clock</td>
- <td class = "text_info"> </td>
- <td class = "text_info"></td>
- <td class = "text_info"></td>
- <td class = "text_info"></td>
- <td class = "text_info">Skew</td>
- <td class = "number">0.000</td>
-</tr>
-</tbody>
- </table> 
-</td>
-</tr>
-<tr> 
- <td class = "text_info">\FanController:B_FanCtrl:GlobalControlReg\/control_5</td>
  <td class = "text_info">\FanController:FanTach:FanTachCounter:u0\/clk_en</td>
- <td class = "number">82.311&nbsp;MHz</td>
- <td class = "number">12.149</td>
- <td class = "number">8.684</td>
+ <td class = "number">94.003&nbsp;MHz</td>
+ <td class = "number">10.638</td>
+ <td class = "number">10.195</td>
  <td class = "text_info"></td>
 </tr>
 <tr class="sta_path">
@@ -1969,7 +1719,7 @@ Destination Clock : FanController_TACH_CLK_500K : Positive edge(Required Frequen
 <tbody>
 <tr> 
  <td class = "text_info">controlcell1</td>
- <td class = "text_info">U(1,1)</td>
+ <td class = "text_info">U(1,0)</td>
  <td class = "number">1</td>
  <td class = "text_info">\FanController:B_FanCtrl:GlobalControlReg\</td>
  <td class = "text_info">\FanController:B_FanCtrl:GlobalControlReg\/clock</td>
@@ -1983,11 +1733,11 @@ Destination Clock : FanController_TACH_CLK_500K : Positive edge(Required Frequen
  <td class = "text_info">\FanController:enable\</td>
  <td class = "text_info">\FanController:B_FanCtrl:GlobalControlReg\/control_5</td>
  <td class = "text_info">\FanController:FanTach:FanTachCounter:u0\/clk_en</td>
- <td class = "number">7.469</td>
+ <td class = "number">5.958</td>
 </tr>
 <tr> 
  <td class = "text_info">datapathcell3</td>
- <td class = "text_info">U(1,0)</td>
+ <td class = "text_info">U(0,1)</td>
  <td class = "number">1</td>
  <td class = "text_info">\FanController:FanTach:FanTachCounter:u0\</td>
  <td class = "text_info"></td>
@@ -2010,9 +1760,9 @@ Destination Clock : FanController_TACH_CLK_500K : Positive edge(Required Frequen
 <tr> 
  <td class = "text_info">\FanController:B_FanCtrl:GlobalControlReg\/control_5</td>
  <td class = "text_info">\FanController:drq\/clk_en</td>
- <td class = "number">82.311&nbsp;MHz</td>
- <td class = "number">12.149</td>
- <td class = "number">8.684</td>
+ <td class = "number">94.003&nbsp;MHz</td>
+ <td class = "number">10.638</td>
+ <td class = "number">10.195</td>
  <td class = "text_info"></td>
 </tr>
 <tr class="sta_path">
@@ -2032,7 +1782,7 @@ Destination Clock : FanController_TACH_CLK_500K : Positive edge(Required Frequen
 <tbody>
 <tr> 
  <td class = "text_info">controlcell1</td>
- <td class = "text_info">U(1,1)</td>
+ <td class = "text_info">U(1,0)</td>
  <td class = "number">1</td>
  <td class = "text_info">\FanController:B_FanCtrl:GlobalControlReg\</td>
  <td class = "text_info">\FanController:B_FanCtrl:GlobalControlReg\/clock</td>
@@ -2046,11 +1796,11 @@ Destination Clock : FanController_TACH_CLK_500K : Positive edge(Required Frequen
  <td class = "text_info">\FanController:enable\</td>
  <td class = "text_info">\FanController:B_FanCtrl:GlobalControlReg\/control_5</td>
  <td class = "text_info">\FanController:drq\/clk_en</td>
- <td class = "number">7.469</td>
+ <td class = "number">5.958</td>
 </tr>
 <tr> 
  <td class = "text_info">macrocell3</td>
- <td class = "text_info">U(1,0)</td>
+ <td class = "text_info">U(0,1)</td>
  <td class = "number">1</td>
  <td class = "text_info">\FanController:drq\</td>
  <td class = "text_info"></td>
@@ -2073,9 +1823,9 @@ Destination Clock : FanController_TACH_CLK_500K : Positive edge(Required Frequen
 <tr> 
  <td class = "text_info">\FanController:B_FanCtrl:GlobalControlReg\/control_5</td>
  <td class = "text_info">\FanController:FanTach:reg_enable\/clk_en</td>
- <td class = "number">82.311&nbsp;MHz</td>
- <td class = "number">12.149</td>
- <td class = "number">8.684</td>
+ <td class = "number">94.003&nbsp;MHz</td>
+ <td class = "number">10.638</td>
+ <td class = "number">10.195</td>
  <td class = "text_info"></td>
 </tr>
 <tr class="sta_path">
@@ -2095,7 +1845,7 @@ Destination Clock : FanController_TACH_CLK_500K : Positive edge(Required Frequen
 <tbody>
 <tr> 
  <td class = "text_info">controlcell1</td>
- <td class = "text_info">U(1,1)</td>
+ <td class = "text_info">U(1,0)</td>
  <td class = "number">1</td>
  <td class = "text_info">\FanController:B_FanCtrl:GlobalControlReg\</td>
  <td class = "text_info">\FanController:B_FanCtrl:GlobalControlReg\/clock</td>
@@ -2109,11 +1859,11 @@ Destination Clock : FanController_TACH_CLK_500K : Positive edge(Required Frequen
  <td class = "text_info">\FanController:enable\</td>
  <td class = "text_info">\FanController:B_FanCtrl:GlobalControlReg\/control_5</td>
  <td class = "text_info">\FanController:FanTach:reg_enable\/clk_en</td>
- <td class = "number">7.469</td>
+ <td class = "number">5.958</td>
 </tr>
 <tr> 
  <td class = "text_info">macrocell10</td>
- <td class = "text_info">U(1,0)</td>
+ <td class = "text_info">U(0,1)</td>
  <td class = "number">1</td>
  <td class = "text_info">\FanController:FanTach:reg_enable\</td>
  <td class = "text_info"></td>
@@ -2136,9 +1886,9 @@ Destination Clock : FanController_TACH_CLK_500K : Positive edge(Required Frequen
 <tr> 
  <td class = "text_info">\FanController:B_FanCtrl:GlobalControlReg\/control_5</td>
  <td class = "text_info">\FanController:FanTach:tach_state_2\/clk_en</td>
- <td class = "number">82.311&nbsp;MHz</td>
- <td class = "number">12.149</td>
- <td class = "number">8.684</td>
+ <td class = "number">94.003&nbsp;MHz</td>
+ <td class = "number">10.638</td>
+ <td class = "number">10.195</td>
  <td class = "text_info"></td>
 </tr>
 <tr class="sta_path">
@@ -2158,7 +1908,7 @@ Destination Clock : FanController_TACH_CLK_500K : Positive edge(Required Frequen
 <tbody>
 <tr> 
  <td class = "text_info">controlcell1</td>
- <td class = "text_info">U(1,1)</td>
+ <td class = "text_info">U(1,0)</td>
  <td class = "number">1</td>
  <td class = "text_info">\FanController:B_FanCtrl:GlobalControlReg\</td>
  <td class = "text_info">\FanController:B_FanCtrl:GlobalControlReg\/clock</td>
@@ -2172,11 +1922,11 @@ Destination Clock : FanController_TACH_CLK_500K : Positive edge(Required Frequen
  <td class = "text_info">\FanController:enable\</td>
  <td class = "text_info">\FanController:B_FanCtrl:GlobalControlReg\/control_5</td>
  <td class = "text_info">\FanController:FanTach:tach_state_2\/clk_en</td>
- <td class = "number">7.469</td>
+ <td class = "number">5.958</td>
 </tr>
 <tr> 
  <td class = "text_info">macrocell14</td>
- <td class = "text_info">U(1,0)</td>
+ <td class = "text_info">U(0,1)</td>
  <td class = "number">1</td>
  <td class = "text_info">\FanController:FanTach:tach_state_2\</td>
  <td class = "text_info"></td>
@@ -2199,9 +1949,9 @@ Destination Clock : FanController_TACH_CLK_500K : Positive edge(Required Frequen
 <tr> 
  <td class = "text_info">\FanController:B_FanCtrl:GlobalControlReg\/control_5</td>
  <td class = "text_info">\FanController:FanTach:tach_state_0\/clk_en</td>
- <td class = "number">82.311&nbsp;MHz</td>
- <td class = "number">12.149</td>
- <td class = "number">8.684</td>
+ <td class = "number">94.003&nbsp;MHz</td>
+ <td class = "number">10.638</td>
+ <td class = "number">10.195</td>
  <td class = "text_info"></td>
 </tr>
 <tr class="sta_path">
@@ -2221,7 +1971,7 @@ Destination Clock : FanController_TACH_CLK_500K : Positive edge(Required Frequen
 <tbody>
 <tr> 
  <td class = "text_info">controlcell1</td>
- <td class = "text_info">U(1,1)</td>
+ <td class = "text_info">U(1,0)</td>
  <td class = "number">1</td>
  <td class = "text_info">\FanController:B_FanCtrl:GlobalControlReg\</td>
  <td class = "text_info">\FanController:B_FanCtrl:GlobalControlReg\/clock</td>
@@ -2235,11 +1985,11 @@ Destination Clock : FanController_TACH_CLK_500K : Positive edge(Required Frequen
  <td class = "text_info">\FanController:enable\</td>
  <td class = "text_info">\FanController:B_FanCtrl:GlobalControlReg\/control_5</td>
  <td class = "text_info">\FanController:FanTach:tach_state_0\/clk_en</td>
- <td class = "number">7.469</td>
+ <td class = "number">5.958</td>
 </tr>
 <tr> 
  <td class = "text_info">macrocell16</td>
- <td class = "text_info">U(1,0)</td>
+ <td class = "text_info">U(0,1)</td>
  <td class = "number">1</td>
  <td class = "text_info">\FanController:FanTach:tach_state_0\</td>
  <td class = "text_info"></td>
@@ -2262,9 +2012,9 @@ Destination Clock : FanController_TACH_CLK_500K : Positive edge(Required Frequen
 <tr> 
  <td class = "text_info">\FanController:B_FanCtrl:GlobalControlReg\/control_5</td>
  <td class = "text_info">\FanController:FanTach:sync2_tach_cnt3\/clk_en</td>
- <td class = "number">82.311&nbsp;MHz</td>
- <td class = "number">12.149</td>
- <td class = "number">8.684</td>
+ <td class = "number">94.003&nbsp;MHz</td>
+ <td class = "number">10.638</td>
+ <td class = "number">10.195</td>
  <td class = "text_info"></td>
 </tr>
 <tr class="sta_path">
@@ -2284,7 +2034,7 @@ Destination Clock : FanController_TACH_CLK_500K : Positive edge(Required Frequen
 <tbody>
 <tr> 
  <td class = "text_info">controlcell1</td>
- <td class = "text_info">U(1,1)</td>
+ <td class = "text_info">U(1,0)</td>
  <td class = "number">1</td>
  <td class = "text_info">\FanController:B_FanCtrl:GlobalControlReg\</td>
  <td class = "text_info">\FanController:B_FanCtrl:GlobalControlReg\/clock</td>
@@ -2298,13 +2048,202 @@ Destination Clock : FanController_TACH_CLK_500K : Positive edge(Required Frequen
  <td class = "text_info">\FanController:enable\</td>
  <td class = "text_info">\FanController:B_FanCtrl:GlobalControlReg\/control_5</td>
  <td class = "text_info">\FanController:FanTach:sync2_tach_cnt3\/clk_en</td>
- <td class = "number">7.469</td>
+ <td class = "number">5.958</td>
 </tr>
 <tr> 
  <td class = "text_info">macrocell17</td>
- <td class = "text_info">U(1,0)</td>
+ <td class = "text_info">U(0,1)</td>
  <td class = "number">1</td>
  <td class = "text_info">\FanController:FanTach:sync2_tach_cnt3\</td>
+ <td class = "text_info"></td>
+ <td class = "text_info">SETUP</td>
+ <td class = "number">2.100</td>
+</tr>
+<tr> 
+ <td class = "text_info">Clock</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info">Skew</td>
+ <td class = "number">0.000</td>
+</tr>
+</tbody>
+ </table> 
+</td>
+</tr>
+<tr> 
+ <td class = "text_info">\FanController:B_FanCtrl:GlobalControlReg\/control_5</td>
+ <td class = "text_info">\FanController:FanTach:P4:TachAddrControl\/clk_en</td>
+ <td class = "number">94.011&nbsp;MHz</td>
+ <td class = "number">10.637</td>
+ <td class = "number">10.196</td>
+ <td class = "text_info"></td>
+</tr>
+<tr class="sta_path">
+<td class="sta_path"  colspan="6">
+<table class="sta_path">
+ <thead> 
+<tr> 
+<th>Type</th>
+<th>Location</th>
+<th>Fanout</th>
+<th>Instance/Net</th>
+<th>Source</th>
+<th>Dest</th>
+<th>Delay (ns)</th>
+</tr>
+</thead> 
+<tbody>
+<tr> 
+ <td class = "text_info">controlcell1</td>
+ <td class = "text_info">U(1,0)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\FanController:B_FanCtrl:GlobalControlReg\</td>
+ <td class = "text_info">\FanController:B_FanCtrl:GlobalControlReg\/clock</td>
+ <td class = "text_info">\FanController:B_FanCtrl:GlobalControlReg\/control_5</td>
+ <td class = "number">2.580</td>
+</tr>
+<tr> 
+ <td class = "text_info">Route</td>
+ <td class = "text_info"> </td>
+ <td class = "number">1</td>
+ <td class = "text_info">\FanController:enable\</td>
+ <td class = "text_info">\FanController:B_FanCtrl:GlobalControlReg\/control_5</td>
+ <td class = "text_info">\FanController:FanTach:P4:TachAddrControl\/clk_en</td>
+ <td class = "number">5.957</td>
+</tr>
+<tr> 
+ <td class = "text_info">controlcell2</td>
+ <td class = "text_info">U(1,1)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\FanController:FanTach:P4:TachAddrControl\</td>
+ <td class = "text_info"></td>
+ <td class = "text_info">SETUP</td>
+ <td class = "number">2.100</td>
+</tr>
+<tr> 
+ <td class = "text_info">Clock</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info">Skew</td>
+ <td class = "number">0.000</td>
+</tr>
+</tbody>
+ </table> 
+</td>
+</tr>
+<tr> 
+ <td class = "text_info">\FanController:B_FanCtrl:GlobalControlReg\/control_5</td>
+ <td class = "text_info">\FanController:FanTach:FanTachCounter:u1\/clk_en</td>
+ <td class = "number">94.011&nbsp;MHz</td>
+ <td class = "number">10.637</td>
+ <td class = "number">10.196</td>
+ <td class = "text_info"></td>
+</tr>
+<tr class="sta_path">
+<td class="sta_path"  colspan="6">
+<table class="sta_path">
+ <thead> 
+<tr> 
+<th>Type</th>
+<th>Location</th>
+<th>Fanout</th>
+<th>Instance/Net</th>
+<th>Source</th>
+<th>Dest</th>
+<th>Delay (ns)</th>
+</tr>
+</thead> 
+<tbody>
+<tr> 
+ <td class = "text_info">controlcell1</td>
+ <td class = "text_info">U(1,0)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\FanController:B_FanCtrl:GlobalControlReg\</td>
+ <td class = "text_info">\FanController:B_FanCtrl:GlobalControlReg\/clock</td>
+ <td class = "text_info">\FanController:B_FanCtrl:GlobalControlReg\/control_5</td>
+ <td class = "number">2.580</td>
+</tr>
+<tr> 
+ <td class = "text_info">Route</td>
+ <td class = "text_info"> </td>
+ <td class = "number">1</td>
+ <td class = "text_info">\FanController:enable\</td>
+ <td class = "text_info">\FanController:B_FanCtrl:GlobalControlReg\/control_5</td>
+ <td class = "text_info">\FanController:FanTach:FanTachCounter:u1\/clk_en</td>
+ <td class = "number">5.957</td>
+</tr>
+<tr> 
+ <td class = "text_info">datapathcell4</td>
+ <td class = "text_info">U(1,1)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\FanController:FanTach:FanTachCounter:u1\</td>
+ <td class = "text_info"></td>
+ <td class = "text_info">SETUP</td>
+ <td class = "number">2.100</td>
+</tr>
+<tr> 
+ <td class = "text_info">Clock</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info">Skew</td>
+ <td class = "number">0.000</td>
+</tr>
+</tbody>
+ </table> 
+</td>
+</tr>
+<tr> 
+ <td class = "text_info">\FanController:B_FanCtrl:GlobalControlReg\/control_5</td>
+ <td class = "text_info">\FanController:FanTach:tach\/clk_en</td>
+ <td class = "number">94.011&nbsp;MHz</td>
+ <td class = "number">10.637</td>
+ <td class = "number">10.196</td>
+ <td class = "text_info"></td>
+</tr>
+<tr class="sta_path">
+<td class="sta_path"  colspan="6">
+<table class="sta_path">
+ <thead> 
+<tr> 
+<th>Type</th>
+<th>Location</th>
+<th>Fanout</th>
+<th>Instance/Net</th>
+<th>Source</th>
+<th>Dest</th>
+<th>Delay (ns)</th>
+</tr>
+</thead> 
+<tbody>
+<tr> 
+ <td class = "text_info">controlcell1</td>
+ <td class = "text_info">U(1,0)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\FanController:B_FanCtrl:GlobalControlReg\</td>
+ <td class = "text_info">\FanController:B_FanCtrl:GlobalControlReg\/clock</td>
+ <td class = "text_info">\FanController:B_FanCtrl:GlobalControlReg\/control_5</td>
+ <td class = "number">2.580</td>
+</tr>
+<tr> 
+ <td class = "text_info">Route</td>
+ <td class = "text_info"> </td>
+ <td class = "number">1</td>
+ <td class = "text_info">\FanController:enable\</td>
+ <td class = "text_info">\FanController:B_FanCtrl:GlobalControlReg\/control_5</td>
+ <td class = "text_info">\FanController:FanTach:tach\/clk_en</td>
+ <td class = "number">5.957</td>
+</tr>
+<tr> 
+ <td class = "text_info">macrocell6</td>
+ <td class = "text_info">U(1,1)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\FanController:FanTach:tach\</td>
  <td class = "text_info"></td>
  <td class = "text_info">SETUP</td>
  <td class = "number">2.100</td>
@@ -2356,9 +2295,9 @@ Destination Clock : FanController_TACH_CLK_500K : Positive edge(Required Frequen
 <tr> 
  <td class = "text_info">\FanController:FanTach:tach_state_1\/q</td>
  <td class = "text_info">\FanController:FanTach:tach_state_1\/main_5</td>
- <td class = "number">37.882&nbsp;MHz</td>
- <td class = "number">26.398</td>
- <td class = "number">1973.602</td>
+ <td class = "number">36.256&nbsp;MHz</td>
+ <td class = "number">27.582</td>
+ <td class = "number">1972.418</td>
  <td class = "text_info"></td>
 </tr>
 <tr class="sta_path">
@@ -2392,11 +2331,11 @@ Destination Clock : FanController_TACH_CLK_500K : Positive edge(Required Frequen
  <td class = "text_info">\FanController:FanTach:tach_state_1\</td>
  <td class = "text_info">\FanController:FanTach:tach_state_1\/q</td>
  <td class = "text_info">\FanController:FanTach:FanTachCounter:u0\/cs_addr_1</td>
- <td class = "number">4.077</td>
+ <td class = "number">4.411</td>
 </tr>
 <tr> 
  <td class = "text_info">datapathcell3</td>
- <td class = "text_info">U(1,0)</td>
+ <td class = "text_info">U(0,1)</td>
  <td class = "number">1</td>
  <td class = "text_info">\FanController:FanTach:FanTachCounter:u0\</td>
  <td class = "text_info">\FanController:FanTach:FanTachCounter:u0\/cs_addr_1</td>
@@ -2414,7 +2353,7 @@ Destination Clock : FanController_TACH_CLK_500K : Positive edge(Required Frequen
 </tr>
 <tr> 
  <td class = "text_info">datapathcell4</td>
- <td class = "text_info">U(0,0)</td>
+ <td class = "text_info">U(1,1)</td>
  <td class = "number">1</td>
  <td class = "text_info">\FanController:FanTach:FanTachCounter:u1\</td>
  <td class = "text_info">\FanController:FanTach:FanTachCounter:u1\/ci</td>
@@ -2428,7 +2367,7 @@ Destination Clock : FanController_TACH_CLK_500K : Positive edge(Required Frequen
  <td class = "text_info">\FanController:FanTach:co_1\</td>
  <td class = "text_info">\FanController:FanTach:FanTachCounter:u1\/co_msb_comb</td>
  <td class = "text_info">\FanController:FanTach:tach_state_1\/main_5</td>
- <td class = "number">3.021</td>
+ <td class = "number">3.871</td>
 </tr>
 <tr> 
  <td class = "text_info">macrocell15</td>
@@ -2455,108 +2394,9 @@ Destination Clock : FanController_TACH_CLK_500K : Positive edge(Required Frequen
 <tr> 
  <td class = "text_info">\FanController:FanTach:tach_state_1\/q</td>
  <td class = "text_info">\FanController:FanTach:tach_state_2\/main_4</td>
- <td class = "number">37.883&nbsp;MHz</td>
- <td class = "number">26.397</td>
- <td class = "number">1973.603</td>
- <td class = "text_info"></td>
-</tr>
-<tr class="sta_path">
-<td class="sta_path"  colspan="6">
-<table class="sta_path">
- <thead> 
-<tr> 
-<th>Type</th>
-<th>Location</th>
-<th>Fanout</th>
-<th>Instance/Net</th>
-<th>Source</th>
-<th>Dest</th>
-<th>Delay (ns)</th>
-</tr>
-</thead> 
-<tbody>
-<tr> 
- <td class = "text_info">macrocell15</td>
- <td class = "text_info">U(0,0)</td>
- <td class = "number">1</td>
- <td class = "text_info">\FanController:FanTach:tach_state_1\</td>
- <td class = "text_info">\FanController:FanTach:tach_state_1\/clock_0</td>
- <td class = "text_info">\FanController:FanTach:tach_state_1\/q</td>
- <td class = "number">1.250</td>
-</tr>
-<tr> 
- <td class = "text_info">Route</td>
- <td class = "text_info"> </td>
- <td class = "number">1</td>
- <td class = "text_info">\FanController:FanTach:tach_state_1\</td>
- <td class = "text_info">\FanController:FanTach:tach_state_1\/q</td>
- <td class = "text_info">\FanController:FanTach:FanTachCounter:u0\/cs_addr_1</td>
- <td class = "number">4.077</td>
-</tr>
-<tr> 
- <td class = "text_info">datapathcell3</td>
- <td class = "text_info">U(1,0)</td>
- <td class = "number">1</td>
- <td class = "text_info">\FanController:FanTach:FanTachCounter:u0\</td>
- <td class = "text_info">\FanController:FanTach:FanTachCounter:u0\/cs_addr_1</td>
- <td class = "text_info">\FanController:FanTach:FanTachCounter:u0\/co_msb</td>
- <td class = "number">9.710</td>
-</tr>
-<tr> 
- <td class = "text_info">Route</td>
- <td class = "text_info"> </td>
- <td class = "number">1</td>
- <td class = "text_info">\FanController:FanTach:FanTachCounter:u0.co_msb__sig\</td>
- <td class = "text_info">\FanController:FanTach:FanTachCounter:u0\/co_msb</td>
- <td class = "text_info">\FanController:FanTach:FanTachCounter:u1\/ci</td>
- <td class = "number">0.000</td>
-</tr>
-<tr> 
- <td class = "text_info">datapathcell4</td>
- <td class = "text_info">U(0,0)</td>
- <td class = "number">1</td>
- <td class = "text_info">\FanController:FanTach:FanTachCounter:u1\</td>
- <td class = "text_info">\FanController:FanTach:FanTachCounter:u1\/ci</td>
- <td class = "text_info">\FanController:FanTach:FanTachCounter:u1\/co_msb_comb</td>
- <td class = "number">4.830</td>
-</tr>
-<tr> 
- <td class = "text_info">Route</td>
- <td class = "text_info"> </td>
- <td class = "number">1</td>
- <td class = "text_info">\FanController:FanTach:co_1\</td>
- <td class = "text_info">\FanController:FanTach:FanTachCounter:u1\/co_msb_comb</td>
- <td class = "text_info">\FanController:FanTach:tach_state_2\/main_4</td>
- <td class = "number">3.020</td>
-</tr>
-<tr> 
- <td class = "text_info">macrocell14</td>
- <td class = "text_info">U(1,0)</td>
- <td class = "number">1</td>
- <td class = "text_info">\FanController:FanTach:tach_state_2\</td>
- <td class = "text_info"></td>
- <td class = "text_info">SETUP</td>
- <td class = "number">3.510</td>
-</tr>
-<tr> 
- <td class = "text_info">Clock</td>
- <td class = "text_info"> </td>
- <td class = "text_info"></td>
- <td class = "text_info"></td>
- <td class = "text_info"></td>
- <td class = "text_info">Skew</td>
- <td class = "number">0.000</td>
-</tr>
-</tbody>
- </table> 
-</td>
-</tr>
-<tr> 
- <td class = "text_info">\FanController:FanTach:tach_state_1\/q</td>
- <td class = "text_info">\FanController:FanTach:tach_state_0\/main_7</td>
- <td class = "number">38.098&nbsp;MHz</td>
- <td class = "number">26.248</td>
- <td class = "number">1973.752</td>
+ <td class = "number">37.247&nbsp;MHz</td>
+ <td class = "number">26.848</td>
+ <td class = "number">1973.152</td>
  <td class = "text_info"></td>
 </tr>
 <tr class="sta_path">
@@ -2590,11 +2430,11 @@ Destination Clock : FanController_TACH_CLK_500K : Positive edge(Required Frequen
  <td class = "text_info">\FanController:FanTach:tach_state_1\</td>
  <td class = "text_info">\FanController:FanTach:tach_state_1\/q</td>
  <td class = "text_info">\FanController:FanTach:FanTachCounter:u0\/cs_addr_1</td>
- <td class = "number">4.077</td>
+ <td class = "number">4.411</td>
 </tr>
 <tr> 
  <td class = "text_info">datapathcell3</td>
- <td class = "text_info">U(1,0)</td>
+ <td class = "text_info">U(0,1)</td>
  <td class = "number">1</td>
  <td class = "text_info">\FanController:FanTach:FanTachCounter:u0\</td>
  <td class = "text_info">\FanController:FanTach:FanTachCounter:u0\/cs_addr_1</td>
@@ -2612,7 +2452,106 @@ Destination Clock : FanController_TACH_CLK_500K : Positive edge(Required Frequen
 </tr>
 <tr> 
  <td class = "text_info">datapathcell4</td>
+ <td class = "text_info">U(1,1)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\FanController:FanTach:FanTachCounter:u1\</td>
+ <td class = "text_info">\FanController:FanTach:FanTachCounter:u1\/ci</td>
+ <td class = "text_info">\FanController:FanTach:FanTachCounter:u1\/co_msb_comb</td>
+ <td class = "number">4.830</td>
+</tr>
+<tr> 
+ <td class = "text_info">Route</td>
+ <td class = "text_info"> </td>
+ <td class = "number">1</td>
+ <td class = "text_info">\FanController:FanTach:co_1\</td>
+ <td class = "text_info">\FanController:FanTach:FanTachCounter:u1\/co_msb_comb</td>
+ <td class = "text_info">\FanController:FanTach:tach_state_2\/main_4</td>
+ <td class = "number">3.137</td>
+</tr>
+<tr> 
+ <td class = "text_info">macrocell14</td>
+ <td class = "text_info">U(0,1)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\FanController:FanTach:tach_state_2\</td>
+ <td class = "text_info"></td>
+ <td class = "text_info">SETUP</td>
+ <td class = "number">3.510</td>
+</tr>
+<tr> 
+ <td class = "text_info">Clock</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info">Skew</td>
+ <td class = "number">0.000</td>
+</tr>
+</tbody>
+ </table> 
+</td>
+</tr>
+<tr> 
+ <td class = "text_info">\FanController:FanTach:tach_state_1\/q</td>
+ <td class = "text_info">\FanController:FanTach:tach_state_0\/main_7</td>
+ <td class = "number">37.279&nbsp;MHz</td>
+ <td class = "number">26.825</td>
+ <td class = "number">1973.175</td>
+ <td class = "text_info"></td>
+</tr>
+<tr class="sta_path">
+<td class="sta_path"  colspan="6">
+<table class="sta_path">
+ <thead> 
+<tr> 
+<th>Type</th>
+<th>Location</th>
+<th>Fanout</th>
+<th>Instance/Net</th>
+<th>Source</th>
+<th>Dest</th>
+<th>Delay (ns)</th>
+</tr>
+</thead> 
+<tbody>
+<tr> 
+ <td class = "text_info">macrocell15</td>
  <td class = "text_info">U(0,0)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\FanController:FanTach:tach_state_1\</td>
+ <td class = "text_info">\FanController:FanTach:tach_state_1\/clock_0</td>
+ <td class = "text_info">\FanController:FanTach:tach_state_1\/q</td>
+ <td class = "number">1.250</td>
+</tr>
+<tr> 
+ <td class = "text_info">Route</td>
+ <td class = "text_info"> </td>
+ <td class = "number">1</td>
+ <td class = "text_info">\FanController:FanTach:tach_state_1\</td>
+ <td class = "text_info">\FanController:FanTach:tach_state_1\/q</td>
+ <td class = "text_info">\FanController:FanTach:FanTachCounter:u0\/cs_addr_1</td>
+ <td class = "number">4.411</td>
+</tr>
+<tr> 
+ <td class = "text_info">datapathcell3</td>
+ <td class = "text_info">U(0,1)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\FanController:FanTach:FanTachCounter:u0\</td>
+ <td class = "text_info">\FanController:FanTach:FanTachCounter:u0\/cs_addr_1</td>
+ <td class = "text_info">\FanController:FanTach:FanTachCounter:u0\/co_msb</td>
+ <td class = "number">9.710</td>
+</tr>
+<tr> 
+ <td class = "text_info">Route</td>
+ <td class = "text_info"> </td>
+ <td class = "number">1</td>
+ <td class = "text_info">\FanController:FanTach:FanTachCounter:u0.co_msb__sig\</td>
+ <td class = "text_info">\FanController:FanTach:FanTachCounter:u0\/co_msb</td>
+ <td class = "text_info">\FanController:FanTach:FanTachCounter:u1\/ci</td>
+ <td class = "number">0.000</td>
+</tr>
+<tr> 
+ <td class = "text_info">datapathcell4</td>
+ <td class = "text_info">U(1,1)</td>
  <td class = "number">1</td>
  <td class = "text_info">\FanController:FanTach:FanTachCounter:u1\</td>
  <td class = "text_info">\FanController:FanTach:FanTachCounter:u1\/ci</td>
@@ -2626,11 +2565,11 @@ Destination Clock : FanController_TACH_CLK_500K : Positive edge(Required Frequen
  <td class = "text_info">\FanController:FanTach:co_1\</td>
  <td class = "text_info">\FanController:FanTach:FanTachCounter:u1\/co_msb_comb</td>
  <td class = "text_info">\FanController:FanTach:tach_state_0\/main_7</td>
- <td class = "number">2.871</td>
+ <td class = "number">3.114</td>
 </tr>
 <tr> 
  <td class = "text_info">macrocell16</td>
- <td class = "text_info">U(1,0)</td>
+ <td class = "text_info">U(0,1)</td>
  <td class = "number">1</td>
  <td class = "text_info">\FanController:FanTach:tach_state_0\</td>
  <td class = "text_info"></td>
@@ -2651,11 +2590,11 @@ Destination Clock : FanController_TACH_CLK_500K : Positive edge(Required Frequen
 </td>
 </tr>
 <tr> 
- <td class = "text_info">\FanController:FanTach:tach_state_2\/q</td>
+ <td class = "text_info">\FanController:FanTach:tach_state_0\/q</td>
  <td class = "text_info">\FanController:FanTach:tach_state_1\/main_5</td>
- <td class = "number">38.570&nbsp;MHz</td>
- <td class = "number">25.927</td>
- <td class = "number">1974.073</td>
+ <td class = "number">37.618&nbsp;MHz</td>
+ <td class = "number">26.583</td>
+ <td class = "number">1973.417</td>
  <td class = "text_info"></td>
 </tr>
 <tr class="sta_path">
@@ -2674,29 +2613,29 @@ Destination Clock : FanController_TACH_CLK_500K : Positive edge(Required Frequen
 </thead> 
 <tbody>
 <tr> 
- <td class = "text_info">macrocell14</td>
- <td class = "text_info">U(1,0)</td>
+ <td class = "text_info">macrocell16</td>
+ <td class = "text_info">U(0,1)</td>
  <td class = "number">1</td>
- <td class = "text_info">\FanController:FanTach:tach_state_2\</td>
- <td class = "text_info">\FanController:FanTach:tach_state_2\/clock_0</td>
- <td class = "text_info">\FanController:FanTach:tach_state_2\/q</td>
+ <td class = "text_info">\FanController:FanTach:tach_state_0\</td>
+ <td class = "text_info">\FanController:FanTach:tach_state_0\/clock_0</td>
+ <td class = "text_info">\FanController:FanTach:tach_state_0\/q</td>
  <td class = "number">1.250</td>
 </tr>
 <tr> 
  <td class = "text_info">Route</td>
  <td class = "text_info"> </td>
  <td class = "number">1</td>
- <td class = "text_info">\FanController:FanTach:tach_state_2\</td>
- <td class = "text_info">\FanController:FanTach:tach_state_2\/q</td>
- <td class = "text_info">\FanController:FanTach:FanTachCounter:u0\/cs_addr_2</td>
- <td class = "number">3.606</td>
+ <td class = "text_info">\FanController:FanTach:tach_state_0\</td>
+ <td class = "text_info">\FanController:FanTach:tach_state_0\/q</td>
+ <td class = "text_info">\FanController:FanTach:FanTachCounter:u0\/cs_addr_0</td>
+ <td class = "number">3.412</td>
 </tr>
 <tr> 
  <td class = "text_info">datapathcell3</td>
- <td class = "text_info">U(1,0)</td>
+ <td class = "text_info">U(0,1)</td>
  <td class = "number">1</td>
  <td class = "text_info">\FanController:FanTach:FanTachCounter:u0\</td>
- <td class = "text_info">\FanController:FanTach:FanTachCounter:u0\/cs_addr_2</td>
+ <td class = "text_info">\FanController:FanTach:FanTachCounter:u0\/cs_addr_0</td>
  <td class = "text_info">\FanController:FanTach:FanTachCounter:u0\/co_msb</td>
  <td class = "number">9.710</td>
 </tr>
@@ -2711,7 +2650,7 @@ Destination Clock : FanController_TACH_CLK_500K : Positive edge(Required Frequen
 </tr>
 <tr> 
  <td class = "text_info">datapathcell4</td>
- <td class = "text_info">U(0,0)</td>
+ <td class = "text_info">U(1,1)</td>
  <td class = "number">1</td>
  <td class = "text_info">\FanController:FanTach:FanTachCounter:u1\</td>
  <td class = "text_info">\FanController:FanTach:FanTachCounter:u1\/ci</td>
@@ -2725,7 +2664,7 @@ Destination Clock : FanController_TACH_CLK_500K : Positive edge(Required Frequen
  <td class = "text_info">\FanController:FanTach:co_1\</td>
  <td class = "text_info">\FanController:FanTach:FanTachCounter:u1\/co_msb_comb</td>
  <td class = "text_info">\FanController:FanTach:tach_state_1\/main_5</td>
- <td class = "number">3.021</td>
+ <td class = "number">3.871</td>
 </tr>
 <tr> 
  <td class = "text_info">macrocell15</td>
@@ -2751,10 +2690,10 @@ Destination Clock : FanController_TACH_CLK_500K : Positive edge(Required Frequen
 </tr>
 <tr> 
  <td class = "text_info">\FanController:FanTach:tach_state_2\/q</td>
- <td class = "text_info">\FanController:FanTach:tach_state_2\/main_4</td>
- <td class = "number">38.571&nbsp;MHz</td>
- <td class = "number">25.926</td>
- <td class = "number">1974.074</td>
+ <td class = "text_info">\FanController:FanTach:tach_state_1\/main_5</td>
+ <td class = "number">37.685&nbsp;MHz</td>
+ <td class = "number">26.536</td>
+ <td class = "number">1973.464</td>
  <td class = "text_info"></td>
 </tr>
 <tr class="sta_path">
@@ -2774,7 +2713,7 @@ Destination Clock : FanController_TACH_CLK_500K : Positive edge(Required Frequen
 <tbody>
 <tr> 
  <td class = "text_info">macrocell14</td>
- <td class = "text_info">U(1,0)</td>
+ <td class = "text_info">U(0,1)</td>
  <td class = "number">1</td>
  <td class = "text_info">\FanController:FanTach:tach_state_2\</td>
  <td class = "text_info">\FanController:FanTach:tach_state_2\/clock_0</td>
@@ -2788,11 +2727,11 @@ Destination Clock : FanController_TACH_CLK_500K : Positive edge(Required Frequen
  <td class = "text_info">\FanController:FanTach:tach_state_2\</td>
  <td class = "text_info">\FanController:FanTach:tach_state_2\/q</td>
  <td class = "text_info">\FanController:FanTach:FanTachCounter:u0\/cs_addr_2</td>
- <td class = "number">3.606</td>
+ <td class = "number">3.365</td>
 </tr>
 <tr> 
  <td class = "text_info">datapathcell3</td>
- <td class = "text_info">U(1,0)</td>
+ <td class = "text_info">U(0,1)</td>
  <td class = "number">1</td>
  <td class = "text_info">\FanController:FanTach:FanTachCounter:u0\</td>
  <td class = "text_info">\FanController:FanTach:FanTachCounter:u0\/cs_addr_2</td>
@@ -2810,106 +2749,7 @@ Destination Clock : FanController_TACH_CLK_500K : Positive edge(Required Frequen
 </tr>
 <tr> 
  <td class = "text_info">datapathcell4</td>
- <td class = "text_info">U(0,0)</td>
- <td class = "number">1</td>
- <td class = "text_info">\FanController:FanTach:FanTachCounter:u1\</td>
- <td class = "text_info">\FanController:FanTach:FanTachCounter:u1\/ci</td>
- <td class = "text_info">\FanController:FanTach:FanTachCounter:u1\/co_msb_comb</td>
- <td class = "number">4.830</td>
-</tr>
-<tr> 
- <td class = "text_info">Route</td>
- <td class = "text_info"> </td>
- <td class = "number">1</td>
- <td class = "text_info">\FanController:FanTach:co_1\</td>
- <td class = "text_info">\FanController:FanTach:FanTachCounter:u1\/co_msb_comb</td>
- <td class = "text_info">\FanController:FanTach:tach_state_2\/main_4</td>
- <td class = "number">3.020</td>
-</tr>
-<tr> 
- <td class = "text_info">macrocell14</td>
- <td class = "text_info">U(1,0)</td>
- <td class = "number">1</td>
- <td class = "text_info">\FanController:FanTach:tach_state_2\</td>
- <td class = "text_info"></td>
- <td class = "text_info">SETUP</td>
- <td class = "number">3.510</td>
-</tr>
-<tr> 
- <td class = "text_info">Clock</td>
- <td class = "text_info"> </td>
- <td class = "text_info"></td>
- <td class = "text_info"></td>
- <td class = "text_info"></td>
- <td class = "text_info">Skew</td>
- <td class = "number">0.000</td>
-</tr>
-</tbody>
- </table> 
-</td>
-</tr>
-<tr> 
- <td class = "text_info">\FanController:FanTach:tach_state_0\/q</td>
- <td class = "text_info">\FanController:FanTach:tach_state_1\/main_5</td>
- <td class = "number">38.622&nbsp;MHz</td>
- <td class = "number">25.892</td>
- <td class = "number">1974.108</td>
- <td class = "text_info"></td>
-</tr>
-<tr class="sta_path">
-<td class="sta_path"  colspan="6">
-<table class="sta_path">
- <thead> 
-<tr> 
-<th>Type</th>
-<th>Location</th>
-<th>Fanout</th>
-<th>Instance/Net</th>
-<th>Source</th>
-<th>Dest</th>
-<th>Delay (ns)</th>
-</tr>
-</thead> 
-<tbody>
-<tr> 
- <td class = "text_info">macrocell16</td>
- <td class = "text_info">U(1,0)</td>
- <td class = "number">1</td>
- <td class = "text_info">\FanController:FanTach:tach_state_0\</td>
- <td class = "text_info">\FanController:FanTach:tach_state_0\/clock_0</td>
- <td class = "text_info">\FanController:FanTach:tach_state_0\/q</td>
- <td class = "number">1.250</td>
-</tr>
-<tr> 
- <td class = "text_info">Route</td>
- <td class = "text_info"> </td>
- <td class = "number">1</td>
- <td class = "text_info">\FanController:FanTach:tach_state_0\</td>
- <td class = "text_info">\FanController:FanTach:tach_state_0\/q</td>
- <td class = "text_info">\FanController:FanTach:FanTachCounter:u0\/cs_addr_0</td>
- <td class = "number">3.571</td>
-</tr>
-<tr> 
- <td class = "text_info">datapathcell3</td>
- <td class = "text_info">U(1,0)</td>
- <td class = "number">1</td>
- <td class = "text_info">\FanController:FanTach:FanTachCounter:u0\</td>
- <td class = "text_info">\FanController:FanTach:FanTachCounter:u0\/cs_addr_0</td>
- <td class = "text_info">\FanController:FanTach:FanTachCounter:u0\/co_msb</td>
- <td class = "number">9.710</td>
-</tr>
-<tr> 
- <td class = "text_info">Route</td>
- <td class = "text_info"> </td>
- <td class = "number">1</td>
- <td class = "text_info">\FanController:FanTach:FanTachCounter:u0.co_msb__sig\</td>
- <td class = "text_info">\FanController:FanTach:FanTachCounter:u0\/co_msb</td>
- <td class = "text_info">\FanController:FanTach:FanTachCounter:u1\/ci</td>
- <td class = "number">0.000</td>
-</tr>
-<tr> 
- <td class = "text_info">datapathcell4</td>
- <td class = "text_info">U(0,0)</td>
+ <td class = "text_info">U(1,1)</td>
  <td class = "number">1</td>
  <td class = "text_info">\FanController:FanTach:FanTachCounter:u1\</td>
  <td class = "text_info">\FanController:FanTach:FanTachCounter:u1\/ci</td>
@@ -2923,7 +2763,7 @@ Destination Clock : FanController_TACH_CLK_500K : Positive edge(Required Frequen
  <td class = "text_info">\FanController:FanTach:co_1\</td>
  <td class = "text_info">\FanController:FanTach:FanTachCounter:u1\/co_msb_comb</td>
  <td class = "text_info">\FanController:FanTach:tach_state_1\/main_5</td>
- <td class = "number">3.021</td>
+ <td class = "number">3.871</td>
 </tr>
 <tr> 
  <td class = "text_info">macrocell15</td>
@@ -2950,9 +2790,9 @@ Destination Clock : FanController_TACH_CLK_500K : Positive edge(Required Frequen
 <tr> 
  <td class = "text_info">\FanController:FanTach:tach_state_0\/q</td>
  <td class = "text_info">\FanController:FanTach:tach_state_2\/main_4</td>
- <td class = "number">38.623&nbsp;MHz</td>
- <td class = "number">25.891</td>
- <td class = "number">1974.109</td>
+ <td class = "number">38.686&nbsp;MHz</td>
+ <td class = "number">25.849</td>
+ <td class = "number">1974.151</td>
  <td class = "text_info"></td>
 </tr>
 <tr class="sta_path">
@@ -2972,7 +2812,7 @@ Destination Clock : FanController_TACH_CLK_500K : Positive edge(Required Frequen
 <tbody>
 <tr> 
  <td class = "text_info">macrocell16</td>
- <td class = "text_info">U(1,0)</td>
+ <td class = "text_info">U(0,1)</td>
  <td class = "number">1</td>
  <td class = "text_info">\FanController:FanTach:tach_state_0\</td>
  <td class = "text_info">\FanController:FanTach:tach_state_0\/clock_0</td>
@@ -2986,11 +2826,11 @@ Destination Clock : FanController_TACH_CLK_500K : Positive edge(Required Frequen
  <td class = "text_info">\FanController:FanTach:tach_state_0\</td>
  <td class = "text_info">\FanController:FanTach:tach_state_0\/q</td>
  <td class = "text_info">\FanController:FanTach:FanTachCounter:u0\/cs_addr_0</td>
- <td class = "number">3.571</td>
+ <td class = "number">3.412</td>
 </tr>
 <tr> 
  <td class = "text_info">datapathcell3</td>
- <td class = "text_info">U(1,0)</td>
+ <td class = "text_info">U(0,1)</td>
  <td class = "number">1</td>
  <td class = "text_info">\FanController:FanTach:FanTachCounter:u0\</td>
  <td class = "text_info">\FanController:FanTach:FanTachCounter:u0\/cs_addr_0</td>
@@ -3008,7 +2848,7 @@ Destination Clock : FanController_TACH_CLK_500K : Positive edge(Required Frequen
 </tr>
 <tr> 
  <td class = "text_info">datapathcell4</td>
- <td class = "text_info">U(0,0)</td>
+ <td class = "text_info">U(1,1)</td>
  <td class = "number">1</td>
  <td class = "text_info">\FanController:FanTach:FanTachCounter:u1\</td>
  <td class = "text_info">\FanController:FanTach:FanTachCounter:u1\/ci</td>
@@ -3022,112 +2862,13 @@ Destination Clock : FanController_TACH_CLK_500K : Positive edge(Required Frequen
  <td class = "text_info">\FanController:FanTach:co_1\</td>
  <td class = "text_info">\FanController:FanTach:FanTachCounter:u1\/co_msb_comb</td>
  <td class = "text_info">\FanController:FanTach:tach_state_2\/main_4</td>
- <td class = "number">3.020</td>
+ <td class = "number">3.137</td>
 </tr>
 <tr> 
  <td class = "text_info">macrocell14</td>
- <td class = "text_info">U(1,0)</td>
+ <td class = "text_info">U(0,1)</td>
  <td class = "number">1</td>
  <td class = "text_info">\FanController:FanTach:tach_state_2\</td>
- <td class = "text_info"></td>
- <td class = "text_info">SETUP</td>
- <td class = "number">3.510</td>
-</tr>
-<tr> 
- <td class = "text_info">Clock</td>
- <td class = "text_info"> </td>
- <td class = "text_info"></td>
- <td class = "text_info"></td>
- <td class = "text_info"></td>
- <td class = "text_info">Skew</td>
- <td class = "number">0.000</td>
-</tr>
-</tbody>
- </table> 
-</td>
-</tr>
-<tr> 
- <td class = "text_info">\FanController:FanTach:tach_state_2\/q</td>
- <td class = "text_info">\FanController:FanTach:tach_state_0\/main_7</td>
- <td class = "number">38.794&nbsp;MHz</td>
- <td class = "number">25.777</td>
- <td class = "number">1974.223</td>
- <td class = "text_info"></td>
-</tr>
-<tr class="sta_path">
-<td class="sta_path"  colspan="6">
-<table class="sta_path">
- <thead> 
-<tr> 
-<th>Type</th>
-<th>Location</th>
-<th>Fanout</th>
-<th>Instance/Net</th>
-<th>Source</th>
-<th>Dest</th>
-<th>Delay (ns)</th>
-</tr>
-</thead> 
-<tbody>
-<tr> 
- <td class = "text_info">macrocell14</td>
- <td class = "text_info">U(1,0)</td>
- <td class = "number">1</td>
- <td class = "text_info">\FanController:FanTach:tach_state_2\</td>
- <td class = "text_info">\FanController:FanTach:tach_state_2\/clock_0</td>
- <td class = "text_info">\FanController:FanTach:tach_state_2\/q</td>
- <td class = "number">1.250</td>
-</tr>
-<tr> 
- <td class = "text_info">Route</td>
- <td class = "text_info"> </td>
- <td class = "number">1</td>
- <td class = "text_info">\FanController:FanTach:tach_state_2\</td>
- <td class = "text_info">\FanController:FanTach:tach_state_2\/q</td>
- <td class = "text_info">\FanController:FanTach:FanTachCounter:u0\/cs_addr_2</td>
- <td class = "number">3.606</td>
-</tr>
-<tr> 
- <td class = "text_info">datapathcell3</td>
- <td class = "text_info">U(1,0)</td>
- <td class = "number">1</td>
- <td class = "text_info">\FanController:FanTach:FanTachCounter:u0\</td>
- <td class = "text_info">\FanController:FanTach:FanTachCounter:u0\/cs_addr_2</td>
- <td class = "text_info">\FanController:FanTach:FanTachCounter:u0\/co_msb</td>
- <td class = "number">9.710</td>
-</tr>
-<tr> 
- <td class = "text_info">Route</td>
- <td class = "text_info"> </td>
- <td class = "number">1</td>
- <td class = "text_info">\FanController:FanTach:FanTachCounter:u0.co_msb__sig\</td>
- <td class = "text_info">\FanController:FanTach:FanTachCounter:u0\/co_msb</td>
- <td class = "text_info">\FanController:FanTach:FanTachCounter:u1\/ci</td>
- <td class = "number">0.000</td>
-</tr>
-<tr> 
- <td class = "text_info">datapathcell4</td>
- <td class = "text_info">U(0,0)</td>
- <td class = "number">1</td>
- <td class = "text_info">\FanController:FanTach:FanTachCounter:u1\</td>
- <td class = "text_info">\FanController:FanTach:FanTachCounter:u1\/ci</td>
- <td class = "text_info">\FanController:FanTach:FanTachCounter:u1\/co_msb_comb</td>
- <td class = "number">4.830</td>
-</tr>
-<tr> 
- <td class = "text_info">Route</td>
- <td class = "text_info"> </td>
- <td class = "number">1</td>
- <td class = "text_info">\FanController:FanTach:co_1\</td>
- <td class = "text_info">\FanController:FanTach:FanTachCounter:u1\/co_msb_comb</td>
- <td class = "text_info">\FanController:FanTach:tach_state_0\/main_7</td>
- <td class = "number">2.871</td>
-</tr>
-<tr> 
- <td class = "text_info">macrocell16</td>
- <td class = "text_info">U(1,0)</td>
- <td class = "number">1</td>
- <td class = "text_info">\FanController:FanTach:tach_state_0\</td>
  <td class = "text_info"></td>
  <td class = "text_info">SETUP</td>
  <td class = "number">3.510</td>
@@ -3148,9 +2889,9 @@ Destination Clock : FanController_TACH_CLK_500K : Positive edge(Required Frequen
 <tr> 
  <td class = "text_info">\FanController:FanTach:tach_state_0\/q</td>
  <td class = "text_info">\FanController:FanTach:tach_state_0\/main_7</td>
- <td class = "number">38.847&nbsp;MHz</td>
- <td class = "number">25.742</td>
- <td class = "number">1974.258</td>
+ <td class = "number">38.721&nbsp;MHz</td>
+ <td class = "number">25.826</td>
+ <td class = "number">1974.174</td>
  <td class = "text_info"></td>
 </tr>
 <tr class="sta_path">
@@ -3170,7 +2911,7 @@ Destination Clock : FanController_TACH_CLK_500K : Positive edge(Required Frequen
 <tbody>
 <tr> 
  <td class = "text_info">macrocell16</td>
- <td class = "text_info">U(1,0)</td>
+ <td class = "text_info">U(0,1)</td>
  <td class = "number">1</td>
  <td class = "text_info">\FanController:FanTach:tach_state_0\</td>
  <td class = "text_info">\FanController:FanTach:tach_state_0\/clock_0</td>
@@ -3184,11 +2925,11 @@ Destination Clock : FanController_TACH_CLK_500K : Positive edge(Required Frequen
  <td class = "text_info">\FanController:FanTach:tach_state_0\</td>
  <td class = "text_info">\FanController:FanTach:tach_state_0\/q</td>
  <td class = "text_info">\FanController:FanTach:FanTachCounter:u0\/cs_addr_0</td>
- <td class = "number">3.571</td>
+ <td class = "number">3.412</td>
 </tr>
 <tr> 
  <td class = "text_info">datapathcell3</td>
- <td class = "text_info">U(1,0)</td>
+ <td class = "text_info">U(0,1)</td>
  <td class = "number">1</td>
  <td class = "text_info">\FanController:FanTach:FanTachCounter:u0\</td>
  <td class = "text_info">\FanController:FanTach:FanTachCounter:u0\/cs_addr_0</td>
@@ -3206,7 +2947,7 @@ Destination Clock : FanController_TACH_CLK_500K : Positive edge(Required Frequen
 </tr>
 <tr> 
  <td class = "text_info">datapathcell4</td>
- <td class = "text_info">U(0,0)</td>
+ <td class = "text_info">U(1,1)</td>
  <td class = "number">1</td>
  <td class = "text_info">\FanController:FanTach:FanTachCounter:u1\</td>
  <td class = "text_info">\FanController:FanTach:FanTachCounter:u1\/ci</td>
@@ -3220,11 +2961,209 @@ Destination Clock : FanController_TACH_CLK_500K : Positive edge(Required Frequen
  <td class = "text_info">\FanController:FanTach:co_1\</td>
  <td class = "text_info">\FanController:FanTach:FanTachCounter:u1\/co_msb_comb</td>
  <td class = "text_info">\FanController:FanTach:tach_state_0\/main_7</td>
- <td class = "number">2.871</td>
+ <td class = "number">3.114</td>
 </tr>
 <tr> 
  <td class = "text_info">macrocell16</td>
- <td class = "text_info">U(1,0)</td>
+ <td class = "text_info">U(0,1)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\FanController:FanTach:tach_state_0\</td>
+ <td class = "text_info"></td>
+ <td class = "text_info">SETUP</td>
+ <td class = "number">3.510</td>
+</tr>
+<tr> 
+ <td class = "text_info">Clock</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info">Skew</td>
+ <td class = "number">0.000</td>
+</tr>
+</tbody>
+ </table> 
+</td>
+</tr>
+<tr> 
+ <td class = "text_info">\FanController:FanTach:tach_state_2\/q</td>
+ <td class = "text_info">\FanController:FanTach:tach_state_2\/main_4</td>
+ <td class = "number">38.757&nbsp;MHz</td>
+ <td class = "number">25.802</td>
+ <td class = "number">1974.198</td>
+ <td class = "text_info"></td>
+</tr>
+<tr class="sta_path">
+<td class="sta_path"  colspan="6">
+<table class="sta_path">
+ <thead> 
+<tr> 
+<th>Type</th>
+<th>Location</th>
+<th>Fanout</th>
+<th>Instance/Net</th>
+<th>Source</th>
+<th>Dest</th>
+<th>Delay (ns)</th>
+</tr>
+</thead> 
+<tbody>
+<tr> 
+ <td class = "text_info">macrocell14</td>
+ <td class = "text_info">U(0,1)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\FanController:FanTach:tach_state_2\</td>
+ <td class = "text_info">\FanController:FanTach:tach_state_2\/clock_0</td>
+ <td class = "text_info">\FanController:FanTach:tach_state_2\/q</td>
+ <td class = "number">1.250</td>
+</tr>
+<tr> 
+ <td class = "text_info">Route</td>
+ <td class = "text_info"> </td>
+ <td class = "number">1</td>
+ <td class = "text_info">\FanController:FanTach:tach_state_2\</td>
+ <td class = "text_info">\FanController:FanTach:tach_state_2\/q</td>
+ <td class = "text_info">\FanController:FanTach:FanTachCounter:u0\/cs_addr_2</td>
+ <td class = "number">3.365</td>
+</tr>
+<tr> 
+ <td class = "text_info">datapathcell3</td>
+ <td class = "text_info">U(0,1)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\FanController:FanTach:FanTachCounter:u0\</td>
+ <td class = "text_info">\FanController:FanTach:FanTachCounter:u0\/cs_addr_2</td>
+ <td class = "text_info">\FanController:FanTach:FanTachCounter:u0\/co_msb</td>
+ <td class = "number">9.710</td>
+</tr>
+<tr> 
+ <td class = "text_info">Route</td>
+ <td class = "text_info"> </td>
+ <td class = "number">1</td>
+ <td class = "text_info">\FanController:FanTach:FanTachCounter:u0.co_msb__sig\</td>
+ <td class = "text_info">\FanController:FanTach:FanTachCounter:u0\/co_msb</td>
+ <td class = "text_info">\FanController:FanTach:FanTachCounter:u1\/ci</td>
+ <td class = "number">0.000</td>
+</tr>
+<tr> 
+ <td class = "text_info">datapathcell4</td>
+ <td class = "text_info">U(1,1)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\FanController:FanTach:FanTachCounter:u1\</td>
+ <td class = "text_info">\FanController:FanTach:FanTachCounter:u1\/ci</td>
+ <td class = "text_info">\FanController:FanTach:FanTachCounter:u1\/co_msb_comb</td>
+ <td class = "number">4.830</td>
+</tr>
+<tr> 
+ <td class = "text_info">Route</td>
+ <td class = "text_info"> </td>
+ <td class = "number">1</td>
+ <td class = "text_info">\FanController:FanTach:co_1\</td>
+ <td class = "text_info">\FanController:FanTach:FanTachCounter:u1\/co_msb_comb</td>
+ <td class = "text_info">\FanController:FanTach:tach_state_2\/main_4</td>
+ <td class = "number">3.137</td>
+</tr>
+<tr> 
+ <td class = "text_info">macrocell14</td>
+ <td class = "text_info">U(0,1)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\FanController:FanTach:tach_state_2\</td>
+ <td class = "text_info"></td>
+ <td class = "text_info">SETUP</td>
+ <td class = "number">3.510</td>
+</tr>
+<tr> 
+ <td class = "text_info">Clock</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info">Skew</td>
+ <td class = "number">0.000</td>
+</tr>
+</tbody>
+ </table> 
+</td>
+</tr>
+<tr> 
+ <td class = "text_info">\FanController:FanTach:tach_state_2\/q</td>
+ <td class = "text_info">\FanController:FanTach:tach_state_0\/main_7</td>
+ <td class = "number">38.791&nbsp;MHz</td>
+ <td class = "number">25.779</td>
+ <td class = "number">1974.221</td>
+ <td class = "text_info"></td>
+</tr>
+<tr class="sta_path">
+<td class="sta_path"  colspan="6">
+<table class="sta_path">
+ <thead> 
+<tr> 
+<th>Type</th>
+<th>Location</th>
+<th>Fanout</th>
+<th>Instance/Net</th>
+<th>Source</th>
+<th>Dest</th>
+<th>Delay (ns)</th>
+</tr>
+</thead> 
+<tbody>
+<tr> 
+ <td class = "text_info">macrocell14</td>
+ <td class = "text_info">U(0,1)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\FanController:FanTach:tach_state_2\</td>
+ <td class = "text_info">\FanController:FanTach:tach_state_2\/clock_0</td>
+ <td class = "text_info">\FanController:FanTach:tach_state_2\/q</td>
+ <td class = "number">1.250</td>
+</tr>
+<tr> 
+ <td class = "text_info">Route</td>
+ <td class = "text_info"> </td>
+ <td class = "number">1</td>
+ <td class = "text_info">\FanController:FanTach:tach_state_2\</td>
+ <td class = "text_info">\FanController:FanTach:tach_state_2\/q</td>
+ <td class = "text_info">\FanController:FanTach:FanTachCounter:u0\/cs_addr_2</td>
+ <td class = "number">3.365</td>
+</tr>
+<tr> 
+ <td class = "text_info">datapathcell3</td>
+ <td class = "text_info">U(0,1)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\FanController:FanTach:FanTachCounter:u0\</td>
+ <td class = "text_info">\FanController:FanTach:FanTachCounter:u0\/cs_addr_2</td>
+ <td class = "text_info">\FanController:FanTach:FanTachCounter:u0\/co_msb</td>
+ <td class = "number">9.710</td>
+</tr>
+<tr> 
+ <td class = "text_info">Route</td>
+ <td class = "text_info"> </td>
+ <td class = "number">1</td>
+ <td class = "text_info">\FanController:FanTach:FanTachCounter:u0.co_msb__sig\</td>
+ <td class = "text_info">\FanController:FanTach:FanTachCounter:u0\/co_msb</td>
+ <td class = "text_info">\FanController:FanTach:FanTachCounter:u1\/ci</td>
+ <td class = "number">0.000</td>
+</tr>
+<tr> 
+ <td class = "text_info">datapathcell4</td>
+ <td class = "text_info">U(1,1)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\FanController:FanTach:FanTachCounter:u1\</td>
+ <td class = "text_info">\FanController:FanTach:FanTachCounter:u1\/ci</td>
+ <td class = "text_info">\FanController:FanTach:FanTachCounter:u1\/co_msb_comb</td>
+ <td class = "number">4.830</td>
+</tr>
+<tr> 
+ <td class = "text_info">Route</td>
+ <td class = "text_info"> </td>
+ <td class = "number">1</td>
+ <td class = "text_info">\FanController:FanTach:co_1\</td>
+ <td class = "text_info">\FanController:FanTach:FanTachCounter:u1\/co_msb_comb</td>
+ <td class = "text_info">\FanController:FanTach:tach_state_0\/main_7</td>
+ <td class = "number">3.114</td>
+</tr>
+<tr> 
+ <td class = "text_info">macrocell16</td>
+ <td class = "text_info">U(0,1)</td>
  <td class = "number">1</td>
  <td class = "text_info">\FanController:FanTach:tach_state_0\</td>
  <td class = "text_info"></td>
@@ -3247,9 +3186,9 @@ Destination Clock : FanController_TACH_CLK_500K : Positive edge(Required Frequen
 <tr> 
  <td class = "text_info">\FanController:FanTach:tach_state_1\/q</td>
  <td class = "text_info">\FanController:FanTach:tach_state_1\/main_5</td>
- <td class = "number">43.437&nbsp;MHz</td>
- <td class = "number">23.022</td>
- <td class = "number">1976.978</td>
+ <td class = "number">40.292&nbsp;MHz</td>
+ <td class = "number">24.819</td>
+ <td class = "number">1975.181</td>
  <td class = "text_info"></td>
 </tr>
 <tr class="sta_path">
@@ -3283,11 +3222,11 @@ Destination Clock : FanController_TACH_CLK_500K : Positive edge(Required Frequen
  <td class = "text_info">\FanController:FanTach:tach_state_1\</td>
  <td class = "text_info">\FanController:FanTach:tach_state_1\/q</td>
  <td class = "text_info">\FanController:FanTach:FanTachCounter:u1\/cs_addr_1</td>
- <td class = "number">4.011</td>
+ <td class = "number">4.958</td>
 </tr>
 <tr> 
  <td class = "text_info">datapathcell4</td>
- <td class = "text_info">U(0,0)</td>
+ <td class = "text_info">U(1,1)</td>
  <td class = "number">1</td>
  <td class = "text_info">\FanController:FanTach:FanTachCounter:u1\</td>
  <td class = "text_info">\FanController:FanTach:FanTachCounter:u1\/cs_addr_1</td>
@@ -3301,7 +3240,7 @@ Destination Clock : FanController_TACH_CLK_500K : Positive edge(Required Frequen
  <td class = "text_info">\FanController:FanTach:co_1\</td>
  <td class = "text_info">\FanController:FanTach:FanTachCounter:u1\/co_msb_comb</td>
  <td class = "text_info">\FanController:FanTach:tach_state_1\/main_5</td>
- <td class = "number">3.021</td>
+ <td class = "number">3.871</td>
 </tr>
 <tr> 
  <td class = "text_info">macrocell15</td>
@@ -3320,226 +3259,6 @@ Destination Clock : FanController_TACH_CLK_500K : Positive edge(Required Frequen
  <td class = "text_info"></td>
  <td class = "text_info">Skew</td>
  <td class = "number">0.000</td>
-</tr>
-</tbody>
- </table> 
-</td>
-</tr>
-</tbody>
- </table> 
-</div>
-</div>
-</div>
-</div>
-<div class="sta_sec" >
-<div>
-<a href="#" style="text-decoration: none; color: inherit;">
-<span class="sec_head"><span style="font-family: monospace;">+</span>
-Source Clock : Pin_Input(0)_PAD : Positive edge</span>
-</a>
-</div><div class="sta_secbody"><div class="sta_sec" >
-<div>
-<a href="#" style="text-decoration: none; color: inherit;">
-<span class="sec_head"><span style="font-family: monospace;">+</span>
-Destination Clock : Pin_Input(0)_PAD : Positive edge</span>
-</a>
-</div><div class="sta_secbody"><div class="sta_sec_desc">Path Delay Requirement : 10000ns</div>
-<table class="sta_tscs">
- <thead> 
-<tr> 
-<th>Source</th>
-<th>Destination</th>
-<th>FMax</th>
-<th>Delay (ns)</th>
-<th>Slack (ns)</th>
-<th>Violation</th>
-</tr>
-</thead> 
-<tbody>
-<tr> 
- <td class = "text_info">\FreqDiv_1:count_0\/q</td>
- <td class = "text_info">Net_676/main_1</td>
- <td class = "number">107.793&nbsp;MHz</td>
- <td class = "number">9.277</td>
- <td class = "text_info"></td>
- <td class = "text_info"></td>
-</tr>
-<tr class="sta_path">
-<td class="sta_path"  colspan="6">
-<table class="sta_path">
- <thead> 
-<tr> 
-<th>Type</th>
-<th>Location</th>
-<th>Fanout</th>
-<th>Instance/Net</th>
-<th>Source</th>
-<th>Dest</th>
-<th>Delay (ns)</th>
-</tr>
-</thead> 
-<tbody>
-<tr> 
- <td class = "text_info">macrocell21</td>
- <td class = "text_info">U(0,0)</td>
- <td class = "number">1</td>
- <td class = "text_info">\FreqDiv_1:count_0\</td>
- <td class = "text_info">\FreqDiv_1:count_0\/clock_0</td>
- <td class = "text_info">\FreqDiv_1:count_0\/q</td>
- <td class = "number">1.250</td>
-</tr>
-<tr> 
- <td class = "text_info">Route</td>
- <td class = "text_info"> </td>
- <td class = "number">1</td>
- <td class = "text_info">\FreqDiv_1:count_0\</td>
- <td class = "text_info">\FreqDiv_1:count_0\/q</td>
- <td class = "text_info">Net_676/main_1</td>
- <td class = "number">2.246</td>
-</tr>
-<tr> 
- <td class = "text_info">macrocell19</td>
- <td class = "text_info">U(0,0)</td>
- <td class = "number">1</td>
- <td class = "text_info">Net_676</td>
- <td class = "text_info"></td>
- <td class = "text_info">SETUP</td>
- <td class = "number">3.510</td>
-</tr>
-<tr> 
- <td class = "text_info">Clock</td>
- <td class = "text_info"> </td>
- <td class = "text_info"></td>
- <td class = "text_info"></td>
- <td class = "text_info"></td>
- <td class = "text_info">Skew</td>
- <td class = "number">2.271</td>
-</tr>
-</tbody>
- </table> 
-</td>
-</tr>
-<tr> 
- <td class = "text_info">\FreqDiv_1:not_last_reset\/q</td>
- <td class = "text_info">Net_676/main_0</td>
- <td class = "number">107.840&nbsp;MHz</td>
- <td class = "number">9.273</td>
- <td class = "text_info"></td>
- <td class = "text_info"></td>
-</tr>
-<tr class="sta_path">
-<td class="sta_path"  colspan="6">
-<table class="sta_path">
- <thead> 
-<tr> 
-<th>Type</th>
-<th>Location</th>
-<th>Fanout</th>
-<th>Instance/Net</th>
-<th>Source</th>
-<th>Dest</th>
-<th>Delay (ns)</th>
-</tr>
-</thead> 
-<tbody>
-<tr> 
- <td class = "text_info">macrocell20</td>
- <td class = "text_info">U(0,0)</td>
- <td class = "number">1</td>
- <td class = "text_info">\FreqDiv_1:not_last_reset\</td>
- <td class = "text_info">\FreqDiv_1:not_last_reset\/clock_0</td>
- <td class = "text_info">\FreqDiv_1:not_last_reset\/q</td>
- <td class = "number">1.250</td>
-</tr>
-<tr> 
- <td class = "text_info">Route</td>
- <td class = "text_info"> </td>
- <td class = "number">1</td>
- <td class = "text_info">\FreqDiv_1:not_last_reset\</td>
- <td class = "text_info">\FreqDiv_1:not_last_reset\/q</td>
- <td class = "text_info">Net_676/main_0</td>
- <td class = "number">2.242</td>
-</tr>
-<tr> 
- <td class = "text_info">macrocell19</td>
- <td class = "text_info">U(0,0)</td>
- <td class = "number">1</td>
- <td class = "text_info">Net_676</td>
- <td class = "text_info"></td>
- <td class = "text_info">SETUP</td>
- <td class = "number">3.510</td>
-</tr>
-<tr> 
- <td class = "text_info">Clock</td>
- <td class = "text_info"> </td>
- <td class = "text_info"></td>
- <td class = "text_info"></td>
- <td class = "text_info"></td>
- <td class = "text_info">Skew</td>
- <td class = "number">2.271</td>
-</tr>
-</tbody>
- </table> 
-</td>
-</tr>
-<tr> 
- <td class = "text_info">\FreqDiv_1:not_last_reset\/q</td>
- <td class = "text_info">\FreqDiv_1:count_0\/main_0</td>
- <td class = "number">107.840&nbsp;MHz</td>
- <td class = "number">9.273</td>
- <td class = "text_info"></td>
- <td class = "text_info"></td>
-</tr>
-<tr class="sta_path">
-<td class="sta_path"  colspan="6">
-<table class="sta_path">
- <thead> 
-<tr> 
-<th>Type</th>
-<th>Location</th>
-<th>Fanout</th>
-<th>Instance/Net</th>
-<th>Source</th>
-<th>Dest</th>
-<th>Delay (ns)</th>
-</tr>
-</thead> 
-<tbody>
-<tr> 
- <td class = "text_info">macrocell20</td>
- <td class = "text_info">U(0,0)</td>
- <td class = "number">1</td>
- <td class = "text_info">\FreqDiv_1:not_last_reset\</td>
- <td class = "text_info">\FreqDiv_1:not_last_reset\/clock_0</td>
- <td class = "text_info">\FreqDiv_1:not_last_reset\/q</td>
- <td class = "number">1.250</td>
-</tr>
-<tr> 
- <td class = "text_info">Route</td>
- <td class = "text_info"> </td>
- <td class = "number">1</td>
- <td class = "text_info">\FreqDiv_1:not_last_reset\</td>
- <td class = "text_info">\FreqDiv_1:not_last_reset\/q</td>
- <td class = "text_info">\FreqDiv_1:count_0\/main_0</td>
- <td class = "number">2.242</td>
-</tr>
-<tr> 
- <td class = "text_info">macrocell21</td>
- <td class = "text_info">U(0,0)</td>
- <td class = "number">1</td>
- <td class = "text_info">\FreqDiv_1:count_0\</td>
- <td class = "text_info"></td>
- <td class = "text_info">SETUP</td>
- <td class = "number">3.510</td>
-</tr>
-<tr> 
- <td class = "text_info">Clock</td>
- <td class = "text_info"> </td>
- <td class = "text_info"></td>
- <td class = "text_info"></td>
- <td class = "text_info"></td>
- <td class = "text_info">Skew</td>
- <td class = "number">2.271</td>
 </tr>
 </tbody>
  </table> 
@@ -3583,8 +3302,8 @@ Destination Clock : FanController_TACH_CLK_500K : Positive edge</span>
 <tbody>
 <tr> 
  <td class = "text_info">\FanController:FanTach:FanTachCounter:u0\/f0_bus_stat_comb</td>
- <td class = "text_info">\FanController:drq\/main_0</td>
- <td class = "number">9.906</td>
+ <td class = "text_info">\FanController:FanTach:tach_state_0\/main_5</td>
+ <td class = "number">9.976</td>
  <td class = "text_info"></td>
 </tr>
 <tr class="sta_path">
@@ -3604,7 +3323,68 @@ Destination Clock : FanController_TACH_CLK_500K : Positive edge</span>
 <tbody>
 <tr> 
  <td class = "text_info">datapathcell3</td>
- <td class = "text_info">U(1,0)</td>
+ <td class = "text_info">U(0,1)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\FanController:FanTach:FanTachCounter:u0\</td>
+ <td class = "text_info">\FanController:FanTach:FanTachCounter:u0\/busclk</td>
+ <td class = "text_info">\FanController:FanTach:FanTachCounter:u0\/f0_bus_stat_comb</td>
+ <td class = "number">7.210</td>
+</tr>
+<tr> 
+ <td class = "text_info">Route</td>
+ <td class = "text_info"></td>
+ <td class = "number">1</td>
+ <td class = "text_info">\FanController:FanTach:tach_data_ready\</td>
+ <td class = "text_info">\FanController:FanTach:FanTachCounter:u0\/f0_bus_stat_comb</td>
+ <td class = "text_info">\FanController:FanTach:tach_state_0\/main_5</td>
+ <td class = "number">2.766</td>
+</tr>
+<tr> 
+ <td class = "text_info">macrocell16</td>
+ <td class = "text_info">U(0,1)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\FanController:FanTach:tach_state_0\</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info">HOLD</td>
+ <td class = "number">0.000</td>
+</tr>
+<tr> 
+ <td class = "text_info">Clock</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info">Skew</td>
+ <td class = "number">0.000</td>
+</tr>
+</tbody>
+ </table> 
+</td>
+</tr>
+<tr> 
+ <td class = "text_info">\FanController:FanTach:FanTachCounter:u0\/f0_bus_stat_comb</td>
+ <td class = "text_info">\FanController:drq\/main_0</td>
+ <td class = "number">9.988</td>
+ <td class = "text_info"></td>
+</tr>
+<tr class="sta_path">
+<td class="sta_path"  colspan="4">
+<table class="sta_path">
+ <thead> 
+<tr> 
+<th>Type</th>
+<th>Location</th>
+<th>Fanout</th>
+<th>Instance/Net</th>
+<th>Source</th>
+<th>Dest</th>
+<th>Delay (ns)</th>
+</tr>
+</thead> 
+<tbody>
+<tr> 
+ <td class = "text_info">datapathcell3</td>
+ <td class = "text_info">U(0,1)</td>
  <td class = "number">1</td>
  <td class = "text_info">\FanController:FanTach:FanTachCounter:u0\</td>
  <td class = "text_info">\FanController:FanTach:FanTachCounter:u0\/busclk</td>
@@ -3618,11 +3398,11 @@ Destination Clock : FanController_TACH_CLK_500K : Positive edge</span>
  <td class = "text_info">\FanController:FanTach:tach_data_ready\</td>
  <td class = "text_info">\FanController:FanTach:FanTachCounter:u0\/f0_bus_stat_comb</td>
  <td class = "text_info">\FanController:drq\/main_0</td>
- <td class = "number">2.696</td>
+ <td class = "number">2.778</td>
 </tr>
 <tr> 
  <td class = "text_info">macrocell3</td>
- <td class = "text_info">U(1,0)</td>
+ <td class = "text_info">U(0,1)</td>
  <td class = "number">1</td>
  <td class = "text_info">\FanController:drq\</td>
  <td class = "text_info"> </td>
@@ -3645,7 +3425,7 @@ Destination Clock : FanController_TACH_CLK_500K : Positive edge</span>
 <tr> 
  <td class = "text_info">\FanController:FanTach:FanTachCounter:u0\/f0_bus_stat_comb</td>
  <td class = "text_info">\FanController:FanTach:sync2_tach_cnt3\/main_5</td>
- <td class = "number">9.906</td>
+ <td class = "number">9.988</td>
  <td class = "text_info"></td>
 </tr>
 <tr class="sta_path">
@@ -3665,7 +3445,7 @@ Destination Clock : FanController_TACH_CLK_500K : Positive edge</span>
 <tbody>
 <tr> 
  <td class = "text_info">datapathcell3</td>
- <td class = "text_info">U(1,0)</td>
+ <td class = "text_info">U(0,1)</td>
  <td class = "number">1</td>
  <td class = "text_info">\FanController:FanTach:FanTachCounter:u0\</td>
  <td class = "text_info">\FanController:FanTach:FanTachCounter:u0\/busclk</td>
@@ -3679,74 +3459,13 @@ Destination Clock : FanController_TACH_CLK_500K : Positive edge</span>
  <td class = "text_info">\FanController:FanTach:tach_data_ready\</td>
  <td class = "text_info">\FanController:FanTach:FanTachCounter:u0\/f0_bus_stat_comb</td>
  <td class = "text_info">\FanController:FanTach:sync2_tach_cnt3\/main_5</td>
- <td class = "number">2.696</td>
+ <td class = "number">2.778</td>
 </tr>
 <tr> 
  <td class = "text_info">macrocell17</td>
- <td class = "text_info">U(1,0)</td>
+ <td class = "text_info">U(0,1)</td>
  <td class = "number">1</td>
  <td class = "text_info">\FanController:FanTach:sync2_tach_cnt3\</td>
- <td class = "text_info"> </td>
- <td class = "text_info">HOLD</td>
- <td class = "number">0.000</td>
-</tr>
-<tr> 
- <td class = "text_info">Clock</td>
- <td class = "text_info"> </td>
- <td class = "text_info"></td>
- <td class = "text_info"></td>
- <td class = "text_info"></td>
- <td class = "text_info">Skew</td>
- <td class = "number">0.000</td>
-</tr>
-</tbody>
- </table> 
-</td>
-</tr>
-<tr> 
- <td class = "text_info">\FanController:FanTach:FanTachCounter:u0\/f0_bus_stat_comb</td>
- <td class = "text_info">\FanController:FanTach:tach_state_0\/main_5</td>
- <td class = "number">9.912</td>
- <td class = "text_info"></td>
-</tr>
-<tr class="sta_path">
-<td class="sta_path"  colspan="4">
-<table class="sta_path">
- <thead> 
-<tr> 
-<th>Type</th>
-<th>Location</th>
-<th>Fanout</th>
-<th>Instance/Net</th>
-<th>Source</th>
-<th>Dest</th>
-<th>Delay (ns)</th>
-</tr>
-</thead> 
-<tbody>
-<tr> 
- <td class = "text_info">datapathcell3</td>
- <td class = "text_info">U(1,0)</td>
- <td class = "number">1</td>
- <td class = "text_info">\FanController:FanTach:FanTachCounter:u0\</td>
- <td class = "text_info">\FanController:FanTach:FanTachCounter:u0\/busclk</td>
- <td class = "text_info">\FanController:FanTach:FanTachCounter:u0\/f0_bus_stat_comb</td>
- <td class = "number">7.210</td>
-</tr>
-<tr> 
- <td class = "text_info">Route</td>
- <td class = "text_info"></td>
- <td class = "number">1</td>
- <td class = "text_info">\FanController:FanTach:tach_data_ready\</td>
- <td class = "text_info">\FanController:FanTach:FanTachCounter:u0\/f0_bus_stat_comb</td>
- <td class = "text_info">\FanController:FanTach:tach_state_0\/main_5</td>
- <td class = "number">2.702</td>
-</tr>
-<tr> 
- <td class = "text_info">macrocell16</td>
- <td class = "text_info">U(1,0)</td>
- <td class = "number">1</td>
- <td class = "text_info">\FanController:FanTach:tach_state_0\</td>
  <td class = "text_info"> </td>
  <td class = "text_info">HOLD</td>
  <td class = "number">0.000</td>
@@ -3795,7 +3514,7 @@ Destination Clock : FanController_PWM_CLOCK_25k_10b_1 : Positive edge</span>
 <tr> 
  <td class = "text_info">\FanController:B_FanCtrl:alert_reg\/q</td>
  <td class = "text_info">\FanController:B_FanCtrl:alert_reg\/main_2</td>
- <td class = "number">3.543</td>
+ <td class = "number">3.479</td>
  <td class = "text_info"></td>
 </tr>
 <tr class="sta_path">
@@ -3815,7 +3534,7 @@ Destination Clock : FanController_PWM_CLOCK_25k_10b_1 : Positive edge</span>
 <tbody>
 <tr> 
  <td class = "text_info">macrocell4</td>
- <td class = "text_info">U(1,1)</td>
+ <td class = "text_info">U(1,0)</td>
  <td class = "number">1</td>
  <td class = "text_info">\FanController:B_FanCtrl:alert_reg\</td>
  <td class = "text_info">\FanController:B_FanCtrl:alert_reg\/clock_0</td>
@@ -3824,16 +3543,77 @@ Destination Clock : FanController_PWM_CLOCK_25k_10b_1 : Positive edge</span>
 </tr>
 <tr> 
  <td class = "text_info">macrocell4</td>
- <td class = "text_info">U(1,1)</td>
+ <td class = "text_info">U(1,0)</td>
  <td class = "number">1</td>
  <td class = "text_info">\FanController:B_FanCtrl:alert_reg\</td>
  <td class = "text_info">\FanController:B_FanCtrl:alert_reg\/q</td>
  <td class = "text_info">\FanController:B_FanCtrl:alert_reg\/main_2</td>
- <td class = "number">2.293</td>
+ <td class = "number">2.229</td>
 </tr>
 <tr> 
  <td class = "text_info">macrocell4</td>
- <td class = "text_info">U(1,1)</td>
+ <td class = "text_info">U(1,0)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\FanController:B_FanCtrl:alert_reg\</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info">HOLD</td>
+ <td class = "number">0.000</td>
+</tr>
+<tr> 
+ <td class = "text_info">Clock</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info">Skew</td>
+ <td class = "number">0.000</td>
+</tr>
+</tbody>
+ </table> 
+</td>
+</tr>
+<tr> 
+ <td class = "text_info">\FanController:B_FanCtrl:GlobalControlReg\/control_0</td>
+ <td class = "text_info">\FanController:B_FanCtrl:alert_reg\/main_0</td>
+ <td class = "number">4.289</td>
+ <td class = "text_info"></td>
+</tr>
+<tr class="sta_path">
+<td class="sta_path"  colspan="4">
+<table class="sta_path">
+ <thead> 
+<tr> 
+<th>Type</th>
+<th>Location</th>
+<th>Fanout</th>
+<th>Instance/Net</th>
+<th>Source</th>
+<th>Dest</th>
+<th>Delay (ns)</th>
+</tr>
+</thead> 
+<tbody>
+<tr> 
+ <td class = "text_info">controlcell1</td>
+ <td class = "text_info">U(1,0)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\FanController:B_FanCtrl:GlobalControlReg\</td>
+ <td class = "text_info">\FanController:B_FanCtrl:GlobalControlReg\/clock</td>
+ <td class = "text_info">\FanController:B_FanCtrl:GlobalControlReg\/control_0</td>
+ <td class = "number">2.040</td>
+</tr>
+<tr> 
+ <td class = "text_info">Route</td>
+ <td class = "text_info"></td>
+ <td class = "number">1</td>
+ <td class = "text_info">\FanController:B_FanCtrl:control_0\</td>
+ <td class = "text_info">\FanController:B_FanCtrl:GlobalControlReg\/control_0</td>
+ <td class = "text_info">\FanController:B_FanCtrl:alert_reg\/main_0</td>
+ <td class = "number">2.249</td>
+</tr>
+<tr> 
+ <td class = "text_info">macrocell4</td>
+ <td class = "text_info">U(1,0)</td>
  <td class = "number">1</td>
  <td class = "text_info">\FanController:B_FanCtrl:alert_reg\</td>
  <td class = "text_info"> </td>
@@ -3856,7 +3636,7 @@ Destination Clock : FanController_PWM_CLOCK_25k_10b_1 : Positive edge</span>
 <tr> 
  <td class = "text_info">\FanController:B_FanCtrl:GlobalControlReg\/control_7</td>
  <td class = "text_info">\FanController:B_FanCtrl:stall_alrt\/main_0</td>
- <td class = "number">4.359</td>
+ <td class = "number">4.291</td>
  <td class = "text_info"></td>
 </tr>
 <tr class="sta_path">
@@ -3876,7 +3656,7 @@ Destination Clock : FanController_PWM_CLOCK_25k_10b_1 : Positive edge</span>
 <tbody>
 <tr> 
  <td class = "text_info">controlcell1</td>
- <td class = "text_info">U(1,1)</td>
+ <td class = "text_info">U(1,0)</td>
  <td class = "number">1</td>
  <td class = "text_info">\FanController:B_FanCtrl:GlobalControlReg\</td>
  <td class = "text_info">\FanController:B_FanCtrl:GlobalControlReg\/clock</td>
@@ -3890,11 +3670,11 @@ Destination Clock : FanController_PWM_CLOCK_25k_10b_1 : Positive edge</span>
  <td class = "text_info">\FanController:B_FanCtrl:control_7\</td>
  <td class = "text_info">\FanController:B_FanCtrl:GlobalControlReg\/control_7</td>
  <td class = "text_info">\FanController:B_FanCtrl:stall_alrt\/main_0</td>
- <td class = "number">2.319</td>
+ <td class = "number">2.251</td>
 </tr>
 <tr> 
  <td class = "text_info">macrocell5</td>
- <td class = "text_info">U(1,1)</td>
+ <td class = "text_info">U(1,0)</td>
  <td class = "number">1</td>
  <td class = "text_info">\FanController:B_FanCtrl:stall_alrt\</td>
  <td class = "text_info"> </td>
@@ -3915,9 +3695,9 @@ Destination Clock : FanController_PWM_CLOCK_25k_10b_1 : Positive edge</span>
 </td>
 </tr>
 <tr> 
- <td class = "text_info">\FanController:B_FanCtrl:GlobalControlReg\/control_0</td>
+ <td class = "text_info">\FanController:B_FanCtrl:GlobalControlReg\/control_3</td>
  <td class = "text_info">\FanController:B_FanCtrl:alert_reg\/main_1</td>
- <td class = "number">4.366</td>
+ <td class = "number">4.300</td>
  <td class = "text_info"></td>
 </tr>
 <tr class="sta_path">
@@ -3937,86 +3717,25 @@ Destination Clock : FanController_PWM_CLOCK_25k_10b_1 : Positive edge</span>
 <tbody>
 <tr> 
  <td class = "text_info">controlcell1</td>
- <td class = "text_info">U(1,1)</td>
+ <td class = "text_info">U(1,0)</td>
  <td class = "number">1</td>
  <td class = "text_info">\FanController:B_FanCtrl:GlobalControlReg\</td>
  <td class = "text_info">\FanController:B_FanCtrl:GlobalControlReg\/clock</td>
- <td class = "text_info">\FanController:B_FanCtrl:GlobalControlReg\/control_0</td>
+ <td class = "text_info">\FanController:B_FanCtrl:GlobalControlReg\/control_3</td>
  <td class = "number">2.040</td>
 </tr>
 <tr> 
  <td class = "text_info">Route</td>
  <td class = "text_info"></td>
  <td class = "number">1</td>
- <td class = "text_info">\FanController:B_FanCtrl:control_0\</td>
- <td class = "text_info">\FanController:B_FanCtrl:GlobalControlReg\/control_0</td>
+ <td class = "text_info">\FanController:sync\</td>
+ <td class = "text_info">\FanController:B_FanCtrl:GlobalControlReg\/control_3</td>
  <td class = "text_info">\FanController:B_FanCtrl:alert_reg\/main_1</td>
- <td class = "number">2.326</td>
+ <td class = "number">2.260</td>
 </tr>
 <tr> 
  <td class = "text_info">macrocell4</td>
- <td class = "text_info">U(1,1)</td>
- <td class = "number">1</td>
- <td class = "text_info">\FanController:B_FanCtrl:alert_reg\</td>
- <td class = "text_info"> </td>
- <td class = "text_info">HOLD</td>
- <td class = "number">0.000</td>
-</tr>
-<tr> 
- <td class = "text_info">Clock</td>
- <td class = "text_info"> </td>
- <td class = "text_info"></td>
- <td class = "text_info"></td>
- <td class = "text_info"></td>
- <td class = "text_info">Skew</td>
- <td class = "number">0.000</td>
-</tr>
-</tbody>
- </table> 
-</td>
-</tr>
-<tr> 
- <td class = "text_info">\FanController:B_FanCtrl:GlobalControlReg\/control_3</td>
- <td class = "text_info">\FanController:B_FanCtrl:alert_reg\/main_0</td>
- <td class = "number">5.573</td>
- <td class = "text_info"></td>
-</tr>
-<tr class="sta_path">
-<td class="sta_path"  colspan="4">
-<table class="sta_path">
- <thead> 
-<tr> 
-<th>Type</th>
-<th>Location</th>
-<th>Fanout</th>
-<th>Instance/Net</th>
-<th>Source</th>
-<th>Dest</th>
-<th>Delay (ns)</th>
-</tr>
-</thead> 
-<tbody>
-<tr> 
- <td class = "text_info">controlcell1</td>
- <td class = "text_info">U(1,1)</td>
- <td class = "number">1</td>
- <td class = "text_info">\FanController:B_FanCtrl:GlobalControlReg\</td>
- <td class = "text_info">\FanController:B_FanCtrl:GlobalControlReg\/clock</td>
- <td class = "text_info">\FanController:B_FanCtrl:GlobalControlReg\/control_3</td>
- <td class = "number">2.040</td>
-</tr>
-<tr> 
- <td class = "text_info">Route</td>
- <td class = "text_info"></td>
- <td class = "number">1</td>
- <td class = "text_info">Net_642</td>
- <td class = "text_info">\FanController:B_FanCtrl:GlobalControlReg\/control_3</td>
- <td class = "text_info">\FanController:B_FanCtrl:alert_reg\/main_0</td>
- <td class = "number">3.533</td>
-</tr>
-<tr> 
- <td class = "text_info">macrocell4</td>
- <td class = "text_info">U(1,1)</td>
+ <td class = "text_info">U(1,0)</td>
  <td class = "number">1</td>
  <td class = "text_info">\FanController:B_FanCtrl:alert_reg\</td>
  <td class = "text_info"> </td>
@@ -4039,7 +3758,7 @@ Destination Clock : FanController_PWM_CLOCK_25k_10b_1 : Positive edge</span>
 <tr> 
  <td class = "text_info">\FanController:B_FanCtrl:AlertStatusReg\/interrupt</td>
  <td class = "text_info">\FanController:B_FanCtrl:alert_reg\/main_3</td>
- <td class = "number">6.365</td>
+ <td class = "number">6.289</td>
  <td class = "text_info"></td>
 </tr>
 <tr class="sta_path">
@@ -4059,7 +3778,7 @@ Destination Clock : FanController_PWM_CLOCK_25k_10b_1 : Positive edge</span>
 <tbody>
 <tr> 
  <td class = "text_info">statusicell1</td>
- <td class = "text_info">U(1,1)</td>
+ <td class = "text_info">U(1,0)</td>
  <td class = "number">1</td>
  <td class = "text_info">\FanController:B_FanCtrl:AlertStatusReg\</td>
  <td class = "text_info">\FanController:B_FanCtrl:AlertStatusReg\/clock</td>
@@ -4073,11 +3792,11 @@ Destination Clock : FanController_PWM_CLOCK_25k_10b_1 : Positive edge</span>
  <td class = "text_info">\FanController:B_FanCtrl:interrupt\</td>
  <td class = "text_info">\FanController:B_FanCtrl:AlertStatusReg\/interrupt</td>
  <td class = "text_info">\FanController:B_FanCtrl:alert_reg\/main_3</td>
- <td class = "number">2.335</td>
+ <td class = "number">2.259</td>
 </tr>
 <tr> 
  <td class = "text_info">macrocell4</td>
- <td class = "text_info">U(1,1)</td>
+ <td class = "text_info">U(1,0)</td>
  <td class = "number">1</td>
  <td class = "text_info">\FanController:B_FanCtrl:alert_reg\</td>
  <td class = "text_info"> </td>
@@ -4100,7 +3819,7 @@ Destination Clock : FanController_PWM_CLOCK_25k_10b_1 : Positive edge</span>
 <tr> 
  <td class = "text_info">\FanController:B_FanCtrl:GlobalControlReg\/control_2</td>
  <td class = "text_info">\FanController:B_FanCtrl:AlertStatusReg\/status_1</td>
- <td class = "number">8.015</td>
+ <td class = "number">7.897</td>
  <td class = "text_info"></td>
 </tr>
 <tr class="sta_path">
@@ -4120,7 +3839,7 @@ Destination Clock : FanController_PWM_CLOCK_25k_10b_1 : Positive edge</span>
 <tbody>
 <tr> 
  <td class = "text_info">controlcell1</td>
- <td class = "text_info">U(1,1)</td>
+ <td class = "text_info">U(1,0)</td>
  <td class = "number">1</td>
  <td class = "text_info">\FanController:B_FanCtrl:GlobalControlReg\</td>
  <td class = "text_info">\FanController:B_FanCtrl:GlobalControlReg\/clock</td>
@@ -4134,11 +3853,11 @@ Destination Clock : FanController_PWM_CLOCK_25k_10b_1 : Positive edge</span>
  <td class = "text_info">\FanController:B_FanCtrl:control_2\</td>
  <td class = "text_info">\FanController:B_FanCtrl:GlobalControlReg\/control_2</td>
  <td class = "text_info">\FanController:B_FanCtrl:speed_status\/main_1</td>
- <td class = "number">2.312</td>
+ <td class = "number">2.258</td>
 </tr>
 <tr> 
  <td class = "text_info">macrocell1</td>
- <td class = "text_info">U(1,1)</td>
+ <td class = "text_info">U(1,0)</td>
  <td class = "number">1</td>
  <td class = "text_info">\FanController:B_FanCtrl:speed_status\</td>
  <td class = "text_info">\FanController:B_FanCtrl:speed_status\/main_1</td>
@@ -4152,11 +3871,11 @@ Destination Clock : FanController_PWM_CLOCK_25k_10b_1 : Positive edge</span>
  <td class = "text_info">\FanController:B_FanCtrl:speed_status\</td>
  <td class = "text_info">\FanController:B_FanCtrl:speed_status\/q</td>
  <td class = "text_info">\FanController:B_FanCtrl:AlertStatusReg\/status_1</td>
- <td class = "number">2.313</td>
+ <td class = "number">2.249</td>
 </tr>
 <tr> 
  <td class = "text_info">statusicell1</td>
- <td class = "text_info">U(1,1)</td>
+ <td class = "text_info">U(1,0)</td>
  <td class = "number">1</td>
  <td class = "text_info">\FanController:B_FanCtrl:AlertStatusReg\</td>
  <td class = "text_info"> </td>
@@ -4179,7 +3898,7 @@ Destination Clock : FanController_PWM_CLOCK_25k_10b_1 : Positive edge</span>
 <tr> 
  <td class = "text_info">\FanController:B_FanCtrl:GlobalControlReg\/control_4</td>
  <td class = "text_info">\FanController:B_FanCtrl:AlertStatusReg\/status_1</td>
- <td class = "number">8.024</td>
+ <td class = "number">7.898</td>
  <td class = "text_info"></td>
 </tr>
 <tr class="sta_path">
@@ -4199,7 +3918,7 @@ Destination Clock : FanController_PWM_CLOCK_25k_10b_1 : Positive edge</span>
 <tbody>
 <tr> 
  <td class = "text_info">controlcell1</td>
- <td class = "text_info">U(1,1)</td>
+ <td class = "text_info">U(1,0)</td>
  <td class = "number">1</td>
  <td class = "text_info">\FanController:B_FanCtrl:GlobalControlReg\</td>
  <td class = "text_info">\FanController:B_FanCtrl:GlobalControlReg\/clock</td>
@@ -4213,11 +3932,11 @@ Destination Clock : FanController_PWM_CLOCK_25k_10b_1 : Positive edge</span>
  <td class = "text_info">\FanController:B_FanCtrl:control_4\</td>
  <td class = "text_info">\FanController:B_FanCtrl:GlobalControlReg\/control_4</td>
  <td class = "text_info">\FanController:B_FanCtrl:speed_status\/main_0</td>
- <td class = "number">2.321</td>
+ <td class = "number">2.259</td>
 </tr>
 <tr> 
  <td class = "text_info">macrocell1</td>
- <td class = "text_info">U(1,1)</td>
+ <td class = "text_info">U(1,0)</td>
  <td class = "number">1</td>
  <td class = "text_info">\FanController:B_FanCtrl:speed_status\</td>
  <td class = "text_info">\FanController:B_FanCtrl:speed_status\/main_0</td>
@@ -4231,11 +3950,11 @@ Destination Clock : FanController_PWM_CLOCK_25k_10b_1 : Positive edge</span>
  <td class = "text_info">\FanController:B_FanCtrl:speed_status\</td>
  <td class = "text_info">\FanController:B_FanCtrl:speed_status\/q</td>
  <td class = "text_info">\FanController:B_FanCtrl:AlertStatusReg\/status_1</td>
- <td class = "number">2.313</td>
+ <td class = "number">2.249</td>
 </tr>
 <tr> 
  <td class = "text_info">statusicell1</td>
- <td class = "text_info">U(1,1)</td>
+ <td class = "text_info">U(1,0)</td>
  <td class = "number">1</td>
  <td class = "text_info">\FanController:B_FanCtrl:AlertStatusReg\</td>
  <td class = "text_info"> </td>
@@ -4258,7 +3977,7 @@ Destination Clock : FanController_PWM_CLOCK_25k_10b_1 : Positive edge</span>
 <tr> 
  <td class = "text_info">\FanController:B_FanCtrl:stall_alrt\/q</td>
  <td class = "text_info">\FanController:B_FanCtrl:AlertStatusReg\/status_0</td>
- <td class = "number">9.094</td>
+ <td class = "number">8.808</td>
  <td class = "text_info"></td>
 </tr>
 <tr class="sta_path">
@@ -4278,7 +3997,7 @@ Destination Clock : FanController_PWM_CLOCK_25k_10b_1 : Positive edge</span>
 <tbody>
 <tr> 
  <td class = "text_info">macrocell5</td>
- <td class = "text_info">U(1,1)</td>
+ <td class = "text_info">U(1,0)</td>
  <td class = "number">1</td>
  <td class = "text_info">\FanController:B_FanCtrl:stall_alrt\</td>
  <td class = "text_info">\FanController:B_FanCtrl:stall_alrt\/clock_0</td>
@@ -4292,11 +4011,11 @@ Destination Clock : FanController_PWM_CLOCK_25k_10b_1 : Positive edge</span>
  <td class = "text_info">\FanController:B_FanCtrl:stall_alrt\</td>
  <td class = "text_info">\FanController:B_FanCtrl:stall_alrt\/q</td>
  <td class = "text_info">\FanController:B_FanCtrl:stall_status\/main_1</td>
- <td class = "number">2.297</td>
+ <td class = "number">2.241</td>
 </tr>
 <tr> 
  <td class = "text_info">macrocell2</td>
- <td class = "text_info">U(1,1)</td>
+ <td class = "text_info">U(1,0)</td>
  <td class = "number">1</td>
  <td class = "text_info">\FanController:B_FanCtrl:stall_status\</td>
  <td class = "text_info">\FanController:B_FanCtrl:stall_status\/main_1</td>
@@ -4310,11 +4029,11 @@ Destination Clock : FanController_PWM_CLOCK_25k_10b_1 : Positive edge</span>
  <td class = "text_info">\FanController:B_FanCtrl:stall_status\</td>
  <td class = "text_info">\FanController:B_FanCtrl:stall_status\/q</td>
  <td class = "text_info">\FanController:B_FanCtrl:AlertStatusReg\/status_0</td>
- <td class = "number">4.197</td>
+ <td class = "number">3.967</td>
 </tr>
 <tr> 
  <td class = "text_info">statusicell1</td>
- <td class = "text_info">U(1,1)</td>
+ <td class = "text_info">U(1,0)</td>
  <td class = "number">1</td>
  <td class = "text_info">\FanController:B_FanCtrl:AlertStatusReg\</td>
  <td class = "text_info"> </td>
@@ -4337,7 +4056,7 @@ Destination Clock : FanController_PWM_CLOCK_25k_10b_1 : Positive edge</span>
 <tr> 
  <td class = "text_info">\FanController:B_FanCtrl:GlobalControlReg\/control_1</td>
  <td class = "text_info">\FanController:B_FanCtrl:AlertStatusReg\/status_0</td>
- <td class = "number">9.910</td>
+ <td class = "number">9.619</td>
  <td class = "text_info"></td>
 </tr>
 <tr class="sta_path">
@@ -4357,7 +4076,7 @@ Destination Clock : FanController_PWM_CLOCK_25k_10b_1 : Positive edge</span>
 <tbody>
 <tr> 
  <td class = "text_info">controlcell1</td>
- <td class = "text_info">U(1,1)</td>
+ <td class = "text_info">U(1,0)</td>
  <td class = "number">1</td>
  <td class = "text_info">\FanController:B_FanCtrl:GlobalControlReg\</td>
  <td class = "text_info">\FanController:B_FanCtrl:GlobalControlReg\/clock</td>
@@ -4371,11 +4090,11 @@ Destination Clock : FanController_PWM_CLOCK_25k_10b_1 : Positive edge</span>
  <td class = "text_info">\FanController:B_FanCtrl:control_1\</td>
  <td class = "text_info">\FanController:B_FanCtrl:GlobalControlReg\/control_1</td>
  <td class = "text_info">\FanController:B_FanCtrl:stall_status\/main_0</td>
- <td class = "number">2.323</td>
+ <td class = "number">2.262</td>
 </tr>
 <tr> 
  <td class = "text_info">macrocell2</td>
- <td class = "text_info">U(1,1)</td>
+ <td class = "text_info">U(1,0)</td>
  <td class = "number">1</td>
  <td class = "text_info">\FanController:B_FanCtrl:stall_status\</td>
  <td class = "text_info">\FanController:B_FanCtrl:stall_status\/main_0</td>
@@ -4389,11 +4108,11 @@ Destination Clock : FanController_PWM_CLOCK_25k_10b_1 : Positive edge</span>
  <td class = "text_info">\FanController:B_FanCtrl:stall_status\</td>
  <td class = "text_info">\FanController:B_FanCtrl:stall_status\/q</td>
  <td class = "text_info">\FanController:B_FanCtrl:AlertStatusReg\/status_0</td>
- <td class = "number">4.197</td>
+ <td class = "number">3.967</td>
 </tr>
 <tr> 
  <td class = "text_info">statusicell1</td>
- <td class = "text_info">U(1,1)</td>
+ <td class = "text_info">U(1,0)</td>
  <td class = "number">1</td>
  <td class = "text_info">\FanController:B_FanCtrl:AlertStatusReg\</td>
  <td class = "text_info"> </td>
@@ -4436,7 +4155,7 @@ Destination Clock : FanController_TACH_CLK_500K : Positive edge</span>
 <tr> 
  <td class = "text_info">\FanController:B_FanCtrl:GlobalControlReg\/control_5</td>
  <td class = "text_info">\FanController:FanTach:gf_dmp_state\/main_0</td>
- <td class = "number">27.296</td>
+ <td class = "number">26.571</td>
  <td class = "text_info"></td>
 </tr>
 <tr class="sta_path">
@@ -4456,7 +4175,7 @@ Destination Clock : FanController_TACH_CLK_500K : Positive edge</span>
 <tbody>
 <tr> 
  <td class = "text_info">controlcell1</td>
- <td class = "text_info">U(1,1)</td>
+ <td class = "text_info">U(1,0)</td>
  <td class = "number">1</td>
  <td class = "text_info">\FanController:B_FanCtrl:GlobalControlReg\</td>
  <td class = "text_info">\FanController:B_FanCtrl:GlobalControlReg\/clock</td>
@@ -4470,11 +4189,11 @@ Destination Clock : FanController_TACH_CLK_500K : Positive edge</span>
  <td class = "text_info">\FanController:enable\</td>
  <td class = "text_info">\FanController:B_FanCtrl:GlobalControlReg\/control_5</td>
  <td class = "text_info">\FanController:FanTach:gf_dmp_state\/main_0</td>
- <td class = "number">4.423</td>
+ <td class = "number">3.698</td>
 </tr>
 <tr> 
  <td class = "text_info">macrocell9</td>
- <td class = "text_info">U(1,1)</td>
+ <td class = "text_info">U(0,0)</td>
  <td class = "number">1</td>
  <td class = "text_info">\FanController:FanTach:gf_dmp_state\</td>
  <td class = "text_info"> </td>
@@ -4496,8 +4215,8 @@ Destination Clock : FanController_TACH_CLK_500K : Positive edge</span>
 </tr>
 <tr> 
  <td class = "text_info">\FanController:B_FanCtrl:GlobalControlReg\/control_5</td>
- <td class = "text_info">\FanController:FanTach:DmpgFactor:DmpgTimeCntr:u0\/clk_en</td>
- <td class = "number">28.650</td>
+ <td class = "text_info">\FanController:FanTach:reg_enable\/main_0</td>
+ <td class = "number">27.434</td>
  <td class = "text_info"></td>
 </tr>
 <tr class="sta_path">
@@ -4517,7 +4236,129 @@ Destination Clock : FanController_TACH_CLK_500K : Positive edge</span>
 <tbody>
 <tr> 
  <td class = "text_info">controlcell1</td>
- <td class = "text_info">U(1,1)</td>
+ <td class = "text_info">U(1,0)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\FanController:B_FanCtrl:GlobalControlReg\</td>
+ <td class = "text_info">\FanController:B_FanCtrl:GlobalControlReg\/clock</td>
+ <td class = "text_info">\FanController:B_FanCtrl:GlobalControlReg\/control_5</td>
+ <td class = "number">2.040</td>
+</tr>
+<tr> 
+ <td class = "text_info">Route</td>
+ <td class = "text_info"></td>
+ <td class = "number">1</td>
+ <td class = "text_info">\FanController:enable\</td>
+ <td class = "text_info">\FanController:B_FanCtrl:GlobalControlReg\/control_5</td>
+ <td class = "text_info">\FanController:FanTach:reg_enable\/main_0</td>
+ <td class = "number">4.561</td>
+</tr>
+<tr> 
+ <td class = "text_info">macrocell10</td>
+ <td class = "text_info">U(0,1)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\FanController:FanTach:reg_enable\</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info">HOLD</td>
+ <td class = "number">0.000</td>
+</tr>
+<tr> 
+ <td class = "text_info">Clock</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info">Skew</td>
+ <td class = "number">0.000</td>
+</tr>
+</tbody>
+ </table> 
+</td>
+</tr>
+<tr> 
+ <td class = "text_info">\FanController:B_FanCtrl:GlobalControlReg\/control_5</td>
+ <td class = "text_info">\FanController:FanTach:GlitchFilterTimer:u0\/clk_en</td>
+ <td class = "number">27.722</td>
+ <td class = "text_info"></td>
+</tr>
+<tr class="sta_path">
+<td class="sta_path"  colspan="4">
+<table class="sta_path">
+ <thead> 
+<tr> 
+<th>Type</th>
+<th>Location</th>
+<th>Fanout</th>
+<th>Instance/Net</th>
+<th>Source</th>
+<th>Dest</th>
+<th>Delay (ns)</th>
+</tr>
+</thead> 
+<tbody>
+<tr> 
+ <td class = "text_info">controlcell1</td>
+ <td class = "text_info">U(1,0)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\FanController:B_FanCtrl:GlobalControlReg\</td>
+ <td class = "text_info">\FanController:B_FanCtrl:GlobalControlReg\/clock</td>
+ <td class = "text_info">\FanController:B_FanCtrl:GlobalControlReg\/control_5</td>
+ <td class = "number">2.040</td>
+</tr>
+<tr> 
+ <td class = "text_info">Route</td>
+ <td class = "text_info"></td>
+ <td class = "number">1</td>
+ <td class = "text_info">\FanController:enable\</td>
+ <td class = "text_info">\FanController:B_FanCtrl:GlobalControlReg\/control_5</td>
+ <td class = "text_info">\FanController:FanTach:GlitchFilterTimer:u0\/clk_en</td>
+ <td class = "number">4.849</td>
+</tr>
+<tr> 
+ <td class = "text_info">datapathcell2</td>
+ <td class = "text_info">U(1,0)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\FanController:FanTach:GlitchFilterTimer:u0\</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info">HOLD</td>
+ <td class = "number">0.000</td>
+</tr>
+<tr> 
+ <td class = "text_info">Clock</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info">Skew</td>
+ <td class = "number">0.000</td>
+</tr>
+</tbody>
+ </table> 
+</td>
+</tr>
+<tr> 
+ <td class = "text_info">\FanController:B_FanCtrl:GlobalControlReg\/control_5</td>
+ <td class = "text_info">\FanController:FanTach:DmpgFactor:DmpgTimeCntr:u0\/clk_en</td>
+ <td class = "number">27.723</td>
+ <td class = "text_info"></td>
+</tr>
+<tr class="sta_path">
+<td class="sta_path"  colspan="4">
+<table class="sta_path">
+ <thead> 
+<tr> 
+<th>Type</th>
+<th>Location</th>
+<th>Fanout</th>
+<th>Instance/Net</th>
+<th>Source</th>
+<th>Dest</th>
+<th>Delay (ns)</th>
+</tr>
+</thead> 
+<tbody>
+<tr> 
+ <td class = "text_info">controlcell1</td>
+ <td class = "text_info">U(1,0)</td>
  <td class = "number">1</td>
  <td class = "text_info">\FanController:B_FanCtrl:GlobalControlReg\</td>
  <td class = "text_info">\FanController:B_FanCtrl:GlobalControlReg\/clock</td>
@@ -4531,11 +4372,11 @@ Destination Clock : FanController_TACH_CLK_500K : Positive edge</span>
  <td class = "text_info">\FanController:enable\</td>
  <td class = "text_info">\FanController:B_FanCtrl:GlobalControlReg\/control_5</td>
  <td class = "text_info">\FanController:FanTach:DmpgFactor:DmpgTimeCntr:u0\/clk_en</td>
- <td class = "number">5.777</td>
+ <td class = "number">4.850</td>
 </tr>
 <tr> 
  <td class = "text_info">datapathcell1</td>
- <td class = "text_info">U(1,1)</td>
+ <td class = "text_info">U(0,0)</td>
  <td class = "number">1</td>
  <td class = "text_info">\FanController:FanTach:DmpgFactor:DmpgTimeCntr:u0\</td>
  <td class = "text_info"> </td>
@@ -4558,7 +4399,7 @@ Destination Clock : FanController_TACH_CLK_500K : Positive edge</span>
 <tr> 
  <td class = "text_info">\FanController:B_FanCtrl:GlobalControlReg\/control_5</td>
  <td class = "text_info">\FanController:Net_393\/clk_en</td>
- <td class = "number">28.650</td>
+ <td class = "number">27.723</td>
  <td class = "text_info"></td>
 </tr>
 <tr class="sta_path">
@@ -4578,7 +4419,7 @@ Destination Clock : FanController_TACH_CLK_500K : Positive edge</span>
 <tbody>
 <tr> 
  <td class = "text_info">controlcell1</td>
- <td class = "text_info">U(1,1)</td>
+ <td class = "text_info">U(1,0)</td>
  <td class = "number">1</td>
  <td class = "text_info">\FanController:B_FanCtrl:GlobalControlReg\</td>
  <td class = "text_info">\FanController:B_FanCtrl:GlobalControlReg\/clock</td>
@@ -4592,11 +4433,11 @@ Destination Clock : FanController_TACH_CLK_500K : Positive edge</span>
  <td class = "text_info">\FanController:enable\</td>
  <td class = "text_info">\FanController:B_FanCtrl:GlobalControlReg\/control_5</td>
  <td class = "text_info">\FanController:Net_393\/clk_en</td>
- <td class = "number">5.777</td>
+ <td class = "number">4.850</td>
 </tr>
 <tr> 
  <td class = "text_info">macrocell7</td>
- <td class = "text_info">U(1,1)</td>
+ <td class = "text_info">U(0,0)</td>
  <td class = "number">1</td>
  <td class = "text_info">\FanController:Net_393\</td>
  <td class = "text_info"> </td>
@@ -4619,7 +4460,7 @@ Destination Clock : FanController_TACH_CLK_500K : Positive edge</span>
 <tr> 
  <td class = "text_info">\FanController:B_FanCtrl:GlobalControlReg\/control_5</td>
  <td class = "text_info">\FanController:FanTach:end_of_measurement\/clk_en</td>
- <td class = "number">28.650</td>
+ <td class = "number">27.723</td>
  <td class = "text_info"></td>
 </tr>
 <tr class="sta_path">
@@ -4639,7 +4480,7 @@ Destination Clock : FanController_TACH_CLK_500K : Positive edge</span>
 <tbody>
 <tr> 
  <td class = "text_info">controlcell1</td>
- <td class = "text_info">U(1,1)</td>
+ <td class = "text_info">U(1,0)</td>
  <td class = "number">1</td>
  <td class = "text_info">\FanController:B_FanCtrl:GlobalControlReg\</td>
  <td class = "text_info">\FanController:B_FanCtrl:GlobalControlReg\/clock</td>
@@ -4653,11 +4494,11 @@ Destination Clock : FanController_TACH_CLK_500K : Positive edge</span>
  <td class = "text_info">\FanController:enable\</td>
  <td class = "text_info">\FanController:B_FanCtrl:GlobalControlReg\/control_5</td>
  <td class = "text_info">\FanController:FanTach:end_of_measurement\/clk_en</td>
- <td class = "number">5.777</td>
+ <td class = "number">4.850</td>
 </tr>
 <tr> 
  <td class = "text_info">macrocell8</td>
- <td class = "text_info">U(1,1)</td>
+ <td class = "text_info">U(0,0)</td>
  <td class = "number">1</td>
  <td class = "text_info">\FanController:FanTach:end_of_measurement\</td>
  <td class = "text_info"> </td>
@@ -4680,7 +4521,7 @@ Destination Clock : FanController_TACH_CLK_500K : Positive edge</span>
 <tr> 
  <td class = "text_info">\FanController:B_FanCtrl:GlobalControlReg\/control_5</td>
  <td class = "text_info">\FanController:FanTach:gf_dmp_state\/clk_en</td>
- <td class = "number">28.650</td>
+ <td class = "number">27.723</td>
  <td class = "text_info"></td>
 </tr>
 <tr class="sta_path">
@@ -4700,7 +4541,7 @@ Destination Clock : FanController_TACH_CLK_500K : Positive edge</span>
 <tbody>
 <tr> 
  <td class = "text_info">controlcell1</td>
- <td class = "text_info">U(1,1)</td>
+ <td class = "text_info">U(1,0)</td>
  <td class = "number">1</td>
  <td class = "text_info">\FanController:B_FanCtrl:GlobalControlReg\</td>
  <td class = "text_info">\FanController:B_FanCtrl:GlobalControlReg\/clock</td>
@@ -4714,11 +4555,11 @@ Destination Clock : FanController_TACH_CLK_500K : Positive edge</span>
  <td class = "text_info">\FanController:enable\</td>
  <td class = "text_info">\FanController:B_FanCtrl:GlobalControlReg\/control_5</td>
  <td class = "text_info">\FanController:FanTach:gf_dmp_state\/clk_en</td>
- <td class = "number">5.777</td>
+ <td class = "number">4.850</td>
 </tr>
 <tr> 
  <td class = "text_info">macrocell9</td>
- <td class = "text_info">U(1,1)</td>
+ <td class = "text_info">U(0,0)</td>
  <td class = "number">1</td>
  <td class = "text_info">\FanController:FanTach:gf_dmp_state\</td>
  <td class = "text_info"> </td>
@@ -4740,8 +4581,8 @@ Destination Clock : FanController_TACH_CLK_500K : Positive edge</span>
 </tr>
 <tr> 
  <td class = "text_info">\FanController:B_FanCtrl:GlobalControlReg\/control_5</td>
- <td class = "text_info">\FanController:FanTach:filtered_rising_tach\/clk_en</td>
- <td class = "number">28.650</td>
+ <td class = "text_info">\FanController:FanTach:tach_state_1\/clk_en</td>
+ <td class = "number">27.723</td>
  <td class = "text_info"></td>
 </tr>
 <tr class="sta_path">
@@ -4761,7 +4602,7 @@ Destination Clock : FanController_TACH_CLK_500K : Positive edge</span>
 <tbody>
 <tr> 
  <td class = "text_info">controlcell1</td>
- <td class = "text_info">U(1,1)</td>
+ <td class = "text_info">U(1,0)</td>
  <td class = "number">1</td>
  <td class = "text_info">\FanController:B_FanCtrl:GlobalControlReg\</td>
  <td class = "text_info">\FanController:B_FanCtrl:GlobalControlReg\/clock</td>
@@ -4774,14 +4615,75 @@ Destination Clock : FanController_TACH_CLK_500K : Positive edge</span>
  <td class = "number">1</td>
  <td class = "text_info">\FanController:enable\</td>
  <td class = "text_info">\FanController:B_FanCtrl:GlobalControlReg\/control_5</td>
- <td class = "text_info">\FanController:FanTach:filtered_rising_tach\/clk_en</td>
- <td class = "number">5.777</td>
+ <td class = "text_info">\FanController:FanTach:tach_state_1\/clk_en</td>
+ <td class = "number">4.850</td>
 </tr>
 <tr> 
- <td class = "text_info">macrocell13</td>
- <td class = "text_info">U(1,1)</td>
+ <td class = "text_info">macrocell15</td>
+ <td class = "text_info">U(0,0)</td>
  <td class = "number">1</td>
- <td class = "text_info">\FanController:FanTach:filtered_rising_tach\</td>
+ <td class = "text_info">\FanController:FanTach:tach_state_1\</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info">HOLD</td>
+ <td class = "number">0.000</td>
+</tr>
+<tr> 
+ <td class = "text_info">Clock</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info">Skew</td>
+ <td class = "number">0.000</td>
+</tr>
+</tbody>
+ </table> 
+</td>
+</tr>
+<tr> 
+ <td class = "text_info">\FanController:B_FanCtrl:GlobalControlReg\/control_5</td>
+ <td class = "text_info">\FanController:FanTach:fifo_load\/clk_en</td>
+ <td class = "number">27.723</td>
+ <td class = "text_info"></td>
+</tr>
+<tr class="sta_path">
+<td class="sta_path"  colspan="4">
+<table class="sta_path">
+ <thead> 
+<tr> 
+<th>Type</th>
+<th>Location</th>
+<th>Fanout</th>
+<th>Instance/Net</th>
+<th>Source</th>
+<th>Dest</th>
+<th>Delay (ns)</th>
+</tr>
+</thead> 
+<tbody>
+<tr> 
+ <td class = "text_info">controlcell1</td>
+ <td class = "text_info">U(1,0)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\FanController:B_FanCtrl:GlobalControlReg\</td>
+ <td class = "text_info">\FanController:B_FanCtrl:GlobalControlReg\/clock</td>
+ <td class = "text_info">\FanController:B_FanCtrl:GlobalControlReg\/control_5</td>
+ <td class = "number">2.040</td>
+</tr>
+<tr> 
+ <td class = "text_info">Route</td>
+ <td class = "text_info"></td>
+ <td class = "number">1</td>
+ <td class = "text_info">\FanController:enable\</td>
+ <td class = "text_info">\FanController:B_FanCtrl:GlobalControlReg\/control_5</td>
+ <td class = "text_info">\FanController:FanTach:fifo_load\/clk_en</td>
+ <td class = "number">4.850</td>
+</tr>
+<tr> 
+ <td class = "text_info">macrocell18</td>
+ <td class = "text_info">U(0,0)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\FanController:FanTach:fifo_load\</td>
  <td class = "text_info"> </td>
  <td class = "text_info">HOLD</td>
  <td class = "number">0.000</td>
@@ -4802,7 +4704,7 @@ Destination Clock : FanController_TACH_CLK_500K : Positive edge</span>
 <tr> 
  <td class = "text_info">\FanController:B_FanCtrl:GlobalControlReg\/control_5</td>
  <td class = "text_info">\FanController:FanTach:P4:TachAddrControl\/clk_en</td>
- <td class = "number">28.655</td>
+ <td class = "number">28.830</td>
  <td class = "text_info"></td>
 </tr>
 <tr class="sta_path">
@@ -4822,7 +4724,7 @@ Destination Clock : FanController_TACH_CLK_500K : Positive edge</span>
 <tbody>
 <tr> 
  <td class = "text_info">controlcell1</td>
- <td class = "text_info">U(1,1)</td>
+ <td class = "text_info">U(1,0)</td>
  <td class = "number">1</td>
  <td class = "text_info">\FanController:B_FanCtrl:GlobalControlReg\</td>
  <td class = "text_info">\FanController:B_FanCtrl:GlobalControlReg\/clock</td>
@@ -4836,196 +4738,13 @@ Destination Clock : FanController_TACH_CLK_500K : Positive edge</span>
  <td class = "text_info">\FanController:enable\</td>
  <td class = "text_info">\FanController:B_FanCtrl:GlobalControlReg\/control_5</td>
  <td class = "text_info">\FanController:FanTach:P4:TachAddrControl\/clk_en</td>
- <td class = "number">5.782</td>
+ <td class = "number">5.957</td>
 </tr>
 <tr> 
  <td class = "text_info">controlcell2</td>
- <td class = "text_info">U(0,1)</td>
+ <td class = "text_info">U(1,1)</td>
  <td class = "number">1</td>
  <td class = "text_info">\FanController:FanTach:P4:TachAddrControl\</td>
- <td class = "text_info"> </td>
- <td class = "text_info">HOLD</td>
- <td class = "number">0.000</td>
-</tr>
-<tr> 
- <td class = "text_info">Clock</td>
- <td class = "text_info"> </td>
- <td class = "text_info"></td>
- <td class = "text_info"></td>
- <td class = "text_info"></td>
- <td class = "text_info">Skew</td>
- <td class = "number">0.000</td>
-</tr>
-</tbody>
- </table> 
-</td>
-</tr>
-<tr> 
- <td class = "text_info">\FanController:B_FanCtrl:GlobalControlReg\/control_5</td>
- <td class = "text_info">\FanController:FanTach:GlitchFilterTimer:u0\/clk_en</td>
- <td class = "number">28.655</td>
- <td class = "text_info"></td>
-</tr>
-<tr class="sta_path">
-<td class="sta_path"  colspan="4">
-<table class="sta_path">
- <thead> 
-<tr> 
-<th>Type</th>
-<th>Location</th>
-<th>Fanout</th>
-<th>Instance/Net</th>
-<th>Source</th>
-<th>Dest</th>
-<th>Delay (ns)</th>
-</tr>
-</thead> 
-<tbody>
-<tr> 
- <td class = "text_info">controlcell1</td>
- <td class = "text_info">U(1,1)</td>
- <td class = "number">1</td>
- <td class = "text_info">\FanController:B_FanCtrl:GlobalControlReg\</td>
- <td class = "text_info">\FanController:B_FanCtrl:GlobalControlReg\/clock</td>
- <td class = "text_info">\FanController:B_FanCtrl:GlobalControlReg\/control_5</td>
- <td class = "number">2.040</td>
-</tr>
-<tr> 
- <td class = "text_info">Route</td>
- <td class = "text_info"></td>
- <td class = "number">1</td>
- <td class = "text_info">\FanController:enable\</td>
- <td class = "text_info">\FanController:B_FanCtrl:GlobalControlReg\/control_5</td>
- <td class = "text_info">\FanController:FanTach:GlitchFilterTimer:u0\/clk_en</td>
- <td class = "number">5.782</td>
-</tr>
-<tr> 
- <td class = "text_info">datapathcell2</td>
- <td class = "text_info">U(0,1)</td>
- <td class = "number">1</td>
- <td class = "text_info">\FanController:FanTach:GlitchFilterTimer:u0\</td>
- <td class = "text_info"> </td>
- <td class = "text_info">HOLD</td>
- <td class = "number">0.000</td>
-</tr>
-<tr> 
- <td class = "text_info">Clock</td>
- <td class = "text_info"> </td>
- <td class = "text_info"></td>
- <td class = "text_info"></td>
- <td class = "text_info"></td>
- <td class = "text_info">Skew</td>
- <td class = "number">0.000</td>
-</tr>
-</tbody>
- </table> 
-</td>
-</tr>
-<tr> 
- <td class = "text_info">\FanController:B_FanCtrl:GlobalControlReg\/control_5</td>
- <td class = "text_info">\FanController:FanTach:glitch_filter_state\/clk_en</td>
- <td class = "number">28.655</td>
- <td class = "text_info"></td>
-</tr>
-<tr class="sta_path">
-<td class="sta_path"  colspan="4">
-<table class="sta_path">
- <thead> 
-<tr> 
-<th>Type</th>
-<th>Location</th>
-<th>Fanout</th>
-<th>Instance/Net</th>
-<th>Source</th>
-<th>Dest</th>
-<th>Delay (ns)</th>
-</tr>
-</thead> 
-<tbody>
-<tr> 
- <td class = "text_info">controlcell1</td>
- <td class = "text_info">U(1,1)</td>
- <td class = "number">1</td>
- <td class = "text_info">\FanController:B_FanCtrl:GlobalControlReg\</td>
- <td class = "text_info">\FanController:B_FanCtrl:GlobalControlReg\/clock</td>
- <td class = "text_info">\FanController:B_FanCtrl:GlobalControlReg\/control_5</td>
- <td class = "number">2.040</td>
-</tr>
-<tr> 
- <td class = "text_info">Route</td>
- <td class = "text_info"></td>
- <td class = "number">1</td>
- <td class = "text_info">\FanController:enable\</td>
- <td class = "text_info">\FanController:B_FanCtrl:GlobalControlReg\/control_5</td>
- <td class = "text_info">\FanController:FanTach:glitch_filter_state\/clk_en</td>
- <td class = "number">5.782</td>
-</tr>
-<tr> 
- <td class = "text_info">macrocell11</td>
- <td class = "text_info">U(0,1)</td>
- <td class = "number">1</td>
- <td class = "text_info">\FanController:FanTach:glitch_filter_state\</td>
- <td class = "text_info"> </td>
- <td class = "text_info">HOLD</td>
- <td class = "number">0.000</td>
-</tr>
-<tr> 
- <td class = "text_info">Clock</td>
- <td class = "text_info"> </td>
- <td class = "text_info"></td>
- <td class = "text_info"></td>
- <td class = "text_info"></td>
- <td class = "text_info">Skew</td>
- <td class = "number">0.000</td>
-</tr>
-</tbody>
- </table> 
-</td>
-</tr>
-<tr> 
- <td class = "text_info">\FanController:B_FanCtrl:GlobalControlReg\/control_5</td>
- <td class = "text_info">\FanController:FanTach:glitch_filter_ld\/clk_en</td>
- <td class = "number">28.655</td>
- <td class = "text_info"></td>
-</tr>
-<tr class="sta_path">
-<td class="sta_path"  colspan="4">
-<table class="sta_path">
- <thead> 
-<tr> 
-<th>Type</th>
-<th>Location</th>
-<th>Fanout</th>
-<th>Instance/Net</th>
-<th>Source</th>
-<th>Dest</th>
-<th>Delay (ns)</th>
-</tr>
-</thead> 
-<tbody>
-<tr> 
- <td class = "text_info">controlcell1</td>
- <td class = "text_info">U(1,1)</td>
- <td class = "number">1</td>
- <td class = "text_info">\FanController:B_FanCtrl:GlobalControlReg\</td>
- <td class = "text_info">\FanController:B_FanCtrl:GlobalControlReg\/clock</td>
- <td class = "text_info">\FanController:B_FanCtrl:GlobalControlReg\/control_5</td>
- <td class = "number">2.040</td>
-</tr>
-<tr> 
- <td class = "text_info">Route</td>
- <td class = "text_info"></td>
- <td class = "number">1</td>
- <td class = "text_info">\FanController:enable\</td>
- <td class = "text_info">\FanController:B_FanCtrl:GlobalControlReg\/control_5</td>
- <td class = "text_info">\FanController:FanTach:glitch_filter_ld\/clk_en</td>
- <td class = "number">5.782</td>
-</tr>
-<tr> 
- <td class = "text_info">macrocell12</td>
- <td class = "text_info">U(0,1)</td>
- <td class = "number">1</td>
- <td class = "text_info">\FanController:FanTach:glitch_filter_ld\</td>
  <td class = "text_info"> </td>
  <td class = "text_info">HOLD</td>
  <td class = "number">0.000</td>
@@ -5094,7 +4813,7 @@ Destination Clock : FanController_TACH_CLK_500K : Positive edge</span>
 <tbody>
 <tr> 
  <td class = "text_info">datapathcell3</td>
- <td class = "text_info">U(1,0)</td>
+ <td class = "text_info">U(0,1)</td>
  <td class = "number">1</td>
  <td class = "text_info">\FanController:FanTach:FanTachCounter:u0\</td>
  <td class = "text_info">\FanController:FanTach:FanTachCounter:u0\/clock</td>
@@ -5112,7 +4831,7 @@ Destination Clock : FanController_TACH_CLK_500K : Positive edge</span>
 </tr>
 <tr> 
  <td class = "text_info">datapathcell4</td>
- <td class = "text_info">U(0,0)</td>
+ <td class = "text_info">U(1,1)</td>
  <td class = "number">1</td>
  <td class = "text_info">\FanController:FanTach:FanTachCounter:u1\</td>
  <td class = "text_info"> </td>
@@ -5133,9 +4852,192 @@ Destination Clock : FanController_TACH_CLK_500K : Positive edge</span>
 </td>
 </tr>
 <tr> 
+ <td class = "text_info">\FanController:FanTach:tach_state_1\/q</td>
+ <td class = "text_info">\FanController:FanTach:tach_state_1\/main_2</td>
+ <td class = "number">3.476</td>
+ <td class = "text_info"></td>
+</tr>
+<tr class="sta_path">
+<td class="sta_path"  colspan="4">
+<table class="sta_path">
+ <thead> 
+<tr> 
+<th>Type</th>
+<th>Location</th>
+<th>Fanout</th>
+<th>Instance/Net</th>
+<th>Source</th>
+<th>Dest</th>
+<th>Delay (ns)</th>
+</tr>
+</thead> 
+<tbody>
+<tr> 
+ <td class = "text_info">macrocell15</td>
+ <td class = "text_info">U(0,0)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\FanController:FanTach:tach_state_1\</td>
+ <td class = "text_info">\FanController:FanTach:tach_state_1\/clock_0</td>
+ <td class = "text_info">\FanController:FanTach:tach_state_1\/q</td>
+ <td class = "number">1.250</td>
+</tr>
+<tr> 
+ <td class = "text_info">macrocell15</td>
+ <td class = "text_info">U(0,0)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\FanController:FanTach:tach_state_1\</td>
+ <td class = "text_info">\FanController:FanTach:tach_state_1\/q</td>
+ <td class = "text_info">\FanController:FanTach:tach_state_1\/main_2</td>
+ <td class = "number">2.226</td>
+</tr>
+<tr> 
+ <td class = "text_info">macrocell15</td>
+ <td class = "text_info">U(0,0)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\FanController:FanTach:tach_state_1\</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info">HOLD</td>
+ <td class = "number">0.000</td>
+</tr>
+<tr> 
+ <td class = "text_info">Clock</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info">Skew</td>
+ <td class = "number">0.000</td>
+</tr>
+</tbody>
+ </table> 
+</td>
+</tr>
+<tr> 
+ <td class = "text_info">\FanController:FanTach:filtered_rising_tach\/q</td>
+ <td class = "text_info">\FanController:FanTach:tach_state_2\/main_0</td>
+ <td class = "number">3.833</td>
+ <td class = "text_info"></td>
+</tr>
+<tr class="sta_path">
+<td class="sta_path"  colspan="4">
+<table class="sta_path">
+ <thead> 
+<tr> 
+<th>Type</th>
+<th>Location</th>
+<th>Fanout</th>
+<th>Instance/Net</th>
+<th>Source</th>
+<th>Dest</th>
+<th>Delay (ns)</th>
+</tr>
+</thead> 
+<tbody>
+<tr> 
+ <td class = "text_info">macrocell13</td>
+ <td class = "text_info">U(1,1)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\FanController:FanTach:filtered_rising_tach\</td>
+ <td class = "text_info">\FanController:FanTach:filtered_rising_tach\/clock_0</td>
+ <td class = "text_info">\FanController:FanTach:filtered_rising_tach\/q</td>
+ <td class = "number">1.250</td>
+</tr>
+<tr> 
+ <td class = "text_info">Route</td>
+ <td class = "text_info"></td>
+ <td class = "number">1</td>
+ <td class = "text_info">\FanController:FanTach:filtered_rising_tach\</td>
+ <td class = "text_info">\FanController:FanTach:filtered_rising_tach\/q</td>
+ <td class = "text_info">\FanController:FanTach:tach_state_2\/main_0</td>
+ <td class = "number">2.583</td>
+</tr>
+<tr> 
+ <td class = "text_info">macrocell14</td>
+ <td class = "text_info">U(0,1)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\FanController:FanTach:tach_state_2\</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info">HOLD</td>
+ <td class = "number">0.000</td>
+</tr>
+<tr> 
+ <td class = "text_info">Clock</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info">Skew</td>
+ <td class = "number">0.000</td>
+</tr>
+</tbody>
+ </table> 
+</td>
+</tr>
+<tr> 
+ <td class = "text_info">\FanController:FanTach:filtered_rising_tach\/q</td>
+ <td class = "text_info">\FanController:FanTach:sync2_tach_cnt3\/main_1</td>
+ <td class = "number">3.833</td>
+ <td class = "text_info"></td>
+</tr>
+<tr class="sta_path">
+<td class="sta_path"  colspan="4">
+<table class="sta_path">
+ <thead> 
+<tr> 
+<th>Type</th>
+<th>Location</th>
+<th>Fanout</th>
+<th>Instance/Net</th>
+<th>Source</th>
+<th>Dest</th>
+<th>Delay (ns)</th>
+</tr>
+</thead> 
+<tbody>
+<tr> 
+ <td class = "text_info">macrocell13</td>
+ <td class = "text_info">U(1,1)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\FanController:FanTach:filtered_rising_tach\</td>
+ <td class = "text_info">\FanController:FanTach:filtered_rising_tach\/clock_0</td>
+ <td class = "text_info">\FanController:FanTach:filtered_rising_tach\/q</td>
+ <td class = "number">1.250</td>
+</tr>
+<tr> 
+ <td class = "text_info">Route</td>
+ <td class = "text_info"></td>
+ <td class = "number">1</td>
+ <td class = "text_info">\FanController:FanTach:filtered_rising_tach\</td>
+ <td class = "text_info">\FanController:FanTach:filtered_rising_tach\/q</td>
+ <td class = "text_info">\FanController:FanTach:sync2_tach_cnt3\/main_1</td>
+ <td class = "number">2.583</td>
+</tr>
+<tr> 
+ <td class = "text_info">macrocell17</td>
+ <td class = "text_info">U(0,1)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\FanController:FanTach:sync2_tach_cnt3\</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info">HOLD</td>
+ <td class = "number">0.000</td>
+</tr>
+<tr> 
+ <td class = "text_info">Clock</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info">Skew</td>
+ <td class = "number">0.000</td>
+</tr>
+</tbody>
+ </table> 
+</td>
+</tr>
+<tr> 
  <td class = "text_info">\FanController:FanTach:glitch_filter_state\/q</td>
  <td class = "text_info">\FanController:FanTach:glitch_filter_state\/main_1</td>
- <td class = "number">3.538</td>
+ <td class = "number">3.834</td>
  <td class = "text_info"></td>
 </tr>
 <tr class="sta_path">
@@ -5155,7 +5057,7 @@ Destination Clock : FanController_TACH_CLK_500K : Positive edge</span>
 <tbody>
 <tr> 
  <td class = "text_info">macrocell11</td>
- <td class = "text_info">U(0,1)</td>
+ <td class = "text_info">U(1,1)</td>
  <td class = "number">1</td>
  <td class = "text_info">\FanController:FanTach:glitch_filter_state\</td>
  <td class = "text_info">\FanController:FanTach:glitch_filter_state\/clock_0</td>
@@ -5164,16 +5066,16 @@ Destination Clock : FanController_TACH_CLK_500K : Positive edge</span>
 </tr>
 <tr> 
  <td class = "text_info">macrocell11</td>
- <td class = "text_info">U(0,1)</td>
+ <td class = "text_info">U(1,1)</td>
  <td class = "number">1</td>
  <td class = "text_info">\FanController:FanTach:glitch_filter_state\</td>
  <td class = "text_info">\FanController:FanTach:glitch_filter_state\/q</td>
  <td class = "text_info">\FanController:FanTach:glitch_filter_state\/main_1</td>
- <td class = "number">2.288</td>
+ <td class = "number">2.584</td>
 </tr>
 <tr> 
  <td class = "text_info">macrocell11</td>
- <td class = "text_info">U(0,1)</td>
+ <td class = "text_info">U(1,1)</td>
  <td class = "number">1</td>
  <td class = "text_info">\FanController:FanTach:glitch_filter_state\</td>
  <td class = "text_info"> </td>
@@ -5196,7 +5098,7 @@ Destination Clock : FanController_TACH_CLK_500K : Positive edge</span>
 <tr> 
  <td class = "text_info">\FanController:FanTach:glitch_filter_state\/q</td>
  <td class = "text_info">\FanController:FanTach:glitch_filter_ld\/main_1</td>
- <td class = "number">3.538</td>
+ <td class = "number">3.834</td>
  <td class = "text_info"></td>
 </tr>
 <tr class="sta_path">
@@ -5216,7 +5118,7 @@ Destination Clock : FanController_TACH_CLK_500K : Positive edge</span>
 <tbody>
 <tr> 
  <td class = "text_info">macrocell11</td>
- <td class = "text_info">U(0,1)</td>
+ <td class = "text_info">U(1,1)</td>
  <td class = "number">1</td>
  <td class = "text_info">\FanController:FanTach:glitch_filter_state\</td>
  <td class = "text_info">\FanController:FanTach:glitch_filter_state\/clock_0</td>
@@ -5230,74 +5132,13 @@ Destination Clock : FanController_TACH_CLK_500K : Positive edge</span>
  <td class = "text_info">\FanController:FanTach:glitch_filter_state\</td>
  <td class = "text_info">\FanController:FanTach:glitch_filter_state\/q</td>
  <td class = "text_info">\FanController:FanTach:glitch_filter_ld\/main_1</td>
- <td class = "number">2.288</td>
+ <td class = "number">2.584</td>
 </tr>
 <tr> 
  <td class = "text_info">macrocell12</td>
- <td class = "text_info">U(0,1)</td>
+ <td class = "text_info">U(1,1)</td>
  <td class = "number">1</td>
  <td class = "text_info">\FanController:FanTach:glitch_filter_ld\</td>
- <td class = "text_info"> </td>
- <td class = "text_info">HOLD</td>
- <td class = "number">0.000</td>
-</tr>
-<tr> 
- <td class = "text_info">Clock</td>
- <td class = "text_info"> </td>
- <td class = "text_info"></td>
- <td class = "text_info"></td>
- <td class = "text_info"></td>
- <td class = "text_info">Skew</td>
- <td class = "number">0.000</td>
-</tr>
-</tbody>
- </table> 
-</td>
-</tr>
-<tr> 
- <td class = "text_info">\FanController:FanTach:glitch_filter_ld\/q</td>
- <td class = "text_info">\FanController:FanTach:GlitchFilterTimer:u0\/cs_addr_0</td>
- <td class = "number">3.559</td>
- <td class = "text_info"></td>
-</tr>
-<tr class="sta_path">
-<td class="sta_path"  colspan="4">
-<table class="sta_path">
- <thead> 
-<tr> 
-<th>Type</th>
-<th>Location</th>
-<th>Fanout</th>
-<th>Instance/Net</th>
-<th>Source</th>
-<th>Dest</th>
-<th>Delay (ns)</th>
-</tr>
-</thead> 
-<tbody>
-<tr> 
- <td class = "text_info">macrocell12</td>
- <td class = "text_info">U(0,1)</td>
- <td class = "number">1</td>
- <td class = "text_info">\FanController:FanTach:glitch_filter_ld\</td>
- <td class = "text_info">\FanController:FanTach:glitch_filter_ld\/clock_0</td>
- <td class = "text_info">\FanController:FanTach:glitch_filter_ld\/q</td>
- <td class = "number">1.250</td>
-</tr>
-<tr> 
- <td class = "text_info">Route</td>
- <td class = "text_info"></td>
- <td class = "number">1</td>
- <td class = "text_info">\FanController:FanTach:glitch_filter_ld\</td>
- <td class = "text_info">\FanController:FanTach:glitch_filter_ld\/q</td>
- <td class = "text_info">\FanController:FanTach:GlitchFilterTimer:u0\/cs_addr_0</td>
- <td class = "number">2.309</td>
-</tr>
-<tr> 
- <td class = "text_info">datapathcell2</td>
- <td class = "text_info">U(0,1)</td>
- <td class = "number">1</td>
- <td class = "text_info">\FanController:FanTach:GlitchFilterTimer:u0\</td>
  <td class = "text_info"> </td>
  <td class = "text_info">HOLD</td>
  <td class = "number">0.000</td>
@@ -5318,7 +5159,7 @@ Destination Clock : FanController_TACH_CLK_500K : Positive edge</span>
 <tr> 
  <td class = "text_info">\FanController:FanTach:glitch_filter_state\/q</td>
  <td class = "text_info">\FanController:FanTach:filtered_rising_tach\/main_0</td>
- <td class = "number">3.561</td>
+ <td class = "number">3.834</td>
  <td class = "text_info"></td>
 </tr>
 <tr class="sta_path">
@@ -5338,7 +5179,7 @@ Destination Clock : FanController_TACH_CLK_500K : Positive edge</span>
 <tbody>
 <tr> 
  <td class = "text_info">macrocell11</td>
- <td class = "text_info">U(0,1)</td>
+ <td class = "text_info">U(1,1)</td>
  <td class = "number">1</td>
  <td class = "text_info">\FanController:FanTach:glitch_filter_state\</td>
  <td class = "text_info">\FanController:FanTach:glitch_filter_state\/clock_0</td>
@@ -5352,7 +5193,7 @@ Destination Clock : FanController_TACH_CLK_500K : Positive edge</span>
  <td class = "text_info">\FanController:FanTach:glitch_filter_state\</td>
  <td class = "text_info">\FanController:FanTach:glitch_filter_state\/q</td>
  <td class = "text_info">\FanController:FanTach:filtered_rising_tach\/main_0</td>
- <td class = "number">2.311</td>
+ <td class = "number">2.584</td>
 </tr>
 <tr> 
  <td class = "text_info">macrocell13</td>
@@ -5377,9 +5218,9 @@ Destination Clock : FanController_TACH_CLK_500K : Positive edge</span>
 </td>
 </tr>
 <tr> 
- <td class = "text_info">\FanController:FanTach:reg_enable\/q</td>
- <td class = "text_info">\FanController:FanTach:sync2_tach_cnt3\/main_0</td>
- <td class = "number">3.926</td>
+ <td class = "text_info">\FanController:FanTach:filtered_rising_tach\/q</td>
+ <td class = "text_info">\FanController:FanTach:tach_state_0\/main_1</td>
+ <td class = "number">3.839</td>
  <td class = "text_info"></td>
 </tr>
 <tr class="sta_path">
@@ -5398,148 +5239,26 @@ Destination Clock : FanController_TACH_CLK_500K : Positive edge</span>
 </thead> 
 <tbody>
 <tr> 
- <td class = "text_info">macrocell10</td>
- <td class = "text_info">U(1,0)</td>
+ <td class = "text_info">macrocell13</td>
+ <td class = "text_info">U(1,1)</td>
  <td class = "number">1</td>
- <td class = "text_info">\FanController:FanTach:reg_enable\</td>
- <td class = "text_info">\FanController:FanTach:reg_enable\/clock_0</td>
- <td class = "text_info">\FanController:FanTach:reg_enable\/q</td>
+ <td class = "text_info">\FanController:FanTach:filtered_rising_tach\</td>
+ <td class = "text_info">\FanController:FanTach:filtered_rising_tach\/clock_0</td>
+ <td class = "text_info">\FanController:FanTach:filtered_rising_tach\/q</td>
  <td class = "number">1.250</td>
 </tr>
 <tr> 
  <td class = "text_info">Route</td>
  <td class = "text_info"></td>
  <td class = "number">1</td>
- <td class = "text_info">\FanController:FanTach:reg_enable\</td>
- <td class = "text_info">\FanController:FanTach:reg_enable\/q</td>
- <td class = "text_info">\FanController:FanTach:sync2_tach_cnt3\/main_0</td>
- <td class = "number">2.676</td>
-</tr>
-<tr> 
- <td class = "text_info">macrocell17</td>
- <td class = "text_info">U(1,0)</td>
- <td class = "number">1</td>
- <td class = "text_info">\FanController:FanTach:sync2_tach_cnt3\</td>
- <td class = "text_info"> </td>
- <td class = "text_info">HOLD</td>
- <td class = "number">0.000</td>
-</tr>
-<tr> 
- <td class = "text_info">Clock</td>
- <td class = "text_info"> </td>
- <td class = "text_info"></td>
- <td class = "text_info"></td>
- <td class = "text_info"></td>
- <td class = "text_info">Skew</td>
- <td class = "number">0.000</td>
-</tr>
-</tbody>
- </table> 
-</td>
-</tr>
-<tr> 
- <td class = "text_info">\FanController:FanTach:reg_enable\/q</td>
- <td class = "text_info">\FanController:FanTach:reg_enable\/main_3</td>
- <td class = "number">3.929</td>
- <td class = "text_info"></td>
-</tr>
-<tr class="sta_path">
-<td class="sta_path"  colspan="4">
-<table class="sta_path">
- <thead> 
-<tr> 
-<th>Type</th>
-<th>Location</th>
-<th>Fanout</th>
-<th>Instance/Net</th>
-<th>Source</th>
-<th>Dest</th>
-<th>Delay (ns)</th>
-</tr>
-</thead> 
-<tbody>
-<tr> 
- <td class = "text_info">macrocell10</td>
- <td class = "text_info">U(1,0)</td>
- <td class = "number">1</td>
- <td class = "text_info">\FanController:FanTach:reg_enable\</td>
- <td class = "text_info">\FanController:FanTach:reg_enable\/clock_0</td>
- <td class = "text_info">\FanController:FanTach:reg_enable\/q</td>
- <td class = "number">1.250</td>
-</tr>
-<tr> 
- <td class = "text_info">macrocell10</td>
- <td class = "text_info">U(1,0)</td>
- <td class = "number">1</td>
- <td class = "text_info">\FanController:FanTach:reg_enable\</td>
- <td class = "text_info">\FanController:FanTach:reg_enable\/q</td>
- <td class = "text_info">\FanController:FanTach:reg_enable\/main_3</td>
- <td class = "number">2.679</td>
-</tr>
-<tr> 
- <td class = "text_info">macrocell10</td>
- <td class = "text_info">U(1,0)</td>
- <td class = "number">1</td>
- <td class = "text_info">\FanController:FanTach:reg_enable\</td>
- <td class = "text_info"> </td>
- <td class = "text_info">HOLD</td>
- <td class = "number">0.000</td>
-</tr>
-<tr> 
- <td class = "text_info">Clock</td>
- <td class = "text_info"> </td>
- <td class = "text_info"></td>
- <td class = "text_info"></td>
- <td class = "text_info"></td>
- <td class = "text_info">Skew</td>
- <td class = "number">0.000</td>
-</tr>
-</tbody>
- </table> 
-</td>
-</tr>
-<tr> 
- <td class = "text_info">\FanController:FanTach:reg_enable\/q</td>
- <td class = "text_info">\FanController:FanTach:tach_state_0\/main_0</td>
- <td class = "number">3.929</td>
- <td class = "text_info"></td>
-</tr>
-<tr class="sta_path">
-<td class="sta_path"  colspan="4">
-<table class="sta_path">
- <thead> 
-<tr> 
-<th>Type</th>
-<th>Location</th>
-<th>Fanout</th>
-<th>Instance/Net</th>
-<th>Source</th>
-<th>Dest</th>
-<th>Delay (ns)</th>
-</tr>
-</thead> 
-<tbody>
-<tr> 
- <td class = "text_info">macrocell10</td>
- <td class = "text_info">U(1,0)</td>
- <td class = "number">1</td>
- <td class = "text_info">\FanController:FanTach:reg_enable\</td>
- <td class = "text_info">\FanController:FanTach:reg_enable\/clock_0</td>
- <td class = "text_info">\FanController:FanTach:reg_enable\/q</td>
- <td class = "number">1.250</td>
-</tr>
-<tr> 
- <td class = "text_info">Route</td>
- <td class = "text_info"></td>
- <td class = "number">1</td>
- <td class = "text_info">\FanController:FanTach:reg_enable\</td>
- <td class = "text_info">\FanController:FanTach:reg_enable\/q</td>
- <td class = "text_info">\FanController:FanTach:tach_state_0\/main_0</td>
- <td class = "number">2.679</td>
+ <td class = "text_info">\FanController:FanTach:filtered_rising_tach\</td>
+ <td class = "text_info">\FanController:FanTach:filtered_rising_tach\/q</td>
+ <td class = "text_info">\FanController:FanTach:tach_state_0\/main_1</td>
+ <td class = "number">2.589</td>
 </tr>
 <tr> 
  <td class = "text_info">macrocell16</td>
- <td class = "text_info">U(1,0)</td>
+ <td class = "text_info">U(0,1)</td>
  <td class = "number">1</td>
  <td class = "text_info">\FanController:FanTach:tach_state_0\</td>
  <td class = "text_info"> </td>
@@ -5560,9 +5279,9 @@ Destination Clock : FanController_TACH_CLK_500K : Positive edge</span>
 </td>
 </tr>
 <tr> 
- <td class = "text_info">\FanController:FanTach:gf_dmp_state\/q</td>
- <td class = "text_info">\FanController:Net_393\/main_2</td>
- <td class = "number">4.020</td>
+ <td class = "text_info">\FanController:FanTach:tach\/q</td>
+ <td class = "text_info">\FanController:FanTach:glitch_filter_ld\/main_0</td>
+ <td class = "number">3.859</td>
  <td class = "text_info"></td>
 </tr>
 <tr class="sta_path">
@@ -5581,28 +5300,28 @@ Destination Clock : FanController_TACH_CLK_500K : Positive edge</span>
 </thead> 
 <tbody>
 <tr> 
- <td class = "text_info">macrocell9</td>
+ <td class = "text_info">macrocell6</td>
  <td class = "text_info">U(1,1)</td>
  <td class = "number">1</td>
- <td class = "text_info">\FanController:FanTach:gf_dmp_state\</td>
- <td class = "text_info">\FanController:FanTach:gf_dmp_state\/clock_0</td>
- <td class = "text_info">\FanController:FanTach:gf_dmp_state\/q</td>
+ <td class = "text_info">\FanController:FanTach:tach\</td>
+ <td class = "text_info">\FanController:FanTach:tach\/clock_0</td>
+ <td class = "text_info">\FanController:FanTach:tach\/q</td>
  <td class = "number">1.250</td>
 </tr>
 <tr> 
  <td class = "text_info">Route</td>
  <td class = "text_info"></td>
  <td class = "number">1</td>
- <td class = "text_info">\FanController:FanTach:gf_dmp_state\</td>
- <td class = "text_info">\FanController:FanTach:gf_dmp_state\/q</td>
- <td class = "text_info">\FanController:Net_393\/main_2</td>
- <td class = "number">2.770</td>
+ <td class = "text_info">\FanController:FanTach:tach\</td>
+ <td class = "text_info">\FanController:FanTach:tach\/q</td>
+ <td class = "text_info">\FanController:FanTach:glitch_filter_ld\/main_0</td>
+ <td class = "number">2.609</td>
 </tr>
 <tr> 
- <td class = "text_info">macrocell7</td>
+ <td class = "text_info">macrocell12</td>
  <td class = "text_info">U(1,1)</td>
  <td class = "number">1</td>
- <td class = "text_info">\FanController:Net_393\</td>
+ <td class = "text_info">\FanController:FanTach:glitch_filter_ld\</td>
  <td class = "text_info"> </td>
  <td class = "text_info">HOLD</td>
  <td class = "number">0.000</td>
@@ -5621,9 +5340,9 @@ Destination Clock : FanController_TACH_CLK_500K : Positive edge</span>
 </td>
 </tr>
 <tr> 
- <td class = "text_info">\FanController:FanTach:gf_dmp_state\/q</td>
- <td class = "text_info">\FanController:FanTach:gf_dmp_state\/main_1</td>
- <td class = "number">4.020</td>
+ <td class = "text_info">\FanController:FanTach:tach\/q</td>
+ <td class = "text_info">\FanController:FanTach:glitch_filter_state\/main_0</td>
+ <td class = "number">3.865</td>
  <td class = "text_info"></td>
 </tr>
 <tr class="sta_path">
@@ -5642,117 +5361,28 @@ Destination Clock : FanController_TACH_CLK_500K : Positive edge</span>
 </thead> 
 <tbody>
 <tr> 
- <td class = "text_info">macrocell9</td>
+ <td class = "text_info">macrocell6</td>
  <td class = "text_info">U(1,1)</td>
  <td class = "number">1</td>
- <td class = "text_info">\FanController:FanTach:gf_dmp_state\</td>
- <td class = "text_info">\FanController:FanTach:gf_dmp_state\/clock_0</td>
- <td class = "text_info">\FanController:FanTach:gf_dmp_state\/q</td>
- <td class = "number">1.250</td>
-</tr>
-<tr> 
- <td class = "text_info">macrocell9</td>
- <td class = "text_info">U(1,1)</td>
- <td class = "number">1</td>
- <td class = "text_info">\FanController:FanTach:gf_dmp_state\</td>
- <td class = "text_info">\FanController:FanTach:gf_dmp_state\/q</td>
- <td class = "text_info">\FanController:FanTach:gf_dmp_state\/main_1</td>
- <td class = "number">2.770</td>
-</tr>
-<tr> 
- <td class = "text_info">macrocell9</td>
- <td class = "text_info">U(1,1)</td>
- <td class = "number">1</td>
- <td class = "text_info">\FanController:FanTach:gf_dmp_state\</td>
- <td class = "text_info"> </td>
- <td class = "text_info">HOLD</td>
- <td class = "number">0.000</td>
-</tr>
-<tr> 
- <td class = "text_info">Clock</td>
- <td class = "text_info"> </td>
- <td class = "text_info"></td>
- <td class = "text_info"></td>
- <td class = "text_info"></td>
- <td class = "text_info">Skew</td>
- <td class = "number">0.000</td>
-</tr>
-</tbody>
- </table> 
-</td>
-</tr>
-</tbody>
- </table> 
-</div>
-</div>
-</div>
-</div>
-<div class="sta_sec" >
-<div>
-<a href="#" style="text-decoration: none; color: inherit;">
-<span class="sec_head"><span style="font-family: monospace;">+</span>
-Source Clock : Pin_Input(0)_PAD : Positive edge</span>
-</a>
-</div><div class="sta_secbody"><div class="sta_sec" >
-<div>
-<a href="#" style="text-decoration: none; color: inherit;">
-<span class="sec_head"><span style="font-family: monospace;">+</span>
-Destination Clock : Pin_Input(0)_PAD : Positive edge</span>
-</a>
-</div><div class="sta_secbody"><table class="sta_tscs">
- <thead> 
-<tr> 
-<th>Source</th>
-<th>Destination</th>
-<th>Slack (ns)</th>
-<th>Violation</th>
-</tr>
-</thead> 
-<tbody>
-<tr> 
- <td class = "text_info">\FreqDiv_1:not_last_reset\/q</td>
- <td class = "text_info">Net_676/main_0</td>
- <td class = "number">1.221</td>
- <td class = "text_info"></td>
-</tr>
-<tr class="sta_path">
-<td class="sta_path"  colspan="4">
-<table class="sta_path">
- <thead> 
-<tr> 
-<th>Type</th>
-<th>Location</th>
-<th>Fanout</th>
-<th>Instance/Net</th>
-<th>Source</th>
-<th>Dest</th>
-<th>Delay (ns)</th>
-</tr>
-</thead> 
-<tbody>
-<tr> 
- <td class = "text_info">macrocell20</td>
- <td class = "text_info">U(0,0)</td>
- <td class = "number">1</td>
- <td class = "text_info">\FreqDiv_1:not_last_reset\</td>
- <td class = "text_info">\FreqDiv_1:not_last_reset\/clock_0</td>
- <td class = "text_info">\FreqDiv_1:not_last_reset\/q</td>
+ <td class = "text_info">\FanController:FanTach:tach\</td>
+ <td class = "text_info">\FanController:FanTach:tach\/clock_0</td>
+ <td class = "text_info">\FanController:FanTach:tach\/q</td>
  <td class = "number">1.250</td>
 </tr>
 <tr> 
  <td class = "text_info">Route</td>
  <td class = "text_info"></td>
  <td class = "number">1</td>
- <td class = "text_info">\FreqDiv_1:not_last_reset\</td>
- <td class = "text_info">\FreqDiv_1:not_last_reset\/q</td>
- <td class = "text_info">Net_676/main_0</td>
- <td class = "number">2.242</td>
+ <td class = "text_info">\FanController:FanTach:tach\</td>
+ <td class = "text_info">\FanController:FanTach:tach\/q</td>
+ <td class = "text_info">\FanController:FanTach:glitch_filter_state\/main_0</td>
+ <td class = "number">2.615</td>
 </tr>
 <tr> 
- <td class = "text_info">macrocell19</td>
- <td class = "text_info">U(0,0)</td>
+ <td class = "text_info">macrocell11</td>
+ <td class = "text_info">U(1,1)</td>
  <td class = "number">1</td>
- <td class = "text_info">Net_676</td>
+ <td class = "text_info">\FanController:FanTach:glitch_filter_state\</td>
  <td class = "text_info"> </td>
  <td class = "text_info">HOLD</td>
  <td class = "number">0.000</td>
@@ -5764,129 +5394,7 @@ Destination Clock : Pin_Input(0)_PAD : Positive edge</span>
  <td class = "text_info"></td>
  <td class = "text_info"></td>
  <td class = "text_info">Skew</td>
- <td class = "number">-2.271</td>
-</tr>
-</tbody>
- </table> 
-</td>
-</tr>
-<tr> 
- <td class = "text_info">\FreqDiv_1:not_last_reset\/q</td>
- <td class = "text_info">\FreqDiv_1:count_0\/main_0</td>
- <td class = "number">1.221</td>
- <td class = "text_info"></td>
-</tr>
-<tr class="sta_path">
-<td class="sta_path"  colspan="4">
-<table class="sta_path">
- <thead> 
-<tr> 
-<th>Type</th>
-<th>Location</th>
-<th>Fanout</th>
-<th>Instance/Net</th>
-<th>Source</th>
-<th>Dest</th>
-<th>Delay (ns)</th>
-</tr>
-</thead> 
-<tbody>
-<tr> 
- <td class = "text_info">macrocell20</td>
- <td class = "text_info">U(0,0)</td>
- <td class = "number">1</td>
- <td class = "text_info">\FreqDiv_1:not_last_reset\</td>
- <td class = "text_info">\FreqDiv_1:not_last_reset\/clock_0</td>
- <td class = "text_info">\FreqDiv_1:not_last_reset\/q</td>
- <td class = "number">1.250</td>
-</tr>
-<tr> 
- <td class = "text_info">Route</td>
- <td class = "text_info"></td>
- <td class = "number">1</td>
- <td class = "text_info">\FreqDiv_1:not_last_reset\</td>
- <td class = "text_info">\FreqDiv_1:not_last_reset\/q</td>
- <td class = "text_info">\FreqDiv_1:count_0\/main_0</td>
- <td class = "number">2.242</td>
-</tr>
-<tr> 
- <td class = "text_info">macrocell21</td>
- <td class = "text_info">U(0,0)</td>
- <td class = "number">1</td>
- <td class = "text_info">\FreqDiv_1:count_0\</td>
- <td class = "text_info"> </td>
- <td class = "text_info">HOLD</td>
  <td class = "number">0.000</td>
-</tr>
-<tr> 
- <td class = "text_info">Clock</td>
- <td class = "text_info"> </td>
- <td class = "text_info"></td>
- <td class = "text_info"></td>
- <td class = "text_info"></td>
- <td class = "text_info">Skew</td>
- <td class = "number">-2.271</td>
-</tr>
-</tbody>
- </table> 
-</td>
-</tr>
-<tr> 
- <td class = "text_info">\FreqDiv_1:count_0\/q</td>
- <td class = "text_info">Net_676/main_1</td>
- <td class = "number">1.225</td>
- <td class = "text_info"></td>
-</tr>
-<tr class="sta_path">
-<td class="sta_path"  colspan="4">
-<table class="sta_path">
- <thead> 
-<tr> 
-<th>Type</th>
-<th>Location</th>
-<th>Fanout</th>
-<th>Instance/Net</th>
-<th>Source</th>
-<th>Dest</th>
-<th>Delay (ns)</th>
-</tr>
-</thead> 
-<tbody>
-<tr> 
- <td class = "text_info">macrocell21</td>
- <td class = "text_info">U(0,0)</td>
- <td class = "number">1</td>
- <td class = "text_info">\FreqDiv_1:count_0\</td>
- <td class = "text_info">\FreqDiv_1:count_0\/clock_0</td>
- <td class = "text_info">\FreqDiv_1:count_0\/q</td>
- <td class = "number">1.250</td>
-</tr>
-<tr> 
- <td class = "text_info">Route</td>
- <td class = "text_info"></td>
- <td class = "number">1</td>
- <td class = "text_info">\FreqDiv_1:count_0\</td>
- <td class = "text_info">\FreqDiv_1:count_0\/q</td>
- <td class = "text_info">Net_676/main_1</td>
- <td class = "number">2.246</td>
-</tr>
-<tr> 
- <td class = "text_info">macrocell19</td>
- <td class = "text_info">U(0,0)</td>
- <td class = "number">1</td>
- <td class = "text_info">Net_676</td>
- <td class = "text_info"> </td>
- <td class = "text_info">HOLD</td>
- <td class = "number">0.000</td>
-</tr>
-<tr> 
- <td class = "text_info">Clock</td>
- <td class = "text_info"> </td>
- <td class = "text_info"></td>
- <td class = "text_info"></td>
- <td class = "text_info"></td>
- <td class = "text_info">Skew</td>
- <td class = "number">-2.271</td>
 </tr>
 </tbody>
  </table> 
@@ -5906,19 +5414,13 @@ Destination Clock : Pin_Input(0)_PAD : Positive edge</span>
 <div>
 <a href="#" style="text-decoration: none; color: inherit;">
 <span class="sec_head"><span style="font-family: monospace;">+</span>
-Asynchronous Clock Crossing Section</span>
+Input To Clock Section</span>
 </a>
 </div><div class="sta_secbody"><div class="sta_sec" >
 <div>
 <a href="#" style="text-decoration: none; color: inherit;">
 <span class="sec_head"><span style="font-family: monospace;">+</span>
-Source Clock Pin_Input(0)_PAD</span>
-</a>
-</div><div class="sta_secbody"><div class="sta_sec" >
-<div>
-<a href="#" style="text-decoration: none; color: inherit;">
-<span class="sec_head"><span style="font-family: monospace;">+</span>
-Destination Clock FanController_TACH_CLK_500K</span>
+FanController_TACH_CLK_500K</span>
 </a>
 </div><div class="sta_secbody"><table class="sta_tscs">
  <thead> 
@@ -5930,11 +5432,11 @@ Destination Clock FanController_TACH_CLK_500K</span>
 </thead> 
 <tbody>
 <tr> 
- <td class = "text_info">Net_676/q</td>
- <td class = "text_info">\FanController:FanTach:tach\/main_2</td>
- <td class = "number">21.408</td>
+ <td class = "text_info">Pin_Input_RIGHT(0)_PAD</td>
+ <td class = "text_info">\FanController:FanTach:tach\/main_3</td>
+ <td class = "number">19.406</td>
 </tr>
-<tr class="sta_path tv1">
+<tr class="sta_path">
 <td class="sta_path"  colspan="3">
 <table class="sta_path">
  <thead> 
@@ -5950,29 +5452,38 @@ Destination Clock FanController_TACH_CLK_500K</span>
 </thead> 
 <tbody>
 <tr> 
- <td class = "text_info">macrocell19</td>
- <td class = "text_info">U(0,0)</td>
+ <td class = "text_info">Route</td>
+ <td class = "text_info"></td>
  <td class = "number">1</td>
- <td class = "text_info">Net_676</td>
- <td class = "text_info">Net_676/clock_0</td>
- <td class = "text_info">Net_676/q</td>
- <td class = "number">1.250</td>
+ <td class = "text_info">Pin_Input_RIGHT(0)_PAD</td>
+ <td class = "text_info">Pin_Input_RIGHT(0)_PAD</td>
+ <td class = "text_info">Pin_Input_RIGHT(0)/pad_in</td>
+ <td class = "number">0.000</td>
+</tr>
+<tr> 
+ <td class = "text_info">iocell6</td>
+ <td class = "text_info">P0[2]</td>
+ <td class = "number">1</td>
+ <td class = "text_info">Pin_Input_RIGHT(0)</td>
+ <td class = "text_info">Pin_Input_RIGHT(0)/pad_in</td>
+ <td class = "text_info">Pin_Input_RIGHT(0)/fb</td>
+ <td class = "number">10.356</td>
 </tr>
 <tr> 
  <td class = "text_info">Route</td>
- <td class = "text_info"> </td>
+ <td class = "text_info"></td>
  <td class = "number">1</td>
  <td class = "text_info">Net_676</td>
- <td class = "text_info">Net_676/q</td>
- <td class = "text_info">\FanController:FanTach:tach\/main_2</td>
- <td class = "number">2.235</td>
+ <td class = "text_info">Pin_Input_RIGHT(0)/fb</td>
+ <td class = "text_info">\FanController:FanTach:tach\/main_3</td>
+ <td class = "number">5.540</td>
 </tr>
 <tr> 
  <td class = "text_info">macrocell6</td>
- <td class = "text_info">U(0,0)</td>
+ <td class = "text_info">U(1,1)</td>
  <td class = "number">1</td>
  <td class = "text_info">\FanController:FanTach:tach\</td>
- <td class = "text_info"></td>
+ <td class = "text_info"> </td>
  <td class = "text_info">SETUP</td>
  <td class = "number">3.510</td>
 </tr>
@@ -5982,8 +5493,215 @@ Destination Clock FanController_TACH_CLK_500K</span>
  <td class = "text_info"></td>
  <td class = "text_info"></td>
  <td class = "text_info"></td>
- <td class = "text_info">Skew</td>
- <td class = "number">14.413</td>
+ <td class = "text_info">Clock path delay</td>
+ <td class = "number">0.000</td>
+</tr>
+</tbody>
+ </table> 
+</td>
+</tr>
+<tr> 
+ <td class = "text_info">Pin_Input_UP(0)_PAD</td>
+ <td class = "text_info">\FanController:FanTach:tach\/main_4</td>
+ <td class = "number">19.391</td>
+</tr>
+<tr class="sta_path">
+<td class="sta_path"  colspan="3">
+<table class="sta_path">
+ <thead> 
+<tr> 
+<th>Type</th>
+<th>Location</th>
+<th>Fanout</th>
+<th>Instance/Net</th>
+<th>Source</th>
+<th>Dest</th>
+<th>Delay (ns)</th>
+</tr>
+</thead> 
+<tbody>
+<tr> 
+ <td class = "text_info">Route</td>
+ <td class = "text_info"></td>
+ <td class = "number">1</td>
+ <td class = "text_info">Pin_Input_UP(0)_PAD</td>
+ <td class = "text_info">Pin_Input_UP(0)_PAD</td>
+ <td class = "text_info">Pin_Input_UP(0)/pad_in</td>
+ <td class = "number">0.000</td>
+</tr>
+<tr> 
+ <td class = "text_info">iocell10</td>
+ <td class = "text_info">P0[4]</td>
+ <td class = "number">1</td>
+ <td class = "text_info">Pin_Input_UP(0)</td>
+ <td class = "text_info">Pin_Input_UP(0)/pad_in</td>
+ <td class = "text_info">Pin_Input_UP(0)/fb</td>
+ <td class = "number">10.427</td>
+</tr>
+<tr> 
+ <td class = "text_info">Route</td>
+ <td class = "text_info"></td>
+ <td class = "number">1</td>
+ <td class = "text_info">Net_779</td>
+ <td class = "text_info">Pin_Input_UP(0)/fb</td>
+ <td class = "text_info">\FanController:FanTach:tach\/main_4</td>
+ <td class = "number">5.454</td>
+</tr>
+<tr> 
+ <td class = "text_info">macrocell6</td>
+ <td class = "text_info">U(1,1)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\FanController:FanTach:tach\</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info">SETUP</td>
+ <td class = "number">3.510</td>
+</tr>
+<tr> 
+ <td class = "text_info">Clock</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info">Clock path delay</td>
+ <td class = "number">0.000</td>
+</tr>
+</tbody>
+ </table> 
+</td>
+</tr>
+<tr> 
+ <td class = "text_info">Pin_Input_DOWN(0)_PAD</td>
+ <td class = "text_info">\FanController:FanTach:tach\/main_5</td>
+ <td class = "number">18.680</td>
+</tr>
+<tr class="sta_path">
+<td class="sta_path"  colspan="3">
+<table class="sta_path">
+ <thead> 
+<tr> 
+<th>Type</th>
+<th>Location</th>
+<th>Fanout</th>
+<th>Instance/Net</th>
+<th>Source</th>
+<th>Dest</th>
+<th>Delay (ns)</th>
+</tr>
+</thead> 
+<tbody>
+<tr> 
+ <td class = "text_info">Route</td>
+ <td class = "text_info"></td>
+ <td class = "number">1</td>
+ <td class = "text_info">Pin_Input_DOWN(0)_PAD</td>
+ <td class = "text_info">Pin_Input_DOWN(0)_PAD</td>
+ <td class = "text_info">Pin_Input_DOWN(0)/pad_in</td>
+ <td class = "number">0.000</td>
+</tr>
+<tr> 
+ <td class = "text_info">iocell8</td>
+ <td class = "text_info">P0[5]</td>
+ <td class = "number">1</td>
+ <td class = "text_info">Pin_Input_DOWN(0)</td>
+ <td class = "text_info">Pin_Input_DOWN(0)/pad_in</td>
+ <td class = "text_info">Pin_Input_DOWN(0)/fb</td>
+ <td class = "number">10.483</td>
+</tr>
+<tr> 
+ <td class = "text_info">Route</td>
+ <td class = "text_info"></td>
+ <td class = "number">1</td>
+ <td class = "text_info">Net_809</td>
+ <td class = "text_info">Pin_Input_DOWN(0)/fb</td>
+ <td class = "text_info">\FanController:FanTach:tach\/main_5</td>
+ <td class = "number">4.687</td>
+</tr>
+<tr> 
+ <td class = "text_info">macrocell6</td>
+ <td class = "text_info">U(1,1)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\FanController:FanTach:tach\</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info">SETUP</td>
+ <td class = "number">3.510</td>
+</tr>
+<tr> 
+ <td class = "text_info">Clock</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info">Clock path delay</td>
+ <td class = "number">0.000</td>
+</tr>
+</tbody>
+ </table> 
+</td>
+</tr>
+<tr> 
+ <td class = "text_info">Pin_Input_LEFT(0)_PAD</td>
+ <td class = "text_info">\FanController:FanTach:tach\/main_0</td>
+ <td class = "number">17.673</td>
+</tr>
+<tr class="sta_path">
+<td class="sta_path"  colspan="3">
+<table class="sta_path">
+ <thead> 
+<tr> 
+<th>Type</th>
+<th>Location</th>
+<th>Fanout</th>
+<th>Instance/Net</th>
+<th>Source</th>
+<th>Dest</th>
+<th>Delay (ns)</th>
+</tr>
+</thead> 
+<tbody>
+<tr> 
+ <td class = "text_info">Route</td>
+ <td class = "text_info"></td>
+ <td class = "number">1</td>
+ <td class = "text_info">Pin_Input_LEFT(0)_PAD</td>
+ <td class = "text_info">Pin_Input_LEFT(0)_PAD</td>
+ <td class = "text_info">Pin_Input_LEFT(0)/pad_in</td>
+ <td class = "number">0.000</td>
+</tr>
+<tr> 
+ <td class = "text_info">iocell2</td>
+ <td class = "text_info">P0[0]</td>
+ <td class = "number">1</td>
+ <td class = "text_info">Pin_Input_LEFT(0)</td>
+ <td class = "text_info">Pin_Input_LEFT(0)/pad_in</td>
+ <td class = "text_info">Pin_Input_LEFT(0)/fb</td>
+ <td class = "number">9.445</td>
+</tr>
+<tr> 
+ <td class = "text_info">Route</td>
+ <td class = "text_info"></td>
+ <td class = "number">1</td>
+ <td class = "text_info">Net_729</td>
+ <td class = "text_info">Pin_Input_LEFT(0)/fb</td>
+ <td class = "text_info">\FanController:FanTach:tach\/main_0</td>
+ <td class = "number">4.718</td>
+</tr>
+<tr> 
+ <td class = "text_info">macrocell6</td>
+ <td class = "text_info">U(1,1)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\FanController:FanTach:tach\</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info">SETUP</td>
+ <td class = "number">3.510</td>
+</tr>
+<tr> 
+ <td class = "text_info">Clock</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info">Clock path delay</td>
+ <td class = "number">0.000</td>
 </tr>
 </tbody>
  </table> 
@@ -5991,8 +5709,6 @@ Destination Clock FanController_TACH_CLK_500K</span>
 </tr>
 </tbody>
  </table> 
-</div>
-</div>
 </div>
 </div>
 </div>
@@ -6019,9 +5735,216 @@ FanController_PWM_CLOCK_25k_10b_1(FFB)</span>
 </thead> 
 <tbody>
 <tr> 
+ <td class = "text_info">\FanController:FW_PWM2:cy_m0s8_tcpwm_1\/line</td>
+ <td class = "text_info">Pin_Output_RIGHT(0)_PAD</td>
+ <td class = "number">21.011</td>
+</tr>
+<tr class="sta_path">
+<td class="sta_path"  colspan="3">
+<table class="sta_path">
+ <thead> 
+<tr> 
+<th>Type</th>
+<th>Location</th>
+<th>Fanout</th>
+<th>Instance/Net</th>
+<th>Source</th>
+<th>Dest</th>
+<th>Delay (ns)</th>
+</tr>
+</thead> 
+<tbody>
+<tr> 
+ <td class = "text_info">m0s8tcpwmcell</td>
+ <td class = "text_info">F(TCPWM,2)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\FanController:FW_PWM2:cy_m0s8_tcpwm_1\</td>
+ <td class = "text_info">\FanController:FW_PWM2:cy_m0s8_tcpwm_1\/clock</td>
+ <td class = "text_info">\FanController:FW_PWM2:cy_m0s8_tcpwm_1\/line</td>
+ <td class = "number">0.000</td>
+</tr>
+<tr> 
+ <td class = "text_info">Route</td>
+ <td class = "text_info"></td>
+ <td class = "number">1</td>
+ <td class = "text_info">Net_740</td>
+ <td class = "text_info">\FanController:FW_PWM2:cy_m0s8_tcpwm_1\/line</td>
+ <td class = "text_info">Pin_Output_RIGHT(0)/pin_input</td>
+ <td class = "number">6.624</td>
+</tr>
+<tr> 
+ <td class = "text_info">iocell7</td>
+ <td class = "text_info">P1[3]</td>
+ <td class = "number">1</td>
+ <td class = "text_info">Pin_Output_RIGHT(0)</td>
+ <td class = "text_info">Pin_Output_RIGHT(0)/pin_input</td>
+ <td class = "text_info">Pin_Output_RIGHT(0)/pad_out</td>
+ <td class = "number">14.387</td>
+</tr>
+<tr> 
+ <td class = "text_info">Route</td>
+ <td class = "text_info"></td>
+ <td class = "number">1</td>
+ <td class = "text_info">Pin_Output_RIGHT(0)_PAD</td>
+ <td class = "text_info">Pin_Output_RIGHT(0)/pad_out</td>
+ <td class = "text_info">Pin_Output_RIGHT(0)_PAD</td>
+ <td class = "number">0.000</td>
+</tr>
+<tr> 
+ <td class = "text_info">Clock</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info">Clock path delay</td>
+ <td class = "number">0.000</td>
+</tr>
+</tbody>
+ </table> 
+</td>
+</tr>
+<tr> 
+ <td class = "text_info">\FanController:FW_PWM4:cy_m0s8_tcpwm_1\/line</td>
+ <td class = "text_info">Pin_Output_DOWN(0)_PAD</td>
+ <td class = "number">20.731</td>
+</tr>
+<tr class="sta_path">
+<td class="sta_path"  colspan="3">
+<table class="sta_path">
+ <thead> 
+<tr> 
+<th>Type</th>
+<th>Location</th>
+<th>Fanout</th>
+<th>Instance/Net</th>
+<th>Source</th>
+<th>Dest</th>
+<th>Delay (ns)</th>
+</tr>
+</thead> 
+<tbody>
+<tr> 
+ <td class = "text_info">m0s8tcpwmcell</td>
+ <td class = "text_info">F(TCPWM,3)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\FanController:FW_PWM4:cy_m0s8_tcpwm_1\</td>
+ <td class = "text_info">\FanController:FW_PWM4:cy_m0s8_tcpwm_1\/clock</td>
+ <td class = "text_info">\FanController:FW_PWM4:cy_m0s8_tcpwm_1\/line</td>
+ <td class = "number">0.000</td>
+</tr>
+<tr> 
+ <td class = "text_info">Route</td>
+ <td class = "text_info"></td>
+ <td class = "number">1</td>
+ <td class = "text_info">Net_759</td>
+ <td class = "text_info">\FanController:FW_PWM4:cy_m0s8_tcpwm_1\/line</td>
+ <td class = "text_info">Pin_Output_DOWN(0)/pin_input</td>
+ <td class = "number">6.436</td>
+</tr>
+<tr> 
+ <td class = "text_info">iocell5</td>
+ <td class = "text_info">P1[7]</td>
+ <td class = "number">1</td>
+ <td class = "text_info">Pin_Output_DOWN(0)</td>
+ <td class = "text_info">Pin_Output_DOWN(0)/pin_input</td>
+ <td class = "text_info">Pin_Output_DOWN(0)/pad_out</td>
+ <td class = "number">14.295</td>
+</tr>
+<tr> 
+ <td class = "text_info">Route</td>
+ <td class = "text_info"></td>
+ <td class = "number">1</td>
+ <td class = "text_info">Pin_Output_DOWN(0)_PAD</td>
+ <td class = "text_info">Pin_Output_DOWN(0)/pad_out</td>
+ <td class = "text_info">Pin_Output_DOWN(0)_PAD</td>
+ <td class = "number">0.000</td>
+</tr>
+<tr> 
+ <td class = "text_info">Clock</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info">Clock path delay</td>
+ <td class = "number">0.000</td>
+</tr>
+</tbody>
+ </table> 
+</td>
+</tr>
+<tr> 
  <td class = "text_info">\FanController:FW_PWM1:cy_m0s8_tcpwm_1\/line</td>
- <td class = "text_info">Pin_A(0)_PAD</td>
- <td class = "number">19.645</td>
+ <td class = "text_info">Pin_Output_LEFT(0)_PAD</td>
+ <td class = "number">20.261</td>
+</tr>
+<tr class="sta_path">
+<td class="sta_path"  colspan="3">
+<table class="sta_path">
+ <thead> 
+<tr> 
+<th>Type</th>
+<th>Location</th>
+<th>Fanout</th>
+<th>Instance/Net</th>
+<th>Source</th>
+<th>Dest</th>
+<th>Delay (ns)</th>
+</tr>
+</thead> 
+<tbody>
+<tr> 
+ <td class = "text_info">m0s8tcpwmcell</td>
+ <td class = "text_info">F(TCPWM,0)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\FanController:FW_PWM1:cy_m0s8_tcpwm_1\</td>
+ <td class = "text_info">\FanController:FW_PWM1:cy_m0s8_tcpwm_1\/clock</td>
+ <td class = "text_info">\FanController:FW_PWM1:cy_m0s8_tcpwm_1\/line</td>
+ <td class = "number">0.000</td>
+</tr>
+<tr> 
+ <td class = "text_info">Route</td>
+ <td class = "text_info"></td>
+ <td class = "number">1</td>
+ <td class = "text_info">Net_656</td>
+ <td class = "text_info">\FanController:FW_PWM1:cy_m0s8_tcpwm_1\/line</td>
+ <td class = "text_info">Pin_Output_LEFT(0)/pin_input</td>
+ <td class = "number">6.485</td>
+</tr>
+<tr> 
+ <td class = "text_info">iocell1</td>
+ <td class = "text_info">P1[1]</td>
+ <td class = "number">1</td>
+ <td class = "text_info">Pin_Output_LEFT(0)</td>
+ <td class = "text_info">Pin_Output_LEFT(0)/pin_input</td>
+ <td class = "text_info">Pin_Output_LEFT(0)/pad_out</td>
+ <td class = "number">13.776</td>
+</tr>
+<tr> 
+ <td class = "text_info">Route</td>
+ <td class = "text_info"></td>
+ <td class = "number">1</td>
+ <td class = "text_info">Pin_Output_LEFT(0)_PAD</td>
+ <td class = "text_info">Pin_Output_LEFT(0)/pad_out</td>
+ <td class = "text_info">Pin_Output_LEFT(0)_PAD</td>
+ <td class = "number">0.000</td>
+</tr>
+<tr> 
+ <td class = "text_info">Clock</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info">Clock path delay</td>
+ <td class = "number">0.000</td>
+</tr>
+</tbody>
+ </table> 
+</td>
+</tr>
+<tr> 
+ <td class = "text_info">\FanController:FW_PWM3:cy_m0s8_tcpwm_1\/line</td>
+ <td class = "text_info">Pin_Output_UP(0)_PAD</td>
+ <td class = "number">15.193</td>
 </tr>
 <tr class="sta_path">
 <td class="sta_path"  colspan="3">
@@ -6042,36 +5965,36 @@ FanController_PWM_CLOCK_25k_10b_1(FFB)</span>
  <td class = "text_info">m0s8tcpwmcell</td>
  <td class = "text_info">F(TCPWM,1)</td>
  <td class = "number">1</td>
- <td class = "text_info">\FanController:FW_PWM1:cy_m0s8_tcpwm_1\</td>
- <td class = "text_info">\FanController:FW_PWM1:cy_m0s8_tcpwm_1\/clock</td>
- <td class = "text_info">\FanController:FW_PWM1:cy_m0s8_tcpwm_1\/line</td>
+ <td class = "text_info">\FanController:FW_PWM3:cy_m0s8_tcpwm_1\</td>
+ <td class = "text_info">\FanController:FW_PWM3:cy_m0s8_tcpwm_1\/clock</td>
+ <td class = "text_info">\FanController:FW_PWM3:cy_m0s8_tcpwm_1\/line</td>
  <td class = "number">0.000</td>
 </tr>
 <tr> 
  <td class = "text_info">Route</td>
  <td class = "text_info"></td>
  <td class = "number">1</td>
- <td class = "text_info">Net_656</td>
- <td class = "text_info">\FanController:FW_PWM1:cy_m0s8_tcpwm_1\/line</td>
- <td class = "text_info">Pin_A(0)/pin_input</td>
- <td class = "number">5.830</td>
+ <td class = "text_info">Net_757</td>
+ <td class = "text_info">\FanController:FW_PWM3:cy_m0s8_tcpwm_1\/line</td>
+ <td class = "text_info">Pin_Output_UP(0)/pin_input</td>
+ <td class = "number">1.000</td>
 </tr>
 <tr> 
- <td class = "text_info">iocell1</td>
- <td class = "text_info">P0[1]</td>
+ <td class = "text_info">iocell9</td>
+ <td class = "text_info">P1[2]</td>
  <td class = "number">1</td>
- <td class = "text_info">Pin_A(0)</td>
- <td class = "text_info">Pin_A(0)/pin_input</td>
- <td class = "text_info">Pin_A(0)/pad_out</td>
- <td class = "number">13.815</td>
+ <td class = "text_info">Pin_Output_UP(0)</td>
+ <td class = "text_info">Pin_Output_UP(0)/pin_input</td>
+ <td class = "text_info">Pin_Output_UP(0)/pad_out</td>
+ <td class = "number">14.193</td>
 </tr>
 <tr> 
  <td class = "text_info">Route</td>
  <td class = "text_info"></td>
  <td class = "number">1</td>
- <td class = "text_info">Pin_A(0)_PAD</td>
- <td class = "text_info">Pin_A(0)/pad_out</td>
- <td class = "text_info">Pin_A(0)_PAD</td>
+ <td class = "text_info">Pin_Output_UP(0)_PAD</td>
+ <td class = "text_info">Pin_Output_UP(0)/pad_out</td>
+ <td class = "text_info">Pin_Output_UP(0)_PAD</td>
  <td class = "number">0.000</td>
 </tr>
 <tr> 

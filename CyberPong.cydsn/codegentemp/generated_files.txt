@@ -13,18 +13,14 @@
   <file name="C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn\codegentemp\cyfitteriar.inc" value="HEADER;;;;;" />
   <file name="C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn\codegentemp\cyfitter.h" value="HEADER;;;;;" />
   <file name="C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn\codegentemp\cydisabledsheets.h" value="HEADER;;;;;" />
-  <file name="C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn\codegentemp\Pin_A.c" value="SOURCE_C;CortexM0;;;;Pin_A" />
-  <file name="C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn\codegentemp\Pin_A.h" value="HEADER;;;;;Pin_A" />
-  <file name="C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn\codegentemp\Pin_A_aliases.h" value="HEADER;;;;;Pin_A" />
-  <file name="C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn\codegentemp\Pin_A_PM.c" value="SOURCE_C;CortexM0;;;;Pin_A" />
-  <file name="C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn\codegentemp\Pin_B.c" value="SOURCE_C;CortexM0;;;;Pin_B" />
-  <file name="C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn\codegentemp\Pin_B.h" value="HEADER;;;;;Pin_B" />
-  <file name="C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn\codegentemp\Pin_B_aliases.h" value="HEADER;;;;;Pin_B" />
-  <file name="C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn\codegentemp\Pin_B_PM.c" value="SOURCE_C;CortexM0;;;;Pin_B" />
-  <file name="C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn\codegentemp\Pin_Input.c" value="SOURCE_C;CortexM0;;;;Pin_Input" />
-  <file name="C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn\codegentemp\Pin_Input.h" value="HEADER;;;;;Pin_Input" />
-  <file name="C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn\codegentemp\Pin_Input_aliases.h" value="HEADER;;;;;Pin_Input" />
-  <file name="C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn\codegentemp\Pin_Input_PM.c" value="SOURCE_C;CortexM0;;;;Pin_Input" />
+  <file name="C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn\codegentemp\Pin_Output_LEFT.c" value="SOURCE_C;CortexM0;;;;Pin_Output_LEFT" />
+  <file name="C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn\codegentemp\Pin_Output_LEFT.h" value="HEADER;;;;;Pin_Output_LEFT" />
+  <file name="C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn\codegentemp\Pin_Output_LEFT_aliases.h" value="HEADER;;;;;Pin_Output_LEFT" />
+  <file name="C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn\codegentemp\Pin_Output_LEFT_PM.c" value="SOURCE_C;CortexM0;;;;Pin_Output_LEFT" />
+  <file name="C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn\codegentemp\Pin_Input_LEFT.c" value="SOURCE_C;CortexM0;;;;Pin_Input_LEFT" />
+  <file name="C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn\codegentemp\Pin_Input_LEFT.h" value="HEADER;;;;;Pin_Input_LEFT" />
+  <file name="C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn\codegentemp\Pin_Input_LEFT_aliases.h" value="HEADER;;;;;Pin_Input_LEFT" />
+  <file name="C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn\codegentemp\Pin_Input_LEFT_PM.c" value="SOURCE_C;CortexM0;;;;Pin_Input_LEFT" />
   <file name="C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn\codegentemp\UART.c" value="SOURCE_C;CortexM0;;;;UART" />
   <file name="C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn\codegentemp\UART.h" value="HEADER;;;;;UART" />
   <file name="C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn\codegentemp\UART_SPI_UART.h" value="HEADER;;;;;UART" />
@@ -38,25 +34,33 @@
   <file name="C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn\codegentemp\UART_SPI_UART_PVT.h" value="HEADER;;;;;UART" />
   <file name="C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn\codegentemp\UART_PVT.h" value="HEADER;;;;;UART" />
   <file name="C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn\codegentemp\UART_BOOT.h" value="HEADER;;;;;UART" />
-  <file name="C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn\codegentemp\isr.c" value="SOURCE_C;CortexM0;;;;isr" />
-  <file name="C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn\codegentemp\isr.h" value="HEADER;;;;;isr" />
   <file name="C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn\codegentemp\FanController.c" value="SOURCE_C;CortexM0;;;;FanController" />
   <file name="C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn\codegentemp\FanController.h" value="HEADER;;;;;FanController" />
   <file name="C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn\codegentemp\FanController_INT.c" value="SOURCE_C;CortexM0;;;;FanController" />
-  <file name="C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn\codegentemp\Timer_ChangeSpeed.c" value="SOURCE_C;CortexM0;;;;Timer_ChangeSpeed" />
-  <file name="C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn\codegentemp\Timer_ChangeSpeed.h" value="HEADER;;;;;Timer_ChangeSpeed" />
-  <file name="C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn\codegentemp\Timer_ChangeSpeed_PM.c" value="SOURCE_C;CortexM0;;;;Timer_ChangeSpeed" />
-  <file name="C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn\codegentemp\ClockTimer.c" value="SOURCE_C;CortexM0;;;;ClockTimer" />
-  <file name="C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn\codegentemp\ClockTimer.h" value="HEADER;;;;;ClockTimer" />
-  <file name="C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn\codegentemp\ISR_Timer.c" value="SOURCE_C;CortexM0;;;;ISR_Timer" />
-  <file name="C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn\codegentemp\ISR_Timer.h" value="HEADER;;;;;ISR_Timer" />
-  <file name="C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn\codegentemp\Timer_OutputSpeed.c" value="SOURCE_C;CortexM0;;;;Timer_OutputSpeed" />
-  <file name="C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn\codegentemp\Timer_OutputSpeed.h" value="HEADER;;;;;Timer_OutputSpeed" />
-  <file name="C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn\codegentemp\Timer_OutputSpeed_PM.c" value="SOURCE_C;CortexM0;;;;Timer_OutputSpeed" />
-  <file name="C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn\codegentemp\Clock_1.c" value="SOURCE_C;CortexM0;;;;Clock_1" />
-  <file name="C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn\codegentemp\Clock_1.h" value="HEADER;;;;;Clock_1" />
-  <file name="C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn\codegentemp\ISR_OutSpeed.c" value="SOURCE_C;CortexM0;;;;ISR_OutSpeed" />
-  <file name="C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn\codegentemp\ISR_OutSpeed.h" value="HEADER;;;;;ISR_OutSpeed" />
+  <file name="C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn\codegentemp\Pin_Output_DOWN.c" value="SOURCE_C;CortexM0;;;;Pin_Output_DOWN" />
+  <file name="C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn\codegentemp\Pin_Output_DOWN.h" value="HEADER;;;;;Pin_Output_DOWN" />
+  <file name="C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn\codegentemp\Pin_Output_DOWN_aliases.h" value="HEADER;;;;;Pin_Output_DOWN" />
+  <file name="C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn\codegentemp\Pin_Output_DOWN_PM.c" value="SOURCE_C;CortexM0;;;;Pin_Output_DOWN" />
+  <file name="C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn\codegentemp\Pin_Input_RIGHT.c" value="SOURCE_C;CortexM0;;;;Pin_Input_RIGHT" />
+  <file name="C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn\codegentemp\Pin_Input_RIGHT.h" value="HEADER;;;;;Pin_Input_RIGHT" />
+  <file name="C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn\codegentemp\Pin_Input_RIGHT_aliases.h" value="HEADER;;;;;Pin_Input_RIGHT" />
+  <file name="C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn\codegentemp\Pin_Input_RIGHT_PM.c" value="SOURCE_C;CortexM0;;;;Pin_Input_RIGHT" />
+  <file name="C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn\codegentemp\Pin_Output_RIGHT.c" value="SOURCE_C;CortexM0;;;;Pin_Output_RIGHT" />
+  <file name="C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn\codegentemp\Pin_Output_RIGHT.h" value="HEADER;;;;;Pin_Output_RIGHT" />
+  <file name="C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn\codegentemp\Pin_Output_RIGHT_aliases.h" value="HEADER;;;;;Pin_Output_RIGHT" />
+  <file name="C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn\codegentemp\Pin_Output_RIGHT_PM.c" value="SOURCE_C;CortexM0;;;;Pin_Output_RIGHT" />
+  <file name="C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn\codegentemp\Pin_Input_DOWN.c" value="SOURCE_C;CortexM0;;;;Pin_Input_DOWN" />
+  <file name="C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn\codegentemp\Pin_Input_DOWN.h" value="HEADER;;;;;Pin_Input_DOWN" />
+  <file name="C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn\codegentemp\Pin_Input_DOWN_aliases.h" value="HEADER;;;;;Pin_Input_DOWN" />
+  <file name="C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn\codegentemp\Pin_Input_DOWN_PM.c" value="SOURCE_C;CortexM0;;;;Pin_Input_DOWN" />
+  <file name="C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn\codegentemp\Pin_Output_UP.c" value="SOURCE_C;CortexM0;;;;Pin_Output_UP" />
+  <file name="C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn\codegentemp\Pin_Output_UP.h" value="HEADER;;;;;Pin_Output_UP" />
+  <file name="C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn\codegentemp\Pin_Output_UP_aliases.h" value="HEADER;;;;;Pin_Output_UP" />
+  <file name="C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn\codegentemp\Pin_Output_UP_PM.c" value="SOURCE_C;CortexM0;;;;Pin_Output_UP" />
+  <file name="C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn\codegentemp\Pin_Input_UP.c" value="SOURCE_C;CortexM0;;;;Pin_Input_UP" />
+  <file name="C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn\codegentemp\Pin_Input_UP.h" value="HEADER;;;;;Pin_Input_UP" />
+  <file name="C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn\codegentemp\Pin_Input_UP_aliases.h" value="HEADER;;;;;Pin_Input_UP" />
+  <file name="C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn\codegentemp\Pin_Input_UP_PM.c" value="SOURCE_C;CortexM0;;;;Pin_Input_UP" />
   <file name="C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn\codegentemp\UART_SCBCLK.c" value="SOURCE_C;CortexM0;;;;UART_SCBCLK" />
   <file name="C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn\codegentemp\UART_SCBCLK.h" value="HEADER;;;;;UART_SCBCLK" />
   <file name="C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn\codegentemp\UART_tx.c" value="SOURCE_C;CortexM0;;;;UART_tx" />
@@ -71,6 +75,15 @@
   <file name="C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn\codegentemp\FanController_DataSend.h" value="HEADER;;;;;FanController_DataSend" />
   <file name="C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn\codegentemp\FanController_PID_ISR.c" value="SOURCE_C;CortexM0;;;;FanController_PID_ISR" />
   <file name="C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn\codegentemp\FanController_PID_ISR.h" value="HEADER;;;;;FanController_PID_ISR" />
+  <file name="C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn\codegentemp\FanController_FW_PWM4.c" value="SOURCE_C;CortexM0;;;;FanController_FW_PWM4" />
+  <file name="C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn\codegentemp\FanController_FW_PWM4.h" value="HEADER;;;;;FanController_FW_PWM4" />
+  <file name="C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn\codegentemp\FanController_FW_PWM4_PM.c" value="SOURCE_C;CortexM0;;;;FanController_FW_PWM4" />
+  <file name="C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn\codegentemp\FanController_FW_PWM2.c" value="SOURCE_C;CortexM0;;;;FanController_FW_PWM2" />
+  <file name="C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn\codegentemp\FanController_FW_PWM2.h" value="HEADER;;;;;FanController_FW_PWM2" />
+  <file name="C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn\codegentemp\FanController_FW_PWM2_PM.c" value="SOURCE_C;CortexM0;;;;FanController_FW_PWM2" />
+  <file name="C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn\codegentemp\FanController_FW_PWM3.c" value="SOURCE_C;CortexM0;;;;FanController_FW_PWM3" />
+  <file name="C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn\codegentemp\FanController_FW_PWM3.h" value="HEADER;;;;;FanController_FW_PWM3" />
+  <file name="C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn\codegentemp\FanController_FW_PWM3_PM.c" value="SOURCE_C;CortexM0;;;;FanController_FW_PWM3" />
   <file name="C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn\codegentemp\FanController_FW_PWM1.c" value="SOURCE_C;CortexM0;;;;FanController_FW_PWM1" />
   <file name="C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn\codegentemp\FanController_FW_PWM1.h" value="HEADER;;;;;FanController_FW_PWM1" />
   <file name="C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn\codegentemp\FanController_FW_PWM1_PM.c" value="SOURCE_C;CortexM0;;;;FanController_FW_PWM1" />

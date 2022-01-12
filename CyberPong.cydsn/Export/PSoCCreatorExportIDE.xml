@@ -55,10 +55,6 @@
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\cyfitteriar.inc</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\cyfitter.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\cydisabledsheets.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Pin_Input.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Pin_Input.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Pin_Input_aliases.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Pin_Input_PM.c</File>
           <File BuildType="BUILD" Toolchain="ARM GCC Generic">Generated_Source\PSoC4\cm0gcc.ld</File>
           <File BuildType="BUILD" Toolchain="ARM MDK Generic">Generated_Source\PSoC4\Cm0RealView.scat</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Cm0Start.c</File>
@@ -92,8 +88,6 @@
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\cycodeshareimport.ld</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\cycodeshareexport.ld</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\cycodeshareimport.scat</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Clock_1.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Clock_1.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\UART.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\UART.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\UART_SPI_UART.h</File>
@@ -117,14 +111,6 @@
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\UART_rx.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\UART_rx_aliases.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\UART_rx_PM.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Pin_A.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Pin_A.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Pin_A_aliases.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Pin_A_PM.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Pin_B.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Pin_B.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Pin_B_aliases.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Pin_B_PM.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\FanController.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\FanController.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\FanController_INT.c</File>
@@ -135,20 +121,47 @@
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\FanController_FW_PWM1.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\FanController_FW_PWM1.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\FanController_FW_PWM1_PM.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\isr.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\isr.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\ClockTimer.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\ClockTimer.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\ISR_Timer.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\ISR_Timer.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Timer_ChangeSpeed.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Timer_ChangeSpeed.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Timer_ChangeSpeed_PM.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Timer_OutputSpeed.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Timer_OutputSpeed.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Timer_OutputSpeed_PM.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\ISR_OutSpeed.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\ISR_OutSpeed.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\FanController_FW_PWM2.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\FanController_FW_PWM2.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\FanController_FW_PWM2_PM.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\FanController_FW_PWM3.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\FanController_FW_PWM3.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\FanController_FW_PWM3_PM.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\FanController_FW_PWM4.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\FanController_FW_PWM4.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\FanController_FW_PWM4_PM.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Pin_Output_LEFT.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Pin_Output_LEFT.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Pin_Output_LEFT_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Pin_Output_LEFT_PM.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Pin_Input_LEFT.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Pin_Input_LEFT.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Pin_Input_LEFT_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Pin_Input_LEFT_PM.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Pin_Output_DOWN.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Pin_Output_DOWN.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Pin_Output_DOWN_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Pin_Output_DOWN_PM.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Pin_Input_RIGHT.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Pin_Input_RIGHT.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Pin_Input_RIGHT_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Pin_Input_RIGHT_PM.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Pin_Output_RIGHT.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Pin_Output_RIGHT.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Pin_Output_RIGHT_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Pin_Output_RIGHT_PM.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Pin_Input_DOWN.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Pin_Input_DOWN.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Pin_Input_DOWN_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Pin_Input_DOWN_PM.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Pin_Output_UP.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Pin_Output_UP.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Pin_Output_UP_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Pin_Output_UP_PM.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Pin_Input_UP.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Pin_Input_UP.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Pin_Input_UP_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Pin_Input_UP_PM.c</File>
         </Files>
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\codegentemp">

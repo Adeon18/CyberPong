@@ -30,7 +30,7 @@
 ***************************************/
 
 #define FanController_FAN_CTL_MODE               (0u)
-#define FanController_NUMBER_OF_FANS             (1u)
+#define FanController_NUMBER_OF_FANS             (4u)
 #define FanController_NUMBER_OF_BANKS            (0u)
 #define FanController_PWMRES                     (1u)
 
@@ -42,7 +42,7 @@
 #define FanController_FANCTLMODE_FIRMWARE        (0u)
 #define FanController_FANCTLMODE_HARDWARE        (1u)
 
-#define FanController_NUMBER_OF_FAN_OUTPUTS      (1u)
+#define FanController_NUMBER_OF_FAN_OUTPUTS      (4u)
 
 /* Resolution constants */
 #define FanController_PWMRES_EIGHTBIT            (0u)
@@ -342,7 +342,7 @@ extern FanController_fanPropertiesStruct FanController_fanProperties[FanControll
 #define FanController_DAMPING_FACTOR              (1u)
 #define FanController_INIT_ALERT_ENABLE           (0u)
 #define FanController_NOISE_REDUCTION_MODE        (0u)
-#define FanController_INIT_ALERT_MASK             ((uint16) (((uint32) 0x01u << 1u) - 1u))
+#define FanController_INIT_ALERT_MASK             ((uint16) (((uint32) 0x01u << 4u) - 1u))
 #define FanController_DAMPING_FACTOR_PERIOD_LOW   (250u)
 #define FanController_DAMPING_FACTOR_PERIOD_HIGH  (FanController_DAMPING_FACTOR)
 

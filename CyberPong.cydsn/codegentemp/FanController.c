@@ -2474,22 +2474,22 @@ FanController_fanControlStruct FanController_fanControl
         /* Initialize the Desired Period Field (RPM B scaled up by tolerance factor %) */
         #if(FanController_NUMBER_OF_FANS >= 1u)
             (uint16) (FanController_RPM_PERIOD_CONV_FACTOR /
-            (4800u + ((FanController_TOLERANCE * 4800u)/ FanController_TOLERANCE_DIVIDER))),
+            (9600u + ((FanController_TOLERANCE * 9600u)/ FanController_TOLERANCE_DIVIDER))),
         #endif /* FanController_NUMBER_OF_FANS >= 1u */
 
         #if(FanController_NUMBER_OF_FANS >= 2u)
             (uint16) (FanController_RPM_PERIOD_CONV_FACTOR /
-            (10000u + ((FanController_TOLERANCE * 10000u)/ FanController_TOLERANCE_DIVIDER))),
+            (9600u + ((FanController_TOLERANCE * 9600u)/ FanController_TOLERANCE_DIVIDER))),
         #endif /* FanController_NUMBER_OF_FANS >= 2u */
 
         #if(FanController_NUMBER_OF_FANS >= 3u)
             (uint16) (FanController_RPM_PERIOD_CONV_FACTOR /
-            (10000u + ((FanController_TOLERANCE * 10000u)/ FanController_TOLERANCE_DIVIDER))),
+            (9600u + ((FanController_TOLERANCE * 9600u)/ FanController_TOLERANCE_DIVIDER))),
         #endif /* FanController_NUMBER_OF_FANS >= 3u */
 
         #if(FanController_NUMBER_OF_FANS >= 4u)
             (uint16) (FanController_RPM_PERIOD_CONV_FACTOR /
-            (10000u + ((FanController_TOLERANCE * 10000u)/ FanController_TOLERANCE_DIVIDER))),
+            (9600u + ((FanController_TOLERANCE * 9600u)/ FanController_TOLERANCE_DIVIDER))),
         #endif /* FanController_NUMBER_OF_FANS >= 4 */
 
         #if(FanController_NUMBER_OF_FANS >= 5)
@@ -2556,22 +2556,22 @@ FanController_fanControlStruct FanController_fanControl
         /* Initialize the Tolerance Field (% of RPM B) */
         #if(FanController_NUMBER_OF_FANS >= 1u)
             (uint16) (((FanController_RPM_PERIOD_CONV_FACTOR * FanController_TOLERANCE) /
-              FanController_TOLERANCE_DIVIDER) / (4800u)),
+              FanController_TOLERANCE_DIVIDER) / (9600u)),
         #endif /* FanController_NUMBER_OF_FANS >= 1u */
 
         #if(FanController_NUMBER_OF_FANS >= 2u)
             (uint16) (((FanController_RPM_PERIOD_CONV_FACTOR * FanController_TOLERANCE) /
-              FanController_TOLERANCE_DIVIDER) / (10000u)),
+              FanController_TOLERANCE_DIVIDER) / (9600u)),
         #endif /* FanController_NUMBER_OF_FANS >= 2u */
 
         #if(FanController_NUMBER_OF_FANS >= 3u)
             (uint16) (((FanController_RPM_PERIOD_CONV_FACTOR * FanController_TOLERANCE) /
-              FanController_TOLERANCE_DIVIDER) / (10000u)),
+              FanController_TOLERANCE_DIVIDER) / (9600u)),
         #endif /* FanController_NUMBER_OF_FANS >= 3u */
 
         #if(FanController_NUMBER_OF_FANS >= 4u)
             (uint16) (((FanController_RPM_PERIOD_CONV_FACTOR * FanController_TOLERANCE) /
-              FanController_TOLERANCE_DIVIDER) / (10000u)),
+              FanController_TOLERANCE_DIVIDER) / (9600u)),
         #endif /* FanController_NUMBER_OF_FANS >= 4u */
 
         #if(FanController_NUMBER_OF_FANS >= 5u)
@@ -2646,49 +2646,49 @@ FanController_fanPropertiesStruct FanController_fanProperties[FanController_NUMB
 {
     #if(FanController_NUMBER_OF_FANS >= 1u)
         {
-            2200u,
-            4800u,
+            4400u,
+            9600u,
             (55u * 100u),
             (100u * 100u),
-            (((100u - 55u) * 100u) / ((4800u - 2200u) / 100u)),
-            4000u,
+            (((100u - 55u) * 100u) / ((9600u - 4400u) / 100u)),
+            8000u,
             (86u * 100u)
         },
     #endif /* FanController_NUMBER_OF_FANS >= 1u */
 
     #if(FanController_NUMBER_OF_FANS >= 2u)
         {
-            1000u,
-            10000u,
-            (25u * 100u),
+            4400u,
+            9600u,
+            (55u * 100u),
             (100u * 100u),
-            (((100u - 25u) * 100u) / ((10000u - 1000u) / 100u)),
-            5000u,
-            (58u * 100u)
+            (((100u - 55u) * 100u) / ((9600u - 4400u) / 100u)),
+            7500u,
+            (82u * 100u)
         },
     #endif /* FanController_NUMBER_OF_FANS >= 2 */
 
     #if(FanController_NUMBER_OF_FANS >= 3u)
         {
-            1000u,
-            10000u,
-            (25u * 100u),
+            4400u,
+            9600u,
+            (55u * 100u),
             (100u * 100u),
-            (((100u - 25u) * 100u) / ((10000u - 1000u) / 100u)),
-            5000u,
-            (58u * 100u)
+            (((100u - 55u) * 100u) / ((9600u - 4400u) / 100u)),
+            8000u,
+            (86u * 100u)
         },
     #endif /* FanController_NUMBER_OF_FANS >= 3u */
 
     #if(FanController_NUMBER_OF_FANS >= 4u)
         {
-            1000u,
-            10000u,
-            (25u * 100u),
+            4400u,
+            9600u,
+            (55u * 100u),
             (100u * 100u),
-            (((100u - 25u) * 100u) / ((10000u - 1000u) / 100u)),
-            5000u,
-            (58u * 100u)
+            (((100u - 55u) * 100u) / ((9600u - 4400u) / 100u)),
+            8000u,
+            (86u * 100u)
         },
     #endif /* FanController_NUMBER_OF_FANS >= 4u */
 
