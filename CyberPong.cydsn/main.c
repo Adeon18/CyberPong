@@ -19,7 +19,7 @@ uint16_t current_desired_speed;
 
 
 void print_all_speed() {
-    
+    // Print all the speeds through UART in a line.
     for (int i = 1; i < MOTOR_COUNT + 1; i++) {
         current_rpm = FanController_GetActualSpeed(i);
         sprintf(uart_rpm_buff, "%u", current_rpm / 2);
@@ -40,6 +40,8 @@ void write_motor_speed() {
     for (int i = 0; i < MOTOR_COUNT; i++) {
         if (motor_speeds[i] > 2 * MIN_RPM && motor_speeds[i] < 2 * MAX_RPM) {
             FanController_SetDesiredSpeed(i+1, motor_speeds[i]);
+        } else if (motor_speeds[i] == 0) {
+            FanController_SetDesiredSpeed(i+1, 0);
         } else {
             continue;
         }

@@ -2,7 +2,7 @@
 --	Conversion of CyberPong.v to vh2:
 --
 --	Cypress Semiconductor - WARP Version 6.3 IR 41
---	Wed Jan 12 18:47:58 2022
+--	Thu Jan 13 20:42:55 2022
 --
 
 USE cypress.cypress.all;

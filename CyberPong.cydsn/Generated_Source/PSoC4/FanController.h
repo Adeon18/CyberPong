@@ -73,7 +73,7 @@
 
     #define FanController_PID_POST_GAIN      (16u)
 
-    #define FanController_PID_OUTPUT_SAT_L   (25165824u)
+    #define FanController_PID_OUTPUT_SAT_L   (0u)
     #define FanController_PID_OUTPUT_SAT_H   (62914560u)
 
     /* PID error low and high saturation. These are constants defined

@@ -1,0 +1,1702 @@
+ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\ccvgW31W.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.syntax unified
+  15              		.file	"FanController_INT.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.section	.text.FanController_PID_CONTROL_ISR,"ax",%progbits
+  20              		.align	2
+  21              		.global	FanController_PID_CONTROL_ISR
+  22              		.thumb
+  23              		.thumb_func
+  24              		.type	FanController_PID_CONTROL_ISR, %function
+  25              	FanController_PID_CONTROL_ISR:
+  26              	.LFB0:
+  27              		.file 1 "Generated_Source\\PSoC5\\FanController_INT.c"
+   1:Generated_Source\PSoC5/FanController_INT.c **** /*******************************************************************************
+   2:Generated_Source\PSoC5/FanController_INT.c **** * File Name: FanController_INT.c
+   3:Generated_Source\PSoC5/FanController_INT.c **** * Version 4.10
+   4:Generated_Source\PSoC5/FanController_INT.c **** *
+   5:Generated_Source\PSoC5/FanController_INT.c **** * Description:
+   6:Generated_Source\PSoC5/FanController_INT.c **** *  This file contains the Interrupt Service Routines implementation for
+   7:Generated_Source\PSoC5/FanController_INT.c **** *  Fan Controller component.
+   8:Generated_Source\PSoC5/FanController_INT.c **** *
+   9:Generated_Source\PSoC5/FanController_INT.c **** * Note:
+  10:Generated_Source\PSoC5/FanController_INT.c **** *
+  11:Generated_Source\PSoC5/FanController_INT.c **** *******************************************************************************
+  12:Generated_Source\PSoC5/FanController_INT.c **** * Copyright 2008-2017, Cypress Semiconductor Corporation.  All rights reserved.
+  13:Generated_Source\PSoC5/FanController_INT.c **** * You may use this file only in accordance with the license, terms, conditions,
+  14:Generated_Source\PSoC5/FanController_INT.c **** * disclaimers, and limitations in the end user license agreement accompanying
+  15:Generated_Source\PSoC5/FanController_INT.c **** * the software package with which this file was provided.
+  16:Generated_Source\PSoC5/FanController_INT.c **** ********************************************************************************/
+  17:Generated_Source\PSoC5/FanController_INT.c **** 
+  18:Generated_Source\PSoC5/FanController_INT.c **** #include "CyLib.h"
+  19:Generated_Source\PSoC5/FanController_INT.c **** #include "FanController.h"
+  20:Generated_Source\PSoC5/FanController_INT.c **** #include "cyapicallbacks.h"
+  21:Generated_Source\PSoC5/FanController_INT.c **** 
+  22:Generated_Source\PSoC5/FanController_INT.c **** 
+  23:Generated_Source\PSoC5/FanController_INT.c **** #if(FanController_IS_AUTO_FIRMWARE_MODE)
+  24:Generated_Source\PSoC5/FanController_INT.c ****     volatile uint16 FanController_speedStatus = 0u;
+  25:Generated_Source\PSoC5/FanController_INT.c **** #endif /* (FanController_IS_AUTO_FIRMWARE_MODE) */
+  26:Generated_Source\PSoC5/FanController_INT.c **** 
+  27:Generated_Source\PSoC5/FanController_INT.c **** 
+  28:Generated_Source\PSoC5/FanController_INT.c **** #if(CY_PSOC4)
+  29:Generated_Source\PSoC5/FanController_INT.c ****     /********************************************************************************
+  30:Generated_Source\PSoC5/FanController_INT.c ****     *
+ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\ccvgW31W.s 			page 2
+
+
+  31:Generated_Source\PSoC5/FanController_INT.c ****     * Summary:
+  32:Generated_Source\PSoC5/FanController_INT.c ****     *  Interrupt Service Routine for transferring actual speed from tachometer.
+  33:Generated_Source\PSoC5/FanController_INT.c ****     *
+  34:Generated_Source\PSoC5/FanController_INT.c ****     * Parameters:
+  35:Generated_Source\PSoC5/FanController_INT.c ****     *  None
+  36:Generated_Source\PSoC5/FanController_INT.c ****     *
+  37:Generated_Source\PSoC5/FanController_INT.c ****     * Return:
+  38:Generated_Source\PSoC5/FanController_INT.c ****     *  None
+  39:Generated_Source\PSoC5/FanController_INT.c ****     *
+  40:Generated_Source\PSoC5/FanController_INT.c ****     * Reentrant:
+  41:Generated_Source\PSoC5/FanController_INT.c ****     *  No
+  42:Generated_Source\PSoC5/FanController_INT.c ****     *
+  43:Generated_Source\PSoC5/FanController_INT.c ****     *******************************************************************************/
+  44:Generated_Source\PSoC5/FanController_INT.c ****     CY_ISR(FanController_DATA_SEND_ISR)
+  45:Generated_Source\PSoC5/FanController_INT.c ****     {
+  46:Generated_Source\PSoC5/FanController_INT.c ****         uint8 fanNum;
+  47:Generated_Source\PSoC5/FanController_INT.c ****         uint16 actSpeed;
+  48:Generated_Source\PSoC5/FanController_INT.c **** 
+  49:Generated_Source\PSoC5/FanController_INT.c ****         #ifdef FanController_DATA_SEND_ISR_ENTRY_CALLBACK
+  50:Generated_Source\PSoC5/FanController_INT.c ****             FanController_DATA_SEND_ISR_EntryCallback();
+  51:Generated_Source\PSoC5/FanController_INT.c ****         #endif /* FanController_DATA_SEND_ISR_ENTRY_CALLBACK */
+  52:Generated_Source\PSoC5/FanController_INT.c **** 
+  53:Generated_Source\PSoC5/FanController_INT.c ****         /* Get the number of active fan */
+  54:Generated_Source\PSoC5/FanController_INT.c ****         fanNum = FanController_TACH_ADDR_CONTROL_REG & FanController_TACH_CNTL_NUM_FANS_MASK;
+  55:Generated_Source\PSoC5/FanController_INT.c ****         
+  56:Generated_Source\PSoC5/FanController_INT.c ****         /* Get measured actual speed period for a specific fan */
+  57:Generated_Source\PSoC5/FanController_INT.c ****         actSpeed = CY_GET_REG16(FanController_TACH_STORED_ACT_PERIOD_PTR);
+  58:Generated_Source\PSoC5/FanController_INT.c ****         
+  59:Generated_Source\PSoC5/FanController_INT.c ****         /* Put down the measured speed to the proper location in RAM */
+  60:Generated_Source\PSoC5/FanController_INT.c ****         FanController_fanControl.actualPeriod[fanNum] = actSpeed;
+  61:Generated_Source\PSoC5/FanController_INT.c **** 
+  62:Generated_Source\PSoC5/FanController_INT.c ****         /* Software stall detection */
+  63:Generated_Source\PSoC5/FanController_INT.c ****         if(0u == actSpeed)
+  64:Generated_Source\PSoC5/FanController_INT.c ****         {
+  65:Generated_Source\PSoC5/FanController_INT.c ****             FanController_stallStatus |= (uint16) ((((uint16) 1u) << fanNum));
+  66:Generated_Source\PSoC5/FanController_INT.c ****         }
+  67:Generated_Source\PSoC5/FanController_INT.c **** 
+  68:Generated_Source\PSoC5/FanController_INT.c ****         /* Calculate the new fan number value */
+  69:Generated_Source\PSoC5/FanController_INT.c ****         fanNum = ((fanNum == 0u) ? ((uint8)(FanController_NUMBER_OF_FANS - 1u)) : (fanNum - 1u));
+  70:Generated_Source\PSoC5/FanController_INT.c ****         
+  71:Generated_Source\PSoC5/FanController_INT.c ****         /* Clear the previous fan number value in the control register */
+  72:Generated_Source\PSoC5/FanController_INT.c ****         FanController_TACH_ADDR_CONTROL_REG &= ((uint8) ~FanController_TACH_CNTL_NUM_FANS_MASK);
+  73:Generated_Source\PSoC5/FanController_INT.c **** 
+  74:Generated_Source\PSoC5/FanController_INT.c ****         /* Set new fan number value and End-Of-Measurement bit if required */
+  75:Generated_Source\PSoC5/FanController_INT.c ****         FanController_TACH_ADDR_CONTROL_REG |= 
+  76:Generated_Source\PSoC5/FanController_INT.c ****                 fanNum | ((fanNum == ((uint8)(FanController_NUMBER_OF_FANS - 1u))) ? FanController_
+  77:Generated_Source\PSoC5/FanController_INT.c **** 
+  78:Generated_Source\PSoC5/FanController_INT.c ****         /* In case if the last fan in the sequence was measured it is required
+  79:Generated_Source\PSoC5/FanController_INT.c ****         * to generate the "eoc" pulse from Global Control Register.
+  80:Generated_Source\PSoC5/FanController_INT.c ****         */
+  81:Generated_Source\PSoC5/FanController_INT.c ****         if(((uint8)(FanController_NUMBER_OF_FANS - 1u)) == fanNum)
+  82:Generated_Source\PSoC5/FanController_INT.c ****         {
+  83:Generated_Source\PSoC5/FanController_INT.c ****             FanController_GLOBAL_CONTROL_REG |= FanController_SW_EOC;
+  84:Generated_Source\PSoC5/FanController_INT.c ****             
+  85:Generated_Source\PSoC5/FanController_INT.c ****             /* Also set stall bit in Global Control Register if any of the fans were stalled */
+  86:Generated_Source\PSoC5/FanController_INT.c ****             if (0u != (FanController_stallStatus & FanController_alertMask))
+  87:Generated_Source\PSoC5/FanController_INT.c ****             {
+ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\ccvgW31W.s 			page 3
+
+
+  88:Generated_Source\PSoC5/FanController_INT.c ****                 FanController_GLOBAL_CONTROL_REG |= FanController_SW_STALL;
+  89:Generated_Source\PSoC5/FanController_INT.c ****             }
+  90:Generated_Source\PSoC5/FanController_INT.c ****         }
+  91:Generated_Source\PSoC5/FanController_INT.c ****         
+  92:Generated_Source\PSoC5/FanController_INT.c ****         #ifdef FanController_DATA_SEND_ISR_EXIT_CALLBACK
+  93:Generated_Source\PSoC5/FanController_INT.c ****             FanController_DATA_SEND_ISR_ExitCallback();
+  94:Generated_Source\PSoC5/FanController_INT.c ****         #endif /* FanController_DATA_SEND_ISR_EXIT_CALLBACK */
+  95:Generated_Source\PSoC5/FanController_INT.c ****     }
+  96:Generated_Source\PSoC5/FanController_INT.c **** #endif /* (CY_PSOC4) */
+  97:Generated_Source\PSoC5/FanController_INT.c **** 
+  98:Generated_Source\PSoC5/FanController_INT.c **** 
+  99:Generated_Source\PSoC5/FanController_INT.c **** #if(FanController_IS_AUTO_FIRMWARE_MODE)
+ 100:Generated_Source\PSoC5/FanController_INT.c ****     /*******************************************************************************
+ 101:Generated_Source\PSoC5/FanController_INT.c ****     *
+ 102:Generated_Source\PSoC5/FanController_INT.c ****     * Summary:
+ 103:Generated_Source\PSoC5/FanController_INT.c ****     *  Interrupt Service Routine for implementation of PID Firmware Controlling
+ 104:Generated_Source\PSoC5/FanController_INT.c ****     *  algorithm.
+ 105:Generated_Source\PSoC5/FanController_INT.c ****     *
+ 106:Generated_Source\PSoC5/FanController_INT.c ****     * Parameters:
+ 107:Generated_Source\PSoC5/FanController_INT.c ****     *  None
+ 108:Generated_Source\PSoC5/FanController_INT.c ****     *
+ 109:Generated_Source\PSoC5/FanController_INT.c ****     * Return:
+ 110:Generated_Source\PSoC5/FanController_INT.c ****     *  None
+ 111:Generated_Source\PSoC5/FanController_INT.c ****     *
+ 112:Generated_Source\PSoC5/FanController_INT.c ****     * Reentrant:
+ 113:Generated_Source\PSoC5/FanController_INT.c ****     *  No
+ 114:Generated_Source\PSoC5/FanController_INT.c ****     *
+ 115:Generated_Source\PSoC5/FanController_INT.c ****     * Theory:
+ 116:Generated_Source\PSoC5/FanController_INT.c ****     *  PID interrupt occurs in constant periods of time that is configured through
+ 117:Generated_Source\PSoC5/FanController_INT.c ****     *  the component customizer.
+ 118:Generated_Source\PSoC5/FanController_INT.c ****     *
+ 119:Generated_Source\PSoC5/FanController_INT.c ****     *******************************************************************************/
+ 120:Generated_Source\PSoC5/FanController_INT.c ****     CY_ISR(FanController_PID_CONTROL_ISR)
+ 121:Generated_Source\PSoC5/FanController_INT.c ****     {
+  28              		.loc 1 121 0
+  29              		.cfi_startproc
+  30              		@ args = 0, pretend = 0, frame = 0
+  31              		@ frame_needed = 0, uses_anonymous_args = 0
+  32 0000 F8B5     		push	{r3, r4, r5, r6, r7, lr}
+  33              		.cfi_def_cfa_offset 24
+  34              		.cfi_offset 3, -24
+  35              		.cfi_offset 4, -20
+  36              		.cfi_offset 5, -16
+  37              		.cfi_offset 6, -12
+  38              		.cfi_offset 7, -8
+  39              		.cfi_offset 14, -4
+  40              	.LVL0:
+ 122:Generated_Source\PSoC5/FanController_INT.c ****         uint8 i;
+ 123:Generated_Source\PSoC5/FanController_INT.c ****         int16 pidErrorZ0;
+ 124:Generated_Source\PSoC5/FanController_INT.c ****         uint32 newCompare;
+ 125:Generated_Source\PSoC5/FanController_INT.c ****         int16 periodError;
+ 126:Generated_Source\PSoC5/FanController_INT.c ****         uint32 currActSpeed;
+ 127:Generated_Source\PSoC5/FanController_INT.c ****         uint32 tmpCompare;
+ 128:Generated_Source\PSoC5/FanController_INT.c ****         uint16 mask;
+ 129:Generated_Source\PSoC5/FanController_INT.c **** 
+ 130:Generated_Source\PSoC5/FanController_INT.c ****         /***************************************
+ 131:Generated_Source\PSoC5/FanController_INT.c ****         *   PID Parameters
+ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\ccvgW31W.s 			page 4
+
+
+ 132:Generated_Source\PSoC5/FanController_INT.c ****         ***************************************/
+ 133:Generated_Source\PSoC5/FanController_INT.c ****         /* The error history */
+ 134:Generated_Source\PSoC5/FanController_INT.c ****         static int16 FanController_pidErrorZ1[FanController_NUMBER_OF_FANS] = {0};
+ 135:Generated_Source\PSoC5/FanController_INT.c ****         static int16 FanController_pidErrorZ2[FanController_NUMBER_OF_FANS] = {0};
+ 136:Generated_Source\PSoC5/FanController_INT.c **** 
+ 137:Generated_Source\PSoC5/FanController_INT.c ****         /* The compensator integrator */
+ 138:Generated_Source\PSoC5/FanController_INT.c ****         static uint32 FanController_pidArea[FanController_NUMBER_OF_FANS] = {0u};
+ 139:Generated_Source\PSoC5/FanController_INT.c **** 
+ 140:Generated_Source\PSoC5/FanController_INT.c ****         /* Holds result of PID algorithm execution for currently active fan */
+ 141:Generated_Source\PSoC5/FanController_INT.c ****         static uint16 FanController_pidOut;
+ 142:Generated_Source\PSoC5/FanController_INT.c **** 
+ 143:Generated_Source\PSoC5/FanController_INT.c ****         /* Fans speed regulation counters */
+ 144:Generated_Source\PSoC5/FanController_INT.c ****         static uint8 FanController_spdErrCount[FanController_NUMBER_OF_FANS] = {0u};
+ 145:Generated_Source\PSoC5/FanController_INT.c **** 
+ 146:Generated_Source\PSoC5/FanController_INT.c ****         #ifdef FanController_PID_CONTROL_ISR_ENTRY_CALLBACK
+ 147:Generated_Source\PSoC5/FanController_INT.c ****             FanController_PID_CONTROL_ISR_EntryCallback();
+ 148:Generated_Source\PSoC5/FanController_INT.c ****         #endif /* FanController_PID_CONTROL_ISR_ENTRY_CALLBACK */
+ 149:Generated_Source\PSoC5/FanController_INT.c ****         
+ 150:Generated_Source\PSoC5/FanController_INT.c ****         for(i = 0u; i < FanController_NUMBER_OF_FANS; i++)
+  41              		.loc 1 150 0
+  42 0002 0025     		movs	r5, #0
+  43 0004 8BE0     		b	.L2
+  44              	.LVL1:
+  45              	.L11:
+ 151:Generated_Source\PSoC5/FanController_INT.c ****         {
+ 152:Generated_Source\PSoC5/FanController_INT.c ****             /* Calculate the error in number of cycles of tachometer clock */
+ 153:Generated_Source\PSoC5/FanController_INT.c ****             #if(CY_PSOC3)
+ 154:Generated_Source\PSoC5/FanController_INT.c ****                 if(0u != (FanController_DMA_STATUS_REG & FanController_DMA1))
+ 155:Generated_Source\PSoC5/FanController_INT.c ****                 {
+ 156:Generated_Source\PSoC5/FanController_INT.c ****                     /* If DMA writes to actualPeriodDma1 (DMA1 state) then read actualPeriodDma2. *
+ 157:Generated_Source\PSoC5/FanController_INT.c ****                     currActSpeed =
+ 158:Generated_Source\PSoC5/FanController_INT.c ****                         (FanController_RPM_PERIOD_CONV_FACTOR / FanController_fanControl.actualPeri
+ 159:Generated_Source\PSoC5/FanController_INT.c ****                 }
+ 160:Generated_Source\PSoC5/FanController_INT.c ****                 else
+ 161:Generated_Source\PSoC5/FanController_INT.c ****                 {
+ 162:Generated_Source\PSoC5/FanController_INT.c ****                     /* If DMA writes to actualPeriodDma2 (DMA2 state) then read actualPeriodDma1. *
+ 163:Generated_Source\PSoC5/FanController_INT.c ****                     currActSpeed =
+ 164:Generated_Source\PSoC5/FanController_INT.c ****                         (FanController_RPM_PERIOD_CONV_FACTOR / FanController_fanControl.actualPeri
+ 165:Generated_Source\PSoC5/FanController_INT.c ****                 }
+ 166:Generated_Source\PSoC5/FanController_INT.c ****             #else
+ 167:Generated_Source\PSoC5/FanController_INT.c ****                currActSpeed =
+ 168:Generated_Source\PSoC5/FanController_INT.c ****                     (FanController_RPM_PERIOD_CONV_FACTOR / (uint32)FanController_fanControl.actual
+  46              		.loc 1 168 0
+  47 0006 2C46     		mov	r4, r5
+  48 0008 4B4B     		ldr	r3, .L16
+  49 000a 33F81530 		ldrh	r3, [r3, r5, lsl #1]
+ 167:Generated_Source\PSoC5/FanController_INT.c ****                     (FanController_RPM_PERIOD_CONV_FACTOR / (uint32)FanController_fanControl.actual
+  50              		.loc 1 167 0
+  51 000e 4B4E     		ldr	r6, .L16+4
+  52 0010 B6FBF3F6 		udiv	r6, r6, r3
+  53              	.LVL2:
+ 169:Generated_Source\PSoC5/FanController_INT.c ****             #endif /* (CY_PSOC3) */
+ 170:Generated_Source\PSoC5/FanController_INT.c **** 
+ 171:Generated_Source\PSoC5/FanController_INT.c ****             periodError = (int16) ((int32) FanController_desiredFansSpeed[i] - (int32) currActSpeed
+  54              		.loc 1 171 0
+  55 0014 4A4B     		ldr	r3, .L16+8
+  56 0016 33F81530 		ldrh	r3, [r3, r5, lsl #1]
+ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\ccvgW31W.s 			page 5
+
+
+  57 001a 9B1B     		subs	r3, r3, r6
+  58 001c 1BB2     		sxth	r3, r3
+  59              	.LVL3:
+ 172:Generated_Source\PSoC5/FanController_INT.c **** 
+ 173:Generated_Source\PSoC5/FanController_INT.c ****             /* The error in RPM */
+ 174:Generated_Source\PSoC5/FanController_INT.c ****             pidErrorZ0 = periodError;
+ 175:Generated_Source\PSoC5/FanController_INT.c **** 
+ 176:Generated_Source\PSoC5/FanController_INT.c ****             /* Saturate... Limit the error within the design range of the compensator */
+ 177:Generated_Source\PSoC5/FanController_INT.c ****             if(FanController_PID_ERROR_SAT_L > pidErrorZ0)
+  60              		.loc 1 177 0
+  61 001e 13F5805F 		cmn	r3, #4096
+  62 0022 03DB     		blt	.L13
+ 178:Generated_Source\PSoC5/FanController_INT.c ****             {
+ 179:Generated_Source\PSoC5/FanController_INT.c ****                 pidErrorZ0 = FanController_PID_ERROR_SAT_L;
+ 180:Generated_Source\PSoC5/FanController_INT.c ****             }
+ 181:Generated_Source\PSoC5/FanController_INT.c ****             else if(FanController_PID_ERROR_SAT_H < pidErrorZ0)
+  63              		.loc 1 181 0
+  64 0024 B3F5805F 		cmp	r3, #4096
+  65 0028 02DC     		bgt	.L14
+  66 002a 03E0     		b	.L3
+  67              	.L13:
+ 179:Generated_Source\PSoC5/FanController_INT.c ****             }
+  68              		.loc 1 179 0
+  69 002c 454B     		ldr	r3, .L16+12
+  70              	.LVL4:
+  71 002e 01E0     		b	.L3
+  72              	.LVL5:
+  73              	.L14:
+ 182:Generated_Source\PSoC5/FanController_INT.c ****             {
+ 183:Generated_Source\PSoC5/FanController_INT.c ****                 pidErrorZ0 = FanController_PID_ERROR_SAT_H;
+  74              		.loc 1 183 0
+  75 0030 4FF48053 		mov	r3, #4096
+  76              	.LVL6:
+  77              	.L3:
+ 184:Generated_Source\PSoC5/FanController_INT.c ****             }
+ 185:Generated_Source\PSoC5/FanController_INT.c ****             else
+ 186:Generated_Source\PSoC5/FanController_INT.c ****             {
+ 187:Generated_Source\PSoC5/FanController_INT.c ****                 /* Do nothing, the error is in range */
+ 188:Generated_Source\PSoC5/FanController_INT.c ****             }
+ 189:Generated_Source\PSoC5/FanController_INT.c **** 
+ 190:Generated_Source\PSoC5/FanController_INT.c ****             /* Process PID compensation */
+ 191:Generated_Source\PSoC5/FanController_INT.c ****             FanController_pidArea[i] = (uint32) ((int32) FanController_pidArea[i] +
+  78              		.loc 1 191 0
+  79 0034 444F     		ldr	r7, .L16+16
+  80 0036 57F82410 		ldr	r1, [r7, r4, lsl #2]
+ 192:Generated_Source\PSoC5/FanController_INT.c ****                                             ((int32) pidErrorZ0 * (int32) FanController_pidA1[i]));
+  81              		.loc 1 192 0
+  82 003a 444A     		ldr	r2, .L16+20
+  83 003c 32F91420 		ldrsh	r2, [r2, r4, lsl #1]
+ 191:Generated_Source\PSoC5/FanController_INT.c ****                                             ((int32) pidErrorZ0 * (int32) FanController_pidA1[i]));
+  84              		.loc 1 191 0
+  85 0040 02FB0312 		mla	r2, r2, r3, r1
+ 193:Generated_Source\PSoC5/FanController_INT.c ****             FanController_pidArea[i] = (uint32) ((int32) FanController_pidArea[i] +
+ 194:Generated_Source\PSoC5/FanController_INT.c ****                                             ((int32) FanController_pidErrorZ1[i] *
+  86              		.loc 1 194 0
+  87 0044 07EB4400 		add	r0, r7, r4, lsl #1
+  88 0048 B0F910E0 		ldrsh	lr, [r0, #16]
+ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\ccvgW31W.s 			page 6
+
+
+ 195:Generated_Source\PSoC5/FanController_INT.c ****                                             (int32) FanController_pidA2[i]));
+  89              		.loc 1 195 0
+  90 004c 4049     		ldr	r1, .L16+24
+  91 004e 31F91410 		ldrsh	r1, [r1, r4, lsl #1]
+ 193:Generated_Source\PSoC5/FanController_INT.c ****             FanController_pidArea[i] = (uint32) ((int32) FanController_pidArea[i] +
+  92              		.loc 1 193 0
+  93 0052 01FB0E22 		mla	r2, r1, lr, r2
+ 196:Generated_Source\PSoC5/FanController_INT.c ****             FanController_pidArea[i] = (uint32) ((int32) FanController_pidArea[i] +
+ 197:Generated_Source\PSoC5/FanController_INT.c ****                                             ((int32) FanController_pidErrorZ2[i] *
+  94              		.loc 1 197 0
+  95 0056 B0F91810 		ldrsh	r1, [r0, #24]
+ 198:Generated_Source\PSoC5/FanController_INT.c ****                                             (int32) FanController_pidA3[i]));
+  96              		.loc 1 198 0
+  97 005a DFF808C1 		ldr	ip, .L16+44
+  98 005e 3CF914C0 		ldrsh	ip, [ip, r4, lsl #1]
+ 196:Generated_Source\PSoC5/FanController_INT.c ****             FanController_pidArea[i] = (uint32) ((int32) FanController_pidArea[i] +
+  99              		.loc 1 196 0
+ 100 0062 0CFB0122 		mla	r2, ip, r1, r2
+ 101 0066 47F82420 		str	r2, [r7, r4, lsl #2]
+ 199:Generated_Source\PSoC5/FanController_INT.c **** 
+ 200:Generated_Source\PSoC5/FanController_INT.c ****             /* Save error history */
+ 201:Generated_Source\PSoC5/FanController_INT.c ****             FanController_pidErrorZ2[i] = FanController_pidErrorZ1[i];
+ 102              		.loc 1 201 0
+ 103 006a A0F818E0 		strh	lr, [r0, #24]	@ movhi
+ 202:Generated_Source\PSoC5/FanController_INT.c ****             FanController_pidErrorZ1[i] = pidErrorZ0;
+ 104              		.loc 1 202 0
+ 105 006e 0382     		strh	r3, [r0, #16]	@ movhi
+ 203:Generated_Source\PSoC5/FanController_INT.c **** 
+ 204:Generated_Source\PSoC5/FanController_INT.c ****             /* Saturate... Limit the error within the design range of the compensator */
+ 205:Generated_Source\PSoC5/FanController_INT.c ****             if(((int32) FanController_outputSatL[i]) > ((int32) FanController_pidArea[i]))
+ 106              		.loc 1 205 0
+ 107 0070 384B     		ldr	r3, .L16+28
+ 108              	.LVL7:
+ 109 0072 53F82430 		ldr	r3, [r3, r4, lsl #2]
+ 110 0076 9A42     		cmp	r2, r3
+ 111 0078 02DA     		bge	.L4
+ 206:Generated_Source\PSoC5/FanController_INT.c ****             {
+ 207:Generated_Source\PSoC5/FanController_INT.c ****                 FanController_pidArea[i] = FanController_outputSatL[i];
+ 112              		.loc 1 207 0
+ 113 007a 47F82430 		str	r3, [r7, r4, lsl #2]
+ 114 007e 07E0     		b	.L5
+ 115              	.L4:
+ 208:Generated_Source\PSoC5/FanController_INT.c ****             }
+ 209:Generated_Source\PSoC5/FanController_INT.c ****             else if(((int32) FanController_outputSatH[i]) < ((int32) FanController_pidArea[i]))
+ 116              		.loc 1 209 0
+ 117 0080 354B     		ldr	r3, .L16+32
+ 118 0082 53F82430 		ldr	r3, [r3, r4, lsl #2]
+ 119 0086 9A42     		cmp	r2, r3
+ 120 0088 02DD     		ble	.L5
+ 210:Generated_Source\PSoC5/FanController_INT.c ****             {
+ 211:Generated_Source\PSoC5/FanController_INT.c ****                 FanController_pidArea[i] = FanController_outputSatH[i];
+ 121              		.loc 1 211 0
+ 122 008a 2F4A     		ldr	r2, .L16+16
+ 123 008c 42F82430 		str	r3, [r2, r4, lsl #2]
+ 124              	.L5:
+ 212:Generated_Source\PSoC5/FanController_INT.c ****             }
+ 213:Generated_Source\PSoC5/FanController_INT.c ****             else
+ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\ccvgW31W.s 			page 7
+
+
+ 214:Generated_Source\PSoC5/FanController_INT.c ****             {
+ 215:Generated_Source\PSoC5/FanController_INT.c ****                 /* Do nothing, the error is in range */
+ 216:Generated_Source\PSoC5/FanController_INT.c ****             }
+ 217:Generated_Source\PSoC5/FanController_INT.c **** 
+ 218:Generated_Source\PSoC5/FanController_INT.c ****             /* Get the algorithm result */
+ 219:Generated_Source\PSoC5/FanController_INT.c ****             FanController_pidOut = (uint16) (FanController_pidArea[i] >> FanController_PID_POST_GAI
+ 125              		.loc 1 219 0
+ 126 0090 2D4B     		ldr	r3, .L16+16
+ 127 0092 53F82430 		ldr	r3, [r3, r4, lsl #2]
+ 128 0096 1A0C     		lsrs	r2, r3, #16
+ 220:Generated_Source\PSoC5/FanController_INT.c **** 
+ 221:Generated_Source\PSoC5/FanController_INT.c ****             #if (!CY_PSOC4)
+ 222:Generated_Source\PSoC5/FanController_INT.c ****                 /* Get compare from UDB PWMs */
+ 223:Generated_Source\PSoC5/FanController_INT.c ****                 #if(FanController_PWMRES == FanController_PWMRES_EIGHTBIT)
+ 224:Generated_Source\PSoC5/FanController_INT.c ****                     tmpCompare = CY_GET_REG8(FanController_fanDriverRegs[i].pwmSetDutyReg);
+ 225:Generated_Source\PSoC5/FanController_INT.c ****                 #else
+ 226:Generated_Source\PSoC5/FanController_INT.c ****                     tmpCompare = CY_GET_REG16(FanController_fanDriverRegs[i].pwmSetDutyReg);
+ 129              		.loc 1 226 0
+ 130 0098 304B     		ldr	r3, .L16+36
+ 131 009a 53F82410 		ldr	r1, [r3, r4, lsl #2]
+ 132 009e 0B88     		ldrh	r3, [r1]
+ 133 00a0 9BB2     		uxth	r3, r3
+ 134              	.LVL8:
+ 227:Generated_Source\PSoC5/FanController_INT.c ****                 #endif /* FanController_PWMRES == FanController_PWMRES_EIGHTBIT */
+ 228:Generated_Source\PSoC5/FanController_INT.c ****             #else
+ 229:Generated_Source\PSoC5/FanController_INT.c ****                 /* Get compare from TCPWMs */
+ 230:Generated_Source\PSoC5/FanController_INT.c ****                 tmpCompare = CY_GET_REG32(FanController_fanDriverRegs[i].pwmSetDutyReg);
+ 231:Generated_Source\PSoC5/FanController_INT.c ****             #endif /* (!CY_PSOC4) */
+ 232:Generated_Source\PSoC5/FanController_INT.c **** 
+ 233:Generated_Source\PSoC5/FanController_INT.c ****             /* Assign new compare value for fas' PWM with PID out */
+ 234:Generated_Source\PSoC5/FanController_INT.c ****             newCompare = FanController_pidOut;
+ 235:Generated_Source\PSoC5/FanController_INT.c **** 
+ 236:Generated_Source\PSoC5/FanController_INT.c ****             if (0u == (FanController_GLOBAL_CONTROL_REG & FanController_OVERRIDE))
+ 135              		.loc 1 236 0
+ 136 00a2 2F48     		ldr	r0, .L16+40
+ 137              	.LVL9:
+ 138 00a4 0078     		ldrb	r0, [r0]	@ zero_extendqisi2
+ 139 00a6 10F0400F 		tst	r0, #64
+ 140 00aa 00D1     		bne	.L6
+ 237:Generated_Source\PSoC5/FanController_INT.c ****             {
+ 238:Generated_Source\PSoC5/FanController_INT.c ****                 /* If override bit is cleared then set the newly tuned compare value */
+ 239:Generated_Source\PSoC5/FanController_INT.c ****                 #if (!CY_PSOC4)
+ 240:Generated_Source\PSoC5/FanController_INT.c ****                     #if(FanController_PWMRES == FanController_PWMRES_EIGHTBIT)
+ 241:Generated_Source\PSoC5/FanController_INT.c ****                         CY_SET_REG8(FanController_fanDriverRegs[i].pwmSetDutyReg, (uint8) newCompar
+ 242:Generated_Source\PSoC5/FanController_INT.c ****                     #else
+ 243:Generated_Source\PSoC5/FanController_INT.c ****                         CY_SET_REG16(FanController_fanDriverRegs[i].pwmSetDutyReg, (uint16) newComp
+ 141              		.loc 1 243 0
+ 142 00ac 0A80     		strh	r2, [r1]	@ movhi
+ 143              	.LVL10:
+ 144              	.L6:
+ 244:Generated_Source\PSoC5/FanController_INT.c ****                     #endif /* FanController_PWMRES == FanController_PWMRES_EIGHTBIT */
+ 245:Generated_Source\PSoC5/FanController_INT.c ****                 #else
+ 246:Generated_Source\PSoC5/FanController_INT.c ****                     CY_SET_REG32(FanController_fanDriverRegs[i].pwmSetDutyReg, newCompare);
+ 247:Generated_Source\PSoC5/FanController_INT.c ****                 #endif /* (!CY_PSOC4) */
+ 248:Generated_Source\PSoC5/FanController_INT.c ****             }
+ 249:Generated_Source\PSoC5/FanController_INT.c **** 
+ 250:Generated_Source\PSoC5/FanController_INT.c ****             /*************************************
+ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\ccvgW31W.s 			page 8
+
+
+ 251:Generated_Source\PSoC5/FanController_INT.c ****             * Speed regulation status
+ 252:Generated_Source\PSoC5/FanController_INT.c ****             **************************************/
+ 253:Generated_Source\PSoC5/FanController_INT.c ****             /* Analyze compare and result from PID */
+ 254:Generated_Source\PSoC5/FanController_INT.c ****             if ((FanController_PWM_PERIOD == tmpCompare) &&
+ 145              		.loc 1 254 0
+ 146 00ae B3F5707F 		cmp	r3, #960
+ 147 00b2 0CD1     		bne	.L7
+ 255:Generated_Source\PSoC5/FanController_INT.c ****                 (currActSpeed < FanController_desiredFansSpeed[i]))
+ 148              		.loc 1 255 0 discriminator 1
+ 149 00b4 224A     		ldr	r2, .L16+8
+ 150              	.LVL11:
+ 151 00b6 32F81420 		ldrh	r2, [r2, r4, lsl #1]
+ 254:Generated_Source\PSoC5/FanController_INT.c ****                 (currActSpeed < FanController_desiredFansSpeed[i]))
+ 152              		.loc 1 254 0 discriminator 1
+ 153 00ba 9642     		cmp	r6, r2
+ 154 00bc 07D2     		bcs	.L7
+ 256:Generated_Source\PSoC5/FanController_INT.c ****             {
+ 257:Generated_Source\PSoC5/FanController_INT.c ****                 /* Increase speed failure counter */
+ 258:Generated_Source\PSoC5/FanController_INT.c ****                 FanController_spdErrCount[i]++;
+ 155              		.loc 1 258 0
+ 156 00be 224B     		ldr	r3, .L16+16
+ 157              	.LVL12:
+ 158 00c0 2344     		add	r3, r3, r4
+ 159 00c2 93F82020 		ldrb	r2, [r3, #32]	@ zero_extendqisi2
+ 160 00c6 0132     		adds	r2, r2, #1
+ 161 00c8 83F82020 		strb	r2, [r3, #32]
+ 162 00cc 16E0     		b	.L8
+ 163              	.LVL13:
+ 164              	.L7:
+ 259:Generated_Source\PSoC5/FanController_INT.c ****             }
+ 260:Generated_Source\PSoC5/FanController_INT.c ****             else if ((0u == tmpCompare) &&
+ 165              		.loc 1 260 0
+ 166 00ce 83B9     		cbnz	r3, .L9
+ 261:Generated_Source\PSoC5/FanController_INT.c ****                 (currActSpeed > FanController_desiredFansSpeed[i]))
+ 167              		.loc 1 261 0 discriminator 1
+ 168 00d0 1B4B     		ldr	r3, .L16+8
+ 169              	.LVL14:
+ 170 00d2 33F81430 		ldrh	r3, [r3, r4, lsl #1]
+ 260:Generated_Source\PSoC5/FanController_INT.c ****                 (currActSpeed > FanController_desiredFansSpeed[i]))
+ 171              		.loc 1 260 0 discriminator 1
+ 172 00d6 9E42     		cmp	r6, r3
+ 173 00d8 0BD9     		bls	.L9
+ 262:Generated_Source\PSoC5/FanController_INT.c ****             {
+ 263:Generated_Source\PSoC5/FanController_INT.c ****                 /* Avoid overflow */
+ 264:Generated_Source\PSoC5/FanController_INT.c ****                 if (FanController_spdErrCount[i] < FanController_MAX_SPEED_ERRORS)
+ 174              		.loc 1 264 0
+ 175 00da 1B4B     		ldr	r3, .L16+16
+ 176 00dc 2344     		add	r3, r3, r4
+ 177 00de 93F82030 		ldrb	r3, [r3, #32]	@ zero_extendqisi2
+ 178 00e2 FF2B     		cmp	r3, #255
+ 179 00e4 0AD0     		beq	.L8
+ 265:Generated_Source\PSoC5/FanController_INT.c ****                 {
+ 266:Generated_Source\PSoC5/FanController_INT.c ****                     /* Increase speed failure counter */
+ 267:Generated_Source\PSoC5/FanController_INT.c ****                     FanController_spdErrCount[i]++;
+ 180              		.loc 1 267 0
+ 181 00e6 184A     		ldr	r2, .L16+16
+ 182 00e8 2244     		add	r2, r2, r4
+ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\ccvgW31W.s 			page 9
+
+
+ 183 00ea 0133     		adds	r3, r3, #1
+ 184 00ec 82F82030 		strb	r3, [r2, #32]
+ 185 00f0 04E0     		b	.L8
+ 186              	.L9:
+ 268:Generated_Source\PSoC5/FanController_INT.c ****                 }
+ 269:Generated_Source\PSoC5/FanController_INT.c ****             }
+ 270:Generated_Source\PSoC5/FanController_INT.c ****             else
+ 271:Generated_Source\PSoC5/FanController_INT.c ****             {
+ 272:Generated_Source\PSoC5/FanController_INT.c ****                 /* Clear speed failure counter */
+ 273:Generated_Source\PSoC5/FanController_INT.c ****                 FanController_spdErrCount[i] = 0u;
+ 187              		.loc 1 273 0
+ 188 00f2 154B     		ldr	r3, .L16+16
+ 189 00f4 2344     		add	r3, r3, r4
+ 190 00f6 0022     		movs	r2, #0
+ 191 00f8 83F82020 		strb	r2, [r3, #32]
+ 192              	.L8:
+ 274:Generated_Source\PSoC5/FanController_INT.c ****             }
+ 275:Generated_Source\PSoC5/FanController_INT.c **** 
+ 276:Generated_Source\PSoC5/FanController_INT.c ****             if (FanController_SPEED_ERRORS_TRESHOLD < FanController_spdErrCount[i])
+ 193              		.loc 1 276 0
+ 194 00fc 124B     		ldr	r3, .L16+16
+ 195 00fe 2344     		add	r3, r3, r4
+ 196 0100 93F82030 		ldrb	r3, [r3, #32]	@ zero_extendqisi2
+ 197 0104 102B     		cmp	r3, #16
+ 198 0106 08D9     		bls	.L10
+ 277:Generated_Source\PSoC5/FanController_INT.c ****             {
+ 278:Generated_Source\PSoC5/FanController_INT.c ****                 /* The number of speed errors is above threshold so set the
+ 279:Generated_Source\PSoC5/FanController_INT.c ****                 * respective speed error bit in the software speed status but
+ 280:Generated_Source\PSoC5/FanController_INT.c ****                 * only if respective bit is set in the alert mask register.
+ 281:Generated_Source\PSoC5/FanController_INT.c ****                 */
+ 282:Generated_Source\PSoC5/FanController_INT.c ****                 mask = FanController_GetAlertMask();
+ 199              		.loc 1 282 0
+ 200 0108 FFF7FEFF 		bl	FanController_GetAlertMask
+ 201              	.LVL15:
+ 283:Generated_Source\PSoC5/FanController_INT.c **** 
+ 284:Generated_Source\PSoC5/FanController_INT.c ****                 FanController_speedStatus = (uint16) ((((uint16) 1u) << i)) & mask;
+ 202              		.loc 1 284 0
+ 203 010c 0123     		movs	r3, #1
+ 204 010e 03FA04F4 		lsl	r4, r3, r4
+ 205 0112 2040     		ands	r0, r0, r4
+ 206              	.LVL16:
+ 207 0114 84B2     		uxth	r4, r0
+ 208 0116 0C4B     		ldr	r3, .L16+16
+ 209 0118 9C84     		strh	r4, [r3, #36]	@ movhi
+ 210              	.L10:
+ 150:Generated_Source\PSoC5/FanController_INT.c ****         {
+ 211              		.loc 1 150 0 discriminator 2
+ 212 011a 0135     		adds	r5, r5, #1
+ 213              	.LVL17:
+ 214 011c EDB2     		uxtb	r5, r5
+ 215              	.LVL18:
+ 216              	.L2:
+ 150:Generated_Source\PSoC5/FanController_INT.c ****         {
+ 217              		.loc 1 150 0 is_stmt 0 discriminator 1
+ 218 011e 032D     		cmp	r5, #3
+ 219 0120 7FF671AF 		bls	.L11
+ 285:Generated_Source\PSoC5/FanController_INT.c ****             }
+ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\ccvgW31W.s 			page 10
+
+
+ 286:Generated_Source\PSoC5/FanController_INT.c ****         }
+ 287:Generated_Source\PSoC5/FanController_INT.c **** 
+ 288:Generated_Source\PSoC5/FanController_INT.c ****         /* If software speed status register is not zero then simulate
+ 289:Generated_Source\PSoC5/FanController_INT.c ****         * hardware failure event. This will generate a pulse that goes to
+ 290:Generated_Source\PSoC5/FanController_INT.c ****         * Alert Status register.
+ 291:Generated_Source\PSoC5/FanController_INT.c ****         */
+ 292:Generated_Source\PSoC5/FanController_INT.c ****         if (0u !=FanController_speedStatus)
+ 220              		.loc 1 292 0 is_stmt 1
+ 221 0124 084B     		ldr	r3, .L16+16
+ 222 0126 9B8C     		ldrh	r3, [r3, #36]
+ 223 0128 9BB2     		uxth	r3, r3
+ 224 012a 23B1     		cbz	r3, .L1
+ 293:Generated_Source\PSoC5/FanController_INT.c ****         {
+ 294:Generated_Source\PSoC5/FanController_INT.c ****             FanController_GLOBAL_CONTROL_REG |= FanController_SW_SPEED_ERROR;
+ 225              		.loc 1 294 0
+ 226 012c 0C4A     		ldr	r2, .L16+40
+ 227 012e 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
+ 228 0130 43F01003 		orr	r3, r3, #16
+ 229 0134 1370     		strb	r3, [r2]
+ 230              	.L1:
+ 231 0136 F8BD     		pop	{r3, r4, r5, r6, r7, pc}
+ 232              	.LVL19:
+ 233              	.L17:
+ 234              		.align	2
+ 235              	.L16:
+ 236 0138 00000000 		.word	FanController_fanControl
+ 237 013c 80C3C901 		.word	30000000
+ 238 0140 00000000 		.word	FanController_desiredFansSpeed
+ 239 0144 00F0FFFF 		.word	-4096
+ 240 0148 00000000 		.word	.LANCHOR0
+ 241 014c 00000000 		.word	FanController_pidA1
+ 242 0150 00000000 		.word	FanController_pidA2
+ 243 0154 00000000 		.word	FanController_outputSatL
+ 244 0158 00000000 		.word	FanController_outputSatH
+ 245 015c 00000000 		.word	FanController_fanDriverRegs
+ 246 0160 74640040 		.word	1073767540
+ 247 0164 00000000 		.word	FanController_pidA3
+ 248              		.cfi_endproc
+ 249              	.LFE0:
+ 250              		.size	FanController_PID_CONTROL_ISR, .-FanController_PID_CONTROL_ISR
+ 251              		.global	FanController_speedStatus
+ 252              		.bss
+ 253              		.align	2
+ 254              		.set	.LANCHOR0,. + 0
+ 255              		.type	FanController_pidArea.5120, %object
+ 256              		.size	FanController_pidArea.5120, 16
+ 257              	FanController_pidArea.5120:
+ 258 0000 00000000 		.space	16
+ 258      00000000 
+ 258      00000000 
+ 258      00000000 
+ 259              		.type	FanController_pidErrorZ1.5118, %object
+ 260              		.size	FanController_pidErrorZ1.5118, 8
+ 261              	FanController_pidErrorZ1.5118:
+ 262 0010 00000000 		.space	8
+ 262      00000000 
+ 263              		.type	FanController_pidErrorZ2.5119, %object
+ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\ccvgW31W.s 			page 11
+
+
+ 264              		.size	FanController_pidErrorZ2.5119, 8
+ 265              	FanController_pidErrorZ2.5119:
+ 266 0018 00000000 		.space	8
+ 266      00000000 
+ 267              		.type	FanController_spdErrCount.5122, %object
+ 268              		.size	FanController_spdErrCount.5122, 4
+ 269              	FanController_spdErrCount.5122:
+ 270 0020 00000000 		.space	4
+ 271              		.type	FanController_speedStatus, %object
+ 272              		.size	FanController_speedStatus, 2
+ 273              	FanController_speedStatus:
+ 274 0024 0000     		.space	2
+ 275              		.text
+ 276              	.Letext0:
+ 277              		.file 2 "Generated_Source\\PSoC5\\cytypes.h"
+ 278              		.file 3 "Generated_Source\\PSoC5\\FanController.h"
+ 279              		.section	.debug_info,"",%progbits
+ 280              	.Ldebug_info0:
+ 281 0000 D7020000 		.4byte	0x2d7
+ 282 0004 0400     		.2byte	0x4
+ 283 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 284 000a 04       		.byte	0x4
+ 285 000b 01       		.uleb128 0x1
+ 286 000c 0B000000 		.4byte	.LASF44
+ 287 0010 0C       		.byte	0xc
+ 288 0011 1F010000 		.4byte	.LASF45
+ 289 0015 94030000 		.4byte	.LASF46
+ 290 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 291 001d 00000000 		.4byte	0
+ 292 0021 00000000 		.4byte	.Ldebug_line0
+ 293 0025 02       		.uleb128 0x2
+ 294 0026 04       		.byte	0x4
+ 295 0027 05       		.byte	0x5
+ 296 0028 696E7400 		.ascii	"int\000"
+ 297 002c 03       		.uleb128 0x3
+ 298 002d 04       		.byte	0x4
+ 299 002e 07       		.byte	0x7
+ 300 002f 5E020000 		.4byte	.LASF0
+ 301 0033 03       		.uleb128 0x3
+ 302 0034 08       		.byte	0x8
+ 303 0035 05       		.byte	0x5
+ 304 0036 0E030000 		.4byte	.LASF1
+ 305 003a 03       		.uleb128 0x3
+ 306 003b 08       		.byte	0x8
+ 307 003c 04       		.byte	0x4
+ 308 003d 7C030000 		.4byte	.LASF2
+ 309 0041 03       		.uleb128 0x3
+ 310 0042 01       		.byte	0x1
+ 311 0043 06       		.byte	0x6
+ 312 0044 88030000 		.4byte	.LASF3
+ 313 0048 03       		.uleb128 0x3
+ 314 0049 01       		.byte	0x1
+ 315 004a 08       		.byte	0x8
+ 316 004b F3000000 		.4byte	.LASF4
+ 317 004f 03       		.uleb128 0x3
+ 318 0050 02       		.byte	0x2
+ 319 0051 05       		.byte	0x5
+ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\ccvgW31W.s 			page 12
+
+
+ 320 0052 0A020000 		.4byte	.LASF5
+ 321 0056 03       		.uleb128 0x3
+ 322 0057 02       		.byte	0x2
+ 323 0058 07       		.byte	0x7
+ 324 0059 99000000 		.4byte	.LASF6
+ 325 005d 03       		.uleb128 0x3
+ 326 005e 04       		.byte	0x4
+ 327 005f 05       		.byte	0x5
+ 328 0060 4D030000 		.4byte	.LASF7
+ 329 0064 03       		.uleb128 0x3
+ 330 0065 04       		.byte	0x4
+ 331 0066 07       		.byte	0x7
+ 332 0067 5E010000 		.4byte	.LASF8
+ 333 006b 03       		.uleb128 0x3
+ 334 006c 08       		.byte	0x8
+ 335 006d 07       		.byte	0x7
+ 336 006e 6B020000 		.4byte	.LASF9
+ 337 0072 03       		.uleb128 0x3
+ 338 0073 04       		.byte	0x4
+ 339 0074 07       		.byte	0x7
+ 340 0075 EC020000 		.4byte	.LASF10
+ 341 0079 03       		.uleb128 0x3
+ 342 007a 01       		.byte	0x1
+ 343 007b 08       		.byte	0x8
+ 344 007c E8010000 		.4byte	.LASF11
+ 345 0080 04       		.uleb128 0x4
+ 346 0081 47030000 		.4byte	.LASF12
+ 347 0085 02       		.byte	0x2
+ 348 0086 E801     		.2byte	0x1e8
+ 349 0088 48000000 		.4byte	0x48
+ 350 008c 04       		.uleb128 0x4
+ 351 008d 21020000 		.4byte	.LASF13
+ 352 0091 02       		.byte	0x2
+ 353 0092 E901     		.2byte	0x1e9
+ 354 0094 56000000 		.4byte	0x56
+ 355 0098 04       		.uleb128 0x4
+ 356 0099 28020000 		.4byte	.LASF14
+ 357 009d 02       		.byte	0x2
+ 358 009e EA01     		.2byte	0x1ea
+ 359 00a0 64000000 		.4byte	0x64
+ 360 00a4 04       		.uleb128 0x4
+ 361 00a5 58010000 		.4byte	.LASF15
+ 362 00a9 02       		.byte	0x2
+ 363 00aa EC01     		.2byte	0x1ec
+ 364 00ac 4F000000 		.4byte	0x4f
+ 365 00b0 04       		.uleb128 0x4
+ 366 00b1 70010000 		.4byte	.LASF16
+ 367 00b5 02       		.byte	0x2
+ 368 00b6 ED01     		.2byte	0x1ed
+ 369 00b8 5D000000 		.4byte	0x5d
+ 370 00bc 03       		.uleb128 0x3
+ 371 00bd 04       		.byte	0x4
+ 372 00be 04       		.byte	0x4
+ 373 00bf D3000000 		.4byte	.LASF17
+ 374 00c3 03       		.uleb128 0x3
+ 375 00c4 08       		.byte	0x8
+ 376 00c5 04       		.byte	0x4
+ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\ccvgW31W.s 			page 13
+
+
+ 377 00c6 ED010000 		.4byte	.LASF18
+ 378 00ca 04       		.uleb128 0x4
+ 379 00cb 06000000 		.4byte	.LASF19
+ 380 00cf 02       		.byte	0x2
+ 381 00d0 9202     		.2byte	0x292
+ 382 00d2 D6000000 		.4byte	0xd6
+ 383 00d6 05       		.uleb128 0x5
+ 384 00d7 80000000 		.4byte	0x80
+ 385 00db 04       		.uleb128 0x4
+ 386 00dc 00000000 		.4byte	.LASF20
+ 387 00e0 02       		.byte	0x2
+ 388 00e1 9302     		.2byte	0x293
+ 389 00e3 E7000000 		.4byte	0xe7
+ 390 00e7 05       		.uleb128 0x5
+ 391 00e8 8C000000 		.4byte	0x8c
+ 392 00ec 06       		.uleb128 0x6
+ 393 00ed 08       		.byte	0x8
+ 394 00ee 03       		.byte	0x3
+ 395 00ef DD       		.byte	0xdd
+ 396 00f0 01010000 		.4byte	0x101
+ 397 00f4 07       		.uleb128 0x7
+ 398 00f5 6F030000 		.4byte	.LASF22
+ 399 00f9 03       		.byte	0x3
+ 400 00fa E8       		.byte	0xe8
+ 401 00fb 01010000 		.4byte	0x101
+ 402 00ff 00       		.byte	0
+ 403 0100 00       		.byte	0
+ 404 0101 08       		.uleb128 0x8
+ 405 0102 8C000000 		.4byte	0x8c
+ 406 0106 11010000 		.4byte	0x111
+ 407 010a 09       		.uleb128 0x9
+ 408 010b 72000000 		.4byte	0x72
+ 409 010f 03       		.byte	0x3
+ 410 0110 00       		.byte	0
+ 411 0111 0A       		.uleb128 0xa
+ 412 0112 81010000 		.4byte	.LASF21
+ 413 0116 03       		.byte	0x3
+ 414 0117 EB       		.byte	0xeb
+ 415 0118 EC000000 		.4byte	0xec
+ 416 011c 0B       		.uleb128 0xb
+ 417 011d 04       		.byte	0x4
+ 418 011e 03       		.byte	0x3
+ 419 011f 0C01     		.2byte	0x10c
+ 420 0121 33010000 		.4byte	0x133
+ 421 0125 0C       		.uleb128 0xc
+ 422 0126 4A010000 		.4byte	.LASF23
+ 423 012a 03       		.byte	0x3
+ 424 012b 0E01     		.2byte	0x10e
+ 425 012d 98000000 		.4byte	0x98
+ 426 0131 00       		.byte	0
+ 427 0132 00       		.byte	0
+ 428 0133 04       		.uleb128 0x4
+ 429 0134 E2030000 		.4byte	.LASF24
+ 430 0138 03       		.byte	0x3
+ 431 0139 0F01     		.2byte	0x10f
+ 432 013b 1C010000 		.4byte	0x11c
+ 433 013f 0D       		.uleb128 0xd
+ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\ccvgW31W.s 			page 14
+
+
+ 434 0140 01010000 		.4byte	.LASF47
+ 435 0144 01       		.byte	0x1
+ 436 0145 78       		.byte	0x78
+ 437 0146 00000000 		.4byte	.LFB0
+ 438 014a 68010000 		.4byte	.LFE0-.LFB0
+ 439 014e 01       		.uleb128 0x1
+ 440 014f 9C       		.byte	0x9c
+ 441 0150 14020000 		.4byte	0x214
+ 442 0154 0E       		.uleb128 0xe
+ 443 0155 6900     		.ascii	"i\000"
+ 444 0157 01       		.byte	0x1
+ 445 0158 7A       		.byte	0x7a
+ 446 0159 80000000 		.4byte	0x80
+ 447 015d 00000000 		.4byte	.LLST0
+ 448 0161 0F       		.uleb128 0xf
+ 449 0162 C8000000 		.4byte	.LASF25
+ 450 0166 01       		.byte	0x1
+ 451 0167 7B       		.byte	0x7b
+ 452 0168 A4000000 		.4byte	0xa4
+ 453 016c 2A000000 		.4byte	.LLST1
+ 454 0170 0F       		.uleb128 0xf
+ 455 0171 76010000 		.4byte	.LASF26
+ 456 0175 01       		.byte	0x1
+ 457 0176 7C       		.byte	0x7c
+ 458 0177 98000000 		.4byte	0x98
+ 459 017b 67000000 		.4byte	.LLST2
+ 460 017f 0F       		.uleb128 0xf
+ 461 0180 DC010000 		.4byte	.LASF27
+ 462 0184 01       		.byte	0x1
+ 463 0185 7D       		.byte	0x7d
+ 464 0186 A4000000 		.4byte	0xa4
+ 465 018a 9A000000 		.4byte	.LLST3
+ 466 018e 0F       		.uleb128 0xf
+ 467 018f 14020000 		.4byte	.LASF28
+ 468 0193 01       		.byte	0x1
+ 469 0194 7E       		.byte	0x7e
+ 470 0195 98000000 		.4byte	0x98
+ 471 0199 B8000000 		.4byte	.LLST4
+ 472 019d 0F       		.uleb128 0xf
+ 473 019e 3C030000 		.4byte	.LASF29
+ 474 01a2 01       		.byte	0x1
+ 475 01a3 7F       		.byte	0x7f
+ 476 01a4 98000000 		.4byte	0x98
+ 477 01a8 CB000000 		.4byte	.LLST5
+ 478 01ac 0F       		.uleb128 0xf
+ 479 01ad 1C030000 		.4byte	.LASF30
+ 480 01b1 01       		.byte	0x1
+ 481 01b2 80       		.byte	0x80
+ 482 01b3 8C000000 		.4byte	0x8c
+ 483 01b7 E9000000 		.4byte	.LLST6
+ 484 01bb 10       		.uleb128 0x10
+ 485 01bc F5020000 		.4byte	.LASF31
+ 486 01c0 01       		.byte	0x1
+ 487 01c1 86       		.byte	0x86
+ 488 01c2 14020000 		.4byte	0x214
+ 489 01c6 05       		.uleb128 0x5
+ 490 01c7 03       		.byte	0x3
+ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\ccvgW31W.s 			page 15
+
+
+ 491 01c8 10000000 		.4byte	FanController_pidErrorZ1.5118
+ 492 01cc 10       		.uleb128 0x10
+ 493 01cd 56030000 		.4byte	.LASF32
+ 494 01d1 01       		.byte	0x1
+ 495 01d2 87       		.byte	0x87
+ 496 01d3 14020000 		.4byte	0x214
+ 497 01d7 05       		.uleb128 0x5
+ 498 01d8 03       		.byte	0x3
+ 499 01d9 18000000 		.4byte	FanController_pidErrorZ2.5119
+ 500 01dd 10       		.uleb128 0x10
+ 501 01de F4010000 		.4byte	.LASF33
+ 502 01e2 01       		.byte	0x1
+ 503 01e3 8A       		.byte	0x8a
+ 504 01e4 24020000 		.4byte	0x224
+ 505 01e8 05       		.uleb128 0x5
+ 506 01e9 03       		.byte	0x3
+ 507 01ea 00000000 		.4byte	FanController_pidArea.5120
+ 508 01ee 11       		.uleb128 0x11
+ 509 01ef 49020000 		.4byte	.LASF48
+ 510 01f3 01       		.byte	0x1
+ 511 01f4 8D       		.byte	0x8d
+ 512 01f5 8C000000 		.4byte	0x8c
+ 513 01f9 10       		.uleb128 0x10
+ 514 01fa D9000000 		.4byte	.LASF34
+ 515 01fe 01       		.byte	0x1
+ 516 01ff 90       		.byte	0x90
+ 517 0200 34020000 		.4byte	0x234
+ 518 0204 05       		.uleb128 0x5
+ 519 0205 03       		.byte	0x3
+ 520 0206 20000000 		.4byte	FanController_spdErrCount.5122
+ 521 020a 12       		.uleb128 0x12
+ 522 020b 0C010000 		.4byte	.LVL15
+ 523 020f CF020000 		.4byte	0x2cf
+ 524 0213 00       		.byte	0
+ 525 0214 08       		.uleb128 0x8
+ 526 0215 A4000000 		.4byte	0xa4
+ 527 0219 24020000 		.4byte	0x224
+ 528 021d 09       		.uleb128 0x9
+ 529 021e 72000000 		.4byte	0x72
+ 530 0222 03       		.byte	0x3
+ 531 0223 00       		.byte	0
+ 532 0224 08       		.uleb128 0x8
+ 533 0225 98000000 		.4byte	0x98
+ 534 0229 34020000 		.4byte	0x234
+ 535 022d 09       		.uleb128 0x9
+ 536 022e 72000000 		.4byte	0x72
+ 537 0232 03       		.byte	0x3
+ 538 0233 00       		.byte	0
+ 539 0234 08       		.uleb128 0x8
+ 540 0235 80000000 		.4byte	0x80
+ 541 0239 44020000 		.4byte	0x244
+ 542 023d 09       		.uleb128 0x9
+ 543 023e 72000000 		.4byte	0x72
+ 544 0242 03       		.byte	0x3
+ 545 0243 00       		.byte	0
+ 546 0244 13       		.uleb128 0x13
+ 547 0245 9B020000 		.4byte	.LASF35
+ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\ccvgW31W.s 			page 16
+
+
+ 548 0249 03       		.byte	0x3
+ 549 024a 3401     		.2byte	0x134
+ 550 024c 11010000 		.4byte	0x111
+ 551 0250 13       		.uleb128 0x13
+ 552 0251 CD020000 		.4byte	.LASF36
+ 553 0255 03       		.byte	0x3
+ 554 0256 3801     		.2byte	0x138
+ 555 0258 01010000 		.4byte	0x101
+ 556 025c 13       		.uleb128 0x13
+ 557 025d A0010000 		.4byte	.LASF37
+ 558 0261 03       		.byte	0x3
+ 559 0262 3D01     		.2byte	0x13d
+ 560 0264 14020000 		.4byte	0x214
+ 561 0268 13       		.uleb128 0x13
+ 562 0269 B4010000 		.4byte	.LASF38
+ 563 026d 03       		.byte	0x3
+ 564 026e 3E01     		.2byte	0x13e
+ 565 0270 14020000 		.4byte	0x214
+ 566 0274 13       		.uleb128 0x13
+ 567 0275 C8010000 		.4byte	.LASF39
+ 568 0279 03       		.byte	0x3
+ 569 027a 3F01     		.2byte	0x13f
+ 570 027c 14020000 		.4byte	0x214
+ 571 0280 13       		.uleb128 0x13
+ 572 0281 B4020000 		.4byte	.LASF40
+ 573 0285 03       		.byte	0x3
+ 574 0286 4101     		.2byte	0x141
+ 575 0288 24020000 		.4byte	0x224
+ 576 028c 13       		.uleb128 0x13
+ 577 028d 82020000 		.4byte	.LASF41
+ 578 0291 03       		.byte	0x3
+ 579 0292 4201     		.2byte	0x142
+ 580 0294 24020000 		.4byte	0x224
+ 581 0298 14       		.uleb128 0x14
+ 582 0299 2F020000 		.4byte	.LASF42
+ 583 029d 01       		.byte	0x1
+ 584 029e 18       		.byte	0x18
+ 585 029f E7000000 		.4byte	0xe7
+ 586 02a3 05       		.uleb128 0x5
+ 587 02a4 03       		.byte	0x3
+ 588 02a5 00000000 		.4byte	FanController_speedStatus
+ 589 02a9 08       		.uleb128 0x8
+ 590 02aa B9020000 		.4byte	0x2b9
+ 591 02ae B9020000 		.4byte	0x2b9
+ 592 02b2 09       		.uleb128 0x9
+ 593 02b3 72000000 		.4byte	0x72
+ 594 02b7 03       		.byte	0x3
+ 595 02b8 00       		.byte	0
+ 596 02b9 15       		.uleb128 0x15
+ 597 02ba 33010000 		.4byte	0x133
+ 598 02be 13       		.uleb128 0x13
+ 599 02bf AC000000 		.4byte	.LASF43
+ 600 02c3 03       		.byte	0x3
+ 601 02c4 4801     		.2byte	0x148
+ 602 02c6 CA020000 		.4byte	0x2ca
+ 603 02ca 15       		.uleb128 0x15
+ 604 02cb A9020000 		.4byte	0x2a9
+ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\ccvgW31W.s 			page 17
+
+
+ 605 02cf 16       		.uleb128 0x16
+ 606 02d0 21030000 		.4byte	.LASF49
+ 607 02d4 21030000 		.4byte	.LASF49
+ 608 02d8 03       		.byte	0x3
+ 609 02d9 65       		.byte	0x65
+ 610 02da 00       		.byte	0
+ 611              		.section	.debug_abbrev,"",%progbits
+ 612              	.Ldebug_abbrev0:
+ 613 0000 01       		.uleb128 0x1
+ 614 0001 11       		.uleb128 0x11
+ 615 0002 01       		.byte	0x1
+ 616 0003 25       		.uleb128 0x25
+ 617 0004 0E       		.uleb128 0xe
+ 618 0005 13       		.uleb128 0x13
+ 619 0006 0B       		.uleb128 0xb
+ 620 0007 03       		.uleb128 0x3
+ 621 0008 0E       		.uleb128 0xe
+ 622 0009 1B       		.uleb128 0x1b
+ 623 000a 0E       		.uleb128 0xe
+ 624 000b 55       		.uleb128 0x55
+ 625 000c 17       		.uleb128 0x17
+ 626 000d 11       		.uleb128 0x11
+ 627 000e 01       		.uleb128 0x1
+ 628 000f 10       		.uleb128 0x10
+ 629 0010 17       		.uleb128 0x17
+ 630 0011 00       		.byte	0
+ 631 0012 00       		.byte	0
+ 632 0013 02       		.uleb128 0x2
+ 633 0014 24       		.uleb128 0x24
+ 634 0015 00       		.byte	0
+ 635 0016 0B       		.uleb128 0xb
+ 636 0017 0B       		.uleb128 0xb
+ 637 0018 3E       		.uleb128 0x3e
+ 638 0019 0B       		.uleb128 0xb
+ 639 001a 03       		.uleb128 0x3
+ 640 001b 08       		.uleb128 0x8
+ 641 001c 00       		.byte	0
+ 642 001d 00       		.byte	0
+ 643 001e 03       		.uleb128 0x3
+ 644 001f 24       		.uleb128 0x24
+ 645 0020 00       		.byte	0
+ 646 0021 0B       		.uleb128 0xb
+ 647 0022 0B       		.uleb128 0xb
+ 648 0023 3E       		.uleb128 0x3e
+ 649 0024 0B       		.uleb128 0xb
+ 650 0025 03       		.uleb128 0x3
+ 651 0026 0E       		.uleb128 0xe
+ 652 0027 00       		.byte	0
+ 653 0028 00       		.byte	0
+ 654 0029 04       		.uleb128 0x4
+ 655 002a 16       		.uleb128 0x16
+ 656 002b 00       		.byte	0
+ 657 002c 03       		.uleb128 0x3
+ 658 002d 0E       		.uleb128 0xe
+ 659 002e 3A       		.uleb128 0x3a
+ 660 002f 0B       		.uleb128 0xb
+ 661 0030 3B       		.uleb128 0x3b
+ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\ccvgW31W.s 			page 18
+
+
+ 662 0031 05       		.uleb128 0x5
+ 663 0032 49       		.uleb128 0x49
+ 664 0033 13       		.uleb128 0x13
+ 665 0034 00       		.byte	0
+ 666 0035 00       		.byte	0
+ 667 0036 05       		.uleb128 0x5
+ 668 0037 35       		.uleb128 0x35
+ 669 0038 00       		.byte	0
+ 670 0039 49       		.uleb128 0x49
+ 671 003a 13       		.uleb128 0x13
+ 672 003b 00       		.byte	0
+ 673 003c 00       		.byte	0
+ 674 003d 06       		.uleb128 0x6
+ 675 003e 13       		.uleb128 0x13
+ 676 003f 01       		.byte	0x1
+ 677 0040 0B       		.uleb128 0xb
+ 678 0041 0B       		.uleb128 0xb
+ 679 0042 3A       		.uleb128 0x3a
+ 680 0043 0B       		.uleb128 0xb
+ 681 0044 3B       		.uleb128 0x3b
+ 682 0045 0B       		.uleb128 0xb
+ 683 0046 01       		.uleb128 0x1
+ 684 0047 13       		.uleb128 0x13
+ 685 0048 00       		.byte	0
+ 686 0049 00       		.byte	0
+ 687 004a 07       		.uleb128 0x7
+ 688 004b 0D       		.uleb128 0xd
+ 689 004c 00       		.byte	0
+ 690 004d 03       		.uleb128 0x3
+ 691 004e 0E       		.uleb128 0xe
+ 692 004f 3A       		.uleb128 0x3a
+ 693 0050 0B       		.uleb128 0xb
+ 694 0051 3B       		.uleb128 0x3b
+ 695 0052 0B       		.uleb128 0xb
+ 696 0053 49       		.uleb128 0x49
+ 697 0054 13       		.uleb128 0x13
+ 698 0055 38       		.uleb128 0x38
+ 699 0056 0B       		.uleb128 0xb
+ 700 0057 00       		.byte	0
+ 701 0058 00       		.byte	0
+ 702 0059 08       		.uleb128 0x8
+ 703 005a 01       		.uleb128 0x1
+ 704 005b 01       		.byte	0x1
+ 705 005c 49       		.uleb128 0x49
+ 706 005d 13       		.uleb128 0x13
+ 707 005e 01       		.uleb128 0x1
+ 708 005f 13       		.uleb128 0x13
+ 709 0060 00       		.byte	0
+ 710 0061 00       		.byte	0
+ 711 0062 09       		.uleb128 0x9
+ 712 0063 21       		.uleb128 0x21
+ 713 0064 00       		.byte	0
+ 714 0065 49       		.uleb128 0x49
+ 715 0066 13       		.uleb128 0x13
+ 716 0067 2F       		.uleb128 0x2f
+ 717 0068 0B       		.uleb128 0xb
+ 718 0069 00       		.byte	0
+ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\ccvgW31W.s 			page 19
+
+
+ 719 006a 00       		.byte	0
+ 720 006b 0A       		.uleb128 0xa
+ 721 006c 16       		.uleb128 0x16
+ 722 006d 00       		.byte	0
+ 723 006e 03       		.uleb128 0x3
+ 724 006f 0E       		.uleb128 0xe
+ 725 0070 3A       		.uleb128 0x3a
+ 726 0071 0B       		.uleb128 0xb
+ 727 0072 3B       		.uleb128 0x3b
+ 728 0073 0B       		.uleb128 0xb
+ 729 0074 49       		.uleb128 0x49
+ 730 0075 13       		.uleb128 0x13
+ 731 0076 00       		.byte	0
+ 732 0077 00       		.byte	0
+ 733 0078 0B       		.uleb128 0xb
+ 734 0079 13       		.uleb128 0x13
+ 735 007a 01       		.byte	0x1
+ 736 007b 0B       		.uleb128 0xb
+ 737 007c 0B       		.uleb128 0xb
+ 738 007d 3A       		.uleb128 0x3a
+ 739 007e 0B       		.uleb128 0xb
+ 740 007f 3B       		.uleb128 0x3b
+ 741 0080 05       		.uleb128 0x5
+ 742 0081 01       		.uleb128 0x1
+ 743 0082 13       		.uleb128 0x13
+ 744 0083 00       		.byte	0
+ 745 0084 00       		.byte	0
+ 746 0085 0C       		.uleb128 0xc
+ 747 0086 0D       		.uleb128 0xd
+ 748 0087 00       		.byte	0
+ 749 0088 03       		.uleb128 0x3
+ 750 0089 0E       		.uleb128 0xe
+ 751 008a 3A       		.uleb128 0x3a
+ 752 008b 0B       		.uleb128 0xb
+ 753 008c 3B       		.uleb128 0x3b
+ 754 008d 05       		.uleb128 0x5
+ 755 008e 49       		.uleb128 0x49
+ 756 008f 13       		.uleb128 0x13
+ 757 0090 38       		.uleb128 0x38
+ 758 0091 0B       		.uleb128 0xb
+ 759 0092 00       		.byte	0
+ 760 0093 00       		.byte	0
+ 761 0094 0D       		.uleb128 0xd
+ 762 0095 2E       		.uleb128 0x2e
+ 763 0096 01       		.byte	0x1
+ 764 0097 3F       		.uleb128 0x3f
+ 765 0098 19       		.uleb128 0x19
+ 766 0099 03       		.uleb128 0x3
+ 767 009a 0E       		.uleb128 0xe
+ 768 009b 3A       		.uleb128 0x3a
+ 769 009c 0B       		.uleb128 0xb
+ 770 009d 3B       		.uleb128 0x3b
+ 771 009e 0B       		.uleb128 0xb
+ 772 009f 27       		.uleb128 0x27
+ 773 00a0 19       		.uleb128 0x19
+ 774 00a1 11       		.uleb128 0x11
+ 775 00a2 01       		.uleb128 0x1
+ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\ccvgW31W.s 			page 20
+
+
+ 776 00a3 12       		.uleb128 0x12
+ 777 00a4 06       		.uleb128 0x6
+ 778 00a5 40       		.uleb128 0x40
+ 779 00a6 18       		.uleb128 0x18
+ 780 00a7 9742     		.uleb128 0x2117
+ 781 00a9 19       		.uleb128 0x19
+ 782 00aa 01       		.uleb128 0x1
+ 783 00ab 13       		.uleb128 0x13
+ 784 00ac 00       		.byte	0
+ 785 00ad 00       		.byte	0
+ 786 00ae 0E       		.uleb128 0xe
+ 787 00af 34       		.uleb128 0x34
+ 788 00b0 00       		.byte	0
+ 789 00b1 03       		.uleb128 0x3
+ 790 00b2 08       		.uleb128 0x8
+ 791 00b3 3A       		.uleb128 0x3a
+ 792 00b4 0B       		.uleb128 0xb
+ 793 00b5 3B       		.uleb128 0x3b
+ 794 00b6 0B       		.uleb128 0xb
+ 795 00b7 49       		.uleb128 0x49
+ 796 00b8 13       		.uleb128 0x13
+ 797 00b9 02       		.uleb128 0x2
+ 798 00ba 17       		.uleb128 0x17
+ 799 00bb 00       		.byte	0
+ 800 00bc 00       		.byte	0
+ 801 00bd 0F       		.uleb128 0xf
+ 802 00be 34       		.uleb128 0x34
+ 803 00bf 00       		.byte	0
+ 804 00c0 03       		.uleb128 0x3
+ 805 00c1 0E       		.uleb128 0xe
+ 806 00c2 3A       		.uleb128 0x3a
+ 807 00c3 0B       		.uleb128 0xb
+ 808 00c4 3B       		.uleb128 0x3b
+ 809 00c5 0B       		.uleb128 0xb
+ 810 00c6 49       		.uleb128 0x49
+ 811 00c7 13       		.uleb128 0x13
+ 812 00c8 02       		.uleb128 0x2
+ 813 00c9 17       		.uleb128 0x17
+ 814 00ca 00       		.byte	0
+ 815 00cb 00       		.byte	0
+ 816 00cc 10       		.uleb128 0x10
+ 817 00cd 34       		.uleb128 0x34
+ 818 00ce 00       		.byte	0
+ 819 00cf 03       		.uleb128 0x3
+ 820 00d0 0E       		.uleb128 0xe
+ 821 00d1 3A       		.uleb128 0x3a
+ 822 00d2 0B       		.uleb128 0xb
+ 823 00d3 3B       		.uleb128 0x3b
+ 824 00d4 0B       		.uleb128 0xb
+ 825 00d5 49       		.uleb128 0x49
+ 826 00d6 13       		.uleb128 0x13
+ 827 00d7 02       		.uleb128 0x2
+ 828 00d8 18       		.uleb128 0x18
+ 829 00d9 00       		.byte	0
+ 830 00da 00       		.byte	0
+ 831 00db 11       		.uleb128 0x11
+ 832 00dc 34       		.uleb128 0x34
+ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\ccvgW31W.s 			page 21
+
+
+ 833 00dd 00       		.byte	0
+ 834 00de 03       		.uleb128 0x3
+ 835 00df 0E       		.uleb128 0xe
+ 836 00e0 3A       		.uleb128 0x3a
+ 837 00e1 0B       		.uleb128 0xb
+ 838 00e2 3B       		.uleb128 0x3b
+ 839 00e3 0B       		.uleb128 0xb
+ 840 00e4 49       		.uleb128 0x49
+ 841 00e5 13       		.uleb128 0x13
+ 842 00e6 00       		.byte	0
+ 843 00e7 00       		.byte	0
+ 844 00e8 12       		.uleb128 0x12
+ 845 00e9 898201   		.uleb128 0x4109
+ 846 00ec 00       		.byte	0
+ 847 00ed 11       		.uleb128 0x11
+ 848 00ee 01       		.uleb128 0x1
+ 849 00ef 31       		.uleb128 0x31
+ 850 00f0 13       		.uleb128 0x13
+ 851 00f1 00       		.byte	0
+ 852 00f2 00       		.byte	0
+ 853 00f3 13       		.uleb128 0x13
+ 854 00f4 34       		.uleb128 0x34
+ 855 00f5 00       		.byte	0
+ 856 00f6 03       		.uleb128 0x3
+ 857 00f7 0E       		.uleb128 0xe
+ 858 00f8 3A       		.uleb128 0x3a
+ 859 00f9 0B       		.uleb128 0xb
+ 860 00fa 3B       		.uleb128 0x3b
+ 861 00fb 05       		.uleb128 0x5
+ 862 00fc 49       		.uleb128 0x49
+ 863 00fd 13       		.uleb128 0x13
+ 864 00fe 3F       		.uleb128 0x3f
+ 865 00ff 19       		.uleb128 0x19
+ 866 0100 3C       		.uleb128 0x3c
+ 867 0101 19       		.uleb128 0x19
+ 868 0102 00       		.byte	0
+ 869 0103 00       		.byte	0
+ 870 0104 14       		.uleb128 0x14
+ 871 0105 34       		.uleb128 0x34
+ 872 0106 00       		.byte	0
+ 873 0107 03       		.uleb128 0x3
+ 874 0108 0E       		.uleb128 0xe
+ 875 0109 3A       		.uleb128 0x3a
+ 876 010a 0B       		.uleb128 0xb
+ 877 010b 3B       		.uleb128 0x3b
+ 878 010c 0B       		.uleb128 0xb
+ 879 010d 49       		.uleb128 0x49
+ 880 010e 13       		.uleb128 0x13
+ 881 010f 3F       		.uleb128 0x3f
+ 882 0110 19       		.uleb128 0x19
+ 883 0111 02       		.uleb128 0x2
+ 884 0112 18       		.uleb128 0x18
+ 885 0113 00       		.byte	0
+ 886 0114 00       		.byte	0
+ 887 0115 15       		.uleb128 0x15
+ 888 0116 26       		.uleb128 0x26
+ 889 0117 00       		.byte	0
+ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\ccvgW31W.s 			page 22
+
+
+ 890 0118 49       		.uleb128 0x49
+ 891 0119 13       		.uleb128 0x13
+ 892 011a 00       		.byte	0
+ 893 011b 00       		.byte	0
+ 894 011c 16       		.uleb128 0x16
+ 895 011d 2E       		.uleb128 0x2e
+ 896 011e 00       		.byte	0
+ 897 011f 3F       		.uleb128 0x3f
+ 898 0120 19       		.uleb128 0x19
+ 899 0121 3C       		.uleb128 0x3c
+ 900 0122 19       		.uleb128 0x19
+ 901 0123 6E       		.uleb128 0x6e
+ 902 0124 0E       		.uleb128 0xe
+ 903 0125 03       		.uleb128 0x3
+ 904 0126 0E       		.uleb128 0xe
+ 905 0127 3A       		.uleb128 0x3a
+ 906 0128 0B       		.uleb128 0xb
+ 907 0129 3B       		.uleb128 0x3b
+ 908 012a 0B       		.uleb128 0xb
+ 909 012b 00       		.byte	0
+ 910 012c 00       		.byte	0
+ 911 012d 00       		.byte	0
+ 912              		.section	.debug_loc,"",%progbits
+ 913              	.Ldebug_loc0:
+ 914              	.LLST0:
+ 915 0000 02000000 		.4byte	.LVL0
+ 916 0004 06000000 		.4byte	.LVL1
+ 917 0008 0200     		.2byte	0x2
+ 918 000a 30       		.byte	0x30
+ 919 000b 9F       		.byte	0x9f
+ 920 000c 06000000 		.4byte	.LVL1
+ 921 0010 1C010000 		.4byte	.LVL17
+ 922 0014 0100     		.2byte	0x1
+ 923 0016 55       		.byte	0x55
+ 924 0017 1E010000 		.4byte	.LVL18
+ 925 001b 38010000 		.4byte	.LVL19
+ 926 001f 0100     		.2byte	0x1
+ 927 0021 55       		.byte	0x55
+ 928 0022 00000000 		.4byte	0
+ 929 0026 00000000 		.4byte	0
+ 930              	.LLST1:
+ 931 002a 1E000000 		.4byte	.LVL3
+ 932 002e 2E000000 		.4byte	.LVL4
+ 933 0032 0100     		.2byte	0x1
+ 934 0034 53       		.byte	0x53
+ 935 0035 30000000 		.4byte	.LVL5
+ 936 0039 72000000 		.4byte	.LVL7
+ 937 003d 0100     		.2byte	0x1
+ 938 003f 53       		.byte	0x53
+ 939 0040 72000000 		.4byte	.LVL7
+ 940 0044 A4000000 		.4byte	.LVL9
+ 941 0048 0200     		.2byte	0x2
+ 942 004a 70       		.byte	0x70
+ 943 004b 10       		.sleb128 16
+ 944 004c A4000000 		.4byte	.LVL9
+ 945 0050 0B010000 		.4byte	.LVL15-1
+ 946 0054 0900     		.2byte	0x9
+ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\ccvgW31W.s 			page 23
+
+
+ 947 0056 74       		.byte	0x74
+ 948 0057 00       		.sleb128 0
+ 949 0058 31       		.byte	0x31
+ 950 0059 24       		.byte	0x24
+ 951 005a 77       		.byte	0x77
+ 952 005b 00       		.sleb128 0
+ 953 005c 22       		.byte	0x22
+ 954 005d 23       		.byte	0x23
+ 955 005e 10       		.uleb128 0x10
+ 956 005f 00000000 		.4byte	0
+ 957 0063 00000000 		.4byte	0
+ 958              	.LLST2:
+ 959 0067 A2000000 		.4byte	.LVL8
+ 960 006b B6000000 		.4byte	.LVL11
+ 961 006f 0700     		.2byte	0x7
+ 962 0071 72       		.byte	0x72
+ 963 0072 00       		.sleb128 0
+ 964 0073 0A       		.byte	0xa
+ 965 0074 FFFF     		.2byte	0xffff
+ 966 0076 1A       		.byte	0x1a
+ 967 0077 9F       		.byte	0x9f
+ 968 0078 B6000000 		.4byte	.LVL11
+ 969 007c 0B010000 		.4byte	.LVL15-1
+ 970 0080 1000     		.2byte	0x10
+ 971 0082 74       		.byte	0x74
+ 972 0083 00       		.sleb128 0
+ 973 0084 32       		.byte	0x32
+ 974 0085 24       		.byte	0x24
+ 975 0086 77       		.byte	0x77
+ 976 0087 00       		.sleb128 0
+ 977 0088 22       		.byte	0x22
+ 978 0089 23       		.byte	0x23
+ 979 008a 02       		.uleb128 0x2
+ 980 008b 94       		.byte	0x94
+ 981 008c 02       		.byte	0x2
+ 982 008d 0A       		.byte	0xa
+ 983 008e FFFF     		.2byte	0xffff
+ 984 0090 1A       		.byte	0x1a
+ 985 0091 9F       		.byte	0x9f
+ 986 0092 00000000 		.4byte	0
+ 987 0096 00000000 		.4byte	0
+ 988              	.LLST3:
+ 989 009a 1E000000 		.4byte	.LVL3
+ 990 009e 2E000000 		.4byte	.LVL4
+ 991 00a2 0100     		.2byte	0x1
+ 992 00a4 53       		.byte	0x53
+ 993 00a5 30000000 		.4byte	.LVL5
+ 994 00a9 34000000 		.4byte	.LVL6
+ 995 00ad 0100     		.2byte	0x1
+ 996 00af 53       		.byte	0x53
+ 997 00b0 00000000 		.4byte	0
+ 998 00b4 00000000 		.4byte	0
+ 999              	.LLST4:
+ 1000 00b8 14000000 		.4byte	.LVL2
+ 1001 00bc 1E010000 		.4byte	.LVL18
+ 1002 00c0 0100     		.2byte	0x1
+ 1003 00c2 56       		.byte	0x56
+ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\ccvgW31W.s 			page 24
+
+
+ 1004 00c3 00000000 		.4byte	0
+ 1005 00c7 00000000 		.4byte	0
+ 1006              	.LLST5:
+ 1007 00cb A2000000 		.4byte	.LVL8
+ 1008 00cf C0000000 		.4byte	.LVL12
+ 1009 00d3 0100     		.2byte	0x1
+ 1010 00d5 53       		.byte	0x53
+ 1011 00d6 CE000000 		.4byte	.LVL13
+ 1012 00da D2000000 		.4byte	.LVL14
+ 1013 00de 0100     		.2byte	0x1
+ 1014 00e0 53       		.byte	0x53
+ 1015 00e1 00000000 		.4byte	0
+ 1016 00e5 00000000 		.4byte	0
+ 1017              	.LLST6:
+ 1018 00e9 0C010000 		.4byte	.LVL15
+ 1019 00ed 14010000 		.4byte	.LVL16
+ 1020 00f1 0100     		.2byte	0x1
+ 1021 00f3 50       		.byte	0x50
+ 1022 00f4 00000000 		.4byte	0
+ 1023 00f8 00000000 		.4byte	0
+ 1024              		.section	.debug_aranges,"",%progbits
+ 1025 0000 1C000000 		.4byte	0x1c
+ 1026 0004 0200     		.2byte	0x2
+ 1027 0006 00000000 		.4byte	.Ldebug_info0
+ 1028 000a 04       		.byte	0x4
+ 1029 000b 00       		.byte	0
+ 1030 000c 0000     		.2byte	0
+ 1031 000e 0000     		.2byte	0
+ 1032 0010 00000000 		.4byte	.LFB0
+ 1033 0014 68010000 		.4byte	.LFE0-.LFB0
+ 1034 0018 00000000 		.4byte	0
+ 1035 001c 00000000 		.4byte	0
+ 1036              		.section	.debug_ranges,"",%progbits
+ 1037              	.Ldebug_ranges0:
+ 1038 0000 00000000 		.4byte	.LFB0
+ 1039 0004 68010000 		.4byte	.LFE0
+ 1040 0008 00000000 		.4byte	0
+ 1041 000c 00000000 		.4byte	0
+ 1042              		.section	.debug_line,"",%progbits
+ 1043              	.Ldebug_line0:
+ 1044 0000 CB000000 		.section	.debug_str,"MS",%progbits,1
+ 1044      02006100 
+ 1044      00000201 
+ 1044      FB0E0D00 
+ 1044      01010101 
+ 1045              	.LASF20:
+ 1046 0000 72656731 		.ascii	"reg16\000"
+ 1046      3600
+ 1047              	.LASF19:
+ 1048 0006 72656738 		.ascii	"reg8\000"
+ 1048      00
+ 1049              	.LASF44:
+ 1050 000b 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 1050      43313120 
+ 1050      352E342E 
+ 1050      31203230 
+ 1050      31363036 
+ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\ccvgW31W.s 			page 25
+
+
+ 1051 003e 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
+ 1051      20726576 
+ 1051      6973696F 
+ 1051      6E203233 
+ 1051      37373135 
+ 1052 0071 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 1052      66756E63 
+ 1052      74696F6E 
+ 1052      2D736563 
+ 1052      74696F6E 
+ 1053              	.LASF6:
+ 1054 0099 73686F72 		.ascii	"short unsigned int\000"
+ 1054      7420756E 
+ 1054      7369676E 
+ 1054      65642069 
+ 1054      6E7400
+ 1055              	.LASF43:
+ 1056 00ac 46616E43 		.ascii	"FanController_fanDriverRegs\000"
+ 1056      6F6E7472 
+ 1056      6F6C6C65 
+ 1056      725F6661 
+ 1056      6E447269 
+ 1057              	.LASF25:
+ 1058 00c8 70696445 		.ascii	"pidErrorZ0\000"
+ 1058      72726F72 
+ 1058      5A3000
+ 1059              	.LASF17:
+ 1060 00d3 666C6F61 		.ascii	"float\000"
+ 1060      7400
+ 1061              	.LASF34:
+ 1062 00d9 46616E43 		.ascii	"FanController_spdErrCount\000"
+ 1062      6F6E7472 
+ 1062      6F6C6C65 
+ 1062      725F7370 
+ 1062      64457272 
+ 1063              	.LASF4:
+ 1064 00f3 756E7369 		.ascii	"unsigned char\000"
+ 1064      676E6564 
+ 1064      20636861 
+ 1064      7200
+ 1065              	.LASF47:
+ 1066 0101 46616E43 		.ascii	"FanController_PID_CONTROL_ISR\000"
+ 1066      6F6E7472 
+ 1066      6F6C6C65 
+ 1066      725F5049 
+ 1066      445F434F 
+ 1067              	.LASF45:
+ 1068 011f 47656E65 		.ascii	"Generated_Source\\PSoC5\\FanController_INT.c\000"
+ 1068      72617465 
+ 1068      645F536F 
+ 1068      75726365 
+ 1068      5C50536F 
+ 1069              	.LASF23:
+ 1070 014a 70776D53 		.ascii	"pwmSetDutyReg\000"
+ 1070      65744475 
+ 1070      74795265 
+ 1070      6700
+ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\ccvgW31W.s 			page 26
+
+
+ 1071              	.LASF15:
+ 1072 0158 696E7431 		.ascii	"int16\000"
+ 1072      3600
+ 1073              	.LASF8:
+ 1074 015e 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1074      20756E73 
+ 1074      69676E65 
+ 1074      6420696E 
+ 1074      7400
+ 1075              	.LASF16:
+ 1076 0170 696E7433 		.ascii	"int32\000"
+ 1076      3200
+ 1077              	.LASF26:
+ 1078 0176 6E657743 		.ascii	"newCompare\000"
+ 1078      6F6D7061 
+ 1078      726500
+ 1079              	.LASF21:
+ 1080 0181 46616E43 		.ascii	"FanController_fanControlStruct\000"
+ 1080      6F6E7472 
+ 1080      6F6C6C65 
+ 1080      725F6661 
+ 1080      6E436F6E 
+ 1081              	.LASF37:
+ 1082 01a0 46616E43 		.ascii	"FanController_pidA1\000"
+ 1082      6F6E7472 
+ 1082      6F6C6C65 
+ 1082      725F7069 
+ 1082      64413100 
+ 1083              	.LASF38:
+ 1084 01b4 46616E43 		.ascii	"FanController_pidA2\000"
+ 1084      6F6E7472 
+ 1084      6F6C6C65 
+ 1084      725F7069 
+ 1084      64413200 
+ 1085              	.LASF39:
+ 1086 01c8 46616E43 		.ascii	"FanController_pidA3\000"
+ 1086      6F6E7472 
+ 1086      6F6C6C65 
+ 1086      725F7069 
+ 1086      64413300 
+ 1087              	.LASF27:
+ 1088 01dc 70657269 		.ascii	"periodError\000"
+ 1088      6F644572 
+ 1088      726F7200 
+ 1089              	.LASF11:
+ 1090 01e8 63686172 		.ascii	"char\000"
+ 1090      00
+ 1091              	.LASF18:
+ 1092 01ed 646F7562 		.ascii	"double\000"
+ 1092      6C6500
+ 1093              	.LASF33:
+ 1094 01f4 46616E43 		.ascii	"FanController_pidArea\000"
+ 1094      6F6E7472 
+ 1094      6F6C6C65 
+ 1094      725F7069 
+ 1094      64417265 
+ 1095              	.LASF5:
+ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\ccvgW31W.s 			page 27
+
+
+ 1096 020a 73686F72 		.ascii	"short int\000"
+ 1096      7420696E 
+ 1096      7400
+ 1097              	.LASF28:
+ 1098 0214 63757272 		.ascii	"currActSpeed\000"
+ 1098      41637453 
+ 1098      70656564 
+ 1098      00
+ 1099              	.LASF13:
+ 1100 0221 75696E74 		.ascii	"uint16\000"
+ 1100      313600
+ 1101              	.LASF14:
+ 1102 0228 75696E74 		.ascii	"uint32\000"
+ 1102      333200
+ 1103              	.LASF42:
+ 1104 022f 46616E43 		.ascii	"FanController_speedStatus\000"
+ 1104      6F6E7472 
+ 1104      6F6C6C65 
+ 1104      725F7370 
+ 1104      65656453 
+ 1105              	.LASF48:
+ 1106 0249 46616E43 		.ascii	"FanController_pidOut\000"
+ 1106      6F6E7472 
+ 1106      6F6C6C65 
+ 1106      725F7069 
+ 1106      644F7574 
+ 1107              	.LASF0:
+ 1108 025e 756E7369 		.ascii	"unsigned int\000"
+ 1108      676E6564 
+ 1108      20696E74 
+ 1108      00
+ 1109              	.LASF9:
+ 1110 026b 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1110      206C6F6E 
+ 1110      6720756E 
+ 1110      7369676E 
+ 1110      65642069 
+ 1111              	.LASF41:
+ 1112 0282 46616E43 		.ascii	"FanController_outputSatH\000"
+ 1112      6F6E7472 
+ 1112      6F6C6C65 
+ 1112      725F6F75 
+ 1112      74707574 
+ 1113              	.LASF35:
+ 1114 029b 46616E43 		.ascii	"FanController_fanControl\000"
+ 1114      6F6E7472 
+ 1114      6F6C6C65 
+ 1114      725F6661 
+ 1114      6E436F6E 
+ 1115              	.LASF40:
+ 1116 02b4 46616E43 		.ascii	"FanController_outputSatL\000"
+ 1116      6F6E7472 
+ 1116      6F6C6C65 
+ 1116      725F6F75 
+ 1116      74707574 
+ 1117              	.LASF36:
+ 1118 02cd 46616E43 		.ascii	"FanController_desiredFansSpeed\000"
+ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\ccvgW31W.s 			page 28
+
+
+ 1118      6F6E7472 
+ 1118      6F6C6C65 
+ 1118      725F6465 
+ 1118      73697265 
+ 1119              	.LASF10:
+ 1120 02ec 73697A65 		.ascii	"sizetype\000"
+ 1120      74797065 
+ 1120      00
+ 1121              	.LASF31:
+ 1122 02f5 46616E43 		.ascii	"FanController_pidErrorZ1\000"
+ 1122      6F6E7472 
+ 1122      6F6C6C65 
+ 1122      725F7069 
+ 1122      64457272 
+ 1123              	.LASF1:
+ 1124 030e 6C6F6E67 		.ascii	"long long int\000"
+ 1124      206C6F6E 
+ 1124      6720696E 
+ 1124      7400
+ 1125              	.LASF30:
+ 1126 031c 6D61736B 		.ascii	"mask\000"
+ 1126      00
+ 1127              	.LASF49:
+ 1128 0321 46616E43 		.ascii	"FanController_GetAlertMask\000"
+ 1128      6F6E7472 
+ 1128      6F6C6C65 
+ 1128      725F4765 
+ 1128      74416C65 
+ 1129              	.LASF29:
+ 1130 033c 746D7043 		.ascii	"tmpCompare\000"
+ 1130      6F6D7061 
+ 1130      726500
+ 1131              	.LASF12:
+ 1132 0347 75696E74 		.ascii	"uint8\000"
+ 1132      3800
+ 1133              	.LASF7:
+ 1134 034d 6C6F6E67 		.ascii	"long int\000"
+ 1134      20696E74 
+ 1134      00
+ 1135              	.LASF32:
+ 1136 0356 46616E43 		.ascii	"FanController_pidErrorZ2\000"
+ 1136      6F6E7472 
+ 1136      6F6C6C65 
+ 1136      725F7069 
+ 1136      64457272 
+ 1137              	.LASF22:
+ 1138 036f 61637475 		.ascii	"actualPeriod\000"
+ 1138      616C5065 
+ 1138      72696F64 
+ 1138      00
+ 1139              	.LASF2:
+ 1140 037c 6C6F6E67 		.ascii	"long double\000"
+ 1140      20646F75 
+ 1140      626C6500 
+ 1141              	.LASF3:
+ 1142 0388 7369676E 		.ascii	"signed char\000"
+ 1142      65642063 
+ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\ccvgW31W.s 			page 29
+
+
+ 1142      68617200 
+ 1143              	.LASF46:
+ 1144 0394 433A5C55 		.ascii	"C:\\Users\\Ade0n\\Desktop\\PR\\CyberPong\\CyberPong"
+ 1144      73657273 
+ 1144      5C416465 
+ 1144      306E5C44 
+ 1144      65736B74 
+ 1145 03c1 2E637964 		.ascii	".cydsn\\CyberPongRemastered.cydsn\000"
+ 1145      736E5C43 
+ 1145      79626572 
+ 1145      506F6E67 
+ 1145      52656D61 
+ 1146              	.LASF24:
+ 1147 03e2 46616E43 		.ascii	"FanController_fanDriverRegsStruct\000"
+ 1147      6F6E7472 
+ 1147      6F6C6C65 
+ 1147      725F6661 
+ 1147      6E447269 
+ 1148              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

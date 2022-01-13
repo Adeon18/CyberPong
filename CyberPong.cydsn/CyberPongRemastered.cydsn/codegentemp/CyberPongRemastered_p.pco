@@ -1,0 +1,106 @@
+dont_use_io iocell 1 0
+dont_use_io iocell 1 1
+dont_use_io iocell 1 3
+set_location "\UART:BUART:tx_ctrl_mark_last\" macrocell 1 1 0 3
+set_location "Net_4" macrocell 3 1 1 0
+set_location "\FanController:FanTach:tach\" macrocell 2 5 0 0
+set_location "Net_69" macrocell 3 0 1 3
+set_location "Net_71" macrocell 3 5 0 3
+set_location "\FanController:FanTach:glitch_filter_ld\" macrocell 2 1 0 2
+set_location "\UART:BUART:tx_status_2\" macrocell 0 2 1 3
+set_location "\UART:BUART:rx_bitclk_enable\" macrocell 1 1 1 2
+set_location "\FanController:Net_235\" macrocell 2 2 0 1
+set_location "\FanController:B_FanCtrl:stall_alrt\" macrocell 2 4 1 1
+set_location "Net_1" macrocell 1 2 0 0
+set_location "\UART:BUART:sRX:RxShifter:u0\" datapathcell 1 0 2 
+set_location "\FanController:FanTach:DmpgFactor:DmpgTimeCntr:u0\" datapathcell 2 2 2 
+set_location "\FanController:B_FanCtrl:OPEN_LOOP:FanPWM_1_2:PWM10:OpenLoopFan10:u1\" datapathcell 3 0 2 
+set_location "\FanController:B_FanCtrl:OPEN_LOOP:FAN34:FanPWM_3_4:PWM10:OpenLoopFan10:u1\" datapathcell 3 5 2 
+set_location "\FanController:FanTach:next_fan\" macrocell 2 4 0 1
+set_location "\UART:BUART:sTX:TxSts\" statusicell 0 2 4 
+set_location "\UART:BUART:txn\" macrocell 0 1 1 1
+set_location "\UART:BUART:sRX:RxBitCounter\" count7cell 1 2 7 
+set_location "\UART:BUART:counter_load_not\" macrocell 2 1 1 1
+set_location "\FanController:FanTach:gf_dmp_state\" macrocell 2 3 1 0
+set_location "\UART:BUART:rx_status_4\" macrocell 1 0 0 1
+set_location "\FreqDiv_1:not_last_reset\" macrocell 1 2 1 2
+set_location "\FreqDiv_4:not_last_reset\" macrocell 3 1 1 2
+set_location "\FreqDiv_3:not_last_reset\" macrocell 3 3 1 1
+set_location "\FreqDiv_2:not_last_reset\" macrocell 0 0 0 0
+set_location "\FanController:B_FanCtrl:OPEN_LOOP:FanPWM_1_2:PWM10:OpenLoopFan10:u0\" datapathcell 2 0 2 
+set_location "\FanController:B_FanCtrl:OPEN_LOOP:FAN34:FanPWM_3_4:PWM10:OpenLoopFan10:u0\" datapathcell 2 5 2 
+set_location "\FanController:FanTach:FanTachCounter:u1\" datapathcell 2 4 2 
+set_location "\FanController:B_FanCtrl:continuous_nrq\" macrocell 3 5 1 3
+set_location "\FanController:B_FanCtrl:stall_status\" macrocell 2 1 1 3
+set_location "Net_110" macrocell 0 1 0 1
+set_location "\FreqDiv_3:count_0\" macrocell 3 3 0 1
+set_location "\FreqDiv_4:count_0\" macrocell 3 1 1 1
+set_location "\FreqDiv_1:count_0\" macrocell 3 2 0 0
+set_location "\FreqDiv_2:count_0\" macrocell 0 0 0 1
+set_location "\FanController:Net_6146\" macrocell 2 0 0 0
+set_location "\FanController:Net_6505\" macrocell 2 5 0 1
+set_location "\FanController:FanTach:tach_state_1\" macrocell 2 1 0 0
+set_location "\UART:BUART:pollcount_0\" macrocell 1 0 0 2
+set_location "\FanController:FanTach:stall_det\" macrocell 2 3 1 1
+set_location "\UART:BUART:rx_state_0\" macrocell 1 1 0 0
+set_location "\UART:BUART:rx_counter_load\" macrocell 1 1 1 3
+set_location "\UART:BUART:pollcount_1\" macrocell 0 1 0 2
+set_location "\UART:BUART:tx_status_0\" macrocell 1 2 1 3
+set_location "\FanController:B_FanCtrl:speed_status\" macrocell 2 0 0 1
+set_location "\FanController:B_FanCtrl:sync_nrq\" macrocell 3 5 0 2
+set_location "\UART:BUART:rx_last\" macrocell 1 0 0 3
+set_location "\UART:BUART:rx_postpoll\" macrocell 1 0 0 0
+set_location "\FanController:B_FanCtrl:AlertStatusReg\" statusicell 2 1 4 
+set_location "\UART:BUART:rx_load_fifo\" macrocell 3 0 0 0
+set_location "\FanController:FanTach:end_of_measurement\" macrocell 2 3 0 0
+set_location "\FanController:FanTach:P3_P5:FanCounter\" count7cell 2 4 7 
+set_location "\FanController:FanTach:tach_state_2\" macrocell 2 3 1 3
+set_location "\FanController:FanTach:FanTachCounter:u0\" datapathcell 3 4 2 
+set_location "\UART:BUART:tx_state_1\" macrocell 2 5 1 0
+set_location "\UART:BUART:rx_state_2\" macrocell 1 0 1 1
+set_location "\UART:BUART:tx_bitclk\" macrocell 1 1 1 1
+set_location "\UART:BUART:tx_state_0\" macrocell 0 2 0 0
+set_location "\FanController:FanTach:reg_enable\" macrocell 2 3 1 2
+set_location "\FanController:Net_6149_0\" macrocell 2 2 1 1
+set_location "\FanController:Net_6149_2\" macrocell 2 4 0 3
+set_location "\UART:BUART:rx_status_3\" macrocell 1 0 1 3
+set_location "\UART:BUART:rx_status_5\" macrocell 2 0 1 1
+set_location "\UART:BUART:rx_state_stop1_reg\" macrocell 2 0 1 3
+set_location "\FanController:FanTach:filtered_rising_tach\" macrocell 2 2 0 3
+set_location "\FanController:Net_6149_1\" macrocell 2 3 0 2
+set_location "\UART:BUART:sRX:RxSts\" statusicell 1 0 4 
+set_location "\FanController:FanTach:tach_state_0\" macrocell 2 2 0 0
+set_location "\FanController:drq\" macrocell 2 3 0 3
+set_location "Net_52" macrocell 3 0 1 1
+set_location "Net_70" macrocell 3 5 0 0
+set_location "\FanController:FanTach:glitch_filter_state\" macrocell 2 0 0 2
+set_location "\UART:BUART:tx_state_2\" macrocell 0 2 1 1
+set_location "\UART:BUART:sTX:sCLOCK:TxBitClkGen\" datapathcell 2 3 2 
+set_location "\FanController:Net_6149_3\" macrocell 2 4 0 0
+set_location "Net_3" macrocell 3 4 1 1
+set_location "\FanController:FanTach:GlitchFilterTimer:u0\" datapathcell 2 1 2 
+set_location "\FanController:B_FanCtrl:alert_reg\" macrocell 2 1 1 0
+set_location "\FanController:FanTach:sync2_tach_cnt3\" macrocell 2 2 1 0
+set_location "\UART:BUART:rx_state_3\" macrocell 3 1 0 3
+set_location "\UART:BUART:sTX:TxShifter:u0\" datapathcell 0 2 2 
+set_location "\FanController:sync\" macrocell 3 4 0 0
+set_location "\FanController:FanTach:pulse_tc\" macrocell 2 3 0 1
+set_location "Net_2" macrocell 0 0 1 1
+set_location "\FanController:TachOutDMA\" drqcell -1 -1 0
+set_location "\FanController:B_FanCtrl:HwCtl:AlertMaskLSB\" controlcell 2 2 6 
+set_io "Pin_Output_DOWN(0)" iocell 3 4
+# Note: port 12 is the logical name for port 7
+set_io "Rx_1(0)" iocell 12 6
+set_io "Pin_Input_LEFT(0)" iocell 3 1
+set_io "Pin_Output_UP(0)" iocell 3 7
+set_io "Pin_Input_RIGHT(0)" iocell 3 2
+set_location "ClockBlock" clockblockcell -1 -1 0
+set_io "Pin_Output_RIGHT(0)" iocell 3 6
+set_io "Pin_Input_UP(0)" iocell 3 3
+set_location "\FanController:PID_ISR\" interrupt -1 -1 0
+# Note: port 12 is the logical name for port 7
+set_io "Tx_1(0)" iocell 12 7
+set_location "\FanController:B_FanCtrl:StallStatus:StallError_LSB\" statuscell 2 3 3 
+set_io "Pin_Input_DOWN(0)" iocell 3 0
+set_location "\FanController:B_FanCtrl:GlobalControlReg\" controlcell 2 3 6 
+set_io "Pin_Output_LEFT(0)" iocell 3 5

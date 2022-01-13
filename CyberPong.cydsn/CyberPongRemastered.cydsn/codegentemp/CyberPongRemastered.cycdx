@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<blockRegMap version="1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://cypress.com/xsd/cyblockregmap cyblockregmap.xsd" xmlns="http://cypress.com/xsd/cyblockregmap">
+  <block name="Pin_Output_UP" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="Pin_Output_DOWN" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="Pin_Input_DOWN" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="Pin_Output_RIGHT" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="UART" BASE="0x0" SIZE="0x0" desc="UART" visible="true" hidden="false">
+    <block name="IntClock" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+    <block name="VirtualMux_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+    <block name="BUART" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+    <register name="TX_UART_TX_DATA" address="0x40006449" bitWidth="8" desc="TX Data Register" hidden="false" />
+    <register name="TX_UART_TX_STATUS" address="0x40006469" bitWidth="8" desc="TX status register" hidden="false">
+      <field name="UART_TX_STS_COMPLETE" from="0" to="0" access="R" resetVal="" desc="" hidden="false" />
+      <field name="UART_TX_STS_FIFO_EMPTY" from="1" to="1" access="R" resetVal="" desc="" hidden="false" />
+      <field name="UART_TX_STS_FIFO_FULL" from="2" to="2" access="R" resetVal="" desc="" hidden="false" />
+      <field name="UART_TX_STS_FIFO_NOT_FULL" from="3" to="3" access="R" resetVal="" desc="" hidden="false" />
+    </register>
+    <register name="RX_UART_RX_ADDRESS1" address="0x4000652B" bitWidth="8" desc="RX Address1 Register" hidden="false" />
+    <register name="RX_UART_RX_ADDRESS2" address="0x4000653B" bitWidth="8" desc="RX Address2 Register" hidden="false" />
+    <register name="RX_UART_RX_DATA" address="0x4000654B" bitWidth="8" desc="RX Data Register" hidden="false" />
+    <register name="RX_UART_RX_STATUS" address="0x4000656B" bitWidth="8" desc="RX status register" hidden="false">
+      <field name="UART_RX_STS_MRKSPC" from="0" to="0" access="R" resetVal="" desc="" hidden="false" />
+      <field name="UART_RX_STS_BREAK" from="1" to="1" access="R" resetVal="" desc="" hidden="false" />
+      <field name="UART_RX_STS_PAR_ERROR" from="2" to="2" access="R" resetVal="" desc="" hidden="false" />
+      <field name="UART_RX_STS_STOP_ERROR" from="3" to="3" access="R" resetVal="" desc="" hidden="false" />
+      <field name="UART_RX_STS_OVERRUN" from="4" to="4" access="R" resetVal="" desc="" hidden="false" />
+      <field name="UART_RX_STS_FIFO_NOTEMPTY" from="5" to="5" access="R" resetVal="" desc="" hidden="false" />
+      <field name="UART_RX_STS_ADDR_MATCH" from="6" to="6" access="R" resetVal="" desc="" hidden="false" />
+    </register>
+  </block>
+  <block name="cy_boot" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="Em_EEPROM_Dynamic" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="Rx_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="Tx_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="Pin_Output_LEFT" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="FreqDiv_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="FanController" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false">
+    <block name="TACH_CLK_500K" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+    <block name="PWM_CLOCK_25k_10b" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+    <block name="VirtualMux_53" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+    <block name="VirtualMux_16" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+    <block name="VirtualMux_13" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+    <block name="VirtualMux_14" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+    <block name="VirtualMux_15" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+    <block name="FanTach" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+    <block name="B_FanCtrl" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+    <block name="PID_ISR" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+    <block name="BUS_CLK" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+    <block name="TachOutDMA" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+    <block name="VirtualMux_17" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+    <block name="VirtualMux_26" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+    <block name="VirtualMux_4" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+    <block name="VirtualMux_3" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+    <block name="VirtualMux_5" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+    <block name="VirtualMux_2" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+    <block name="VirtualMux_12" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+    <block name="VirtualMux_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+    <block name="VirtualMux_6" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+    <block name="VirtualMux_10" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+    <block name="VirtualMux_11" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+    <block name="VirtualMux_9" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+    <block name="VirtualMux_7" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+    <block name="VirtualMux_8" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+    <register name="FanController_Alert_STALL_STATUS_LSB" address="0x40006464" bitWidth="8" desc="Stall Status LSB Register" hidden="false">
+      <field name="STALL_STAT_1" from="0" to="0" access="RW" resetVal="" desc="Stall status for Fan1" hidden="false" />
+      <field name="STALL_STAT_2" from="1" to="1" access="RW" resetVal="" desc="Stall status for Fan2" hidden="false" />
+      <field name="STALL_STAT_3" from="2" to="2" access="RW" resetVal="" desc="Stall status for Fan3" hidden="false" />
+      <field name="STALL_STAT_4" from="3" to="3" access="RW" resetVal="" desc="Stall status for Fan4" hidden="false" />
+      <field name="STALL_STAT_5" from="4" to="4" access="RW" resetVal="" desc="Stall status for Fan5" hidden="false" />
+      <field name="STALL_STAT_6" from="5" to="5" access="RW" resetVal="" desc="Stall status for Fan6" hidden="false" />
+      <field name="STALL_STAT_7" from="6" to="6" access="RW" resetVal="" desc="Stall status for Fan7" hidden="false" />
+      <field name="STALL_STAT_8" from="7" to="7" access="RW" resetVal="" desc="Stall status for Fan8" hidden="false" />
+    </register>
+    <register name="FanController_GLBL_CTRL" address="0x40006474" bitWidth="8" desc="Global Control Register" hidden="false">
+      <field name="ALERT_ENABLE" from="0" to="0" access="RW" resetVal="" desc="Global alert enable signal" hidden="false">
+        <value name="ALERTS_DIS" value="0" desc="Generation of all alerts is disabled" />
+        <value name="ALERTS_EN" value="1" desc="Generation of alerts is enabled" />
+      </field>
+      <field name="STALL_ALERT_ENABLE" from="1" to="1" access="RW" resetVal="" desc="Stall alert enable signal" hidden="false">
+        <value name="STALL_ALRT_DIS" value="0" desc="Generation of stall alert is disabled" />
+        <value name="STALL_ALRT_EN" value="1" desc="Generation of stall alert is enabled" />
+      </field>
+      <field name="SPEED_ALERT_ENABLE" from="2" to="2" access="RW" resetVal="" desc="Speed alert enable signal" hidden="false">
+        <value name="SPEED_ALRT_DIS" value="0" desc="Generation of speed alert is disabled" />
+        <value name="SPEED_ALRT_EN" value="1" desc="Generation of speed alert is enabled" />
+      </field>
+      <field name="GLOBAL_ENABLE" from="5" to="5" access="RW" resetVal="" desc="Global enable signal for the component" hidden="false">
+        <value name="COMP_DISABLED" value="0" desc="Component disabled" />
+        <value name="COMP_ENABLED" value="1" desc="Component is enabled" />
+      </field>
+      <field name="OVERRIDE" from="6" to="6" access="RW" resetVal="" desc="HW mode override bit" hidden="false">
+        <value name="OVRD_DISABLED" value="0" desc="HW control not overrided" />
+        <value name="OVRD_ENABLED" value="1" desc="HW control overrided" />
+      </field>
+      <field name="RSRVD" from="7" to="7" access="R" resetVal="" desc="Reserved" hidden="false" />
+    </register>
+    <register name="FanController_Alert_ALERT_MASK_LSB" address="0x40006477" bitWidth="8" desc="Alert Mask LSB Register" hidden="false">
+      <field name="ALRT_MASK_1" from="0" to="0" access="RW" resetVal="" desc="Alert Mask for Fan1" hidden="false" />
+      <field name="ALRT_MASK_2" from="1" to="1" access="RW" resetVal="" desc="Alert Mask for Fan2" hidden="false" />
+      <field name="ALRT_MASK_3" from="2" to="2" access="RW" resetVal="" desc="Alert Mask for Fan3" hidden="false" />
+      <field name="ALRT_MASK_4" from="3" to="3" access="RW" resetVal="" desc="Alert Mask for Fan4" hidden="false" />
+      <field name="ALRT_MASK_5" from="4" to="4" access="RW" resetVal="" desc="Alert Mask for Fan5" hidden="false" />
+      <field name="ALRT_MASK_6" from="5" to="5" access="RW" resetVal="" desc="Alert Mask for Fan6" hidden="false" />
+      <field name="ALRT_MASK_7" from="6" to="6" access="RW" resetVal="" desc="Alert Mask for Fan7" hidden="false" />
+      <field name="ALRT_MASK_8" from="7" to="7" access="RW" resetVal="" desc="Alert Mask for Fan8" hidden="false" />
+    </register>
+    <register name="FanController_ALERT_STATUS" address="0x40006567" bitWidth="8" desc="Alert Status Register" hidden="false">
+      <field name="STALL_STATUS" from="0" to="0" access="R" resetVal="" desc="Stall status for all Fans" hidden="false">
+        <value name="NO_STALL" value="0" desc="No stall occurred" />
+        <value name="STALL" value="1" desc="Stall is occurred" />
+      </field>
+      <field name="SPEED_STATUS" from="1" to="1" access="R" resetVal="" desc="Speed status for all Fans" hidden="false">
+        <value name="NO_SPEED_ERROR" value="0" desc="No speed error occurred" />
+        <value name="SPEED_ERROR" value="1" desc="Speed error is occurred" />
+      </field>
+    </register>
+  </block>
+  <block name="Pin_Input_LEFT" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="FreqDiv_2" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="Pin_Input_RIGHT" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="Pin_Input_UP" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="FreqDiv_3" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="FreqDiv_4" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+</blockRegMap>

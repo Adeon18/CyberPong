@@ -1,0 +1,2062 @@
+ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\cc7Ther5.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.syntax unified
+  15              		.file	"main.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.section	.text.print_all_speed,"ax",%progbits
+  20              		.align	2
+  21              		.global	print_all_speed
+  22              		.thumb
+  23              		.thumb_func
+  24              		.type	print_all_speed, %function
+  25              	print_all_speed:
+  26              	.LFB64:
+  27              		.file 1 "main.c"
+   1:main.c        **** /* ========================================
+   2:main.c        ****  *
+   3:main.c        ****  * Copyright YOUR COMPANY, THE YEAR
+   4:main.c        ****  * All Rights Reserved
+   5:main.c        ****  * UNPUBLISHED, LICENSED SOFTWARE.
+   6:main.c        ****  *
+   7:main.c        ****  * CONFIDENTIAL AND PROPRIETARY INFORMATION
+   8:main.c        ****  * WHICH IS THE PROPERTY OF your company.
+   9:main.c        ****  *
+  10:main.c        ****  * ========================================
+  11:main.c        **** */
+  12:main.c        **** #include "project.h"
+  13:main.c        **** #include <stdio.h>
+  14:main.c        **** #include "main_data.h"
+  15:main.c        **** 
+  16:main.c        **** int8 print_speed = 0;
+  17:main.c        **** int8 read_motor_speeds = 0;
+  18:main.c        **** uint16_t current_desired_speed;
+  19:main.c        **** 
+  20:main.c        **** 
+  21:main.c        **** void print_all_speed() {
+  28              		.loc 1 21 0
+  29              		.cfi_startproc
+  30              		@ args = 0, pretend = 0, frame = 0
+  31              		@ frame_needed = 0, uses_anonymous_args = 0
+  32 0000 2DE9F041 		push	{r4, r5, r6, r7, r8, lr}
+  33              		.cfi_def_cfa_offset 24
+  34              		.cfi_offset 4, -24
+  35              		.cfi_offset 5, -20
+  36              		.cfi_offset 6, -16
+ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\cc7Ther5.s 			page 2
+
+
+  37              		.cfi_offset 7, -12
+  38              		.cfi_offset 8, -8
+  39              		.cfi_offset 14, -4
+  40              	.LVL0:
+  41              	.LBB2:
+  22:main.c        ****     // Print all the speeds through UART in a line.
+  23:main.c        ****     for (int i = 1; i < MOTOR_COUNT + 1; i++) {
+  42              		.loc 1 23 0
+  43 0004 0125     		movs	r5, #1
+  44 0006 23E0     		b	.L2
+  45              	.LVL1:
+  46              	.L3:
+  24:main.c        ****         current_rpm = FanController_GetActualSpeed(i);
+  47              		.loc 1 24 0 discriminator 3
+  48 0008 5FFA85F8 		uxtb	r8, r5
+  49 000c 4046     		mov	r0, r8
+  50 000e FFF7FEFF 		bl	FanController_GetActualSpeed
+  51              	.LVL2:
+  52 0012 0246     		mov	r2, r0
+  53 0014 134F     		ldr	r7, .L5
+  54 0016 3860     		str	r0, [r7]
+  25:main.c        ****         sprintf(uart_rpm_buff, "%u", current_rpm);
+  55              		.loc 1 25 0 discriminator 3
+  56 0018 134E     		ldr	r6, .L5+4
+  57 001a 144C     		ldr	r4, .L5+8
+  58 001c 3146     		mov	r1, r6
+  59 001e 2046     		mov	r0, r4
+  60 0020 FFF7FEFF 		bl	sprintf
+  61              	.LVL3:
+  26:main.c        ****         UART_PutString(uart_rpm_buff);
+  62              		.loc 1 26 0 discriminator 3
+  63 0024 2046     		mov	r0, r4
+  64 0026 FFF7FEFF 		bl	UART_PutString
+  65              	.LVL4:
+  27:main.c        ****         UART_PutChar(' ');
+  66              		.loc 1 27 0 discriminator 3
+  67 002a 2020     		movs	r0, #32
+  68 002c FFF7FEFF 		bl	UART_PutChar
+  69              	.LVL5:
+  28:main.c        ****         
+  29:main.c        ****         current_rpm = FanController_GetDesiredSpeed(i);
+  70              		.loc 1 29 0 discriminator 3
+  71 0030 4046     		mov	r0, r8
+  72 0032 FFF7FEFF 		bl	FanController_GetDesiredSpeed
+  73              	.LVL6:
+  74 0036 0246     		mov	r2, r0
+  75 0038 3860     		str	r0, [r7]
+  30:main.c        ****         sprintf(uart_rpm_buff, "%u", current_rpm);
+  76              		.loc 1 30 0 discriminator 3
+  77 003a 3146     		mov	r1, r6
+  78 003c 2046     		mov	r0, r4
+  79 003e FFF7FEFF 		bl	sprintf
+  80              	.LVL7:
+  31:main.c        ****         UART_PutString(uart_rpm_buff);
+  81              		.loc 1 31 0 discriminator 3
+  82 0042 2046     		mov	r0, r4
+  83 0044 FFF7FEFF 		bl	UART_PutString
+ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\cc7Ther5.s 			page 3
+
+
+  84              	.LVL8:
+  32:main.c        ****         UART_PutChar(' ');
+  85              		.loc 1 32 0 discriminator 3
+  86 0048 2020     		movs	r0, #32
+  87 004a FFF7FEFF 		bl	UART_PutChar
+  88              	.LVL9:
+  23:main.c        ****         current_rpm = FanController_GetActualSpeed(i);
+  89              		.loc 1 23 0 discriminator 3
+  90 004e 0135     		adds	r5, r5, #1
+  91              	.LVL10:
+  92              	.L2:
+  23:main.c        ****         current_rpm = FanController_GetActualSpeed(i);
+  93              		.loc 1 23 0 is_stmt 0 discriminator 1
+  94 0050 042D     		cmp	r5, #4
+  95 0052 D9DD     		ble	.L3
+  96              	.LBE2:
+  33:main.c        ****     }
+  34:main.c        ****     UART_PutChar('\n');
+  97              		.loc 1 34 0 is_stmt 1
+  98 0054 0A20     		movs	r0, #10
+  99 0056 FFF7FEFF 		bl	UART_PutChar
+ 100              	.LVL11:
+  35:main.c        ****     UART_PutChar('\r');
+ 101              		.loc 1 35 0
+ 102 005a 0D20     		movs	r0, #13
+ 103 005c FFF7FEFF 		bl	UART_PutChar
+ 104              	.LVL12:
+ 105 0060 BDE8F081 		pop	{r4, r5, r6, r7, r8, pc}
+ 106              	.LVL13:
+ 107              	.L6:
+ 108              		.align	2
+ 109              	.L5:
+ 110 0064 00000000 		.word	current_rpm
+ 111 0068 00000000 		.word	.LC0
+ 112 006c 00000000 		.word	uart_rpm_buff
+ 113              		.cfi_endproc
+ 114              	.LFE64:
+ 115              		.size	print_all_speed, .-print_all_speed
+ 116              		.section	.text.write_motor_speed,"ax",%progbits
+ 117              		.align	2
+ 118              		.global	write_motor_speed
+ 119              		.thumb
+ 120              		.thumb_func
+ 121              		.type	write_motor_speed, %function
+ 122              	write_motor_speed:
+ 123              	.LFB65:
+  36:main.c        **** }
+  37:main.c        **** 
+  38:main.c        **** void write_motor_speed() {
+ 124              		.loc 1 38 0
+ 125              		.cfi_startproc
+ 126              		@ args = 0, pretend = 0, frame = 0
+ 127              		@ frame_needed = 0, uses_anonymous_args = 0
+ 128 0000 10B5     		push	{r4, lr}
+ 129              		.cfi_def_cfa_offset 8
+ 130              		.cfi_offset 4, -8
+ 131              		.cfi_offset 14, -4
+ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\cc7Ther5.s 			page 4
+
+
+ 132              	.LVL14:
+ 133              	.LBB3:
+  39:main.c        ****     // Write the speed of all motors
+  40:main.c        ****     for (int i = 0; i < MOTOR_COUNT; i++) {
+ 134              		.loc 1 40 0
+ 135 0002 0024     		movs	r4, #0
+ 136 0004 0EE0     		b	.L8
+ 137              	.LVL15:
+ 138              	.L10:
+  41:main.c        ****         if (motor_speeds[i] > MIN_RPM && motor_speeds[i] < MAX_RPM) {
+ 139              		.loc 1 41 0
+ 140 0006 094B     		ldr	r3, .L12
+ 141 0008 33F81410 		ldrh	r1, [r3, r4, lsl #1]
+ 142 000c A1F2D173 		subw	r3, r1, #2001
+ 143 0010 9BB2     		uxth	r3, r3
+ 144 0012 40F62C12 		movw	r2, #2348
+ 145 0016 9342     		cmp	r3, r2
+ 146 0018 03D8     		bhi	.L9
+  42:main.c        ****             FanController_SetDesiredSpeed(i+1, motor_speeds[i]);
+ 147              		.loc 1 42 0
+ 148 001a 601C     		adds	r0, r4, #1
+ 149 001c C0B2     		uxtb	r0, r0
+ 150 001e FFF7FEFF 		bl	FanController_SetDesiredSpeed
+ 151              	.LVL16:
+ 152              	.L9:
+  40:main.c        ****         if (motor_speeds[i] > MIN_RPM && motor_speeds[i] < MAX_RPM) {
+ 153              		.loc 1 40 0 discriminator 2
+ 154 0022 0134     		adds	r4, r4, #1
+ 155              	.LVL17:
+ 156              	.L8:
+  40:main.c        ****         if (motor_speeds[i] > MIN_RPM && motor_speeds[i] < MAX_RPM) {
+ 157              		.loc 1 40 0 is_stmt 0 discriminator 1
+ 158 0024 032C     		cmp	r4, #3
+ 159 0026 EEDD     		ble	.L10
+ 160              	.LBE3:
+  43:main.c        ****         } else {
+  44:main.c        ****             continue;
+  45:main.c        ****         }
+  46:main.c        ****     }
+  47:main.c        **** }
+ 161              		.loc 1 47 0 is_stmt 1
+ 162 0028 10BD     		pop	{r4, pc}
+ 163              	.LVL18:
+ 164              	.L13:
+ 165 002a 00BF     		.align	2
+ 166              	.L12:
+ 167 002c 00000000 		.word	motor_speeds
+ 168              		.cfi_endproc
+ 169              	.LFE65:
+ 170              		.size	write_motor_speed, .-write_motor_speed
+ 171              		.section	.text.Timer_Isr_Handler,"ax",%progbits
+ 172              		.align	2
+ 173              		.global	Timer_Isr_Handler
+ 174              		.thumb
+ 175              		.thumb_func
+ 176              		.type	Timer_Isr_Handler, %function
+ 177              	Timer_Isr_Handler:
+ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\cc7Ther5.s 			page 5
+
+
+ 178              	.LFB66:
+  48:main.c        **** 
+  49:main.c        **** 
+  50:main.c        **** CY_ISR(Timer_Isr_Handler) {
+ 179              		.loc 1 50 0
+ 180              		.cfi_startproc
+ 181              		@ args = 0, pretend = 0, frame = 0
+ 182              		@ frame_needed = 0, uses_anonymous_args = 0
+ 183 0000 08B5     		push	{r3, lr}
+ 184              		.cfi_def_cfa_offset 8
+ 185              		.cfi_offset 3, -8
+ 186              		.cfi_offset 14, -4
+  51:main.c        ****     current_desired_speed = FanController_GetDesiredSpeed(1);
+ 187              		.loc 1 51 0
+ 188 0002 0120     		movs	r0, #1
+ 189 0004 FFF7FEFF 		bl	FanController_GetDesiredSpeed
+ 190              	.LVL19:
+ 191 0008 0A4B     		ldr	r3, .L18
+ 192 000a 1880     		strh	r0, [r3]	@ movhi
+  52:main.c        ****     
+  53:main.c        ****     if (current_desired_speed == 3000) {
+ 193              		.loc 1 53 0
+ 194 000c 40F6B833 		movw	r3, #3000
+ 195 0010 9842     		cmp	r0, r3
+ 196 0012 05D1     		bne	.L15
+  54:main.c        ****         FanController_SetDesiredSpeed(1, 4000);
+ 197              		.loc 1 54 0
+ 198 0014 4FF47A61 		mov	r1, #4000
+ 199 0018 0120     		movs	r0, #1
+ 200 001a FFF7FEFF 		bl	FanController_SetDesiredSpeed
+ 201              	.LVL20:
+ 202 001e 08BD     		pop	{r3, pc}
+ 203              	.L15:
+  55:main.c        ****     } else if (current_desired_speed == 4000) {
+ 204              		.loc 1 55 0
+ 205 0020 B0F57A6F 		cmp	r0, #4000
+ 206 0024 04D1     		bne	.L14
+  56:main.c        ****         FanController_SetDesiredSpeed(1, 3000);
+ 207              		.loc 1 56 0
+ 208 0026 40F6B831 		movw	r1, #3000
+ 209 002a 0120     		movs	r0, #1
+ 210 002c FFF7FEFF 		bl	FanController_SetDesiredSpeed
+ 211              	.LVL21:
+ 212              	.L14:
+ 213 0030 08BD     		pop	{r3, pc}
+ 214              	.L19:
+ 215 0032 00BF     		.align	2
+ 216              	.L18:
+ 217 0034 00000000 		.word	current_desired_speed
+ 218              		.cfi_endproc
+ 219              	.LFE66:
+ 220              		.size	Timer_Isr_Handler, .-Timer_Isr_Handler
+ 221              		.section	.text.Ouput_Speed_Isr_handler,"ax",%progbits
+ 222              		.align	2
+ 223              		.global	Ouput_Speed_Isr_handler
+ 224              		.thumb
+ 225              		.thumb_func
+ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\cc7Ther5.s 			page 6
+
+
+ 226              		.type	Ouput_Speed_Isr_handler, %function
+ 227              	Ouput_Speed_Isr_handler:
+ 228              	.LFB67:
+  57:main.c        ****     }
+  58:main.c        ****     //Timer_ChangeSpeed_ClearInterrupt(Timer_ChangeSpeed_INTR_MASK_TC);
+  59:main.c        **** 
+  60:main.c        **** }
+  61:main.c        **** 
+  62:main.c        **** 
+  63:main.c        **** CY_ISR(Ouput_Speed_Isr_handler) {
+ 229              		.loc 1 63 0
+ 230              		.cfi_startproc
+ 231              		@ args = 0, pretend = 0, frame = 0
+ 232              		@ frame_needed = 0, uses_anonymous_args = 0
+  64:main.c        ****     
+  65:main.c        ****     if (print_speed) {
+ 233              		.loc 1 65 0
+ 234 0000 154B     		ldr	r3, .L24
+ 235 0002 93F90030 		ldrsb	r3, [r3]
+ 236 0006 2BB3     		cbz	r3, .L23
+  63:main.c        ****     
+ 237              		.loc 1 63 0
+ 238 0008 70B5     		push	{r4, r5, r6, lr}
+ 239              		.cfi_def_cfa_offset 16
+ 240              		.cfi_offset 4, -16
+ 241              		.cfi_offset 5, -12
+ 242              		.cfi_offset 6, -8
+ 243              		.cfi_offset 14, -4
+  66:main.c        ****         current_rpm = FanController_GetActualSpeed(1);
+ 244              		.loc 1 66 0
+ 245 000a 0120     		movs	r0, #1
+ 246 000c FFF7FEFF 		bl	FanController_GetActualSpeed
+ 247              	.LVL22:
+ 248 0010 0246     		mov	r2, r0
+ 249 0012 124E     		ldr	r6, .L24+4
+ 250 0014 3060     		str	r0, [r6]
+  67:main.c        ****         sprintf(uart_rpm_buff, "%u", current_rpm);
+ 251              		.loc 1 67 0
+ 252 0016 124D     		ldr	r5, .L24+8
+ 253 0018 124C     		ldr	r4, .L24+12
+ 254 001a 2946     		mov	r1, r5
+ 255 001c 2046     		mov	r0, r4
+ 256 001e FFF7FEFF 		bl	sprintf
+ 257              	.LVL23:
+  68:main.c        ****         UART_PutString(uart_rpm_buff);
+ 258              		.loc 1 68 0
+ 259 0022 2046     		mov	r0, r4
+ 260 0024 FFF7FEFF 		bl	UART_PutString
+ 261              	.LVL24:
+  69:main.c        ****         UART_PutChar(' ');
+ 262              		.loc 1 69 0
+ 263 0028 2020     		movs	r0, #32
+ 264 002a FFF7FEFF 		bl	UART_PutChar
+ 265              	.LVL25:
+  70:main.c        ****         
+  71:main.c        ****         current_rpm = FanController_GetDesiredSpeed(1);
+ 266              		.loc 1 71 0
+ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\cc7Ther5.s 			page 7
+
+
+ 267 002e 0120     		movs	r0, #1
+ 268 0030 FFF7FEFF 		bl	FanController_GetDesiredSpeed
+ 269              	.LVL26:
+ 270 0034 0246     		mov	r2, r0
+ 271 0036 3060     		str	r0, [r6]
+  72:main.c        ****         sprintf(uart_rpm_buff, "%u", current_rpm);
+ 272              		.loc 1 72 0
+ 273 0038 2946     		mov	r1, r5
+ 274 003a 2046     		mov	r0, r4
+ 275 003c FFF7FEFF 		bl	sprintf
+ 276              	.LVL27:
+  73:main.c        ****         UART_PutString(uart_rpm_buff);
+ 277              		.loc 1 73 0
+ 278 0040 2046     		mov	r0, r4
+ 279 0042 FFF7FEFF 		bl	UART_PutString
+ 280              	.LVL28:
+  74:main.c        ****         UART_PutChar('\n');
+ 281              		.loc 1 74 0
+ 282 0046 0A20     		movs	r0, #10
+ 283 0048 FFF7FEFF 		bl	UART_PutChar
+ 284              	.LVL29:
+  75:main.c        ****         UART_PutChar('\r');
+ 285              		.loc 1 75 0
+ 286 004c 0D20     		movs	r0, #13
+ 287 004e FFF7FEFF 		bl	UART_PutChar
+ 288              	.LVL30:
+ 289 0052 70BD     		pop	{r4, r5, r6, pc}
+ 290              	.L23:
+ 291              		.cfi_def_cfa_offset 0
+ 292              		.cfi_restore 4
+ 293              		.cfi_restore 5
+ 294              		.cfi_restore 6
+ 295              		.cfi_restore 14
+ 296 0054 7047     		bx	lr
+ 297              	.L25:
+ 298 0056 00BF     		.align	2
+ 299              	.L24:
+ 300 0058 00000000 		.word	.LANCHOR0
+ 301 005c 00000000 		.word	current_rpm
+ 302 0060 00000000 		.word	.LC0
+ 303 0064 00000000 		.word	uart_rpm_buff
+ 304              		.cfi_endproc
+ 305              	.LFE67:
+ 306              		.size	Ouput_Speed_Isr_handler, .-Ouput_Speed_Isr_handler
+ 307              		.section	.text.main,"ax",%progbits
+ 308              		.align	2
+ 309              		.global	main
+ 310              		.thumb
+ 311              		.thumb_func
+ 312              		.type	main, %function
+ 313              	main:
+ 314              	.LFB68:
+  76:main.c        ****     }
+  77:main.c        ****     //Timer_OutputSpeed_ClearInterrupt(Timer_ChangeSpeed_INTR_MASK_TC);
+  78:main.c        **** }
+  79:main.c        **** 
+  80:main.c        **** 
+ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\cc7Ther5.s 			page 8
+
+
+  81:main.c        **** int main(void)
+  82:main.c        **** {
+ 315              		.loc 1 82 0
+ 316              		.cfi_startproc
+ 317              		@ args = 0, pretend = 0, frame = 0
+ 318              		@ frame_needed = 0, uses_anonymous_args = 0
+ 319 0000 70B5     		push	{r4, r5, r6, lr}
+ 320              		.cfi_def_cfa_offset 16
+ 321              		.cfi_offset 4, -16
+ 322              		.cfi_offset 5, -12
+ 323              		.cfi_offset 6, -8
+ 324              		.cfi_offset 14, -4
+  83:main.c        ****     CyGlobalIntEnable; /* Enable global interrupts. */
+ 325              		.loc 1 83 0
+ 326              		.syntax unified
+ 327              	@ 83 "main.c" 1
+ 328 0002 62B6     		CPSIE   i
+ 329              	@ 0 "" 2
+  84:main.c        ****     
+  85:main.c        ****     // Initialize some variables
+  86:main.c        ****     current_rpm = 0;
+ 330              		.loc 1 86 0
+ 331              		.thumb
+ 332              		.syntax unified
+ 333 0004 0025     		movs	r5, #0
+ 334 0006 224B     		ldr	r3, .L37
+ 335 0008 1D60     		str	r5, [r3]
+  87:main.c        ****     
+  88:main.c        **** 
+  89:main.c        ****     /* Start Everything Up */
+  90:main.c        ****     FanController_Start();
+ 336              		.loc 1 90 0
+ 337 000a FFF7FEFF 		bl	FanController_Start
+ 338              	.LVL31:
+  91:main.c        ****     UART_Start();
+ 339              		.loc 1 91 0
+ 340 000e FFF7FEFF 		bl	UART_Start
+ 341              	.LVL32:
+  92:main.c        ****     //Timer_ChangeSpeed_Start();
+  93:main.c        ****     //Timer_OutputSpeed_Start();
+  94:main.c        ****     // ISR_Timer_StartEx(Timer_Isr_Handler);
+  95:main.c        ****     //ISR_OutSpeed_StartEx(Ouput_Speed_Isr_handler);
+  96:main.c        **** 
+  97:main.c        ****     char ch;
+  98:main.c        ****     int16 speed_buf = 0;
+  99:main.c        ****     int8 speed_idx = 0;
+ 342              		.loc 1 99 0
+ 343 0012 2E46     		mov	r6, r5
+ 344              	.LVL33:
+ 345              	.L27:
+ 100:main.c        ****     for(;;)
+ 101:main.c        ****     {   
+ 102:main.c        ****         ch = UART_GetChar();
+ 346              		.loc 1 102 0
+ 347 0014 FFF7FEFF 		bl	UART_GetChar
+ 348              	.LVL34:
+ 349 0018 0446     		mov	r4, r0
+ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\cc7Ther5.s 			page 9
+
+
+ 350              	.LVL35:
+ 103:main.c        ****         if(ch == 'p'){print_speed = 0;}
+ 351              		.loc 1 103 0
+ 352 001a 7028     		cmp	r0, #112
+ 353 001c 03D1     		bne	.L28
+ 354              		.loc 1 103 0 is_stmt 0 discriminator 1
+ 355 001e 0022     		movs	r2, #0
+ 356 0020 1C4B     		ldr	r3, .L37+4
+ 357 0022 1A70     		strb	r2, [r3]
+ 358 0024 29E0     		b	.L29
+ 359              	.L28:
+ 104:main.c        ****         else if(ch == 's'){print_speed = 1;}
+ 360              		.loc 1 104 0 is_stmt 1
+ 361 0026 7328     		cmp	r0, #115
+ 362 0028 03D1     		bne	.L30
+ 363              		.loc 1 104 0 is_stmt 0 discriminator 1
+ 364 002a 0122     		movs	r2, #1
+ 365 002c 194B     		ldr	r3, .L37+4
+ 366 002e 1A70     		strb	r2, [r3]
+ 367 0030 23E0     		b	.L29
+ 368              	.L30:
+ 105:main.c        ****         else if (ch == ' ') {
+ 369              		.loc 1 105 0 is_stmt 1
+ 370 0032 2028     		cmp	r0, #32
+ 371 0034 06D1     		bne	.L31
+ 106:main.c        ****             motor_speeds[speed_idx] = speed_buf;
+ 372              		.loc 1 106 0
+ 373 0036 184B     		ldr	r3, .L37+8
+ 374 0038 23F81650 		strh	r5, [r3, r6, lsl #1]	@ movhi
+ 107:main.c        ****             speed_idx++;
+ 375              		.loc 1 107 0
+ 376 003c 0136     		adds	r6, r6, #1
+ 377              	.LVL36:
+ 378 003e 76B2     		sxtb	r6, r6
+ 379              	.LVL37:
+ 108:main.c        ****             speed_buf = 0;
+ 380              		.loc 1 108 0
+ 381 0040 0025     		movs	r5, #0
+ 382 0042 1AE0     		b	.L29
+ 383              	.LVL38:
+ 384              	.L31:
+ 109:main.c        ****         }
+ 110:main.c        ****         //else if(ch == '\r' && speed_buf > 2000 && speed_buf < 4350){
+ 111:main.c        ****             // FanController_SetDesiredSpeed(1, speed_buf);
+ 112:main.c        ****          //   speed_buf = 0;
+ 113:main.c        ****          //   UART_UartPutChar('\n');
+ 114:main.c        ****         //}
+ 115:main.c        ****         else if(ch == '\r'){
+ 385              		.loc 1 115 0
+ 386 0044 0D28     		cmp	r0, #13
+ 387 0046 0CD1     		bne	.L32
+ 116:main.c        ****             if (speed_idx == MOTOR_COUNT - 1) {
+ 388              		.loc 1 116 0
+ 389 0048 032E     		cmp	r6, #3
+ 390 004a 02D1     		bne	.L33
+ 117:main.c        ****                 motor_speeds[speed_idx] = speed_buf;
+ 391              		.loc 1 117 0
+ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\cc7Ther5.s 			page 10
+
+
+ 392 004c 124B     		ldr	r3, .L37+8
+ 393 004e 23F81650 		strh	r5, [r3, r6, lsl #1]	@ movhi
+ 394              	.L33:
+ 118:main.c        ****             }
+ 119:main.c        ****             write_motor_speed();
+ 395              		.loc 1 119 0
+ 396 0052 FFF7FEFF 		bl	write_motor_speed
+ 397              	.LVL39:
+ 120:main.c        ****             speed_buf = 0;
+ 121:main.c        ****             speed_idx = 0;
+ 122:main.c        ****             UART_PutChar('\n');
+ 398              		.loc 1 122 0
+ 399 0056 0A20     		movs	r0, #10
+ 400 0058 FFF7FEFF 		bl	UART_PutChar
+ 401              	.LVL40:
+ 121:main.c        ****             UART_PutChar('\n');
+ 402              		.loc 1 121 0
+ 403 005c 0026     		movs	r6, #0
+ 120:main.c        ****             speed_buf = 0;
+ 404              		.loc 1 120 0
+ 405 005e 3546     		mov	r5, r6
+ 406 0060 0BE0     		b	.L29
+ 407              	.LVL41:
+ 408              	.L32:
+ 123:main.c        ****         }
+ 124:main.c        ****         else if(ch < 58 && ch > 47){
+ 409              		.loc 1 124 0
+ 410 0062 A0F13003 		sub	r3, r0, #48
+ 411 0066 DBB2     		uxtb	r3, r3
+ 412 0068 092B     		cmp	r3, #9
+ 413 006a 06D8     		bhi	.L29
+ 125:main.c        ****             speed_buf *= 10;
+ 414              		.loc 1 125 0
+ 415 006c 05EB8505 		add	r5, r5, r5, lsl #2
+ 416              	.LVL42:
+ 417 0070 6B00     		lsls	r3, r5, #1
+ 418 0072 9DB2     		uxth	r5, r3
+ 419              	.LVL43:
+ 126:main.c        ****             speed_buf += ch - '0';
+ 420              		.loc 1 126 0
+ 421 0074 0544     		add	r5, r5, r0
+ 422              	.LVL44:
+ 423 0076 303D     		subs	r5, r5, #48
+ 424 0078 2DB2     		sxth	r5, r5
+ 425              	.LVL45:
+ 426              	.L29:
+ 127:main.c        ****         }
+ 128:main.c        ****         if(print_speed){
+ 427              		.loc 1 128 0
+ 428 007a 064B     		ldr	r3, .L37+4
+ 429 007c 93F90030 		ldrsb	r3, [r3]
+ 430 0080 13B1     		cbz	r3, .L34
+ 129:main.c        ****             print_all_speed(); 
+ 431              		.loc 1 129 0
+ 432 0082 FFF7FEFF 		bl	print_all_speed
+ 433              	.LVL46:
+ 434 0086 C5E7     		b	.L27
+ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\cc7Ther5.s 			page 11
+
+
+ 435              	.L34:
+ 130:main.c        ****         }
+ 131:main.c        ****         else{
+ 132:main.c        ****             UART_PutChar(ch);
+ 436              		.loc 1 132 0
+ 437 0088 2046     		mov	r0, r4
+ 438 008a FFF7FEFF 		bl	UART_PutChar
+ 439              	.LVL47:
+ 440 008e C1E7     		b	.L27
+ 441              	.L38:
+ 442              		.align	2
+ 443              	.L37:
+ 444 0090 00000000 		.word	current_rpm
+ 445 0094 00000000 		.word	.LANCHOR0
+ 446 0098 00000000 		.word	motor_speeds
+ 447              		.cfi_endproc
+ 448              	.LFE68:
+ 449              		.size	main, .-main
+ 450              		.comm	current_desired_speed,2,2
+ 451              		.global	read_motor_speeds
+ 452              		.global	print_speed
+ 453              		.comm	motor_speeds,8,4
+ 454              		.comm	uart_rpm_buff,4,4
+ 455              		.comm	current_rpm,4,4
+ 456              		.section	.rodata.str1.4,"aMS",%progbits,1
+ 457              		.align	2
+ 458              	.LC0:
+ 459 0000 257500   		.ascii	"%u\000"
+ 460              		.bss
+ 461              		.set	.LANCHOR0,. + 0
+ 462              		.type	print_speed, %object
+ 463              		.size	print_speed, 1
+ 464              	print_speed:
+ 465 0000 00       		.space	1
+ 466              		.type	read_motor_speeds, %object
+ 467              		.size	read_motor_speeds, 1
+ 468              	read_motor_speeds:
+ 469 0001 00       		.space	1
+ 470              		.text
+ 471              	.Letext0:
+ 472              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4.
+ 473              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4.
+ 474              		.file 4 "Generated_Source\\PSoC5/cytypes.h"
+ 475              		.file 5 "Generated_Source\\PSoC5/core_cm3.h"
+ 476              		.file 6 "main_data.h"
+ 477              		.file 7 "Generated_Source\\PSoC5/FanController.h"
+ 478              		.file 8 "c:\\program files (x86)\\cypress\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4.
+ 479              		.file 9 "Generated_Source\\PSoC5/UART.h"
+ 480              		.section	.debug_info,"",%progbits
+ 481              	.Ldebug_info0:
+ 482 0000 EA040000 		.4byte	0x4ea
+ 483 0004 0400     		.2byte	0x4
+ 484 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 485 000a 04       		.byte	0x4
+ 486 000b 01       		.uleb128 0x1
+ 487 000c 1A010000 		.4byte	.LASF46
+ 488 0010 0C       		.byte	0xc
+ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\cc7Ther5.s 			page 12
+
+
+ 489 0011 BB020000 		.4byte	.LASF47
+ 490 0015 00000000 		.4byte	.LASF48
+ 491 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 492 001d 00000000 		.4byte	0
+ 493 0021 00000000 		.4byte	.Ldebug_line0
+ 494 0025 02       		.uleb128 0x2
+ 495 0026 01       		.byte	0x1
+ 496 0027 06       		.byte	0x6
+ 497 0028 73020000 		.4byte	.LASF0
+ 498 002c 02       		.uleb128 0x2
+ 499 002d 01       		.byte	0x1
+ 500 002e 08       		.byte	0x8
+ 501 002f 0C010000 		.4byte	.LASF1
+ 502 0033 03       		.uleb128 0x3
+ 503 0034 6E000000 		.4byte	.LASF3
+ 504 0038 02       		.byte	0x2
+ 505 0039 29       		.byte	0x29
+ 506 003a 3E000000 		.4byte	0x3e
+ 507 003e 02       		.uleb128 0x2
+ 508 003f 02       		.byte	0x2
+ 509 0040 05       		.byte	0x5
+ 510 0041 D4020000 		.4byte	.LASF2
+ 511 0045 03       		.uleb128 0x3
+ 512 0046 FF010000 		.4byte	.LASF4
+ 513 004a 02       		.byte	0x2
+ 514 004b 2B       		.byte	0x2b
+ 515 004c 50000000 		.4byte	0x50
+ 516 0050 02       		.uleb128 0x2
+ 517 0051 02       		.byte	0x2
+ 518 0052 07       		.byte	0x7
+ 519 0053 9A000000 		.4byte	.LASF5
+ 520 0057 03       		.uleb128 0x3
+ 521 0058 90000000 		.4byte	.LASF6
+ 522 005c 02       		.byte	0x2
+ 523 005d 3F       		.byte	0x3f
+ 524 005e 62000000 		.4byte	0x62
+ 525 0062 02       		.uleb128 0x2
+ 526 0063 04       		.byte	0x4
+ 527 0064 05       		.byte	0x5
+ 528 0065 FD020000 		.4byte	.LASF7
+ 529 0069 03       		.uleb128 0x3
+ 530 006a 11020000 		.4byte	.LASF8
+ 531 006e 02       		.byte	0x2
+ 532 006f 41       		.byte	0x41
+ 533 0070 74000000 		.4byte	0x74
+ 534 0074 02       		.uleb128 0x2
+ 535 0075 04       		.byte	0x4
+ 536 0076 07       		.byte	0x7
+ 537 0077 BA010000 		.4byte	.LASF9
+ 538 007b 02       		.uleb128 0x2
+ 539 007c 08       		.byte	0x8
+ 540 007d 05       		.byte	0x5
+ 541 007e A4020000 		.4byte	.LASF10
+ 542 0082 02       		.uleb128 0x2
+ 543 0083 08       		.byte	0x8
+ 544 0084 07       		.byte	0x7
+ 545 0085 40020000 		.4byte	.LASF11
+ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\cc7Ther5.s 			page 13
+
+
+ 546 0089 04       		.uleb128 0x4
+ 547 008a 04       		.byte	0x4
+ 548 008b 05       		.byte	0x5
+ 549 008c 696E7400 		.ascii	"int\000"
+ 550 0090 02       		.uleb128 0x2
+ 551 0091 04       		.byte	0x4
+ 552 0092 07       		.byte	0x7
+ 553 0093 33020000 		.4byte	.LASF12
+ 554 0097 03       		.uleb128 0x3
+ 555 0098 6B020000 		.4byte	.LASF13
+ 556 009c 03       		.byte	0x3
+ 557 009d 20       		.byte	0x20
+ 558 009e 33000000 		.4byte	0x33
+ 559 00a2 03       		.uleb128 0x3
+ 560 00a3 EB020000 		.4byte	.LASF14
+ 561 00a7 03       		.byte	0x3
+ 562 00a8 24       		.byte	0x24
+ 563 00a9 45000000 		.4byte	0x45
+ 564 00ad 03       		.uleb128 0x3
+ 565 00ae 7F020000 		.4byte	.LASF15
+ 566 00b2 03       		.byte	0x3
+ 567 00b3 2C       		.byte	0x2c
+ 568 00b4 57000000 		.4byte	0x57
+ 569 00b8 03       		.uleb128 0x3
+ 570 00b9 F4020000 		.4byte	.LASF16
+ 571 00bd 03       		.byte	0x3
+ 572 00be 30       		.byte	0x30
+ 573 00bf 69000000 		.4byte	0x69
+ 574 00c3 05       		.uleb128 0x5
+ 575 00c4 1C020000 		.4byte	.LASF17
+ 576 00c8 04       		.byte	0x4
+ 577 00c9 EB01     		.2byte	0x1eb
+ 578 00cb 25000000 		.4byte	0x25
+ 579 00cf 05       		.uleb128 0x5
+ 580 00d0 B4010000 		.4byte	.LASF18
+ 581 00d4 04       		.byte	0x4
+ 582 00d5 EC01     		.2byte	0x1ec
+ 583 00d7 3E000000 		.4byte	0x3e
+ 584 00db 02       		.uleb128 0x2
+ 585 00dc 04       		.byte	0x4
+ 586 00dd 04       		.byte	0x4
+ 587 00de CB000000 		.4byte	.LASF19
+ 588 00e2 02       		.uleb128 0x2
+ 589 00e3 08       		.byte	0x8
+ 590 00e4 04       		.byte	0x4
+ 591 00e5 0A020000 		.4byte	.LASF20
+ 592 00e9 02       		.uleb128 0x2
+ 593 00ea 01       		.byte	0x1
+ 594 00eb 08       		.byte	0x8
+ 595 00ec C2020000 		.4byte	.LASF21
+ 596 00f0 02       		.uleb128 0x2
+ 597 00f1 08       		.byte	0x8
+ 598 00f2 04       		.byte	0x4
+ 599 00f3 06030000 		.4byte	.LASF22
+ 600 00f7 02       		.uleb128 0x2
+ 601 00f8 04       		.byte	0x4
+ 602 00f9 07       		.byte	0x7
+ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\cc7Ther5.s 			page 14
+
+
+ 603 00fa B2020000 		.4byte	.LASF23
+ 604 00fe 06       		.uleb128 0x6
+ 605 00ff 94020000 		.4byte	.LASF24
+ 606 0103 01       		.byte	0x1
+ 607 0104 15       		.byte	0x15
+ 608 0105 00000000 		.4byte	.LFB64
+ 609 0109 70000000 		.4byte	.LFE64-.LFB64
+ 610 010d 01       		.uleb128 0x1
+ 611 010e 9C       		.byte	0x9c
+ 612 010f F9010000 		.4byte	0x1f9
+ 613 0113 07       		.uleb128 0x7
+ 614 0114 04000000 		.4byte	.LBB2
+ 615 0118 50000000 		.4byte	.LBE2-.LBB2
+ 616 011c D6010000 		.4byte	0x1d6
+ 617 0120 08       		.uleb128 0x8
+ 618 0121 6900     		.ascii	"i\000"
+ 619 0123 01       		.byte	0x1
+ 620 0124 17       		.byte	0x17
+ 621 0125 89000000 		.4byte	0x89
+ 622 0129 00000000 		.4byte	.LLST0
+ 623 012d 09       		.uleb128 0x9
+ 624 012e 12000000 		.4byte	.LVL2
+ 625 0132 8A040000 		.4byte	0x48a
+ 626 0136 41010000 		.4byte	0x141
+ 627 013a 0A       		.uleb128 0xa
+ 628 013b 01       		.uleb128 0x1
+ 629 013c 50       		.byte	0x50
+ 630 013d 02       		.uleb128 0x2
+ 631 013e 78       		.byte	0x78
+ 632 013f 00       		.sleb128 0
+ 633 0140 00       		.byte	0
+ 634 0141 09       		.uleb128 0x9
+ 635 0142 24000000 		.4byte	.LVL3
+ 636 0146 95040000 		.4byte	0x495
+ 637 014a 5B010000 		.4byte	0x15b
+ 638 014e 0A       		.uleb128 0xa
+ 639 014f 01       		.uleb128 0x1
+ 640 0150 50       		.byte	0x50
+ 641 0151 02       		.uleb128 0x2
+ 642 0152 74       		.byte	0x74
+ 643 0153 00       		.sleb128 0
+ 644 0154 0A       		.uleb128 0xa
+ 645 0155 01       		.uleb128 0x1
+ 646 0156 51       		.byte	0x51
+ 647 0157 02       		.uleb128 0x2
+ 648 0158 76       		.byte	0x76
+ 649 0159 00       		.sleb128 0
+ 650 015a 00       		.byte	0
+ 651 015b 09       		.uleb128 0x9
+ 652 015c 2A000000 		.4byte	.LVL4
+ 653 0160 A0040000 		.4byte	0x4a0
+ 654 0164 6F010000 		.4byte	0x16f
+ 655 0168 0A       		.uleb128 0xa
+ 656 0169 01       		.uleb128 0x1
+ 657 016a 50       		.byte	0x50
+ 658 016b 02       		.uleb128 0x2
+ 659 016c 74       		.byte	0x74
+ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\cc7Ther5.s 			page 15
+
+
+ 660 016d 00       		.sleb128 0
+ 661 016e 00       		.byte	0
+ 662 016f 09       		.uleb128 0x9
+ 663 0170 30000000 		.4byte	.LVL5
+ 664 0174 AB040000 		.4byte	0x4ab
+ 665 0178 83010000 		.4byte	0x183
+ 666 017c 0A       		.uleb128 0xa
+ 667 017d 01       		.uleb128 0x1
+ 668 017e 50       		.byte	0x50
+ 669 017f 02       		.uleb128 0x2
+ 670 0180 08       		.byte	0x8
+ 671 0181 20       		.byte	0x20
+ 672 0182 00       		.byte	0
+ 673 0183 09       		.uleb128 0x9
+ 674 0184 36000000 		.4byte	.LVL6
+ 675 0188 B6040000 		.4byte	0x4b6
+ 676 018c 97010000 		.4byte	0x197
+ 677 0190 0A       		.uleb128 0xa
+ 678 0191 01       		.uleb128 0x1
+ 679 0192 50       		.byte	0x50
+ 680 0193 02       		.uleb128 0x2
+ 681 0194 78       		.byte	0x78
+ 682 0195 00       		.sleb128 0
+ 683 0196 00       		.byte	0
+ 684 0197 09       		.uleb128 0x9
+ 685 0198 42000000 		.4byte	.LVL7
+ 686 019c 95040000 		.4byte	0x495
+ 687 01a0 B1010000 		.4byte	0x1b1
+ 688 01a4 0A       		.uleb128 0xa
+ 689 01a5 01       		.uleb128 0x1
+ 690 01a6 50       		.byte	0x50
+ 691 01a7 02       		.uleb128 0x2
+ 692 01a8 74       		.byte	0x74
+ 693 01a9 00       		.sleb128 0
+ 694 01aa 0A       		.uleb128 0xa
+ 695 01ab 01       		.uleb128 0x1
+ 696 01ac 51       		.byte	0x51
+ 697 01ad 02       		.uleb128 0x2
+ 698 01ae 76       		.byte	0x76
+ 699 01af 00       		.sleb128 0
+ 700 01b0 00       		.byte	0
+ 701 01b1 09       		.uleb128 0x9
+ 702 01b2 48000000 		.4byte	.LVL8
+ 703 01b6 A0040000 		.4byte	0x4a0
+ 704 01ba C5010000 		.4byte	0x1c5
+ 705 01be 0A       		.uleb128 0xa
+ 706 01bf 01       		.uleb128 0x1
+ 707 01c0 50       		.byte	0x50
+ 708 01c1 02       		.uleb128 0x2
+ 709 01c2 74       		.byte	0x74
+ 710 01c3 00       		.sleb128 0
+ 711 01c4 00       		.byte	0
+ 712 01c5 0B       		.uleb128 0xb
+ 713 01c6 4E000000 		.4byte	.LVL9
+ 714 01ca AB040000 		.4byte	0x4ab
+ 715 01ce 0A       		.uleb128 0xa
+ 716 01cf 01       		.uleb128 0x1
+ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\cc7Ther5.s 			page 16
+
+
+ 717 01d0 50       		.byte	0x50
+ 718 01d1 02       		.uleb128 0x2
+ 719 01d2 08       		.byte	0x8
+ 720 01d3 20       		.byte	0x20
+ 721 01d4 00       		.byte	0
+ 722 01d5 00       		.byte	0
+ 723 01d6 09       		.uleb128 0x9
+ 724 01d7 5A000000 		.4byte	.LVL11
+ 725 01db AB040000 		.4byte	0x4ab
+ 726 01df E9010000 		.4byte	0x1e9
+ 727 01e3 0A       		.uleb128 0xa
+ 728 01e4 01       		.uleb128 0x1
+ 729 01e5 50       		.byte	0x50
+ 730 01e6 01       		.uleb128 0x1
+ 731 01e7 3A       		.byte	0x3a
+ 732 01e8 00       		.byte	0
+ 733 01e9 0B       		.uleb128 0xb
+ 734 01ea 60000000 		.4byte	.LVL12
+ 735 01ee AB040000 		.4byte	0x4ab
+ 736 01f2 0A       		.uleb128 0xa
+ 737 01f3 01       		.uleb128 0x1
+ 738 01f4 50       		.byte	0x50
+ 739 01f5 01       		.uleb128 0x1
+ 740 01f6 3D       		.byte	0x3d
+ 741 01f7 00       		.byte	0
+ 742 01f8 00       		.byte	0
+ 743 01f9 06       		.uleb128 0x6
+ 744 01fa 12030000 		.4byte	.LASF25
+ 745 01fe 01       		.byte	0x1
+ 746 01ff 26       		.byte	0x26
+ 747 0200 00000000 		.4byte	.LFB65
+ 748 0204 30000000 		.4byte	.LFE65-.LFB65
+ 749 0208 01       		.uleb128 0x1
+ 750 0209 9C       		.byte	0x9c
+ 751 020a 36020000 		.4byte	0x236
+ 752 020e 0C       		.uleb128 0xc
+ 753 020f 02000000 		.4byte	.LBB3
+ 754 0213 26000000 		.4byte	.LBE3-.LBB3
+ 755 0217 08       		.uleb128 0x8
+ 756 0218 6900     		.ascii	"i\000"
+ 757 021a 01       		.byte	0x1
+ 758 021b 28       		.byte	0x28
+ 759 021c 89000000 		.4byte	0x89
+ 760 0220 1F000000 		.4byte	.LLST1
+ 761 0224 0B       		.uleb128 0xb
+ 762 0225 22000000 		.4byte	.LVL16
+ 763 0229 C1040000 		.4byte	0x4c1
+ 764 022d 0A       		.uleb128 0xa
+ 765 022e 01       		.uleb128 0x1
+ 766 022f 50       		.byte	0x50
+ 767 0230 02       		.uleb128 0x2
+ 768 0231 74       		.byte	0x74
+ 769 0232 01       		.sleb128 1
+ 770 0233 00       		.byte	0
+ 771 0234 00       		.byte	0
+ 772 0235 00       		.byte	0
+ 773 0236 0D       		.uleb128 0xd
+ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\cc7Ther5.s 			page 17
+
+
+ 774 0237 24030000 		.4byte	.LASF26
+ 775 023b 01       		.byte	0x1
+ 776 023c 32       		.byte	0x32
+ 777 023d 00000000 		.4byte	.LFB66
+ 778 0241 38000000 		.4byte	.LFE66-.LFB66
+ 779 0245 01       		.uleb128 0x1
+ 780 0246 9C       		.byte	0x9c
+ 781 0247 8F020000 		.4byte	0x28f
+ 782 024b 09       		.uleb128 0x9
+ 783 024c 08000000 		.4byte	.LVL19
+ 784 0250 B6040000 		.4byte	0x4b6
+ 785 0254 5E020000 		.4byte	0x25e
+ 786 0258 0A       		.uleb128 0xa
+ 787 0259 01       		.uleb128 0x1
+ 788 025a 50       		.byte	0x50
+ 789 025b 01       		.uleb128 0x1
+ 790 025c 31       		.byte	0x31
+ 791 025d 00       		.byte	0
+ 792 025e 09       		.uleb128 0x9
+ 793 025f 1E000000 		.4byte	.LVL20
+ 794 0263 C1040000 		.4byte	0x4c1
+ 795 0267 78020000 		.4byte	0x278
+ 796 026b 0A       		.uleb128 0xa
+ 797 026c 01       		.uleb128 0x1
+ 798 026d 50       		.byte	0x50
+ 799 026e 01       		.uleb128 0x1
+ 800 026f 31       		.byte	0x31
+ 801 0270 0A       		.uleb128 0xa
+ 802 0271 01       		.uleb128 0x1
+ 803 0272 51       		.byte	0x51
+ 804 0273 03       		.uleb128 0x3
+ 805 0274 0A       		.byte	0xa
+ 806 0275 A00F     		.2byte	0xfa0
+ 807 0277 00       		.byte	0
+ 808 0278 0B       		.uleb128 0xb
+ 809 0279 30000000 		.4byte	.LVL21
+ 810 027d C1040000 		.4byte	0x4c1
+ 811 0281 0A       		.uleb128 0xa
+ 812 0282 01       		.uleb128 0x1
+ 813 0283 50       		.byte	0x50
+ 814 0284 01       		.uleb128 0x1
+ 815 0285 31       		.byte	0x31
+ 816 0286 0A       		.uleb128 0xa
+ 817 0287 01       		.uleb128 0x1
+ 818 0288 51       		.byte	0x51
+ 819 0289 03       		.uleb128 0x3
+ 820 028a 0A       		.byte	0xa
+ 821 028b B80B     		.2byte	0xbb8
+ 822 028d 00       		.byte	0
+ 823 028e 00       		.byte	0
+ 824 028f 0D       		.uleb128 0xd
+ 825 0290 78000000 		.4byte	.LASF27
+ 826 0294 01       		.byte	0x1
+ 827 0295 3F       		.byte	0x3f
+ 828 0296 00000000 		.4byte	.LFB67
+ 829 029a 68000000 		.4byte	.LFE67-.LFB67
+ 830 029e 01       		.uleb128 0x1
+ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\cc7Ther5.s 			page 18
+
+
+ 831 029f 9C       		.byte	0x9c
+ 832 02a0 5D030000 		.4byte	0x35d
+ 833 02a4 09       		.uleb128 0x9
+ 834 02a5 10000000 		.4byte	.LVL22
+ 835 02a9 8A040000 		.4byte	0x48a
+ 836 02ad B7020000 		.4byte	0x2b7
+ 837 02b1 0A       		.uleb128 0xa
+ 838 02b2 01       		.uleb128 0x1
+ 839 02b3 50       		.byte	0x50
+ 840 02b4 01       		.uleb128 0x1
+ 841 02b5 31       		.byte	0x31
+ 842 02b6 00       		.byte	0
+ 843 02b7 09       		.uleb128 0x9
+ 844 02b8 22000000 		.4byte	.LVL23
+ 845 02bc 95040000 		.4byte	0x495
+ 846 02c0 D1020000 		.4byte	0x2d1
+ 847 02c4 0A       		.uleb128 0xa
+ 848 02c5 01       		.uleb128 0x1
+ 849 02c6 50       		.byte	0x50
+ 850 02c7 02       		.uleb128 0x2
+ 851 02c8 74       		.byte	0x74
+ 852 02c9 00       		.sleb128 0
+ 853 02ca 0A       		.uleb128 0xa
+ 854 02cb 01       		.uleb128 0x1
+ 855 02cc 51       		.byte	0x51
+ 856 02cd 02       		.uleb128 0x2
+ 857 02ce 75       		.byte	0x75
+ 858 02cf 00       		.sleb128 0
+ 859 02d0 00       		.byte	0
+ 860 02d1 09       		.uleb128 0x9
+ 861 02d2 28000000 		.4byte	.LVL24
+ 862 02d6 A0040000 		.4byte	0x4a0
+ 863 02da E5020000 		.4byte	0x2e5
+ 864 02de 0A       		.uleb128 0xa
+ 865 02df 01       		.uleb128 0x1
+ 866 02e0 50       		.byte	0x50
+ 867 02e1 02       		.uleb128 0x2
+ 868 02e2 74       		.byte	0x74
+ 869 02e3 00       		.sleb128 0
+ 870 02e4 00       		.byte	0
+ 871 02e5 09       		.uleb128 0x9
+ 872 02e6 2E000000 		.4byte	.LVL25
+ 873 02ea AB040000 		.4byte	0x4ab
+ 874 02ee F9020000 		.4byte	0x2f9
+ 875 02f2 0A       		.uleb128 0xa
+ 876 02f3 01       		.uleb128 0x1
+ 877 02f4 50       		.byte	0x50
+ 878 02f5 02       		.uleb128 0x2
+ 879 02f6 08       		.byte	0x8
+ 880 02f7 20       		.byte	0x20
+ 881 02f8 00       		.byte	0
+ 882 02f9 09       		.uleb128 0x9
+ 883 02fa 34000000 		.4byte	.LVL26
+ 884 02fe B6040000 		.4byte	0x4b6
+ 885 0302 0C030000 		.4byte	0x30c
+ 886 0306 0A       		.uleb128 0xa
+ 887 0307 01       		.uleb128 0x1
+ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\cc7Ther5.s 			page 19
+
+
+ 888 0308 50       		.byte	0x50
+ 889 0309 01       		.uleb128 0x1
+ 890 030a 31       		.byte	0x31
+ 891 030b 00       		.byte	0
+ 892 030c 09       		.uleb128 0x9
+ 893 030d 40000000 		.4byte	.LVL27
+ 894 0311 95040000 		.4byte	0x495
+ 895 0315 26030000 		.4byte	0x326
+ 896 0319 0A       		.uleb128 0xa
+ 897 031a 01       		.uleb128 0x1
+ 898 031b 50       		.byte	0x50
+ 899 031c 02       		.uleb128 0x2
+ 900 031d 74       		.byte	0x74
+ 901 031e 00       		.sleb128 0
+ 902 031f 0A       		.uleb128 0xa
+ 903 0320 01       		.uleb128 0x1
+ 904 0321 51       		.byte	0x51
+ 905 0322 02       		.uleb128 0x2
+ 906 0323 75       		.byte	0x75
+ 907 0324 00       		.sleb128 0
+ 908 0325 00       		.byte	0
+ 909 0326 09       		.uleb128 0x9
+ 910 0327 46000000 		.4byte	.LVL28
+ 911 032b A0040000 		.4byte	0x4a0
+ 912 032f 3A030000 		.4byte	0x33a
+ 913 0333 0A       		.uleb128 0xa
+ 914 0334 01       		.uleb128 0x1
+ 915 0335 50       		.byte	0x50
+ 916 0336 02       		.uleb128 0x2
+ 917 0337 74       		.byte	0x74
+ 918 0338 00       		.sleb128 0
+ 919 0339 00       		.byte	0
+ 920 033a 09       		.uleb128 0x9
+ 921 033b 4C000000 		.4byte	.LVL29
+ 922 033f AB040000 		.4byte	0x4ab
+ 923 0343 4D030000 		.4byte	0x34d
+ 924 0347 0A       		.uleb128 0xa
+ 925 0348 01       		.uleb128 0x1
+ 926 0349 50       		.byte	0x50
+ 927 034a 01       		.uleb128 0x1
+ 928 034b 3A       		.byte	0x3a
+ 929 034c 00       		.byte	0
+ 930 034d 0B       		.uleb128 0xb
+ 931 034e 52000000 		.4byte	.LVL30
+ 932 0352 AB040000 		.4byte	0x4ab
+ 933 0356 0A       		.uleb128 0xa
+ 934 0357 01       		.uleb128 0x1
+ 935 0358 50       		.byte	0x50
+ 936 0359 01       		.uleb128 0x1
+ 937 035a 3D       		.byte	0x3d
+ 938 035b 00       		.byte	0
+ 939 035c 00       		.byte	0
+ 940 035d 0E       		.uleb128 0xe
+ 941 035e 2E020000 		.4byte	.LASF49
+ 942 0362 01       		.byte	0x1
+ 943 0363 51       		.byte	0x51
+ 944 0364 89000000 		.4byte	0x89
+ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\cc7Ther5.s 			page 20
+
+
+ 945 0368 00000000 		.4byte	.LFB68
+ 946 036c 9C000000 		.4byte	.LFE68-.LFB68
+ 947 0370 01       		.uleb128 0x1
+ 948 0371 9C       		.byte	0x9c
+ 949 0372 F3030000 		.4byte	0x3f3
+ 950 0376 08       		.uleb128 0x8
+ 951 0377 636800   		.ascii	"ch\000"
+ 952 037a 01       		.byte	0x1
+ 953 037b 61       		.byte	0x61
+ 954 037c E9000000 		.4byte	0xe9
+ 955 0380 3E000000 		.4byte	.LLST2
+ 956 0384 0F       		.uleb128 0xf
+ 957 0385 57020000 		.4byte	.LASF28
+ 958 0389 01       		.byte	0x1
+ 959 038a 62       		.byte	0x62
+ 960 038b CF000000 		.4byte	0xcf
+ 961 038f 5C000000 		.4byte	.LLST3
+ 962 0393 0F       		.uleb128 0xf
+ 963 0394 61020000 		.4byte	.LASF29
+ 964 0398 01       		.byte	0x1
+ 965 0399 63       		.byte	0x63
+ 966 039a C3000000 		.4byte	0xc3
+ 967 039e CA000000 		.4byte	.LLST4
+ 968 03a2 10       		.uleb128 0x10
+ 969 03a3 0E000000 		.4byte	.LVL31
+ 970 03a7 CC040000 		.4byte	0x4cc
+ 971 03ab 10       		.uleb128 0x10
+ 972 03ac 12000000 		.4byte	.LVL32
+ 973 03b0 D7040000 		.4byte	0x4d7
+ 974 03b4 10       		.uleb128 0x10
+ 975 03b5 18000000 		.4byte	.LVL34
+ 976 03b9 E2040000 		.4byte	0x4e2
+ 977 03bd 10       		.uleb128 0x10
+ 978 03be 56000000 		.4byte	.LVL39
+ 979 03c2 F9010000 		.4byte	0x1f9
+ 980 03c6 09       		.uleb128 0x9
+ 981 03c7 5C000000 		.4byte	.LVL40
+ 982 03cb AB040000 		.4byte	0x4ab
+ 983 03cf D9030000 		.4byte	0x3d9
+ 984 03d3 0A       		.uleb128 0xa
+ 985 03d4 01       		.uleb128 0x1
+ 986 03d5 50       		.byte	0x50
+ 987 03d6 01       		.uleb128 0x1
+ 988 03d7 3A       		.byte	0x3a
+ 989 03d8 00       		.byte	0
+ 990 03d9 10       		.uleb128 0x10
+ 991 03da 86000000 		.4byte	.LVL46
+ 992 03de FE000000 		.4byte	0xfe
+ 993 03e2 0B       		.uleb128 0xb
+ 994 03e3 8E000000 		.4byte	.LVL47
+ 995 03e7 AB040000 		.4byte	0x4ab
+ 996 03eb 0A       		.uleb128 0xa
+ 997 03ec 01       		.uleb128 0x1
+ 998 03ed 50       		.byte	0x50
+ 999 03ee 02       		.uleb128 0x2
+ 1000 03ef 74       		.byte	0x74
+ 1001 03f0 00       		.sleb128 0
+ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\cc7Ther5.s 			page 21
+
+
+ 1002 03f1 00       		.byte	0
+ 1003 03f2 00       		.byte	0
+ 1004 03f3 11       		.uleb128 0x11
+ 1005 03f4 21020000 		.4byte	.LASF30
+ 1006 03f8 05       		.byte	0x5
+ 1007 03f9 1207     		.2byte	0x712
+ 1008 03fb FF030000 		.4byte	0x3ff
+ 1009 03ff 12       		.uleb128 0x12
+ 1010 0400 AD000000 		.4byte	0xad
+ 1011 0404 13       		.uleb128 0x13
+ 1012 0405 A8010000 		.4byte	.LASF31
+ 1013 0409 06       		.byte	0x6
+ 1014 040a 14       		.byte	0x14
+ 1015 040b B8000000 		.4byte	0xb8
+ 1016 040f 05       		.uleb128 0x5
+ 1017 0410 03       		.byte	0x3
+ 1018 0411 00000000 		.4byte	current_rpm
+ 1019 0415 14       		.uleb128 0x14
+ 1020 0416 E9000000 		.4byte	0xe9
+ 1021 041a 25040000 		.4byte	0x425
+ 1022 041e 15       		.uleb128 0x15
+ 1023 041f F7000000 		.4byte	0xf7
+ 1024 0423 03       		.byte	0x3
+ 1025 0424 00       		.byte	0
+ 1026 0425 13       		.uleb128 0x13
+ 1027 0426 4D030000 		.4byte	.LASF32
+ 1028 042a 06       		.byte	0x6
+ 1029 042b 17       		.byte	0x17
+ 1030 042c 15040000 		.4byte	0x415
+ 1031 0430 05       		.uleb128 0x5
+ 1032 0431 03       		.byte	0x3
+ 1033 0432 00000000 		.4byte	uart_rpm_buff
+ 1034 0436 14       		.uleb128 0x14
+ 1035 0437 97000000 		.4byte	0x97
+ 1036 043b 46040000 		.4byte	0x446
+ 1037 043f 15       		.uleb128 0x15
+ 1038 0440 F7000000 		.4byte	0xf7
+ 1039 0444 03       		.byte	0x3
+ 1040 0445 00       		.byte	0
+ 1041 0446 13       		.uleb128 0x13
+ 1042 0447 DE020000 		.4byte	.LASF33
+ 1043 044b 06       		.byte	0x6
+ 1044 044c 18       		.byte	0x18
+ 1045 044d 36040000 		.4byte	0x436
+ 1046 0451 05       		.uleb128 0x5
+ 1047 0452 03       		.byte	0x3
+ 1048 0453 00000000 		.4byte	motor_speeds
+ 1049 0457 13       		.uleb128 0x13
+ 1050 0458 62000000 		.4byte	.LASF34
+ 1051 045c 01       		.byte	0x1
+ 1052 045d 10       		.byte	0x10
+ 1053 045e C3000000 		.4byte	0xc3
+ 1054 0462 05       		.uleb128 0x5
+ 1055 0463 03       		.byte	0x3
+ 1056 0464 00000000 		.4byte	print_speed
+ 1057 0468 13       		.uleb128 0x13
+ 1058 0469 CC010000 		.4byte	.LASF35
+ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\cc7Ther5.s 			page 22
+
+
+ 1059 046d 01       		.byte	0x1
+ 1060 046e 11       		.byte	0x11
+ 1061 046f C3000000 		.4byte	0xc3
+ 1062 0473 05       		.uleb128 0x5
+ 1063 0474 03       		.byte	0x3
+ 1064 0475 00000000 		.4byte	read_motor_speeds
+ 1065 0479 13       		.uleb128 0x13
+ 1066 047a E9010000 		.4byte	.LASF36
+ 1067 047e 01       		.byte	0x1
+ 1068 047f 12       		.byte	0x12
+ 1069 0480 A2000000 		.4byte	0xa2
+ 1070 0484 05       		.uleb128 0x5
+ 1071 0485 03       		.byte	0x3
+ 1072 0486 00000000 		.4byte	current_desired_speed
+ 1073 048a 16       		.uleb128 0x16
+ 1074 048b EF000000 		.4byte	.LASF37
+ 1075 048f EF000000 		.4byte	.LASF37
+ 1076 0493 07       		.byte	0x7
+ 1077 0494 6D       		.byte	0x6d
+ 1078 0495 16       		.uleb128 0x16
+ 1079 0496 45030000 		.4byte	.LASF38
+ 1080 049a 45030000 		.4byte	.LASF38
+ 1081 049e 08       		.byte	0x8
+ 1082 049f E7       		.byte	0xe7
+ 1083 04a0 16       		.uleb128 0x16
+ 1084 04a1 36030000 		.4byte	.LASF39
+ 1085 04a5 36030000 		.4byte	.LASF39
+ 1086 04a9 09       		.byte	0x9
+ 1087 04aa 8B       		.byte	0x8b
+ 1088 04ab 16       		.uleb128 0x16
+ 1089 04ac 87020000 		.4byte	.LASF40
+ 1090 04b0 87020000 		.4byte	.LASF40
+ 1091 04b4 09       		.byte	0x9
+ 1092 04b5 8A       		.byte	0x8a
+ 1093 04b6 16       		.uleb128 0x16
+ 1094 04b7 AD000000 		.4byte	.LASF41
+ 1095 04bb AD000000 		.4byte	.LASF41
+ 1096 04bf 07       		.byte	0x7
+ 1097 04c0 7C       		.byte	0x7c
+ 1098 04c1 16       		.uleb128 0x16
+ 1099 04c2 D1000000 		.4byte	.LASF42
+ 1100 04c6 D1000000 		.4byte	.LASF42
+ 1101 04ca 07       		.byte	0x7
+ 1102 04cb 6B       		.byte	0x6b
+ 1103 04cc 16       		.uleb128 0x16
+ 1104 04cd 4E000000 		.4byte	.LASF43
+ 1105 04d1 4E000000 		.4byte	.LASF43
+ 1106 04d5 07       		.byte	0x7
+ 1107 04d6 5C       		.byte	0x5c
+ 1108 04d7 16       		.uleb128 0x16
+ 1109 04d8 DE010000 		.4byte	.LASF44
+ 1110 04dc DE010000 		.4byte	.LASF44
+ 1111 04e0 09       		.byte	0x9
+ 1112 04e1 54       		.byte	0x54
+ 1113 04e2 16       		.uleb128 0x16
+ 1114 04e3 C7020000 		.4byte	.LASF45
+ 1115 04e7 C7020000 		.4byte	.LASF45
+ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\cc7Ther5.s 			page 23
+
+
+ 1116 04eb 09       		.byte	0x9
+ 1117 04ec 71       		.byte	0x71
+ 1118 04ed 00       		.byte	0
+ 1119              		.section	.debug_abbrev,"",%progbits
+ 1120              	.Ldebug_abbrev0:
+ 1121 0000 01       		.uleb128 0x1
+ 1122 0001 11       		.uleb128 0x11
+ 1123 0002 01       		.byte	0x1
+ 1124 0003 25       		.uleb128 0x25
+ 1125 0004 0E       		.uleb128 0xe
+ 1126 0005 13       		.uleb128 0x13
+ 1127 0006 0B       		.uleb128 0xb
+ 1128 0007 03       		.uleb128 0x3
+ 1129 0008 0E       		.uleb128 0xe
+ 1130 0009 1B       		.uleb128 0x1b
+ 1131 000a 0E       		.uleb128 0xe
+ 1132 000b 55       		.uleb128 0x55
+ 1133 000c 17       		.uleb128 0x17
+ 1134 000d 11       		.uleb128 0x11
+ 1135 000e 01       		.uleb128 0x1
+ 1136 000f 10       		.uleb128 0x10
+ 1137 0010 17       		.uleb128 0x17
+ 1138 0011 00       		.byte	0
+ 1139 0012 00       		.byte	0
+ 1140 0013 02       		.uleb128 0x2
+ 1141 0014 24       		.uleb128 0x24
+ 1142 0015 00       		.byte	0
+ 1143 0016 0B       		.uleb128 0xb
+ 1144 0017 0B       		.uleb128 0xb
+ 1145 0018 3E       		.uleb128 0x3e
+ 1146 0019 0B       		.uleb128 0xb
+ 1147 001a 03       		.uleb128 0x3
+ 1148 001b 0E       		.uleb128 0xe
+ 1149 001c 00       		.byte	0
+ 1150 001d 00       		.byte	0
+ 1151 001e 03       		.uleb128 0x3
+ 1152 001f 16       		.uleb128 0x16
+ 1153 0020 00       		.byte	0
+ 1154 0021 03       		.uleb128 0x3
+ 1155 0022 0E       		.uleb128 0xe
+ 1156 0023 3A       		.uleb128 0x3a
+ 1157 0024 0B       		.uleb128 0xb
+ 1158 0025 3B       		.uleb128 0x3b
+ 1159 0026 0B       		.uleb128 0xb
+ 1160 0027 49       		.uleb128 0x49
+ 1161 0028 13       		.uleb128 0x13
+ 1162 0029 00       		.byte	0
+ 1163 002a 00       		.byte	0
+ 1164 002b 04       		.uleb128 0x4
+ 1165 002c 24       		.uleb128 0x24
+ 1166 002d 00       		.byte	0
+ 1167 002e 0B       		.uleb128 0xb
+ 1168 002f 0B       		.uleb128 0xb
+ 1169 0030 3E       		.uleb128 0x3e
+ 1170 0031 0B       		.uleb128 0xb
+ 1171 0032 03       		.uleb128 0x3
+ 1172 0033 08       		.uleb128 0x8
+ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\cc7Ther5.s 			page 24
+
+
+ 1173 0034 00       		.byte	0
+ 1174 0035 00       		.byte	0
+ 1175 0036 05       		.uleb128 0x5
+ 1176 0037 16       		.uleb128 0x16
+ 1177 0038 00       		.byte	0
+ 1178 0039 03       		.uleb128 0x3
+ 1179 003a 0E       		.uleb128 0xe
+ 1180 003b 3A       		.uleb128 0x3a
+ 1181 003c 0B       		.uleb128 0xb
+ 1182 003d 3B       		.uleb128 0x3b
+ 1183 003e 05       		.uleb128 0x5
+ 1184 003f 49       		.uleb128 0x49
+ 1185 0040 13       		.uleb128 0x13
+ 1186 0041 00       		.byte	0
+ 1187 0042 00       		.byte	0
+ 1188 0043 06       		.uleb128 0x6
+ 1189 0044 2E       		.uleb128 0x2e
+ 1190 0045 01       		.byte	0x1
+ 1191 0046 3F       		.uleb128 0x3f
+ 1192 0047 19       		.uleb128 0x19
+ 1193 0048 03       		.uleb128 0x3
+ 1194 0049 0E       		.uleb128 0xe
+ 1195 004a 3A       		.uleb128 0x3a
+ 1196 004b 0B       		.uleb128 0xb
+ 1197 004c 3B       		.uleb128 0x3b
+ 1198 004d 0B       		.uleb128 0xb
+ 1199 004e 11       		.uleb128 0x11
+ 1200 004f 01       		.uleb128 0x1
+ 1201 0050 12       		.uleb128 0x12
+ 1202 0051 06       		.uleb128 0x6
+ 1203 0052 40       		.uleb128 0x40
+ 1204 0053 18       		.uleb128 0x18
+ 1205 0054 9742     		.uleb128 0x2117
+ 1206 0056 19       		.uleb128 0x19
+ 1207 0057 01       		.uleb128 0x1
+ 1208 0058 13       		.uleb128 0x13
+ 1209 0059 00       		.byte	0
+ 1210 005a 00       		.byte	0
+ 1211 005b 07       		.uleb128 0x7
+ 1212 005c 0B       		.uleb128 0xb
+ 1213 005d 01       		.byte	0x1
+ 1214 005e 11       		.uleb128 0x11
+ 1215 005f 01       		.uleb128 0x1
+ 1216 0060 12       		.uleb128 0x12
+ 1217 0061 06       		.uleb128 0x6
+ 1218 0062 01       		.uleb128 0x1
+ 1219 0063 13       		.uleb128 0x13
+ 1220 0064 00       		.byte	0
+ 1221 0065 00       		.byte	0
+ 1222 0066 08       		.uleb128 0x8
+ 1223 0067 34       		.uleb128 0x34
+ 1224 0068 00       		.byte	0
+ 1225 0069 03       		.uleb128 0x3
+ 1226 006a 08       		.uleb128 0x8
+ 1227 006b 3A       		.uleb128 0x3a
+ 1228 006c 0B       		.uleb128 0xb
+ 1229 006d 3B       		.uleb128 0x3b
+ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\cc7Ther5.s 			page 25
+
+
+ 1230 006e 0B       		.uleb128 0xb
+ 1231 006f 49       		.uleb128 0x49
+ 1232 0070 13       		.uleb128 0x13
+ 1233 0071 02       		.uleb128 0x2
+ 1234 0072 17       		.uleb128 0x17
+ 1235 0073 00       		.byte	0
+ 1236 0074 00       		.byte	0
+ 1237 0075 09       		.uleb128 0x9
+ 1238 0076 898201   		.uleb128 0x4109
+ 1239 0079 01       		.byte	0x1
+ 1240 007a 11       		.uleb128 0x11
+ 1241 007b 01       		.uleb128 0x1
+ 1242 007c 31       		.uleb128 0x31
+ 1243 007d 13       		.uleb128 0x13
+ 1244 007e 01       		.uleb128 0x1
+ 1245 007f 13       		.uleb128 0x13
+ 1246 0080 00       		.byte	0
+ 1247 0081 00       		.byte	0
+ 1248 0082 0A       		.uleb128 0xa
+ 1249 0083 8A8201   		.uleb128 0x410a
+ 1250 0086 00       		.byte	0
+ 1251 0087 02       		.uleb128 0x2
+ 1252 0088 18       		.uleb128 0x18
+ 1253 0089 9142     		.uleb128 0x2111
+ 1254 008b 18       		.uleb128 0x18
+ 1255 008c 00       		.byte	0
+ 1256 008d 00       		.byte	0
+ 1257 008e 0B       		.uleb128 0xb
+ 1258 008f 898201   		.uleb128 0x4109
+ 1259 0092 01       		.byte	0x1
+ 1260 0093 11       		.uleb128 0x11
+ 1261 0094 01       		.uleb128 0x1
+ 1262 0095 31       		.uleb128 0x31
+ 1263 0096 13       		.uleb128 0x13
+ 1264 0097 00       		.byte	0
+ 1265 0098 00       		.byte	0
+ 1266 0099 0C       		.uleb128 0xc
+ 1267 009a 0B       		.uleb128 0xb
+ 1268 009b 01       		.byte	0x1
+ 1269 009c 11       		.uleb128 0x11
+ 1270 009d 01       		.uleb128 0x1
+ 1271 009e 12       		.uleb128 0x12
+ 1272 009f 06       		.uleb128 0x6
+ 1273 00a0 00       		.byte	0
+ 1274 00a1 00       		.byte	0
+ 1275 00a2 0D       		.uleb128 0xd
+ 1276 00a3 2E       		.uleb128 0x2e
+ 1277 00a4 01       		.byte	0x1
+ 1278 00a5 3F       		.uleb128 0x3f
+ 1279 00a6 19       		.uleb128 0x19
+ 1280 00a7 03       		.uleb128 0x3
+ 1281 00a8 0E       		.uleb128 0xe
+ 1282 00a9 3A       		.uleb128 0x3a
+ 1283 00aa 0B       		.uleb128 0xb
+ 1284 00ab 3B       		.uleb128 0x3b
+ 1285 00ac 0B       		.uleb128 0xb
+ 1286 00ad 27       		.uleb128 0x27
+ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\cc7Ther5.s 			page 26
+
+
+ 1287 00ae 19       		.uleb128 0x19
+ 1288 00af 11       		.uleb128 0x11
+ 1289 00b0 01       		.uleb128 0x1
+ 1290 00b1 12       		.uleb128 0x12
+ 1291 00b2 06       		.uleb128 0x6
+ 1292 00b3 40       		.uleb128 0x40
+ 1293 00b4 18       		.uleb128 0x18
+ 1294 00b5 9742     		.uleb128 0x2117
+ 1295 00b7 19       		.uleb128 0x19
+ 1296 00b8 01       		.uleb128 0x1
+ 1297 00b9 13       		.uleb128 0x13
+ 1298 00ba 00       		.byte	0
+ 1299 00bb 00       		.byte	0
+ 1300 00bc 0E       		.uleb128 0xe
+ 1301 00bd 2E       		.uleb128 0x2e
+ 1302 00be 01       		.byte	0x1
+ 1303 00bf 3F       		.uleb128 0x3f
+ 1304 00c0 19       		.uleb128 0x19
+ 1305 00c1 03       		.uleb128 0x3
+ 1306 00c2 0E       		.uleb128 0xe
+ 1307 00c3 3A       		.uleb128 0x3a
+ 1308 00c4 0B       		.uleb128 0xb
+ 1309 00c5 3B       		.uleb128 0x3b
+ 1310 00c6 0B       		.uleb128 0xb
+ 1311 00c7 27       		.uleb128 0x27
+ 1312 00c8 19       		.uleb128 0x19
+ 1313 00c9 49       		.uleb128 0x49
+ 1314 00ca 13       		.uleb128 0x13
+ 1315 00cb 8701     		.uleb128 0x87
+ 1316 00cd 19       		.uleb128 0x19
+ 1317 00ce 11       		.uleb128 0x11
+ 1318 00cf 01       		.uleb128 0x1
+ 1319 00d0 12       		.uleb128 0x12
+ 1320 00d1 06       		.uleb128 0x6
+ 1321 00d2 40       		.uleb128 0x40
+ 1322 00d3 18       		.uleb128 0x18
+ 1323 00d4 9742     		.uleb128 0x2117
+ 1324 00d6 19       		.uleb128 0x19
+ 1325 00d7 01       		.uleb128 0x1
+ 1326 00d8 13       		.uleb128 0x13
+ 1327 00d9 00       		.byte	0
+ 1328 00da 00       		.byte	0
+ 1329 00db 0F       		.uleb128 0xf
+ 1330 00dc 34       		.uleb128 0x34
+ 1331 00dd 00       		.byte	0
+ 1332 00de 03       		.uleb128 0x3
+ 1333 00df 0E       		.uleb128 0xe
+ 1334 00e0 3A       		.uleb128 0x3a
+ 1335 00e1 0B       		.uleb128 0xb
+ 1336 00e2 3B       		.uleb128 0x3b
+ 1337 00e3 0B       		.uleb128 0xb
+ 1338 00e4 49       		.uleb128 0x49
+ 1339 00e5 13       		.uleb128 0x13
+ 1340 00e6 02       		.uleb128 0x2
+ 1341 00e7 17       		.uleb128 0x17
+ 1342 00e8 00       		.byte	0
+ 1343 00e9 00       		.byte	0
+ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\cc7Ther5.s 			page 27
+
+
+ 1344 00ea 10       		.uleb128 0x10
+ 1345 00eb 898201   		.uleb128 0x4109
+ 1346 00ee 00       		.byte	0
+ 1347 00ef 11       		.uleb128 0x11
+ 1348 00f0 01       		.uleb128 0x1
+ 1349 00f1 31       		.uleb128 0x31
+ 1350 00f2 13       		.uleb128 0x13
+ 1351 00f3 00       		.byte	0
+ 1352 00f4 00       		.byte	0
+ 1353 00f5 11       		.uleb128 0x11
+ 1354 00f6 34       		.uleb128 0x34
+ 1355 00f7 00       		.byte	0
+ 1356 00f8 03       		.uleb128 0x3
+ 1357 00f9 0E       		.uleb128 0xe
+ 1358 00fa 3A       		.uleb128 0x3a
+ 1359 00fb 0B       		.uleb128 0xb
+ 1360 00fc 3B       		.uleb128 0x3b
+ 1361 00fd 05       		.uleb128 0x5
+ 1362 00fe 49       		.uleb128 0x49
+ 1363 00ff 13       		.uleb128 0x13
+ 1364 0100 3F       		.uleb128 0x3f
+ 1365 0101 19       		.uleb128 0x19
+ 1366 0102 3C       		.uleb128 0x3c
+ 1367 0103 19       		.uleb128 0x19
+ 1368 0104 00       		.byte	0
+ 1369 0105 00       		.byte	0
+ 1370 0106 12       		.uleb128 0x12
+ 1371 0107 35       		.uleb128 0x35
+ 1372 0108 00       		.byte	0
+ 1373 0109 49       		.uleb128 0x49
+ 1374 010a 13       		.uleb128 0x13
+ 1375 010b 00       		.byte	0
+ 1376 010c 00       		.byte	0
+ 1377 010d 13       		.uleb128 0x13
+ 1378 010e 34       		.uleb128 0x34
+ 1379 010f 00       		.byte	0
+ 1380 0110 03       		.uleb128 0x3
+ 1381 0111 0E       		.uleb128 0xe
+ 1382 0112 3A       		.uleb128 0x3a
+ 1383 0113 0B       		.uleb128 0xb
+ 1384 0114 3B       		.uleb128 0x3b
+ 1385 0115 0B       		.uleb128 0xb
+ 1386 0116 49       		.uleb128 0x49
+ 1387 0117 13       		.uleb128 0x13
+ 1388 0118 3F       		.uleb128 0x3f
+ 1389 0119 19       		.uleb128 0x19
+ 1390 011a 02       		.uleb128 0x2
+ 1391 011b 18       		.uleb128 0x18
+ 1392 011c 00       		.byte	0
+ 1393 011d 00       		.byte	0
+ 1394 011e 14       		.uleb128 0x14
+ 1395 011f 01       		.uleb128 0x1
+ 1396 0120 01       		.byte	0x1
+ 1397 0121 49       		.uleb128 0x49
+ 1398 0122 13       		.uleb128 0x13
+ 1399 0123 01       		.uleb128 0x1
+ 1400 0124 13       		.uleb128 0x13
+ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\cc7Ther5.s 			page 28
+
+
+ 1401 0125 00       		.byte	0
+ 1402 0126 00       		.byte	0
+ 1403 0127 15       		.uleb128 0x15
+ 1404 0128 21       		.uleb128 0x21
+ 1405 0129 00       		.byte	0
+ 1406 012a 49       		.uleb128 0x49
+ 1407 012b 13       		.uleb128 0x13
+ 1408 012c 2F       		.uleb128 0x2f
+ 1409 012d 0B       		.uleb128 0xb
+ 1410 012e 00       		.byte	0
+ 1411 012f 00       		.byte	0
+ 1412 0130 16       		.uleb128 0x16
+ 1413 0131 2E       		.uleb128 0x2e
+ 1414 0132 00       		.byte	0
+ 1415 0133 3F       		.uleb128 0x3f
+ 1416 0134 19       		.uleb128 0x19
+ 1417 0135 3C       		.uleb128 0x3c
+ 1418 0136 19       		.uleb128 0x19
+ 1419 0137 6E       		.uleb128 0x6e
+ 1420 0138 0E       		.uleb128 0xe
+ 1421 0139 03       		.uleb128 0x3
+ 1422 013a 0E       		.uleb128 0xe
+ 1423 013b 3A       		.uleb128 0x3a
+ 1424 013c 0B       		.uleb128 0xb
+ 1425 013d 3B       		.uleb128 0x3b
+ 1426 013e 0B       		.uleb128 0xb
+ 1427 013f 00       		.byte	0
+ 1428 0140 00       		.byte	0
+ 1429 0141 00       		.byte	0
+ 1430              		.section	.debug_loc,"",%progbits
+ 1431              	.Ldebug_loc0:
+ 1432              	.LLST0:
+ 1433 0000 04000000 		.4byte	.LVL0
+ 1434 0004 08000000 		.4byte	.LVL1
+ 1435 0008 0200     		.2byte	0x2
+ 1436 000a 31       		.byte	0x31
+ 1437 000b 9F       		.byte	0x9f
+ 1438 000c 08000000 		.4byte	.LVL1
+ 1439 0010 64000000 		.4byte	.LVL13
+ 1440 0014 0100     		.2byte	0x1
+ 1441 0016 55       		.byte	0x55
+ 1442 0017 00000000 		.4byte	0
+ 1443 001b 00000000 		.4byte	0
+ 1444              	.LLST1:
+ 1445 001f 02000000 		.4byte	.LVL14
+ 1446 0023 06000000 		.4byte	.LVL15
+ 1447 0027 0200     		.2byte	0x2
+ 1448 0029 30       		.byte	0x30
+ 1449 002a 9F       		.byte	0x9f
+ 1450 002b 06000000 		.4byte	.LVL15
+ 1451 002f 2A000000 		.4byte	.LVL18
+ 1452 0033 0100     		.2byte	0x1
+ 1453 0035 54       		.byte	0x54
+ 1454 0036 00000000 		.4byte	0
+ 1455 003a 00000000 		.4byte	0
+ 1456              	.LLST2:
+ 1457 003e 1A000000 		.4byte	.LVL35
+ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\cc7Ther5.s 			page 29
+
+
+ 1458 0042 55000000 		.4byte	.LVL39-1
+ 1459 0046 0100     		.2byte	0x1
+ 1460 0048 50       		.byte	0x50
+ 1461 0049 62000000 		.4byte	.LVL41
+ 1462 004d 7A000000 		.4byte	.LVL45
+ 1463 0051 0100     		.2byte	0x1
+ 1464 0053 50       		.byte	0x50
+ 1465 0054 00000000 		.4byte	0
+ 1466 0058 00000000 		.4byte	0
+ 1467              	.LLST3:
+ 1468 005c 12000000 		.4byte	.LVL32
+ 1469 0060 14000000 		.4byte	.LVL33
+ 1470 0064 0200     		.2byte	0x2
+ 1471 0066 30       		.byte	0x30
+ 1472 0067 9F       		.byte	0x9f
+ 1473 0068 14000000 		.4byte	.LVL33
+ 1474 006c 40000000 		.4byte	.LVL37
+ 1475 0070 0100     		.2byte	0x1
+ 1476 0072 55       		.byte	0x55
+ 1477 0073 40000000 		.4byte	.LVL37
+ 1478 0077 44000000 		.4byte	.LVL38
+ 1479 007b 0200     		.2byte	0x2
+ 1480 007d 30       		.byte	0x30
+ 1481 007e 9F       		.byte	0x9f
+ 1482 007f 44000000 		.4byte	.LVL38
+ 1483 0083 56000000 		.4byte	.LVL39
+ 1484 0087 0100     		.2byte	0x1
+ 1485 0089 55       		.byte	0x55
+ 1486 008a 56000000 		.4byte	.LVL39
+ 1487 008e 62000000 		.4byte	.LVL41
+ 1488 0092 0200     		.2byte	0x2
+ 1489 0094 30       		.byte	0x30
+ 1490 0095 9F       		.byte	0x9f
+ 1491 0096 62000000 		.4byte	.LVL41
+ 1492 009a 70000000 		.4byte	.LVL42
+ 1493 009e 0100     		.2byte	0x1
+ 1494 00a0 55       		.byte	0x55
+ 1495 00a1 74000000 		.4byte	.LVL43
+ 1496 00a5 76000000 		.4byte	.LVL44
+ 1497 00a9 0100     		.2byte	0x1
+ 1498 00ab 55       		.byte	0x55
+ 1499 00ac 76000000 		.4byte	.LVL44
+ 1500 00b0 7A000000 		.4byte	.LVL45
+ 1501 00b4 0100     		.2byte	0x1
+ 1502 00b6 53       		.byte	0x53
+ 1503 00b7 7A000000 		.4byte	.LVL45
+ 1504 00bb 9C000000 		.4byte	.LFE68
+ 1505 00bf 0100     		.2byte	0x1
+ 1506 00c1 55       		.byte	0x55
+ 1507 00c2 00000000 		.4byte	0
+ 1508 00c6 00000000 		.4byte	0
+ 1509              	.LLST4:
+ 1510 00ca 12000000 		.4byte	.LVL32
+ 1511 00ce 14000000 		.4byte	.LVL33
+ 1512 00d2 0200     		.2byte	0x2
+ 1513 00d4 30       		.byte	0x30
+ 1514 00d5 9F       		.byte	0x9f
+ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\cc7Ther5.s 			page 30
+
+
+ 1515 00d6 14000000 		.4byte	.LVL33
+ 1516 00da 3E000000 		.4byte	.LVL36
+ 1517 00de 0100     		.2byte	0x1
+ 1518 00e0 56       		.byte	0x56
+ 1519 00e1 40000000 		.4byte	.LVL37
+ 1520 00e5 56000000 		.4byte	.LVL39
+ 1521 00e9 0100     		.2byte	0x1
+ 1522 00eb 56       		.byte	0x56
+ 1523 00ec 56000000 		.4byte	.LVL39
+ 1524 00f0 62000000 		.4byte	.LVL41
+ 1525 00f4 0200     		.2byte	0x2
+ 1526 00f6 30       		.byte	0x30
+ 1527 00f7 9F       		.byte	0x9f
+ 1528 00f8 62000000 		.4byte	.LVL41
+ 1529 00fc 9C000000 		.4byte	.LFE68
+ 1530 0100 0100     		.2byte	0x1
+ 1531 0102 56       		.byte	0x56
+ 1532 0103 00000000 		.4byte	0
+ 1533 0107 00000000 		.4byte	0
+ 1534              		.section	.debug_aranges,"",%progbits
+ 1535 0000 3C000000 		.4byte	0x3c
+ 1536 0004 0200     		.2byte	0x2
+ 1537 0006 00000000 		.4byte	.Ldebug_info0
+ 1538 000a 04       		.byte	0x4
+ 1539 000b 00       		.byte	0
+ 1540 000c 0000     		.2byte	0
+ 1541 000e 0000     		.2byte	0
+ 1542 0010 00000000 		.4byte	.LFB64
+ 1543 0014 70000000 		.4byte	.LFE64-.LFB64
+ 1544 0018 00000000 		.4byte	.LFB65
+ 1545 001c 30000000 		.4byte	.LFE65-.LFB65
+ 1546 0020 00000000 		.4byte	.LFB66
+ 1547 0024 38000000 		.4byte	.LFE66-.LFB66
+ 1548 0028 00000000 		.4byte	.LFB67
+ 1549 002c 68000000 		.4byte	.LFE67-.LFB67
+ 1550 0030 00000000 		.4byte	.LFB68
+ 1551 0034 9C000000 		.4byte	.LFE68-.LFB68
+ 1552 0038 00000000 		.4byte	0
+ 1553 003c 00000000 		.4byte	0
+ 1554              		.section	.debug_ranges,"",%progbits
+ 1555              	.Ldebug_ranges0:
+ 1556 0000 00000000 		.4byte	.LFB64
+ 1557 0004 70000000 		.4byte	.LFE64
+ 1558 0008 00000000 		.4byte	.LFB65
+ 1559 000c 30000000 		.4byte	.LFE65
+ 1560 0010 00000000 		.4byte	.LFB66
+ 1561 0014 38000000 		.4byte	.LFE66
+ 1562 0018 00000000 		.4byte	.LFB67
+ 1563 001c 68000000 		.4byte	.LFE67
+ 1564 0020 00000000 		.4byte	.LFB68
+ 1565 0024 9C000000 		.4byte	.LFE68
+ 1566 0028 00000000 		.4byte	0
+ 1567 002c 00000000 		.4byte	0
+ 1568              		.section	.debug_line,"",%progbits
+ 1569              	.Ldebug_line0:
+ 1570 0000 BF020000 		.section	.debug_str,"MS",%progbits,1
+ 1570      0200EB01 
+ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\cc7Ther5.s 			page 31
+
+
+ 1570      00000201 
+ 1570      FB0E0D00 
+ 1570      01010101 
+ 1571              	.LASF48:
+ 1572 0000 433A5C55 		.ascii	"C:\\Users\\Ade0n\\Desktop\\PR\\CyberPong\\CyberPong"
+ 1572      73657273 
+ 1572      5C416465 
+ 1572      306E5C44 
+ 1572      65736B74 
+ 1573 002d 2E637964 		.ascii	".cydsn\\CyberPongRemastered.cydsn\000"
+ 1573      736E5C43 
+ 1573      79626572 
+ 1573      506F6E67 
+ 1573      52656D61 
+ 1574              	.LASF43:
+ 1575 004e 46616E43 		.ascii	"FanController_Start\000"
+ 1575      6F6E7472 
+ 1575      6F6C6C65 
+ 1575      725F5374 
+ 1575      61727400 
+ 1576              	.LASF34:
+ 1577 0062 7072696E 		.ascii	"print_speed\000"
+ 1577      745F7370 
+ 1577      65656400 
+ 1578              	.LASF3:
+ 1579 006e 5F5F696E 		.ascii	"__int16_t\000"
+ 1579      7431365F 
+ 1579      7400
+ 1580              	.LASF27:
+ 1581 0078 4F757075 		.ascii	"Ouput_Speed_Isr_handler\000"
+ 1581      745F5370 
+ 1581      6565645F 
+ 1581      4973725F 
+ 1581      68616E64 
+ 1582              	.LASF6:
+ 1583 0090 5F5F696E 		.ascii	"__int32_t\000"
+ 1583      7433325F 
+ 1583      7400
+ 1584              	.LASF5:
+ 1585 009a 73686F72 		.ascii	"short unsigned int\000"
+ 1585      7420756E 
+ 1585      7369676E 
+ 1585      65642069 
+ 1585      6E7400
+ 1586              	.LASF41:
+ 1587 00ad 46616E43 		.ascii	"FanController_GetDesiredSpeed\000"
+ 1587      6F6E7472 
+ 1587      6F6C6C65 
+ 1587      725F4765 
+ 1587      74446573 
+ 1588              	.LASF19:
+ 1589 00cb 666C6F61 		.ascii	"float\000"
+ 1589      7400
+ 1590              	.LASF42:
+ 1591 00d1 46616E43 		.ascii	"FanController_SetDesiredSpeed\000"
+ 1591      6F6E7472 
+ 1591      6F6C6C65 
+ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\cc7Ther5.s 			page 32
+
+
+ 1591      725F5365 
+ 1591      74446573 
+ 1592              	.LASF37:
+ 1593 00ef 46616E43 		.ascii	"FanController_GetActualSpeed\000"
+ 1593      6F6E7472 
+ 1593      6F6C6C65 
+ 1593      725F4765 
+ 1593      74416374 
+ 1594              	.LASF1:
+ 1595 010c 756E7369 		.ascii	"unsigned char\000"
+ 1595      676E6564 
+ 1595      20636861 
+ 1595      7200
+ 1596              	.LASF46:
+ 1597 011a 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 1597      43313120 
+ 1597      352E342E 
+ 1597      31203230 
+ 1597      31363036 
+ 1598 014d 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
+ 1598      20726576 
+ 1598      6973696F 
+ 1598      6E203233 
+ 1598      37373135 
+ 1599 0180 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 1599      66756E63 
+ 1599      74696F6E 
+ 1599      2D736563 
+ 1599      74696F6E 
+ 1600              	.LASF31:
+ 1601 01a8 63757272 		.ascii	"current_rpm\000"
+ 1601      656E745F 
+ 1601      72706D00 
+ 1602              	.LASF18:
+ 1603 01b4 696E7431 		.ascii	"int16\000"
+ 1603      3600
+ 1604              	.LASF9:
+ 1605 01ba 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1605      20756E73 
+ 1605      69676E65 
+ 1605      6420696E 
+ 1605      7400
+ 1606              	.LASF35:
+ 1607 01cc 72656164 		.ascii	"read_motor_speeds\000"
+ 1607      5F6D6F74 
+ 1607      6F725F73 
+ 1607      70656564 
+ 1607      7300
+ 1608              	.LASF44:
+ 1609 01de 55415254 		.ascii	"UART_Start\000"
+ 1609      5F537461 
+ 1609      727400
+ 1610              	.LASF36:
+ 1611 01e9 63757272 		.ascii	"current_desired_speed\000"
+ 1611      656E745F 
+ 1611      64657369 
+ 1611      7265645F 
+ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\cc7Ther5.s 			page 33
+
+
+ 1611      73706565 
+ 1612              	.LASF4:
+ 1613 01ff 5F5F7569 		.ascii	"__uint16_t\000"
+ 1613      6E743136 
+ 1613      5F7400
+ 1614              	.LASF20:
+ 1615 020a 646F7562 		.ascii	"double\000"
+ 1615      6C6500
+ 1616              	.LASF8:
+ 1617 0211 5F5F7569 		.ascii	"__uint32_t\000"
+ 1617      6E743332 
+ 1617      5F7400
+ 1618              	.LASF17:
+ 1619 021c 696E7438 		.ascii	"int8\000"
+ 1619      00
+ 1620              	.LASF30:
+ 1621 0221 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ 1621      52784275 
+ 1621      66666572 
+ 1621      00
+ 1622              	.LASF49:
+ 1623 022e 6D61696E 		.ascii	"main\000"
+ 1623      00
+ 1624              	.LASF12:
+ 1625 0233 756E7369 		.ascii	"unsigned int\000"
+ 1625      676E6564 
+ 1625      20696E74 
+ 1625      00
+ 1626              	.LASF11:
+ 1627 0240 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1627      206C6F6E 
+ 1627      6720756E 
+ 1627      7369676E 
+ 1627      65642069 
+ 1628              	.LASF28:
+ 1629 0257 73706565 		.ascii	"speed_buf\000"
+ 1629      645F6275 
+ 1629      6600
+ 1630              	.LASF29:
+ 1631 0261 73706565 		.ascii	"speed_idx\000"
+ 1631      645F6964 
+ 1631      7800
+ 1632              	.LASF13:
+ 1633 026b 696E7431 		.ascii	"int16_t\000"
+ 1633      365F7400 
+ 1634              	.LASF0:
+ 1635 0273 7369676E 		.ascii	"signed char\000"
+ 1635      65642063 
+ 1635      68617200 
+ 1636              	.LASF15:
+ 1637 027f 696E7433 		.ascii	"int32_t\000"
+ 1637      325F7400 
+ 1638              	.LASF40:
+ 1639 0287 55415254 		.ascii	"UART_PutChar\000"
+ 1639      5F507574 
+ 1639      43686172 
+ 1639      00
+ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\cc7Ther5.s 			page 34
+
+
+ 1640              	.LASF24:
+ 1641 0294 7072696E 		.ascii	"print_all_speed\000"
+ 1641      745F616C 
+ 1641      6C5F7370 
+ 1641      65656400 
+ 1642              	.LASF10:
+ 1643 02a4 6C6F6E67 		.ascii	"long long int\000"
+ 1643      206C6F6E 
+ 1643      6720696E 
+ 1643      7400
+ 1644              	.LASF23:
+ 1645 02b2 73697A65 		.ascii	"sizetype\000"
+ 1645      74797065 
+ 1645      00
+ 1646              	.LASF47:
+ 1647 02bb 6D61696E 		.ascii	"main.c\000"
+ 1647      2E6300
+ 1648              	.LASF21:
+ 1649 02c2 63686172 		.ascii	"char\000"
+ 1649      00
+ 1650              	.LASF45:
+ 1651 02c7 55415254 		.ascii	"UART_GetChar\000"
+ 1651      5F476574 
+ 1651      43686172 
+ 1651      00
+ 1652              	.LASF2:
+ 1653 02d4 73686F72 		.ascii	"short int\000"
+ 1653      7420696E 
+ 1653      7400
+ 1654              	.LASF33:
+ 1655 02de 6D6F746F 		.ascii	"motor_speeds\000"
+ 1655      725F7370 
+ 1655      65656473 
+ 1655      00
+ 1656              	.LASF14:
+ 1657 02eb 75696E74 		.ascii	"uint16_t\000"
+ 1657      31365F74 
+ 1657      00
+ 1658              	.LASF16:
+ 1659 02f4 75696E74 		.ascii	"uint32_t\000"
+ 1659      33325F74 
+ 1659      00
+ 1660              	.LASF7:
+ 1661 02fd 6C6F6E67 		.ascii	"long int\000"
+ 1661      20696E74 
+ 1661      00
+ 1662              	.LASF22:
+ 1663 0306 6C6F6E67 		.ascii	"long double\000"
+ 1663      20646F75 
+ 1663      626C6500 
+ 1664              	.LASF25:
+ 1665 0312 77726974 		.ascii	"write_motor_speed\000"
+ 1665      655F6D6F 
+ 1665      746F725F 
+ 1665      73706565 
+ 1665      6400
+ 1666              	.LASF26:
+ARM GAS  C:\Users\Ade0n\AppData\Local\Temp\cc7Ther5.s 			page 35
+
+
+ 1667 0324 54696D65 		.ascii	"Timer_Isr_Handler\000"
+ 1667      725F4973 
+ 1667      725F4861 
+ 1667      6E646C65 
+ 1667      7200
+ 1668              	.LASF39:
+ 1669 0336 55415254 		.ascii	"UART_PutString\000"
+ 1669      5F507574 
+ 1669      53747269 
+ 1669      6E6700
+ 1670              	.LASF38:
+ 1671 0345 73707269 		.ascii	"sprintf\000"
+ 1671      6E746600 
+ 1672              	.LASF32:
+ 1673 034d 75617274 		.ascii	"uart_rpm_buff\000"
+ 1673      5F72706D 
+ 1673      5F627566 
+ 1673      6600
+ 1674              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

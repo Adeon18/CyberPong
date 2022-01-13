@@ -1,0 +1,19 @@
+# CyberPongRemastered
+# 2022-01-13 17:30:45Z
+
+# IO_0@[IOP=(1)][IoId=(0)] is reserved: SWDDebugEnabled
+dont_use_io iocell 1 0
+# IO_1@[IOP=(1)][IoId=(1)] is reserved: SWDDebugEnabled
+dont_use_io iocell 1 1
+# IO_3@[IOP=(1)][IoId=(3)] is reserved: SWDDebugEnabled
+dont_use_io iocell 1 3
+set_io "Pin_Input_LEFT(0)" iocell 3 1
+set_io "Pin_Output_LEFT(0)" iocell 3 5
+set_io "Pin_Input_RIGHT(0)" iocell 3 2
+set_io "Pin_Input_UP(0)" iocell 3 3
+set_io "Pin_Input_DOWN(0)" iocell 3 0
+set_io "Pin_Output_RIGHT(0)" iocell 3 6
+set_io "Pin_Output_UP(0)" iocell 3 7
+set_io "Pin_Output_DOWN(0)" iocell 3 4
+set_io "Rx_1(0)" iocell 12 6
+set_io "Tx_1(0)" iocell 12 7
