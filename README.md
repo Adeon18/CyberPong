@@ -51,6 +51,6 @@ The overall program has **2 modes**:
 **Manual mode** gives the user the possibility to set and monitor the speeds of each independant motor and control the serving.
 
 ### Contributors
-(Ostap Trush)[https://github.com/Adeon18]
-(Olexiy Hoev)[https://github.com/alexg-lviv]
+[Ostap Trush](https://github.com/Adeon18)
+[Olexiy Hoev](https://github.com/alexg-lviv)
 
