@@ -1,9 +1,9 @@
 # CyberPong
 CyberPong - Ping Pong Exersice Mashine
 
-### About
+### About and Aim
 
-This is the Ping Pong Exersice Machine that Uses 4 DC Motors and in order to shoot out ping pong balls with different spins.
+This is the Ping Pong Exersice Machine that Uses 4 DC Motors and in order to shoot out ping pong balls with different spins. The goal of the project is to determine whether it is possible to make an effective Ping Pong machine and how it will curve the ball(and if it is effective).
 
 ### What is used in the Project:
 
@@ -49,3 +49,8 @@ The overall program has **2 modes**:
 **Automatic mode** randomly shoots out balls with different spins, taken from a predefined config. It also serves the balls automatically.
 
 **Manual mode** gives the user the possibility to set and monitor the speeds of each independant motor and control the serving.
+
+### Contributors
+(Ostap Trush)[https://github.com/Adeon18]
+(Olexiy Hoev)[https://github.com/alexg-lviv]
+
