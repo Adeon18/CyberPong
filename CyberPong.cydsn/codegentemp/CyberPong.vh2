@@ -2,7 +2,7 @@
 --	Conversion of CyberPong.v to vh2:
 --
 --	Cypress Semiconductor - WARP Version 6.3 IR 41
---	Thu Jan 13 20:42:55 2022
+--	Fri Jan 14 12:32:56 2022
 --
 
 USE cypress.cypress.all;
@@ -21,7 +21,7 @@ SIGNAL zero : bit;
 SIGNAL one : bit;
 SIGNAL tmpINTERRUPT_0__Pin_Output_LEFT_net_0 : bit;
 SIGNAL tmpOE__Pin_Input_LEFT_net_0 : bit;
-SIGNAL Net_729 : bit;
+SIGNAL Net_824 : bit;
 SIGNAL tmpIO_0__Pin_Input_LEFT_net_0 : bit;
 TERMINAL tmpSIOVREF__Pin_Input_LEFT_net_0 : bit;
 SIGNAL tmpINTERRUPT_0__Pin_Input_LEFT_net_0 : bit;
@@ -570,9 +570,9 @@ SIGNAL \FanController:btch_4\ : bit;
 SIGNAL \FanController:btch_3\ : bit;
 SIGNAL \FanController:btch_2\ : bit;
 SIGNAL \FanController:btch_1\ : bit;
-SIGNAL Net_676 : bit;
+SIGNAL Net_825 : bit;
 SIGNAL Net_779 : bit;
-SIGNAL Net_809 : bit;
+SIGNAL Net_823 : bit;
 SIGNAL tmpOE__Pin_Output_DOWN_net_0 : bit;
 SIGNAL tmpFB_0__Pin_Output_DOWN_net_0 : bit;
 SIGNAL tmpIO_0__Pin_Output_DOWN_net_0 : bit;
@@ -600,6 +600,11 @@ SIGNAL tmpOE__Pin_Input_UP_net_0 : bit;
 SIGNAL tmpIO_0__Pin_Input_UP_net_0 : bit;
 TERMINAL tmpSIOVREF__Pin_Input_UP_net_0 : bit;
 SIGNAL tmpINTERRUPT_0__Pin_Input_UP_net_0 : bit;
+SIGNAL tmpOE__Pin_Input_BallTrigger_net_0 : bit;
+SIGNAL Net_828 : bit;
+SIGNAL tmpIO_0__Pin_Input_BallTrigger_net_0 : bit;
+TERMINAL tmpSIOVREF__Pin_Input_BallTrigger_net_0 : bit;
+SIGNAL tmpINTERRUPT_0__Pin_Input_BallTrigger_net_0 : bit;
 SIGNAL \FanController:drq\\D\ : bit;
 SIGNAL \FanController:B_FanCtrl:alert_reg\\D\ : bit;
 SIGNAL \FanController:B_FanCtrl:stall_alrt\\D\ : bit;
@@ -630,10 +635,10 @@ tmpOE__Pin_Output_LEFT_net_0 <=  ('1') ;
 
 \FanController:B_FanCtrl:stall_status\ <= ((\FanController:B_FanCtrl:control_1\ and \FanController:B_FanCtrl:stall_alrt\));
 
-\FanController:FanTach:tach\\D\ <= ((not \FanController:address_1\ and not \FanController:address_0\ and Net_729)
+\FanController:FanTach:tach\\D\ <= ((not \FanController:address_1\ and not \FanController:address_0\ and Net_824)
 	OR (not \FanController:address_0\ and \FanController:address_1\ and Net_779)
-	OR (not \FanController:address_1\ and \FanController:address_0\ and Net_676)
-	OR (\FanController:address_1\ and \FanController:address_0\ and Net_809));
+	OR (not \FanController:address_1\ and \FanController:address_0\ and Net_825)
+	OR (\FanController:address_1\ and \FanController:address_0\ and Net_823));
 
 \FanController:FanTach:damping_factor_tc\\D\ <= ((\FanController:FanTach:damping_cntr_cs_0\ and \FanController:FanTach:damping_cntr_tc\ and \FanController:FanTach:gf_dmp_state\));
 
@@ -808,7 +813,7 @@ Pin_Input_LEFT:cy_psoc3_pins_v1_10
 		input_buffer_sel=>"00")
 	PORT MAP(oe=>(tmpOE__Pin_Output_LEFT_net_0),
 		y=>(zero),
-		fb=>Net_729,
+		fb=>Net_824,
 		analog=>(open),
 		io=>(tmpIO_0__Pin_Input_LEFT_net_0),
 		siovref=>(tmpSIOVREF__Pin_Input_LEFT_net_0),
@@ -1586,7 +1591,7 @@ Pin_Input_RIGHT:cy_psoc3_pins_v1_10
 		input_buffer_sel=>"00")
 	PORT MAP(oe=>(tmpOE__Pin_Output_LEFT_net_0),
 		y=>(zero),
-		fb=>Net_676,
+		fb=>Net_825,
 		analog=>(open),
 		io=>(tmpIO_0__Pin_Input_RIGHT_net_0),
 		siovref=>(tmpSIOVREF__Pin_Input_RIGHT_net_0),
@@ -1726,7 +1731,7 @@ Pin_Input_DOWN:cy_psoc3_pins_v1_10
 		input_buffer_sel=>"00")
 	PORT MAP(oe=>(tmpOE__Pin_Output_LEFT_net_0),
 		y=>(zero),
-		fb=>Net_809,
+		fb=>Net_823,
 		analog=>(open),
 		io=>(tmpIO_0__Pin_Input_DOWN_net_0),
 		siovref=>(tmpSIOVREF__Pin_Input_DOWN_net_0),
@@ -1878,6 +1883,80 @@ Pin_Input_UP:cy_psoc3_pins_v1_10
 		out_clock_en=>tmpOE__Pin_Output_LEFT_net_0,
 		out_reset=>zero,
 		interrupt=>tmpINTERRUPT_0__Pin_Input_UP_net_0);
+Pin_Input_BallTrigger:cy_psoc3_pins_v1_10
+	GENERIC MAP(id=>"c8cb8994-cb9c-46dd-adfb-531a4692270b",
+		drive_mode=>"001",
+		ibuf_enabled=>"1",
+		init_dr_st=>"0",
+		input_sync=>"0",
+		input_clk_en=>'0',
+		input_sync_mode=>"0",
+		intr_mode=>"00",
+		invert_in_clock=>'0',
+		invert_in_clock_en=>'0',
+		invert_in_reset=>'0',
+		invert_out_clock=>'0',
+		invert_out_clock_en=>'0',
+		invert_out_reset=>'0',
+		io_voltage=>"",
+		layout_mode=>"CONTIGUOUS",
+		output_conn=>"0",
+		output_sync=>"0",
+		output_clk_en=>'0',
+		output_mode=>"0",
+		output_reset=>'0',
+		output_clock_mode=>"0",
+		oe_sync=>"0",
+		oe_conn=>"0",
+		oe_reset=>'0',
+		pin_aliases=>"",
+		pin_mode=>"I",
+		por_state=>4,
+		sio_group_cnt=>0,
+		sio_hifreq=>"00000000",
+		sio_hyst=>"1",
+		sio_ibuf=>"00000000",
+		sio_info=>"00",
+		sio_obuf=>"00000000",
+		sio_refsel=>"00000000",
+		sio_vtrip=>"00000000",
+		sio_vohsel=>"00000000",
+		slew_rate=>"0",
+		spanning=>'0',
+		sw_only=>'0',
+		vtrip=>"00",
+		width=>1,
+		port_alias_required=>'0',
+		port_alias_group=>"",
+		use_annotation=>"0",
+		pa_in_clock=>-1,
+		pa_in_clock_en=>-1,
+		pa_in_reset=>-1,
+		pa_out_clock=>-1,
+		pa_out_clock_en=>-1,
+		pa_out_reset=>-1,
+		ovt_needed=>"0",
+		ovt_slew_control=>"00",
+		ovt_hyst_trim=>"0",
+		input_buffer_sel=>"00")
+	PORT MAP(oe=>(tmpOE__Pin_Output_LEFT_net_0),
+		y=>(zero),
+		fb=>Net_828,
+		analog=>(open),
+		io=>(tmpIO_0__Pin_Input_BallTrigger_net_0),
+		siovref=>(tmpSIOVREF__Pin_Input_BallTrigger_net_0),
+		annotation=>(open),
+		in_clock=>zero,
+		in_clock_en=>tmpOE__Pin_Output_LEFT_net_0,
+		in_reset=>zero,
+		out_clock=>zero,
+		out_clock_en=>tmpOE__Pin_Output_LEFT_net_0,
+		out_reset=>zero,
+		interrupt=>tmpINTERRUPT_0__Pin_Input_BallTrigger_net_0);
+ISR_Ball_Trigger:cy_isr_v1_0
+	GENERIC MAP(int_type=>"10",
+		is_nmi=>'0')
+	PORT MAP(int_signal=>Net_828);
 \FanController:drq\:cy_dff
 	PORT MAP(d=>\FanController:FanTach:tach_data_ready\,
 		clk=>\FanController:FanTach:synced_tach_clock\,

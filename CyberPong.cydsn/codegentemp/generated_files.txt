@@ -61,6 +61,12 @@
   <file name="C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn\codegentemp\Pin_Input_UP.h" value="HEADER;;;;;Pin_Input_UP" />
   <file name="C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn\codegentemp\Pin_Input_UP_aliases.h" value="HEADER;;;;;Pin_Input_UP" />
   <file name="C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn\codegentemp\Pin_Input_UP_PM.c" value="SOURCE_C;CortexM0;;;;Pin_Input_UP" />
+  <file name="C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn\codegentemp\Pin_Input_BallTrigger.c" value="SOURCE_C;CortexM0;;;;Pin_Input_BallTrigger" />
+  <file name="C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn\codegentemp\Pin_Input_BallTrigger.h" value="HEADER;;;;;Pin_Input_BallTrigger" />
+  <file name="C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn\codegentemp\Pin_Input_BallTrigger_aliases.h" value="HEADER;;;;;Pin_Input_BallTrigger" />
+  <file name="C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn\codegentemp\Pin_Input_BallTrigger_PM.c" value="SOURCE_C;CortexM0;;;;Pin_Input_BallTrigger" />
+  <file name="C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn\codegentemp\ISR_Ball_Trigger.c" value="SOURCE_C;CortexM0;;;;ISR_Ball_Trigger" />
+  <file name="C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn\codegentemp\ISR_Ball_Trigger.h" value="HEADER;;;;;ISR_Ball_Trigger" />
   <file name="C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn\codegentemp\UART_SCBCLK.c" value="SOURCE_C;CortexM0;;;;UART_SCBCLK" />
   <file name="C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn\codegentemp\UART_SCBCLK.h" value="HEADER;;;;;UART_SCBCLK" />
   <file name="C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn\codegentemp\UART_tx.c" value="SOURCE_C;CortexM0;;;;UART_tx" />

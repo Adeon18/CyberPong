@@ -6,7 +6,7 @@
 
 #Build Date:         Sep  9 2019 11:47:43
 
-#File Generated:     Jan 13 2022 20:42:56
+#File Generated:     Jan 14 2022 12:32:57
 
 #Purpose:            
 
@@ -55,7 +55,7 @@ Design Statistics after Packing
 Device Utilization Summary after Packing
     Macrocells                  :	18/32
     UDBS                        :	4/4
-    IOs                         :	10/38
+    IOs                         :	11/38
 
 
 D2088: Phase 3, elapsed time : 0.0 (sec)
@@ -119,7 +119,7 @@ Clock: UART_SCBCLK(FFB)     | Frequency: N/A       | Target:   1.4 MHz
 ======================================================================
                      End of Clock Summary
 ######################################################################
-D2088: Phase 7, elapsed time : 0.1 (sec)
+D2088: Phase 7, elapsed time : 0.0 (sec)
 
 Final Design Statistics
     Number of Combinational MCs 	:	2
@@ -129,11 +129,11 @@ Final Design Statistics
     Number of Status            	:	1
     Number of SyncCells         	:	0
     Number of count7cells       	:	0
-    Number of IOs       	:	10
+    Number of IOs       	:	11
 
 Device Utilization Summary
     Macrocells                  :	18/32
-    IOs                         :	10/38
+    IOs                         :	11/38
 
 
 
@@ -158,7 +158,112 @@ Clock: CyLFClk              | Frequency: N/A       | Target:   0.0 MHz
 Clock: CyRouted1            | Frequency: N/A       | Target:  48.0 MHz
 Clock: CySysClk             | Frequency: N/A       | Target:  48.0 MHz
 Clock: CyWCO                | Frequency: N/A       | Target:   0.0 MHz
-Clock: FanController_PWM_CLOCK_25k_10b_1 | Frequency:  64.3 MHz | Target:  24.0 MHz
+Clock: FanController_PWM_CLOCK_25k_10b_1 | Frequency:  66.7 MHz | Target:  24.0 MHz
+Clock: FanController_PWM_CLOCK_25k_10b_1(FFB) | Frequency: N/A       | Target:  24.0 MHz
+Clock: FanController_TACH_CLK_500K | Frequency:   3.7 MHz | Target:   0.5 MHz
+Clock: UART_SCBCLK          | Frequency: N/A       | Target:   1.4 MHz
+Clock: UART_SCBCLK(FFB)     | Frequency: N/A       | Target:   1.4 MHz
+
+======================================================================
+                     End of Clock Summary
+######################################################################
+
+Phase 6
+
+######################################################################
+Placement Timing Summary
+
+The timing summary is based on estimated routing delays after
+placement. For final timing report, please carry out the timing
+analysis after routing.
+======================================================================
+
+######################################################################
+                     Clock Summary 
+======================================================================
+Number of clocks: 13
+Clock: CyECO                | Frequency: N/A       | Target:  24.0 MHz
+Clock: CyHFClk              | Frequency:   3.7 MHz | Target:  48.0 MHz
+Clock: CyILO                | Frequency: N/A       | Target:   0.0 MHz
+Clock: CyIMO                | Frequency: N/A       | Target:  48.0 MHz
+Clock: CyLFClk              | Frequency: N/A       | Target:   0.0 MHz
+Clock: CyRouted1            | Frequency: N/A       | Target:  48.0 MHz
+Clock: CySysClk             | Frequency: N/A       | Target:  48.0 MHz
+Clock: CyWCO                | Frequency: N/A       | Target:   0.0 MHz
+Clock: FanController_PWM_CLOCK_25k_10b_1 | Frequency:  66.7 MHz | Target:  24.0 MHz
+Clock: FanController_PWM_CLOCK_25k_10b_1(FFB) | Frequency: N/A       | Target:  24.0 MHz
+Clock: FanController_TACH_CLK_500K | Frequency:   3.7 MHz | Target:   0.5 MHz
+Clock: UART_SCBCLK          | Frequency: N/A       | Target:   1.4 MHz
+Clock: UART_SCBCLK(FFB)     | Frequency: N/A       | Target:   1.4 MHz
+
+======================================================================
+                     End of Clock Summary
+######################################################################
+
+D2088: Phase 6, elapsed time : 0.0 (sec)
+
+Phase 7
+######################################################################
+                     Clock Summary 
+======================================================================
+Number of clocks: 13
+Clock: CyECO                | Frequency: N/A       | Target:  24.0 MHz
+Clock: CyHFClk              | Frequency:   3.7 MHz | Target:  48.0 MHz
+Clock: CyILO                | Frequency: N/A       | Target:   0.0 MHz
+Clock: CyIMO                | Frequency: N/A       | Target:  48.0 MHz
+Clock: CyLFClk              | Frequency: N/A       | Target:   0.0 MHz
+Clock: CyRouted1            | Frequency: N/A       | Target:  48.0 MHz
+Clock: CySysClk             | Frequency: N/A       | Target:  48.0 MHz
+Clock: CyWCO                | Frequency: N/A       | Target:   0.0 MHz
+Clock: FanController_PWM_CLOCK_25k_10b_1 | Frequency:  66.7 MHz | Target:  24.0 MHz
+Clock: FanController_PWM_CLOCK_25k_10b_1(FFB) | Frequency: N/A       | Target:  24.0 MHz
+Clock: FanController_TACH_CLK_500K | Frequency:   3.7 MHz | Target:   0.5 MHz
+Clock: UART_SCBCLK          | Frequency: N/A       | Target:   1.4 MHz
+Clock: UART_SCBCLK(FFB)     | Frequency: N/A       | Target:   1.4 MHz
+
+======================================================================
+                     End of Clock Summary
+######################################################################
+D2088: Phase 7, elapsed time : 0.1 (sec)
+
+Final Design Statistics
+    Number of Combinational MCs 	:	2
+    Number of Sequential MCs    	:	16
+    Number of DPs               	:	4
+    Number of Controls          	:	2
+    Number of Status            	:	1
+    Number of SyncCells         	:	0
+    Number of count7cells       	:	0
+    Number of IOs       	:	11
+
+Device Utilization Summary
+    Macrocells                  :	18/32
+    IOs                         :	11/38
+
+
+
+######################################################################
+Placement Timing Summary
+
+The timing summary is based on estimated routing delays after
+placement. For final timing report, please carry out the timing
+analysis after routing.
+======================================================================
+
+
+######################################################################
+                     Clock Summary 
+======================================================================
+Number of clocks: 13
+Clock: CyECO                | Frequency: N/A       | Target:  24.0 MHz
+Clock: CyHFClk              | Frequency:   3.7 MHz | Target:  48.0 MHz
+Clock: CyILO                | Frequency: N/A       | Target:   0.0 MHz
+Clock: CyIMO                | Frequency: N/A       | Target:  48.0 MHz
+Clock: CyLFClk              | Frequency: N/A       | Target:   0.0 MHz
+Clock: CyRouted1            | Frequency: N/A       | Target:  48.0 MHz
+Clock: CySysClk             | Frequency: N/A       | Target:  48.0 MHz
+Clock: CyWCO                | Frequency: N/A       | Target:   0.0 MHz
+Clock: FanController_PWM_CLOCK_25k_10b_1 | Frequency:  66.7 MHz | Target:  24.0 MHz
 Clock: FanController_PWM_CLOCK_25k_10b_1(FFB) | Frequency: N/A       | Target:  24.0 MHz
 Clock: FanController_TACH_CLK_500K | Frequency:   3.7 MHz | Target:   0.5 MHz
 Clock: UART_SCBCLK          | Frequency: N/A       | Target:   1.4 MHz

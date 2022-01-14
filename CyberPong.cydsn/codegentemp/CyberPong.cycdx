@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <blockRegMap version="1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://cypress.com/xsd/cyblockregmap cyblockregmap.xsd" xmlns="http://cypress.com/xsd/cyblockregmap">
-  <block name="Pin_Input_UP" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="Pin_Input_BallTrigger" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="ISR_Ball_Trigger" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="Pin_Output_UP" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-  <block name="Pin_Input_DOWN" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-  <block name="cy_boot" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-  <block name="Em_EEPROM_Dynamic" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="Pin_Input_UP" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="cy_lfclk" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="Em_EEPROM_Dynamic" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="cy_boot" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="DMAC" BASE="0x0" SIZE="0x0" desc="DMAC Registers" visible="true" hidden="false">
     <register name="DMAC_CH_CTL17" address="0x40000000" bitWidth="32" desc="DMA channel 17 control register" hidden="true">
       <field name="ENABLED" from="31" to="31" access="RW" resetVal="" desc="Channel enable control." hidden="false">
@@ -1730,8 +1731,6 @@
       <field name="BREAK_DETECT" from="11" to="11" access="RW" resetVal="" desc="Logical and of corresponding request and mask bits" hidden="false" />
     </register>
   </block>
-  <block name="Pin_Input_LEFT" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-  <block name="Pin_Output_LEFT" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="FanController" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false">
     <block name="cy_constant_7" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
     <block name="cy_constant_6" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
@@ -1837,7 +1836,7 @@
     <block name="VirtualMux_18" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
     <block name="VirtualMux_5" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
     <block name="VirtualMux_6" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-    <register name="FanController_ALERT_STATUS" address="0x400F0062" bitWidth="8" desc="Alert Status Register" hidden="false">
+    <register name="FanController_ALERT_STATUS" address="0x400F0060" bitWidth="8" desc="Alert Status Register" hidden="false">
       <field name="STALL_STATUS" from="0" to="0" access="R" resetVal="" desc="Stall status for all Fans" hidden="false">
         <value name="NO_STALL" value="0" desc="No stall occurred" />
         <value name="STALL" value="1" desc="Stall is occurred" />
@@ -1847,7 +1846,7 @@
         <value name="SPEED_ERROR" value="1" desc="Speed error is occurred" />
       </field>
     </register>
-    <register name="FanController_GLBL_CTRL" address="0x400F0072" bitWidth="8" desc="Global Control Register" hidden="false">
+    <register name="FanController_GLBL_CTRL" address="0x400F0071" bitWidth="8" desc="Global Control Register" hidden="false">
       <field name="ALERT_ENABLE" from="0" to="0" access="RW" resetVal="" desc="Global alert enable signal" hidden="false">
         <value name="ALERTS_DIS" value="0" desc="Generation of all alerts is disabled" />
         <value name="ALERTS_EN" value="1" desc="Generation of alerts is enabled" />
@@ -1871,7 +1870,10 @@
       <field name="RSRVD" from="7" to="7" access="R" resetVal="" desc="Reserved" hidden="false" />
     </register>
   </block>
+  <block name="Pin_Output_LEFT" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="Pin_Input_LEFT" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="Pin_Output_RIGHT" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-  <block name="Pin_Input_RIGHT" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="Pin_Input_DOWN" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="Pin_Output_DOWN" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="Pin_Input_RIGHT" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
 </blockRegMap>

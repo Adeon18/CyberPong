@@ -1,6 +1,6 @@
 // ======================================================================
 // CyberPong.v generated from TopDesign.cysch
-// 01/13/2022 at 20:42
+// 01/14/2022 at 12:32
 // This file is auto generated. ANY EDITS YOU MAKE MAY BE LOST WHEN THIS FILE IS REGENERATED!!!
 // ======================================================================
 
@@ -1337,6 +1337,7 @@ endmodule
 // top
 module top ;
 
+          wire  Net_828;
           wire  Net_609;
           wire  Net_608;
           wire  Net_607;
@@ -1397,14 +1398,14 @@ module top ;
           wire  Net_187;
           wire  Net_186;
           wire  Net_185;
-          wire  Net_809;
+          wire  Net_823;
           wire  Net_779;
+          wire  Net_825;
+          wire  Net_824;
           wire  Net_759;
           wire  Net_757;
           wire  Net_740;
           wire  Net_656;
-          wire  Net_676;
-          wire  Net_729;
 
 	wire [0:0] tmpOE__Pin_Output_LEFT_net;
 	wire [0:0] tmpFB_0__Pin_Output_LEFT_net;
@@ -1542,7 +1543,7 @@ module top ;
 		Pin_Input_LEFT
 		 (.oe(tmpOE__Pin_Input_LEFT_net),
 		  .y({1'b0}),
-		  .fb({Net_729}),
+		  .fb({Net_824}),
 		  .io({tmpIO_0__Pin_Input_LEFT_net[0:0]}),
 		  .siovref(tmpSIOVREF__Pin_Input_LEFT_net),
 		  .interrupt({tmpINTERRUPT_0__Pin_Input_LEFT_net[0:0]}),
@@ -1610,7 +1611,7 @@ module top ;
         .fan8(Net_641),
         .fan9(Net_626),
         .tach(16'b0),
-        .tach1(Net_729),
+        .tach1(Net_824),
         .tach10(1'b0),
         .tach11(1'b0),
         .tach12(1'b0),
@@ -1618,9 +1619,9 @@ module top ;
         .tach14(1'b0),
         .tach15(1'b0),
         .tach16(1'b0),
-        .tach2(Net_676),
+        .tach2(Net_825),
         .tach3(Net_779),
-        .tach4(Net_809),
+        .tach4(Net_823),
         .tach5(1'b0),
         .tach6(1'b0),
         .tach7(1'b0),
@@ -1765,7 +1766,7 @@ module top ;
 		Pin_Input_RIGHT
 		 (.oe(tmpOE__Pin_Input_RIGHT_net),
 		  .y({1'b0}),
-		  .fb({Net_676}),
+		  .fb({Net_825}),
 		  .io({tmpIO_0__Pin_Input_RIGHT_net[0:0]}),
 		  .siovref(tmpSIOVREF__Pin_Input_RIGHT_net),
 		  .interrupt({tmpINTERRUPT_0__Pin_Input_RIGHT_net[0:0]}),
@@ -1914,7 +1915,7 @@ module top ;
 		Pin_Input_DOWN
 		 (.oe(tmpOE__Pin_Input_DOWN_net),
 		  .y({1'b0}),
-		  .fb({Net_809}),
+		  .fb({Net_823}),
 		  .io({tmpIO_0__Pin_Input_DOWN_net[0:0]}),
 		  .siovref(tmpSIOVREF__Pin_Input_DOWN_net),
 		  .interrupt({tmpINTERRUPT_0__Pin_Input_DOWN_net[0:0]}),
@@ -2075,6 +2076,87 @@ module top ;
 		  .out_reset({1'b0}));
 
 	assign tmpOE__Pin_Input_UP_net = (`CYDEV_CHIP_MEMBER_USED == `CYDEV_CHIP_MEMBER_3A && `CYDEV_CHIP_REVISION_USED < `CYDEV_CHIP_REVISION_3A_ES3) ? ~{1'b1} : {1'b1};
+
+	wire [0:0] tmpOE__Pin_Input_BallTrigger_net;
+	wire [0:0] tmpIO_0__Pin_Input_BallTrigger_net;
+	wire [0:0] tmpINTERRUPT_0__Pin_Input_BallTrigger_net;
+	electrical [0:0] tmpSIOVREF__Pin_Input_BallTrigger_net;
+
+	cy_psoc3_pins_v1_10
+		#(.id("c8cb8994-cb9c-46dd-adfb-531a4692270b"),
+		  .drive_mode(3'b001),
+		  .ibuf_enabled(1'b1),
+		  .init_dr_st(1'b0),
+		  .input_clk_en(0),
+		  .input_sync(1'b0),
+		  .input_sync_mode(1'b0),
+		  .intr_mode(2'b00),
+		  .invert_in_clock(0),
+		  .invert_in_clock_en(0),
+		  .invert_in_reset(0),
+		  .invert_out_clock(0),
+		  .invert_out_clock_en(0),
+		  .invert_out_reset(0),
+		  .io_voltage(""),
+		  .layout_mode("CONTIGUOUS"),
+		  .oe_conn(1'b0),
+		  .oe_reset(0),
+		  .oe_sync(1'b0),
+		  .output_clk_en(0),
+		  .output_clock_mode(1'b0),
+		  .output_conn(1'b0),
+		  .output_mode(1'b0),
+		  .output_reset(0),
+		  .output_sync(1'b0),
+		  .pa_in_clock(-1),
+		  .pa_in_clock_en(-1),
+		  .pa_in_reset(-1),
+		  .pa_out_clock(-1),
+		  .pa_out_clock_en(-1),
+		  .pa_out_reset(-1),
+		  .pin_aliases(""),
+		  .pin_mode("I"),
+		  .por_state(4),
+		  .sio_group_cnt(0),
+		  .sio_hyst(1'b1),
+		  .sio_ibuf(""),
+		  .sio_info(2'b00),
+		  .sio_obuf(""),
+		  .sio_refsel(""),
+		  .sio_vtrip(""),
+		  .sio_hifreq(""),
+		  .sio_vohsel(""),
+		  .slew_rate(1'b0),
+		  .spanning(0),
+		  .use_annotation(1'b0),
+		  .vtrip(2'b00),
+		  .width(1),
+		  .ovt_hyst_trim(1'b0),
+		  .ovt_needed(1'b0),
+		  .ovt_slew_control(2'b00),
+		  .input_buffer_sel(2'b00))
+		Pin_Input_BallTrigger
+		 (.oe(tmpOE__Pin_Input_BallTrigger_net),
+		  .y({1'b0}),
+		  .fb({Net_828}),
+		  .io({tmpIO_0__Pin_Input_BallTrigger_net[0:0]}),
+		  .siovref(tmpSIOVREF__Pin_Input_BallTrigger_net),
+		  .interrupt({tmpINTERRUPT_0__Pin_Input_BallTrigger_net[0:0]}),
+		  .in_clock({1'b0}),
+		  .in_clock_en({1'b1}),
+		  .in_reset({1'b0}),
+		  .out_clock({1'b0}),
+		  .out_clock_en({1'b1}),
+		  .out_reset({1'b0}));
+
+	assign tmpOE__Pin_Input_BallTrigger_net = (`CYDEV_CHIP_MEMBER_USED == `CYDEV_CHIP_MEMBER_3A && `CYDEV_CHIP_REVISION_USED < `CYDEV_CHIP_REVISION_3A_ES3) ? ~{1'b1} : {1'b1};
+
+
+	cy_isr_v1_0
+		#(.int_type(2'b10))
+		ISR_Ball_Trigger
+		 (.int_signal(Net_828));
+
 
 
 
