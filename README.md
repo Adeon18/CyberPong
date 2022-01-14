@@ -39,7 +39,7 @@ The goal of this project was to measure, how good such a machine can serve ping 
 
 We used the built in **Fan Controller** Component in order to implement PID:
 
-!(ded)[./img/fan_controller.png]
+![ded](./img/fan_controller.png)
 - Our coefficients turned out to be **P - 100%**, **I - 80%** and **D - 20%**. _This is still to be perfected though._
 
 The overall program has **2 modes**:
