@@ -113,7 +113,7 @@ void handle_UART_input(char inp_ch) {
     }
 }
 
-
+// Set isr trigger flag to avoid bouncing
 CY_ISR (Ball_Trigger_Handler) {
     isr_triggered = 1;
 }
@@ -161,21 +161,18 @@ int main(void)
         else{
             UART_UartPutChar(ch);
         }
-        
+        // Ball serve detection
         if (isr_triggered) {
             Pin_Serve_Write(0);
-            CyDelay(250);
+            CyDelay(SERVE_DELAY);
             isr_triggered = 0;
             if (serving_enabled) {
                 Pin_Serve_Write(1);
             }
+            // Automatic control cycle
             if (!manual_control_flag) {
                 UART_print_string("New Config");
                 print_all_speed(); 
-                char debug[20];
-                sprintf(debug, "%d %d %d %d", speed_configs[conf_iterator][0], speed_configs[conf_iterator][1], speed_configs[conf_iterator][2], speed_configs[conf_iterator][3]);
-                UART_print_string(debug);
-                //
                 write_motor_speed(speed_configs[conf_iterator]);
                 conf_iterator++;
                 if (conf_iterator > conf_size - 1) {

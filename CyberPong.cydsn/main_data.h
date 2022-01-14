@@ -21,6 +21,7 @@
 #define HIGHER_NUM_BORDER 58
 
 #define PRINT_DATA_DELAY 3
+#define SERVE_DELAY 250     // Serve delay in miliseconds
 
 // Defines whether the speed is printed during manual control
 int8_t print_speed_flag;
