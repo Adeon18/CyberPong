@@ -11,6 +11,154 @@
 <CyGuid_f44455c5-3770-4452-b988-0a7a7ff46256 type_name="CyDesigner.Common.ProjMgmt.Model.CyConfigDependencies" version="1">
 <dependency_info name="c9323d49-d323-40b8-9b59-cc008d68a989@Debug@CortexM0" xml_contents_version="2">
 <CyGuid_1173175f-1b9b-4ad4-a065-754a48a27021 type_name="CyDesigner.Common.Base.CyFileDeps" version="1">
+<file name=".\CortexM0\ARM_GCC_541\Debug\main.o">
+<dep name=".\Generated_Source\PSoC4\CyDMA.h" />
+<dep name=".\Generated_Source\PSoC4\CyFlash.h" />
+<dep name=".\Generated_Source\PSoC4\CyLFClk.h" />
+<dep name=".\Generated_Source\PSoC4\CyLib.h" />
+<dep name=".\Generated_Source\PSoC4\FanController.h" />
+<dep name=".\Generated_Source\PSoC4\FanController_DataSend.h" />
+<dep name=".\Generated_Source\PSoC4\FanController_FW_PWM1.h" />
+<dep name=".\Generated_Source\PSoC4\FanController_FW_PWM2.h" />
+<dep name=".\Generated_Source\PSoC4\FanController_FW_PWM3.h" />
+<dep name=".\Generated_Source\PSoC4\FanController_FW_PWM4.h" />
+<dep name=".\Generated_Source\PSoC4\FanController_PID_ISR.h" />
+<dep name=".\Generated_Source\PSoC4\ISR_Ball_Trigger.h" />
+<dep name=".\Generated_Source\PSoC4\Pin_Input_BallTrigger.h" />
+<dep name=".\Generated_Source\PSoC4\Pin_Input_BallTrigger_aliases.h" />
+<dep name=".\Generated_Source\PSoC4\Pin_Input_DOWN.h" />
+<dep name=".\Generated_Source\PSoC4\Pin_Input_DOWN_aliases.h" />
+<dep name=".\Generated_Source\PSoC4\Pin_Input_LEFT.h" />
+<dep name=".\Generated_Source\PSoC4\Pin_Input_LEFT_aliases.h" />
+<dep name=".\Generated_Source\PSoC4\Pin_Input_RIGHT.h" />
+<dep name=".\Generated_Source\PSoC4\Pin_Input_RIGHT_aliases.h" />
+<dep name=".\Generated_Source\PSoC4\Pin_Input_UP.h" />
+<dep name=".\Generated_Source\PSoC4\Pin_Input_UP_aliases.h" />
+<dep name=".\Generated_Source\PSoC4\Pin_Output_DOWN.h" />
+<dep name=".\Generated_Source\PSoC4\Pin_Output_DOWN_aliases.h" />
+<dep name=".\Generated_Source\PSoC4\Pin_Output_LEFT.h" />
+<dep name=".\Generated_Source\PSoC4\Pin_Output_LEFT_aliases.h" />
+<dep name=".\Generated_Source\PSoC4\Pin_Output_RIGHT.h" />
+<dep name=".\Generated_Source\PSoC4\Pin_Output_RIGHT_aliases.h" />
+<dep name=".\Generated_Source\PSoC4\Pin_Output_UP.h" />
+<dep name=".\Generated_Source\PSoC4\Pin_Output_UP_aliases.h" />
+<dep name=".\Generated_Source\PSoC4\Pin_Serve.h" />
+<dep name=".\Generated_Source\PSoC4\Pin_Serve_aliases.h" />
+<dep name=".\Generated_Source\PSoC4\UART.h" />
+<dep name=".\Generated_Source\PSoC4\UART_BOOT.h" />
+<dep name=".\Generated_Source\PSoC4\UART_PINS.h" />
+<dep name=".\Generated_Source\PSoC4\UART_PVT.h" />
+<dep name=".\Generated_Source\PSoC4\UART_SCBCLK.h" />
+<dep name=".\Generated_Source\PSoC4\UART_SPI_UART.h" />
+<dep name=".\Generated_Source\PSoC4\UART_SPI_UART_PVT.h" />
+<dep name=".\Generated_Source\PSoC4\UART_rx.h" />
+<dep name=".\Generated_Source\PSoC4\UART_rx_aliases.h" />
+<dep name=".\Generated_Source\PSoC4\UART_tx.h" />
+<dep name=".\Generated_Source\PSoC4\UART_tx_aliases.h" />
+<dep name=".\Generated_Source\PSoC4\cmsis_armcc.h" />
+<dep name=".\Generated_Source\PSoC4\cmsis_compiler.h" />
+<dep name=".\Generated_Source\PSoC4\cmsis_gcc.h" />
+<dep name=".\Generated_Source\PSoC4\core_cm0.h" />
+<dep name=".\Generated_Source\PSoC4\core_cm0_psoc4.h" />
+<dep name=".\Generated_Source\PSoC4\cyPm.h" />
+<dep name=".\Generated_Source\PSoC4\cy_em_eeprom.h" />
+<dep name=".\Generated_Source\PSoC4\cydevice_trm.h" />
+<dep name=".\Generated_Source\PSoC4\cydisabledsheets.h" />
+<dep name=".\Generated_Source\PSoC4\cyfitter.h" />
+<dep name=".\Generated_Source\PSoC4\cyfitter_cfg.h" />
+<dep name=".\Generated_Source\PSoC4\cypins.h" />
+<dep name=".\Generated_Source\PSoC4\cytypes.h" />
+<dep name=".\Generated_Source\PSoC4\project.h" />
+<dep name=".\main.c" />
+<dep name=".\main_data.h" />
+</file>
+<file name=".\Generated_Source\PSoC4\CyDMA.h" />
+<file name=".\Generated_Source\PSoC4\CyFlash.h" />
+<file name=".\Generated_Source\PSoC4\CyLFClk.h" />
+<file name=".\Generated_Source\PSoC4\CyLib.h" />
+<file name=".\Generated_Source\PSoC4\FanController.h" />
+<file name=".\Generated_Source\PSoC4\FanController_DataSend.h" />
+<file name=".\Generated_Source\PSoC4\FanController_FW_PWM1.h" />
+<file name=".\Generated_Source\PSoC4\FanController_FW_PWM2.h" />
+<file name=".\Generated_Source\PSoC4\FanController_FW_PWM3.h" />
+<file name=".\Generated_Source\PSoC4\FanController_FW_PWM4.h" />
+<file name=".\Generated_Source\PSoC4\FanController_PID_ISR.h" />
+<file name=".\Generated_Source\PSoC4\ISR_Ball_Trigger.h" />
+<file name=".\Generated_Source\PSoC4\Pin_Input_BallTrigger.h" />
+<file name=".\Generated_Source\PSoC4\Pin_Input_BallTrigger_aliases.h" />
+<file name=".\Generated_Source\PSoC4\Pin_Input_DOWN.h" />
+<file name=".\Generated_Source\PSoC4\Pin_Input_DOWN_aliases.h" />
+<file name=".\Generated_Source\PSoC4\Pin_Input_LEFT.h" />
+<file name=".\Generated_Source\PSoC4\Pin_Input_LEFT_aliases.h" />
+<file name=".\Generated_Source\PSoC4\Pin_Input_RIGHT.h" />
+<file name=".\Generated_Source\PSoC4\Pin_Input_RIGHT_aliases.h" />
+<file name=".\Generated_Source\PSoC4\Pin_Input_UP.h" />
+<file name=".\Generated_Source\PSoC4\Pin_Input_UP_aliases.h" />
+<file name=".\Generated_Source\PSoC4\Pin_Output_DOWN.h" />
+<file name=".\Generated_Source\PSoC4\Pin_Output_DOWN_aliases.h" />
+<file name=".\Generated_Source\PSoC4\Pin_Output_LEFT.h" />
+<file name=".\Generated_Source\PSoC4\Pin_Output_LEFT_aliases.h" />
+<file name=".\Generated_Source\PSoC4\Pin_Output_RIGHT.h" />
+<file name=".\Generated_Source\PSoC4\Pin_Output_RIGHT_aliases.h" />
+<file name=".\Generated_Source\PSoC4\Pin_Output_UP.h" />
+<file name=".\Generated_Source\PSoC4\Pin_Output_UP_aliases.h" />
+<file name=".\Generated_Source\PSoC4\Pin_Serve.h" />
+<file name=".\Generated_Source\PSoC4\Pin_Serve_aliases.h" />
+<file name=".\Generated_Source\PSoC4\UART.h" />
+<file name=".\Generated_Source\PSoC4\UART_BOOT.h" />
+<file name=".\Generated_Source\PSoC4\UART_PINS.h" />
+<file name=".\Generated_Source\PSoC4\UART_PVT.h" />
+<file name=".\Generated_Source\PSoC4\UART_SCBCLK.h" />
+<file name=".\Generated_Source\PSoC4\UART_SPI_UART.h" />
+<file name=".\Generated_Source\PSoC4\UART_SPI_UART_PVT.h" />
+<file name=".\Generated_Source\PSoC4\UART_rx.h" />
+<file name=".\Generated_Source\PSoC4\UART_rx_aliases.h" />
+<file name=".\Generated_Source\PSoC4\UART_tx.h" />
+<file name=".\Generated_Source\PSoC4\UART_tx_aliases.h" />
+<file name=".\Generated_Source\PSoC4\cmsis_armcc.h" />
+<file name=".\Generated_Source\PSoC4\cmsis_compiler.h" />
+<file name=".\Generated_Source\PSoC4\cmsis_gcc.h" />
+<file name=".\Generated_Source\PSoC4\core_cm0.h" />
+<file name=".\Generated_Source\PSoC4\core_cm0_psoc4.h" />
+<file name=".\Generated_Source\PSoC4\cyPm.h" />
+<file name=".\Generated_Source\PSoC4\cy_em_eeprom.h" />
+<file name=".\Generated_Source\PSoC4\cydevice_trm.h" />
+<file name=".\Generated_Source\PSoC4\cydisabledsheets.h" />
+<file name=".\Generated_Source\PSoC4\cyfitter.h" />
+<file name=".\Generated_Source\PSoC4\cyfitter_cfg.h" />
+<file name=".\Generated_Source\PSoC4\cypins.h" />
+<file name=".\Generated_Source\PSoC4\cytypes.h" />
+<file name=".\Generated_Source\PSoC4\project.h" />
+<file name=".\main.c" />
+<file name=".\main_data.h" />
+<file name=".\CortexM0\ARM_GCC_541\Debug\FanController.o">
+<dep name=".\Generated_Source\PSoC4\CyLFClk.h" />
+<dep name=".\Generated_Source\PSoC4\CyLib.h" />
+<dep name=".\Generated_Source\PSoC4\FanController.c" />
+<dep name=".\Generated_Source\PSoC4\FanController.h" />
+<dep name=".\Generated_Source\PSoC4\FanController_DataSend.h" />
+<dep name=".\Generated_Source\PSoC4\FanController_FW_PWM1.h" />
+<dep name=".\Generated_Source\PSoC4\FanController_FW_PWM2.h" />
+<dep name=".\Generated_Source\PSoC4\FanController_FW_PWM3.h" />
+<dep name=".\Generated_Source\PSoC4\FanController_FW_PWM4.h" />
+<dep name=".\Generated_Source\PSoC4\FanController_PID_ISR.h" />
+<dep name=".\Generated_Source\PSoC4\cydevice_trm.h" />
+<dep name=".\Generated_Source\PSoC4\cyfitter.h" />
+<dep name=".\Generated_Source\PSoC4\cytypes.h" />
+</file>
+<file name=".\Generated_Source\PSoC4\FanController.c" />
+<file name=".\CortexM0\ARM_GCC_541\Debug\FanController_INT.o">
+<dep name=".\Generated_Source\PSoC4\CyLFClk.h" />
+<dep name=".\Generated_Source\PSoC4\CyLib.h" />
+<dep name=".\Generated_Source\PSoC4\FanController.h" />
+<dep name=".\Generated_Source\PSoC4\FanController_INT.c" />
+<dep name=".\Generated_Source\PSoC4\cydevice_trm.h" />
+<dep name=".\Generated_Source\PSoC4\cyfitter.h" />
+<dep name=".\Generated_Source\PSoC4\cytypes.h" />
+<dep name=".\cyapicallbacks.h" />
+</file>
+<file name=".\Generated_Source\PSoC4\FanController_INT.c" />
+<file name=".\cyapicallbacks.h" />
 <file name=".\CortexM0\ARM_GCC_541\Debug\Cm0Start.o">
 <dep name=".\Generated_Source\PSoC4\Cm0Start.c" />
 <dep name=".\Generated_Source\PSoC4\CyLFClk.h" />
@@ -22,13 +170,6 @@
 <dep name=".\cyapicallbacks.h" />
 </file>
 <file name=".\Generated_Source\PSoC4\Cm0Start.c" />
-<file name=".\Generated_Source\PSoC4\CyLFClk.h" />
-<file name=".\Generated_Source\PSoC4\CyLib.h" />
-<file name=".\Generated_Source\PSoC4\cydevice_trm.h" />
-<file name=".\Generated_Source\PSoC4\cyfitter.h" />
-<file name=".\Generated_Source\PSoC4\cyfitter_cfg.h" />
-<file name=".\Generated_Source\PSoC4\cytypes.h" />
-<file name=".\cyapicallbacks.h" />
 <file name=".\CortexM0\ARM_GCC_541\Debug\CyDMA.o">
 <dep name=".\Generated_Source\PSoC4\CyDMA.c" />
 <dep name=".\Generated_Source\PSoC4\CyDMA.h" />
@@ -39,7 +180,6 @@
 <dep name=".\Generated_Source\PSoC4\cytypes.h" />
 </file>
 <file name=".\Generated_Source\PSoC4\CyDMA.c" />
-<file name=".\Generated_Source\PSoC4\CyDMA.h" />
 <file name=".\CortexM0\ARM_GCC_541\Debug\CyFlash.o">
 <dep name=".\Generated_Source\PSoC4\CyFlash.c" />
 <dep name=".\Generated_Source\PSoC4\CyFlash.h" />
@@ -50,7 +190,6 @@
 <dep name=".\Generated_Source\PSoC4\cytypes.h" />
 </file>
 <file name=".\Generated_Source\PSoC4\CyFlash.c" />
-<file name=".\Generated_Source\PSoC4\CyFlash.h" />
 <file name=".\CortexM0\ARM_GCC_541\Debug\CyLFClk.o">
 <dep name=".\Generated_Source\PSoC4\CyLFClk.c" />
 <dep name=".\Generated_Source\PSoC4\CyLFClk.h" />
@@ -70,29 +209,6 @@
 <dep name=".\Generated_Source\PSoC4\cytypes.h" />
 </file>
 <file name=".\Generated_Source\PSoC4\CyLib.c" />
-<file name=".\CortexM0\ARM_GCC_541\Debug\FanController.o">
-<dep name=".\Generated_Source\PSoC4\CyLFClk.h" />
-<dep name=".\Generated_Source\PSoC4\CyLib.h" />
-<dep name=".\Generated_Source\PSoC4\FanController.c" />
-<dep name=".\Generated_Source\PSoC4\FanController.h" />
-<dep name=".\Generated_Source\PSoC4\FanController_DataSend.h" />
-<dep name=".\Generated_Source\PSoC4\FanController_FW_PWM1.h" />
-<dep name=".\Generated_Source\PSoC4\FanController_FW_PWM2.h" />
-<dep name=".\Generated_Source\PSoC4\FanController_FW_PWM3.h" />
-<dep name=".\Generated_Source\PSoC4\FanController_FW_PWM4.h" />
-<dep name=".\Generated_Source\PSoC4\FanController_PID_ISR.h" />
-<dep name=".\Generated_Source\PSoC4\cydevice_trm.h" />
-<dep name=".\Generated_Source\PSoC4\cyfitter.h" />
-<dep name=".\Generated_Source\PSoC4\cytypes.h" />
-</file>
-<file name=".\Generated_Source\PSoC4\FanController.c" />
-<file name=".\Generated_Source\PSoC4\FanController.h" />
-<file name=".\Generated_Source\PSoC4\FanController_DataSend.h" />
-<file name=".\Generated_Source\PSoC4\FanController_FW_PWM1.h" />
-<file name=".\Generated_Source\PSoC4\FanController_FW_PWM2.h" />
-<file name=".\Generated_Source\PSoC4\FanController_FW_PWM3.h" />
-<file name=".\Generated_Source\PSoC4\FanController_FW_PWM4.h" />
-<file name=".\Generated_Source\PSoC4\FanController_PID_ISR.h" />
 <file name=".\CortexM0\ARM_GCC_541\Debug\FanController_DataSend.o">
 <dep name=".\Generated_Source\PSoC4\CyLFClk.h" />
 <dep name=".\Generated_Source\PSoC4\CyLib.h" />
@@ -184,17 +300,6 @@
 <dep name=".\Generated_Source\PSoC4\cytypes.h" />
 </file>
 <file name=".\Generated_Source\PSoC4\FanController_FW_PWM4_PM.c" />
-<file name=".\CortexM0\ARM_GCC_541\Debug\FanController_INT.o">
-<dep name=".\Generated_Source\PSoC4\CyLFClk.h" />
-<dep name=".\Generated_Source\PSoC4\CyLib.h" />
-<dep name=".\Generated_Source\PSoC4\FanController.h" />
-<dep name=".\Generated_Source\PSoC4\FanController_INT.c" />
-<dep name=".\Generated_Source\PSoC4\cydevice_trm.h" />
-<dep name=".\Generated_Source\PSoC4\cyfitter.h" />
-<dep name=".\Generated_Source\PSoC4\cytypes.h" />
-<dep name=".\cyapicallbacks.h" />
-</file>
-<file name=".\Generated_Source\PSoC4\FanController_INT.c" />
 <file name=".\CortexM0\ARM_GCC_541\Debug\FanController_PID_ISR.o">
 <dep name=".\Generated_Source\PSoC4\CyLFClk.h" />
 <dep name=".\Generated_Source\PSoC4\CyLib.h" />
@@ -217,7 +322,6 @@
 <dep name=".\cyapicallbacks.h" />
 </file>
 <file name=".\Generated_Source\PSoC4\ISR_Ball_Trigger.c" />
-<file name=".\Generated_Source\PSoC4\ISR_Ball_Trigger.h" />
 <file name=".\CortexM0\ARM_GCC_541\Debug\Pin_Input_BallTrigger.o">
 <dep name=".\Generated_Source\PSoC4\Pin_Input_BallTrigger.c" />
 <dep name=".\Generated_Source\PSoC4\Pin_Input_BallTrigger.h" />
@@ -228,9 +332,6 @@
 <dep name=".\Generated_Source\PSoC4\cytypes.h" />
 </file>
 <file name=".\Generated_Source\PSoC4\Pin_Input_BallTrigger.c" />
-<file name=".\Generated_Source\PSoC4\Pin_Input_BallTrigger.h" />
-<file name=".\Generated_Source\PSoC4\Pin_Input_BallTrigger_aliases.h" />
-<file name=".\Generated_Source\PSoC4\cypins.h" />
 <file name=".\CortexM0\ARM_GCC_541\Debug\Pin_Input_BallTrigger_PM.o">
 <dep name=".\Generated_Source\PSoC4\Pin_Input_BallTrigger.h" />
 <dep name=".\Generated_Source\PSoC4\Pin_Input_BallTrigger_PM.c" />
@@ -251,8 +352,6 @@
 <dep name=".\Generated_Source\PSoC4\cytypes.h" />
 </file>
 <file name=".\Generated_Source\PSoC4\Pin_Input_DOWN.c" />
-<file name=".\Generated_Source\PSoC4\Pin_Input_DOWN.h" />
-<file name=".\Generated_Source\PSoC4\Pin_Input_DOWN_aliases.h" />
 <file name=".\CortexM0\ARM_GCC_541\Debug\Pin_Input_DOWN_PM.o">
 <dep name=".\Generated_Source\PSoC4\Pin_Input_DOWN.h" />
 <dep name=".\Generated_Source\PSoC4\Pin_Input_DOWN_PM.c" />
@@ -273,8 +372,6 @@
 <dep name=".\Generated_Source\PSoC4\cytypes.h" />
 </file>
 <file name=".\Generated_Source\PSoC4\Pin_Input_LEFT.c" />
-<file name=".\Generated_Source\PSoC4\Pin_Input_LEFT.h" />
-<file name=".\Generated_Source\PSoC4\Pin_Input_LEFT_aliases.h" />
 <file name=".\CortexM0\ARM_GCC_541\Debug\Pin_Input_LEFT_PM.o">
 <dep name=".\Generated_Source\PSoC4\Pin_Input_LEFT.h" />
 <dep name=".\Generated_Source\PSoC4\Pin_Input_LEFT_PM.c" />
@@ -295,8 +392,6 @@
 <dep name=".\Generated_Source\PSoC4\cytypes.h" />
 </file>
 <file name=".\Generated_Source\PSoC4\Pin_Input_RIGHT.c" />
-<file name=".\Generated_Source\PSoC4\Pin_Input_RIGHT.h" />
-<file name=".\Generated_Source\PSoC4\Pin_Input_RIGHT_aliases.h" />
 <file name=".\CortexM0\ARM_GCC_541\Debug\Pin_Input_RIGHT_PM.o">
 <dep name=".\Generated_Source\PSoC4\Pin_Input_RIGHT.h" />
 <dep name=".\Generated_Source\PSoC4\Pin_Input_RIGHT_PM.c" />
@@ -317,8 +412,6 @@
 <dep name=".\Generated_Source\PSoC4\cytypes.h" />
 </file>
 <file name=".\Generated_Source\PSoC4\Pin_Input_UP.c" />
-<file name=".\Generated_Source\PSoC4\Pin_Input_UP.h" />
-<file name=".\Generated_Source\PSoC4\Pin_Input_UP_aliases.h" />
 <file name=".\CortexM0\ARM_GCC_541\Debug\Pin_Input_UP_PM.o">
 <dep name=".\Generated_Source\PSoC4\Pin_Input_UP.h" />
 <dep name=".\Generated_Source\PSoC4\Pin_Input_UP_PM.c" />
@@ -339,8 +432,6 @@
 <dep name=".\Generated_Source\PSoC4\cytypes.h" />
 </file>
 <file name=".\Generated_Source\PSoC4\Pin_Output_DOWN.c" />
-<file name=".\Generated_Source\PSoC4\Pin_Output_DOWN.h" />
-<file name=".\Generated_Source\PSoC4\Pin_Output_DOWN_aliases.h" />
 <file name=".\CortexM0\ARM_GCC_541\Debug\Pin_Output_DOWN_PM.o">
 <dep name=".\Generated_Source\PSoC4\Pin_Output_DOWN.h" />
 <dep name=".\Generated_Source\PSoC4\Pin_Output_DOWN_PM.c" />
@@ -361,8 +452,6 @@
 <dep name=".\Generated_Source\PSoC4\cytypes.h" />
 </file>
 <file name=".\Generated_Source\PSoC4\Pin_Output_LEFT.c" />
-<file name=".\Generated_Source\PSoC4\Pin_Output_LEFT.h" />
-<file name=".\Generated_Source\PSoC4\Pin_Output_LEFT_aliases.h" />
 <file name=".\CortexM0\ARM_GCC_541\Debug\Pin_Output_LEFT_PM.o">
 <dep name=".\Generated_Source\PSoC4\Pin_Output_LEFT.h" />
 <dep name=".\Generated_Source\PSoC4\Pin_Output_LEFT_PM.c" />
@@ -383,8 +472,6 @@
 <dep name=".\Generated_Source\PSoC4\cytypes.h" />
 </file>
 <file name=".\Generated_Source\PSoC4\Pin_Output_RIGHT.c" />
-<file name=".\Generated_Source\PSoC4\Pin_Output_RIGHT.h" />
-<file name=".\Generated_Source\PSoC4\Pin_Output_RIGHT_aliases.h" />
 <file name=".\CortexM0\ARM_GCC_541\Debug\Pin_Output_RIGHT_PM.o">
 <dep name=".\Generated_Source\PSoC4\Pin_Output_RIGHT.h" />
 <dep name=".\Generated_Source\PSoC4\Pin_Output_RIGHT_PM.c" />
@@ -405,8 +492,6 @@
 <dep name=".\Generated_Source\PSoC4\cytypes.h" />
 </file>
 <file name=".\Generated_Source\PSoC4\Pin_Output_UP.c" />
-<file name=".\Generated_Source\PSoC4\Pin_Output_UP.h" />
-<file name=".\Generated_Source\PSoC4\Pin_Output_UP_aliases.h" />
 <file name=".\CortexM0\ARM_GCC_541\Debug\Pin_Output_UP_PM.o">
 <dep name=".\Generated_Source\PSoC4\Pin_Output_UP.h" />
 <dep name=".\Generated_Source\PSoC4\Pin_Output_UP_PM.c" />
@@ -417,6 +502,26 @@
 <dep name=".\Generated_Source\PSoC4\cytypes.h" />
 </file>
 <file name=".\Generated_Source\PSoC4\Pin_Output_UP_PM.c" />
+<file name=".\CortexM0\ARM_GCC_541\Debug\Pin_Serve.o">
+<dep name=".\Generated_Source\PSoC4\Pin_Serve.c" />
+<dep name=".\Generated_Source\PSoC4\Pin_Serve.h" />
+<dep name=".\Generated_Source\PSoC4\Pin_Serve_aliases.h" />
+<dep name=".\Generated_Source\PSoC4\cydevice_trm.h" />
+<dep name=".\Generated_Source\PSoC4\cyfitter.h" />
+<dep name=".\Generated_Source\PSoC4\cypins.h" />
+<dep name=".\Generated_Source\PSoC4\cytypes.h" />
+</file>
+<file name=".\Generated_Source\PSoC4\Pin_Serve.c" />
+<file name=".\CortexM0\ARM_GCC_541\Debug\Pin_Serve_PM.o">
+<dep name=".\Generated_Source\PSoC4\Pin_Serve.h" />
+<dep name=".\Generated_Source\PSoC4\Pin_Serve_PM.c" />
+<dep name=".\Generated_Source\PSoC4\Pin_Serve_aliases.h" />
+<dep name=".\Generated_Source\PSoC4\cydevice_trm.h" />
+<dep name=".\Generated_Source\PSoC4\cyfitter.h" />
+<dep name=".\Generated_Source\PSoC4\cypins.h" />
+<dep name=".\Generated_Source\PSoC4\cytypes.h" />
+</file>
+<file name=".\Generated_Source\PSoC4\Pin_Serve_PM.c" />
 <file name=".\CortexM0\ARM_GCC_541\Debug\UART.o">
 <dep name=".\Generated_Source\PSoC4\CyLFClk.h" />
 <dep name=".\Generated_Source\PSoC4\CyLib.h" />
@@ -437,16 +542,6 @@
 <dep name=".\Generated_Source\PSoC4\cytypes.h" />
 </file>
 <file name=".\Generated_Source\PSoC4\UART.c" />
-<file name=".\Generated_Source\PSoC4\UART.h" />
-<file name=".\Generated_Source\PSoC4\UART_PINS.h" />
-<file name=".\Generated_Source\PSoC4\UART_PVT.h" />
-<file name=".\Generated_Source\PSoC4\UART_SCBCLK.h" />
-<file name=".\Generated_Source\PSoC4\UART_SPI_UART.h" />
-<file name=".\Generated_Source\PSoC4\UART_SPI_UART_PVT.h" />
-<file name=".\Generated_Source\PSoC4\UART_rx.h" />
-<file name=".\Generated_Source\PSoC4\UART_rx_aliases.h" />
-<file name=".\Generated_Source\PSoC4\UART_tx.h" />
-<file name=".\Generated_Source\PSoC4\UART_tx_aliases.h" />
 <file name=".\CortexM0\ARM_GCC_541\Debug\UART_BOOT.o">
 <dep name=".\Generated_Source\PSoC4\CyLFClk.h" />
 <dep name=".\Generated_Source\PSoC4\CyLib.h" />
@@ -467,7 +562,6 @@
 <dep name=".\Generated_Source\PSoC4\cytypes.h" />
 </file>
 <file name=".\Generated_Source\PSoC4\UART_BOOT.c" />
-<file name=".\Generated_Source\PSoC4\UART_BOOT.h" />
 <file name=".\CortexM0\ARM_GCC_541\Debug\UART_PM.o">
 <dep name=".\Generated_Source\PSoC4\CyLFClk.h" />
 <dep name=".\Generated_Source\PSoC4\CyLib.h" />
@@ -630,7 +724,6 @@
 <dep name=".\Generated_Source\PSoC4\cytypes.h" />
 </file>
 <file name=".\Generated_Source\PSoC4\cyPm.c" />
-<file name=".\Generated_Source\PSoC4\cyPm.h" />
 <file name=".\CortexM0\ARM_GCC_541\Debug\cy_em_eeprom.o">
 <dep name=".\Generated_Source\PSoC4\CyFlash.h" />
 <dep name=".\Generated_Source\PSoC4\CyLFClk.h" />
@@ -642,7 +735,6 @@
 <dep name=".\Generated_Source\PSoC4\cytypes.h" />
 </file>
 <file name=".\Generated_Source\PSoC4\cy_em_eeprom.c" />
-<file name=".\Generated_Source\PSoC4\cy_em_eeprom.h" />
 <file name=".\CortexM0\ARM_GCC_541\Debug\cyfitter_cfg.o">
 <dep name=".\Generated_Source\PSoC4\CyLFClk.h" />
 <dep name=".\Generated_Source\PSoC4\CyLib.h" />
@@ -661,74 +753,6 @@
 <dep name=".\Generated_Source\PSoC4\cyutils.c" />
 </file>
 <file name=".\Generated_Source\PSoC4\cyutils.c" />
-<file name=".\CortexM0\ARM_GCC_541\Debug\main.o">
-<dep name=".\Generated_Source\PSoC4\cmsis_armcc.h" />
-<dep name=".\Generated_Source\PSoC4\cmsis_compiler.h" />
-<dep name=".\Generated_Source\PSoC4\cmsis_gcc.h" />
-<dep name=".\Generated_Source\PSoC4\core_cm0.h" />
-<dep name=".\Generated_Source\PSoC4\core_cm0_psoc4.h" />
-<dep name=".\Generated_Source\PSoC4\cydisabledsheets.h" />
-<dep name=".\Generated_Source\PSoC4\project.h" />
-<dep name=".\Generated_Source\PSoC4\CyDMA.h" />
-<dep name=".\Generated_Source\PSoC4\CyFlash.h" />
-<dep name=".\Generated_Source\PSoC4\CyLFClk.h" />
-<dep name=".\Generated_Source\PSoC4\CyLib.h" />
-<dep name=".\Generated_Source\PSoC4\FanController.h" />
-<dep name=".\Generated_Source\PSoC4\FanController_DataSend.h" />
-<dep name=".\Generated_Source\PSoC4\FanController_FW_PWM1.h" />
-<dep name=".\Generated_Source\PSoC4\FanController_FW_PWM2.h" />
-<dep name=".\Generated_Source\PSoC4\FanController_FW_PWM3.h" />
-<dep name=".\Generated_Source\PSoC4\FanController_FW_PWM4.h" />
-<dep name=".\Generated_Source\PSoC4\FanController_PID_ISR.h" />
-<dep name=".\Generated_Source\PSoC4\ISR_Ball_Trigger.h" />
-<dep name=".\Generated_Source\PSoC4\Pin_Input_BallTrigger.h" />
-<dep name=".\Generated_Source\PSoC4\Pin_Input_BallTrigger_aliases.h" />
-<dep name=".\Generated_Source\PSoC4\Pin_Input_DOWN.h" />
-<dep name=".\Generated_Source\PSoC4\Pin_Input_DOWN_aliases.h" />
-<dep name=".\Generated_Source\PSoC4\Pin_Input_LEFT.h" />
-<dep name=".\Generated_Source\PSoC4\Pin_Input_LEFT_aliases.h" />
-<dep name=".\Generated_Source\PSoC4\Pin_Input_RIGHT.h" />
-<dep name=".\Generated_Source\PSoC4\Pin_Input_RIGHT_aliases.h" />
-<dep name=".\Generated_Source\PSoC4\Pin_Input_UP.h" />
-<dep name=".\Generated_Source\PSoC4\Pin_Input_UP_aliases.h" />
-<dep name=".\Generated_Source\PSoC4\Pin_Output_DOWN.h" />
-<dep name=".\Generated_Source\PSoC4\Pin_Output_DOWN_aliases.h" />
-<dep name=".\Generated_Source\PSoC4\Pin_Output_LEFT.h" />
-<dep name=".\Generated_Source\PSoC4\Pin_Output_LEFT_aliases.h" />
-<dep name=".\Generated_Source\PSoC4\Pin_Output_RIGHT.h" />
-<dep name=".\Generated_Source\PSoC4\Pin_Output_RIGHT_aliases.h" />
-<dep name=".\Generated_Source\PSoC4\Pin_Output_UP.h" />
-<dep name=".\Generated_Source\PSoC4\Pin_Output_UP_aliases.h" />
-<dep name=".\Generated_Source\PSoC4\UART.h" />
-<dep name=".\Generated_Source\PSoC4\UART_BOOT.h" />
-<dep name=".\Generated_Source\PSoC4\UART_PINS.h" />
-<dep name=".\Generated_Source\PSoC4\UART_PVT.h" />
-<dep name=".\Generated_Source\PSoC4\UART_SCBCLK.h" />
-<dep name=".\Generated_Source\PSoC4\UART_SPI_UART.h" />
-<dep name=".\Generated_Source\PSoC4\UART_SPI_UART_PVT.h" />
-<dep name=".\Generated_Source\PSoC4\UART_rx.h" />
-<dep name=".\Generated_Source\PSoC4\UART_rx_aliases.h" />
-<dep name=".\Generated_Source\PSoC4\UART_tx.h" />
-<dep name=".\Generated_Source\PSoC4\UART_tx_aliases.h" />
-<dep name=".\Generated_Source\PSoC4\cyPm.h" />
-<dep name=".\Generated_Source\PSoC4\cy_em_eeprom.h" />
-<dep name=".\Generated_Source\PSoC4\cydevice_trm.h" />
-<dep name=".\Generated_Source\PSoC4\cyfitter.h" />
-<dep name=".\Generated_Source\PSoC4\cyfitter_cfg.h" />
-<dep name=".\Generated_Source\PSoC4\cypins.h" />
-<dep name=".\Generated_Source\PSoC4\cytypes.h" />
-<dep name=".\main.c" />
-<dep name=".\main_data.h" />
-</file>
-<file name=".\Generated_Source\PSoC4\cmsis_armcc.h" />
-<file name=".\Generated_Source\PSoC4\cmsis_compiler.h" />
-<file name=".\Generated_Source\PSoC4\cmsis_gcc.h" />
-<file name=".\Generated_Source\PSoC4\core_cm0.h" />
-<file name=".\Generated_Source\PSoC4\core_cm0_psoc4.h" />
-<file name=".\Generated_Source\PSoC4\cydisabledsheets.h" />
-<file name=".\Generated_Source\PSoC4\project.h" />
-<file name=".\main.c" />
-<file name=".\main_data.h" />
 <file name=".\CortexM0\ARM_GCC_541\Debug\CyBootAsmGnu.o">
 <dep name=".\Generated_Source\PSoC4\CyBootAsmGnu.s" />
 <dep name=".\Generated_Source\PSoC4\cydevicegnu_trm.inc" />
@@ -1514,6 +1538,8 @@
 <dep name=".\CortexM0\ARM_GCC_541\Debug\Pin_Input_BallTrigger.o" />
 <dep name=".\CortexM0\ARM_GCC_541\Debug\Pin_Input_BallTrigger_PM.o" />
 <dep name=".\CortexM0\ARM_GCC_541\Debug\ISR_Ball_Trigger.o" />
+<dep name=".\CortexM0\ARM_GCC_541\Debug\Pin_Serve.o" />
+<dep name=".\CortexM0\ARM_GCC_541\Debug\Pin_Serve_PM.o" />
 <dep name=".\CortexM0\ARM_GCC_541\Debug\CyberPong.a" />
 </file>
 </CyGuid_1173175f-1b9b-4ad4-a065-754a48a27021>
@@ -1644,6 +1670,8 @@
 <name_val_pair name="Generated_Source\PSoC4\Pin_Input_BallTrigger.c" v="-mcpu=cortex-m0 -mthumb -I. -IGenerated_Source\PSoC4 -Wa,-alh=${OutputDir}/${CompileFile}.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og" />
 <name_val_pair name="Generated_Source\PSoC4\Pin_Input_BallTrigger_PM.c" v="-mcpu=cortex-m0 -mthumb -I. -IGenerated_Source\PSoC4 -Wa,-alh=${OutputDir}/${CompileFile}.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og" />
 <name_val_pair name="Generated_Source\PSoC4\ISR_Ball_Trigger.c" v="-mcpu=cortex-m0 -mthumb -I. -IGenerated_Source\PSoC4 -Wa,-alh=${OutputDir}/${CompileFile}.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og" />
+<name_val_pair name="Generated_Source\PSoC4\Pin_Serve.c" v="-mcpu=cortex-m0 -mthumb -I. -IGenerated_Source\PSoC4 -Wa,-alh=${OutputDir}/${CompileFile}.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og" />
+<name_val_pair name="Generated_Source\PSoC4\Pin_Serve_PM.c" v="-mcpu=cortex-m0 -mthumb -I. -IGenerated_Source\PSoC4 -Wa,-alh=${OutputDir}/${CompileFile}.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og" />
 </name>
 </genericCmdLineData>
 <codeGenCmdLineTag v="-.appdatapath &quot;C:\Users\Ade0n\AppData\Local\Cypress Semiconductor\PSoC Creator\4.4&quot; -.fdsnotice -.fdswarpdepfile=warp_dependencies.txt -.fdselabdepfile=elab_dependencies.txt -.fdsbldfile=generated_files.txt -.fdsreffile=referenced_files.txt -p C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn\CyberPong.cyprj -d CY8C4248LQI-BL583 -s C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn\Generated_Source\PSoC4 -- -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE" />
@@ -2203,6 +2231,10 @@
 <v>Generated_Source\PSoC4\Pin_Input_BallTrigger_PM.c</v>
 <v>Generated_Source\PSoC4\ISR_Ball_Trigger.c</v>
 <v>Generated_Source\PSoC4\ISR_Ball_Trigger.h</v>
+<v>Generated_Source\PSoC4\Pin_Serve.c</v>
+<v>Generated_Source\PSoC4\Pin_Serve.h</v>
+<v>Generated_Source\PSoC4\Pin_Serve_aliases.h</v>
+<v>Generated_Source\PSoC4\Pin_Serve_PM.c</v>
 </gen_list>
 <warp_dep>
 <v>C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\ieee\work\stdlogic.vif</v>
@@ -2212,7 +2244,7 @@
 <v>C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\stdlogic\rtlpkg.vif</v>
 <v>C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\stdlogic\cy_psoc3.vif</v>
 </warp_dep>
-<deps_time v="132866299824366761" />
+<deps_time v="132866353536830270" />
 <top_block v="TopDesign" />
 <last_generation v="3" />
 <pdl_path v="" />
@@ -2222,7 +2254,7 @@
 <dataGuid v="769d31ea-68b1-4f0c-b90a-7c10a43ee563">
 <CyGuid_769d31ea-68b1-4f0c-b90a-7c10a43ee563 type_name="CyDesigner.Common.ProjMgmt.Model.CyLinkCustomData" version="1">
 <link_deps_times>
-<name_val_pair name="c9323d49-d323-40b8-9b59-cc008d68a989@Debug@CortexM0" v="132866299907350915" />
+<name_val_pair name="c9323d49-d323-40b8-9b59-cc008d68a989@Debug@CortexM0" v="132866428534756803" />
 </link_deps_times>
 </CyGuid_769d31ea-68b1-4f0c-b90a-7c10a43ee563>
 </dataGuid>

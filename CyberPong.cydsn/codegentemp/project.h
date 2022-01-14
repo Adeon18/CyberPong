@@ -44,6 +44,8 @@
 #include "Pin_Input_BallTrigger.h"
 #include "Pin_Input_BallTrigger_aliases.h"
 #include "ISR_Ball_Trigger.h"
+#include "Pin_Serve.h"
+#include "Pin_Serve_aliases.h"
 #include "UART_SCBCLK.h"
 #include "UART_tx.h"
 #include "UART_tx_aliases.h"

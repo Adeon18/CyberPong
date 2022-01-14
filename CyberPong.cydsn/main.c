@@ -15,6 +15,10 @@
 
 
 int8 speed_idx;
+int8 isr_triggered = 0;
+int8 serving_enabled = 0;
+
+int16_t motor_speeds[4];
 int16 speed_buf;
 
 
@@ -50,12 +54,12 @@ void print_all_speed() {
 }
 
 
-void write_motor_speed() {
+void write_motor_speed(int16_t speeds[]) {
     // Write the speed of all motors(An option that limits the speed and the option to stop the motor)
     for (int i = 0; i < MOTOR_COUNT; i++) {
-        if (motor_speeds[i] > 2 * MIN_RPM && motor_speeds[i] < 2 * MAX_RPM) {
-            FanController_SetDesiredSpeed(i+1, motor_speeds[i]);
-        } else if (motor_speeds[i] == 0) {
+        if (speeds[i] > MIN_RPM && speeds[i] < MAX_RPM) {
+            FanController_SetDesiredSpeed(i+1, 2*speeds[i]);
+        } else if (speeds[i] == 0) {
             FanController_SetDesiredSpeed(i+1, 0);
         } else {
             continue;
@@ -81,16 +85,26 @@ void handle_UART_input(char inp_ch) {
         else if(inp_ch == 's'){
             print_speed_flag = 1;
         }
+        else if(inp_ch == 'x') {
+            UART_print_string("Enabled Serving:");
+            serving_enabled = 1;
+            Pin_Serve_Write(1);
+        }
+        else if (inp_ch == 'z') {
+            UART_print_string("Disabled Serving:");
+            serving_enabled = 0;
+            Pin_Serve_Write(0);
+        }
         else if (inp_ch == ' ') {
-            motor_speeds[speed_idx] = speed_buf * 2;
+            motor_speeds[speed_idx] = speed_buf;
             speed_idx++;
             speed_buf = 0;
         }
         else if(inp_ch == '\r'){
             if (speed_idx == MOTOR_COUNT - 1) {
-                motor_speeds[speed_idx] = speed_buf * 2;
+                motor_speeds[speed_idx] = speed_buf;
             }
-            write_motor_speed();
+            write_motor_speed(motor_speeds);
             speed_buf = 0;
             speed_idx = 0;
             UART_UartPutChar('\n');
@@ -103,6 +117,11 @@ void handle_UART_input(char inp_ch) {
 }
 
 
+CY_ISR (Ball_Trigger_Handler) {
+    isr_triggered = 1;
+}
+
+
 int main(void)
 {
     CyGlobalIntEnable; /* Enable global interrupts. */
@@ -110,6 +129,7 @@ int main(void)
     /* Start Everything Up */
     FanController_Start();
     UART_Start();
+    ISR_Ball_Trigger_StartEx( Ball_Trigger_Handler );
 
     char ch;
     speed_buf = 0;
@@ -127,6 +147,9 @@ int main(void)
             manual_control_flag = 0;
             print_speed_flag = 0;
             UART_print_string("Automatic Control Activated:");
+            UART_print_string("Enabled Serving:");
+            serving_enabled = 1;
+            Pin_Serve_Write(1);
         } else if (ch == 'm') {
             manual_control_flag = 1;
             UART_print_string("Manual Control Activated:");
@@ -140,6 +163,28 @@ int main(void)
         }
         else{
             UART_UartPutChar(ch);
+        }
+        
+        if (isr_triggered) {
+            Pin_Serve_Write(0);
+            CyDelay(250);
+            isr_triggered = 0;
+            if (serving_enabled) {
+                Pin_Serve_Write(1);
+            }
+            if (!manual_control_flag) {
+                UART_print_string("New Config");
+                print_all_speed(); 
+                char debug[20];
+                sprintf(debug, "%d %d %d %d", speed_configs[conf_iterator][0], speed_configs[conf_iterator][1], speed_configs[conf_iterator][2], speed_configs[conf_iterator][3]);
+                UART_print_string(debug);
+                //
+                write_motor_speed(speed_configs[conf_iterator]);
+                conf_iterator++;
+                if (conf_iterator > conf_size - 1) {
+                    conf_iterator = 0;
+                }
+            }
         }
     }
 }

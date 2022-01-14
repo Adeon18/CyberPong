@@ -67,6 +67,10 @@
   <file name="C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn\codegentemp\Pin_Input_BallTrigger_PM.c" value="SOURCE_C;CortexM0;;;;Pin_Input_BallTrigger" />
   <file name="C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn\codegentemp\ISR_Ball_Trigger.c" value="SOURCE_C;CortexM0;;;;ISR_Ball_Trigger" />
   <file name="C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn\codegentemp\ISR_Ball_Trigger.h" value="HEADER;;;;;ISR_Ball_Trigger" />
+  <file name="C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn\codegentemp\Pin_Serve.c" value="SOURCE_C;CortexM0;;;;Pin_Serve" />
+  <file name="C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn\codegentemp\Pin_Serve.h" value="HEADER;;;;;Pin_Serve" />
+  <file name="C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn\codegentemp\Pin_Serve_aliases.h" value="HEADER;;;;;Pin_Serve" />
+  <file name="C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn\codegentemp\Pin_Serve_PM.c" value="SOURCE_C;CortexM0;;;;Pin_Serve" />
   <file name="C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn\codegentemp\UART_SCBCLK.c" value="SOURCE_C;CortexM0;;;;UART_SCBCLK" />
   <file name="C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn\codegentemp\UART_SCBCLK.h" value="HEADER;;;;;UART_SCBCLK" />
   <file name="C:\Users\Ade0n\Desktop\PR\CyberPong\CyberPong.cydsn\codegentemp\UART_tx.c" value="SOURCE_C;CortexM0;;;;UART_tx" />

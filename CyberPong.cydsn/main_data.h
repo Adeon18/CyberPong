@@ -28,5 +28,12 @@ int8_t print_speed_flag;
 int8_t manual_control_flag;
 
 char uart_rpm_buff[4];
-int16_t motor_speeds[4];
+
+int16_t speed_configs[4][4] = {{4000, 0, 4000, 4000},   // Left Spin
+                               {0, 4000, 4000, 4000},   // Right Spin
+                               {4000, 4000, 0, 4000},   // BackWards Spin
+                               {4000, 4000, 4000, 0}};  // TopSpin
+int16_t conf_size = 4;
+int8_t conf_iterator = 0;
+
 /* [] END OF FILE */

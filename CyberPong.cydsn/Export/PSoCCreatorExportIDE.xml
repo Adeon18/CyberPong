@@ -168,6 +168,10 @@
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Pin_Input_BallTrigger_PM.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\ISR_Ball_Trigger.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\ISR_Ball_Trigger.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Pin_Serve.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Pin_Serve.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Pin_Serve_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Pin_Serve_PM.c</File>
         </Files>
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\codegentemp">

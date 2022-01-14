@@ -1,6 +1,6 @@
 // ======================================================================
 // CyberPong.v generated from TopDesign.cysch
-// 01/14/2022 at 12:32
+// 01/14/2022 at 14:02
 // This file is auto generated. ANY EDITS YOU MAKE MAY BE LOST WHEN THIS FILE IS REGENERATED!!!
 // ======================================================================
 
@@ -841,7 +841,7 @@ endmodule
 `include "C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\CyComponentLibrary\CyComponentLibrary.cylib\B_FanTach_v4_10\B_FanTach_v4_10.v"
 `endif
 
-// FanController_v4_10(AcousticNoiseReduction=0, AlertEnable=0, CoefDerivative=20, CoefIntegral=80, CoefLowerOutputLimit=0, CoefOutputAttenuation=-16, CoefProportional=100, CoefUpperOutputLimit=100, Connection=1, CtlModeReplacementString=SyncCtl, DampingFactor=1, ExternalClock=0, FanMode=0, FanModeManual=false, FanPWMFreq=0, FanPWMRes=1, FanTolerance=1, InitialRPM01=8000, InitialRPM02=7500, InitialRPM03=8000, InitialRPM04=8000, InitialRPM05=5000, InitialRPM06=5000, InitialRPM07=5000, InitialRPM08=5000, InitialRPM09=5000, InitialRPM10=5000, InitialRPM11=5000, InitialRPM12=5000, InitialRPM13=5000, InitialRPM14=5000, InitialRPM15=5000, InitialRPM16=5000, MaxDuty01=100, MaxDuty02=100, MaxDuty03=100, MaxDuty04=100, MaxDuty05=100, MaxDuty06=100, MaxDuty07=100, MaxDuty08=100, MaxDuty09=100, MaxDuty10=100, MaxDuty11=100, MaxDuty12=100, MaxDuty13=100, MaxDuty14=100, MaxDuty15=100, MaxDuty16=100, MaxRPM01=9600, MaxRPM02=9600, MaxRPM03=9600, MaxRPM04=9600, MaxRPM05=10000, MaxRPM06=10000, MaxRPM07=10000, MaxRPM08=10000, MaxRPM09=10000, MaxRPM10=10000, MaxRPM11=10000, MaxRPM12=10000, MaxRPM13=10000, MaxRPM14=10000, MaxRPM15=10000, MaxRPM16=10000, MinDuty01=55, MinDuty02=55, MinDuty03=55, MinDuty04=55, MinDuty05=25, MinDuty06=25, MinDuty07=25, MinDuty08=25, MinDuty09=25, MinDuty10=25, MinDuty11=25, MinDuty12=25, MinDuty13=25, MinDuty14=25, MinDuty15=25, MinDuty16=25, MinRPM01=4400, MinRPM02=4400, MinRPM03=4400, MinRPM04=4400, MinRPM05=1000, MinRPM06=1000, MinRPM07=1000, MinRPM08=1000, MinRPM09=1000, MinRPM10=1000, MinRPM11=1000, MinRPM12=100, MinRPM13=100, MinRPM14=1000, MinRPM15=1000, MinRPM16=1000, MotorType=0, NineOrMoreFans=false, NumberOfBanks=0, NumberOfFanOutputs=4, NumberOfFans=4, pid_A1=8192, pid_A2=-5734, pid_A3=819, pid_output_gain=16, pid_output_sat_H=62914560, pid_output_sat_L=0, Psoc3or5=false, pwm_period=960, ShowFanOutputs=false, SpeedErrorCount=16, CY_API_CALLBACK_HEADER_INCLUDE=#include "cyapicallbacks.h", CY_COMMENT=, CY_COMPONENT_NAME=FanController_v4_10, CY_CONFIG_TITLE=FanController, CY_CONST_CONFIG=true, CY_CONTROL_FILE=<:default:>, CY_DATASHEET_FILE=<:default:>, CY_FITTER_NAME=FanController, CY_INSTANCE_SHORT_NAME=FanController, CY_MAJOR_VERSION=4, CY_MINOR_VERSION=10, CY_PDL_DRIVER_NAME=, CY_PDL_DRIVER_REQ_VERSION=, CY_PDL_DRIVER_SUBGROUP=, CY_PDL_DRIVER_VARIANT=, CY_REMOVE=false, CY_SUPPRESS_API_GEN=false, CY_VERSION=PSoC Creator  4.4, INSTANCE_NAME=FanController, )
+// FanController_v4_10(AcousticNoiseReduction=0, AlertEnable=0, CoefDerivative=20, CoefIntegral=80, CoefLowerOutputLimit=0, CoefOutputAttenuation=-18, CoefProportional=100, CoefUpperOutputLimit=100, Connection=1, CtlModeReplacementString=SyncCtl, DampingFactor=1, ExternalClock=0, FanMode=0, FanModeManual=false, FanPWMFreq=0, FanPWMRes=1, FanTolerance=1, InitialRPM01=8000, InitialRPM02=7500, InitialRPM03=8000, InitialRPM04=8000, InitialRPM05=5000, InitialRPM06=5000, InitialRPM07=5000, InitialRPM08=5000, InitialRPM09=5000, InitialRPM10=5000, InitialRPM11=5000, InitialRPM12=5000, InitialRPM13=5000, InitialRPM14=5000, InitialRPM15=5000, InitialRPM16=5000, MaxDuty01=100, MaxDuty02=100, MaxDuty03=100, MaxDuty04=100, MaxDuty05=100, MaxDuty06=100, MaxDuty07=100, MaxDuty08=100, MaxDuty09=100, MaxDuty10=100, MaxDuty11=100, MaxDuty12=100, MaxDuty13=100, MaxDuty14=100, MaxDuty15=100, MaxDuty16=100, MaxRPM01=9600, MaxRPM02=9600, MaxRPM03=9600, MaxRPM04=9600, MaxRPM05=10000, MaxRPM06=10000, MaxRPM07=10000, MaxRPM08=10000, MaxRPM09=10000, MaxRPM10=10000, MaxRPM11=10000, MaxRPM12=10000, MaxRPM13=10000, MaxRPM14=10000, MaxRPM15=10000, MaxRPM16=10000, MinDuty01=55, MinDuty02=55, MinDuty03=55, MinDuty04=55, MinDuty05=25, MinDuty06=25, MinDuty07=25, MinDuty08=25, MinDuty09=25, MinDuty10=25, MinDuty11=25, MinDuty12=25, MinDuty13=25, MinDuty14=25, MinDuty15=25, MinDuty16=25, MinRPM01=4400, MinRPM02=4400, MinRPM03=4400, MinRPM04=4400, MinRPM05=1000, MinRPM06=1000, MinRPM07=1000, MinRPM08=1000, MinRPM09=1000, MinRPM10=1000, MinRPM11=1000, MinRPM12=100, MinRPM13=100, MinRPM14=1000, MinRPM15=1000, MinRPM16=1000, MotorType=0, NineOrMoreFans=false, NumberOfBanks=0, NumberOfFanOutputs=4, NumberOfFans=4, pid_A1=8192, pid_A2=-5734, pid_A3=819, pid_output_gain=18, pid_output_sat_H=251658240, pid_output_sat_L=0, Psoc3or5=false, pwm_period=960, ShowFanOutputs=false, SpeedErrorCount=16, CY_API_CALLBACK_HEADER_INCLUDE=#include "cyapicallbacks.h", CY_COMMENT=, CY_COMPONENT_NAME=FanController_v4_10, CY_CONFIG_TITLE=FanController, CY_CONST_CONFIG=true, CY_CONTROL_FILE=<:default:>, CY_DATASHEET_FILE=<:default:>, CY_FITTER_NAME=FanController, CY_INSTANCE_SHORT_NAME=FanController, CY_MAJOR_VERSION=4, CY_MINOR_VERSION=10, CY_PDL_DRIVER_NAME=, CY_PDL_DRIVER_REQ_VERSION=, CY_PDL_DRIVER_SUBGROUP=, CY_PDL_DRIVER_VARIANT=, CY_REMOVE=false, CY_SUPPRESS_API_GEN=false, CY_VERSION=PSoC Creator  4.4, INSTANCE_NAME=FanController, )
 module FanController_v4_10_5 (
     alert,
     bank,
@@ -2084,9 +2084,9 @@ module top ;
 
 	cy_psoc3_pins_v1_10
 		#(.id("c8cb8994-cb9c-46dd-adfb-531a4692270b"),
-		  .drive_mode(3'b001),
+		  .drive_mode(3'b010),
 		  .ibuf_enabled(1'b1),
-		  .init_dr_st(1'b0),
+		  .init_dr_st(1'b1),
 		  .input_clk_en(0),
 		  .input_sync(1'b0),
 		  .input_sync_mode(1'b0),
@@ -2157,6 +2157,81 @@ module top ;
 		ISR_Ball_Trigger
 		 (.int_signal(Net_828));
 
+
+	wire [0:0] tmpOE__Pin_Serve_net;
+	wire [0:0] tmpFB_0__Pin_Serve_net;
+	wire [0:0] tmpIO_0__Pin_Serve_net;
+	wire [0:0] tmpINTERRUPT_0__Pin_Serve_net;
+	electrical [0:0] tmpSIOVREF__Pin_Serve_net;
+
+	cy_psoc3_pins_v1_10
+		#(.id("a45133cb-683e-41b9-b6a4-155bde8f41e9"),
+		  .drive_mode(3'b110),
+		  .ibuf_enabled(1'b1),
+		  .init_dr_st(1'b0),
+		  .input_clk_en(0),
+		  .input_sync(1'b1),
+		  .input_sync_mode(1'b0),
+		  .intr_mode(2'b00),
+		  .invert_in_clock(0),
+		  .invert_in_clock_en(0),
+		  .invert_in_reset(0),
+		  .invert_out_clock(0),
+		  .invert_out_clock_en(0),
+		  .invert_out_reset(0),
+		  .io_voltage(""),
+		  .layout_mode("CONTIGUOUS"),
+		  .oe_conn(1'b0),
+		  .oe_reset(0),
+		  .oe_sync(1'b0),
+		  .output_clk_en(0),
+		  .output_clock_mode(1'b0),
+		  .output_conn(1'b0),
+		  .output_mode(1'b0),
+		  .output_reset(0),
+		  .output_sync(1'b0),
+		  .pa_in_clock(-1),
+		  .pa_in_clock_en(-1),
+		  .pa_in_reset(-1),
+		  .pa_out_clock(-1),
+		  .pa_out_clock_en(-1),
+		  .pa_out_reset(-1),
+		  .pin_aliases(""),
+		  .pin_mode("O"),
+		  .por_state(4),
+		  .sio_group_cnt(0),
+		  .sio_hyst(1'b1),
+		  .sio_ibuf(""),
+		  .sio_info(2'b00),
+		  .sio_obuf(""),
+		  .sio_refsel(""),
+		  .sio_vtrip(""),
+		  .sio_hifreq(""),
+		  .sio_vohsel(""),
+		  .slew_rate(1'b0),
+		  .spanning(0),
+		  .use_annotation(1'b0),
+		  .vtrip(2'b10),
+		  .width(1),
+		  .ovt_hyst_trim(1'b0),
+		  .ovt_needed(1'b0),
+		  .ovt_slew_control(2'b00),
+		  .input_buffer_sel(2'b00))
+		Pin_Serve
+		 (.oe(tmpOE__Pin_Serve_net),
+		  .y({1'b0}),
+		  .fb({tmpFB_0__Pin_Serve_net[0:0]}),
+		  .io({tmpIO_0__Pin_Serve_net[0:0]}),
+		  .siovref(tmpSIOVREF__Pin_Serve_net),
+		  .interrupt({tmpINTERRUPT_0__Pin_Serve_net[0:0]}),
+		  .in_clock({1'b0}),
+		  .in_clock_en({1'b1}),
+		  .in_reset({1'b0}),
+		  .out_clock({1'b0}),
+		  .out_clock_en({1'b1}),
+		  .out_reset({1'b0}));
+
+	assign tmpOE__Pin_Serve_net = (`CYDEV_CHIP_MEMBER_USED == `CYDEV_CHIP_MEMBER_3A && `CYDEV_CHIP_REVISION_USED < `CYDEV_CHIP_REVISION_3A_ES3) ? ~{1'b1} : {1'b1};
 
 
 

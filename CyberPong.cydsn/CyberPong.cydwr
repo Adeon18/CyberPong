@@ -12,20 +12,22 @@
   <Data key="DataVersionKey" value="2" />
   <Group key="DWRInstGuidMapping">
     <Group key="Pin">
-      <Data key="0f761fe2-c143-4cd0-b272-0f3dcf8827eb" value="Pin_Input_Motor4" />
-      <Data key="2d0b54bf-167e-4c89-ad3c-6f311f9b22fa" value="Pin_Output_Motor4" />
+      <Data key="0f761fe2-c143-4cd0-b272-0f3dcf8827eb" value="Pin_Input_DOWN" />
+      <Data key="2d0b54bf-167e-4c89-ad3c-6f311f9b22fa" value="Pin_Output_DOWN" />
       <Data key="7c22e3c5-da93-4267-9ea2-622856a53add/5382e105-1382-4a2e-b9f4-3bb2feba71e0" value="I2C_sda" />
       <Data key="7c22e3c5-da93-4267-9ea2-622856a53add/22863ebe-a37b-476f-b252-6e49a8c00b12" value="I2C_scl" />
-      <Data key="8d318d8b-cf7b-4b6b-b02c-ab1c5c49d0ba" value="Pin_Input_Motor1" />
+      <Data key="8d318d8b-cf7b-4b6b-b02c-ab1c5c49d0ba" value="Pin_Input_LEFT" />
       <Data key="43ec2fa1-bf22-4b71-9477-b6ca7b97f0b0/23b8206d-1c77-4e61-be4a-b4037d5de5fc" value="UART_tx" />
       <Data key="43ec2fa1-bf22-4b71-9477-b6ca7b97f0b0/78e33e5d-45ea-4b75-88d5-73274e8a7ce4" value="UART_rx" />
       <Data key="57f787e5-d81d-44a9-b285-9caf9cfaafc7" value="LED" />
-      <Data key="c3d56674-74c2-4375-b646-dffe16e6448c" value="Pin_Input_Motor2" />
-      <Data key="ccabe786-2fa9-4230-a4a4-043c52732162" value="Pin_Output_Motor3" />
+      <Data key="a45133cb-683e-41b9-b6a4-155bde8f41e9" value="Pin_Serve" />
+      <Data key="c3d56674-74c2-4375-b646-dffe16e6448c" value="Pin_Input_RIGHT" />
+      <Data key="c8cb8994-cb9c-46dd-adfb-531a4692270b" value="Pin_Input_BallTrigger" />
+      <Data key="ccabe786-2fa9-4230-a4a4-043c52732162" value="Pin_Output_UP" />
       <Data key="d10b3a38-f636-4c1b-96cd-dfb573575327" value="Pin_B" />
-      <Data key="d7743053-8527-47e4-8c00-7ac86d0e7d85" value="Pin_Input_Motor3" />
-      <Data key="e6ea2d02-d3f2-4851-9ae3-21ddbdd62389" value="Pin_Output_Motor2" />
-      <Data key="e851a3b9-efb8-48be-bbb8-b303b216c393" value="Pin_Output_Motor1" />
+      <Data key="d7743053-8527-47e4-8c00-7ac86d0e7d85" value="Pin_Input_UP" />
+      <Data key="e6ea2d02-d3f2-4851-9ae3-21ddbdd62389" value="Pin_Output_RIGHT" />
+      <Data key="e851a3b9-efb8-48be-bbb8-b303b216c393" value="Pin_Output_LEFT" />
     </Group>
   </Group>
   <Group key="FlashSecurity">
@@ -3604,9 +3606,19 @@
         <Data key="Port Format" value="3,6" />
       </Group>
     </Group>
+    <Group key="a45133cb-683e-41b9-b6a4-155bde8f41e9">
+      <Group key="0">
+        <Data key="Port Format" value="1,0" />
+      </Group>
+    </Group>
     <Group key="c3d56674-74c2-4375-b646-dffe16e6448c">
       <Group key="0">
         <Data key="Port Format" value="0,2" />
+      </Group>
+    </Group>
+    <Group key="c8cb8994-cb9c-46dd-adfb-531a4692270b">
+      <Group key="0">
+        <Data key="Port Format" value="1,6" />
       </Group>
     </Group>
     <Group key="ccabe786-2fa9-4230-a4a4-043c52732162">
