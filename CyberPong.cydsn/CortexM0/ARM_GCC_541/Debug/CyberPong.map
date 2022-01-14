@@ -1517,28 +1517,28 @@ END GROUP
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x00000000     0x715f
+.debug_info     0x00000000     0x715e
  *(.debug_info .gnu.linkonce.wi.*)
- .debug_info    0x00000000      0x6db .\CortexM0\ARM_GCC_541\Debug\main.o
- .debug_info    0x000006db      0x451 .\CortexM0\ARM_GCC_541\Debug\cyfitter_cfg.o
- .debug_info    0x00000b2c       0xf8 .\CortexM0\ARM_GCC_541\Debug\cymetadata.o
- .debug_info    0x00000c24      0x3a2 .\CortexM0\ARM_GCC_541\Debug\Cm0Start.o
- .debug_info    0x00000fc6      0xd2c .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(CyLib.o)
- .debug_info    0x00001cf2     0x1071 .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(CyLFClk.o)
- .debug_info    0x00002d63      0x23a .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(UART.o)
- .debug_info    0x00002f9d      0x220 .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(UART_SPI_UART.o)
- .debug_info    0x000031bd      0x3b5 .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(UART_UART.o)
- .debug_info    0x00003572      0x965 .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(FanController.o)
- .debug_info    0x00003ed7      0x338 .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(FanController_INT.o)
- .debug_info    0x0000420f      0x305 .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(FanController_DataSend.o)
- .debug_info    0x00004514      0x305 .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(FanController_PID_ISR.o)
- .debug_info    0x00004819      0x909 .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(FanController_FW_PWM1.o)
- .debug_info    0x00005122      0x909 .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(FanController_FW_PWM2.o)
- .debug_info    0x00005a2b      0x909 .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(FanController_FW_PWM3.o)
- .debug_info    0x00006334      0x909 .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(FanController_FW_PWM4.o)
- .debug_info    0x00006c3d      0x305 .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(ISR_Ball_Trigger.o)
- .debug_info    0x00006f42      0x19b .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(Pin_Serve.o)
- .debug_info    0x000070dd       0x82 .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(CyBootAsmGnu.o)
+ .debug_info    0x00000000      0x6da .\CortexM0\ARM_GCC_541\Debug\main.o
+ .debug_info    0x000006da      0x451 .\CortexM0\ARM_GCC_541\Debug\cyfitter_cfg.o
+ .debug_info    0x00000b2b       0xf8 .\CortexM0\ARM_GCC_541\Debug\cymetadata.o
+ .debug_info    0x00000c23      0x3a2 .\CortexM0\ARM_GCC_541\Debug\Cm0Start.o
+ .debug_info    0x00000fc5      0xd2c .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(CyLib.o)
+ .debug_info    0x00001cf1     0x1071 .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(CyLFClk.o)
+ .debug_info    0x00002d62      0x23a .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(UART.o)
+ .debug_info    0x00002f9c      0x220 .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(UART_SPI_UART.o)
+ .debug_info    0x000031bc      0x3b5 .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(UART_UART.o)
+ .debug_info    0x00003571      0x965 .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(FanController.o)
+ .debug_info    0x00003ed6      0x338 .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(FanController_INT.o)
+ .debug_info    0x0000420e      0x305 .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(FanController_DataSend.o)
+ .debug_info    0x00004513      0x305 .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(FanController_PID_ISR.o)
+ .debug_info    0x00004818      0x909 .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(FanController_FW_PWM1.o)
+ .debug_info    0x00005121      0x909 .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(FanController_FW_PWM2.o)
+ .debug_info    0x00005a2a      0x909 .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(FanController_FW_PWM3.o)
+ .debug_info    0x00006333      0x909 .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(FanController_FW_PWM4.o)
+ .debug_info    0x00006c3c      0x305 .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(ISR_Ball_Trigger.o)
+ .debug_info    0x00006f41      0x19b .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(Pin_Serve.o)
+ .debug_info    0x000070dc       0x82 .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(CyBootAsmGnu.o)
 
 .debug_abbrev   0x00000000     0x1a58
  *(.debug_abbrev)
@@ -1563,28 +1563,28 @@ END GROUP
  .debug_abbrev  0x0000197c       0xc8 .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(Pin_Serve.o)
  .debug_abbrev  0x00001a44       0x14 .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(CyBootAsmGnu.o)
 
-.debug_line     0x00000000     0x2f0c
+.debug_line     0x00000000     0x2f0b
  *(.debug_line)
- .debug_line    0x00000000      0x325 .\CortexM0\ARM_GCC_541\Debug\main.o
- .debug_line    0x00000325      0x19b .\CortexM0\ARM_GCC_541\Debug\cyfitter_cfg.o
- .debug_line    0x000004c0      0x141 .\CortexM0\ARM_GCC_541\Debug\cymetadata.o
- .debug_line    0x00000601      0x236 .\CortexM0\ARM_GCC_541\Debug\Cm0Start.o
- .debug_line    0x00000837      0x553 .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(CyLib.o)
- .debug_line    0x00000d8a      0x5db .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(CyLFClk.o)
- .debug_line    0x00001365      0x108 .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(UART.o)
- .debug_line    0x0000146d      0x11a .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(UART_SPI_UART.o)
- .debug_line    0x00001587      0x1cf .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(UART_UART.o)
- .debug_line    0x00001756      0x32b .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(FanController.o)
- .debug_line    0x00001a81      0x10c .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(FanController_INT.o)
- .debug_line    0x00001b8d      0x162 .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(FanController_DataSend.o)
- .debug_line    0x00001cef      0x161 .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(FanController_PID_ISR.o)
- .debug_line    0x00001e50      0x38e .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(FanController_FW_PWM1.o)
- .debug_line    0x000021de      0x38e .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(FanController_FW_PWM2.o)
- .debug_line    0x0000256c      0x38e .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(FanController_FW_PWM3.o)
- .debug_line    0x000028fa      0x38e .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(FanController_FW_PWM4.o)
- .debug_line    0x00002c88      0x15c .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(ISR_Ball_Trigger.o)
- .debug_line    0x00002de4       0xc0 .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(Pin_Serve.o)
- .debug_line    0x00002ea4       0x68 .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(CyBootAsmGnu.o)
+ .debug_line    0x00000000      0x324 .\CortexM0\ARM_GCC_541\Debug\main.o
+ .debug_line    0x00000324      0x19b .\CortexM0\ARM_GCC_541\Debug\cyfitter_cfg.o
+ .debug_line    0x000004bf      0x141 .\CortexM0\ARM_GCC_541\Debug\cymetadata.o
+ .debug_line    0x00000600      0x236 .\CortexM0\ARM_GCC_541\Debug\Cm0Start.o
+ .debug_line    0x00000836      0x553 .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(CyLib.o)
+ .debug_line    0x00000d89      0x5db .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(CyLFClk.o)
+ .debug_line    0x00001364      0x108 .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(UART.o)
+ .debug_line    0x0000146c      0x11a .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(UART_SPI_UART.o)
+ .debug_line    0x00001586      0x1cf .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(UART_UART.o)
+ .debug_line    0x00001755      0x32b .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(FanController.o)
+ .debug_line    0x00001a80      0x10c .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(FanController_INT.o)
+ .debug_line    0x00001b8c      0x162 .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(FanController_DataSend.o)
+ .debug_line    0x00001cee      0x161 .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(FanController_PID_ISR.o)
+ .debug_line    0x00001e4f      0x38e .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(FanController_FW_PWM1.o)
+ .debug_line    0x000021dd      0x38e .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(FanController_FW_PWM2.o)
+ .debug_line    0x0000256b      0x38e .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(FanController_FW_PWM3.o)
+ .debug_line    0x000028f9      0x38e .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(FanController_FW_PWM4.o)
+ .debug_line    0x00002c87      0x15c .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(ISR_Ball_Trigger.o)
+ .debug_line    0x00002de3       0xc0 .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(Pin_Serve.o)
+ .debug_line    0x00002ea3       0x68 .\CortexM0\ARM_GCC_541\Debug\CyberPong.a(CyBootAsmGnu.o)
 
 .debug_frame    0x00000000     0x2650
  *(.debug_frame)

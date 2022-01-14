@@ -15,12 +15,12 @@
 #define MOTOR_COUNT 4
 
 #define MAX_RPM 4350
-#define MIN_RPM 2000
+#define MIN_RPM 1000
 
 #define LOWER_NUM_BORDER 47
 #define HIGHER_NUM_BORDER 58
 
-#define PRINT_DATA_DELAY 50
+#define PRINT_DATA_DELAY 3
 
 // Defines whether the speed is printed during manual control
 int8_t print_speed_flag;

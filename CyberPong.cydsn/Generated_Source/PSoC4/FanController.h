@@ -71,10 +71,10 @@
     #define FanController_PID_A2             (-5734)
     #define FanController_PID_A3             (819)
 
-    #define FanController_PID_POST_GAIN      (18u)
+    #define FanController_PID_POST_GAIN      (20u)
 
     #define FanController_PID_OUTPUT_SAT_L   (0u)
-    #define FanController_PID_OUTPUT_SAT_H   (251658240u)
+    #define FanController_PID_OUTPUT_SAT_H   (1006632960u)
 
     /* PID error low and high saturation. These are constants defined
     * by EROS to be (-4096) and (4096) respectively.

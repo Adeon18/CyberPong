@@ -74,10 +74,7 @@ void handle_UART_input(char inp_ch) {
     Operates with most of the global variables.
     */
     
-    if (!manual_control_flag) {
-        /* Automatic Control Logic */
-    }
-    else if (manual_control_flag) {
+    if (manual_control_flag) {
         if(inp_ch == 'p'){
             print_speed_flag = 0;
             UART_print_string("Set The Speeds:");
